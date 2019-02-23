@@ -1,0 +1,8 @@
+<ion-content padding>
+    <article-card
+            *ngFor="let article of articles"
+            [image]="article.getFirstImageAsBackgroundUrl()"
+            [subTitle]="article.getFormattedDate()"
+            [title]="article.title">
+    </article-card>
+</ion-content>

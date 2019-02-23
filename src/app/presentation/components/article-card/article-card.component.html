@@ -1,0 +1,19 @@
+<ion-card>
+
+    <img *ngIf="showImage()"
+         class="article-card-image"
+         [ngStyle]="{'background-image' : image}">
+
+    <ion-card-header>
+        <ion-card-subtitle *ngIf="showSubTitle()">{{subTitle}}</ion-card-subtitle>
+        <ion-card-title>{{ title }}</ion-card-title>
+    </ion-card-header>
+
+    <ng-content></ng-content>
+
+    <ion-card-header *ngIf="showFooter()" class="article-card-footer">
+        <ion-icon *ngIf="showFooterIcon()" [name]="footerIcon"></ion-icon>
+        {{ footerText }}
+    </ion-card-header>
+
+</ion-card>

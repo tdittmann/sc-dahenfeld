@@ -1,0 +1,12 @@
+@import '~src/theme/variables.scss';
+
+.article-card-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.article-card-footer {
+  border-top: 1px solid $separator_light;
+  text-align: center;
+}
