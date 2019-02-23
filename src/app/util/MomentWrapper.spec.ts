@@ -1,4 +1,4 @@
-import {MomentWrapper} from './momentWrapper';
+import {MomentWrapper} from './MomentWrapper';
 import * as moment from 'moment';
 
 describe('MomentWrapper', function () {
@@ -28,7 +28,7 @@ describe('MomentWrapper', function () {
     });
 
     it('should handle valid date', function () {
-        expect(MomentWrapper.ofUnixTimestampNumber(new Date(1550693895)).unix()).toBe(moment(1550693895).unix());
+        expect(MomentWrapper.ofDate(new Date(1550693895)).unix()).toBe(moment(1550693895).unix());
     });
 
 });

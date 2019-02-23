@@ -1,7 +1,7 @@
 import {Mapper} from '../../core/base/mapper';
 import {ArticleJson} from './articleJson.model';
 import {Article} from '../../core/domain/article.model';
-import {MomentWrapper} from '../../util/momentWrapper';
+import {MomentWrapper} from '../../util/MomentWrapper';
 
 export class ArticleMapper extends Mapper<ArticleJson, Article> {
 
