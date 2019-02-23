@@ -1,7 +1,7 @@
 import {ArticleMapper} from './article.mapper';
 import {ArticleJson} from './articleJson.model';
 import {Article} from '../../core/domain/article.model';
-import {MomentWrapper} from '../../util/momentWrapper';
+import {MomentWrapper} from '../../util/MomentWrapper';
 
 describe('ArticleMapper', () => {
 
@@ -41,14 +41,13 @@ describe('ArticleMapper', () => {
     });
 
     it('should map from json to core model', () => {
-        const actual: Article = {
-            id: '1',
-            title: 'Article title',
-            createdAt: MomentWrapper.ofUnixTimestampNumber(1550412574000),
-            createdBy: 'tdittmann',
-            categoryName: 'soccer',
-            text: 'Hello World'
-        };
+        const actual: Article = new Article();
+        actual.id = '1';
+        actual.title = 'Article title';
+        actual.createdAt = MomentWrapper.ofUnixTimestampNumber(1550412574000);
+        actual.createdBy = 'tdittmann';
+        actual.categoryName = 'soccer';
+        actual.text = 'Hello World';
 
         const expected: ArticleJson = {
             id: '1',
