@@ -1,23 +1,26 @@
-anguage: node_js
+dist: trusty
+sudo: false
 
+language: node_js
 node_js:
-  - '10'
+  - '8'
 
-script: npm test
-
-notifications:
-  email: false
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 
 cache:
   directories:
-    - node_modules
+    - ./node_modules
+
+install:
+  - npm install
 
 after_success:
   - npm run codecov
 
-sudo: required
-
-addons:
-  chrome: stable
-
-dist: trusty
+script:
+  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
