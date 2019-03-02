@@ -9,8 +9,9 @@ import * as underscore from 'node_modules/underscore.string';
 export class ArticleCardComponent {
 
     @Input() image: string;
-    @Input() subTitle: string;
     @Input() title: string;
+    @Input() subTitle: string;
+    @Input() category: string;
     @Input() footerIcon: string;
     @Input() footerText: string;
 
@@ -20,6 +21,10 @@ export class ArticleCardComponent {
 
     showSubTitle(): boolean {
         return !underscore.isBlank(underscore.clean(this.subTitle));
+    }
+
+    showCategory(): boolean {
+        return !underscore.isBlank(underscore.clean(this.category));
     }
 
     showFooter(): boolean {

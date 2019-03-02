@@ -1,4 +1,6 @@
-<ion-content padding>
+<page-header color="primary"></page-header>
+
+<ion-content>
     <article-card
             *ngFor="let article of articles"
             [image]="article.getFirstImageAsBackgroundUrl()"

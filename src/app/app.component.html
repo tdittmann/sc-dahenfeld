@@ -1,15 +1,33 @@
 <ion-app>
 
-    <ion-header>
-        <ion-toolbar>
-            <ion-title>
-                <!-- TODO tdit0703: Dynamisch anpassbar machen... Redux? -->
-                SC Dahenfeld 1946 e.V.
-            </ion-title>
-        </ion-toolbar>
-    </ion-header>
+    <!-- Menu -->
+    <ion-menu>
+        <ion-content>
 
-    <ion-content>
-        <ion-router-outlet></ion-router-outlet>
-    </ion-content>
+            <div class="nav-header">
+                <img src="assets/img/logo.png"/>
+                <br/>
+                <span>SC Dahenfeld</span>
+            </div>
+
+            <ng-template ngFor let-nav [ngForOf]="navigation">
+                <ion-list lines="none">
+                    <ion-list-header mode="ios">
+                        <ion-label>{{nav.title}}</ion-label>
+                    </ion-list-header>
+                    <ion-menu-toggle autoHide="false" *ngFor="let p of nav.content">
+                        <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+                            <ion-icon slot="start" [name]="p.icon"></ion-icon>
+                            <ion-label>{{p.title}}</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+            </ng-template>
+
+        </ion-content>
+    </ion-menu>
+
+    <!-- Content -->
+    <ion-router-outlet main></ion-router-outlet>
+
 </ion-app>

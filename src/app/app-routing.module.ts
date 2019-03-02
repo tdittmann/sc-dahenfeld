@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
-    {path: '', redirectTo: 'articleList', pathMatch: 'full'},
-    {path: 'articleList', loadChildren: './presentation/pages/article-list/article-list.module#ArticleListPageModule'},
+    {path: '', redirectTo: 'articles', pathMatch: 'full'},
+    {path: 'articles', loadChildren: './presentation/pages/article-list/article-list.module#ArticleListPageModule'},
 ];
 
 @NgModule({
@@ -11,4 +11,5 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 export class AppRoutingModule {
+
 }

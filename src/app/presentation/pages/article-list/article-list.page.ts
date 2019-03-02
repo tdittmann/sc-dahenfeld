@@ -7,6 +7,7 @@ import {Article} from '../../../core/domain/article.model';
     templateUrl: 'article-list.page.html',
     styleUrls: ['article-list.page.scss']
 })
+// TODO tdit0703: Umbenennen, damit die Page zur Componente passt?
 export class ArticleListPage implements OnInit {
 
     /**

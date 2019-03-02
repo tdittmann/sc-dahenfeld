@@ -67,6 +67,27 @@ describe('ArticleCardComponent', () => {
         expect(component.showSubTitle()).toBeTruthy();
     });
 
+    it('should show category if present', () => {
+        // Nothing set
+        fixture.detectChanges();
+        expect(component.showCategory()).toBeFalsy();
+
+        // Empty
+        component.category = '';
+        fixture.detectChanges();
+        expect(component.showCategory()).toBeFalsy();
+
+        // Blank
+        component.category = '        ';
+        fixture.detectChanges();
+        expect(component.showCategory()).toBeFalsy();
+
+        // Filled
+        component.category = 'sample category';
+        fixture.detectChanges();
+        expect(component.showCategory()).toBeTruthy();
+    });
+
     it('should show footerIcon if present', () => {
         // Nothing set
         fixture.detectChanges();

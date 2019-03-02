@@ -8,6 +8,7 @@ import {ArticleCardComponent} from '../../components/article-card/article-card.c
 import {ArticleListPage} from './article-list.page';
 import {ArticleService} from '../../../dataproviders/articles/article.service';
 import {HttpClientModule} from '@angular/common/http';
+import {PageHeaderComponent} from '../../components/page-header/page-header.component';
 
 @NgModule({
     providers: [ArticleService],
@@ -23,7 +24,7 @@ import {HttpClientModule} from '@angular/common/http';
             }
         ])
     ],
-    declarations: [ArticleListPage, ArticleCardComponent]
+    declarations: [ArticleListPage, ArticleCardComponent, PageHeaderComponent]
 })
 export class ArticleListPageModule {
 }
