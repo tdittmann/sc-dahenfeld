@@ -27,6 +27,7 @@ describe('PageHeaderComponent', function () {
         expect(component.showLogo).toBeTruthy();
     });
 
+    // TODO tdit0703: Wtf is this true?!
     it('should not show logo if text is provided', function () {
         component.title = 'Sample title';
         fixture.detectChanges();
