@@ -1,6 +1,5 @@
 import * as underscore from 'node_modules/underscore.string';
 
-// TODO tdit0703: Tests
 export class ImageUtil {
 
     public static removeFirstImageFromText(pHtmlText: string): string {
