@@ -4,9 +4,9 @@ import {IonicModule} from '@ionic/angular';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
-import {ArticleCardComponent} from '../components/article-card/article-card.component';
+import {ArticleCardComponent} from '../../components/article-card/article-card.component';
 import {ArticleListPage} from './article-list.page';
-import {ArticleService} from '../../dataproviders/articles/article.service';
+import {ArticleService} from '../../../dataproviders/articles/article.service';
 import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({

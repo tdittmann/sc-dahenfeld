@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ArticleService} from '../../dataproviders/articles/article.service';
-import {Article} from '../../core/domain/article.model';
+import {ArticleService} from '../../../dataproviders/articles/article.service';
+import {Article} from '../../../core/domain/article.model';
 
 @Component({
     selector: 'article-list',
