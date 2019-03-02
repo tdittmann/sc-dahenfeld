@@ -3,12 +3,11 @@ import {ArticleService} from '../../../dataproviders/articles/article.service';
 import {Article} from '../../../core/domain/article.model';
 
 @Component({
-    selector: 'article-list',
-    templateUrl: 'article-list.page.html',
-    styleUrls: ['article-list.page.scss']
+    selector: 'news',
+    templateUrl: 'news.page.html',
+    styleUrls: ['news.page.scss']
 })
-// TODO tdit0703: Umbenennen, damit die Page zur Componente passt?
-export class ArticleListPage implements OnInit {
+export class NewsPage implements OnInit {
 
     /**
      * Default is zero, so we get all articles

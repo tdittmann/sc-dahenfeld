@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
-    {path: '', redirectTo: 'articles', pathMatch: 'full'},
-    {path: 'articles', loadChildren: './presentation/pages/article-list/article-list.module#ArticleListPageModule'},
+    {path: '', redirectTo: 'news', pathMatch: 'full'},
+    {path: 'news', loadChildren: './presentation/pages/news/news.module#NewsPageModule'},
 ];
 
 @NgModule({

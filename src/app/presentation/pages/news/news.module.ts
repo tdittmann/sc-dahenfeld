@@ -5,7 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
 import {ArticleCardComponent} from '../../components/article-card/article-card.component';
-import {ArticleListPage} from './article-list.page';
+import {NewsPage} from './news.page';
 import {ArticleService} from '../../../dataproviders/articles/article.service';
 import {HttpClientModule} from '@angular/common/http';
 import {PageHeaderComponent} from '../../components/page-header/page-header.component';
@@ -20,11 +20,11 @@ import {PageHeaderComponent} from '../../components/page-header/page-header.comp
         RouterModule.forChild([
             {
                 path: '',
-                component: ArticleListPage
+                component: NewsPage
             }
         ])
     ],
-    declarations: [ArticleListPage, ArticleCardComponent, PageHeaderComponent]
+    declarations: [NewsPage, ArticleCardComponent, PageHeaderComponent]
 })
-export class ArticleListPageModule {
+export class NewsPageModule {
 }
