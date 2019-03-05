@@ -1,10 +1,14 @@
-<page-header color="primary"></page-header>
+<page-header color="dark"></page-header>
 
 <ion-content>
+
+    <article-slider [articles]="sliderArticles"></article-slider>
+
     <article-card
             *ngFor="let article of articles"
             [image]="article.getFirstImageAsBackgroundUrl()"
+            [title]="article.title"
             [subTitle]="article.getFormattedDate()"
-            [title]="article.title">
+            [category]="article.categoryName">
     </article-card>
 </ion-content>

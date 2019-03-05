@@ -24,13 +24,12 @@ describe('PageHeaderComponent', function () {
     it('should show logo if no text is provided', function () {
         component.title = '';
         fixture.detectChanges();
-        expect(component.showLogo).toBeTruthy();
+        expect(component.showLogo()).toBeTruthy();
     });
 
-    // TODO tdit0703: Wtf is this true?!
     it('should not show logo if text is provided', function () {
         component.title = 'Sample title';
         fixture.detectChanges();
-        expect(component.showLogo).toBeFalsy();
+        expect(component.showLogo()).toBeFalsy();
     });
 });

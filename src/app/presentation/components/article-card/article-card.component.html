@@ -1,10 +1,13 @@
 <ion-card>
 
-    <!-- TODO tdit0703: Category farbig oben rechts einblenden, Farbe vom Backend mitliefern lassen -->
-
     <img *ngIf="showImage()"
          class="article-card-image"
          [ngStyle]="{'background-image' : image}">
+
+    <!-- TODO tdit0703: category color -->
+    <ion-badge *ngIf="showCategory()" class="category">
+        {{ category }}
+    </ion-badge>
 
     <ion-card-header>
         <ion-card-subtitle *ngIf="showSubTitle()">{{subTitle}}</ion-card-subtitle>

@@ -14,6 +14,7 @@ export class NewsPage implements OnInit {
      */
     categoryId = 0;
     articles: Article[] = [];
+    sliderArticles: Article[] = [];
 
     constructor(private articleService: ArticleService) {
 
@@ -24,6 +25,11 @@ export class NewsPage implements OnInit {
             .subscribe(
                 pArticles => {
                     this.articles = pArticles;
+
+                    // The first three articles should be shown as slide
+                    for (let i = 0; i < 3; i++) {
+                        this.sliderArticles.push(this.articles.shift());
+                    }
                 },
                 pError => {
                     console.error(pError);

@@ -9,6 +9,7 @@ import {NewsPage} from './news.page';
 import {ArticleService} from '../../../dataproviders/articles/article.service';
 import {HttpClientModule} from '@angular/common/http';
 import {PageHeaderComponent} from '../../components/page-header/page-header.component';
+import {ArticleSliderComponent} from '../../components/article-slider/article-slider.component';
 
 @NgModule({
     providers: [ArticleService],
@@ -24,7 +25,7 @@ import {PageHeaderComponent} from '../../components/page-header/page-header.comp
             }
         ])
     ],
-    declarations: [NewsPage, ArticleCardComponent, PageHeaderComponent]
+    declarations: [NewsPage, ArticleCardComponent, PageHeaderComponent, ArticleSliderComponent]
 })
 export class NewsPageModule {
 }
