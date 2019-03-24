@@ -12,6 +12,7 @@ export class ArticleCardComponent {
     @Input() title: string;
     @Input() subTitle: string;
     @Input() category: string;
+    @Input() categoryColor: string;
     @Input() footerIcon: string;
     @Input() footerText: string;
 

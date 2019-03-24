@@ -9,6 +9,9 @@
             [image]="article.getFirstImageAsBackgroundUrl()"
             [title]="article.title"
             [subTitle]="article.getFormattedDate()"
-            [category]="article.categoryName">
+            [category]="article.categoryName"
+            [categoryColor]="article.categoryColor"
+            (click)="goToArticleDetail(article.id)"
+    >
     </article-card>
 </ion-content>

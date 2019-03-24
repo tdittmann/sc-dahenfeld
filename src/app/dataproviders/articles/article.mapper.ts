@@ -16,7 +16,9 @@ export class ArticleMapper extends Mapper<ArticleJson, Article> {
         article.createdAt = MomentWrapper.ofUnixTimestampString(param.erstellungsdatum);
         article.createdBy = param.ersteller;
         article.categoryName = param.kategorie;
+        article.categoryColor = param.categoryColor;
         article.text = param.text;
+        article.hits = parseInt(param.hits, 10);
         return article;
     }
 
@@ -31,7 +33,9 @@ export class ArticleMapper extends Mapper<ArticleJson, Article> {
             erstellungsdatum: param.createdAt.valueOf().toString(),
             ersteller: param.createdBy,
             kategorie: param.categoryName,
-            text: param.text
+            categoryColor: param.categoryColor,
+            text: param.text,
+            hits: param.hits.toString()
         };
     }
 

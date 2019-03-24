@@ -26,7 +26,9 @@ describe('ArticleMapper', () => {
             erstellungsdatum: '1550412574000',
             ersteller: 'tdittmann',
             kategorie: 'soccer',
-            text: 'Hello World'
+            categoryColor: '#fff',
+            text: 'Hello World',
+            hits: '10'
         };
 
         const expected: Article = new Article();
@@ -35,7 +37,9 @@ describe('ArticleMapper', () => {
         expected.createdAt = MomentWrapper.ofUnixTimestampNumber(1550412574000);
         expected.createdBy = 'tdittmann';
         expected.categoryName = 'soccer';
+        expected.categoryColor = '#fff';
         expected.text = 'Hello World';
+        expected.hits = 10;
 
         expect(mapper.mapFrom(actual)).toEqual(expected);
     });
@@ -47,7 +51,9 @@ describe('ArticleMapper', () => {
         actual.createdAt = MomentWrapper.ofUnixTimestampNumber(1550412574000);
         actual.createdBy = 'tdittmann';
         actual.categoryName = 'soccer';
+        actual.categoryColor = '#fff';
         actual.text = 'Hello World';
+        actual.hits = 10;
 
         const expected: ArticleJson = {
             id: '1',
@@ -55,7 +61,9 @@ describe('ArticleMapper', () => {
             erstellungsdatum: '1550412574000',
             ersteller: 'tdittmann',
             kategorie: 'soccer',
-            text: 'Hello World'
+            categoryColor: '#fff',
+            text: 'Hello World',
+            hits: '10'
         };
 
         expect(mapper.mapTo(actual)).toEqual(expected);

@@ -4,8 +4,7 @@
          class="article-card-image"
          [ngStyle]="{'background-image' : image}">
 
-    <!-- TODO tdit0703: category color -->
-    <ion-badge *ngIf="showCategory()" class="category">
+    <ion-badge *ngIf="showCategory()" class="category" [ngStyle]="{'background-color': categoryColor}">
         {{ category }}
     </ion-badge>
 

@@ -1,0 +1,21 @@
+<div class="image" [ngStyle]="{'background-image' : article?.getFirstImageAsBackgroundUrl()}">
+
+    <div class="slider-container">
+
+        <ion-badge class="category" *ngIf="article?.categoryName"
+                   [ngStyle]="{'background-color': article?.categoryColor}">{{ article?.categoryName }}</ion-badge>
+
+        <h3 class="title">{{ article?.title }}</h3>
+
+        <ul class="meta">
+            <li class="meta-item">{{ article?.getFormattedDate()}}</li>
+            <li class="meta-item" *ngIf="article?.hits">
+                <ion-icon name="eye"></ion-icon>
+                {{article?.hits}}
+            </li>
+        </ul>
+
+        <span class="author" *ngIf="article?.createdBy">{{ article?.createdBy }}</span>
+
+    </div>
+</div>

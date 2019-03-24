@@ -5,6 +5,8 @@ export interface ArticleJson {
     erstellungsdatum: string;
     ersteller: string;
     kategorie: string;
+    categoryColor: string;
     text: string;
+    hits: string;
 
 }

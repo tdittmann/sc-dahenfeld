@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ArticleService} from '../../../dataproviders/articles/article.service';
 import {Article} from '../../../core/domain/article.model';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'news',
@@ -16,14 +17,15 @@ export class NewsPage implements OnInit {
     articles: Article[] = [];
     sliderArticles: Article[] = [];
 
-    constructor(private articleService: ArticleService) {
+    constructor(private articleService: ArticleService,
+                private router: Router) {
 
     }
 
     ngOnInit(): void {
         this.articleService.getAllArticles(this.categoryId)
             .subscribe(
-                pArticles => {
+                (pArticles) => {
                     this.articles = pArticles;
 
                     // The first three articles should be shown as slide
@@ -31,10 +33,15 @@ export class NewsPage implements OnInit {
                         this.sliderArticles.push(this.articles.shift());
                     }
                 },
-                pError => {
+                (pError) => {
+                    // TODO tdit0703: Correct error handling
                     console.error(pError);
                 }
             );
+    }
+
+    public goToArticleDetail(id: string) {
+        this.router.navigate(['/article', id]);
     }
 
 }

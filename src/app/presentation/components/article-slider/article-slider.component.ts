@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Article} from '../../../core/domain/article.model';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'article-slider',
@@ -10,10 +11,18 @@ export class ArticleSliderComponent {
 
     @Input() articles: Article[] = [];
 
+    constructor(private router: Router) {
+
+    }
+
     public sliderOptions = {
         autoplay: {
-            delay: 5_000,
+            delay: 50_000,
         }
     };
+
+    public goToArticleDetail(id: string) {
+        this.router.navigate(['/article', id]);
+    }
 
 }

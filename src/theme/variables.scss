@@ -2,6 +2,7 @@
 // http://ionicframework.com/docs/theming/
 
 /** Custom Variables **/
+$primary: #960016;
 $separator-light: #e4e7ed;
 
 
@@ -12,7 +13,7 @@ $separator-light: #e4e7ed;
   --ion-font-family: 'Montserrat', sans-serif;
 
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: $primary;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;

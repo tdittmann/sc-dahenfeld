@@ -2,27 +2,8 @@
 
     <ng-template ngFor let-article [ngForOf]="articles">
 
-        <ion-slide [ngStyle]="{'background-image' : article?.getFirstImageAsBackgroundUrl()}"
-                   class="image">
-
-            <div class="slider-container">
-
-                <ion-badge class="category">{{ article?.categoryName }}</ion-badge>
-
-                <h3 class="title">{{ article?.title }}</h3>
-
-                <ul class="meta">
-                    <li class="meta-item">{{ article?.getFormattedDate()}}</li>
-                    <!-- TODO tdit0703: hits -->
-                    <li class="meta-item">
-                        <ion-icon name="eye"></ion-icon>
-                        200
-                    </li>
-                </ul>
-
-                <span class="author">{{ article?.createdBy }}</span>
-
-            </div>
+        <ion-slide (click)="goToArticleDetail(article?.id)">
+            <article-image-meta [article]="article"></article-image-meta>
         </ion-slide>
 
     </ng-template>

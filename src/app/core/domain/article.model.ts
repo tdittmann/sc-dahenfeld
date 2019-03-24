@@ -9,7 +9,9 @@ export class Article {
     createdAt: Moment;
     createdBy: string;
     categoryName: string;
+    categoryColor: string;
     text: string;
+    hits: number;
 
     public getFirstImage(): string {
         return ImageUtil.getFirstImage(this.text);
