@@ -13,6 +13,11 @@ export class Article {
     text: string;
     hits: number;
 
+    // TODO tdit0703: Tests
+    public getTextWithoutFirstImage(): string {
+        return ImageUtil.removeFirstImageFromText(this.text);
+    }
+
     public getFirstImage(): string {
         return ImageUtil.getFirstImage(this.text);
     }

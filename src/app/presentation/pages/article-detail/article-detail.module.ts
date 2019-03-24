@@ -7,6 +7,7 @@ import {ArticleService} from '../../../dataproviders/articles/article.service';
 import {HttpClientModule} from '@angular/common/http';
 import {ArticleDetailPage} from './article-detail.page';
 import {PageHeaderModule} from '../../components/page-header/page-header.module';
+import {ArticleImageMetaModule} from '../../components/article-image-meta/article-image-meta.module';
 
 @NgModule({
     providers: [ArticleService],
@@ -16,6 +17,7 @@ import {PageHeaderModule} from '../../components/page-header/page-header.module'
         IonicModule,
         HttpClientModule,
         PageHeaderModule,
+        ArticleImageMetaModule,
         RouterModule.forChild([
             {
                 path: '',

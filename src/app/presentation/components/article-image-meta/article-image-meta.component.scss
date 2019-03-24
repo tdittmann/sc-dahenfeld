@@ -1,6 +1,8 @@
 :host {
   height: 100%;
   width: 100%;
+  text-align: center;
+  color: #fff;
 }
 
 .image {
@@ -9,6 +11,7 @@
   display: table;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .image::before {

@@ -1,21 +1,8 @@
 .image {
-  background-color: #1e2024;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  text-align: center;
-  padding: 50px 0;
+  height: 50vh;
 }
 
-.image::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background-image: none;
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 1;
+.article-content ::ng-deep img {
+  width: 100% !important;
+  height: auto !important;
 }
