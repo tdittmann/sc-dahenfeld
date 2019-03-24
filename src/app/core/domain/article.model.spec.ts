@@ -77,4 +77,31 @@ describe('Article', () => {
         expect(article.getFormattedDate()).toBe('25. December 1995');
     });
 
+    it('should return an empty string if no text is set', function () {
+        const article: Article = new Article();
+
+        expect(article.getTextWithoutFirstImage()).toBe('');
+    });
+
+    it('should return full text if one is set', function () {
+        const article: Article = new Article();
+        article.text = 'Some content';
+
+        expect(article.getTextWithoutFirstImage()).toBe('Some content');
+    });
+
+    it('should return text without first image if one is set', function () {
+        const article: Article = new Article();
+        article.text = '<img src="test.png">Some content';
+
+        expect(article.getTextWithoutFirstImage()).toBe('Some content');
+    });
+
+    it('should return text without first image if more than one image is set', function () {
+        const article: Article = new Article();
+        article.text = '<img src="test1.png"><img src="test2.png">Some content';
+
+        expect(article.getTextWithoutFirstImage()).toBe('<img src="test2.png">Some content');
+    });
+
 });

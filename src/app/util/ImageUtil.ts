@@ -3,7 +3,10 @@ import * as underscore from 'node_modules/underscore.string';
 export class ImageUtil {
 
     public static removeFirstImageFromText(pHtmlText: string): string {
-        return pHtmlText.replace(/<img[^>]*>/, '');
+        if (!underscore.isBlank(pHtmlText)) {
+            return pHtmlText.replace(/<img[^>]*>/, '');
+        }
+        return '';
     }
 
     public static getFirstImage(pHtmlText: string): string {
