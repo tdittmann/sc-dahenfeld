@@ -4,14 +4,21 @@
 
     <article-slider [articles]="sliderArticles"></article-slider>
 
-    <article-card
-            *ngFor="let article of articles"
-            [image]="article.getFirstImageAsBackgroundUrl()"
-            [title]="article.title"
-            [subTitle]="article.getFormattedDate()"
-            [category]="article.categoryName"
-            [categoryColor]="article.categoryColor"
-            (click)="goToArticleDetail(article.id)"
-    >
-    </article-card>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12" sizeMd="6" sizeLg="4" *ngFor="let article of articles">
+
+                <article-card [image]="article.getFirstImageAsBackgroundUrl()"
+                              [title]="article.title"
+                              [subTitle]="article.getFormattedDate()"
+                              [category]="article.categoryName"
+                              [categoryColor]="article.categoryColor"
+                              (click)="goToArticleDetail(article.id)">
+                </article-card>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
 </ion-content>
