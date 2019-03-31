@@ -9,5 +9,10 @@ import {Article} from '../../../core/domain/article.model';
 export class ArticleImageMetaComponent {
 
     @Input() article: Article;
+    @Input() showOnlyTitle = false;
+
+    constructor() {
+
+    }
 
 }

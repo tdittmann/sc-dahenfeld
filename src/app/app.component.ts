@@ -16,7 +16,7 @@ export class AppComponent {
         {title: 'Chronik', url: '/chronicle', icon: 'time'},
         {title: 'Mitglied werden', url: '/getmember', icon: 'contacts'},
         {title: 'Kalender', url: '/calendar', icon: 'calendar'},
-        {title: 'Sportheim', url: '/sportheim', icon: 'restaurant'}
+        {title: 'Sportheim', url: '/article/830', icon: 'restaurant', params: {showOnlyTitle: true}}
     ];
 
     private soccerPages = [
@@ -26,8 +26,9 @@ export class AppComponent {
     ];
 
     private gymPages = [
-        {title: 'Turnen', url: '/gym', icon: 'body'},
-        {title: 'Tischtennis', url: '/tabletennis', icon: 'walk'}
+        {title: 'Turnen', url: '/article/733', icon: 'body', params: {showOnlyTitle: true}},
+        {title: 'Tischtennis', url: '/article/755', icon: 'walk', params: {showOnlyTitle: true}},
+        {title: 'Tennis', url: '/article/1246', icon: 'tennisball', params: {showOnlyTitle: true}}
     ];
 
     private devPages = [
@@ -36,7 +37,7 @@ export class AppComponent {
     ];
 
     private appPages = [
-        {title: 'Datenschutz', url: '/dataprotection', icon: 'finger-print'},
+        {title: 'Datenschutz', url: '/article/1195', icon: 'finger-print', params: {showOnlyTitle: true}},
         {title: 'Impressum', url: '/imprint', icon: 'information-circle'}
     ];
 
