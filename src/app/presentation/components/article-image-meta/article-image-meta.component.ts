@@ -15,4 +15,16 @@ export class ArticleImageMetaComponent {
 
     }
 
+    showCategory(): boolean {
+        return this.article && this.article.categoryName && !this.showOnlyTitle;
+    }
+
+    showAuthor(): boolean {
+        return this.article && this.article.createdBy && !this.showOnlyTitle;
+    }
+
+    showMeta(): boolean {
+        return this.article && !this.showOnlyTitle;
+    }
+
 }

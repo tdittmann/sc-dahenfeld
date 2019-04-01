@@ -3,22 +3,22 @@
     <div class="slider-container">
 
         <ion-badge class="category"
-                   *ngIf="article?.categoryName && !showOnlyTitle"
+                   *ngIf="showCategory()"
                    [ngStyle]="{'background-color': article?.categoryColor}">
             {{ article?.categoryName }}
         </ion-badge>
 
         <h3 class="title">{{ article?.title }}</h3>
 
-        <ul class="meta" *ngIf="!showOnlyTitle">
-            <li class="meta-item">{{ article?.getFormattedDate()}}</li>
+        <ul class="meta" *ngIf="showMeta()">
+            <li class="meta-item" *ngIf="article?.createdAt">{{ article?.getFormattedDate()}}</li>
             <li class="meta-item" *ngIf="article?.hits">
                 <ion-icon name="eye"></ion-icon>
                 {{article?.hits}}
             </li>
         </ul>
 
-        <span class="author" *ngIf="article?.createdBy && !showOnlyTitle">
+        <span class="author" *ngIf="showAuthor()">
             {{ article?.createdBy }}
         </span>
 
