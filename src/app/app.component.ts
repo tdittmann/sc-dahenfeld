@@ -25,10 +25,14 @@ export class AppComponent {
         {title: 'Jugend', url: '/soccer/youth/', icon: 'football'}
     ];
 
-    private gymPages = [
+    private departmentPages = [
         {title: 'Turnen', url: '/article/733', icon: 'body', params: {showOnlyTitle: true}},
         {title: 'Tischtennis', url: '/article/755', icon: 'walk', params: {showOnlyTitle: true}},
-        {title: 'Tennis', url: '/article/1246', icon: 'tennisball', params: {showOnlyTitle: true}}
+        {title: 'Radsport', url: '/bicycle', icon: 'bicycle'}
+    ];
+
+    private tennisPages = [
+        {title: 'TC Dahenfeld', url: '/article/1246', icon: 'tennisball', params: {showOnlyTitle: true}}
     ];
 
     private devPages = [
@@ -44,7 +48,8 @@ export class AppComponent {
     public navigation = [
         {title: 'Der Verein', content: this.clubPages},
         {title: 'Fussball', content: this.soccerPages},
-        {title: 'Turnen & Tischtennis', content: this.gymPages},
+        {title: 'Abteilungen', content: this.departmentPages},
+        {title: 'TC Dahenfeld', content: this.tennisPages},
         {title: 'Entwicklung', content: this.devPages},
         {title: 'Die SCD-App', content: this.appPages}
     ];

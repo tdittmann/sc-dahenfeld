@@ -6,7 +6,7 @@ import {RouterModule} from '@angular/router';
 
 import {ArticleCardComponent} from '../../components/article-card/article-card.component';
 import {NewsPage} from './news.page';
-import {ArticleService} from '../../../dataproviders/articles/article.service';
+import {ArticleService} from '../../../dataproviders/article/article.service';
 import {HttpClientModule} from '@angular/common/http';
 import {ArticleSliderComponent} from '../../components/article-slider/article-slider.component';
 import {PageHeaderModule} from '../../components/page-header/page-header.module';

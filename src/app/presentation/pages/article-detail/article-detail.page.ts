@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {ArticleService} from '../../../dataproviders/articles/article.service';
+import {ArticleService} from '../../../dataproviders/article/article.service';
 import {Article} from '../../../core/domain/article.model';
 import {combineLatest} from 'rxjs';
 
@@ -28,6 +28,9 @@ export class ArticleDetailPage implements OnInit {
                 this.articleService.getArticle(params['id']).subscribe(
                     (pResponse) => {
                         this.article = pResponse;
+
+                        // Increment hits for the article
+                        this.articleService.incrementMobileHitsForArticle(this.article);
                     },
                     (pError) => {
                         // TODO tdit0703: Correct error handling

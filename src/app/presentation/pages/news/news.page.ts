@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ArticleService} from '../../../dataproviders/articles/article.service';
+import {ArticleService} from '../../../dataproviders/article/article.service';
 import {Article} from '../../../core/domain/article.model';
 import {Router} from '@angular/router';
 

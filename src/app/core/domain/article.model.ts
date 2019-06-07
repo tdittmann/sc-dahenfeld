@@ -1,4 +1,4 @@
-import {ImageUtil} from '../../util/ImageUtil';
+import {TextUtils} from '../../util/TextUtils';
 import {Moment} from 'moment';
 import {environment} from '../../../environments/environment';
 
@@ -14,15 +14,15 @@ export class Article {
     hits: number;
 
     public getTextWithoutFirstImage(): string {
-        return ImageUtil.removeFirstImageFromText(this.text);
+        return TextUtils.removeFirstImageFromText(this.text);
     }
 
     public getFirstImage(): string {
-        return ImageUtil.getFirstImage(this.text);
+        return TextUtils.getFirstImage(this.text);
     }
 
     public getFirstImageAsBackgroundUrl(): string {
-        return ImageUtil.getFirstImageAsBackgroundUrl(this.text);
+        return TextUtils.getFirstImageAsBackgroundUrl(this.text);
     }
 
     public getFormattedDate(): string {

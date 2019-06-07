@@ -1,6 +1,22 @@
 import * as underscore from 'node_modules/underscore.string';
 
-export class ImageUtil {
+export class TextUtils {
+
+    public static removeAllHtmlTags(pHtmlText: string): string {
+        if (!underscore.isBlank(pHtmlText)) {
+            return pHtmlText.replace(/<(.|\n)*?>/g, '');
+        }
+        return '';
+    }
+
+    public static truncateText(pText: string, pLength: number): string {
+        if (underscore.isBlank(pText)) {
+            return '';
+        }
+        return (pText.length > pLength)
+            ? pText.substr(0, pLength - 1) + '&hellip;'
+            : pText;
+    }
 
     public static removeFirstImageFromText(pHtmlText: string): string {
         if (!underscore.isBlank(pHtmlText)) {
