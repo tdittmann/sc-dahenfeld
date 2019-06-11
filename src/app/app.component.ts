@@ -28,7 +28,7 @@ export class AppComponent {
     private departmentPages = [
         {title: 'Turnen', url: '/article/733', icon: 'body', params: {showOnlyTitle: true}},
         {title: 'Tischtennis', url: '/article/755', icon: 'walk', params: {showOnlyTitle: true}},
-        {title: 'Radsport', url: '/bicycle', icon: 'bicycle'}
+        {title: 'Radsport', url: '/cycling', icon: 'bicycle'}
     ];
 
     private tennisPages = [
