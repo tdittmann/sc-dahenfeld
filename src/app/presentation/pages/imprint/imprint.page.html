@@ -1,0 +1,31 @@
+<page-header color="dark"></page-header>
+
+<ion-content>
+
+    <div text-center padding-top>
+        <p>
+            <b>SC Dahenfeld 1946 e.V.</b><br/>
+            In den Prügelwiesen<br/>
+            74172 Neckarsulm
+        </p>
+    </div>
+
+    <ion-item-group>
+        <ion-item button>
+            <ion-label>App-Version</ion-label>
+            <p item-right>{{ version }}</p>
+        </ion-item>
+        <ion-item button (click)="activateDevMode()">
+            <ion-label>Design und Entwicklung</ion-label>
+            <p item-right>{{ developer }}</p>
+        </ion-item>
+    </ion-item-group>
+
+    <div text-center>
+        <ion-button *ngIf="isDevModeEnabled()" (click)="deactivateDevMode()">
+            Entwickler-Modus deaktivieren
+        </ion-button>
+    </div>
+
+
+</ion-content>
