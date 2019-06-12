@@ -47,12 +47,12 @@ export class AppComponent {
     ];
 
     public navigation = [
-        {title: 'Der Verein', content: this.clubPages},
-        {title: 'Fussball', content: this.soccerPages},
-        {title: 'Abteilungen', content: this.departmentPages},
-        {title: 'TC Dahenfeld', content: this.tennisPages},
-        {title: 'Entwicklung', content: this.devPages},
-        {title: 'Die SCD-App', content: this.appPages}
+        {title: 'Der Verein', devMode: false, content: this.clubPages},
+        {title: 'Fussball', devMode: false, content: this.soccerPages},
+        {title: 'Abteilungen', devMode: false, content: this.departmentPages},
+        {title: 'TC Dahenfeld', devMode: false, content: this.tennisPages},
+        {title: 'Entwicklung', devMode: true, content: this.devPages},
+        {title: 'Die SCD-App', devMode: false, content: this.appPages}
     ];
 
     constructor(private platform: Platform,
@@ -72,4 +72,9 @@ export class AppComponent {
             this.devService.loadDevModeFromDb();
         });
     }
+
+    isDevModeEnabled(): boolean {
+        return this.devService.isDevModeEnabled();
+    }
+
 }

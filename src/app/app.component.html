@@ -11,7 +11,7 @@
             </div>
 
             <ng-template ngFor let-nav [ngForOf]="navigation">
-                <ion-list lines="none">
+                <ion-list lines="none" *ngIf="!nav.devMode || nav.devMode && isDevModeEnabled()">
                     <ion-list-header mode="ios">
                         <ion-label>{{nav.title}}</ion-label>
                     </ion-list-header>
