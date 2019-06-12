@@ -6,16 +6,18 @@ import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
 
 import {AppComponent} from './app.component';
+import {DevService} from './dataproviders/dev.service';
 
 describe('AppComponent', () => {
 
-    let statusBarSpy, splashScreenSpy, platformReadySpy, platformSpy;
+    let statusBarSpy, splashScreenSpy, platformReadySpy, platformSpy, devServiceSpy;
 
     beforeEach(async(() => {
         statusBarSpy = jasmine.createSpyObj('StatusBar', ['styleDefault']);
         splashScreenSpy = jasmine.createSpyObj('SplashScreen', ['hide']);
         platformReadySpy = Promise.resolve();
         platformSpy = jasmine.createSpyObj('Platform', {ready: platformReadySpy});
+        devServiceSpy = jasmine.createSpyObj('DevService', ['loadDevModeFromDb']);
 
         TestBed.configureTestingModule({
             declarations: [AppComponent],
@@ -24,6 +26,7 @@ describe('AppComponent', () => {
                 {provide: StatusBar, useValue: statusBarSpy},
                 {provide: SplashScreen, useValue: splashScreenSpy},
                 {provide: Platform, useValue: platformSpy},
+                {provide: DevService, useValue: devServiceSpy}
             ],
         }).compileComponents();
     }));
