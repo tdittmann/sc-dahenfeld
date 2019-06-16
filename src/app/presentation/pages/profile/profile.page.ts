@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Profile} from '../../../core/domain/profile.model';
-import {ProfileService} from '../../../dataproviders/profile.service';
+import {ProfileService} from '../../../dataproviders/profile/profile.service';
 import {ToastService} from '../../../dataproviders/toast.service';
 import {StorageService} from '../../../dataproviders/storage.service';
 

@@ -7,7 +7,7 @@ import {PageHeaderModule} from '../../components/page-header/page-header.module'
 import {RouterModule} from '@angular/router';
 import {ProfilePage} from './profile.page';
 import {ToastService} from '../../../dataproviders/toast.service';
-import {ProfileService} from '../../../dataproviders/profile.service';
+import {ProfileService} from '../../../dataproviders/profile/profile.service';
 
 @NgModule({
     providers: [ProfileService, ToastService],
