@@ -6,6 +6,7 @@ const routes: Routes = [
     {path: 'news', loadChildren: './presentation/pages/news/news.module#NewsPageModule'},
     {path: 'article/:id', loadChildren: './presentation/pages/article-detail/article-detail.module#ArticleDetailPageModule'},
     {path: 'chronicle', loadChildren: './presentation/pages/chronicle/chronicle.module#ChroniclePageModule'},
+    {path: 'profile', loadChildren: './presentation/pages/profile/profile.module#ProfilePageModule'},
     {path: 'imprint', loadChildren: './presentation/pages/imprint/imprint.module#ImprintPageModule'},
 ];
 

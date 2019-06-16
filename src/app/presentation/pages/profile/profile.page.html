@@ -1,0 +1,24 @@
+<page-header color="dark"></page-header>
+
+<ion-content>
+
+    <ion-item>
+        <ion-label>Push Token</ion-label>
+        <ion-input disabled [(ngModel)]="profile.pushToken"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="profile.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Push Notification Geburtstage</ion-label>
+        <ion-checkbox [(ngModel)]="profile.pushBirthdays"></ion-checkbox>
+    </ion-item>
+
+    <ion-button expand="full" (click)="saveProfile()">
+        Speichern
+    </ion-button>
+
+</ion-content>
