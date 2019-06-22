@@ -1,7 +1,7 @@
 import {Mapper} from '../../core/base/mapper';
 import {ArticleJson} from './articleJson.model';
 import {Article} from '../../core/domain/article.model';
-import {MomentWrapper} from '../../util/MomentWrapper';
+import {DateUtils} from '../../util/DateUtils';
 
 export class ArticleMapper extends Mapper<ArticleJson, Article> {
 
@@ -13,7 +13,7 @@ export class ArticleMapper extends Mapper<ArticleJson, Article> {
         const article: Article = new Article();
         article.id = param.id;
         article.title = param.titel;
-        article.createdAt = MomentWrapper.ofUnixTimestampString(param.erstellungsdatum);
+        article.createdAt = DateUtils.ofUnixTimestampString(param.erstellungsdatum);
         article.createdBy = param.ersteller;
         article.categoryName = param.kategorie;
         article.categoryColor = param.categoryColor;

@@ -1,6 +1,6 @@
 import {TimelineMapper} from './timeline.mapper';
 import {Article} from '../../core/domain/article.model';
-import {MomentWrapper} from '../../util/MomentWrapper';
+import {DateUtils} from '../../util/DateUtils';
 import {TimelineEntry} from '../../core/domain/timeline-entry.model';
 
 describe('TimelineMapper', function () {
@@ -23,13 +23,13 @@ describe('TimelineMapper', function () {
         const actual: TimelineEntry = new TimelineEntry();
         actual.articleId = '1';
         actual.title = 'Article title';
-        actual.date = MomentWrapper.ofUnixTimestampNumber(1550412574000);
+        actual.date = DateUtils.ofUnixTimestampNumber(1550412574000);
         actual.text = 'Hello World';
 
         const expected: Article = new Article();
         expected.id = '1';
         expected.title = 'Article title';
-        expected.createdAt = MomentWrapper.ofUnixTimestampNumber(1550412574000);
+        expected.createdAt = DateUtils.ofUnixTimestampNumber(1550412574000);
         expected.text = 'Hello World';
 
         expect(mapper.mapTo(actual)).toEqual(expected);
@@ -39,13 +39,13 @@ describe('TimelineMapper', function () {
         const actual: Article = new Article();
         actual.id = '1';
         actual.title = 'Article title';
-        actual.createdAt = MomentWrapper.ofUnixTimestampNumber(1550412574000);
+        actual.createdAt = DateUtils.ofUnixTimestampNumber(1550412574000);
         actual.text = 'Hello World';
 
         const expected: TimelineEntry = new TimelineEntry();
         expected.articleId = '1';
         expected.title = 'Article title';
-        expected.date = MomentWrapper.ofUnixTimestampNumber(1550412574000);
+        expected.date = DateUtils.ofUnixTimestampNumber(1550412574000);
         expected.text = 'Hello World';
 
         expect(mapper.mapFrom(actual)).toEqual(expected);

@@ -1,7 +1,7 @@
 import {ArticleMapper} from './article.mapper';
 import {ArticleJson} from './articleJson.model';
 import {Article} from '../../core/domain/article.model';
-import {MomentWrapper} from '../../util/MomentWrapper';
+import {DateUtils} from '../../util/DateUtils';
 
 describe('ArticleMapper', () => {
 
@@ -34,7 +34,7 @@ describe('ArticleMapper', () => {
         const expected: Article = new Article();
         expected.id = '1';
         expected.title = 'Article title';
-        expected.createdAt = MomentWrapper.ofUnixTimestampNumber(1550412574000);
+        expected.createdAt = DateUtils.ofUnixTimestampNumber(1550412574000);
         expected.createdBy = 'tdittmann';
         expected.categoryName = 'soccer';
         expected.categoryColor = '#fff';
@@ -48,7 +48,7 @@ describe('ArticleMapper', () => {
         const actual: Article = new Article();
         actual.id = '1';
         actual.title = 'Article title';
-        actual.createdAt = MomentWrapper.ofUnixTimestampNumber(1550412574000);
+        actual.createdAt = DateUtils.ofUnixTimestampNumber(1550412574000);
         actual.createdBy = 'tdittmann';
         actual.categoryName = 'soccer';
         actual.categoryColor = '#fff';
