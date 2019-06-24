@@ -12,7 +12,9 @@ export class Birthday {
     image: string;
 
     public getName(): string {
-        return this.firstname + ' ' + this.lastname;
+        return [this.firstname, this.lastname]
+            .filter(Boolean)
+            .join(' ');
     }
 
     public getFormattedDate(): string {
