@@ -5,7 +5,6 @@ import {Article} from '../../../core/domain/article.model';
 import {combineLatest} from 'rxjs';
 
 @Component({
-    selector: 'article-detail',
     templateUrl: 'article-detail.page.html',
     styleUrls: ['article-detail.page.scss']
 })
@@ -21,6 +20,7 @@ export class ArticleDetailPage implements OnInit {
 
     ngOnInit(): void {
 
+        // TODO tdit0703: deprecated
         combineLatest(this.route.params, this.route.queryParams)
             .subscribe(([params, queryParams]) => {
 

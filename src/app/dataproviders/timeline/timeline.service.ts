@@ -8,6 +8,7 @@ import {Observable} from 'rxjs';
 @Injectable()
 export class TimelineService {
 
+    // TODO tdit0703: HttpClient auslagern in separaten Service
     constructor(private http: HttpClient) {
 
     }

@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Storage} from '@ionic/storage';
 
+// TODO tdit0703: Integrate in StorageService
 @Injectable()
 export class DevService {
 

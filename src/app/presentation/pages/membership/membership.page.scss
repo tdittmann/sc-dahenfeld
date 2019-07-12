@@ -1,0 +1,57 @@
+a {
+  text-decoration: none;
+}
+
+.btn-outline.btn-default {
+  border-color: #dbdfe6;
+  color: #9a9da2;
+}
+
+.btn-block {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-outline {
+  background-color: transparent;
+}
+
+.btn-outline.btn-default:hover {
+  background-color: #9a9da2;
+  border-color: #9a9da2;
+  color: #fff;
+}
+
+.btn-xs {
+  padding: 5px 13px;
+  font-size: 9px;
+  line-height: 1.5em;
+  border-radius: 2px;
+}
+
+.btn {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  user-select: none;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  table td {
+    display: block;
+  }
+}

@@ -1,0 +1,9 @@
+<!-- Image -->
+<div class="image">
+    <article-image-meta [article]="article"
+                        [showOnlyTitle]="showOnlyTitle">
+    </article-image-meta>
+</div>
+
+<!-- Text -->
+<div padding class="article-content" [innerHTML]="article?.getTextWithoutFirstImage()"></div>

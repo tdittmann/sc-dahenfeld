@@ -8,9 +8,8 @@ import {ArticleCardComponent} from '../../components/article-card/article-card.c
 import {NewsPage} from './news.page';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {HttpClientModule} from '@angular/common/http';
-import {ArticleSliderComponent} from '../../components/article-slider/article-slider.component';
 import {PageHeaderModule} from '../../components/page-header/page-header.module';
-import {ArticleImageMetaModule} from '../../components/article-image-meta/article-image-meta.module';
+import {ArticleSliderModule} from '../../components/article-slider/article-slider.module';
 
 @NgModule({
     providers: [ArticleService],
@@ -20,7 +19,7 @@ import {ArticleImageMetaModule} from '../../components/article-image-meta/articl
         IonicModule,
         HttpClientModule,
         PageHeaderModule,
-        ArticleImageMetaModule,
+        ArticleSliderModule,
         RouterModule.forChild([
             {
                 path: '',
@@ -28,7 +27,7 @@ import {ArticleImageMetaModule} from '../../components/article-image-meta/articl
             }
         ])
     ],
-    declarations: [NewsPage, ArticleCardComponent, ArticleSliderComponent]
+    declarations: [NewsPage, ArticleCardComponent]
 })
 export class NewsPageModule {
 }

@@ -3,7 +3,6 @@ import {Birthday} from '../../../core/domain/birthday.model';
 import {BirthdayService} from '../../../dataproviders/birthday/birthday.service';
 
 @Component({
-    selector: 'birthdays',
     templateUrl: 'birthdays.page.html',
     styleUrls: ['birthdays.page.scss']
 })

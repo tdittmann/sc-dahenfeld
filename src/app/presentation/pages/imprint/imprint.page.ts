@@ -3,7 +3,6 @@ import {DevService} from '../../../dataproviders/dev.service';
 import {ToastService} from '../../../dataproviders/toast.service';
 
 @Component({
-    selector: 'imprint',
     templateUrl: 'imprint.page.html',
     styleUrls: ['imprint.page.scss']
 })

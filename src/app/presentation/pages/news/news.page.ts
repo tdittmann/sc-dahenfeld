@@ -4,7 +4,6 @@ import {Article} from '../../../core/domain/article.model';
 import {Router} from '@angular/router';
 
 @Component({
-    selector: 'news',
     templateUrl: 'news.page.html',
     styleUrls: ['news.page.scss']
 })

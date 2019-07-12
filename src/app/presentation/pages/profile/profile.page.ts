@@ -5,7 +5,6 @@ import {ToastService} from '../../../dataproviders/toast.service';
 import {StorageService} from '../../../dataproviders/storage.service';
 
 @Component({
-    selector: 'profile',
     templateUrl: 'profile.page.html',
     styleUrls: ['profile.page.scss']
 })

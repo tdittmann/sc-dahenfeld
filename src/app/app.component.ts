@@ -12,10 +12,11 @@ import {DevService} from './dataproviders/dev.service';
 })
 export class AppComponent {
 
+    // TODO tdit0703: Auslagern ins Backend
     private clubPages = [
         {title: 'Aktuelles', url: '/news', icon: 'paper'},
         {title: 'Chronik', url: '/chronicle', icon: 'time'},
-        {title: 'Mitglied werden', url: '/getmember', icon: 'contacts'},
+        {title: 'Mitglied werden', url: '/membership', icon: 'contacts'},
         {title: 'Kalender', url: '/calendar', icon: 'calendar'},
         {title: 'Sportheim', url: '/article/830', icon: 'restaurant', params: {showOnlyTitle: true}}
     ];
@@ -70,6 +71,8 @@ export class AppComponent {
 
             // Load devMode in service
             this.devService.loadDevModeFromDb();
+
+            // TODO tdit0703: Check if newer version exists -> Show modal!
         });
     }
 

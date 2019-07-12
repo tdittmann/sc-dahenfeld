@@ -7,7 +7,6 @@ import {TimelineService} from '../../../dataproviders/timeline/timeline.service'
 import {TimelineTitle} from '../../../dataproviders/timeline/timelineTitle.model';
 
 @Component({
-    selector: 'chronicle',
     templateUrl: 'chronicle.page.html',
     styleUrls: ['chronicle.page.scss']
 })

@@ -12,6 +12,8 @@ import {IonicStorageModule} from '@ionic/storage';
 import {DevService} from './dataproviders/dev.service';
 import {StorageService} from './dataproviders/storage.service';
 
+// TODO tdit0703: Loading (https://medium.com/@zeljkoradic/loader-bar-on-every-http-request-in-angular-6-60d8572a21a9)
+// TODO tdit0703: Basic Auth?
 @NgModule({
     declarations: [
         AppComponent

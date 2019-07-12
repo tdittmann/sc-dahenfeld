@@ -1,34 +1,33 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {IonicModule} from '@ionic/angular';
 import {FormsModule} from '@angular/forms';
-import {RouterModule} from '@angular/router';
-import {ArticleService} from '../../../dataproviders/article/article.service';
-import {HttpClientModule} from '@angular/common/http';
-import {ArticleDetailPage} from './article-detail.page';
+import {IonicModule} from '@ionic/angular';
 import {PageHeaderModule} from '../../components/page-header/page-header.module';
+import {RouterModule} from '@angular/router';
+import {MembershipPage} from './membership.page';
+import {MembershipService} from '../../../dataproviders/membership/membership.service';
+import {HttpClientModule} from '@angular/common/http';
 import {ArticleDetailModule} from '../../components/article-detail/article-detail.module';
+import {CostCardModule} from '../../components/cost-card/cost-card.module';
 
 @NgModule({
-    providers: [ArticleService],
+    providers: [MembershipService],
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
-        HttpClientModule,
         PageHeaderModule,
+        HttpClientModule,
         ArticleDetailModule,
+        CostCardModule,
         RouterModule.forChild([
             {
                 path: '',
-                component: ArticleDetailPage
+                component: MembershipPage
             }
         ])
     ],
-    exports: [
-        ArticleDetailPage
-    ],
-    declarations: [ArticleDetailPage]
+    declarations: [MembershipPage]
 })
-export class ArticleDetailPageModule {
+export class MembershipPageModule {
 }
