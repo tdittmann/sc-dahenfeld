@@ -8,6 +8,7 @@ const routes: Routes = [
     {path: 'chronicle', loadChildren: './presentation/pages/chronicle/chronicle.module#ChroniclePageModule'},
     {path: 'calendar', loadChildren: './presentation/pages/calendar/calendar.module#CalendarPageModule'},
     {path: 'membership', loadChildren: './presentation/pages/membership/membership.module#MembershipPageModule'},
+    {path: 'team-detail/:id', loadChildren: './presentation/pages/team-detail/team-detail.module#TeamDetailPageModule'},
     {path: 'birthdays', loadChildren: './presentation/pages/birthdays/birthdays.module#BirthdaysPageModule'},
     {path: 'profile', loadChildren: './presentation/pages/profile/profile.module#ProfilePageModule'},
     {path: 'imprint', loadChildren: './presentation/pages/imprint/imprint.module#ImprintPageModule'},

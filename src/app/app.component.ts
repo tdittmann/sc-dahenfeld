@@ -22,14 +22,16 @@ export class AppComponent {
     ];
 
     private soccerPages = [
-        {title: '1. Mannschaft', url: '/soccer/mens/1', icon: 'football'},
-        {title: '2. Mannschaft', url: '/soccer/mens/2', icon: 'football'},
+        {title: '1. Mannschaft', url: '/team-detail/92', icon: 'football'},
+        {title: '2. Mannschaft', url: '/team-detail/91', icon: 'football'},
+        // TODO tdit0703: Generischer Pfad
         {title: 'Jugend', url: '/soccer/youth/', icon: 'football'}
     ];
 
     private departmentPages = [
         {title: 'Turnen', url: '/article/733', icon: 'body', params: {showOnlyTitle: true}},
         {title: 'Tischtennis', url: '/article/755', icon: 'walk', params: {showOnlyTitle: true}},
+        // TODO tdit0703: Generischer Pfad
         {title: 'Radsport', url: '/cycling', icon: 'bicycle'}
     ];
 
