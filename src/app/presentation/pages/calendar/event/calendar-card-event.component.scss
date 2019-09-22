@@ -1,0 +1,19 @@
+ion-card {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+
+ion-card-header {
+  position: absolute;
+  bottom: 0;
+  background: #000000b8;
+  width: 100%;
+  padding: 8px;
+  line-height: 1;
+}
+
+ion-card-title,
+ion-card-subtitle {
+  color: #fff;
+}

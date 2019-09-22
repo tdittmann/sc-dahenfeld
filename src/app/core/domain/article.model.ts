@@ -31,7 +31,7 @@ export class Article {
         }
 
         return this.createdAt
-            .format(environment.dateFormat);
+            .format(environment.longDateFormat);
     }
 
 }

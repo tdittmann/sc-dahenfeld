@@ -5,11 +5,13 @@ import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {PageHeaderModule} from '../../components/page-header/page-header.module';
-import {BirthdayService} from '../../../dataproviders/birthday/birthday.service';
 import {CalendarPage} from './calendar.page';
+import {CalendarService} from '../../../dataproviders/calendar/calendar.service';
+import {CalendarCardEventComponent} from './event/calendar-card-event.component';
+import {CalendarCardMatchComponent} from './match/calendar-card-match.component';
 
 @NgModule({
-    providers: [BirthdayService],
+    providers: [CalendarService],
     imports: [
         CommonModule,
         FormsModule,
@@ -23,7 +25,7 @@ import {CalendarPage} from './calendar.page';
             }
         ])
     ],
-    declarations: [CalendarPage]
+    declarations: [CalendarPage, CalendarCardEventComponent, CalendarCardMatchComponent]
 })
 export class CalendarPageModule {
 }

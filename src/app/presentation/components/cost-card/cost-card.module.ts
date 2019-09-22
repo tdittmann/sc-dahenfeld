@@ -12,6 +12,7 @@ import {CostCardComponent} from './cost-card.component';
     declarations: [CostCardComponent],
     exports: [CostCardComponent]
 })
+// TODO tdit0703: Komponenten zu Page ziehen, wohin sie gehören (außer shared components)
 export class CostCardModule {
 
 }

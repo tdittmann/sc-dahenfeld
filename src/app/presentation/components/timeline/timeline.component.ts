@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
     templateUrl: 'timeline.component.html',
     styleUrls: ['timeline.component.scss']
 })
+// TODo tdit0703: Module?
 export class TimelineComponent {
 
     @Input() timelineEntries: TimelineEntry[] = [];

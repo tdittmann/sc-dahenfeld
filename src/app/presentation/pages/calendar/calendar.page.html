@@ -1,1 +1,26 @@
-Calendar coming soon
+<page-header title="Kalender"></page-header>
+
+<ion-content>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <!-- TODO tdit0703: Link zur Detailseite -->
+                <div *ngFor="let entry of calendarEntries">
+                    <h1 *ngIf="isDifferentDay(entry.start)">{{entry.getFormattedStartDate()}}</h1>
+
+                    <calendar-card-match *ngIf="entry.isMatch()"
+                                         [match]="entry">
+                    </calendar-card-match>
+
+                    <calendar-card-event *ngIf="entry.isEvent()"
+                                         [event]="entry">
+                    </calendar-card-event>
+
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+</ion-content>

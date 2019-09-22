@@ -23,7 +23,7 @@ export class Birthday {
         }
 
         return this.birthday
-            .format(environment.dateFormat);
+            .format(environment.longDateFormat);
     }
 
     public getSubtitle(): string {

@@ -4,13 +4,14 @@
 
 export const environment = {
     production: false,
-    siteUrl: 'http://scd.timo-dittmann.de',
-    backendUrl: 'http://scd.timo-dittmann.de/components/com_tdwapp/v7/',
+    siteUrl: 'http://sc-dahenfeld.de',
+    backendUrl: 'http://sc-dahenfeld.de/components/com_tdwapp/v8/',
     locale: 'de',
     hideInformationArticles: ['733', '755', '830', '1195'],
     teamName: 'SC Dahenfeld',
     placeholderPlayer: 'assets/img/platzhalter_kader.png',
-    dateFormat: 'DD. MMMM YYYY'
+    shortDateFormat: 'DD. MMMM',
+    longDateFormat: 'DD. MMMM YYYY'
 };
 
 /*

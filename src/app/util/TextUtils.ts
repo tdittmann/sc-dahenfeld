@@ -32,9 +32,13 @@ export class TextUtils {
     public static getFirstImageAsBackgroundUrl(pHtmlText: string): string {
         const firstImage: string = this.getFirstImageFromText(pHtmlText);
         if (!underscore.isBlank(firstImage)) {
-            return 'url(\'' + firstImage + '\')';
+            return this.getAsBackgroundUrl(firstImage);
         }
         return '';
+    }
+
+    public static getAsBackgroundUrl(pText: string): string {
+        return 'url(\'' + pText + '\')';
     }
 
     private static getFirstImageFromText(pHtmlText: string): string {

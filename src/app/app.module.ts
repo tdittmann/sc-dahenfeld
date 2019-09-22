@@ -14,6 +14,7 @@ import {StorageService} from './dataproviders/storage.service';
 
 // TODO tdit0703: Loading (https://medium.com/@zeljkoradic/loader-bar-on-every-http-request-in-angular-6-60d8572a21a9)
 // TODO tdit0703: Basic Auth?
+// TODO tdit0703: DateTime's immer als UTC und in Ionic die Zeitzone des Users auslesen?
 @NgModule({
     declarations: [
         AppComponent
