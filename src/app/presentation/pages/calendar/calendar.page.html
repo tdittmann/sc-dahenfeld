@@ -1,13 +1,15 @@
 <page-header title="Kalender"></page-header>
 
-<ion-content>
+<ion-content color="light">
 
     <ion-grid>
         <ion-row>
             <ion-col>
                 <!-- TODO tdit0703: Link zur Detailseite -->
-                <div *ngFor="let entry of calendarEntries">
-                    <h1 *ngIf="isDifferentDay(entry.start)">{{entry.getFormattedStartDate()}}</h1>
+                <ng-template ngFor let-entry [ngForOf]="calendarEntries">
+                    <h2 *ngIf="isDifferentDay(entry.start)">
+                        {{entry.getFormattedStartDate()}}
+                    </h2>
 
                     <calendar-card-match *ngIf="entry.isMatch()"
                                          [match]="entry">
@@ -17,7 +19,7 @@
                                          [event]="entry">
                     </calendar-card-event>
 
-                </div>
+                </ng-template>
             </ion-col>
         </ion-row>
     </ion-grid>
