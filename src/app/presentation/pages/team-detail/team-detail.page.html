@@ -1,5 +1,24 @@
 <page-header [title]="teamName"></page-header>
 
 <ion-content>
+    <super-tabs>
 
+        <super-tabs-toolbar slot="top">
+
+            <super-tab-button>
+                <ion-icon name="list"></ion-icon>
+                <ion-label>Tabelle</ion-label>
+            </super-tab-button>
+
+        </super-tabs-toolbar>
+
+        <super-tabs-container>
+            <super-tab>
+                <ion-nav [root]="rankingPage"></ion-nav>
+            </super-tab>
+
+
+        </super-tabs-container>
+
+    </super-tabs>
 </ion-content>

@@ -26,8 +26,8 @@ import {SuperTabsModule} from '@ionic-super-tabs/angular';
         BrowserModule,
         IonicModule.forRoot(),
         IonicStorageModule.forRoot(),
-        AppRoutingModule,
         SuperTabsModule.forRoot(),
+        AppRoutingModule,
     ],
     providers: [
         StatusBar,
