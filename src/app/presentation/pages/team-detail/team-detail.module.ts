@@ -9,6 +9,7 @@ import {TeamDetailPage} from './team-detail.page';
 import {SuperTabsModule} from '@ionic-super-tabs/angular';
 import {RankingPageModule} from './ranking/ranking-page.module';
 import {SoccerTeamService} from '../../../dataproviders/soccer/soccerTeam.service';
+import {FixturePageModule} from './fixture/fixture.module';
 
 @NgModule({
     providers: [SoccerTeamService],
@@ -26,6 +27,7 @@ import {SoccerTeamService} from '../../../dataproviders/soccer/soccerTeam.servic
         ]),
         SuperTabsModule,
         RankingPageModule,
+        FixturePageModule,
     ],
     declarations: [TeamDetailPage]
 })

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {RankingPage} from './ranking/ranking.page';
 import {ActivatedRoute} from '@angular/router';
 import {SoccerTeamService} from '../../../dataproviders/soccer/soccerTeam.service';
+import {FixturePage} from './fixture/fixture.page';
 
 @Component({
     templateUrl: 'team-detail.page.html',
@@ -12,6 +13,7 @@ export class TeamDetailPage implements OnInit {
     teamName = '';
 
     rankingPage = RankingPage;
+    fixturePage = FixturePage;
 
     constructor(private route: ActivatedRoute,
                 private teamDetailService: SoccerTeamService) {
