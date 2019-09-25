@@ -11,6 +11,7 @@ import {RankingPageModule} from './ranking/ranking-page.module';
 import {SoccerTeamService} from '../../../dataproviders/soccer/soccerTeam.service';
 import {FixturePageModule} from './fixture/fixture.module';
 import {PlayersPageModule} from './players/players.module';
+import {StatisticsPageModule} from './statistics/statistics.module';
 
 @NgModule({
     providers: [SoccerTeamService],
@@ -30,6 +31,7 @@ import {PlayersPageModule} from './players/players.module';
         RankingPageModule,
         FixturePageModule,
         PlayersPageModule,
+        StatisticsPageModule,
     ],
     declarations: [TeamDetailPage]
 })

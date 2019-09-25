@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {SoccerTeamService} from '../../../dataproviders/soccer/soccerTeam.service';
 import {FixturePage} from './fixture/fixture.page';
 import {PlayersPage} from './players/players.page';
+import {StatisticsPage} from './statistics/statistics.page';
 
 @Component({
     templateUrl: 'team-detail.page.html',
@@ -16,6 +17,7 @@ export class TeamDetailPage implements OnInit {
     rankingPage = RankingPage;
     fixturePage = FixturePage;
     playersPage = PlayersPage;
+    statisticsPage = StatisticsPage;
 
     constructor(private route: ActivatedRoute,
                 private teamDetailService: SoccerTeamService) {
