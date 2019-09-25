@@ -6,6 +6,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {PageHeaderModule} from '../../components/page-header/page-header.module';
 import {RouterModule} from '@angular/router';
 import {TeamDetailPage} from './team-detail.page';
+import {RankingComponentModule} from './ranking/ranking.module';
 
 @NgModule({
     providers: [],
@@ -15,6 +16,7 @@ import {TeamDetailPage} from './team-detail.page';
         IonicModule,
         HttpClientModule,
         PageHeaderModule,
+        RankingComponentModule,
         RouterModule.forChild([
             {
                 path: '',

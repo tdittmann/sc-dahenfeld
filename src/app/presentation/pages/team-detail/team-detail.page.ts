@@ -7,6 +7,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class TeamDetailPage implements OnInit {
 
+    teamName = '';
+
     constructor(private route: ActivatedRoute) {
 
     }
@@ -16,6 +18,8 @@ export class TeamDetailPage implements OnInit {
         this.route.params.subscribe(
             params => {
                 const teamId = params['id'];
+
+                this.teamName = 'fill me';
 
                 console.log(teamId);
             }
