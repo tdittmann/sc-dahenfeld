@@ -1,0 +1,70 @@
+@import '~src/theme/variables.scss';
+
+ion-card {
+  background: #fff;
+}
+
+ion-card-content {
+  padding: 4px;
+}
+
+ion-card-header {
+  padding: 0;
+  border-top: 1px solid #e4e7ed;
+  font-size: 0.75rem;
+}
+
+.match-time {
+  background: #636161;
+  padding: 3px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.match-team {
+  font-size: 0.75rem;
+}
+
+.match-result {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: #31404b;
+}
+
+.match-result-home {
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 8px;
+}
+
+.match-result-away {
+  display: block;
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+}
+
+.match-result-loser {
+  color: #9a9da2;
+}
+
+.match-result-winner:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 8px solid $primary;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  transform: translateY(-50%);
+}

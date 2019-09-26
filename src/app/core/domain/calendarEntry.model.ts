@@ -19,15 +19,6 @@ export abstract class CalendarEntry {
             .format(environment.longDateFormat);
     }
 
-    public getFormattedStartTime(): string {
-        if (!this.start) {
-            return '';
-        }
-
-        return this.start
-            .format('HH:mm');
-    }
-
     public isMatch(): boolean {
         return this.type === CalendarType.MATCH;
     }

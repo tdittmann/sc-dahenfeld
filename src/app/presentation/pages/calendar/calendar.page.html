@@ -5,15 +5,18 @@
     <ion-grid>
         <ion-row>
             <ion-col>
-                <!-- TODO tdit0703: Link zur Detailseite -->
+                <!-- TODO tdit0703: Links zur jeweiligen Detailseite hinzufügen -->
                 <ng-template ngFor let-entry [ngForOf]="calendarEntries">
                     <h2 *ngIf="isDifferentDay(entry.start)">
                         {{entry.getFormattedStartDate()}}
                     </h2>
 
-                    <calendar-card-match *ngIf="entry.isMatch()"
-                                         [match]="entry">
-                    </calendar-card-match>
+                    <match-card *ngIf="entry.isMatch()"
+                                [startDate]="entry.start" [location]="entry.location"
+                                [homeName]="entry.homeName" [homeImage]="entry.homeImage"
+                                [awayName]="entry.awayName" [awayImage]="entry.awayImage"
+                                [footerLeft]="entry.team" [footerRight]="entry.fixture">
+                    </match-card>
 
                     <calendar-card-event *ngIf="entry.isEvent()"
                                          [event]="entry">

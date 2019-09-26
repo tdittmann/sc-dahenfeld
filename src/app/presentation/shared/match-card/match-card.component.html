@@ -1,0 +1,49 @@
+<ion-card>
+
+    <ion-card-content>
+
+        <div class="match-time" *ngIf="!existsResult()">
+            {{getFormattedStartTime()}}
+        </div>
+
+        <div class="match-result" *ngIf="existsResult()">
+            <span class="match-result-home" [ngClass]="{'match-result-winner': isHomeWin(), 'match-result-loser': isAwayWin()}">{{homeResult}}</span>
+            <span class="match-result-away" [ngClass]="{'match-result-winner': isAwayWin(), 'match-result-loser': isHomeWin()}">{{awayResult}}</span>
+        </div>
+
+        <ion-row>
+            <ion-col class="match-team">
+                <img [src]="homeImage" class="team-image"/>
+                {{homeName}}
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="match-team">
+                <img [src]="awayImage" class="team-image"/>
+                {{awayName}}
+            </ion-col>
+        </ion-row>
+    </ion-card-content>
+
+    <ion-card-header>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    {{footerLeft}}
+                </ion-col>
+
+                <ion-col size="5" class="ion-text-center">
+                    <b>
+                        <ion-icon icon="pin"></ion-icon>
+                        {{location}}
+                    </b>
+                </ion-col>
+
+                <ion-col class="ion-text-right">
+                    {{footerRight}}
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card-header>
+
+</ion-card>

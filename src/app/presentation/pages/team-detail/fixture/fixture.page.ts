@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {FixtureService} from '../../../../dataproviders/soccer/fixture/fixture.service';
+import {FixtureMatch} from '../../../../core/domain/fixtureMatch.model';
 
 @Component({
     selector: 'fixture',
@@ -8,7 +10,10 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class FixturePage implements OnInit {
 
-    constructor(private route: ActivatedRoute) {
+    matches: FixtureMatch[] = [];
+
+    constructor(private route: ActivatedRoute,
+                private fixtureService: FixtureService) {
 
     }
 
@@ -17,7 +22,15 @@ export class FixturePage implements OnInit {
             params => {
                 const teamId = params['id'];
 
-                // TODO tdit0703: Load Ranking
+                this.fixtureService.loadFixture(teamId).subscribe(
+                    fixtureMatches => {
+                        this.matches = fixtureMatches;
+                    },
+                    error => {
+                        // TODO tdit0703: Error handling
+                        console.error(error);
+                    }
+                );
             }
         );
     }

@@ -8,7 +8,7 @@ import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {CalendarPage} from './calendar.page';
 import {CalendarService} from '../../../dataproviders/calendar/calendar.service';
 import {CalendarCardEventComponent} from './event/calendar-card-event.component';
-import {CalendarCardMatchComponent} from './match/calendar-card-match.component';
+import {MatchCardModule} from '../../shared/match-card/match-card.module';
 
 @NgModule({
     providers: [CalendarService],
@@ -18,6 +18,7 @@ import {CalendarCardMatchComponent} from './match/calendar-card-match.component'
         IonicModule,
         HttpClientModule,
         PageHeaderModule,
+        MatchCardModule,
         RouterModule.forChild([
             {
                 path: '',
@@ -25,7 +26,7 @@ import {CalendarCardMatchComponent} from './match/calendar-card-match.component'
             }
         ])
     ],
-    declarations: [CalendarPage, CalendarCardEventComponent, CalendarCardMatchComponent]
+    declarations: [CalendarPage, CalendarCardEventComponent]
 })
 export class CalendarPageModule {
 }
