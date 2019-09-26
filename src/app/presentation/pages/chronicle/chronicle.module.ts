@@ -4,10 +4,10 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {HttpClientModule} from '@angular/common/http';
-import {PageHeaderModule} from '../../components/page-header/page-header.module';
+import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {RouterModule} from '@angular/router';
 import {ChroniclePage} from './chronicle.page';
-import {TimelineComponent} from '../../components/timeline/timeline.component';
+import {TimelineComponent} from './timeline/timeline.component';
 import {TimelineService} from '../../../dataproviders/timeline/timeline.service';
 
 @NgModule({

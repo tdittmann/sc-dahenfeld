@@ -4,12 +4,12 @@ import {IonicModule} from '@ionic/angular';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
-import {ArticleCardComponent} from '../../components/article-card/article-card.component';
+import {ArticleCardComponent} from './article-card/article-card.component';
 import {NewsPage} from './news.page';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {HttpClientModule} from '@angular/common/http';
-import {PageHeaderModule} from '../../components/page-header/page-header.module';
-import {ArticleSliderModule} from '../../components/article-slider/article-slider.module';
+import {PageHeaderModule} from '../../shared/page-header/page-header.module';
+import {ArticleSliderModule} from './article-slider/article-slider.module';
 
 @NgModule({
     providers: [ArticleService],
