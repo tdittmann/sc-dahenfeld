@@ -1,0 +1,36 @@
+.favorite {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.75rem;
+  margin-top: 8px;
+
+  thead {
+    background: transparent;
+  }
+
+  th {
+    text-align: left;
+    font-weight: normal;
+  }
+
+  td, th {
+    padding: 8px;
+  }
+
+  tr:nth-child(odd) {
+    background: #ccc;
+  }
+
+  tr:nth-child(even) {
+    background: #fff;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+
+}

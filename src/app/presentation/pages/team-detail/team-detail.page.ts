@@ -5,6 +5,7 @@ import {SoccerTeamService} from '../../../dataproviders/soccer/soccerTeam.servic
 import {FixturePage} from './fixture/fixture.page';
 import {PlayersPage} from './players/players.page';
 import {StatisticsPage} from './statistics/statistics.page';
+import {TeamInformation} from '../../../core/domain/teamInformation.model';
 
 @Component({
     templateUrl: 'team-detail.page.html',
@@ -12,7 +13,7 @@ import {StatisticsPage} from './statistics/statistics.page';
 })
 export class TeamDetailPage implements OnInit {
 
-    teamName = '';
+    teamInformation: TeamInformation;
 
     rankingPage = RankingPage;
     fixturePage = FixturePage;
@@ -33,14 +34,13 @@ export class TeamDetailPage implements OnInit {
                 this.teamDetailService.loadTeamInformation(teamId)
                     .subscribe(
                         data => {
-                            this.teamName = data.name;
+                            this.teamInformation = data;
                         },
                         error => {
                             // TODO tdit0703: Error handling
                             console.error(error);
                         }
                     );
-                this.teamName = teamId;
             }
         );
 

@@ -8,7 +8,6 @@ export const environment = {
     backendUrl: 'http://sc-dahenfeld.de/components/com_tdwapp/v8/',
     locale: 'de',
     hideInformationArticles: ['733', '755', '830', '1195'],
-    teamName: 'SC Dahenfeld',
     placeholderPlayer: 'assets/img/platzhalter_kader.png',
     shortDateFormat: 'DD. MMMM',
     longDateFormat: 'DD. MMMM YYYY'

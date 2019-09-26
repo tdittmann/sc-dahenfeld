@@ -1,20 +1,20 @@
-<page-header [title]="teamName"></page-header>
+<page-header [title]="teamInformation?.name"></page-header>
 
 <ion-content>
     <super-tabs>
 
         <super-tabs-toolbar slot="top">
-            <super-tab-button><ion-label>Tabelle</ion-label></super-tab-button>
-            <super-tab-button><ion-label>Spielplan</ion-label></super-tab-button>
-            <super-tab-button><ion-label>Kader</ion-label></super-tab-button>
-            <super-tab-button><ion-label>Statistik</ion-label></super-tab-button>
+            <super-tab-button *ngIf="teamInformation?.showRanking"><ion-label>Tabelle</ion-label></super-tab-button>
+            <super-tab-button *ngIf="teamInformation?.showFixture"><ion-label>Spielplan</ion-label></super-tab-button>
+            <super-tab-button *ngIf="teamInformation?.showPlayers"><ion-label>Kader</ion-label></super-tab-button>
+            <super-tab-button *ngIf="teamInformation?.showStatistics"><ion-label>Statistik</ion-label></super-tab-button>
         </super-tabs-toolbar>
 
         <super-tabs-container>
-            <super-tab><ion-nav [root]="rankingPage"></ion-nav></super-tab>
-            <super-tab><ion-nav [root]="fixturePage"></ion-nav></super-tab>
-            <super-tab><ion-nav [root]="playersPage"></ion-nav></super-tab>
-            <super-tab><ion-nav [root]="statisticsPage"></ion-nav></super-tab>
+            <super-tab *ngIf="teamInformation?.showRanking"><ion-nav [root]="rankingPage"></ion-nav></super-tab>
+            <super-tab *ngIf="teamInformation?.showFixture"><ion-nav [root]="fixturePage"></ion-nav></super-tab>
+            <super-tab *ngIf="teamInformation?.showPlayers"><ion-nav [root]="playersPage"></ion-nav></super-tab>
+            <super-tab *ngIf="teamInformation?.showStatistics"><ion-nav [root]="statisticsPage"></ion-nav></super-tab>
         </super-tabs-container>
 
     </super-tabs>

@@ -8,6 +8,7 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+@import "~@ionic/angular/css/display.css";
 
 * {
   line-height: 1.5;
@@ -22,4 +23,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap
+}
+
+.team-image {
+  height: 20px;
+  width: auto !important;
+  display: inline !important;
+  padding-right: 4px;
+  vertical-align: middle;
 }

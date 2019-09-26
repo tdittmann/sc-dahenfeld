@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {RankingService} from '../../../../dataproviders/soccer/ranking/ranking.service';
+import {RankingTeam} from '../../../../core/domain/rankingTeam.model';
 
 @Component({
     selector: 'ranking',
@@ -8,7 +10,10 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class RankingPage implements OnInit {
 
-    constructor(private route: ActivatedRoute) {
+    rankingTeams: RankingTeam[] = [];
+
+    constructor(private route: ActivatedRoute,
+                private rankingService: RankingService) {
 
     }
 
@@ -17,7 +22,16 @@ export class RankingPage implements OnInit {
             params => {
                 const teamId = params['id'];
 
-                // TODO tdit0703: Load Ranking
+                this.rankingService.loadRanking(teamId).subscribe(
+                    rankingTeams => {
+                        this.rankingTeams = rankingTeams;
+                    },
+                    error => {
+                        // TODO tdit0703: Error Handling
+                        console.error(error);
+                    }
+                );
+
             }
         );
     }

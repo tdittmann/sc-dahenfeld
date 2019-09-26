@@ -7,7 +7,7 @@ import {PageHeaderModule} from '../../components/page-header/page-header.module'
 import {RouterModule} from '@angular/router';
 import {TeamDetailPage} from './team-detail.page';
 import {SuperTabsModule} from '@ionic-super-tabs/angular';
-import {RankingPageModule} from './ranking/ranking-page.module';
+import {RankingPageModule} from './ranking/ranking.module';
 import {SoccerTeamService} from '../../../dataproviders/soccer/soccerTeam.service';
 import {FixturePageModule} from './fixture/fixture.module';
 import {PlayersPageModule} from './players/players.module';
