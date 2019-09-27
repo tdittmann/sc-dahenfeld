@@ -71,9 +71,6 @@ export class AppComponent {
             this.statusBar.styleDefault();
             this.splashScreen.hide();
 
-            // Load devMode in service
-            this.devService.loadDevModeFromDb();
-
             // TODO tdit0703: Check if newer version exists -> Show modal!
         });
     }

@@ -1,33 +1,26 @@
 import {Injectable} from '@angular/core';
-import {Storage} from '@ionic/storage';
+import {StorageService} from './storage.service';
 
-// TODO tdit0703: Integrate in StorageService
 @Injectable()
 export class DevService {
 
-    private static DB_KEY = 'devMode';
-
     private devModeEnabled = false;
 
-    constructor(private storage: Storage) {
-
-    }
-
-    isDevModeEnabled() {
-        return this.devModeEnabled;
-    }
-
-    loadDevModeFromDb() {
-        this.storage.get(DevService.DB_KEY).then(
+    constructor(private storageService: StorageService) {
+        this.storageService.loadDevMode().then(
             (devModeEnabled) => {
                 this.devModeEnabled = devModeEnabled;
             }
         );
     }
 
+    isDevModeEnabled() {
+        return this.devModeEnabled;
+    }
+
     updateDevMode(devModeEnabled: boolean) {
         this.devModeEnabled = devModeEnabled;
-        this.storage.set(DevService.DB_KEY, devModeEnabled);
+        this.storageService.saveDevMode(this.devModeEnabled);
     }
 
 }

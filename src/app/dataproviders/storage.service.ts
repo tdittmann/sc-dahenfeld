@@ -19,4 +19,12 @@ export class StorageService {
         return this.storage.set(StorageService.PUSH_TOKEN_KEY, token);
     }
 
+    loadDevMode(): Promise<boolean> {
+        return this.storage.get(StorageService.DEV_MODE_KEY);
+    }
+
+    saveDevMode(devMode: boolean): Promise<boolean> {
+        return this.storage.set(StorageService.DEV_MODE_KEY, devMode);
+    }
+
 }
