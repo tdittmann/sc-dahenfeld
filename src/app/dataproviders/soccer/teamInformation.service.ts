@@ -8,7 +8,7 @@ import {map} from 'rxjs/operators';
 import {HttpService} from '../http.service';
 
 @Injectable()
-export class SoccerTeamService {
+export class TeamInformationService {
 
     private teamInformationMapper = new TeamInformationMapper();
 
