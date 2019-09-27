@@ -17,7 +17,7 @@ export class StatisticsPage implements OnInit {
             params => {
                 const teamId = params['id'];
 
-                // TODO tdit0703: Load Players
+                // TODO tdit0703: Load stats
             }
         );
     }
