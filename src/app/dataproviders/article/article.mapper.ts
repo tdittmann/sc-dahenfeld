@@ -1,9 +1,8 @@
-import {Mapper} from '../../core/base/mapper';
 import {ArticleJson} from './articleJson.model';
 import {Article} from '../../core/domain/article.model';
 import {DateUtils} from '../../util/DateUtils';
 
-export class ArticleMapper extends Mapper<ArticleJson, Article> {
+export class ArticleMapper {
 
     mapFrom(param: ArticleJson): Article {
         if (!param) {

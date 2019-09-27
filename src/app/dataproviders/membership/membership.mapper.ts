@@ -1,11 +1,10 @@
-import {Mapper} from '../../core/base/mapper';
 import {MembershipJson} from './membershipJson.model';
 import {Membership} from '../../core/domain/membership.model';
 import {MembershipCostsMapper} from './membershipCosts.mapper';
 import {ArticleMapper} from '../article/article.mapper';
 
 // TODO tdit0703: Tests
-export class MembershipMapper implements Mapper<MembershipJson, Membership> {
+export class MembershipMapper {
 
     private articleMapper: ArticleMapper = new ArticleMapper();
     private membershipCostsMapper: MembershipCostsMapper = new MembershipCostsMapper();
@@ -20,18 +19,6 @@ export class MembershipMapper implements Mapper<MembershipJson, Membership> {
         membership.costs = param.costs.map(this.membershipCostsMapper.mapFrom);
         membership.divisionCosts = param.divisioncosts.map(this.membershipCostsMapper.mapFrom);
         return membership;
-    }
-
-    mapTo(param: Membership): MembershipJson {
-        if (!param) {
-            return null;
-        }
-
-        return {
-            article: this.articleMapper.mapTo(param.article),
-            costs: param.costs.map(this.membershipCostsMapper.mapTo),
-            divisioncosts: param.divisionCosts.map(this.membershipCostsMapper.mapTo)
-        };
     }
 
 }

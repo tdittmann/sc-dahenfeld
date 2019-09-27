@@ -1,8 +1,7 @@
-import {Mapper} from '../../core/base/mapper';
 import {ProfileJson} from './profileJson.model';
 import {Profile} from '../../core/domain/profile.model';
 
-export class ProfileMapper implements Mapper<ProfileJson, Profile> {
+export class ProfileMapper {
 
     mapFrom(param: ProfileJson): Profile {
         if (!param) {

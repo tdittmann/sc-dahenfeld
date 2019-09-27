@@ -1,8 +1,7 @@
 import {PlayerStatisticJson} from './playerStatisticJson.model';
 import {PlayerStatistic} from '../../../core/domain/playerStatistic.model';
-import {Mapper} from '../../../core/base/mapper';
 
-export class PlayerStatisticMapper implements Mapper<PlayerStatisticJson, PlayerStatistic> {
+export class PlayerStatisticMapper {
 
     mapFrom(param: PlayerStatisticJson): PlayerStatistic {
         const playerStatistic = new PlayerStatistic();
@@ -16,10 +15,6 @@ export class PlayerStatisticMapper implements Mapper<PlayerStatisticJson, Player
         playerStatistic.cameOut = param.cameOut;
         playerStatistic.playingMinutes = param.playingMinutes;
         return playerStatistic;
-    }
-
-    mapTo(param: PlayerStatistic): PlayerStatisticJson {
-        return undefined;
     }
 
 

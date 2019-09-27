@@ -1,8 +1,7 @@
-import {Mapper} from '../../core/base/mapper';
 import {TimelineEntry} from '../../core/domain/timeline-entry.model';
 import {Article} from '../../core/domain/article.model';
 
-export class TimelineMapper implements Mapper<Article, TimelineEntry> {
+export class TimelineMapper {
 
     mapFrom(param: Article): TimelineEntry {
         if (!param) {

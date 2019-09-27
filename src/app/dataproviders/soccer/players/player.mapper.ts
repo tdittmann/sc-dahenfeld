@@ -1,10 +1,9 @@
 import {Player} from '../../../core/domain/player.model';
 import {PlayerJson} from './playerJson.model';
-import {Mapper} from '../../../core/base/mapper';
 import {DateUtils} from '../../../util/DateUtils';
 import {PlayerStatisticMapper} from './playerStatistic.mapper';
 
-export class PlayerMapper implements Mapper<PlayerJson, Player> {
+export class PlayerMapper {
 
     private playerStatisticMapper = new PlayerStatisticMapper();
 
@@ -23,10 +22,6 @@ export class PlayerMapper implements Mapper<PlayerJson, Player> {
         player.seasonStatistic = this.playerStatisticMapper.mapFrom(param.seasonStats);
         player.careerStatistic = this.playerStatisticMapper.mapFrom(param.careerStats);
         return player;
-    }
-
-    mapTo(param: Player): PlayerJson {
-        return undefined;
     }
 
 }

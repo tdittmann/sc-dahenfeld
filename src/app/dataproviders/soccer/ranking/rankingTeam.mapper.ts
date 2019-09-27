@@ -1,8 +1,7 @@
 import {RankingTeamJson} from './rankingTeamJson.model';
 import {RankingTeam} from '../../../core/domain/rankingTeam.model';
-import {Mapper} from '../../../core/base/mapper';
 
-export class RankingTeamMapper implements Mapper<RankingTeamJson, RankingTeam> {
+export class RankingTeamMapper {
 
     mapFrom(param: RankingTeamJson): RankingTeam {
         const rankingTeam = new RankingTeam();
@@ -18,22 +17,6 @@ export class RankingTeamMapper implements Mapper<RankingTeamJson, RankingTeam> {
         rankingTeam.goalsDiff = param.goalsDiff;
         rankingTeam.points = param.points;
         return rankingTeam;
-    }
-
-    mapTo(param: RankingTeam): RankingTeamJson {
-        return {
-            teamId: param.id,
-            teamName: param.name,
-            teamLogo: param.image,
-            matches: param.matches,
-            wins: param.wins,
-            draws: param.draws,
-            losses: param.losses,
-            goalsFor: param.goalsFor,
-            goalsAgainst: param.goalsAgainst,
-            goalsDiff: param.goalsDiff,
-            points: param.points,
-        };
     }
 
 }

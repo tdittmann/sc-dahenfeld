@@ -1,9 +1,8 @@
-import {Mapper} from '../../core/base/mapper';
 import {MembershipCosts} from '../../core/domain/MembershipCosts.model';
 import {MembershipCostsJson} from './membershipCostsJson.model';
 
 // TODO tdit0703: Tests
-export class MembershipCostsMapper implements Mapper<MembershipCostsJson, MembershipCosts> {
+export class MembershipCostsMapper {
 
     mapFrom(param: MembershipCostsJson): MembershipCosts {
         if (!param) {
@@ -16,18 +15,5 @@ export class MembershipCostsMapper implements Mapper<MembershipCostsJson, Member
         membershipCosts.hint = param.hint;
         return membershipCosts;
     }
-
-    mapTo(param: MembershipCosts): MembershipCostsJson {
-        if (!param) {
-            return null;
-        }
-
-        return {
-            title: param.title,
-            amount: param.costs,
-            hint: param.hint
-        };
-    }
-
 
 }

@@ -1,10 +1,9 @@
 import {BirthdayJson} from './birthdayJson.model';
 import {Birthday} from '../../core/domain/birthday.model';
-import {Mapper} from '../../core/base/mapper';
 import {DateUtils} from '../../util/DateUtils';
 
 // TODO tdit0703: Tests
-export class BirthdayMapper implements Mapper<BirthdayJson, Birthday> {
+export class BirthdayMapper {
 
     mapFrom(param: BirthdayJson): Birthday {
         if (!param) {
@@ -18,19 +17,6 @@ export class BirthdayMapper implements Mapper<BirthdayJson, Birthday> {
         birthday.image = param.picture;
 
         return birthday;
-    }
-
-    mapTo(param: Birthday): BirthdayJson {
-        if (!param) {
-            return null;
-        }
-
-        return {
-            firstname: param.firstname,
-            lastname: param.lastname,
-            date: param.birthday.format('YYYY-MM-DD'),
-            picture: param.image
-        };
     }
 
 }
