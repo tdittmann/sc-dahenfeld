@@ -2,7 +2,7 @@
 
     <ng-template ngFor let-entry [ngForOf]="timelineEntries" let-odd="odd">
 
-        <div class="timeline-card clickable" [ngClass]="{'right' : odd, 'left' : !odd}" (click)="goToArticleDetail(entry.articleId)">
+        <div class="timeline-card clickable" [ngClass]="{'right' : odd, 'left' : !odd}" [routerLink]="entry.getArticleLink()">
             <div class="card-head">
                 <h2>{{ entry.title }}</h2>
             </div>

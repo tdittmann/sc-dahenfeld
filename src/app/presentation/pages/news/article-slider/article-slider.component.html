@@ -2,7 +2,7 @@
 
     <ng-template ngFor let-article [ngForOf]="articles">
 
-        <ion-slide (click)="goToArticleDetail(article?.id)">
+        <ion-slide (click)="goToArticleDetail(article)">
             <article-image-meta [article]="article"></article-image-meta>
         </ion-slide>
 

@@ -21,8 +21,8 @@ export class ArticleSliderComponent {
         }
     };
 
-    public goToArticleDetail(id: string) {
-        this.router.navigate(['/article', id]);
+    public goToArticleDetail(article: Article) {
+        this.router.navigate([article.getArticleLink()]);
     }
 
 }

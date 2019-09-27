@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {Article} from '../../../core/domain/article.model';
-import {Router} from '@angular/router';
 
 @Component({
     templateUrl: 'news.page.html',
@@ -16,8 +15,7 @@ export class NewsPage implements OnInit {
     articles: Article[] = [];
     sliderArticles: Article[] = [];
 
-    constructor(private articleService: ArticleService,
-                private router: Router) {
+    constructor(private articleService: ArticleService) {
 
     }
 
@@ -37,10 +35,6 @@ export class NewsPage implements OnInit {
                     console.error(pError);
                 }
             );
-    }
-
-    public goToArticleDetail(id: string) {
-        this.router.navigate(['/article', id]);
     }
 
 }

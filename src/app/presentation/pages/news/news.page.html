@@ -13,7 +13,7 @@
                               [subTitle]="article.getFormattedDate()"
                               [category]="article.categoryName"
                               [categoryColor]="article.categoryColor"
-                              (click)="goToArticleDetail(article.id)">
+                              [routerLink]="article.getArticleLink()">
                 </article-card>
 
             </ion-col>

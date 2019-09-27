@@ -37,7 +37,6 @@ export class ProfilePage implements OnInit {
         this.profileService.saveProfile(this.profile)
             .subscribe(
                 (result: Profile) => {
-                    console.log('Profile saved: ' + result);
                     this.toastService.showToast('Ihr Profil wurde erfolgreich aktualisiert');
                 },
                 (error) => {

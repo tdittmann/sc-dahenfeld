@@ -12,4 +12,9 @@ export class TimelineEntry {
         return TextUtils.truncateText(TextUtils.removeAllHtmlTags(this.text), 250);
     }
 
+    // TODO tdit0703: Tests
+    public getArticleLink(): string {
+        return '/article/' + this.articleId;
+    }
+
 }
