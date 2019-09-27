@@ -1,1 +1,20 @@
-<h1>Players</h1>
+<ion-content color="light">
+    <ion-list *ngIf="players" lines="none">
+        <ng-template ngFor let-player [ngForOf]="players">
+
+            <ion-list-header *ngIf="isDifferentPosition(player)">
+                <strong>{{player.position}}</strong>
+            </ion-list-header>
+
+            <ion-item button mode="md">
+                <ion-avatar slot="start">
+                    <ion-img [src]="player.image" [alt]="player.getName()"></ion-img>
+                </ion-avatar>
+                <ion-label>
+                    <h2>{{player.getName()}}</h2>
+                </ion-label>
+            </ion-item>
+
+        </ng-template>
+    </ion-list>
+</ion-content>

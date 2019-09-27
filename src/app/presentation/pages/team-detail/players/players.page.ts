@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {PlayerService} from '../../../../dataproviders/soccer/players/player.service';
+import {Player} from '../../../../core/domain/player.model';
 
 @Component({
     selector: 'players',
@@ -8,7 +10,11 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class PlayersPage implements OnInit {
 
-    constructor(private route: ActivatedRoute) {
+    players: Player[] = [];
+    lastPosition: string = null;
+
+    constructor(private route: ActivatedRoute,
+                private playerService: PlayerService) {
 
     }
 
@@ -17,9 +23,23 @@ export class PlayersPage implements OnInit {
             params => {
                 const teamId = params['id'];
 
-                // TODO tdit0703: Load Players
+                this.playerService.loadPlayers(teamId).subscribe(
+                    players => {
+                        this.players = players;
+                    },
+                    error => {
+                        // TODO tdit0703: Error handling
+                        console.error(error);
+                    }
+                );
             }
         );
+    }
+
+    public isDifferentPosition(pPlayer: Player): boolean {
+        const showHeader = (pPlayer.position !== this.lastPosition);
+        this.lastPosition = pPlayer.position;
+        return showHeader;
     }
 
 }

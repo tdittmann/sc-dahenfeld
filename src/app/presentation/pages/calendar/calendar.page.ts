@@ -10,7 +10,6 @@ import {Moment} from 'moment';
 export class CalendarPage implements OnInit {
 
     calendarEntries: CalendarEntry[] = [];
-
     lastDay = null;
 
     constructor(private calendarService: CalendarService) {
