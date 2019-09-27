@@ -33,7 +33,9 @@ export class ArticleService {
         this.httpService
             .post<ArticleJson>(environment.backendUrl + 'news', this.mapper.mapTo(pArticle))
             .subscribe(
-                pResponse => console.log(pResponse),
+                pResponse => {
+                    // Nothing to do
+                },
                 pError => console.error(pError),
             );
     }
