@@ -4,7 +4,6 @@ import {IonicModule} from '@ionic/angular';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {ArticleService} from '../../../dataproviders/article/article.service';
-import {HttpClientModule} from '@angular/common/http';
 import {ArticleDetailPage} from './article-detail.page';
 import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {ArticleDetailModule} from '../../shared/article-detail/article-detail.module';
@@ -15,7 +14,6 @@ import {ArticleDetailModule} from '../../shared/article-detail/article-detail.mo
         CommonModule,
         FormsModule,
         IonicModule,
-        HttpClientModule,
         PageHeaderModule,
         ArticleDetailModule,
         RouterModule.forChild([

@@ -1,23 +1,23 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../../environments/environment.prod';
 import {Profile} from '../../core/domain/profile.model';
 import {ProfileJson} from './profileJson.model';
 import {map} from 'rxjs/operators';
 import {ProfileMapper} from './profile.mapper';
+import {HttpService} from '../http.service';
 
 @Injectable()
 export class ProfileService {
 
     mapper: ProfileMapper = new ProfileMapper();
 
-    constructor(private http: HttpClient) {
+    constructor(private httpService: HttpService) {
 
     }
 
     loadProfile(token: string): Observable<Profile> {
-        return this.http
+        return this.httpService
             .get<ProfileJson>(environment.backendUrl + 'profile?token=' + token)
             .pipe(map(this.mapper.mapFrom));
     }
@@ -25,8 +25,8 @@ export class ProfileService {
     saveProfile(profile: Profile): Observable<Profile> {
         const profileJson: ProfileJson = this.mapper.mapTo(profile);
 
-        return this.http
-            .post<ProfileJson>(environment.backendUrl + 'profile', JSON.stringify(profileJson));
+        return this.httpService
+            .post<ProfileJson>(environment.backendUrl + 'profile', profileJson);
     }
 
 }

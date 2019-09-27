@@ -6,7 +6,6 @@ import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {RouterModule} from '@angular/router';
 import {MembershipPage} from './membership.page';
 import {MembershipService} from '../../../dataproviders/membership/membership.service';
-import {HttpClientModule} from '@angular/common/http';
 import {ArticleDetailModule} from '../../shared/article-detail/article-detail.module';
 import {CostCardModule} from './cost-card/cost-card.module';
 
@@ -17,7 +16,6 @@ import {CostCardModule} from './cost-card/cost-card.module';
         FormsModule,
         IonicModule,
         PageHeaderModule,
-        HttpClientModule,
         ArticleDetailModule,
         CostCardModule,
         RouterModule.forChild([

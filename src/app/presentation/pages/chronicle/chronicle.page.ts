@@ -4,7 +4,7 @@ import {TimelineEntry} from '../../../core/domain/timeline-entry.model';
 import {Article} from '../../../core/domain/article.model';
 import {TimelineMapper} from '../../../dataproviders/timeline/timeline.mapper';
 import {TimelineService} from '../../../dataproviders/timeline/timeline.service';
-import {TimelineTitle} from '../../../dataproviders/timeline/timelineTitle.model';
+import {TimelineTitle} from '../../../core/domain/timelineTitle.model';
 
 @Component({
     templateUrl: 'chronicle.page.html',

@@ -3,7 +3,6 @@ import {ArticleService} from '../../../dataproviders/article/article.service';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
-import {HttpClientModule} from '@angular/common/http';
 import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {RouterModule} from '@angular/router';
 import {ChroniclePage} from './chronicle.page';
@@ -16,7 +15,6 @@ import {TimelineService} from '../../../dataproviders/timeline/timeline.service'
         CommonModule,
         FormsModule,
         IonicModule,
-        HttpClientModule,
         PageHeaderModule,
         RouterModule.forChild([
             {

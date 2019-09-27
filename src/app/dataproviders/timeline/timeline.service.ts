@@ -1,20 +1,19 @@
 import {Injectable} from '@angular/core';
-import {TimelineTitle} from './timelineTitle.model';
-import {HttpClient} from '@angular/common/http';
+import {TimelineTitle} from '../../core/domain/timelineTitle.model';
 import {environment} from '../../../environments/environment.prod';
 import {filter, map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
+import {HttpService} from '../http.service';
 
 @Injectable()
 export class TimelineService {
 
-    // TODO tdit0703: HttpClient auslagern in separaten Service
-    constructor(private http: HttpClient) {
+    constructor(private httpService: HttpService) {
 
     }
 
     public loadTitles(): Observable<TimelineTitle> {
-        return this.http
+        return this.httpService
             .get<string[]>(environment.backendUrl + 'timelineTitle')
             .pipe(filter(value => Array.isArray(value)))
             .pipe(map(value => value[0]))
