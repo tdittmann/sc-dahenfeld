@@ -76,7 +76,13 @@ export class AppComponent {
             // Set dark mode if enabled
             this.storageService.loadDarkMode().then(
                 value => {
-                    if (value) {
+                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+                    if (value === null) {
+                        this.storageService.saveDarkMode(prefersDark);
+                    }
+
+                    if (value || prefersDark) {
                         document.body.classList.add('dark');
                     }
                 }
