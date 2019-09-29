@@ -1,5 +1,8 @@
 import {Moment} from 'moment';
 import {PlayerStatistic} from './playerStatistic.model';
+import {TextUtils} from '../../util/TextUtils';
+import {DateUtils} from '../../util/DateUtils';
+import {environment} from '../../../environments/environment';
 
 export class Player {
 
@@ -22,6 +25,19 @@ export class Player {
 
     public getName(): string {
         return this.firstname + ' ' + this.lastname;
+    }
+
+    public getAge(): number {
+        return DateUtils.diffYears(this.birthday);
+    }
+
+    public getFormattedBirthday(): string {
+        return this.birthday
+            .format(environment.longDateFormat);
+    }
+
+    public getImageAsBackground(): string {
+        return TextUtils.getAsBackgroundUrl(this.image);
     }
 
     public compareTo(pPlayer: Player): number {

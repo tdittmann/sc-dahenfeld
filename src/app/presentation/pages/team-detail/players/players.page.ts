@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {PlayerService} from '../../../../dataproviders/soccer/players/player.service';
 import {Player} from '../../../../core/domain/player.model';
+import {ModalController} from '@ionic/angular';
+import {PersonPage} from '../../person/person.page';
 
 @Component({
     selector: 'players',
@@ -14,7 +16,8 @@ export class PlayersPage implements OnInit {
     lastPosition: string = null;
 
     constructor(private route: ActivatedRoute,
-                private playerService: PlayerService) {
+                private playerService: PlayerService,
+                private modalController: ModalController) {
 
     }
 
@@ -34,6 +37,15 @@ export class PlayersPage implements OnInit {
                 );
             }
         );
+    }
+
+    public openPlayer(personId: number) {
+        this.modalController.create({
+            component: PersonPage,
+            componentProps: {
+                'personId': personId
+            }
+        }).then(modal => modal.present());
     }
 
     public isDifferentPosition(pPlayer: Player): boolean {

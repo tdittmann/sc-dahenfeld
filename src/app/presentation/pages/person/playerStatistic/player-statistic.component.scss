@@ -1,0 +1,34 @@
+.statistic {
+  padding: 0;
+}
+
+.statisticRow {
+  border: 1px solid var(--ion-color-light);
+}
+
+.statisticRowLeft,
+.statisticRowRight {
+  padding: 8px;
+  position: relative;
+}
+
+.statisticRowRight {
+  border-left: 1px solid var(--ion-color-light);
+}
+
+.statisticText,
+.statisticSubText {
+  margin: 0;
+}
+
+.statisticSubText {
+  font-size: 0.75em;
+  color: var(--ion-color-dark);
+}
+
+.statisticValue {
+  font-weight: bold;
+  position: absolute;
+  right: 15px;
+  top: 30%;
+}

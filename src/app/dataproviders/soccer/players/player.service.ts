@@ -23,4 +23,10 @@ export class PlayerService {
             .pipe(tap(pPlayer => pPlayer.sort(((a, b) => a.compareTo(b)))));
     }
 
+    loadPerson(personId: number): Observable<Player> {
+        return this.httpService
+            .get<PlayerJson>(environment.backendUrl + 'person?personId=' + personId )
+            .pipe(map(pPerson => this.playerMapper.mapFrom(pPerson)));
+    }
+
 }

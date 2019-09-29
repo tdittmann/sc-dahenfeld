@@ -1,0 +1,100 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-button (click)="closeModal()">
+                <ion-icon name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+
+    <div class="imageContainer">
+        <div class="image"
+             [ngStyle]="{'background-image' : person?.getImageAsBackground()}">
+        </div>
+
+        <div class="playerName">
+            <h1>{{person?.lastname}}</h1>
+            <h2>{{person?.firstname}}</h2>
+        </div>
+
+        <ion-grid class="playerInfo">
+            <ion-row *ngIf="person?.birthday">
+                <ion-col>
+                    <p class="playerInfoValue">{{person?.getAge()}}</p>
+                    <p class="playerInfoText">Alter</p>
+                </ion-col>
+            </ion-row>
+            <ion-row *ngIf="person?.birthday && isDevModeEnabled()">
+                <ion-col>
+                    <p class="playerInfoValue">{{person?.getFormattedBirthday()}}</p>
+                    <p class="playerInfoText">Geburtstag</p>
+                </ion-col>
+            </ion-row>
+            <ion-row *ngIf="person?.jerseynumber > 0">
+                <ion-col>
+                    <p class="playerInfoValue">{{person?.jerseynumber}}</p>
+                    <p class="playerInfoText">Trikotnummer</p>
+                </ion-col>
+            </ion-row>
+            <ion-row *ngIf="person?.position">
+                <ion-col>
+                    <p class="playerInfoValue">{{person?.position}}</p>
+                    <p class="playerInfoText">Position</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+    <div class="statisticsHeader">
+        Statistiken
+    </div>
+
+    <player-statistic text="Spiele"
+                      [seasonValue]="person?.seasonStatistic.matches"
+                      [careerValue]="person?.careerStatistic.matches">
+    </player-statistic>
+
+    <player-statistic text="Startelf"
+                      [seasonValue]="person?.seasonStatistic.starting"
+                      [careerValue]="person?.careerStatistic.starting">
+    </player-statistic>
+
+    <player-statistic text="Spielminuten"
+                      [seasonValue]="person?.seasonStatistic.playingMinutes"
+                      [careerValue]="person?.careerStatistic.playingMinutes">
+    </player-statistic>
+
+    <player-statistic text="Tore"
+                      [seasonValue]="person?.seasonStatistic.goals"
+                      [careerValue]="person?.careerStatistic.goals">
+    </player-statistic>
+
+    <player-statistic text="Einwechslungen"
+                      [seasonValue]="person?.seasonStatistic.cameIn"
+                      [careerValue]="person?.careerStatistic.cameIn">
+    </player-statistic>
+
+    <player-statistic text="Auswechslungen"
+                      [seasonValue]="person?.seasonStatistic.cameOut"
+                      [careerValue]="person?.careerStatistic.cameOut">
+    </player-statistic>
+
+    <player-statistic text="Gelbe Karten"
+                      [seasonValue]="person?.seasonStatistic.yellowCards"
+                      [careerValue]="person?.careerStatistic.yellowCards">
+    </player-statistic>
+
+    <player-statistic text="Gelb-Rote Karten"
+                      [seasonValue]="person?.seasonStatistic.yellowRedCards"
+                      [careerValue]="person?.careerStatistic.yellowRedCards">
+    </player-statistic>
+
+    <player-statistic text="Rote Karten"
+                      [seasonValue]="person?.seasonStatistic.redCards"
+                      [careerValue]="person?.careerStatistic.redCards">
+    </player-statistic>
+
+</ion-content>

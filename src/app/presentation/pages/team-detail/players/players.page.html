@@ -6,7 +6,7 @@
                 <strong>{{player.position}}</strong>
             </ion-list-header>
 
-            <ion-item button mode="md">
+            <ion-item button mode="md" (click)="openPlayer(player.id)">
                 <ion-avatar slot="start">
                     <ion-img [src]="player.image" [alt]="player.getName()"></ion-img>
                 </ion-avatar>
