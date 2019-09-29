@@ -6,6 +6,7 @@ export class StorageService {
 
     private static PUSH_TOKEN_KEY = 'pushToken';
     private static DEV_MODE_KEY = 'devMode';
+    private static DARK_MODE_KEY = 'darkMode';
 
     constructor(private storage: Storage) {
 
@@ -25,6 +26,14 @@ export class StorageService {
 
     saveDevMode(devMode: boolean): Promise<boolean> {
         return this.storage.set(StorageService.DEV_MODE_KEY, devMode);
+    }
+
+    loadDarkMode(): Promise<boolean> {
+        return this.storage.get(StorageService.DARK_MODE_KEY);
+    }
+
+    saveDarkMode(darkMode: boolean): Promise<boolean> {
+        return this.storage.set(StorageService.DARK_MODE_KEY, darkMode);
     }
 
 }

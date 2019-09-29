@@ -1,5 +1,3 @@
-@import '~src/theme/variables.scss';
-
 .article-card-image {
   height: 150px;
   background-size: cover;
@@ -7,7 +5,7 @@
 }
 
 .article-card-footer {
-  border-top: 1px solid $separator_light;
+  border-top: 1px solid var(--ion-color-light);
   text-align: center;
 }
 

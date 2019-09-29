@@ -10,6 +10,7 @@ export class PageHeaderComponent {
 
     @Input() title: string;
     @Input() color: string;
+    @Input() noBorder = false;
 
     public showLogo(): boolean {
         return underscore.isBlank(underscore.clean(this.title));

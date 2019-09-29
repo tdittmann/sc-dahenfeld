@@ -1,16 +1,10 @@
-@import '~src/theme/variables.scss';
-
-ion-card {
-  background: #fff;
-}
-
 ion-card-content {
   padding: 4px;
 }
 
 ion-card-header {
   padding: 0;
-  border-top: 1px solid #e4e7ed;
+  border-top: 1px solid var(--ion-color-light);
   font-size: 0.75rem;
 }
 
@@ -34,7 +28,7 @@ ion-card-header {
   font-family: Montserrat, sans-serif;
   font-weight: 700;
   letter-spacing: -.02em;
-  color: #31404b;
+  color: var(--ion-color-dark);
 }
 
 .match-result-home {
@@ -52,7 +46,7 @@ ion-card-header {
 }
 
 .match-result-loser {
-  color: #9a9da2;
+  color: var(--ion-color-medium);
 }
 
 .match-result-winner:before {
@@ -63,7 +57,7 @@ ion-card-header {
   top: 50%;
   width: 0;
   height: 0;
-  border-left: 8px solid $primary;
+  border-left: 8px solid var(--ion-color-primary);
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   transform: translateY(-50%);

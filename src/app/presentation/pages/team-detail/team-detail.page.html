@@ -1,9 +1,9 @@
-<page-header [title]="teamInformation?.name"></page-header>
+<page-header noBorder="true" [title]="teamInformation?.name"></page-header>
 
-<ion-content>
+<ion-content color="light">
     <super-tabs>
 
-        <super-tabs-toolbar slot="top">
+        <super-tabs-toolbar color="white" slot="top">
             <super-tab-button *ngIf="teamInformation?.showRanking"><ion-label>Tabelle</ion-label></super-tab-button>
             <super-tab-button *ngIf="teamInformation?.showFixture"><ion-label>Spielplan</ion-label></super-tab-button>
             <super-tab-button *ngIf="teamInformation?.showPlayers"><ion-label>Kader</ion-label></super-tab-button>

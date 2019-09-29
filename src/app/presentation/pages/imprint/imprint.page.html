@@ -1,6 +1,6 @@
-<page-header color="dark"></page-header>
+<page-header></page-header>
 
-<ion-content>
+<ion-content color="light">
 
     <div class="ion-text-center ion-padding-top">
         <p>
@@ -18,6 +18,10 @@
         <ion-item button (click)="activateDevMode()">
             <ion-label>Design und Entwicklung</ion-label>
             <p item-right>{{ developer }}</p>
+        </ion-item>
+        <ion-item>
+            <ion-label>Dark Mode</ion-label>
+            <ion-toggle [(ngModel)]="darkMode" (ionChange)="toggleDarkMode()"></ion-toggle>
         </ion-item>
     </ion-item-group>
 

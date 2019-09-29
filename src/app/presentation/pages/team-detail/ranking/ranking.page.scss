@@ -28,11 +28,11 @@ table {
   }
 
   tr:nth-child(odd) {
-    background: #ccc;
+    background: var(--ion-color-medium);
   }
 
   tr:nth-child(even) {
-    background: #fff;
+    background: var(--ion-color-light);
   }
 
   tr:hover {

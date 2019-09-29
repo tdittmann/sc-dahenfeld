@@ -1,6 +1,17 @@
-<ion-header>
+<ion-header *ngIf="!noBorder">
     <ion-toolbar [color]="color">
         <ion-buttons slot="start">
+            <!-- TODO tdit0703: back button? -->
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{title}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-header no-border *ngIf="noBorder">
+    <ion-toolbar [color]="color">
+        <ion-buttons slot="start">
+            <!-- TODO tdit0703: back button? -->
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>{{title}}</ion-title>

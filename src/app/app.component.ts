@@ -4,6 +4,7 @@ import {Platform} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {DevService} from './dataproviders/dev.service';
+import {StorageService} from './dataproviders/storage.service';
 
 @Component({
     selector: 'app-root',
@@ -61,7 +62,8 @@ export class AppComponent {
     constructor(private platform: Platform,
                 private splashScreen: SplashScreen,
                 private statusBar: StatusBar,
-                private devService: DevService) {
+                private devService: DevService,
+                private storageService: StorageService) {
         this.initializeApp();
     }
 
@@ -70,6 +72,15 @@ export class AppComponent {
             // Hide splash screen
             this.statusBar.styleDefault();
             this.splashScreen.hide();
+
+            // Set dark mode if enabled
+            this.storageService.loadDarkMode().then(
+                value => {
+                    if (value) {
+                        document.body.classList.add('dark');
+                    }
+                }
+            );
 
             // TODO tdit0703: Check if newer version exists -> Show modal!
         });
