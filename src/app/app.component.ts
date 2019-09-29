@@ -80,9 +80,12 @@ export class AppComponent {
 
                     if (value === null) {
                         this.storageService.saveDarkMode(prefersDark);
+                        if (prefersDark) {
+                            document.body.classList.add('dark');
+                        }
                     }
 
-                    if (value || prefersDark) {
+                    if (value) {
                         document.body.classList.add('dark');
                     }
                 }
