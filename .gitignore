@@ -17,6 +17,7 @@ npm-debug.log*
 .sourcemaps/
 .sass-cache/
 .tmp/
+.gradle/
 .versions/
 coverage/
 www/
@@ -28,7 +29,6 @@ plugins/
 plugins/android.json
 plugins/ios.json
 $RECYCLE.BIN/
-.gradle/
 
 .DS_Store
 Thumbs.db
