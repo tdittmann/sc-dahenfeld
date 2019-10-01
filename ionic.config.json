@@ -1,5 +1,8 @@
 {
   "name": "sc-dahenfeld",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
   "type": "angular"
 }
