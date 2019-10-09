@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {DevService} from '../../../dataproviders/dev.service';
 import {ToastService} from '../../../dataproviders/toast.service';
 import {StorageService} from '../../../dataproviders/storage.service';
+import {AppVersion} from '@ionic-native/app-version/ngx';
 
 @Component({
     templateUrl: 'imprint.page.html',
@@ -18,13 +19,18 @@ export class ImprintPage implements OnInit {
 
     constructor(private devService: DevService,
                 private storageService: StorageService,
-                private toastService: ToastService) {
+                private toastService: ToastService,
+                private appVersion: AppVersion) {
 
     }
 
     ngOnInit(): void {
         this.storageService.loadDarkMode()
             .then(value => this.darkMode = value);
+
+        this.appVersion.getVersionNumber()
+            .then(value => this.version = value)
+            .catch(reason => console.error('Can not load app version: ', reason));
     }
 
     isDevModeEnabled(): boolean {

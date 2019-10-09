@@ -1,10 +1,12 @@
 import {Component} from '@angular/core';
 
-import {Platform} from '@ionic/angular';
+import {AlertController, Platform} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {DevService} from './dataproviders/dev.service';
 import {StorageService} from './dataproviders/storage.service';
+import {AppVersion} from '@ionic-native/app-version/ngx';
+import {VersionService} from './dataproviders/version/version.service';
 
 @Component({
     selector: 'app-root',
@@ -63,7 +65,10 @@ export class AppComponent {
                 private splashScreen: SplashScreen,
                 private statusBar: StatusBar,
                 private devService: DevService,
-                private storageService: StorageService) {
+                private storageService: StorageService,
+                private appVersion: AppVersion,
+                private versionService: VersionService,
+                private alertController: AlertController) {
         this.initializeApp();
     }
 
@@ -74,29 +79,70 @@ export class AppComponent {
             this.splashScreen.hide();
 
             // Set dark mode if enabled
-            this.storageService.loadDarkMode().then(
-                value => {
-                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            this.checkDarkMode();
 
-                    if (value === null) {
-                        this.storageService.saveDarkMode(prefersDark);
-                        if (prefersDark) {
-                            document.body.classList.add('dark');
-                        }
-                    }
-
-                    if (value) {
-                        document.body.classList.add('dark');
-                    }
-                }
-            );
-
-            // TODO tdit0703: Check if newer version exists -> Show modal!
+            // Check if a newer version exists
+            this.checkAppVersion();
         });
     }
 
     isDevModeEnabled(): boolean {
         return this.devService.isDevModeEnabled();
+    }
+
+    private checkDarkMode() {
+        this.storageService.loadDarkMode().then(
+            value => {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+                if (value === null) {
+                    this.storageService.saveDarkMode(prefersDark);
+                    if (prefersDark) {
+                        document.body.classList.add('dark');
+                    }
+                }
+
+                if (value) {
+                    document.body.classList.add('dark');
+                }
+            }
+        );
+    }
+
+    private checkAppVersion() {
+
+        this.appVersion.getVersionNumber()
+            .then(localAppVersion => {
+                this.versionService.loadVersionInfo().subscribe(
+                    globalAppVersion => {
+                        if (localAppVersion !== globalAppVersion.version) {
+                            this.openNewVersionAlert();
+                        }
+                    },
+                    error => console.error(error)
+                );
+            })
+            .catch(reason => console.error('Can not load app version: ', reason));
+
+    }
+
+    private async openNewVersionAlert() {
+        const alert = await this.alertController.create({
+            header: 'Neue Version verfügbar',
+            message: 'Es ist eine neue Version der SCD-App verfügbar. Aktualisiere jetzt um weiter die App nutzen zu können.',
+            backdropDismiss: false,
+            buttons: [
+                {
+                    text: 'Aktualisieren',
+                    handler: () => {
+                        // TODO tdit0703: Link zum App Store
+                        console.log('Confirm Okay');
+                    }
+                }
+            ]
+        });
+
+        await alert.present();
     }
 
 }

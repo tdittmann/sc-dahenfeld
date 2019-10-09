@@ -14,11 +14,12 @@ import {StorageService} from './dataproviders/storage.service';
 import {SuperTabsModule} from '@ionic-super-tabs/angular';
 import {HttpService} from './dataproviders/http.service';
 import {HttpClientModule} from '@angular/common/http';
+import {AppVersion} from '@ionic-native/app-version/ngx';
+import {VersionService} from './dataproviders/version/version.service';
 
 // TODO tdit0703: Loading & Error Sites (https://medium.com/@zeljkoradic/loader-bar-on-every-http-request-in-angular-6-60d8572a21a9)
 // TODO tdit0703: Basic Auth?
 // TODO tdit0703: DateTime's immer als UTC und in Ionic die Zeitzone des Users auslesen?
-// TODO tdit0703: Dark Mode
 @NgModule({
     declarations: [
         AppComponent
@@ -38,6 +39,8 @@ import {HttpClientModule} from '@angular/common/http';
         HttpService,
         DevService,
         StorageService,
+        AppVersion,
+        VersionService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
     ],
     bootstrap: [AppComponent]
