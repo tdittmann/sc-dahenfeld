@@ -7,16 +7,10 @@ import {environment} from '../../../environments/environment';
 export class Player {
 
     id: number;
-    // TODO tdit0703: Brauch ich das?
-    projectId: number;
-    // TODO tdit0703: Brauch ich das?
-    teamplayerId: number;
     firstname: string;
     lastname: string;
     image: string;
     position: string;
-    // TODO tdit0703: Brauch ich das?
-    age: number;
     birthday: Moment;
     jerseynumber: number;
 
