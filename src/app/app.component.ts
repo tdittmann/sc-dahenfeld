@@ -4,9 +4,7 @@ import {AlertController, Platform} from '@ionic/angular';
 import {DevService} from './dataproviders/dev.service';
 import {StorageService} from './dataproviders/storage.service';
 import {VersionService} from './dataproviders/version/version.service';
-import {Plugins, StatusBarStyle} from '@capacitor/core';
-
-const {StatusBar, Device, SplashScreen} = Plugins;
+import {Capacitor, Plugins, StatusBarStyle} from '@capacitor/core';
 
 @Component({
     selector: 'app-root',
@@ -72,7 +70,9 @@ export class AppComponent {
     initializeApp() {
         this.platform.ready().then(() => {
             // Hide splash screen
-            SplashScreen.hide();
+            if (Capacitor.isPluginAvailable('SplashScreen')) {
+                Plugins.SplashScreen.hide();
+            }
 
             // Set dark mode if enabled
             this.checkDarkMode();
@@ -95,13 +95,17 @@ export class AppComponent {
                     this.storageService.saveDarkMode(prefersDark);
                     if (prefersDark) {
                         document.body.classList.add('dark');
-                        StatusBar.setStyle({style: StatusBarStyle.Dark});
+                        if (Capacitor.isPluginAvailable('StatusBar')) {
+                            Plugins.StatusBar.setStyle({style: StatusBarStyle.Dark});
+                        }
                     }
                 }
 
                 if (value) {
                     document.body.classList.add('dark');
-                    StatusBar.setStyle({style: StatusBarStyle.Dark});
+                    if (Capacitor.isPluginAvailable('StatusBar')) {
+                        Plugins.StatusBar.setStyle({style: StatusBarStyle.Dark});
+                    }
                 }
             }
         );
@@ -109,18 +113,20 @@ export class AppComponent {
 
     private checkAppVersion() {
 
-        Device.getInfo()
-            .then(deviceInfo => {
-                this.versionService.loadVersionInfo().subscribe(
-                    globalAppVersion => {
-                        if (deviceInfo.appVersion !== globalAppVersion.version) {
-                            this.openNewVersionAlert();
-                        }
-                    },
-                    error => console.error(error)
-                );
-            })
-            .catch(reason => console.error('Can not load device info: ', reason));
+        if (Capacitor.isPluginAvailable('Device')) {
+            Plugins.Device.getInfo()
+                .then(deviceInfo => {
+                    this.versionService.loadVersionInfo().subscribe(
+                        globalAppVersion => {
+                            if (deviceInfo.appVersion !== globalAppVersion.version) {
+                                this.openNewVersionAlert();
+                            }
+                        },
+                        error => console.error(error)
+                    );
+                })
+                .catch(reason => console.error('Can not load device info: ', reason));
+        }
     }
 
     private async openNewVersionAlert() {
