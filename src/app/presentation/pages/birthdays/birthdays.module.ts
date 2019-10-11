@@ -7,6 +7,7 @@ import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {BirthdaysPage} from './birthdays.page';
 import {BirthdayService} from '../../../dataproviders/birthday/birthday.service';
 import {BirthdayFilterPipe} from './birthday.filter';
+import {PersonModule} from '../person/person.module';
 
 @NgModule({
     providers: [BirthdayService],
@@ -15,6 +16,7 @@ import {BirthdayFilterPipe} from './birthday.filter';
         FormsModule,
         IonicModule,
         PageHeaderModule,
+        PersonModule,
         RouterModule.forChild([
             {
                 path: '',

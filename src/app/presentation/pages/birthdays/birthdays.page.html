@@ -8,7 +8,7 @@
     <ion-list>
         <ion-item *ngFor="let birthday of birthdays | birthdayFilter: filter"
                   [color]="birthday.isToday() ? 'primary' : ''">
-            <ion-label>
+            <ion-label (click)="openPerson(birthday.personId)">
                 <h2>{{ birthday.getName() }}</h2>
                 <h3>{{ birthday.getSubtitle() }}</h3>
                 <p>{{ birthday.getFormattedDate() }}</p>

@@ -5,9 +5,10 @@ import {IonicModule} from '@ionic/angular';
 import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {PersonPage} from './person.page';
 import {PlayerStatisticComponent} from './playerStatistic/player-statistic.component';
+import {PlayerService} from '../../../dataproviders/soccer/players/player.service';
 
 @NgModule({
-    providers: [],
+    providers: [PlayerService],
     imports: [
         CommonModule,
         FormsModule,

@@ -6,6 +6,7 @@ import {DateUtils} from '../../util/DateUtils';
 // TODO tdit0703: Tests
 export class Birthday {
 
+    personId: number;
     firstname: string;
     lastname: string;
     birthday: Moment;

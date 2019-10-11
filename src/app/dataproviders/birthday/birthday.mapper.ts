@@ -11,6 +11,7 @@ export class BirthdayMapper {
         }
 
         const birthday: Birthday = new Birthday();
+        birthday.personId = parseInt(param.personId, 10);
         birthday.firstname = param.firstname;
         birthday.lastname = param.lastname;
         birthday.birthday = DateUtils.ofIsoDate(param.date);
