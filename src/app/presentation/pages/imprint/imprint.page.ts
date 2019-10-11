@@ -2,11 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {DevService} from '../../../dataproviders/dev.service';
 import {ToastService} from '../../../dataproviders/toast.service';
 import {StorageService} from '../../../dataproviders/storage.service';
-import {AppVersion} from '@ionic-native/app-version/ngx';
 
 import {Plugins, StatusBarStyle} from '@capacitor/core';
 
-const {StatusBar} = Plugins;
+const {StatusBar, Device} = Plugins;
 
 @Component({
     templateUrl: 'imprint.page.html',
@@ -23,8 +22,7 @@ export class ImprintPage implements OnInit {
 
     constructor(private devService: DevService,
                 private storageService: StorageService,
-                private toastService: ToastService,
-                private appVersion: AppVersion) {
+                private toastService: ToastService) {
 
     }
 
@@ -32,9 +30,9 @@ export class ImprintPage implements OnInit {
         this.storageService.loadDarkMode()
             .then(value => this.darkMode = value);
 
-        this.appVersion.getVersionNumber()
-            .then(value => this.version = value)
-            .catch(reason => console.error('Can not load app version: ', reason));
+        Device.getInfo()
+            .then(value => this.version = value.appVersion)
+            .catch(reason => console.error('Can not load device info: ', reason));
     }
 
     isDevModeEnabled(): boolean {

@@ -3,11 +3,10 @@ import {Component} from '@angular/core';
 import {AlertController, Platform} from '@ionic/angular';
 import {DevService} from './dataproviders/dev.service';
 import {StorageService} from './dataproviders/storage.service';
-import {AppVersion} from '@ionic-native/app-version/ngx';
 import {VersionService} from './dataproviders/version/version.service';
 import {Plugins, StatusBarStyle} from '@capacitor/core';
 
-const {StatusBar} = Plugins;
+const {StatusBar, Device, SplashScreen} = Plugins;
 
 @Component({
     selector: 'app-root',
@@ -65,7 +64,6 @@ export class AppComponent {
     constructor(private platform: Platform,
                 private devService: DevService,
                 private storageService: StorageService,
-                private appVersion: AppVersion,
                 private versionService: VersionService,
                 private alertController: AlertController) {
         this.initializeApp();
@@ -73,6 +71,8 @@ export class AppComponent {
 
     initializeApp() {
         this.platform.ready().then(() => {
+            // Hide splash screen
+            SplashScreen.hide();
 
             // Set dark mode if enabled
             this.checkDarkMode();
@@ -109,19 +109,18 @@ export class AppComponent {
 
     private checkAppVersion() {
 
-        this.appVersion.getVersionNumber()
-            .then(localAppVersion => {
+        Device.getInfo()
+            .then(deviceInfo => {
                 this.versionService.loadVersionInfo().subscribe(
                     globalAppVersion => {
-                        if (localAppVersion !== globalAppVersion.version) {
+                        if (deviceInfo.appVersion !== globalAppVersion.version) {
                             this.openNewVersionAlert();
                         }
                     },
                     error => console.error(error)
                 );
             })
-            .catch(reason => console.error('Can not load app version: ', reason));
-
+            .catch(reason => console.error('Can not load device info: ', reason));
     }
 
     private async openNewVersionAlert() {
