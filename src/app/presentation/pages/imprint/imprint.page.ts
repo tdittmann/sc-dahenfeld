@@ -4,6 +4,10 @@ import {ToastService} from '../../../dataproviders/toast.service';
 import {StorageService} from '../../../dataproviders/storage.service';
 import {AppVersion} from '@ionic-native/app-version/ngx';
 
+import {Plugins, StatusBarStyle} from '@capacitor/core';
+
+const {StatusBar} = Plugins;
+
 @Component({
     templateUrl: 'imprint.page.html',
     styleUrls: ['imprint.page.scss']
@@ -55,8 +59,10 @@ export class ImprintPage implements OnInit {
     toggleDarkMode() {
         if (this.darkMode) {
             document.body.classList.add('dark');
+            StatusBar.setStyle({style: StatusBarStyle.Dark});
         } else {
             document.body.classList.remove('dark');
+            StatusBar.setStyle({style: StatusBarStyle.Light});
         }
 
         this.storageService.saveDarkMode(this.darkMode);

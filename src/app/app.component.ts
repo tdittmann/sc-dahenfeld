@@ -1,12 +1,13 @@
 import {Component} from '@angular/core';
 
 import {AlertController, Platform} from '@ionic/angular';
-import {SplashScreen} from '@ionic-native/splash-screen/ngx';
-import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {DevService} from './dataproviders/dev.service';
 import {StorageService} from './dataproviders/storage.service';
 import {AppVersion} from '@ionic-native/app-version/ngx';
 import {VersionService} from './dataproviders/version/version.service';
+import {Plugins, StatusBarStyle} from '@capacitor/core';
+
+const {StatusBar} = Plugins;
 
 @Component({
     selector: 'app-root',
@@ -62,8 +63,6 @@ export class AppComponent {
     ];
 
     constructor(private platform: Platform,
-                private splashScreen: SplashScreen,
-                private statusBar: StatusBar,
                 private devService: DevService,
                 private storageService: StorageService,
                 private appVersion: AppVersion,
@@ -74,9 +73,6 @@ export class AppComponent {
 
     initializeApp() {
         this.platform.ready().then(() => {
-            // Hide splash screen
-            this.statusBar.styleDefault();
-            this.splashScreen.hide();
 
             // Set dark mode if enabled
             this.checkDarkMode();
@@ -99,11 +95,13 @@ export class AppComponent {
                     this.storageService.saveDarkMode(prefersDark);
                     if (prefersDark) {
                         document.body.classList.add('dark');
+                        StatusBar.setStyle({style: StatusBarStyle.Dark});
                     }
                 }
 
                 if (value) {
                     document.body.classList.add('dark');
+                    StatusBar.setStyle({style: StatusBarStyle.Dark});
                 }
             }
         );
@@ -111,15 +109,10 @@ export class AppComponent {
 
     private checkAppVersion() {
 
-        console.log('checking app version');
         this.appVersion.getVersionNumber()
             .then(localAppVersion => {
-                console.log('localversion' + localAppVersion);
                 this.versionService.loadVersionInfo().subscribe(
                     globalAppVersion => {
-                        console.log('globalAppVersion' + globalAppVersion);
-                        console.log('globalAppVersion' + globalAppVersion.version);
-                        console.log('localAppVersion !== globalAppVersion.version' + localAppVersion !== globalAppVersion.version);
                         if (localAppVersion !== globalAppVersion.version) {
                             this.openNewVersionAlert();
                         }

@@ -11,11 +11,11 @@
     </div>
 
     <ion-item-group>
-        <ion-item button>
+        <ion-item button [detail]="false">
             <ion-label>App-Version</ion-label>
             <p item-right>{{ version }}</p>
         </ion-item>
-        <ion-item button (click)="activateDevMode()">
+        <ion-item button [detail]="false" (click)="activateDevMode()">
             <ion-label>Design und Entwicklung</ion-label>
             <p item-right>{{ developer }}</p>
         </ion-item>

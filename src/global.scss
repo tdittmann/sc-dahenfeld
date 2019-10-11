@@ -24,3 +24,16 @@
   text-overflow: ellipsis;
   white-space: nowrap
 }
+
+/** IOS custom styles **/
+.list-ios {
+  margin-bottom: 0px;
+}
+
+.ios .header-image {
+  padding-top: 16px;
+}
+
+.ios .nav-header {
+  padding-top: 24px !important;
+}
