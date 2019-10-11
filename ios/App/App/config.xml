@@ -3,7 +3,7 @@
   <access origin="*" />
   
   <feature name="AppVersion">
-    <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion"/>
+    <param name="ios-package" value="AppVersion"/>
   </feature>
 
   </widget>

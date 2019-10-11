@@ -111,10 +111,15 @@ export class AppComponent {
 
     private checkAppVersion() {
 
+        console.log('checking app version');
         this.appVersion.getVersionNumber()
             .then(localAppVersion => {
+                console.log('localversion' + localAppVersion);
                 this.versionService.loadVersionInfo().subscribe(
                     globalAppVersion => {
+                        console.log('globalAppVersion' + globalAppVersion);
+                        console.log('globalAppVersion' + globalAppVersion.version);
+                        console.log('localAppVersion !== globalAppVersion.version' + localAppVersion !== globalAppVersion.version);
                         if (localAppVersion !== globalAppVersion.version) {
                             this.openNewVersionAlert();
                         }
