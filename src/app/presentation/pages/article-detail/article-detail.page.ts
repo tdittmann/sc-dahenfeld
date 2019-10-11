@@ -20,8 +20,7 @@ export class ArticleDetailPage implements OnInit {
 
     ngOnInit(): void {
 
-        // TODO tdit0703: deprecated
-        combineLatest(this.route.params, this.route.queryParams)
+        combineLatest([this.route.params, this.route.queryParams])
             .subscribe(([params, queryParams]) => {
 
                 // Load article
