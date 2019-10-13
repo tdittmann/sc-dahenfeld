@@ -1,9 +1,12 @@
-<!-- Image -->
-<div class="image">
-    <article-image-meta [article]="article"
-                        [showOnlyTitle]="showOnlyTitle">
-    </article-image-meta>
-</div>
+<ion-content color="light">
+    <!-- Image -->
+    <div class="image" *ngIf="showHeader">
+        <article-image-meta [article]="article"
+                            [showOnlyTitle]="showOnlyTitle">
+        </article-image-meta>
+    </div>
 
-<!-- Text -->
-<div class="ion-padding article-content" [innerHTML]="article?.getTextWithoutFirstImage()"></div>
+    <!-- Text -->
+    <div class="ion-padding article-content" [innerHTML]="article?.getTextWithoutFirstImage()"></div>
+
+</ion-content>

@@ -1,0 +1,22 @@
+<page-header noBorder="true"></page-header>
+
+<ion-content color="light">
+
+    <super-tabs>
+
+        <super-tabs-toolbar color="white" slot="top">
+            <super-tab-button *ngFor="let article of articles">
+                <ion-label>{{article.title}}</ion-label>
+            </super-tab-button>
+        </super-tabs-toolbar>
+
+        <super-tabs-container>
+            <super-tab *ngFor="let article of articles">
+                <article-detail [article]="article" [showHeader]="false">
+                </article-detail>
+            </super-tab>
+        </super-tabs-container>
+
+    </super-tabs>
+
+</ion-content>

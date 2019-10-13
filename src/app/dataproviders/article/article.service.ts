@@ -29,6 +29,14 @@ export class ArticleService {
             .pipe(map(this.mapper.mapFrom));
     }
 
+    getArticles(articleIds: string[]): Observable<Article[]> {
+        const queryParams = articleIds.join('&id[]=');
+
+        return this.httpService
+            .get<ArticleJson[]>(environment.backendUrl + 'news?id[]=' + queryParams)
+            .pipe(map(pArticle => pArticle.map(this.mapper.mapFrom)));
+    }
+
     incrementMobileHitsForArticle(pArticle: Article): void {
         this.httpService
             .post<ArticleJson>(environment.backendUrl + 'news', this.mapper.mapTo(pArticle))

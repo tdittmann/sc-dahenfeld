@@ -8,10 +8,8 @@ import {Article} from '../../../core/domain/article.model';
 })
 export class ArticleDetailComponent {
 
-    @Input()
-    article: Article;
-
-    @Input()
-    showOnlyTitle: boolean;
+    @Input() article: Article;
+    @Input() showOnlyTitle: boolean;
+    @Input() showHeader = true;
 
 }

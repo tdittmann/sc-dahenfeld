@@ -25,9 +25,9 @@ export class HttpService {
     // TODO tdit0703: Fix Authorization
     private getHeaders(): HttpHeaders {
         return new HttpHeaders({
-            'Authorization': 'Basic ' + btoa('sc-dahenfeld:1946'),
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            // 'Authorization': 'Basic ' + btoa('sc-dahenfeld:1946'),
+            // 'Accept': 'application/json',
+            // 'Content-Type': 'application/json'
         });
     }
 
