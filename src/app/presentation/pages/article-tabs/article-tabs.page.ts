@@ -10,6 +10,7 @@ import {Article} from '../../../core/domain/article.model';
 export class ArticleTabsPage implements OnInit {
 
     // TODO tdit0703: Sortierung?
+    // TODO tdit0703: Umbauen auf Ionic-Tabs... TeamDetail auch überprüfen!
     articles: Article[];
 
     constructor(private articleService: ArticleService,
