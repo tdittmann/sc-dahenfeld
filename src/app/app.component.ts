@@ -112,7 +112,7 @@ export class AppComponent {
 
     private checkAppVersion() {
 
-        if (Capacitor.isPluginAvailable('Device')) {
+        if (!this.platform.is('desktop') && Capacitor.isPluginAvailable('Device')) {
             Plugins.Device.getInfo()
                 .then(deviceInfo => {
                     this.versionService.loadVersionInfo().subscribe(
