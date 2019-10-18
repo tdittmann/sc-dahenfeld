@@ -34,7 +34,6 @@ export class Article {
             .format(environment.longDateFormat);
     }
 
-    // TODO tdit0703: Tests
     public getArticleLink(): string {
         return '/article/' + this.id;
     }

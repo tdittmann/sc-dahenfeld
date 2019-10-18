@@ -104,4 +104,11 @@ describe('Article', () => {
         expect(article.getTextWithoutFirstImage()).toBe('<img src="test2.png">Some content');
     });
 
+    it('should return valid article link', function () {
+        const article: Article = new Article();
+        article.id = '9';
+
+        expect(article.getArticleLink()).toBe('/article/9');
+    });
+
 });
