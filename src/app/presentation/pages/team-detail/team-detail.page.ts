@@ -6,6 +6,7 @@ import {PlayersPage} from './players/players.page';
 import {StatisticsPage} from './statistics/statistics.page';
 import {TeamInformation} from '../../../core/domain/teamInformation.model';
 import {TeamInformationService} from '../../../dataproviders/soccer/teamInformation.service';
+import {ErrorService} from '../../shared/error/error.service';
 
 @Component({
     templateUrl: 'team-detail.page.html',
@@ -21,7 +22,8 @@ export class TeamDetailPage implements OnInit {
     statisticsPage = StatisticsPage;
 
     constructor(private route: ActivatedRoute,
-                private teamDetailService: TeamInformationService) {
+                private teamDetailService: TeamInformationService,
+                private errorService: ErrorService) {
 
     }
 
@@ -36,10 +38,7 @@ export class TeamDetailPage implements OnInit {
                         data => {
                             this.teamInformation = data;
                         },
-                        error => {
-                            // TODO tdit0703: Error handling
-                            console.error(error);
-                        }
+                        error => this.errorService.showError(error)
                     );
             }
         );

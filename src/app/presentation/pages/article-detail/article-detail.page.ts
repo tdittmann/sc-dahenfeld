@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {Article} from '../../../core/domain/article.model';
 import {combineLatest} from 'rxjs';
+import {ErrorService} from '../../shared/error/error.service';
 
 @Component({
     templateUrl: 'article-detail.page.html',
@@ -14,7 +15,8 @@ export class ArticleDetailPage implements OnInit {
     showOnlyTitle = false;
 
     constructor(private articleService: ArticleService,
-                private route: ActivatedRoute) {
+                private route: ActivatedRoute,
+                private errorService: ErrorService) {
 
     }
 
@@ -22,6 +24,9 @@ export class ArticleDetailPage implements OnInit {
 
         combineLatest([this.route.params, this.route.queryParams])
             .subscribe(([params, queryParams]) => {
+
+                // Handle query params
+                this.showOnlyTitle = queryParams['showOnlyTitle'];
 
                 // Load article
                 this.articleService.getArticle(params['id']).subscribe(
@@ -31,14 +36,8 @@ export class ArticleDetailPage implements OnInit {
                         // Increment hits for the article
                         this.articleService.incrementMobileHitsForArticle(this.article);
                     },
-                    (pError) => {
-                        // TODO tdit0703: Correct error handling
-                        console.error(pError);
-                    }
+                    (pError) => this.errorService.showError(pError)
                 );
-
-                // Handle query params
-                this.showOnlyTitle = queryParams['showOnlyTitle'];
             });
     }
 

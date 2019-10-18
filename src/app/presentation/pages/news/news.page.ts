@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {Article} from '../../../core/domain/article.model';
+import {ErrorService} from '../../shared/error/error.service';
 
 @Component({
     templateUrl: 'news.page.html',
@@ -15,7 +16,8 @@ export class NewsPage implements OnInit {
     articles: Article[] = [];
     sliderArticles: Article[] = [];
 
-    constructor(private articleService: ArticleService) {
+    constructor(private articleService: ArticleService,
+                private errorService: ErrorService) {
 
     }
 
@@ -30,10 +32,7 @@ export class NewsPage implements OnInit {
                         this.sliderArticles.push(this.articles.shift());
                     }
                 },
-                (pError) => {
-                    // TODO tdit0703: Correct error handling
-                    console.error(pError);
-                }
+                (pError) => this.errorService.showError(pError)
             );
     }
 

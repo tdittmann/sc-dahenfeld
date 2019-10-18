@@ -3,6 +3,7 @@ import {Birthday} from '../../../core/domain/birthday.model';
 import {BirthdayService} from '../../../dataproviders/birthday/birthday.service';
 import {PersonPage} from '../person/person.page';
 import {ModalController} from '@ionic/angular';
+import {ErrorService} from '../../shared/error/error.service';
 
 @Component({
     templateUrl: 'birthdays.page.html',
@@ -14,21 +15,16 @@ export class BirthdaysPage implements OnInit {
     filter = '';
 
     constructor(private birthdayService: BirthdayService,
-                private modalController: ModalController) {
+                private modalController: ModalController,
+                private errorService: ErrorService) {
 
     }
 
     ngOnInit(): void {
-        this.birthdayService.loadBirthdays()
-            .subscribe(
-                (birthdays: Birthday[]) => {
-                    this.birthdays = birthdays;
-                },
-                (error) => {
-                    // TODO tdit0703: error handling
-                    console.error(error);
-                }
-            );
+        this.birthdayService.loadBirthdays().subscribe(
+            (birthdays) => this.birthdays = birthdays,
+            (error) => this.errorService.showError(error)
+        );
     }
 
     openPerson(personId: number) {

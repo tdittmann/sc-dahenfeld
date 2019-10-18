@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {RankingService} from '../../../../dataproviders/soccer/ranking/ranking.service';
 import {RankingTeam} from '../../../../core/domain/rankingTeam.model';
+import {ErrorService} from '../../../shared/error/error.service';
 
 @Component({
     selector: 'ranking',
@@ -13,7 +14,8 @@ export class RankingPage implements OnInit {
     rankingTeams: RankingTeam[] = [];
 
     constructor(private route: ActivatedRoute,
-                private rankingService: RankingService) {
+                private rankingService: RankingService,
+                private errorService: ErrorService) {
 
     }
 
@@ -26,10 +28,7 @@ export class RankingPage implements OnInit {
                     rankingTeams => {
                         this.rankingTeams = rankingTeams;
                     },
-                    error => {
-                        // TODO tdit0703: Error Handling
-                        console.error(error);
-                    }
+                    error => this.errorService.showError(error)
                 );
 
             }

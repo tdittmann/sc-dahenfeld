@@ -4,6 +4,7 @@ import {PlayerService} from '../../../../dataproviders/soccer/players/player.ser
 import {Player} from '../../../../core/domain/player.model';
 import {ModalController} from '@ionic/angular';
 import {PersonPage} from '../../person/person.page';
+import {ErrorService} from '../../../shared/error/error.service';
 
 @Component({
     selector: 'players',
@@ -17,7 +18,8 @@ export class PlayersPage implements OnInit {
 
     constructor(private route: ActivatedRoute,
                 private playerService: PlayerService,
-                private modalController: ModalController) {
+                private modalController: ModalController,
+                private errorService: ErrorService) {
 
     }
 
@@ -30,10 +32,7 @@ export class PlayersPage implements OnInit {
                     players => {
                         this.players = players;
                     },
-                    error => {
-                        // TODO tdit0703: Error handling
-                        console.error(error);
-                    }
+                    error => this.errorService.showError(error)
                 );
             }
         );

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {ActivatedRoute} from '@angular/router';
 import {Article} from '../../../core/domain/article.model';
+import {ErrorService} from '../../shared/error/error.service';
 
 @Component({
     templateUrl: 'article-tabs.page.html',
@@ -13,7 +14,8 @@ export class ArticleTabsPage implements OnInit {
     articles: Article[];
 
     constructor(private articleService: ArticleService,
-                private route: ActivatedRoute) {
+                private route: ActivatedRoute,
+                private errorService: ErrorService) {
 
     }
 
@@ -35,10 +37,7 @@ export class ArticleTabsPage implements OnInit {
                             this.articleService.incrementMobileHitsForArticle(value);
                         });
                     },
-                    (pError) => {
-                        // TODO tdit0703: Correct error handling
-                        console.error(pError);
-                    }
+                    (pError) => this.errorService.showError(pError)
                 );
 
             });

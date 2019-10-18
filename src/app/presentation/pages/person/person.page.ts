@@ -3,6 +3,7 @@ import {ModalController} from '@ionic/angular';
 import {PlayerService} from '../../../dataproviders/soccer/players/player.service';
 import {Player} from '../../../core/domain/player.model';
 import {DevService} from '../../../dataproviders/dev.service';
+import {ErrorService} from '../../shared/error/error.service';
 
 @Component({
     templateUrl: 'person.page.html',
@@ -16,20 +17,16 @@ export class PersonPage implements OnInit {
 
     constructor(private modalController: ModalController,
                 private playerService: PlayerService,
-                private devService: DevService) {
+                private devService: DevService,
+                private errorService: ErrorService) {
 
     }
 
     ngOnInit(): void {
 
         this.playerService.loadPerson(this.personId).subscribe(
-            person => {
-                this.person = person;
-            },
-            error => {
-                // TODO tdit0703: Error handling
-                console.error(error);
-            }
+            person => this.person = person,
+            error => this.errorService.showError(error)
         );
 
     }

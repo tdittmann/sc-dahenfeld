@@ -5,6 +5,7 @@ import {Article} from '../../../core/domain/article.model';
 import {TimelineMapper} from '../../../dataproviders/timeline/timeline.mapper';
 import {TimelineService} from '../../../dataproviders/timeline/timeline.service';
 import {TimelineTitle} from '../../../core/domain/timelineTitle.model';
+import {ErrorService} from '../../shared/error/error.service';
 
 @Component({
     templateUrl: 'chronicle.page.html',
@@ -20,7 +21,8 @@ export class ChroniclePage implements OnInit {
     timeLineEntries: TimelineEntry[] = [];
 
     constructor(private articleService: ArticleService,
-                private timelineService: TimelineService) {
+                private timelineService: TimelineService,
+                private errorService: ErrorService) {
 
     }
 
@@ -33,6 +35,7 @@ export class ChroniclePage implements OnInit {
                 this.subTitle = timelineTitle.subTitle;
             },
             (error) => {
+                // We can't load the titles, but that's not so important as the articles
                 console.error(error);
             }
         );
@@ -46,10 +49,7 @@ export class ChroniclePage implements OnInit {
                 }
 
             },
-            (error) => {
-                // TODO tdit0703: Error handling
-                console.error(error);
-            }
+            (error) => this.errorService.showError(error)
         );
 
     }
