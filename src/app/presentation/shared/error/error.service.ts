@@ -1,11 +1,12 @@
 import {Injectable} from '@angular/core';
+import {LoadingService} from '../loading/loading.service';
 
 @Injectable()
 export class ErrorService {
 
     private error = false;
 
-    constructor() {
+    constructor(private loadingService: LoadingService) {
 
     }
 
@@ -14,6 +15,7 @@ export class ErrorService {
     }
 
     public showError(pError: any) {
+        this.loadingService.hideLoading();
         this.error = true;
         console.log(pError);
     }

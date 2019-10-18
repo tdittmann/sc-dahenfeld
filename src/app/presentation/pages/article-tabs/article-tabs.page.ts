@@ -3,6 +3,7 @@ import {ArticleService} from '../../../dataproviders/article/article.service';
 import {ActivatedRoute} from '@angular/router';
 import {Article} from '../../../core/domain/article.model';
 import {ErrorService} from '../../shared/error/error.service';
+import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'article-tabs.page.html',
@@ -15,6 +16,7 @@ export class ArticleTabsPage implements OnInit {
 
     constructor(private articleService: ArticleService,
                 private route: ActivatedRoute,
+                private loadingService: LoadingService,
                 private errorService: ErrorService) {
 
     }
@@ -36,6 +38,8 @@ export class ArticleTabsPage implements OnInit {
                         this.articles.forEach(value => {
                             this.articleService.incrementMobileHitsForArticle(value);
                         });
+
+                        this.loadingService.hideLoading();
                     },
                     (pError) => this.errorService.showError(pError)
                 );

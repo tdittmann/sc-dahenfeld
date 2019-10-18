@@ -5,6 +5,7 @@ import {Player} from '../../../../core/domain/player.model';
 import {ModalController} from '@ionic/angular';
 import {PersonPage} from '../../person/person.page';
 import {ErrorService} from '../../../shared/error/error.service';
+import {LoadingService} from '../../../shared/loading/loading.service';
 
 @Component({
     selector: 'players',
@@ -19,6 +20,7 @@ export class PlayersPage implements OnInit {
     constructor(private route: ActivatedRoute,
                 private playerService: PlayerService,
                 private modalController: ModalController,
+                private loadingService: LoadingService,
                 private errorService: ErrorService) {
 
     }
@@ -31,6 +33,8 @@ export class PlayersPage implements OnInit {
                 this.playerService.loadPlayers(teamId).subscribe(
                     players => {
                         this.players = players;
+
+                        this.loadingService.hideLoading();
                     },
                     error => this.errorService.showError(error)
                 );

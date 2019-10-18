@@ -4,6 +4,7 @@ import {FixtureService} from '../../../../dataproviders/soccer/fixture/fixture.s
 import {FixtureMatch} from '../../../../core/domain/fixtureMatch.model';
 import {DateUtils} from '../../../../util/DateUtils';
 import {ErrorService} from '../../../shared/error/error.service';
+import {LoadingService} from '../../../shared/loading/loading.service';
 
 // TODO tdit0703: Scroll to next match
 @Component({
@@ -18,6 +19,7 @@ export class FixturePage implements OnInit {
 
     constructor(private route: ActivatedRoute,
                 private fixtureService: FixtureService,
+                private loadingService: LoadingService,
                 private errorService: ErrorService) {
 
     }
@@ -31,6 +33,8 @@ export class FixturePage implements OnInit {
                     fixtureMatches => {
                         this.matches = fixtureMatches;
                         this.nextMatchId = this.getNextMatchId(this.matches);
+
+                        this.loadingService.hideLoading();
                     },
                     error => this.errorService.showError(error)
                 );

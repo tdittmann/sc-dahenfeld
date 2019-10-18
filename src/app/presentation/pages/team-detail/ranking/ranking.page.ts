@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {RankingService} from '../../../../dataproviders/soccer/ranking/ranking.service';
 import {RankingTeam} from '../../../../core/domain/rankingTeam.model';
 import {ErrorService} from '../../../shared/error/error.service';
+import {LoadingService} from '../../../shared/loading/loading.service';
 
 @Component({
     selector: 'ranking',
@@ -15,6 +16,7 @@ export class RankingPage implements OnInit {
 
     constructor(private route: ActivatedRoute,
                 private rankingService: RankingService,
+                private loadingService: LoadingService,
                 private errorService: ErrorService) {
 
     }
@@ -27,6 +29,8 @@ export class RankingPage implements OnInit {
                 this.rankingService.loadRanking(teamId).subscribe(
                     rankingTeams => {
                         this.rankingTeams = rankingTeams;
+
+                        this.loadingService.hideLoading();
                     },
                     error => this.errorService.showError(error)
                 );

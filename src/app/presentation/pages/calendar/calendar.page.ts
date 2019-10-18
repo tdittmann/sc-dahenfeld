@@ -3,6 +3,7 @@ import {CalendarService} from '../../../dataproviders/calendar/calendar.service'
 import {CalendarEntry} from '../../../core/domain/calendarEntry.model';
 import {Moment} from 'moment';
 import {ErrorService} from '../../shared/error/error.service';
+import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'calendar.page.html',
@@ -14,13 +15,18 @@ export class CalendarPage implements OnInit {
     lastDay = null;
 
     constructor(private calendarService: CalendarService,
+                private loadingService: LoadingService,
                 private errorService: ErrorService) {
 
     }
 
     ngOnInit(): void {
         this.calendarService.loadCalendarEntries().subscribe(
-            events => this.calendarEntries = events,
+            events => {
+                this.calendarEntries = events;
+
+                this.loadingService.hideLoading();
+            },
             error => this.errorService.showError(error)
         );
     }

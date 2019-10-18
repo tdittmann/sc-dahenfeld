@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import * as underscore from 'node_modules/underscore.string';
 import {ErrorService} from '../error/error.service';
+import {LoadingService} from '../loading/loading.service';
 
 @Component({
     selector: 'page-header',
@@ -13,7 +14,8 @@ export class PageHeaderComponent {
     @Input() color: string;
     @Input() noBorder = false;
 
-    constructor(public errorService: ErrorService) {
+    constructor(public errorService: ErrorService,
+                public loadingService: LoadingService) {
 
     }
 

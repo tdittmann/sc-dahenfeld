@@ -4,6 +4,7 @@ import {BirthdayService} from '../../../dataproviders/birthday/birthday.service'
 import {PersonPage} from '../person/person.page';
 import {ModalController} from '@ionic/angular';
 import {ErrorService} from '../../shared/error/error.service';
+import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'birthdays.page.html',
@@ -16,13 +17,18 @@ export class BirthdaysPage implements OnInit {
 
     constructor(private birthdayService: BirthdayService,
                 private modalController: ModalController,
+                private loadingService: LoadingService,
                 private errorService: ErrorService) {
 
     }
 
     ngOnInit(): void {
         this.birthdayService.loadBirthdays().subscribe(
-            (birthdays) => this.birthdays = birthdays,
+            (birthdays) => {
+                this.birthdays = birthdays;
+
+                this.loadingService.hideLoading();
+            },
             (error) => this.errorService.showError(error)
         );
     }

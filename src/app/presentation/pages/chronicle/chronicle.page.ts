@@ -6,6 +6,7 @@ import {TimelineMapper} from '../../../dataproviders/timeline/timeline.mapper';
 import {TimelineService} from '../../../dataproviders/timeline/timeline.service';
 import {TimelineTitle} from '../../../core/domain/timelineTitle.model';
 import {ErrorService} from '../../shared/error/error.service';
+import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'chronicle.page.html',
@@ -22,6 +23,7 @@ export class ChroniclePage implements OnInit {
 
     constructor(private articleService: ArticleService,
                 private timelineService: TimelineService,
+                private loadingService: LoadingService,
                 private errorService: ErrorService) {
 
     }
@@ -48,6 +50,7 @@ export class ChroniclePage implements OnInit {
                     this.timeLineEntries.push(this.timelineMapper.mapFrom(articles[i]));
                 }
 
+                this.loadingService.hideLoading();
             },
             (error) => this.errorService.showError(error)
         );

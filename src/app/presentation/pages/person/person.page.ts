@@ -4,6 +4,7 @@ import {PlayerService} from '../../../dataproviders/soccer/players/player.servic
 import {Player} from '../../../core/domain/player.model';
 import {DevService} from '../../../dataproviders/dev.service';
 import {ErrorService} from '../../shared/error/error.service';
+import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'person.page.html',
@@ -18,6 +19,7 @@ export class PersonPage implements OnInit {
     constructor(private modalController: ModalController,
                 private playerService: PlayerService,
                 private devService: DevService,
+                private loadingService: LoadingService,
                 private errorService: ErrorService) {
 
     }
@@ -25,7 +27,11 @@ export class PersonPage implements OnInit {
     ngOnInit(): void {
 
         this.playerService.loadPerson(this.personId).subscribe(
-            person => this.person = person,
+            person => {
+                this.person = person;
+
+                this.loadingService.hideLoading();
+            },
             error => this.errorService.showError(error)
         );
 
