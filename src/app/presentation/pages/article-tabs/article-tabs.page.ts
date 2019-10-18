@@ -9,6 +9,7 @@ import {Article} from '../../../core/domain/article.model';
 })
 export class ArticleTabsPage implements OnInit {
 
+    heading: string;
     articles: Article[];
 
     constructor(private articleService: ArticleService,
@@ -20,6 +21,9 @@ export class ArticleTabsPage implements OnInit {
 
         this.route.queryParams.subscribe(
             (queryParams) => {
+
+                // Set heading if present
+                this.heading = queryParams['heading'];
 
                 // Load articles
                 this.articleService.getArticles(queryParams['articles']).subscribe(
