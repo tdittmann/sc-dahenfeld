@@ -107,7 +107,8 @@ export class AppComponent {
                     }
                 }
             }
-        );
+        )
+            .catch(reason => console.error('Can not load from storage: ', reason));
     }
 
     private checkAppVersion() {

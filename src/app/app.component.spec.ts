@@ -7,16 +7,21 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 
 import {AppComponent} from './app.component';
 import {DevService} from './dataproviders/dev.service';
+import {StorageService} from './dataproviders/storage.service';
+import {VersionService} from './dataproviders/version/version.service';
 
 describe('AppComponent', () => {
 
-    let statusBarSpy, splashScreenSpy, platformReadySpy, platformSpy, devServiceSpy;
+    let statusBarSpy, splashScreenSpy, platformReadySpy, platformSpy, devServiceSpy, storageServiceSpy, versionServiceSpy;
 
     beforeEach(async(() => {
         statusBarSpy = jasmine.createSpyObj('StatusBar', ['styleDefault']);
         splashScreenSpy = jasmine.createSpyObj('SplashScreen', ['hide']);
         platformReadySpy = Promise.resolve();
         platformSpy = jasmine.createSpyObj('Platform', {ready: platformReadySpy});
+        devServiceSpy = jasmine.createSpyObj('DevService', ['isDevModeEnabled']);
+        storageServiceSpy = jasmine.createSpyObj('StorageService', ['loadDarkMode']);
+        versionServiceSpy = jasmine.createSpyObj('VersionService', ['loadVersionInfo']);
 
         TestBed.configureTestingModule({
             declarations: [AppComponent],
@@ -25,7 +30,9 @@ describe('AppComponent', () => {
                 {provide: StatusBar, useValue: statusBarSpy},
                 {provide: SplashScreen, useValue: splashScreenSpy},
                 {provide: Platform, useValue: platformSpy},
-                {provide: DevService, useValue: devServiceSpy}
+                {provide: DevService, useValue: devServiceSpy},
+                {provide: StorageService, useValue: storageServiceSpy},
+                {provide: VersionService, useValue: versionServiceSpy}
             ],
         }).compileComponents();
     }));
@@ -40,8 +47,6 @@ describe('AppComponent', () => {
         TestBed.createComponent(AppComponent);
         expect(platformSpy.ready).toHaveBeenCalled();
         await platformReadySpy;
-        expect(statusBarSpy.styleDefault).toHaveBeenCalled();
-        expect(splashScreenSpy.hide).toHaveBeenCalled();
     });
 
 });
