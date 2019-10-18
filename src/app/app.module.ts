@@ -20,7 +20,6 @@ import {ErrorService} from './presentation/shared/error/error.service';
 import {LoadingService} from './presentation/shared/loading/loading.service';
 import {LoadingHttpInterceptor} from './presentation/shared/loading/loading.http.interceptor';
 
-// TODO tdit0703: Loading Site (https://medium.com/@zeljkoradic/loader-bar-on-every-http-request-in-angular-6-60d8572a21a9)
 // TODO tdit0703: DateTime's immer als UTC und in Ionic die Zeitzone des Users auslesen?
 @NgModule({
     declarations: [
