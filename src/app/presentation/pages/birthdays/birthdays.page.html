@@ -1,6 +1,6 @@
 <page-header title="Geburtstage"></page-header>
 
-<ion-content color="light" class="ion-no-padding">
+<ion-content color="light" class="ion-no-padding" *ngIf="!loadingService.isLoading()">
 
     <ion-searchbar [(ngModel)]="filter" placeholder="Person suchen">
     </ion-searchbar>

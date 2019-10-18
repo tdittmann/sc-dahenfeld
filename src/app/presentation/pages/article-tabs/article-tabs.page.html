@@ -1,6 +1,6 @@
 <page-header [title]="heading" noBorder="true"></page-header>
 
-<ion-content color="light">
+<ion-content color="light" *ngIf="!loadingService.isLoading()">
 
     <super-tabs>
 

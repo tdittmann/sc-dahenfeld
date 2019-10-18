@@ -1,4 +1,4 @@
-<ion-content color="light">
+<ion-content color="light" *ngIf="!loadingService.isLoading()">
     <table class="ion-no-padding" *ngIf="rankingTeams">
 
         <thead>

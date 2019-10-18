@@ -1,6 +1,6 @@
 <page-header ></page-header>
 
-<ion-content color="light">
+<ion-content color="light" *ngIf="!loadingService.isLoading()">
 
     <article-slider [articles]="sliderArticles"></article-slider>
 

@@ -1,4 +1,4 @@
-<ion-content color="light">
+<ion-content color="light" *ngIf="!loadingService.isLoading()">
     <ion-list *ngIf="players" lines="none">
         <ng-template ngFor let-player [ngForOf]="players">
 

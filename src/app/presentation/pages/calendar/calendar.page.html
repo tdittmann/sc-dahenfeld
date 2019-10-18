@@ -1,6 +1,6 @@
 <page-header title="Kalender"></page-header>
 
-<ion-content color="light">
+<ion-content color="light" *ngIf="!loadingService.isLoading()">
 
     <ion-grid>
         <ion-row>
