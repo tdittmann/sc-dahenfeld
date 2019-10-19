@@ -2,7 +2,6 @@ import {Moment} from 'moment';
 import {CalendarType} from './calendarType.model';
 import {environment} from '../../../environments/environment';
 
-// TODO tdit0703: Tests
 export abstract class CalendarEntry {
 
     id: number;
