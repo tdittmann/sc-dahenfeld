@@ -31,6 +31,10 @@
   margin-left: auto
 }
 
+:focus {
+  outline: none;
+}
+
 /** IOS custom styles **/
 .list-ios {
   margin-bottom: 0px;
