@@ -3,7 +3,6 @@ import {Moment} from 'moment';
 import {environment} from '../../../environments/environment';
 import {DateUtils} from '../../util/DateUtils';
 
-// TODO tdit0703: Tests
 export class Birthday {
 
     personId: number;
