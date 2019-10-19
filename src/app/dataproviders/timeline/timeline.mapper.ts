@@ -16,17 +16,4 @@ export class TimelineMapper {
         return entry;
     }
 
-    mapTo(param: TimelineEntry): Article {
-        if (!param) {
-            return null;
-        }
-
-        const article: Article = new Article();
-        article.id = param.articleId;
-        article.title = param.title;
-        article.text = param.text;
-        article.createdAt = param.date;
-        return article;
-    }
-
 }

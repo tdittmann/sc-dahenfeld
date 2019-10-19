@@ -1,3 +1,4 @@
+// TODO tdit0703: Tests
 export class RankingTeam {
 
     id: number;
@@ -12,25 +13,35 @@ export class RankingTeam {
     goalsDiff: number;
     points: number;
 
-    // TODO tdit0703: Tests
     public isFavoriteTeam(): boolean {
         return this.name.includes('Dahenfeld');
     }
 
-    // TODO tdit0703: Tests
     public compareTo(rankingTeam: RankingTeam): number {
 
         // Sort by points
-        if(this.points < rankingTeam.points) return 1;
-        if(this.points > rankingTeam.points) return -1;
+        if (this.points < rankingTeam.points) {
+            return 1;
+        }
+        if (this.points > rankingTeam.points) {
+            return -1;
+        }
 
         // Sort by goalsDiff
-        if(this.goalsDiff < rankingTeam.goalsDiff) return 1;
-        if(this.goalsDiff > rankingTeam.goalsDiff) return -1;
+        if (this.goalsDiff < rankingTeam.goalsDiff) {
+            return 1;
+        }
+        if (this.goalsDiff > rankingTeam.goalsDiff) {
+            return -1;
+        }
 
         // Sort by goalsFor
-        if(this.goalsFor < rankingTeam.goalsFor) return 1;
-        if(this.goalsFor > rankingTeam.goalsFor) return -1;
+        if (this.goalsFor < rankingTeam.goalsFor) {
+            return 1;
+        }
+        if (this.goalsFor > rankingTeam.goalsFor) {
+            return -1;
+        }
 
         return 0;
     }

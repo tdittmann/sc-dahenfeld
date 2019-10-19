@@ -2,6 +2,7 @@ import {FixtureMatchJson} from './fixtureMatchJson.model';
 import {FixtureMatch} from '../../../core/domain/fixtureMatch.model';
 import {DateUtils} from '../../../util/DateUtils';
 
+// TODO tdit0703: Tests
 export class FixtureMatchMapper {
 
     mapFrom(param: FixtureMatchJson): FixtureMatch {

@@ -1,5 +1,3 @@
-import {PlayerStatisticJson} from './playerStatisticJson.model';
-
 export interface PlayerJson {
 
     person_id: number;
@@ -12,5 +10,19 @@ export interface PlayerJson {
 
     seasonStats: PlayerStatisticJson;
     careerStats: PlayerStatisticJson;
+
+}
+
+export interface PlayerStatisticJson {
+
+    matches: number;
+    starting: number;
+    goals: number;
+    yellowCards: number;
+    yellowRedCards: number;
+    redCards: number;
+    cameIn: number;
+    cameOut: number;
+    playingMinutes: number;
 
 }

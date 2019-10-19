@@ -19,6 +19,7 @@ export class VersionService {
             .pipe(map(pVersionInfo => this.mapFrom(pVersionInfo)));
     }
 
+    // TODO tdit0703: Tests + in eigene klasse auslagern
     private mapFrom(param: VersionInfoJson): VersionInfo {
         const versionInfo = new VersionInfo();
         versionInfo.version = param.version;

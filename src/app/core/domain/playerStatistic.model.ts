@@ -1,3 +1,4 @@
+// TODO tdit0703: Rename to personStatistic?
 export class PlayerStatistic {
 
     matches: number;

@@ -1,10 +1,17 @@
 import {ArticleJson} from '../article/articleJson.model';
-import {MembershipCostsJson} from './membershipCostsJson.model';
 
 export interface MembershipJson {
 
     article: ArticleJson;
     costs: MembershipCostsJson[];
     divisioncosts: MembershipCostsJson[];
+
+}
+
+export interface MembershipCostsJson {
+
+    title: string;
+    amount: string;
+    hint: string;
 
 }

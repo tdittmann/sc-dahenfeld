@@ -1,6 +1,7 @@
 import {Moment} from 'moment';
 import {environment} from '../../../environments/environment';
 
+// TODO tdit0703: Tests
 export class FixtureMatch {
 
     id: number;
@@ -28,7 +29,6 @@ export class FixtureMatch {
             .format(environment.shortDateFormat);
     }
 
-    // TODO tdit0703: Tests
     public compareTo(fixtureMatch: FixtureMatch): number {
         if (this.date.isBefore(fixtureMatch.date)) {
             return -1;

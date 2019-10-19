@@ -11,28 +11,8 @@ describe('TimelineMapper', function () {
         mapper = new TimelineMapper();
     });
 
-    it('should handle null values for mapTo', () => {
-        expect(mapper.mapTo(null)).toBe(null);
-    });
-
     it('should handle null values for mapFrom', () => {
         expect(mapper.mapFrom(null)).toBe(null);
-    });
-
-    it('should map from timelineEntry to article', () => {
-        const actual: TimelineEntry = new TimelineEntry();
-        actual.articleId = '1';
-        actual.title = 'Article title';
-        actual.date = DateUtils.ofUnixTimestampNumber(1550412574000);
-        actual.text = 'Hello World';
-
-        const expected: Article = new Article();
-        expected.id = '1';
-        expected.title = 'Article title';
-        expected.createdAt = DateUtils.ofUnixTimestampNumber(1550412574000);
-        expected.text = 'Hello World';
-
-        expect(mapper.mapTo(actual)).toEqual(expected);
     });
 
     it('should map from article to timelineEntry', () => {

@@ -2,6 +2,7 @@ import {Moment} from 'moment';
 import {CalendarEntry} from './calendarEntry.model';
 import {TextUtils} from '../../util/TextUtils';
 
+// TODO tdit0703: Tests
 export class CalendarEvent extends CalendarEntry {
 
     title: string;
