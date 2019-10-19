@@ -5,7 +5,7 @@ export interface CalendarJson {
     start: string;
     location: string;
 
-    // match
+    // event
     title: string;
     end: string;
     image: string;

@@ -21,6 +21,10 @@ import {LoadingService} from './presentation/shared/loading/loading.service';
 import {LoadingHttpInterceptor} from './presentation/shared/loading/loading.http.interceptor';
 
 // TODO tdit0703: DateTime's immer als UTC und in Ionic die Zeitzone des Users auslesen?
+// TODO tdit0703: App Struktur anpassen?
+// TODO tdit0703: Tabs??? Funktionieren nicht zuverlässig... Evtl. doch Ionic Tabs?
+// TODO tdit0703: Profile Page
+// TODO tdit0703: Jugend-Page
 @NgModule({
     declarations: [
         AppComponent
