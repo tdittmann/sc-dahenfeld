@@ -3,11 +3,11 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {PlayersPage} from './players.page';
-import {PlayerService} from '../../../../dataproviders/soccer/players/player.service';
+import {PersonService} from '../../../../dataproviders/soccer/person/person.service';
 import {PersonModule} from '../../person/person.module';
 
 @NgModule({
-    providers: [PlayerService],
+    providers: [PersonService],
     imports: [
         CommonModule,
         FormsModule,

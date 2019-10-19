@@ -1,5 +1,4 @@
-// TODO tdit0703: Rename to personStatistic?
-export class PlayerStatistic {
+export class PersonStatistic {
 
     matches: number;
     starting: number;

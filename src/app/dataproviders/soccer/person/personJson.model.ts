@@ -1,4 +1,4 @@
-export interface PlayerJson {
+export interface PersonJson {
 
     person_id: number;
     position: string;
@@ -8,12 +8,12 @@ export interface PlayerJson {
     lastname: string;
     image: string;
 
-    seasonStats: PlayerStatisticJson;
-    careerStats: PlayerStatisticJson;
+    seasonStats: PersonStatisticJson;
+    careerStats: PersonStatisticJson;
 
 }
 
-export interface PlayerStatisticJson {
+export interface PersonStatisticJson {
 
     matches: number;
     starting: number;

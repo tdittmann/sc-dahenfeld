@@ -1,13 +1,13 @@
-import {Player} from '../../../core/domain/player.model';
-import {PlayerJson, PlayerStatisticJson} from './playerJson.model';
+import {Person} from '../../../core/domain/person.model';
 import {DateUtils} from '../../../util/DateUtils';
-import {PlayerStatistic} from '../../../core/domain/playerStatistic.model';
+import {PersonStatistic} from '../../../core/domain/personStatistic.model';
+import {PersonJson, PersonStatisticJson} from './personJson.model';
 
 // TODO tdit0703: Tests
-export class PlayerMapper {
+export class PersonMapper {
 
-    mapFrom(param: PlayerJson): Player {
-        const player = new Player();
+    mapFrom(param: PersonJson): Person {
+        const player = new Person();
         player.id = param.person_id;
         player.firstname = param.firstname;
         player.lastname = param.lastname;
@@ -20,8 +20,8 @@ export class PlayerMapper {
         return player;
     }
 
-    mapStatisticFrom(param: PlayerStatisticJson): PlayerStatistic {
-        const playerStatistic = new PlayerStatistic();
+    mapStatisticFrom(param: PersonStatisticJson): PersonStatistic {
+        const playerStatistic = new PersonStatistic();
         playerStatistic.matches = param.matches;
         playerStatistic.starting = param.starting;
         playerStatistic.goals = param.goals;

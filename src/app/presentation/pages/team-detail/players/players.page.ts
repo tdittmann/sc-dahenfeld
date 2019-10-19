@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {PlayerService} from '../../../../dataproviders/soccer/players/player.service';
-import {Player} from '../../../../core/domain/player.model';
+import {PersonService} from '../../../../dataproviders/soccer/person/person.service';
+import {Person} from '../../../../core/domain/person.model';
 import {ModalController} from '@ionic/angular';
 import {PersonPage} from '../../person/person.page';
 import {ErrorService} from '../../../shared/error/error.service';
@@ -14,11 +14,11 @@ import {LoadingService} from '../../../shared/loading/loading.service';
 })
 export class PlayersPage implements OnInit {
 
-    players: Player[] = [];
+    players: Person[] = [];
     lastPosition: string = null;
 
     constructor(private route: ActivatedRoute,
-                private playerService: PlayerService,
+                private playerService: PersonService,
                 private modalController: ModalController,
                 private loadingService: LoadingService,
                 private errorService: ErrorService) {
@@ -51,7 +51,7 @@ export class PlayersPage implements OnInit {
         }).then(modal => modal.present());
     }
 
-    public isDifferentPosition(pPlayer: Player): boolean {
+    public isDifferentPosition(pPlayer: Person): boolean {
         const showHeader = (pPlayer.position !== this.lastPosition);
         this.lastPosition = pPlayer.position;
         return showHeader;

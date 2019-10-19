@@ -1,12 +1,12 @@
 import {Moment} from 'moment';
-import {PlayerStatistic} from './playerStatistic.model';
+import {PersonStatistic} from './personStatistic.model';
 import {TextUtils} from '../../util/TextUtils';
 import {DateUtils} from '../../util/DateUtils';
 import {environment} from '../../../environments/environment';
 
 // TODO tdit0703: Tests
 // TODO tdit0703: rename to person?
-export class Player {
+export class Person {
 
     id: number;
     firstname: string;
@@ -16,8 +16,8 @@ export class Player {
     birthday: Moment;
     jerseynumber: number;
 
-    seasonStatistic: PlayerStatistic;
-    careerStatistic: PlayerStatistic;
+    seasonStatistic: PersonStatistic;
+    careerStatistic: PersonStatistic;
 
     public getName(): string {
         return this.firstname + ' ' + this.lastname;
@@ -36,21 +36,21 @@ export class Player {
         return TextUtils.getAsBackgroundUrl(this.image);
     }
 
-    public compareTo(pPlayer: Player): number {
+    public compareTo(pPerson: Person): number {
         const positionOrder = ['Torhüter', 'Abwehr', 'Mittelfeld', 'Sturm'];
 
         // First order by position
-        if (positionOrder.indexOf(this.position) < positionOrder.indexOf(pPlayer.position)) {
+        if (positionOrder.indexOf(this.position) < positionOrder.indexOf(pPerson.position)) {
             return -1;
-        } else if (positionOrder.indexOf(this.position) > positionOrder.indexOf(pPlayer.position)) {
+        } else if (positionOrder.indexOf(this.position) > positionOrder.indexOf(pPerson.position)) {
             return 1;
         }
 
         // Then order by lastname
-        if (this.lastname.toLowerCase() < pPlayer.lastname.toLowerCase()) {
+        if (this.lastname.toLowerCase() < pPerson.lastname.toLowerCase()) {
             return -1;
         }
-        if (this.lastname.toLowerCase() > pPlayer.lastname.toLowerCase()) {
+        if (this.lastname.toLowerCase() > pPerson.lastname.toLowerCase()) {
             return 1;
         }
 
