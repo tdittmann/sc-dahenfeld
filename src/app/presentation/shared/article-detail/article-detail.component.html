@@ -1,4 +1,5 @@
 <ion-content color="light">
+
     <!-- Image -->
     <div class="image" *ngIf="showHeader">
         <article-image-meta [article]="article"
@@ -6,7 +7,9 @@
         </article-image-meta>
     </div>
 
-    <!-- Text -->
-    <div class="ion-padding article-content" [innerHTML]="article?.getTextWithoutFirstImage()"></div>
+    <div class="container">
+        <!-- Text -->
+        <div class="ion-padding article-content" [innerHTML]="article?.getTextWithoutFirstImage()"></div>
+    </div>
 
 </ion-content>

@@ -25,6 +25,12 @@
   white-space: nowrap
 }
 
+.container {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto
+}
+
 /** IOS custom styles **/
 .list-ios {
   margin-bottom: 0px;
