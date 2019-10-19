@@ -1,15 +1,11 @@
-<ion-content color="light">
+<!-- Image -->
+<div class="image" *ngIf="showHeader">
+    <article-image-meta [article]="article"
+                        [showOnlyTitle]="showOnlyTitle">
+    </article-image-meta>
+</div>
 
-    <!-- Image -->
-    <div class="image" *ngIf="showHeader">
-        <article-image-meta [article]="article"
-                            [showOnlyTitle]="showOnlyTitle">
-        </article-image-meta>
-    </div>
-
-    <div class="container">
-        <!-- Text -->
-        <div class="ion-padding article-content" [innerHTML]="article?.getTextWithoutFirstImage()"></div>
-    </div>
-
-</ion-content>
+<div class="container">
+    <!-- Text -->
+    <div class="ion-padding article-content" [innerHTML]="article?.getTextWithoutFirstImage()"></div>
+</div>

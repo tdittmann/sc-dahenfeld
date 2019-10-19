@@ -6,8 +6,8 @@
                     showOnlyTitle="true">
     </article-detail>
 
-    <div *ngIf="membership?.costs" class="ion-padding">
-        <h2>Mitgliedsbeiträge</h2>
+    <div *ngIf="membership?.costs">
+        <h2 class="ion-padding">Mitgliedsbeiträge</h2>
 
         <ion-grid>
             <ion-row>
@@ -23,8 +23,8 @@
 
     </div>
 
-    <div *ngIf="membership?.divisionCosts" class="ion-padding">
-        <h2>Spartenbeiträge</h2>
+    <div *ngIf="membership?.divisionCosts">
+        <h2 class="ion-padding">Spartenbeiträge</h2>
 
         <ion-grid>
             <ion-row>

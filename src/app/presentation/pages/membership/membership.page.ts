@@ -23,8 +23,8 @@ export class MembershipPage implements OnInit {
     ngOnInit(): void {
         this.membershipService.loadMembership()
             .subscribe(
-                (response: Membership) => {
-                    this.membership = response;
+                (membership) => {
+                    this.membership = membership;
 
                     this.loadingService.hideLoading();
                 },
