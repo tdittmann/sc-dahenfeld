@@ -25,6 +25,7 @@ import {LoadingHttpInterceptor} from './presentation/shared/loading/loading.http
 // TODO tdit0703: Tabs??? Funktionieren nicht zuverlässig... Evtl. doch Ionic Tabs?
 // TODO tdit0703: Profile Page
 // TODO tdit0703: Jugend-Page
+// TODO tdit0703: Kalender: Spiele nur X Tage / Wochen in die Zukunft?
 @NgModule({
     declarations: [
         AppComponent

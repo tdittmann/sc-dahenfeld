@@ -5,7 +5,6 @@ import {DateUtils} from '../../util/DateUtils';
 import {environment} from '../../../environments/environment';
 
 // TODO tdit0703: Tests
-// TODO tdit0703: rename to person?
 export class Person {
 
     id: number;
