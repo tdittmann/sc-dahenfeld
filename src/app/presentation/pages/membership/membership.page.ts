@@ -7,7 +7,6 @@ import {LoadingService} from '../../shared/loading/loading.service';
 @Component({
     templateUrl: 'membership.page.html',
     styleUrls: ['membership.page.scss'],
-    // TODO tdit0703: CSS nach innen ziehen & table-display-block als Directive?
     encapsulation: ViewEncapsulation.None
 })
 export class MembershipPage implements OnInit {
