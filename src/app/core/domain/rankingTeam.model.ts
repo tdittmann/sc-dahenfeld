@@ -1,4 +1,3 @@
-// TODO tdit0703: Tests
 export class RankingTeam {
 
     id: number;
