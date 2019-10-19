@@ -19,7 +19,7 @@ export class Person {
     careerStatistic: PersonStatistic;
 
     public getName(): string {
-        return this.firstname + ' ' + this.lastname;
+        return [this.firstname, this.lastname].filter(Boolean).join(' ');
     }
 
     public getAge(): number {
