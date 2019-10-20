@@ -1,10 +1,13 @@
 import {TeamInformationJson} from './teamInformationJson.model';
 import {TeamInformation} from '../../core/domain/teamInformation.model';
 
-// TODO tdit0703: Tests
 export class TeamInformationMapper {
 
     mapFrom(param: TeamInformationJson): TeamInformation {
+        if (!param) {
+            return null;
+        }
+
         const teamInformation = new TeamInformation();
         teamInformation.name = param.name;
         teamInformation.showRanking = param.showRanking;

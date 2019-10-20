@@ -2,10 +2,13 @@ import {FixtureMatchJson} from './fixtureMatchJson.model';
 import {FixtureMatch} from '../../../core/domain/fixtureMatch.model';
 import {DateUtils} from '../../../util/DateUtils';
 
-// TODO tdit0703: Tests
 export class FixtureMatchMapper {
 
     mapFrom(param: FixtureMatchJson): FixtureMatch {
+        if (!param) {
+            return null;
+        }
+
         const fixtureMatch = new FixtureMatch();
         fixtureMatch.id = parseInt(param.match_id, 10);
         fixtureMatch.projectId = parseInt(param.project_id, 10);
