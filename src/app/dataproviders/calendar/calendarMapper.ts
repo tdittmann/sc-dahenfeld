@@ -5,7 +5,6 @@ import {CalendarType} from '../../core/domain/calendarType.model';
 import {CalendarMatch} from '../../core/domain/calendarMatch.model';
 import {CalendarEntry} from '../../core/domain/calendarEntry.model';
 
-// TODO tdit0703: Tests
 export class CalendarMapper {
 
     mapFrom(param: CalendarJson): CalendarEntry {

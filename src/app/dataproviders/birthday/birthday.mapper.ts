@@ -2,7 +2,6 @@ import {BirthdayJson} from './birthdayJson.model';
 import {Birthday} from '../../core/domain/birthday.model';
 import {DateUtils} from '../../util/DateUtils';
 
-// TODO tdit0703: Tests
 export class BirthdayMapper {
 
     mapFrom(param: BirthdayJson): Birthday {
