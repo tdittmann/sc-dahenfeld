@@ -1,7 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Moment} from 'moment';
 
-// TODO tdit0703: Tests
 @Component({
     selector: 'match-card',
     templateUrl: 'match-card.component.html',
