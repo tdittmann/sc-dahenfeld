@@ -1,10 +1,13 @@
 import {RankingTeamJson} from './rankingTeamJson.model';
 import {RankingTeam} from '../../../core/domain/rankingTeam.model';
 
-// TODO tdit0703: Tests
 export class RankingTeamMapper {
 
     mapFrom(param: RankingTeamJson): RankingTeam {
+        if (!param) {
+            return null;
+        }
+
         const rankingTeam = new RankingTeam();
         rankingTeam.id = param.teamId;
         rankingTeam.name = param.teamName;
