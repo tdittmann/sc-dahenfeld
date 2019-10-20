@@ -4,7 +4,6 @@ import {TextUtils} from '../../util/TextUtils';
 import {DateUtils} from '../../util/DateUtils';
 import {environment} from '../../../environments/environment';
 
-// TODO tdit0703: Tests
 export class Person {
 
     id: number;

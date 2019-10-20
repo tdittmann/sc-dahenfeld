@@ -3,27 +3,39 @@ import {Moment} from 'moment';
 
 export class DateUtils {
 
-    // TODO tdit0703: Tests
     public static diffYears(pDate: Moment): number {
+        if (!pDate) {
+            return undefined;
+        }
+
         return moment()
             .startOf('day')
             .diff(pDate, 'years');
     }
 
-    // TODO tdit0703: Tests
     public static diffDays(pDate: Moment): number {
+        if (!pDate) {
+            return undefined;
+        }
+
         return Math.abs(moment()
             .startOf('day')
             .diff(pDate, 'days'));
     }
 
-    // TODO tdit0703: Tests
     public static ofIsoDate(pDate: string): Moment {
+        if (!pDate) {
+            return undefined;
+        }
+
         return this.ofPattern(pDate, 'YYYY-MM-DD');
     }
 
-    // TODO tdit0703: Tests
     public static ofPattern(pDate: string, pFormat: string): Moment {
+        if (!pDate || !pFormat) {
+            return undefined;
+        }
+
         return moment(pDate, pFormat)
             .locale('de');
     }
