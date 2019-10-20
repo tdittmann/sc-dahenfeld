@@ -3,9 +3,9 @@ import {Observable} from 'rxjs';
 import {Person} from '../../../core/domain/person.model';
 import {PersonJson} from './personJson.model';
 import {environment} from '../../../../environments/environment';
-import {PersonMapper} from './personMapper';
 import {map, tap} from 'rxjs/operators';
 import {HttpService} from '../../http.service';
+import {PersonMapper} from './person.mapper';
 
 @Injectable()
 export class PersonService {

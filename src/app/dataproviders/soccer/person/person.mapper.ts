@@ -3,10 +3,13 @@ import {DateUtils} from '../../../util/DateUtils';
 import {PersonStatistic} from '../../../core/domain/personStatistic.model';
 import {PersonJson, PersonStatisticJson} from './personJson.model';
 
-// TODO tdit0703: Tests
 export class PersonMapper {
 
     mapFrom(param: PersonJson): Person {
+        if (!param) {
+            return null;
+        }
+
         const player = new Person();
         player.id = param.person_id;
         player.firstname = param.firstname;
@@ -21,6 +24,10 @@ export class PersonMapper {
     }
 
     mapStatisticFrom(param: PersonStatisticJson): PersonStatistic {
+        if (!param) {
+            return null;
+        }
+
         const playerStatistic = new PersonStatistic();
         playerStatistic.matches = param.matches;
         playerStatistic.starting = param.starting;
