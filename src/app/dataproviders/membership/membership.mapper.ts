@@ -3,7 +3,6 @@ import {Membership} from '../../core/domain/membership.model';
 import {ArticleMapper} from '../article/article.mapper';
 import {MembershipCosts} from '../../core/domain/MembershipCosts.model';
 
-// TODO tdit0703: Tests
 export class MembershipMapper {
 
     private articleMapper: ArticleMapper = new ArticleMapper();

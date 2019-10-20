@@ -51,7 +51,7 @@ describe('CalendarMapper', () => {
         expect(mapper.mapFrom(actual)).toEqual(expected);
     });
 
-    it('should map from matchjson to core model', () => {
+    it('should map from eventjson to core model', () => {
         const actual: CalendarJson = {
             id: 2001,
             type: 'event',
