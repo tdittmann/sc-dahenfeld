@@ -12,6 +12,7 @@ export class ProfileMapper {
         profile.pushToken = param.pushToken;
         profile.name = param.name;
         profile.pushBirthdays = param.pushBirthdays;
+        profile.os = param.os;
 
         return profile;
     }
@@ -24,7 +25,8 @@ export class ProfileMapper {
         return {
             pushToken: param.pushToken,
             name: param.name,
-            pushBirthdays: param.pushBirthdays
+            pushBirthdays: param.pushBirthdays,
+            os: param.os
         };
     }
 

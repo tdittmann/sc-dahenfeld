@@ -22,13 +22,15 @@ describe('ProfileMapper', () => {
         const actual: ProfileJson = {
             pushToken: 'lorem-ipsum',
             name: 'unknown',
-            pushBirthdays: true
+            pushBirthdays: true,
+            os: 'android'
         };
 
         const expected: Profile = new Profile();
         expected.pushToken = 'lorem-ipsum';
         expected.name = 'unknown';
         expected.pushBirthdays = true;
+        expected.os = 'android';
 
         expect(mapper.mapFrom(actual)).toEqual(expected);
     });
@@ -38,11 +40,13 @@ describe('ProfileMapper', () => {
         actual.pushToken = 'lorem-ipsum';
         actual.name = 'unknown';
         actual.pushBirthdays = true;
+        actual.os = 'android';
 
         const expected: ProfileJson = {
             pushToken: 'lorem-ipsum',
             name: 'unknown',
-            pushBirthdays: true
+            pushBirthdays: true,
+            os: 'android'
         };
 
         expect(mapper.mapTo(actual)).toEqual(expected);

@@ -4,7 +4,9 @@ import {AlertController, Platform} from '@ionic/angular';
 import {DevService} from './dataproviders/dev.service';
 import {StorageService} from './dataproviders/storage.service';
 import {VersionService} from './dataproviders/version/version.service';
-import {Capacitor, Plugins, StatusBarStyle} from '@capacitor/core';
+import {Capacitor, Plugins, PushNotificationToken, StatusBarStyle} from '@capacitor/core';
+import {ProfileService} from './dataproviders/profile/profile.service';
+import {Profile} from './core/domain/profile.model';
 
 @Component({
     selector: 'app-root',
@@ -62,7 +64,8 @@ export class AppComponent {
                 private devService: DevService,
                 private storageService: StorageService,
                 private versionService: VersionService,
-                private alertController: AlertController) {
+                private alertController: AlertController,
+                private profileService: ProfileService) {
         this.initializeApp();
     }
 
@@ -78,6 +81,9 @@ export class AppComponent {
 
             // Check if a newer version exists
             this.checkAppVersion();
+
+            // Handle push notification
+            this.handlePushNotification();
         });
     }
 
@@ -146,6 +152,46 @@ export class AppComponent {
         });
 
         await alert.present();
+    }
+
+    private handlePushNotification() {
+
+        if (Capacitor.isPluginAvailable('PushNotifications')) {
+
+            Plugins.PushNotifications.register();
+
+            Plugins.PushNotifications.addListener('registration',
+                (token: PushNotificationToken) => {
+                    console.log('Push registration success, token: ' + token.value);
+
+                    this.storageService.savePushToken(token.value)
+                        .then()
+                        .catch(reason => console.error('Saving push token in local db failed' + reason));
+
+
+                    Plugins.Device.getInfo()
+                        .then(deviceInfo => {
+
+                            const profile: Profile = new Profile();
+                            profile.pushToken = token.value;
+                            profile.os = deviceInfo.platform;
+                            this.profileService.createProfile(profile).subscribe(
+                                value => console.log('Saved in remote db: ' + value),
+                                error => console.error('Saving profile in remote db failed: ' + JSON.stringify(error))
+                            );
+
+                        })
+                        .catch(reason => console.error('Can not load device info: ' + reason));
+                }
+            );
+
+            Plugins.PushNotifications.addListener('registrationError',
+                (error: any) => {
+                    console.error('Error on registration: ' + JSON.stringify(error));
+                }
+            );
+        }
+
     }
 
 }

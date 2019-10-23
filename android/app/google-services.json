@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "789170871101",
+    "firebase_url": "https://sc-dahenfeld-a6bcb.firebaseio.com",
+    "project_id": "sc-dahenfeld-a6bcb",
+    "storage_bucket": "sc-dahenfeld-a6bcb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789170871101:android:0139a5515ccfd927",
+        "android_client_info": {
+          "package_name": "de.timodittmann.scd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789170871101-3qmfel0fha6vtseb0vct6gckc7vpoo24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCesDJGT-Db-c6udirl2yBzfHnF8tBUDZM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

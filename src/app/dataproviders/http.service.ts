@@ -15,6 +15,11 @@ export class HttpService {
         });
     }
 
+    public put<T>(url: string, body: any): Observable<T> {
+        return this.httpClient.put<T>(url, JSON.stringify(body), {
+            headers: this.getHeaders()
+        });
+    }
 
     public post<T>(url: string, body: any): Observable<T> {
         return this.httpClient.post<T>(url, JSON.stringify(body), {

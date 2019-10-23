@@ -22,6 +22,13 @@ export class ProfileService {
             .pipe(map(this.mapper.mapFrom));
     }
 
+    createProfile(profile: Profile): Observable<Profile> {
+        const profileJson: ProfileJson = this.mapper.mapTo(profile);
+
+        return this.httpService
+            .put<ProfileJson>(environment.backendUrl + 'profile', profileJson);
+    }
+
     saveProfile(profile: Profile): Observable<Profile> {
         const profileJson: ProfileJson = this.mapper.mapTo(profile);
 

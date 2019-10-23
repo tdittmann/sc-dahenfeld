@@ -19,6 +19,7 @@ import {VersionService} from './dataproviders/version/version.service';
 import {ErrorService} from './presentation/shared/error/error.service';
 import {LoadingService} from './presentation/shared/loading/loading.service';
 import {LoadingHttpInterceptor} from './presentation/shared/loading/loading.http.interceptor';
+import {ProfileService} from './dataproviders/profile/profile.service';
 
 // TODO tdit0703: DateTime's immer als UTC und in Ionic die Zeitzone des Users auslesen?
 // TODO tdit0703: App Struktur anpassen?
@@ -49,6 +50,7 @@ import {LoadingHttpInterceptor} from './presentation/shared/loading/loading.http
         VersionService,
         ErrorService,
         LoadingService,
+        ProfileService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
         {provide: HTTP_INTERCEPTORS, useClass: LoadingHttpInterceptor, multi: true}
     ],
