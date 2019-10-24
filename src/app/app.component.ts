@@ -123,9 +123,10 @@ export class AppComponent {
             Plugins.Device.getInfo()
                 .then(deviceInfo => {
                     this.versionService.loadVersionInfo().subscribe(
-                        globalAppVersion => {
-                            if (deviceInfo.appVersion !== globalAppVersion.version) {
-                                this.openNewVersionAlert();
+                        globalAppInfo => {
+                            if (deviceInfo.appVersion !== globalAppInfo.version) {
+                                const appStoreUrl = deviceInfo.platform === 'android' ? globalAppInfo.getAndroidUrl() : globalAppInfo.getIosUrl();
+                                this.openNewVersionAlert(appStoreUrl);
                             }
                         },
                         error => console.error(error)
@@ -135,23 +136,24 @@ export class AppComponent {
         }
     }
 
-    private async openNewVersionAlert() {
-        const alert = await this.alertController.create({
-            header: 'Neue Version verfügbar',
-            message: 'Es ist eine neue Version der SCD-App verfügbar. Aktualisiere jetzt um weiter die App nutzen zu können.',
-            backdropDismiss: false,
-            buttons: [
-                {
-                    text: 'Aktualisieren',
-                    handler: () => {
-                        // TODO tdit0703: Link zum App Store
-                        console.log('Confirm Okay');
+    private async openNewVersionAlert(appStoreUrl: string) {
+        if (appStoreUrl) {
+            const alert = await this.alertController.create({
+                header: 'Neue Version verfügbar',
+                message: 'Es ist eine neue Version der SCD-App verfügbar. Aktualisiere jetzt um weiter die App nutzen zu können.',
+                backdropDismiss: false,
+                buttons: [
+                    {
+                        text: 'Aktualisieren',
+                        handler: () => {
+                            window.open(appStoreUrl);
+                        }
                     }
-                }
-            ]
-        });
+                ]
+            });
 
-        await alert.present();
+            await alert.present();
+        }
     }
 
     private handlePushNotification() {
