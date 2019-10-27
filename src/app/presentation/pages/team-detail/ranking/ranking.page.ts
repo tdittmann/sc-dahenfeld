@@ -6,7 +6,6 @@ import {ErrorService} from '../../../shared/error/error.service';
 import {LoadingService} from '../../../shared/loading/loading.service';
 
 @Component({
-    selector: 'ranking',
     templateUrl: 'ranking.page.html',
     styleUrls: ['ranking.page.scss']
 })

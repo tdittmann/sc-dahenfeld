@@ -27,8 +27,7 @@ export class AppComponent {
     private soccerPages = [
         {title: '1. Mannschaft', url: '/team-detail/92', icon: 'football'},
         {title: '2. Mannschaft', url: '/team-detail/91', icon: 'football'},
-        // TODO tdit0703: Generischer Pfad
-        {title: 'Jugend', url: '/soccer/youth/', icon: 'football'}
+        {title: 'Jugend', url: '/teams/', icon: 'football', params: {heading: 'Jugend', teamIds: [90, 89, 88, 87, 85]}}
     ];
 
     private departmentPages = [

@@ -1,35 +1,5 @@
-<ion-content color="light" *ngIf="!loadingService.isLoading()">
-    <table class="ion-no-padding" *ngIf="rankingTeams">
+<ion-content class="ion-padding" color="light" *ngIf="!loadingService.isLoading()">
 
-        <thead>
-        <th class="ion-text-center">Pl.</th>
-        <th colspan="2">Verein</th>
-        <th class="ion-text-center">Sp.</th>
-        <th class="ion-text-center ion-hide-sm-down">S</th>
-        <th class="ion-text-center ion-hide-sm-down">U</th>
-        <th class="ion-text-center ion-hide-sm-down">N</th>
-        <th class="ion-text-center ion-hide-md-down">T</th>
-        <th class="ion-text-center ion-hide-md-down">GT</th>
-        <th class="ion-text-center">Diff.</th>
-        <th class="ion-text-center">Pkt.</th>
-        </thead>
-
-        <tbody>
-        <tr *ngFor="let team of rankingTeams; let i = index" [ngClass]="{favorite : team.isFavoriteTeam()}">
-            <td class="ion-text-center">{{ i + 1 }}</td>
-            <td><img [src]="team.image" [alt]="team.name"/></td>
-            <td class="text-truncate">{{ team.name }}</td>
-            <td class="ion-text-center">{{ team.matches }}</td>
-            <td class="ion-text-center ion-hide-sm-down">{{ team.wins }}</td>
-            <td class="ion-text-center ion-hide-sm-down">{{ team.draws }}</td>
-            <td class="ion-text-center ion-hide-sm-down">{{ team.losses }}</td>
-            <td class="ion-text-center ion-hide-md-down">{{ team.goalsFor }}</td>
-            <td class="ion-text-center ion-hide-md-down">{{ team.goalsAgainst }}</td>
-            <td class="ion-text-center">{{ team.goalsDiff }}</td>
-            <td class="ion-text-center">{{ team.points }}</td>
-        </tr>
-        </tbody>
-
-    </table>
+    <ranking [teams]="rankingTeams"></ranking>
 
 </ion-content>

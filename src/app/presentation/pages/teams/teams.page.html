@@ -1,0 +1,22 @@
+<page-header [title]="heading"></page-header>
+
+<ion-content color="light">
+
+    <ng-template ngFor let-team [ngForOf]="teams | keyvalue : teamNameOrder">
+        <h4 class="ion-padding-start">{{team.key.teamName}}</h4>
+
+        <ion-card routerLink="/team-detail/{{team.key.teamId}}">
+            <ranking [teams]="team.value"></ranking>
+
+            <ion-row class="ion-no-padding">
+                <ion-col class="ion-text-center">
+                    <ion-button expand="full" fill="clear">
+                        Mehr zur {{team.key.teamName}}
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+
+    </ng-template>
+
+</ion-content>

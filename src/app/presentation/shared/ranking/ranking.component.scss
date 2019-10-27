@@ -1,0 +1,38 @@
+.favorite {
+  font-weight: bold;
+}
+
+img {
+  vertical-align: middle;
+  width: 25px;
+  min-width: 25px;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.75rem;
+
+  thead {
+    background: transparent;
+  }
+
+  th {
+    text-align: left;
+    font-weight: normal;
+    color: #818181;
+    border-bottom: 1px solid #ddd;
+  }
+
+  td, th {
+    padding: 4px;
+    height: 50px;
+    line-height: 20px;
+  }
+
+  td {
+    border-top: 1px solid #ddd;
+  }
+
+}
