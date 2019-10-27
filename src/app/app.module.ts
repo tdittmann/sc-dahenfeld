@@ -23,7 +23,6 @@ import {ProfileService} from './dataproviders/profile/profile.service';
 
 // TODO tdit0703: App Struktur anpassen?
 // TODO tdit0703: Tabs??? Funktionieren nicht zuverlässig... Evtl. doch Ionic Tabs?
-// TODO tdit0703: Jugend-Page
 @NgModule({
     declarations: [
         AppComponent
