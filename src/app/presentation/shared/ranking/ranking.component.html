@@ -16,8 +16,8 @@
     </thead>
 
     <tbody>
-    <tr *ngFor="let team of teams; let i = index" [ngClass]="{favorite : team.isFavoriteTeam()}">
-        <td class="ion-text-center">{{ i + 1 }}</td>
+    <tr *ngFor="let team of teams" [ngClass]="{favorite : team.isFavoriteTeam()}">
+        <td class="ion-text-center">{{ team.place }}</td>
         <td><img [src]="team.image" [alt]="team.name"/></td>
         <td>{{ team.name }}</td>
         <td class="ion-text-center">{{ team.matches }}</td>

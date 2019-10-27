@@ -20,7 +20,13 @@ export class RankingService {
         return this.httpService
             .get<RankingTeamJson[]>(environment.backendUrl + 'ranking?teamId=' + teamId)
             .pipe(map(pRankingTeam => pRankingTeam.map(this.rankingTeamMapper.mapFrom)))
-            .pipe(tap(pRankingTeam => pRankingTeam.sort(((a, b) => a.compareTo(b)))));
+            .pipe(tap(pRankingTeam => pRankingTeam.sort(((a, b) => a.compareTo(b)))))
+            .pipe(map(pRankingTeam => {
+                for (let i = 0; i < pRankingTeam.length; i++) {
+                    pRankingTeam[i].place = i + 1;
+                }
+                return pRankingTeam;
+            }));
     }
 
 }

@@ -1,6 +1,7 @@
 export class RankingTeam {
 
     id: number;
+    place: number;
     name: string;
     image: string;
     matches: number;
