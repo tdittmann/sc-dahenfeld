@@ -1,23 +1,19 @@
 <page-header [title]="heading" noBorder="true"></page-header>
 
-<ion-content color="light" *ngIf="!loadingService.isLoading()">
+<ion-content color="light">
 
-    <super-tabs>
+    <ion-tabs #articleTabs>
 
-        <super-tabs-toolbar color="white" slot="top">
-            <super-tab-button *ngFor="let article of articles">
-                <ion-label>{{article.title}}</ion-label>
-            </super-tab-button>
-        </super-tabs-toolbar>
+        <ion-tab-bar slot="top">
 
-        <super-tabs-container>
-            <super-tab *ngFor="let article of articles">
-                <ion-content color="light">
-                    <article-detail [article]="article" [showHeader]="false"></article-detail>
-                </ion-content>
-            </super-tab>
-        </super-tabs-container>
+            <ng-template ngFor let-article [ngForOf]="articles">
+                <ion-tab-button tab="article/{{article.id}}?heading={{heading}}">
+                    <ion-label>{{article.title}}</ion-label>
+                </ion-tab-button>
+            </ng-template>
 
-    </super-tabs>
+        </ion-tab-bar>
+
+    </ion-tabs>
 
 </ion-content>

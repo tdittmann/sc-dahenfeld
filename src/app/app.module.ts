@@ -21,7 +21,6 @@ import {LoadingService} from './presentation/shared/loading/loading.service';
 import {LoadingHttpInterceptor} from './presentation/shared/loading/loading.http.interceptor';
 import {ProfileService} from './dataproviders/profile/profile.service';
 
-// TODO tdit0703: App Struktur anpassen?
 // TODO tdit0703: Tabs??? Funktionieren nicht zuverlässig... Evtl. doch Ionic Tabs?
 @NgModule({
     declarations: [

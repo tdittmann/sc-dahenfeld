@@ -3,11 +3,34 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {PageHeaderModule} from '../../shared/page-header/page-header.module';
-import {RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {ArticleTabsPage} from './article-tabs.page';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {SuperTabsModule} from '@ionic-super-tabs/angular';
 import {ArticleDetailModule} from '../../shared/article-detail/article-detail.module';
+
+const routes: Routes = [
+    {
+        path: 'tabs',
+        component: ArticleTabsPage,
+        children: [
+            {
+                path: 'article',
+                children: [
+                    {
+                        path: ':id',
+                        loadChildren: './article-tab/article-tab.module#ArticleTabModule'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        path: '',
+        redirectTo: 'tabs',
+        pathMatch: 'full'
+    }
+];
 
 @NgModule({
     providers: [ArticleService],
@@ -18,12 +41,7 @@ import {ArticleDetailModule} from '../../shared/article-detail/article-detail.mo
         PageHeaderModule,
         SuperTabsModule,
         ArticleDetailModule,
-        RouterModule.forChild([
-            {
-                path: '',
-                component: ArticleTabsPage
-            }
-        ])
+        RouterModule.forChild(routes)
     ],
     declarations: [ArticleTabsPage]
 })
