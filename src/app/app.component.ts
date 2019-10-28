@@ -16,12 +16,21 @@ import {Profile} from './core/domain/profile.model';
 export class AppComponent {
 
     // TODO tdit0703: Auslagern ins Backend
+    // TODO tdit0703: Jubiläum beachten! Farblich abheben / Tabs (Events / Berichte / ...)?
+    // TODO tdit0703: TeamInfo vom Backend sollte Tabs steuern (logik im Backend fehlt noch)
+    // TODO tdit0703: Eigener Datenschutz für die App
+    // TODO tdit0703: AppIcons + SplashScreen Images
+    // TODO tdit0703: Event-Detail + Match-Detail
+    // TODO tdit0703: Team-Detail Statistics
+    // TODO tdit0703: Team-Detail Fixture: Scroll to next Match
+    // TODO tdit0703: Fix authentication?
     private clubPages = [
         {title: 'Aktuelles', url: '/news', icon: 'paper'},
         {title: 'Chronik', url: '/chronicle', icon: 'time'},
         {title: 'Mitglied werden', url: '/membership', icon: 'contacts'},
         {title: 'Kalender', url: '/calendar', icon: 'calendar'},
-        {title: 'Sportheim', url: '/article/830', icon: 'restaurant', params: {showOnlyTitle: true}}
+        {title: 'Sportheim', url: '/article/830', icon: 'restaurant', params: {showOnlyTitle: true}},
+        {title: 'Jubiläum 2021', url: '/article/830', icon: 'ribbon', params: {showOnlyTitle: true}}
     ];
 
     private soccerPages = [
