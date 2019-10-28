@@ -20,6 +20,7 @@ import {LoadingService} from './presentation/shared/loading/loading.service';
 import {LoadingHttpInterceptor} from './presentation/shared/loading/loading.http.interceptor';
 import {ProfileService} from './dataproviders/profile/profile.service';
 
+// TODO tdit0703: Backend old Player images fix -> größe anpassen wegen background-position: center
 @NgModule({
     declarations: [
         AppComponent
