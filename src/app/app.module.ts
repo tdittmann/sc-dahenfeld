@@ -11,7 +11,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {IonicStorageModule} from '@ionic/storage';
 import {DevService} from './dataproviders/dev.service';
 import {StorageService} from './dataproviders/storage.service';
-import {SuperTabsModule} from '@ionic-super-tabs/angular';
 import {HttpService} from './dataproviders/http.service';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AppVersion} from '@ionic-native/app-version/ngx';
@@ -21,7 +20,6 @@ import {LoadingService} from './presentation/shared/loading/loading.service';
 import {LoadingHttpInterceptor} from './presentation/shared/loading/loading.http.interceptor';
 import {ProfileService} from './dataproviders/profile/profile.service';
 
-// TODO tdit0703: Tabs??? Funktionieren nicht zuverlässig... Evtl. doch Ionic Tabs?
 @NgModule({
     declarations: [
         AppComponent
@@ -31,7 +29,6 @@ import {ProfileService} from './dataproviders/profile/profile.service';
         BrowserModule,
         IonicModule.forRoot(),
         IonicStorageModule.forRoot(),
-        SuperTabsModule.forRoot(),
         AppRoutingModule,
         HttpClientModule,
     ],

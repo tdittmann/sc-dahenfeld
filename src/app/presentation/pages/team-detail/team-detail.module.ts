@@ -3,14 +3,50 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {PageHeaderModule} from '../../shared/page-header/page-header.module';
-import {RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {TeamDetailPage} from './team-detail.page';
-import {SuperTabsModule} from '@ionic-super-tabs/angular';
-import {RankingPageModule} from './ranking/ranking.module';
-import {FixturePageModule} from './fixture/fixture.module';
-import {PlayersPageModule} from './players/players.module';
-import {StatisticsPageModule} from './statistics/statistics.module';
 import {TeamInformationService} from '../../../dataproviders/soccer/teamInformation.service';
+
+const routes: Routes = [
+    {
+        path: 'tabs',
+        component: TeamDetailPage,
+        children: [
+            {
+                path: 'ranking',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: './ranking/ranking.module#RankingPageModule'
+                    }
+                ]
+            },
+            {
+                path: 'fixture',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: './fixture/fixture.module#FixturePageModule'
+                    }
+                ]
+            },
+            {
+                path: 'players',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: './players/players.module#PlayersPageModule'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        path: '',
+        redirectTo: 'tabs/ranking',
+        pathMatch: 'full'
+    }
+];
 
 @NgModule({
     providers: [TeamInformationService],
@@ -19,17 +55,7 @@ import {TeamInformationService} from '../../../dataproviders/soccer/teamInformat
         FormsModule,
         IonicModule,
         PageHeaderModule,
-        RouterModule.forChild([
-            {
-                path: '',
-                component: TeamDetailPage
-            }
-        ]),
-        SuperTabsModule,
-        RankingPageModule,
-        FixturePageModule,
-        PlayersPageModule,
-        StatisticsPageModule,
+        RouterModule.forChild(routes)
     ],
     declarations: [TeamDetailPage]
 })

@@ -5,6 +5,7 @@ import {IonicModule} from '@ionic/angular';
 import {PlayersPage} from './players.page';
 import {PersonService} from '../../../../dataproviders/soccer/person/person.service';
 import {PersonModule} from '../../person/person.module';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
     providers: [PersonService],
@@ -13,10 +14,14 @@ import {PersonModule} from '../../person/person.module';
         FormsModule,
         IonicModule,
         PersonModule,
+        RouterModule.forChild([
+            {
+                path: '',
+                component: PlayersPage
+            }
+        ])
     ],
     declarations: [PlayersPage],
-    exports: [PlayersPage],
-    entryComponents: [PlayersPage],
 })
 export class PlayersPageModule {
 }
