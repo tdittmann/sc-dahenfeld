@@ -21,9 +21,9 @@ export class AppComponent {
     // TODO tdit0703: Eigener Datenschutz für die App
     // TODO tdit0703: AppIcons + SplashScreen Images
     // TODO tdit0703: Event-Detail + Match-Detail
-    // TODO tdit0703: Team-Detail Fixture: Scroll to next Match
     // TODO tdit0703: Fix authentication?
     // TODO tdit0703: Backend old Player images fix -> größe anpassen wegen background-position: center
+    // TODO tdit0703: Loading & Error wie in alter App? Ist zuverlässiger...
     private clubPages = [
         {title: 'Aktuelles', url: '/news', icon: 'paper'},
         {title: 'Chronik', url: '/chronicle', icon: 'time'},
