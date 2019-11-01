@@ -1,0 +1,10 @@
+<ion-item mode="md" (click)="openPlayer(person.id)">
+    <ion-avatar slot="start">
+        <ion-img [src]="person.image" [alt]="person.getName()"></ion-img>
+    </ion-avatar>
+    <ion-label>
+        <h2>{{person.getName()}}</h2>
+        <p>{{person.position}}</p>
+    </ion-label>
+    <ion-note slot="end">{{person[statisticsVariable][fieldVariable]}}</ion-note>
+</ion-item>

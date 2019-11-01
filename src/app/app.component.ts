@@ -15,15 +15,15 @@ import {Profile} from './core/domain/profile.model';
 })
 export class AppComponent {
 
-    // TODO tdit0703: Auslagern ins Backend
+    // TODO tdit0703: Navigation auslagern ins Backend
     // TODO tdit0703: Jubiläum beachten! Farblich abheben / Tabs (Events / Berichte / ...)?
     // TODO tdit0703: TeamInfo vom Backend sollte Tabs steuern (logik im Backend fehlt noch)
     // TODO tdit0703: Eigener Datenschutz für die App
     // TODO tdit0703: AppIcons + SplashScreen Images
     // TODO tdit0703: Event-Detail + Match-Detail
-    // TODO tdit0703: Team-Detail Statistics
     // TODO tdit0703: Team-Detail Fixture: Scroll to next Match
     // TODO tdit0703: Fix authentication?
+    // TODO tdit0703: Backend old Player images fix -> größe anpassen wegen background-position: center
     private clubPages = [
         {title: 'Aktuelles', url: '/news', icon: 'paper'},
         {title: 'Chronik', url: '/chronicle', icon: 'time'},

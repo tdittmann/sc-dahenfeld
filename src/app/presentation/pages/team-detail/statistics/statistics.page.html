@@ -1,1 +1,12 @@
-<h1>Statistics</h1>
+<ion-content color="light">
+
+    <ng-template ngFor let-stat [ngForOf]="statistics">
+        <statistics-card [persons]="persons"
+                         [heading]="stat.heading"
+                         [statisticFilter]="stat.filter"
+                         (click)="openStatisticsModal(stat)"
+                         class="clickable">
+        </statistics-card>
+    </ng-template>
+
+</ion-content>

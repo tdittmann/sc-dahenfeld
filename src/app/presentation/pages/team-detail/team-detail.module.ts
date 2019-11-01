@@ -38,6 +38,15 @@ const routes: Routes = [
                         loadChildren: './players/players.module#PlayersPageModule'
                     }
                 ]
+            },
+            {
+                path: 'statistics',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: './statistics/statistics.module#StatisticsPageModule'
+                    }
+                ]
             }
         ]
     },

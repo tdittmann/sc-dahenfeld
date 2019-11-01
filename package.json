@@ -32,6 +32,7 @@
     "@ionic/storage": "^2.2.0",
     "core-js": "^3.3.4",
     "moment": "^2.24.0",
+    "ngx-order-pipe": "^2.0.4",
     "rxjs": "~6.5.3",
     "underscore.string": "^3.3.5",
     "zone.js": "~0.10.2"

@@ -3,17 +3,27 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {StatisticsPage} from './statistics.page';
+import {RouterModule} from '@angular/router';
+import {PersonService} from '../../../../dataproviders/soccer/person/person.service';
+import {StatisticsCardModule} from './statistics-card/statistics-card.module';
+import {StatisticsModalModule} from './statistics-modal/statistics-modal.module';
 
-// TODO tdit0703: Add to tab routing
 @NgModule({
+    providers: [PersonService],
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
+        StatisticsCardModule,
+        StatisticsModalModule,
+        RouterModule.forChild([
+            {
+                path: '',
+                component: StatisticsPage
+            }
+        ])
     ],
     declarations: [StatisticsPage],
-    exports: [StatisticsPage],
-    entryComponents: [StatisticsPage],
 })
 export class StatisticsPageModule {
 }

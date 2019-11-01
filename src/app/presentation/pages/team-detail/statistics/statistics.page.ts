@@ -1,5 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {PersonService} from '../../../../dataproviders/soccer/person/person.service';
+import {Person} from '../../../../core/domain/person.model';
+import {ModalController} from '@ionic/angular';
+import {StatisticsModalComponent} from './statistics-modal/statistics-modal.component';
 
 @Component({
     selector: 'statistics',
@@ -8,18 +12,44 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class StatisticsPage implements OnInit {
 
-    constructor(private route: ActivatedRoute) {
+    persons: Person[] = [];
+    statistics = [
+        {heading: 'Torschützen', filter: 'seasonStatistic.goals'},
+        {heading: 'Spielminuten', filter: 'seasonStatistic.playingMinutes'},
+        {heading: 'Gelbe Karten', filter: 'seasonStatistic.yellowCards'},
+        {heading: 'Platzverweise', filter: 'seasonStatistic.redCards'},
+    ];
+
+    constructor(private route: ActivatedRoute,
+                private personService: PersonService,
+                private modalController: ModalController) {
 
     }
 
     ngOnInit(): void {
         this.route.params.subscribe(
             params => {
-                const teamId = params['id'];
 
-                // TODO tdit0703: Load stats
+                this.personService.loadPlayers(params['id']).subscribe(
+                    value => {
+                        this.persons = value;
+                    },
+                    error => console.error(error)
+                );
+
             }
         );
+    }
+
+    openStatisticsModal(statistics) {
+        this.modalController.create({
+            component: StatisticsModalComponent,
+            componentProps: {
+                'persons': this.persons,
+                'heading': statistics.heading,
+                'filter': statistics.filter
+            }
+        }).then(modal => modal.present());
     }
 
 }
