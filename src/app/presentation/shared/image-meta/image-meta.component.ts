@@ -1,0 +1,21 @@
+import {Component, Input} from '@angular/core';
+
+@Component({
+    selector: 'image-meta',
+    templateUrl: 'image-meta.component.html',
+    styleUrls: ['image-meta.component.scss']
+})
+export class ImageMetaComponent {
+
+    @Input() image: string;
+    @Input() title: string;
+    @Input() subTitleIcon: string;
+    @Input() subTitle: string;
+    @Input() subSubTitleIcon: string;
+    @Input() subSubTitle: string;
+
+    constructor() {
+
+    }
+
+}

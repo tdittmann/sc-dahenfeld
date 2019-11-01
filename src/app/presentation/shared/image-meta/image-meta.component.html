@@ -1,0 +1,18 @@
+<div class="image" [ngStyle]="{'background-image' : image}">
+
+    <div class="slider-container">
+
+        <h3 class="title">{{ title }}</h3>
+
+        <p *ngIf="subTitle">
+            <ion-icon *ngIf="subTitleIcon" [name]="subTitleIcon"></ion-icon>
+            {{subTitle}}
+        </p>
+
+        <p *ngIf="subSubTitle">
+            <ion-icon *ngIf="subSubTitleIcon" [name]="subSubTitleIcon"></ion-icon>
+            {{subSubTitle}}
+        </p>
+
+    </div>
+</div>

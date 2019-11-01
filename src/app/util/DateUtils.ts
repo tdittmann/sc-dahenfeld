@@ -65,4 +65,13 @@ export class DateUtils {
             .locale('de');
     }
 
+    public static of(pAny): Moment {
+        if (!pAny) {
+            return undefined;
+        }
+
+        return moment(pAny)
+            .locale('de');
+    }
+
 }

@@ -2,11 +2,11 @@ import {CalendarEvent} from '../../../../core/domain/calendarEvent.model';
 import {Component, Input} from '@angular/core';
 
 @Component({
-    selector: 'calendar-card-event',
-    templateUrl: 'calendar-card-event.component.html',
-    styleUrls: ['calendar-card-event.component.scss']
+    selector: 'event-card',
+    templateUrl: 'event-card.component.html',
+    styleUrls: ['event-card.component.scss']
 })
-export class CalendarCardEventComponent {
+export class EventCardComponent {
 
     @Input() event: CalendarEvent;
 

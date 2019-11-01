@@ -4,6 +4,7 @@ import {CalendarEntry} from '../../../core/domain/calendarEntry.model';
 import {Moment} from 'moment';
 import {ErrorService} from '../../shared/error/error.service';
 import {LoadingService} from '../../shared/loading/loading.service';
+import {Router} from '@angular/router';
 
 @Component({
     templateUrl: 'calendar.page.html',
@@ -15,6 +16,7 @@ export class CalendarPage implements OnInit {
     lastDay = null;
 
     constructor(private calendarService: CalendarService,
+                private router: Router,
                 private loadingService: LoadingService,
                 private errorService: ErrorService) {
 
@@ -35,6 +37,14 @@ export class CalendarPage implements OnInit {
         const isSame = date.isSame(this.lastDay, 'day');
         this.lastDay = date;
         return !isSame;
+    }
+
+    public openEventDetail(entry) {
+        this.router.navigateByUrl('/event-detail', {
+            state: {
+                data: JSON.stringify(entry)
+            }
+        });
     }
 
 }
