@@ -4,6 +4,8 @@ import {FixtureService} from '../../../../dataproviders/soccer/fixture/fixture.s
 import {FixtureMatch} from '../../../../core/domain/fixtureMatch.model';
 import {ErrorService} from '../../../shared/error/error.service';
 import {LoadingService} from '../../../shared/loading/loading.service';
+import {MatchDetailPage} from '../../match-detail/match-detail.page';
+import {ModalController} from '@ionic/angular';
 
 @Component({
     selector: 'fixture',
@@ -16,6 +18,7 @@ export class FixturePage implements OnInit {
 
     constructor(private route: ActivatedRoute,
                 private fixtureService: FixtureService,
+                private modalController: ModalController,
                 private loadingService: LoadingService,
                 private errorService: ErrorService) {
 
@@ -36,6 +39,15 @@ export class FixturePage implements OnInit {
                 );
             }
         );
+    }
+
+    openMatchDetail(matchId: number) {
+        this.modalController.create({
+            component: MatchDetailPage,
+            componentProps: {
+                'matchId': matchId
+            }
+        }).then(modal => modal.present());
     }
 
 }

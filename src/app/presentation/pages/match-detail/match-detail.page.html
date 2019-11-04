@@ -1,0 +1,89 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-button (click)="closeModal()">
+                <ion-icon name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" *ngIf="!loadingService.isLoading() && matchDetails">
+
+    <ion-grid class="team-infos">
+        <ion-row>
+            <ion-col>
+                <img class="club-logo" [src]="matchDetails.homeImage" [alt]="matchDetails.homeName"/>
+            </ion-col>
+
+            <ion-col class="match-result">
+                {{matchDetails.getResult()}}
+            </ion-col>
+
+            <ion-col>
+                <img class="club-logo" [src]="matchDetails.awayImage" [alt]="matchDetails.awayName"/>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="team-names">
+            <ion-col>{{ matchDetails.homeName }}</ion-col>
+            <ion-col></ion-col>
+            <ion-col>{{ matchDetails.awayName }}</ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-card *ngIf="matchDetails.events.length > 0">
+        <h4 class="separator-heading">Highlights</h4>
+        <ion-card-content>
+            <table class="event-table">
+                <ng-template ngFor let-event [ngForOf]="matchDetails.events">
+                    <tr>
+                        <td>
+                            <div class="event-time">
+                                {{ event.time }}
+                            </div>
+                        </td>
+                        <td>
+                            <img class="event-image" [src]="event.icon"/>
+                        </td>
+                        <td>
+                            <div class="event-names">
+                                {{ event.firstname }} {{ event.lastname }}
+                                <div class="cameInFor" *ngIf="event.cameInForFirstname">
+                                    für {{ event.cameInForFirstname }} {{ event.cameInForLastname }}
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+            </table>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <h4 class="separator-heading">Spielinfos</h4>
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="6">
+                        <p><strong>Datum</strong></p>
+                        {{matchDetails.getKickOffDate()}}
+                    </ion-col>
+                    <ion-col size="6">
+                        <p><strong>Ort</strong></p>
+                        {{matchDetails.location}}
+                    </ion-col>
+                    <ion-col size="6">
+                        <p><strong>Anpfiff</strong></p>
+                        {{matchDetails.getKickOffTime()}}
+                    </ion-col>
+                    <ion-col size="6">
+                        <p><strong>Spieltag</strong></p>
+                        {{matchDetails.fixture}}
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

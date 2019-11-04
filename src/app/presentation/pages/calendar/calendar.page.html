@@ -14,7 +14,8 @@
                                 [startDate]="entry.start" [location]="entry.location"
                                 [homeName]="entry.homeName" [homeImage]="entry.homeImage"
                                 [awayName]="entry.awayName" [awayImage]="entry.awayImage"
-                                [footerLeft]="entry.team" [footerRight]="entry.fixture">
+                                [footerLeft]="entry.team" [footerRight]="entry.fixture"
+                                (click)="openMatchDetail(entry)">
                     </match-card>
 
                     <event-card *ngIf="entry.isEvent()"

@@ -5,7 +5,8 @@
         <match-card [startDate]="match.date" [location]="match.location"
                     [homeName]="match.homeName" [homeImage]="match.homeImage" [homeResult]="match.homeResult"
                     [awayName]="match.awayName" [awayImage]="match.awayImage" [awayResult]="match.awayResult"
-                    [footerLeft]="match.getStartDate()" [footerRight]="match.fixture">
+                    [footerLeft]="match.getStartDate()" [footerRight]="match.fixture"
+                    (click)="openMatchDetail(match.id)">
         </match-card>
 
     </ng-template>

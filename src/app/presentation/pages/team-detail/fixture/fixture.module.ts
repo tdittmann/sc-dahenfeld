@@ -6,6 +6,7 @@ import {FixturePage} from './fixture.page';
 import {FixtureService} from '../../../../dataproviders/soccer/fixture/fixture.service';
 import {MatchCardModule} from '../../../shared/match-card/match-card.module';
 import {RouterModule} from '@angular/router';
+import {MatchDetailPageModule} from '../../match-detail/match-detail.module';
 
 @NgModule({
     providers: [FixtureService],
@@ -14,6 +15,7 @@ import {RouterModule} from '@angular/router';
         FormsModule,
         IonicModule,
         MatchCardModule,
+        MatchDetailPageModule,
         RouterModule.forChild([
             {
                 path: '',

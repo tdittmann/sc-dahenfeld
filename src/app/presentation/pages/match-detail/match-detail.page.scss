@@ -1,0 +1,46 @@
+.team-infos {
+  text-align: center;
+}
+
+.club-logo {
+  height: 50px;
+}
+
+.match-result {
+  font-size: 30px;
+}
+
+.team-names {
+  font-weight: bold;
+}
+
+.separator-heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.event-table td{
+  padding: 4px;
+}
+
+.event-time {
+  width: 26px;
+  height: 26px;
+  line-height: 24px;
+  border: 1px solid var(--ion-background-color);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 9px;
+  background-color: #fff;
+  font-weight: 700;
+}
+
+.cameInFor {
+  font-size: 0.75em;
+}
+
+.event-image {
+  height: 15px;
+  width: auto;
+}
