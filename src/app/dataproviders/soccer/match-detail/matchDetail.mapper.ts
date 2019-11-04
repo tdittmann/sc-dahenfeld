@@ -2,7 +2,6 @@ import {MatchDetailJson, MatchEventJson} from './matchDetailJson';
 import {MatchDetail, MatchEvent} from '../../../core/domain/matchDetail.model';
 import {DateUtils} from '../../../util/DateUtils';
 
-// TODO tdit0703: Tests
 export class MatchDetailMapper {
 
     mapFrom(param: MatchDetailJson): MatchDetail {

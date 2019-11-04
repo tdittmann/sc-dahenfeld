@@ -15,7 +15,6 @@ export class CalendarEvent extends CalendarEntry {
         return TextUtils.getAsBackgroundUrl(this.image);
     }
 
-    // TODO tdit0703: Tests
     public getEventDurationAsString(): string {
         if (!this.start && !this.end) {
             return '';

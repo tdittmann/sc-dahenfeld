@@ -15,7 +15,7 @@ import {Profile} from './core/domain/profile.model';
 })
 export class AppComponent {
 
-    // TODO tdit0703: Navigation auslagern ins Backend
+    // TODO tdit0703: Navigation auslagern ins Backend + im LocalStorage speichern
     // TODO tdit0703: Jubiläum beachten! Farblich abheben / Tabs (Events / Berichte / ...)?
     // TODO tdit0703: AppIcons + SplashScreen Images
     // TODO tdit0703: Fix authentication?
