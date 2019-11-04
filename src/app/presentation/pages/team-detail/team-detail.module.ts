@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {RouterModule, Routes} from '@angular/router';
@@ -61,7 +60,6 @@ const routes: Routes = [
     providers: [TeamInformationService],
     imports: [
         CommonModule,
-        FormsModule,
         IonicModule,
         PageHeaderModule,
         RouterModule.forChild(routes)

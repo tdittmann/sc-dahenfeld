@@ -37,14 +37,6 @@ export class MatchDetailPage implements OnInit {
         );
     }
 
-    getCssClass(clubId: number): string {
-        if (this.matchDetails.homeId === clubId) {
-            return 'homeTeam';
-        } else {
-            return 'awayTeam';
-        }
-    }
-
     public closeModal() {
         return this.modalController.dismiss();
     }

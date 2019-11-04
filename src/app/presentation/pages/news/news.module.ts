@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {IonicModule} from '@ionic/angular';
-import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
 import {ArticleCardComponent} from './article-card/article-card.component';
@@ -14,7 +13,6 @@ import {ArticleSliderModule} from './article-slider/article-slider.module';
     providers: [ArticleService],
     imports: [
         CommonModule,
-        FormsModule,
         IonicModule,
         PageHeaderModule,
         ArticleSliderModule,

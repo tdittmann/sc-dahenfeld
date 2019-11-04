@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {PersonPage} from './person.page';
@@ -11,7 +10,6 @@ import {PersonService} from '../../../dataproviders/soccer/person/person.service
     providers: [PersonService],
     imports: [
         CommonModule,
-        FormsModule,
         IonicModule,
         PageHeaderModule
     ],

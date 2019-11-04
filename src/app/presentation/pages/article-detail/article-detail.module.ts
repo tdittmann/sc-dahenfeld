@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {IonicModule} from '@ionic/angular';
-import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {ArticleDetailPage} from './article-detail.page';
@@ -12,7 +11,6 @@ import {ArticleDetailModule} from '../../shared/article-detail/article-detail.mo
     providers: [ArticleService],
     imports: [
         CommonModule,
-        FormsModule,
         IonicModule,
         PageHeaderModule,
         ArticleDetailModule,

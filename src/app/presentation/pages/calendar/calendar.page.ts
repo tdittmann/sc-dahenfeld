@@ -7,6 +7,7 @@ import {LoadingService} from '../../shared/loading/loading.service';
 import {Router} from '@angular/router';
 import {ModalController} from '@ionic/angular';
 import {MatchDetailPage} from '../match-detail/match-detail.page';
+import {EventDetailPage} from '../event-detail/event-detail.page';
 
 @Component({
     templateUrl: 'calendar.page.html',
@@ -52,11 +53,12 @@ export class CalendarPage implements OnInit {
     }
 
     public openEventDetail(entry) {
-        this.router.navigateByUrl('/event-detail', {
-            state: {
-                data: JSON.stringify(entry)
+        this.modalController.create({
+            component: EventDetailPage,
+            componentProps: {
+                'event': entry
             }
-        });
+        }).then(modal => modal.present());
     }
 
 }

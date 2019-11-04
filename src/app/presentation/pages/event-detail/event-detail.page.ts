@@ -1,41 +1,21 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
-import {map} from 'rxjs/operators';
+import {Component, Input} from '@angular/core';
 import {CalendarEvent} from '../../../core/domain/calendarEvent.model';
-import {DateUtils} from '../../../util/DateUtils';
+import {ModalController} from '@ionic/angular';
 
 @Component({
     templateUrl: 'event-detail.page.html',
     styleUrls: ['event-detail.page.scss']
 })
-export class EventDetailPage implements OnInit {
+export class EventDetailPage {
 
-    event: CalendarEvent = new CalendarEvent();
+    @Input() event: CalendarEvent;
 
-    constructor(private router: Router,
-                private activatedRoute: ActivatedRoute) {
+    constructor(private modalController: ModalController) {
 
     }
 
-    ngOnInit(): void {
-
-        this.activatedRoute.paramMap
-            .pipe(map(() => window.history.state))
-            .subscribe(value => {
-                // Only for development purposes
-                if (!value.data) {
-                    window.history.back();
-                }
-
-                Object.assign(this.event, JSON.parse(value.data));
-
-                // We need to set dates because after json parse it isn't a real typescript object :(
-                this.event.start = DateUtils.of(this.event.start);
-                if (this.event.end) {
-                    this.event.end = DateUtils.of(this.event.end);
-                }
-            });
-
+    public closeModal() {
+        return this.modalController.dismiss();
     }
 
 }

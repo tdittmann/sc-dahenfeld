@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {StatisticsPage} from './statistics.page';
 import {RouterModule} from '@angular/router';
@@ -12,7 +11,6 @@ import {StatisticsModalModule} from './statistics-modal/statistics-modal.module'
     providers: [PersonService],
     imports: [
         CommonModule,
-        FormsModule,
         IonicModule,
         StatisticsCardModule,
         StatisticsModalModule,

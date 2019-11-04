@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {FixturePage} from './fixture.page';
 import {FixtureService} from '../../../../dataproviders/soccer/fixture/fixture.service';
@@ -12,7 +11,6 @@ import {MatchDetailPageModule} from '../../match-detail/match-detail.module';
     providers: [FixtureService],
     imports: [
         CommonModule,
-        FormsModule,
         IonicModule,
         MatchCardModule,
         MatchDetailPageModule,
