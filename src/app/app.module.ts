@@ -19,6 +19,7 @@ import {ErrorService} from './presentation/shared/error/error.service';
 import {LoadingService} from './presentation/shared/loading/loading.service';
 import {LoadingHttpInterceptor} from './presentation/shared/loading/loading.http.interceptor';
 import {ProfileService} from './dataproviders/profile/profile.service';
+import {NavigationService} from './dataproviders/navigation/navigation.service';
 
 @NgModule({
     declarations: [
@@ -43,6 +44,7 @@ import {ProfileService} from './dataproviders/profile/profile.service';
         ErrorService,
         LoadingService,
         ProfileService,
+        NavigationService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
         {provide: HTTP_INTERCEPTORS, useClass: LoadingHttpInterceptor, multi: true}
     ],

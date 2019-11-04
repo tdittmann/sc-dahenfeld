@@ -7,6 +7,8 @@ import {VersionService} from './dataproviders/version/version.service';
 import {Capacitor, Plugins, PushNotificationToken, StatusBarStyle} from '@capacitor/core';
 import {ProfileService} from './dataproviders/profile/profile.service';
 import {Profile} from './core/domain/profile.model';
+import {NavigationService} from './dataproviders/navigation/navigation.service';
+import {RootNavigation} from './core/domain/root-navigation.model';
 
 @Component({
     selector: 'app-root',
@@ -15,62 +17,21 @@ import {Profile} from './core/domain/profile.model';
 })
 export class AppComponent {
 
-    // TODO tdit0703: Navigation auslagern ins Backend + im LocalStorage speichern
     // TODO tdit0703: Jubiläum beachten! Farblich abheben / Tabs (Events / Berichte / ...)?
     // TODO tdit0703: AppIcons + SplashScreen Images
     // TODO tdit0703: Fix authentication?
     // TODO tdit0703: Loading & Error wie in alter App? Ist zuverlässiger...
     // TODO tdit0703: Back-Button durch Routing-Anpassungen?
-    private clubPages = [
-        {title: 'Aktuelles', url: '/news', icon: 'paper'},
-        {title: 'Chronik', url: '/chronicle', icon: 'time'},
-        {title: 'Mitglied werden', url: '/membership', icon: 'contacts'},
-        {title: 'Kalender', url: '/calendar', icon: 'calendar'},
-        {title: 'Sportheim', url: '/article/830', icon: 'restaurant', params: {showOnlyTitle: true}},
-        {title: 'Jubiläum 2021', url: '/article/830', icon: 'ribbon', params: {showOnlyTitle: true}}
-    ];
 
-    private soccerPages = [
-        {title: '1. Mannschaft', url: '/team-detail/92', icon: 'football'},
-        {title: '2. Mannschaft', url: '/team-detail/91', icon: 'football'},
-        {title: 'Jugend', url: '/teams/', icon: 'football', params: {heading: 'Jugend', teamIds: [90, 89, 88, 87, 85]}}
-    ];
-
-    private departmentPages = [
-        {title: 'Turnen', url: '/article/733', icon: 'body', params: {showOnlyTitle: true}},
-        {title: 'Tischtennis', url: '/article/755', icon: 'walk', params: {showOnlyTitle: true}},
-        {title: 'Radsport', url: '/article-tabs', icon: 'bicycle', params: {heading: 'Radsport', articles: [1260, 1261, 1262, 1263]}}
-    ];
-
-    private tennisPages = [
-        {title: 'TC Dahenfeld', url: '/article/1246', icon: 'tennisball', params: {showOnlyTitle: true}}
-    ];
-
-    private devPages = [
-        {title: 'Geburtstage', url: '/birthdays', icon: 'time'},
-        {title: 'Profil', url: '/profile', icon: 'person'}
-    ];
-
-    private appPages = [
-        {title: 'Datenschutz', url: '/article/1195', icon: 'finger-print', params: {showOnlyTitle: true}},
-        {title: 'Impressum', url: '/imprint', icon: 'information-circle'}
-    ];
-
-    public navigation = [
-        {title: 'Der Verein', devMode: false, content: this.clubPages},
-        {title: 'Fussball', devMode: false, content: this.soccerPages},
-        {title: 'Abteilungen', devMode: false, content: this.departmentPages},
-        {title: 'TC Dahenfeld', devMode: false, content: this.tennisPages},
-        {title: 'Entwicklung', devMode: true, content: this.devPages},
-        {title: 'Die SCD-App', devMode: false, content: this.appPages}
-    ];
+    navigation: RootNavigation[] = [];
 
     constructor(private platform: Platform,
                 private devService: DevService,
                 private storageService: StorageService,
                 private versionService: VersionService,
                 private alertController: AlertController,
-                private profileService: ProfileService) {
+                private profileService: ProfileService,
+                private navigationService: NavigationService) {
         this.initializeApp();
     }
 
@@ -80,6 +41,9 @@ export class AppComponent {
             if (Capacitor.isPluginAvailable('SplashScreen')) {
                 Plugins.SplashScreen.hide();
             }
+
+            // Load navigation
+            this.initializeNavigation();
 
             // Set dark mode if enabled
             this.checkDarkMode();
@@ -94,6 +58,16 @@ export class AppComponent {
 
     isDevModeEnabled(): boolean {
         return this.devService.isDevModeEnabled();
+    }
+
+    private initializeNavigation() {
+        this.navigationService.loadNavigation().subscribe(
+            navigation => {
+                this.navigation = navigation;
+            },
+            error => {
+                console.error(error);
+            });
     }
 
     private checkDarkMode() {
