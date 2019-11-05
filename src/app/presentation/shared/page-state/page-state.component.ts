@@ -25,4 +25,12 @@ export class PageStateComponent {
         return this.loadingMessage;
     }
 
+    public isLoading(): boolean {
+        return this.loading && !this.error;
+    }
+
+    public isError(): boolean {
+        return this.error;
+    }
+
 }

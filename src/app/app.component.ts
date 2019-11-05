@@ -17,9 +17,9 @@ import {RootNavigation} from './core/domain/root-navigation.model';
 })
 export class AppComponent {
 
-    // TODO tdit0703: AppIcons + SplashScreen Images
+    // TODO tdit0703: iOS AppIcons + SplashScreen Images
     // TODO tdit0703: Fix authentication?
-    // TODO tdit0703: Back-Button durch Routing-Anpassungen?
+    // TODO tdit0703: Back-Button?
 
     navigation: RootNavigation[] = [];
 
