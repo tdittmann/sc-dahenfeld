@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {CalendarService} from '../../../dataproviders/calendar/calendar.service';
 import {CalendarEntry} from '../../../core/domain/calendarEntry.model';
 import {Moment} from 'moment';
-import {Router} from '@angular/router';
 import {ModalController} from '@ionic/angular';
 import {MatchDetailPage} from '../match-detail/match-detail.page';
 import {EventDetailPage} from '../event-detail/event-detail.page';
@@ -20,7 +19,6 @@ export class CalendarPage implements OnInit {
     isError = false;
 
     constructor(private calendarService: CalendarService,
-                private router: Router,
                 private modalController: ModalController) {
 
     }
