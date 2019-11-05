@@ -15,6 +15,8 @@ export class TeamsPage implements OnInit {
     heading = 'Jugend';
     teams = new Map;
 
+    isLoading = true;
+
     teamNameOrder = (a: KeyValue<any, any>, b: KeyValue<any, any>): number => {
         return a.key.teamName < b.key.teamName ? -1 : (b.key.teamName < a.key.teamName ? 1 : 0);
     };
@@ -54,6 +56,8 @@ export class TeamsPage implements OnInit {
                             } else {
                                 this.teams.set({teamId: teamId, teamName: teamInfo.name}, ranking);
                             }
+
+                            this.isLoading = false;
                         });
 
                 }

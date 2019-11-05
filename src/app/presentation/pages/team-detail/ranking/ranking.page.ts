@@ -2,8 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {RankingService} from '../../../../dataproviders/soccer/ranking/ranking.service';
 import {RankingTeam} from '../../../../core/domain/rankingTeam.model';
-import {ErrorService} from '../../../shared/error/error.service';
-import {LoadingService} from '../../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'ranking.page.html',
@@ -13,10 +11,11 @@ export class RankingPage implements OnInit {
 
     rankingTeams: RankingTeam[] = [];
 
+    isLoading = true;
+    isError = false;
+
     constructor(private route: ActivatedRoute,
-                private rankingService: RankingService,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+                private rankingService: RankingService) {
 
     }
 
@@ -29,9 +28,12 @@ export class RankingPage implements OnInit {
                     rankingTeams => {
                         this.rankingTeams = rankingTeams;
 
-                        this.loadingService.hideLoading();
+                        this.isLoading = false;
                     },
-                    error => this.errorService.showError(error)
+                    error => {
+                        this.isError = true;
+                        console.error(error);
+                    }
                 );
 
             }

@@ -7,6 +7,7 @@ import {TeamsPage} from './teams.page';
 import {TeamInformationService} from '../../../dataproviders/soccer/teamInformation.service';
 import {RankingService} from '../../../dataproviders/soccer/ranking/ranking.service';
 import {RankingComponentModule} from '../../shared/ranking/ranking.module';
+import {PageStateModule} from '../../shared/page-state/page-state.module';
 
 @NgModule({
     providers: [TeamInformationService, RankingService],
@@ -21,6 +22,7 @@ import {RankingComponentModule} from '../../shared/ranking/ranking.module';
             }
         ]),
         RankingComponentModule,
+        PageStateModule,
     ],
     declarations: [TeamsPage]
 })

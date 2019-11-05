@@ -3,8 +3,6 @@ import {ActivatedRoute} from '@angular/router';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {Article} from '../../../core/domain/article.model';
 import {combineLatest} from 'rxjs';
-import {ErrorService} from '../../shared/error/error.service';
-import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'article-detail.page.html',
@@ -15,10 +13,11 @@ export class ArticleDetailPage implements OnInit {
     article: Article;
     showOnlyTitle = false;
 
+    isLoading = true;
+    isError = false;
+
     constructor(private articleService: ArticleService,
-                private route: ActivatedRoute,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+                private route: ActivatedRoute) {
 
     }
 
@@ -37,9 +36,12 @@ export class ArticleDetailPage implements OnInit {
                         // Increment hits for the article
                         this.articleService.incrementMobileHitsForArticle(this.article);
 
-                        this.loadingService.hideLoading();
+                        this.isError = true;
                     },
-                    (pError) => this.errorService.showError(pError)
+                    (pError) => {
+                        this.isError = true;
+                        console.error(pError);
+                    }
                 );
             });
     }

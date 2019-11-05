@@ -1,4 +1,6 @@
-<ion-content class="ion-padding" color="light" *ngIf="!loadingService.isLoading()">
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<ion-content class="ion-padding" color="light" *ngIf="rankingTeams.length > 0">
 
     <ranking [teams]="rankingTeams"></ranking>
 

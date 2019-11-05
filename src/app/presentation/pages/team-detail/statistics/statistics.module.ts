@@ -6,6 +6,7 @@ import {RouterModule} from '@angular/router';
 import {PersonService} from '../../../../dataproviders/soccer/person/person.service';
 import {StatisticsCardModule} from './statistics-card/statistics-card.module';
 import {StatisticsModalModule} from './statistics-modal/statistics-modal.module';
+import {PageStateModule} from '../../../shared/page-state/page-state.module';
 
 @NgModule({
     providers: [PersonService],
@@ -19,7 +20,8 @@ import {StatisticsModalModule} from './statistics-modal/statistics-modal.module'
                 path: '',
                 component: StatisticsPage
             }
-        ])
+        ]),
+        PageStateModule
     ],
     declarations: [StatisticsPage],
 })

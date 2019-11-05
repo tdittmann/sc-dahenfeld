@@ -1,0 +1,8 @@
+<ion-content class="ion-no-padding" *ngIf="loading || error">
+    <div class="page-state-container">
+        {{ getMessage() }}<br/>
+
+        <ion-spinner name="dots" *ngIf="loading"></ion-spinner>
+        <ion-icon [name]="errorIcon" *ngIf="error"></ion-icon>
+    </div>
+</ion-content>

@@ -8,12 +8,12 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content color="light" *ngIf="!loadingService.isLoading()">
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<ion-content color="light" *ngIf="person">
 
     <div class="imageContainer">
-        <div class="image"
-             [ngStyle]="{'background-image' : person?.getImageAsBackground()}">
-        </div>
+        <div class="image" [ngStyle]="{'background-image' : person?.getImageAsBackground()}"></div>
 
         <div class="playerName">
             <h1>{{person?.lastname}}</h1>

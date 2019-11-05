@@ -5,6 +5,7 @@ import {IonicModule} from '@ionic/angular';
 import {ArticleDetailModule} from '../../../shared/article-detail/article-detail.module';
 import {RouterModule} from '@angular/router';
 import {ArticleTabComponent} from './article-tab.component';
+import {PageStateModule} from '../../../shared/page-state/page-state.module';
 
 @NgModule({
     providers: [ArticleService],
@@ -17,7 +18,8 @@ import {ArticleTabComponent} from './article-tab.component';
                 path: '',
                 component: ArticleTabComponent
             }
-        ])
+        ]),
+        PageStateModule
     ],
     declarations: [ArticleTabComponent]
 })

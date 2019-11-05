@@ -1,6 +1,7 @@
-<page-header ></page-header>
+<page-header></page-header>
+<page-state [loading]="isLoading" [error]="isError"></page-state>
 
-<ion-content color="light" *ngIf="!loadingService.isLoading()">
+<ion-content color="light" *ngIf="articles.length > 0">
 
     <article-slider [articles]="sliderArticles"></article-slider>
 

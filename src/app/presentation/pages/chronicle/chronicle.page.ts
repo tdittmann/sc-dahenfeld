@@ -5,8 +5,6 @@ import {Article} from '../../../core/domain/article.model';
 import {TimelineMapper} from '../../../dataproviders/timeline/timeline.mapper';
 import {TimelineService} from '../../../dataproviders/timeline/timeline.service';
 import {TimelineTitle} from '../../../core/domain/timelineTitle.model';
-import {ErrorService} from '../../shared/error/error.service';
-import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'chronicle.page.html',
@@ -21,10 +19,11 @@ export class ChroniclePage implements OnInit {
     subTitle = '... ist das Motto des SC Dahenfeld. Und das schon seit 1946. Erfahre mehr über den SCD in dieser Chronik.';
     timeLineEntries: TimelineEntry[] = [];
 
+    isLoading = true;
+    isError = false;
+
     constructor(private articleService: ArticleService,
-                private timelineService: TimelineService,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+                private timelineService: TimelineService) {
 
     }
 
@@ -50,9 +49,12 @@ export class ChroniclePage implements OnInit {
                     this.timeLineEntries.push(this.timelineMapper.mapFrom(articles[i]));
                 }
 
-                this.loadingService.hideLoading();
+                this.isLoading = false;
             },
-            (error) => this.errorService.showError(error)
+            (error) => {
+                this.isError = true;
+                console.error(error);
+            }
         );
 
     }

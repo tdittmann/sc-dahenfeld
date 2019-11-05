@@ -1,4 +1,6 @@
-<ion-content color="light">
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<ion-content color="light" *ngIf="statistics.length > 0">
 
     <ng-template ngFor let-stat [ngForOf]="statistics">
         <statistics-card [persons]="persons"

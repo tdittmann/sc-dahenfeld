@@ -1,6 +1,7 @@
 <page-header title="Kalender"></page-header>
+<page-state [loading]="isLoading" [error]="isError"></page-state>
 
-<ion-content color="light" *ngIf="!loadingService.isLoading()">
+<ion-content color="light" *ngIf="calendarEntries.length > 0">
 
     <ion-grid>
         <ion-row>

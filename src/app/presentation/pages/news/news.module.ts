@@ -8,6 +8,7 @@ import {NewsPage} from './news.page';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {ArticleSliderModule} from './article-slider/article-slider.module';
+import {PageStateModule} from '../../shared/page-state/page-state.module';
 
 @NgModule({
     providers: [ArticleService],
@@ -16,12 +17,13 @@ import {ArticleSliderModule} from './article-slider/article-slider.module';
         IonicModule,
         PageHeaderModule,
         ArticleSliderModule,
+        PageStateModule,
         RouterModule.forChild([
             {
                 path: '',
                 component: NewsPage
             }
-        ])
+        ]),
     ],
     declarations: [NewsPage, ArticleCardComponent]
 })

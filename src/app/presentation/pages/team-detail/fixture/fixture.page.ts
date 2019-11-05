@@ -2,8 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {FixtureService} from '../../../../dataproviders/soccer/fixture/fixture.service';
 import {FixtureMatch} from '../../../../core/domain/fixtureMatch.model';
-import {ErrorService} from '../../../shared/error/error.service';
-import {LoadingService} from '../../../shared/loading/loading.service';
 import {MatchDetailPage} from '../../match-detail/match-detail.page';
 import {ModalController} from '@ionic/angular';
 
@@ -16,11 +14,12 @@ export class FixturePage implements OnInit {
 
     matches: FixtureMatch[] = [];
 
+    isLoading = true;
+    isError = false;
+
     constructor(private route: ActivatedRoute,
                 private fixtureService: FixtureService,
-                private modalController: ModalController,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+                private modalController: ModalController) {
 
     }
 
@@ -33,9 +32,12 @@ export class FixturePage implements OnInit {
                     fixtureMatches => {
                         this.matches = fixtureMatches;
 
-                        this.loadingService.hideLoading();
+                        this.isLoading = false;
                     },
-                    error => this.errorService.showError(error)
+                    error => {
+                        this.isError = true;
+                        console.error(error);
+                    }
                 );
             }
         );

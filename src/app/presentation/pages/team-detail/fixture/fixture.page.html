@@ -1,4 +1,6 @@
-<ion-content color="light" *ngIf="!loadingService.isLoading()">
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<ion-content color="light" *ngIf="matches.length > 0">
 
     <ng-template ngFor let-match [ngForOf]="matches">
 

@@ -1,5 +1,7 @@
-<ion-content color="light" *ngIf="!loadingService.isLoading()">
-    <ion-list *ngIf="players" lines="none">
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<ion-content color="light" *ngIf="players.length > 0">
+    <ion-list lines="none">
         <ng-template ngFor let-player [ngForOf]="players">
 
             <ion-list-header *ngIf="isDifferentPosition(player)">

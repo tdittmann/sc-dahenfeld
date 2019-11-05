@@ -6,6 +6,7 @@ import {FixtureService} from '../../../../dataproviders/soccer/fixture/fixture.s
 import {MatchCardModule} from '../../../shared/match-card/match-card.module';
 import {RouterModule} from '@angular/router';
 import {MatchDetailPageModule} from '../../match-detail/match-detail.module';
+import {PageStateModule} from '../../../shared/page-state/page-state.module';
 
 @NgModule({
     providers: [FixtureService],
@@ -19,7 +20,8 @@ import {MatchDetailPageModule} from '../../match-detail/match-detail.module';
                 path: '',
                 component: FixturePage
             }
-        ])
+        ]),
+        PageStateModule
     ],
     declarations: [FixturePage],
 })

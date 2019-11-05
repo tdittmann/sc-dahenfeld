@@ -1,17 +1,17 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {IonicModule} from '@ionic/angular';
-import {LoadingComponent} from './loading.component';
+import {PageStateComponent} from './page-state.component';
 
 @NgModule({
     providers: [],
     imports: [
         CommonModule,
-        IonicModule
+        IonicModule,
     ],
-    declarations: [LoadingComponent],
-    exports: [LoadingComponent]
+    declarations: [PageStateComponent],
+    exports: [PageStateComponent]
 })
-export class LoadingModule {
+export class PageStateModule {
 
 }

@@ -8,6 +8,7 @@ import {BirthdaysPage} from './birthdays.page';
 import {BirthdayService} from '../../../dataproviders/birthday/birthday.service';
 import {BirthdayFilterPipe} from './birthday.filter';
 import {PersonModule} from '../person/person.module';
+import {PageStateModule} from '../../shared/page-state/page-state.module';
 
 @NgModule({
     providers: [BirthdayService],
@@ -22,7 +23,8 @@ import {PersonModule} from '../person/person.module';
                 path: '',
                 component: BirthdaysPage
             }
-        ])
+        ]),
+        PageStateModule
     ],
     declarations: [BirthdaysPage, BirthdayFilterPipe]
 })

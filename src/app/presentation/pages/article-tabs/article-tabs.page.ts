@@ -2,8 +2,6 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {ActivatedRoute} from '@angular/router';
 import {Article} from '../../../core/domain/article.model';
-import {ErrorService} from '../../shared/error/error.service';
-import {LoadingService} from '../../shared/loading/loading.service';
 import {IonTabs} from '@ionic/angular';
 
 @Component({
@@ -16,10 +14,11 @@ export class ArticleTabsPage implements OnInit {
     heading: string;
     articles: Article[];
 
+    isLoading = true;
+    isError = false;
+
     constructor(private articleService: ArticleService,
-                private route: ActivatedRoute,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+                private route: ActivatedRoute) {
 
     }
 
@@ -45,9 +44,12 @@ export class ArticleTabsPage implements OnInit {
                         this.tabs.select('article/' + this.articles[0].id + '?heading=' + this.heading)
                             .then(value => null);
 
-                        this.loadingService.hideLoading();
+                        this.isLoading = false;
                     },
-                    (pError) => this.errorService.showError(pError)
+                    (pError) => {
+                        this.isError = true;
+                        console.error(pError);
+                    }
                 );
 
             });

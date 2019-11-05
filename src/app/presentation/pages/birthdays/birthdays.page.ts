@@ -3,8 +3,6 @@ import {Birthday} from '../../../core/domain/birthday.model';
 import {BirthdayService} from '../../../dataproviders/birthday/birthday.service';
 import {PersonPage} from '../person/person.page';
 import {ModalController} from '@ionic/angular';
-import {ErrorService} from '../../shared/error/error.service';
-import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'birthdays.page.html',
@@ -15,10 +13,11 @@ export class BirthdaysPage implements OnInit {
     birthdays: Birthday[] = [];
     filter = '';
 
+    isLoading = true;
+    isError = false;
+
     constructor(private birthdayService: BirthdayService,
-                private modalController: ModalController,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+                private modalController: ModalController) {
 
     }
 
@@ -27,9 +26,12 @@ export class BirthdaysPage implements OnInit {
             (birthdays) => {
                 this.birthdays = birthdays;
 
-                this.loadingService.hideLoading();
+                this.isLoading = false;
             },
-            (error) => this.errorService.showError(error)
+            (error) => {
+                this.isError = true;
+                console.error(error);
+            }
         );
     }
 

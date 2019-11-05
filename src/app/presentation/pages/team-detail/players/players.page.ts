@@ -4,8 +4,6 @@ import {PersonService} from '../../../../dataproviders/soccer/person/person.serv
 import {Person} from '../../../../core/domain/person.model';
 import {ModalController} from '@ionic/angular';
 import {PersonPage} from '../../person/person.page';
-import {ErrorService} from '../../../shared/error/error.service';
-import {LoadingService} from '../../../shared/loading/loading.service';
 
 @Component({
     selector: 'players',
@@ -17,11 +15,12 @@ export class PlayersPage implements OnInit {
     players: Person[] = [];
     lastPosition: string = null;
 
+    isLoading = true;
+    isError = false;
+
     constructor(private route: ActivatedRoute,
                 private playerService: PersonService,
-                private modalController: ModalController,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+                private modalController: ModalController) {
 
     }
 
@@ -34,9 +33,12 @@ export class PlayersPage implements OnInit {
                     players => {
                         this.players = players;
 
-                        this.loadingService.hideLoading();
+                        this.isLoading = false;
                     },
-                    error => this.errorService.showError(error)
+                    error => {
+                        this.isError = true;
+                        console.error(error);
+                    }
                 );
             }
         );

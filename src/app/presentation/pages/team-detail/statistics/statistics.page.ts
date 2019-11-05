@@ -20,6 +20,9 @@ export class StatisticsPage implements OnInit {
         {heading: 'Platzverweise', filter: 'seasonStatistic.redCards'},
     ];
 
+    isLoading = true;
+    isError = false;
+
     constructor(private route: ActivatedRoute,
                 private personService: PersonService,
                 private modalController: ModalController) {
@@ -33,8 +36,13 @@ export class StatisticsPage implements OnInit {
                 this.personService.loadPlayers(params['id']).subscribe(
                     value => {
                         this.persons = value;
+
+                        this.isLoading = false;
                     },
-                    error => console.error(error)
+                    error => {
+                        this.isError = true;
+                        console.error(error);
+                    }
                 );
 
             }

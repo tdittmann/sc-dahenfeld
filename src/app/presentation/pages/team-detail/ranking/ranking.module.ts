@@ -5,6 +5,7 @@ import {RankingPage} from './ranking.page';
 import {RankingService} from '../../../../dataproviders/soccer/ranking/ranking.service';
 import {RankingComponentModule} from '../../../shared/ranking/ranking.module';
 import {RouterModule} from '@angular/router';
+import {PageStateModule} from '../../../shared/page-state/page-state.module';
 
 @NgModule({
     providers: [RankingService],
@@ -17,7 +18,8 @@ import {RouterModule} from '@angular/router';
                 path: '',
                 component: RankingPage
             }
-        ])
+        ]),
+        PageStateModule
     ],
     declarations: [RankingPage],
 })

@@ -9,6 +9,7 @@ import {EventCardComponent} from './event-card/event-card.component';
 import {MatchCardModule} from '../../shared/match-card/match-card.module';
 import {MatchDetailPageModule} from '../match-detail/match-detail.module';
 import {EventDetailPageModule} from '../event-detail/event-detail.module';
+import {PageStateModule} from '../../shared/page-state/page-state.module';
 
 @NgModule({
     providers: [CalendarService],
@@ -24,7 +25,8 @@ import {EventDetailPageModule} from '../event-detail/event-detail.module';
                 path: '',
                 component: CalendarPage,
             }
-        ])
+        ]),
+        PageStateModule
     ],
     declarations: [CalendarPage, EventCardComponent]
 })

@@ -7,6 +7,7 @@ import {MembershipPage} from './membership.page';
 import {MembershipService} from '../../../dataproviders/membership/membership.service';
 import {ArticleDetailModule} from '../../shared/article-detail/article-detail.module';
 import {CostCardModule} from './cost-card/cost-card.module';
+import {PageStateModule} from '../../shared/page-state/page-state.module';
 
 @NgModule({
     providers: [MembershipService],
@@ -21,7 +22,8 @@ import {CostCardModule} from './cost-card/cost-card.module';
                 path: '',
                 component: MembershipPage
             }
-        ])
+        ]),
+        PageStateModule
     ],
     declarations: [MembershipPage]
 })

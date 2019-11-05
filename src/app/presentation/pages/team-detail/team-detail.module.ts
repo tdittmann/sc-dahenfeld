@@ -5,6 +5,7 @@ import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {RouterModule, Routes} from '@angular/router';
 import {TeamDetailPage} from './team-detail.page';
 import {TeamInformationService} from '../../../dataproviders/soccer/teamInformation.service';
+import {PageStateModule} from '../../shared/page-state/page-state.module';
 
 const routes: Routes = [
     {
@@ -62,7 +63,8 @@ const routes: Routes = [
         CommonModule,
         IonicModule,
         PageHeaderModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        PageStateModule
     ],
     declarations: [TeamDetailPage]
 })

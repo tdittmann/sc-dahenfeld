@@ -1,8 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {MembershipService} from '../../../dataproviders/membership/membership.service';
 import {Membership} from '../../../core/domain/membership.model';
-import {ErrorService} from '../../shared/error/error.service';
-import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'membership.page.html',
@@ -13,9 +11,10 @@ export class MembershipPage implements OnInit {
 
     membership: Membership;
 
-    constructor(private membershipService: MembershipService,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+    isLoading = true;
+    isError = false;
+
+    constructor(private membershipService: MembershipService) {
 
     }
 
@@ -25,9 +24,12 @@ export class MembershipPage implements OnInit {
                 (membership) => {
                     this.membership = membership;
 
-                    this.loadingService.hideLoading();
+                    this.isLoading = false;
                 },
-                (error) => this.errorService.showError(error)
+                (error) => {
+                    this.isError = true;
+                    console.error(error);
+                }
             );
     }
 

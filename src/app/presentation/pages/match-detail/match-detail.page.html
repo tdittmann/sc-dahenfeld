@@ -8,7 +8,9 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content color="light" *ngIf="!loadingService.isLoading() && matchDetails">
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<ion-content color="light" *ngIf="matchDetails">
 
     <ion-grid class="team-infos">
         <ion-row>

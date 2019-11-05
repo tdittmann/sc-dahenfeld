@@ -3,8 +3,6 @@ import {ModalController} from '@ionic/angular';
 import {PersonService} from '../../../dataproviders/soccer/person/person.service';
 import {Person} from '../../../core/domain/person.model';
 import {DevService} from '../../../dataproviders/dev.service';
-import {ErrorService} from '../../shared/error/error.service';
-import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'person.page.html',
@@ -16,11 +14,12 @@ export class PersonPage implements OnInit {
 
     person: Person;
 
+    isLoading = true;
+    isError = false;
+
     constructor(private modalController: ModalController,
                 private playerService: PersonService,
-                private devService: DevService,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+                private devService: DevService) {
 
     }
 
@@ -30,9 +29,12 @@ export class PersonPage implements OnInit {
             person => {
                 this.person = person;
 
-                this.loadingService.hideLoading();
+                this.isLoading = false;
             },
-            error => this.errorService.showError(error)
+            error => {
+                this.isError = true;
+                console.error(error);
+            }
         );
 
     }

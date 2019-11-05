@@ -2,8 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {CalendarService} from '../../../dataproviders/calendar/calendar.service';
 import {CalendarEntry} from '../../../core/domain/calendarEntry.model';
 import {Moment} from 'moment';
-import {ErrorService} from '../../shared/error/error.service';
-import {LoadingService} from '../../shared/loading/loading.service';
 import {Router} from '@angular/router';
 import {ModalController} from '@ionic/angular';
 import {MatchDetailPage} from '../match-detail/match-detail.page';
@@ -18,11 +16,12 @@ export class CalendarPage implements OnInit {
     calendarEntries: CalendarEntry[] = [];
     lastDay = null;
 
+    isLoading = true;
+    isError = false;
+
     constructor(private calendarService: CalendarService,
                 private router: Router,
-                private modalController: ModalController,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+                private modalController: ModalController) {
 
     }
 
@@ -31,9 +30,12 @@ export class CalendarPage implements OnInit {
             events => {
                 this.calendarEntries = events;
 
-                this.loadingService.hideLoading();
+                this.isLoading = false;
             },
-            error => this.errorService.showError(error)
+            error => {
+                this.isError = false;
+                console.error(error);
+            }
         );
     }
 

@@ -2,8 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {TeamInformation} from '../../../core/domain/teamInformation.model';
 import {TeamInformationService} from '../../../dataproviders/soccer/teamInformation.service';
-import {ErrorService} from '../../shared/error/error.service';
-import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'team-detail.page.html',
@@ -13,10 +11,11 @@ export class TeamDetailPage implements OnInit {
 
     teamInformation: TeamInformation;
 
+    isLoading = true;
+    isError = false;
+
     constructor(private route: ActivatedRoute,
-                private teamDetailService: TeamInformationService,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+                private teamDetailService: TeamInformationService) {
 
     }
 
@@ -29,9 +28,12 @@ export class TeamDetailPage implements OnInit {
                         data => {
                             this.teamInformation = data;
 
-                            this.loadingService.hideLoading();
+                            this.isLoading = false;
                         },
-                        error => this.errorService.showError(error)
+                        error => {
+                            this.isError = true;
+                            console.error(error);
+                        }
                     );
             }
         );

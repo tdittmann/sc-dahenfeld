@@ -7,6 +7,7 @@ import {RouterModule} from '@angular/router';
 import {ChroniclePage} from './chronicle.page';
 import {TimelineComponent} from './timeline/timeline.component';
 import {TimelineService} from '../../../dataproviders/timeline/timeline.service';
+import {PageStateModule} from '../../shared/page-state/page-state.module';
 
 @NgModule({
     providers: [ArticleService, TimelineService],
@@ -19,7 +20,8 @@ import {TimelineService} from '../../../dataproviders/timeline/timeline.service'
                 path: '',
                 component: ChroniclePage
             }
-        ])
+        ]),
+        PageStateModule
     ],
     declarations: [ChroniclePage, TimelineComponent]
 })

@@ -6,6 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {ArticleTabsPage} from './article-tabs.page';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {ArticleDetailModule} from '../../shared/article-detail/article-detail.module';
+import {PageStateModule} from '../../shared/page-state/page-state.module';
 
 const routes: Routes = [
     {
@@ -37,7 +38,8 @@ const routes: Routes = [
         IonicModule,
         PageHeaderModule,
         ArticleDetailModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        PageStateModule
     ],
     declarations: [ArticleTabsPage]
 })

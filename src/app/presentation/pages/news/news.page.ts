@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {Article} from '../../../core/domain/article.model';
-import {ErrorService} from '../../shared/error/error.service';
-import {LoadingService} from '../../shared/loading/loading.service';
 
 @Component({
     templateUrl: 'news.page.html',
@@ -17,9 +15,10 @@ export class NewsPage implements OnInit {
     articles: Article[] = [];
     sliderArticles: Article[] = [];
 
-    constructor(private articleService: ArticleService,
-                private loadingService: LoadingService,
-                private errorService: ErrorService) {
+    isLoading = true;
+    isError = false;
+
+    constructor(private articleService: ArticleService) {
 
     }
 
@@ -34,9 +33,12 @@ export class NewsPage implements OnInit {
                         this.sliderArticles.push(this.articles.shift());
                     }
 
-                    this.loadingService.hideLoading();
+                    this.isLoading = false;
                 },
-                (pError) => this.errorService.showError(pError)
+                (pError) => {
+                    this.isError = true;
+                    console.error(pError);
+                }
             );
     }
 

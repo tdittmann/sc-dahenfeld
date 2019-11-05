@@ -5,6 +5,7 @@ import {PlayersPage} from './players.page';
 import {PersonService} from '../../../../dataproviders/soccer/person/person.service';
 import {PersonModule} from '../../person/person.module';
 import {RouterModule} from '@angular/router';
+import {PageStateModule} from '../../../shared/page-state/page-state.module';
 
 @NgModule({
     providers: [PersonService],
@@ -17,7 +18,8 @@ import {RouterModule} from '@angular/router';
                 path: '',
                 component: PlayersPage
             }
-        ])
+        ]),
+        PageStateModule
     ],
     declarations: [PlayersPage],
 })

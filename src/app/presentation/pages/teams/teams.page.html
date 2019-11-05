@@ -1,6 +1,7 @@
 <page-header [title]="heading"></page-header>
+<page-state [loading]="isLoading" [error]="!isLoading && teams.size == 0"></page-state>
 
-<ion-content color="light">
+<ion-content color="light" *ngIf="teams.size > 0">
 
     <ng-template ngFor let-team [ngForOf]="teams | keyvalue : teamNameOrder">
         <h4 class="ion-padding-start">{{team.key.teamName}}</h4>
