@@ -1,5 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Moment} from 'moment';
+import {MatchDetailPage} from '../../pages/match-detail/match-detail.page';
+import {ModalController} from '@ionic/angular';
 
 @Component({
     selector: 'match-card',
@@ -7,6 +9,8 @@ import {Moment} from 'moment';
     styleUrls: ['match-card.component.scss']
 })
 export class MatchCardComponent {
+
+    @Input() matchId: number;
 
     @Input() startDate: Moment;
     @Input() location: string;
@@ -21,7 +25,7 @@ export class MatchCardComponent {
     @Input() awayImage: string;
     @Input() awayResult: number;
 
-    constructor() {
+    constructor(private modalController: ModalController) {
 
     }
 
@@ -44,6 +48,15 @@ export class MatchCardComponent {
 
         return this.startDate
             .format('HH:mm');
+    }
+
+    public openMatchDetail() {
+        this.modalController.create({
+            component: MatchDetailPage,
+            componentProps: {
+                'matchId': this.matchId
+            }
+        }).then(modal => modal.present());
     }
 
 }

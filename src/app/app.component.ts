@@ -18,7 +18,6 @@ import {RootNavigation} from './core/domain/root-navigation.model';
 export class AppComponent {
 
     // TODO tdit0703: AppIcons + SplashScreen Images
-    // TODO tdit0703: Jubiläum beachten! Farblich abheben / Tabs (Events / Berichte / ...)?
     // TODO tdit0703: Fix authentication?
     // TODO tdit0703: Back-Button durch Routing-Anpassungen?
 

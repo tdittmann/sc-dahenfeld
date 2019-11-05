@@ -2,9 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {CalendarService} from '../../../dataproviders/calendar/calendar.service';
 import {CalendarEntry} from '../../../core/domain/calendarEntry.model';
 import {Moment} from 'moment';
-import {ModalController} from '@ionic/angular';
-import {MatchDetailPage} from '../match-detail/match-detail.page';
-import {EventDetailPage} from '../event-detail/event-detail.page';
 
 @Component({
     templateUrl: 'calendar.page.html',
@@ -18,8 +15,7 @@ export class CalendarPage implements OnInit {
     isLoading = true;
     isError = false;
 
-    constructor(private calendarService: CalendarService,
-                private modalController: ModalController) {
+    constructor(private calendarService: CalendarService) {
 
     }
 
@@ -41,24 +37,6 @@ export class CalendarPage implements OnInit {
         const isSame = date.isSame(this.lastDay, 'day');
         this.lastDay = date;
         return !isSame;
-    }
-
-    public openMatchDetail(entry) {
-        this.modalController.create({
-            component: MatchDetailPage,
-            componentProps: {
-                'matchId': entry.id
-            }
-        }).then(modal => modal.present());
-    }
-
-    public openEventDetail(entry) {
-        this.modalController.create({
-            component: EventDetailPage,
-            componentProps: {
-                'event': entry
-            }
-        }).then(modal => modal.present());
     }
 
 }
