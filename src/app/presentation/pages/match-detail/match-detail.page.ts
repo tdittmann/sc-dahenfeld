@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ModalController} from '@ionic/angular';
 import {MatchDetailService} from '../../../dataproviders/soccer/match-detail/match-detail.service';
 import {MatchDetail} from '../../../core/domain/matchDetail.model';
 
@@ -16,8 +15,7 @@ export class MatchDetailPage implements OnInit {
     isLoading = true;
     isError = false;
 
-    constructor(private modalController: ModalController,
-                private matchDetailService: MatchDetailService) {
+    constructor(private matchDetailService: MatchDetailService) {
 
     }
 
@@ -34,10 +32,6 @@ export class MatchDetailPage implements OnInit {
                 console.error(error);
             }
         );
-    }
-
-    public closeModal() {
-        return this.modalController.dismiss();
     }
 
 }

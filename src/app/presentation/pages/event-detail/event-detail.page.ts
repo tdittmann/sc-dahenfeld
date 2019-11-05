@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {CalendarEvent} from '../../../core/domain/calendarEvent.model';
-import {ModalController} from '@ionic/angular';
 
 @Component({
     templateUrl: 'event-detail.page.html',
@@ -10,12 +9,8 @@ export class EventDetailPage {
 
     @Input() event: CalendarEvent;
 
-    constructor(private modalController: ModalController) {
+    constructor() {
 
-    }
-
-    public closeModal() {
-        return this.modalController.dismiss();
     }
 
 }

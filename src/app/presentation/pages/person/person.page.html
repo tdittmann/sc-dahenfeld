@@ -1,13 +1,4 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="end">
-            <ion-button (click)="closeModal()">
-                <ion-icon name="close"></ion-icon>
-            </ion-button>
-        </ion-buttons>
-    </ion-toolbar>
-</ion-header>
-
+<modal-header></modal-header>
 <page-state [loading]="isLoading" [error]="isError"></page-state>
 
 <ion-content color="light" *ngIf="person">

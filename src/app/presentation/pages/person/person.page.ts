@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ModalController} from '@ionic/angular';
 import {PersonService} from '../../../dataproviders/soccer/person/person.service';
 import {Person} from '../../../core/domain/person.model';
 import {DevService} from '../../../dataproviders/dev.service';
@@ -17,8 +16,7 @@ export class PersonPage implements OnInit {
     isLoading = true;
     isError = false;
 
-    constructor(private modalController: ModalController,
-                private playerService: PersonService,
+    constructor(private playerService: PersonService,
                 private devService: DevService) {
 
     }
@@ -41,10 +39,6 @@ export class PersonPage implements OnInit {
 
     public isDevModeEnabled(): boolean {
         return this.devService.isDevModeEnabled();
-    }
-
-    public closeModal() {
-        return this.modalController.dismiss();
     }
 
 }

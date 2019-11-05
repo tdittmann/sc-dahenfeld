@@ -17,7 +17,6 @@ import {RootNavigation} from './core/domain/root-navigation.model';
 })
 export class AppComponent {
 
-    // TODO tdit0703: Modal Header inkl. Function auslagern in eigene Componente
     // TODO tdit0703: AppIcons + SplashScreen Images
     // TODO tdit0703: Jubiläum beachten! Farblich abheben / Tabs (Events / Berichte / ...)?
     // TODO tdit0703: Fix authentication?

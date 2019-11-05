@@ -5,6 +5,7 @@ import {IonicModule} from '@ionic/angular';
 import {OrderModule} from 'ngx-order-pipe';
 import {StatisticsModalComponent} from './statistics-modal.component';
 import {StatisticsItemModule} from '../statistics-item/statistics-item.module';
+import {ModalHeaderModule} from '../../../../shared/modal-header/modal-header.module';
 
 @NgModule({
     providers: [],
@@ -14,6 +15,7 @@ import {StatisticsItemModule} from '../statistics-item/statistics-item.module';
         IonicModule,
         OrderModule,
         StatisticsItemModule,
+        ModalHeaderModule,
     ],
     declarations: [StatisticsModalComponent],
     exports: [StatisticsModalComponent],

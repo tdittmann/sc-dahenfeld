@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {Person} from '../../../../../core/domain/person.model';
-import {ModalController} from '@ionic/angular';
 
 @Component({
     templateUrl: 'statistics-modal.component.html',
@@ -12,12 +11,8 @@ export class StatisticsModalComponent {
     @Input() persons: Person[] = [];
     @Input() filter: string;
 
-    constructor(private modalController: ModalController) {
+    constructor() {
 
-    }
-
-    public closeModal() {
-        return this.modalController.dismiss();
     }
 
 }

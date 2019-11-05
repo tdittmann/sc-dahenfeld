@@ -6,6 +6,7 @@ import {PersonPage} from './person.page';
 import {PlayerStatisticComponent} from './playerStatistic/player-statistic.component';
 import {PersonService} from '../../../dataproviders/soccer/person/person.service';
 import {PageStateModule} from '../../shared/page-state/page-state.module';
+import {ModalHeaderModule} from '../../shared/modal-header/modal-header.module';
 
 @NgModule({
     providers: [PersonService],
@@ -13,7 +14,8 @@ import {PageStateModule} from '../../shared/page-state/page-state.module';
         CommonModule,
         IonicModule,
         PageHeaderModule,
-        PageStateModule
+        PageStateModule,
+        ModalHeaderModule
     ],
     declarations: [PersonPage, PlayerStatisticComponent],
     exports: [PersonPage],

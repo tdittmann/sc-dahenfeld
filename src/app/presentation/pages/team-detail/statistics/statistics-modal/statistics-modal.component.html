@@ -1,16 +1,7 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>{{heading}}</ion-title>
-        <ion-buttons slot="end">
-            <ion-button (click)="closeModal()">
-                <ion-icon name="close"></ion-icon>
-            </ion-button>
-        </ion-buttons>
-    </ion-toolbar>
-</ion-header>
+<modal-header [title]="heading"></modal-header>
 
-<ion-content color="light">
-    <ion-list *ngIf="persons" lines="none">
+<ion-content color="light" *ngIf="persons.length > 0">
+    <ion-list lines="none">
         <ng-template ngFor let-person [ngForOf]="persons | orderBy : filter : true">
 
             <statistics-item [person]="person"

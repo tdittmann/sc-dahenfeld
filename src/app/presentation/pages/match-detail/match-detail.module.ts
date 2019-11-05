@@ -6,6 +6,7 @@ import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {MatchDetailPage} from './match-detail.page';
 import {MatchDetailService} from '../../../dataproviders/soccer/match-detail/match-detail.service';
 import {PageStateModule} from '../../shared/page-state/page-state.module';
+import {ModalHeaderModule} from '../../shared/modal-header/modal-header.module';
 
 @NgModule({
     providers: [MatchDetailService],
@@ -15,6 +16,7 @@ import {PageStateModule} from '../../shared/page-state/page-state.module';
         IonicModule,
         PageHeaderModule,
         PageStateModule,
+        ModalHeaderModule,
     ],
     declarations: [MatchDetailPage],
     exports: [MatchDetailPage],
