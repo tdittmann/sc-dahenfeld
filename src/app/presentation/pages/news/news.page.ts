@@ -8,10 +8,6 @@ import {Article} from '../../../core/domain/article.model';
 })
 export class NewsPage implements OnInit {
 
-    /**
-     * Default is zero, so we get all articles
-     */
-    categoryId = 0;
     articles: Article[] = [];
     sliderArticles: Article[] = [];
 
@@ -23,7 +19,7 @@ export class NewsPage implements OnInit {
     }
 
     ngOnInit(): void {
-        this.articleService.getArticlesByCategoryId(this.categoryId)
+        this.articleService.getAllArticles()
             .subscribe(
                 (pArticles) => {
                     this.articles = pArticles;
