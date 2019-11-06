@@ -5,6 +5,7 @@ const routes: Routes = [
     {path: '', redirectTo: 'news', pathMatch: 'full'},
     {path: 'news', loadChildren: './presentation/pages/news/news.module#NewsPageModule'},
     {path: 'article/:id', loadChildren: './presentation/pages/article-detail/article-detail.module#ArticleDetailPageModule'},
+    {path: 'article-list/:categoryId', loadChildren: './presentation/pages/article-list/article-list.module#ArticleListPageModule'},
     {path: 'article-tabs', loadChildren: './presentation/pages/article-tabs/article-tabs.module#ArticleTabsPageModule'},
     {path: 'chronicle', loadChildren: './presentation/pages/chronicle/chronicle.module#ChroniclePageModule'},
     {path: 'calendar', loadChildren: './presentation/pages/calendar/calendar.module#CalendarPageModule'},

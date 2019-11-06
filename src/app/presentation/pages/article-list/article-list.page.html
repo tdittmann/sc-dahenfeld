@@ -1,0 +1,16 @@
+<page-header [title]="heading"></page-header>
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<ion-content color="light" *ngIf="articles.length > 0">
+
+    <ng-template ngFor let-article [ngForOf]="articles">
+        <article-card [image]="article.getFirstImageAsBackgroundUrl()"
+                      [title]="article.title"
+                      [subTitle]="article.getFormattedDate()"
+                      [category]="article.categoryName"
+                      [categoryColor]="article.categoryColor"
+                      [routerLink]="article.getArticleLink()">
+        </article-card>
+    </ng-template>
+
+</ion-content>
