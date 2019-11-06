@@ -23,7 +23,7 @@ export class NewsPage implements OnInit {
     }
 
     ngOnInit(): void {
-        this.articleService.getAllArticles(this.categoryId)
+        this.articleService.getArticlesByCategoryId(this.categoryId)
             .subscribe(
                 (pArticles) => {
                     this.articles = pArticles;

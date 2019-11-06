@@ -29,7 +29,7 @@ export class ArticleDetailPage implements OnInit {
                 this.showOnlyTitle = queryParams['showOnlyTitle'];
 
                 // Load article
-                this.articleService.getArticle(params['id']).subscribe(
+                this.articleService.getArticleById(params['id']).subscribe(
                     (pResponse) => {
                         this.article = pResponse;
 

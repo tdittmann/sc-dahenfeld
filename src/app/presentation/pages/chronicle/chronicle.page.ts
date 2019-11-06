@@ -42,7 +42,7 @@ export class ChroniclePage implements OnInit {
         );
 
         // Load chronicle articles
-        this.articleService.getAllArticles(this.CHRONICLE_CATEGORY).subscribe(
+        this.articleService.getArticlesByCategoryId(this.CHRONICLE_CATEGORY).subscribe(
             (articles: Article[]) => {
 
                 for (let i = 0; i < articles.length; i++) {

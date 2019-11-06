@@ -16,13 +16,13 @@ export class ArticleService {
 
     }
 
-    getAllArticles(categoryId: number): Observable<Article[]> {
+    getArticlesByCategoryId(categoryId: number): Observable<Article[]> {
         return this.httpService
             .get<ArticleJson[]>(environment.backendUrl + 'news?categoryId=' + categoryId)
             .pipe(map(pAsc => pAsc.map(this.mapper.mapFrom)));
     }
 
-    getArticle(articleId: string): Observable<Article> {
+    getArticleById(articleId: string): Observable<Article> {
         return this.httpService
             .get<ArticleJson[]>(environment.backendUrl + 'news?id=' + articleId)
             .pipe(map(item => item[0]))

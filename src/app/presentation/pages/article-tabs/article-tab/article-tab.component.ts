@@ -22,7 +22,7 @@ export class ArticleTabComponent implements OnInit {
     ngOnInit(): void {
         this.route.params.subscribe(
             params => {
-                this.articleService.getArticle(params['id']).subscribe(
+                this.articleService.getArticleById(params['id']).subscribe(
                     article => {
                         this.article = article;
                         this.isLoading = false;

@@ -32,7 +32,7 @@ export class JubileePage implements OnInit {
 
                 combineLatest([
                     this.calendarService.loadCalendarEvents().pipe(map(events => events.map(event => event as CalendarEvent))),
-                    this.articleService.getAllArticles(params['categoryId'])
+                    this.articleService.getArticlesByCategoryId(params['categoryId'])
                 ]).subscribe(
                     ([events, articles]) => {
                         this.events = events;
