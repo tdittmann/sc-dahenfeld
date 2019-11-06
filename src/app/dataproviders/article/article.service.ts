@@ -29,7 +29,7 @@ export class ArticleService {
             .pipe(map(this.mapper.mapFrom));
     }
 
-    getArticles(articleIds: string[]): Observable<Article[]> {
+    getArticlesById(articleIds: string[]): Observable<Article[]> {
         const queryParams = articleIds.join('&id[]=');
 
         return this.httpService

@@ -31,7 +31,7 @@ export class ArticleTabsPage implements OnInit {
                 this.heading = queryParams['heading'];
 
                 // Load articles
-                this.articleService.getArticles(queryParams['articles']).subscribe(
+                this.articleService.getArticlesById(queryParams['articles']).subscribe(
                     (pResponse) => {
                         this.articles = this.getInitialSortedArticles(queryParams['articles'], pResponse);
 
