@@ -18,9 +18,9 @@ import {RootNavigation} from './core/domain/root-navigation.model';
 export class AppComponent {
 
     // TODO tdit0703: iOS AppIcons + SplashScreen Images
-    // TODO tdit0703: iOS Card Margin / Padding zu groß
-    // TODO tdit0703: Tabelle wird oft falsch dargestellt :(
     // TODO tdit0703: Fix authentication?
+    // TODO tdit0703: Ranking: Home / Away?
+    // TODO tdit0703: Team-Detail: History?
 
     navigation: RootNavigation[] = [];
 

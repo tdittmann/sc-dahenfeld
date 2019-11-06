@@ -6,7 +6,7 @@
     <ng-template ngFor let-team [ngForOf]="teams | keyvalue : teamNameOrder">
         <h4 class="ion-padding-start">{{team.key.teamName}}</h4>
 
-        <ion-card routerLink="/team-detail/{{team.key.teamId}}">
+        <ion-card mode="md" routerLink="/team-detail/{{team.key.teamId}}">
             <ranking [teams]="team.value"></ranking>
 
             <ion-row class="ion-no-padding">

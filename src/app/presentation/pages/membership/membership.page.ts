@@ -1,11 +1,10 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MembershipService} from '../../../dataproviders/membership/membership.service';
 import {Membership} from '../../../core/domain/membership.model';
 
 @Component({
     templateUrl: 'membership.page.html',
-    styleUrls: ['membership.page.scss'],
-    encapsulation: ViewEncapsulation.None
+    styleUrls: ['membership.page.scss']
 })
 export class MembershipPage implements OnInit {
 
