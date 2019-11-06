@@ -4,6 +4,7 @@ import {ToastService} from '../../../dataproviders/toast.service';
 import {StorageService} from '../../../dataproviders/storage.service';
 
 import {Capacitor, Plugins, StatusBarStyle} from '@capacitor/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
     templateUrl: 'imprint.page.html',
@@ -11,6 +12,7 @@ import {Capacitor, Plugins, StatusBarStyle} from '@capacitor/core';
 })
 export class ImprintPage implements OnInit {
 
+    heading: string;
     version = '5.0.0';
     developer = 'Timo Dittmann';
     darkMode = false;
@@ -18,16 +20,22 @@ export class ImprintPage implements OnInit {
     private counter = 0;
     private devModeEnabledNumber = 7;
 
-    constructor(private devService: DevService,
+    constructor(private activatedRoute: ActivatedRoute,
+                private devService: DevService,
                 private storageService: StorageService,
                 private toastService: ToastService) {
 
     }
 
     ngOnInit(): void {
+        this.activatedRoute.queryParams.subscribe(
+            queryParams => {
+                this.heading = queryParams['heading'];
+            }
+        );
+
         this.storageService.loadDarkMode()
             .then(value => this.darkMode = value);
-
 
         if (Capacitor.isPluginAvailable('Device')) {
             Plugins.Device.getInfo()

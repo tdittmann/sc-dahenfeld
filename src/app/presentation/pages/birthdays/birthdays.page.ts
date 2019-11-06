@@ -3,6 +3,7 @@ import {Birthday} from '../../../core/domain/birthday.model';
 import {BirthdayService} from '../../../dataproviders/birthday/birthday.service';
 import {PersonPage} from '../person/person.page';
 import {ModalController} from '@ionic/angular';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
     templateUrl: 'birthdays.page.html',
@@ -10,18 +11,27 @@ import {ModalController} from '@ionic/angular';
 })
 export class BirthdaysPage implements OnInit {
 
+    heading: string;
     birthdays: Birthday[] = [];
     filter = '';
 
     isLoading = true;
     isError = false;
 
-    constructor(private birthdayService: BirthdayService,
+    constructor(private activatedRoute: ActivatedRoute,
+                private birthdayService: BirthdayService,
                 private modalController: ModalController) {
 
     }
 
     ngOnInit(): void {
+
+        this.activatedRoute.queryParams.subscribe(
+            queryParams => {
+                this.heading = queryParams['heading'];
+            }
+        );
+
         this.birthdayService.loadBirthdays().subscribe(
             (birthdays) => {
                 this.birthdays = birthdays;

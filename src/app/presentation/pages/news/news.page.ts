@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {Article} from '../../../core/domain/article.model';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
     templateUrl: 'news.page.html',
@@ -8,17 +9,26 @@ import {Article} from '../../../core/domain/article.model';
 })
 export class NewsPage implements OnInit {
 
+    heading: string;
     articles: Article[] = [];
     sliderArticles: Article[] = [];
 
     isLoading = true;
     isError = false;
 
-    constructor(private articleService: ArticleService) {
+    constructor(private activatedRoute: ActivatedRoute,
+                private articleService: ArticleService) {
 
     }
 
     ngOnInit(): void {
+
+        this.activatedRoute.queryParams.subscribe(
+            queryParams => {
+                this.heading = queryParams['heading'];
+            }
+        );
+
         this.articleService.getAllArticles()
             .subscribe(
                 (pArticles) => {

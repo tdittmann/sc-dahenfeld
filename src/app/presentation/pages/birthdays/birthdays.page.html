@@ -1,4 +1,4 @@
-<page-header title="Geburtstage"></page-header>
+<page-header [title]="heading"></page-header>
 <page-state [loading]="isLoading" [error]="isError"></page-state>
 
 <ion-content color="light" class="ion-no-padding" *ngIf="birthdays.length > 0">

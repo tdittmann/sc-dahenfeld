@@ -5,6 +5,7 @@ import {Article} from '../../../core/domain/article.model';
 import {TimelineMapper} from '../../../dataproviders/timeline/timeline.mapper';
 import {TimelineService} from '../../../dataproviders/timeline/timeline.service';
 import {TimelineTitle} from '../../../core/domain/timelineTitle.model';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
     templateUrl: 'chronicle.page.html',
@@ -15,6 +16,7 @@ export class ChroniclePage implements OnInit {
     private CHRONICLE_CATEGORY = 155;
     private timelineMapper: TimelineMapper = new TimelineMapper();
 
+    heading: string;
     title = 'Spaß am Sport...';
     subTitle = '... ist das Motto des SC Dahenfeld. Und das schon seit 1946. Erfahre mehr über den SCD in dieser Chronik.';
     timeLineEntries: TimelineEntry[] = [];
@@ -22,12 +24,19 @@ export class ChroniclePage implements OnInit {
     isLoading = true;
     isError = false;
 
-    constructor(private articleService: ArticleService,
+    constructor(private activatedRoute: ActivatedRoute,
+                private articleService: ArticleService,
                 private timelineService: TimelineService) {
 
     }
 
     ngOnInit(): void {
+
+        this.activatedRoute.queryParams.subscribe(
+            queryParams => {
+                this.heading = queryParams['heading'];
+            }
+        );
 
         // Load title if we get them from backend
         this.timelineService.loadTitles().subscribe(

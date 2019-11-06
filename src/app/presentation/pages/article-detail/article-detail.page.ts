@@ -10,6 +10,7 @@ import {combineLatest} from 'rxjs';
 })
 export class ArticleDetailPage implements OnInit {
 
+    heading: string;
     article: Article;
     showOnlyTitle = false;
 
@@ -26,6 +27,7 @@ export class ArticleDetailPage implements OnInit {
             .subscribe(([params, queryParams]) => {
 
                 // Handle query params
+                this.heading = queryParams['heading'];
                 this.showOnlyTitle = queryParams['showOnlyTitle'];
 
                 // Load article

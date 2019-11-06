@@ -13,6 +13,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class JubileePage implements OnInit {
 
+    heading: string;
     events: CalendarEvent[] = [];
     articles: Article[] = [];
 
@@ -29,6 +30,8 @@ export class JubileePage implements OnInit {
 
         this.activatedRoute.queryParams.subscribe(
             params => {
+
+                this.heading = params['heading'];
 
                 combineLatest([
                     this.calendarService.loadCalendarEvents().pipe(map(events => events.map(event => event as CalendarEvent))),
