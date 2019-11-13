@@ -16,9 +16,9 @@ export class PersonService {
 
     }
 
-    loadPlayers(teamId: number): Observable<Person[]> {
+    loadPersons(teamId: number): Observable<Person[]> {
         return this.httpService
-            .get<PersonJson[]>(environment.backendUrl + 'players?teamId=' + teamId)
+            .get<PersonJson[]>(environment.backendUrl + 'persons?teamId=' + teamId)
             .pipe(map(pPlayer => pPlayer.map(value => this.playerMapper.mapFrom(value))))
             .pipe(tap(pPlayer => pPlayer.sort(((a, b) => a.compareTo(b)))));
     }

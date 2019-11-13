@@ -29,7 +29,7 @@ export class PlayersPage implements OnInit {
             params => {
                 const teamId = params['id'];
 
-                this.playerService.loadPlayers(teamId).subscribe(
+                this.playerService.loadPersons(teamId).subscribe(
                     players => {
                         this.players = players;
 

@@ -18,19 +18,19 @@ export class ArticleService {
 
     getAllArticles(): Observable<Article[]> {
         return this.httpService
-            .get<ArticleJson[]>(environment.backendUrl + 'news')
+            .get<ArticleJson[]>(environment.backendUrl + 'articles')
             .pipe(map(pAsc => pAsc.map(this.mapper.mapFrom)));
     }
 
     getArticlesByCategoryId(categoryId: number): Observable<Article[]> {
         return this.httpService
-            .get<ArticleJson[]>(environment.backendUrl + 'news?categoryId=' + categoryId)
+            .get<ArticleJson[]>(environment.backendUrl + 'articles?categoryId=' + categoryId)
             .pipe(map(pAsc => pAsc.map(this.mapper.mapFrom)));
     }
 
     getArticleById(articleId: string): Observable<Article> {
         return this.httpService
-            .get<ArticleJson[]>(environment.backendUrl + 'news?id=' + articleId)
+            .get<ArticleJson[]>(environment.backendUrl + 'article?id=' + articleId)
             .pipe(map(item => item[0]))
             .pipe(map(this.mapper.mapFrom));
     }
@@ -39,13 +39,13 @@ export class ArticleService {
         const queryParams = articleIds.join('&id[]=');
 
         return this.httpService
-            .get<ArticleJson[]>(environment.backendUrl + 'news?id[]=' + queryParams)
+            .get<ArticleJson[]>(environment.backendUrl + 'article?id[]=' + queryParams)
             .pipe(map(pArticle => pArticle.map(this.mapper.mapFrom)));
     }
 
     incrementMobileHitsForArticle(pArticle: Article): void {
         this.httpService
-            .post<ArticleJson>(environment.backendUrl + 'news', this.mapper.mapTo(pArticle))
+            .post<ArticleJson>(environment.backendUrl + 'article', this.mapper.mapTo(pArticle))
             .subscribe(
                 pResponse => {
                     // Nothing to do

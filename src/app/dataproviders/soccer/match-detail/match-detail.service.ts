@@ -17,7 +17,7 @@ export class MatchDetailService {
     }
 
     loadMatchDetails(matchId: number): Observable<MatchDetail> {
-        return this.httpService.get<MatchDetailJson>(environment.backendUrl + 'matchOverview?matchId=' + matchId)
+        return this.httpService.get<MatchDetailJson>(environment.backendUrl + 'match?id=' + matchId)
             .pipe(map(match => {
                 const mappedMatch = this.matchDetailMapper.mapFrom(match);
                 mappedMatch.events.sort((a, b) => a.time - b.time);

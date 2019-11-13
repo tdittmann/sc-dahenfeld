@@ -33,7 +33,7 @@ export class StatisticsPage implements OnInit {
         this.route.params.subscribe(
             params => {
 
-                this.personService.loadPlayers(params['id']).subscribe(
+                this.personService.loadPersons(params['id']).subscribe(
                     value => {
                         this.persons = value;
 

@@ -17,8 +17,11 @@ import {RootNavigation} from './core/domain/root-navigation.model';
 })
 export class AppComponent {
 
-    // TODO tdit0703: Ranking: Home / Away?
+    // TODO tdit0703: Ranking: Overall / Home / Away?
     // TODO tdit0703: Team-Detail: History?
+    // TODO tdit0703: Article Detail -> Image popup?
+    // TODO tdit0703: Backend: alte Versionen entfernen + news eigener Beitrag mit "Neue App herunterladen" oder ähnliches
+    // TODO tdit0703: Backend: Jede Schnittstelle hat die selben Attribut-Namen
 
     navigation: RootNavigation[] = [];
 
