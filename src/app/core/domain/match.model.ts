@@ -1,7 +1,7 @@
 import {Moment} from 'moment';
 import {environment} from '../../../environments/environment';
 
-export class FixtureMatch {
+export class Match {
 
     id: number;
     projectId: number;
@@ -28,7 +28,7 @@ export class FixtureMatch {
             .format(environment.shortDateFormat);
     }
 
-    public compareTo(fixtureMatch: FixtureMatch): number {
+    public compareTo(fixtureMatch: Match): number {
         if (this.date.isBefore(fixtureMatch.date)) {
             return -1;
         } else if (this.date.isAfter(fixtureMatch.date)) {

@@ -1,7 +1,15 @@
 <page-state [loading]="isLoading" [error]="isError"></page-state>
 
-<ion-content class="ion-padding" color="light" *ngIf="rankingTeams.length > 0">
+<ion-content class="ion-padding" color="light" *ngIf="ranking.length > 0">
 
-    <ranking [teams]="rankingTeams"></ranking>
+    <ion-segment (ionChange)="recalculateRanking($event)">
+        <ng-template ngFor let-rankingType [ngForOf]="rankingTypes">
+            <ion-segment-button [value]="rankingType.value" [checked]="rankingType.selected">
+                <ion-label>{{rankingType.label}}</ion-label>
+            </ion-segment-button>
+        </ng-template>
+    </ion-segment>
+
+    <ranking [teams]="ranking"></ranking>
 
 </ion-content>

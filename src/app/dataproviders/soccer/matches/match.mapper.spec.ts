@@ -1,14 +1,14 @@
-import {FixtureMatchMapper} from './fixtureMatch.mapper';
-import {FixtureMatchJson} from './fixtureMatchJson.model';
-import {FixtureMatch} from '../../../core/domain/fixtureMatch.model';
+import {MatchMapper} from './matchMapper';
+import {MatchJson} from './matchJson.model';
+import {Match} from '../../../core/domain/match.model';
 import {DateUtils} from '../../../util/DateUtils';
 
-describe('FixtureMatchMapper', () => {
+describe('Mapper', () => {
 
-    let mapper: FixtureMatchMapper;
+    let mapper: MatchMapper;
 
     beforeEach(() => {
-        mapper = new FixtureMatchMapper();
+        mapper = new MatchMapper();
     });
 
     it('should handle null values for mapFrom', () => {
@@ -16,7 +16,7 @@ describe('FixtureMatchMapper', () => {
     });
 
     it('should map from json to core model', () => {
-        const actual: FixtureMatchJson = {
+        const actual: MatchJson = {
             match_id: '7275',
             project_id: '92',
             date: '1566738000000',
@@ -32,7 +32,7 @@ describe('FixtureMatchMapper', () => {
             fixture: '1. Spieltag'
         };
 
-        const expected: FixtureMatch = new FixtureMatch();
+        const expected: Match = new Match();
         expected.id = 7275;
         expected.projectId = 92;
         expected.date = DateUtils.ofUnixTimestampString('1566738000000');

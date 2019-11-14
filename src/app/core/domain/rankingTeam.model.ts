@@ -4,17 +4,20 @@ export class RankingTeam {
     place: number;
     name: string;
     image: string;
-    matches: number;
-    wins: number;
-    draws: number;
-    losses: number;
-    goalsFor: number;
-    goalsAgainst: number;
-    goalsDiff: number;
-    points: number;
+    matches = 0;
+    wins = 0;
+    draws = 0;
+    losses = 0;
+    goalsFor = 0;
+    goalsAgainst = 0;
+    points = 0;
 
     public isFavoriteTeam(): boolean {
         return this.name.includes('Dahenfeld');
+    }
+
+    public getGoalsDiff(): number {
+        return this.goalsFor - this.goalsAgainst;
     }
 
     public compareTo(rankingTeam: RankingTeam): number {
@@ -28,10 +31,10 @@ export class RankingTeam {
         }
 
         // Sort by goalsDiff
-        if (this.goalsDiff < rankingTeam.goalsDiff) {
+        if (this.getGoalsDiff() < rankingTeam.getGoalsDiff()) {
             return 1;
         }
-        if (this.goalsDiff > rankingTeam.goalsDiff) {
+        if (this.getGoalsDiff() > rankingTeam.getGoalsDiff()) {
             return -1;
         }
 

@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {RankingService} from '../../../dataproviders/soccer/ranking/ranking.service';
 import {TeamInformationService} from '../../../dataproviders/soccer/teamInformation.service';
 import {combineLatest} from 'rxjs';
 import {KeyValue} from '@angular/common';
 import {RankingTeam} from '../../../core/domain/rankingTeam.model';
+import {MatchService} from '../../../dataproviders/soccer/matches/match.service';
+import {RankingUtil} from '../../../util/RankingUtil';
 
 @Component({
     templateUrl: 'teams.page.html',
@@ -22,8 +23,8 @@ export class TeamsPage implements OnInit {
     };
 
     constructor(private route: ActivatedRoute,
-                private teamInfoService: TeamInformationService,
-                private rankingService: RankingService) {
+                private matchService: MatchService,
+                private teamInfoService: TeamInformationService) {
 
     }
 
@@ -36,8 +37,10 @@ export class TeamsPage implements OnInit {
 
                 for (const teamId of routeParams['teamIds']) {
 
-                    combineLatest([this.teamInfoService.loadTeamInformation(teamId), this.rankingService.loadRanking(teamId)])
-                        .subscribe(([teamInfo, ranking]) => {
+                    combineLatest([this.teamInfoService.loadTeamInformation(teamId), this.matchService.loadAllMatchesByTeamId(teamId)])
+                        .subscribe(([teamInfo, matches]) => {
+                            const ranking = RankingUtil.calculateRanking(matches, null);
+
                             const indexOfFavoriteTeam = ranking.findIndex(value => value.isFavoriteTeam());
                             if (indexOfFavoriteTeam >= 0) {
                                 let minRanking: RankingTeam[] = [];

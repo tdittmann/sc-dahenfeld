@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {RankingService} from '../../../../dataproviders/soccer/ranking/ranking.service';
+import {MatchService} from '../../../../dataproviders/soccer/matches/match.service';
+import {Match} from '../../../../core/domain/match.model';
 import {RankingTeam} from '../../../../core/domain/rankingTeam.model';
+import {RankingUtil} from '../../../../util/RankingUtil';
 
 @Component({
     templateUrl: 'ranking.page.html',
@@ -9,13 +11,20 @@ import {RankingTeam} from '../../../../core/domain/rankingTeam.model';
 })
 export class RankingPage implements OnInit {
 
-    rankingTeams: RankingTeam[] = [];
+    rankingTypes = [
+        {label: 'Gesamt', value: null, selected: true},
+        {label: 'Heim', value: 'home', selected: false},
+        {label: 'Auswärts', value: 'away', selected: false}
+    ];
+
+    matches: Match[] = [];
+    ranking: RankingTeam[] = [];
 
     isLoading = true;
     isError = false;
 
     constructor(private route: ActivatedRoute,
-                private rankingService: RankingService) {
+                private fixtureService: MatchService) {
 
     }
 
@@ -24,9 +33,11 @@ export class RankingPage implements OnInit {
             params => {
                 const teamId = params['id'];
 
-                this.rankingService.loadRanking(teamId).subscribe(
-                    rankingTeams => {
-                        this.rankingTeams = rankingTeams;
+                this.fixtureService.loadAllMatchesByTeamId(teamId).subscribe(
+                    matches => {
+                        this.matches = matches;
+
+                        this.ranking = RankingUtil.calculateRanking(matches, null);
 
                         this.isLoading = false;
                     },
@@ -38,6 +49,10 @@ export class RankingPage implements OnInit {
 
             }
         );
+    }
+
+    recalculateRanking(event: any): void {
+        this.ranking = RankingUtil.calculateRanking(this.matches, event.detail.value);
     }
 
 }

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {FixtureService} from '../../../../dataproviders/soccer/fixture/fixture.service';
-import {FixtureMatch} from '../../../../core/domain/fixtureMatch.model';
+import {MatchService} from '../../../../dataproviders/soccer/matches/match.service';
+import {Match} from '../../../../core/domain/match.model';
 
 @Component({
     selector: 'fixture',
@@ -10,13 +10,13 @@ import {FixtureMatch} from '../../../../core/domain/fixtureMatch.model';
 })
 export class FixturePage implements OnInit {
 
-    matches: FixtureMatch[] = [];
+    matches: Match[] = [];
 
     isLoading = true;
     isError = false;
 
     constructor(private route: ActivatedRoute,
-                private fixtureService: FixtureService) {
+                private fixtureService: MatchService) {
 
     }
 
@@ -25,7 +25,7 @@ export class FixturePage implements OnInit {
             params => {
                 const teamId = params['id'];
 
-                this.fixtureService.loadFixture(teamId).subscribe(
+                this.fixtureService.loadOnlyTeamMatchesByTeamId(teamId).subscribe(
                     fixtureMatches => {
                         this.matches = fixtureMatches;
 

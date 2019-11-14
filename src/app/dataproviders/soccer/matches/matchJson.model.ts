@@ -1,4 +1,4 @@
-export interface FixtureMatchJson {
+export interface MatchJson {
 
     match_id: string;
     project_id: string;
