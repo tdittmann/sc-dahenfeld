@@ -17,10 +17,9 @@ import {RootNavigation} from './core/domain/root-navigation.model';
 })
 export class AppComponent {
 
-    // TODO tdit0703: Team-Detail: History
-    // --> Backend: Alte Spielzeiten enthalten Spieler aus anderen Mannschaften
     // TODO tdit0703: Article Detail -> Image popup?
     // TODO tdit0703: Backend: alte Versionen entfernen + news eigener Beitrag mit "Neue App herunterladen" oder ähnliches
+    // TODO tdit0703: Backend: Alte Spielzeiten enthalten Spieler aus anderen Mannschaften
 
     navigation: RootNavigation[] = [];
 
