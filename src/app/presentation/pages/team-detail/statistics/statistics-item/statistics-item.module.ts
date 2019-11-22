@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {StatisticsItemComponent} from './statistics-item.component';
-import {PersonModule} from '../../../person/person.module';
 
 @NgModule({
     providers: [],
@@ -11,7 +10,6 @@ import {PersonModule} from '../../../person/person.module';
         CommonModule,
         FormsModule,
         IonicModule,
-        PersonModule,
     ],
     declarations: [StatisticsItemComponent],
     exports: [StatisticsItemComponent],

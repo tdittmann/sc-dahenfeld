@@ -16,16 +16,16 @@ export class PersonService {
 
     }
 
-    loadPersons(teamId: number): Observable<Person[]> {
+    loadPersons(projectId: number): Observable<Person[]> {
         return this.httpService
-            .get<PersonJson[]>(environment.backendUrl + 'persons?teamId=' + teamId)
+            .get<PersonJson[]>(environment.backendUrl + 'persons?teamId=' + projectId)
             .pipe(map(pPlayer => pPlayer.map(value => this.playerMapper.mapFrom(value))))
             .pipe(tap(pPlayer => pPlayer.sort(((a, b) => a.compareTo(b)))));
     }
 
-    loadPerson(personId: number): Observable<Person> {
+    loadPerson(personId: number, projectId: number): Observable<Person> {
         return this.httpService
-            .get<PersonJson>(environment.backendUrl + 'person?personId=' + personId)
+            .get<PersonJson>(environment.backendUrl + 'person?personId=' + personId + '&projectId=' + projectId)
             .pipe(map(pPerson => this.playerMapper.mapFrom(pPerson)));
     }
 

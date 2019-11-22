@@ -10,6 +10,7 @@ import {DevService} from '../../../dataproviders/dev.service';
 export class PersonPage implements OnInit {
 
     @Input() personId: number;
+    @Input() projectId = 0;
 
     person: Person;
 
@@ -23,7 +24,7 @@ export class PersonPage implements OnInit {
 
     ngOnInit(): void {
 
-        this.playerService.loadPerson(this.personId).subscribe(
+        this.playerService.loadPerson(this.personId, this.projectId).subscribe(
             person => {
                 this.person = person;
 

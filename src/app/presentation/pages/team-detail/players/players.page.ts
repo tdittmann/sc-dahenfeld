@@ -12,6 +12,8 @@ import {PersonPage} from '../../person/person.page';
 })
 export class PlayersPage implements OnInit {
 
+    private projectId: number;
+
     players: Person[] = [];
     lastPosition: string = null;
 
@@ -28,9 +30,10 @@ export class PlayersPage implements OnInit {
     ngOnInit(): void {
         this.route.params.subscribe(
             params => {
-                const teamId = params['id'];
+                const projectId = params['id'];
+                this.projectId = projectId;
 
-                this.playerService.loadPersons(teamId).subscribe(
+                this.playerService.loadPersons(projectId).subscribe(
                     players => {
                         this.players = players;
 
@@ -54,7 +57,8 @@ export class PlayersPage implements OnInit {
         this.modalController.create({
             component: PersonPage,
             componentProps: {
-                'personId': personId
+                'personId': personId,
+                'projectId': this.projectId
             }
         }).then(modal => modal.present());
     }
