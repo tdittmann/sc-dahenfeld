@@ -21,6 +21,7 @@ export class StatisticsPage implements OnInit {
     ];
 
     isLoading = true;
+    errorMessage = 'Daten konnten nicht geladen werden';
     isError = false;
 
     constructor(private route: ActivatedRoute,
@@ -36,6 +37,11 @@ export class StatisticsPage implements OnInit {
                 this.personService.loadPersons(params['id']).subscribe(
                     value => {
                         this.persons = value;
+
+                        if (this.persons.length <= 0) {
+                            this.isError = true;
+                            this.errorMessage = 'Für diese Spielzeit gibt es keine Statistiken';
+                        }
 
                         this.isLoading = false;
                     },

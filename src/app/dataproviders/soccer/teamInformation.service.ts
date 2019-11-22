@@ -19,6 +19,6 @@ export class TeamInformationService {
     public loadTeamInformation(teamId: number): Observable<TeamInformation> {
         return this.httpService
             .get<TeamInformationJson>(environment.backendUrl + 'teamInformation?id=' + teamId)
-            .pipe(map(this.teamInformationMapper.mapFrom));
+            .pipe(map(teamInformation => this.teamInformationMapper.mapFrom(teamInformation)));
     }
 }

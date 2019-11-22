@@ -1,25 +1,36 @@
-<page-header noBorder="true" [title]="teamInformation?.name"></page-header>
+<page-header noBorder="true" [title]="heading">
+
+    <ng-template [ngIf]="teamInformation && teamInformation.showSeasons && teamInformation.seasons.length > 0">
+        <ion-buttons slot="end">
+            <ion-select [value]="selectedSeason" okText="Auswählen" cancelText="Abbrechen" (ionChange)="changeSeason($event)" placeholder="asd">
+                <ion-select-option *ngFor="let season of teamInformation.seasons" [value]="season.projectId">
+                    {{season.name}}
+                </ion-select-option>
+            </ion-select>
+        </ion-buttons>
+    </ng-template>
+
+</page-header>
 <page-state [loading]="isLoading" [error]="isError"></page-state>
 
-<ion-content color="light">
-
+<ion-content color="light" *ngIf="teamInformation">
     <ion-tabs>
 
         <ion-tab-bar slot="top">
 
-            <ion-tab-button tab="ranking" *ngIf="teamInformation?.showRanking">
+            <ion-tab-button tab="ranking?heading={{heading}}" *ngIf="teamInformation?.showRanking">
                 <ion-label>Tabelle</ion-label>
             </ion-tab-button>
 
-            <ion-tab-button tab="fixture" *ngIf="teamInformation?.showFixture">
+            <ion-tab-button tab="fixture?heading={{heading}}" *ngIf="teamInformation?.showFixture">
                 <ion-label>Spielplan</ion-label>
             </ion-tab-button>
 
-            <ion-tab-button tab="players" *ngIf="teamInformation?.showPlayers">
+            <ion-tab-button tab="players?heading={{heading}}" *ngIf="teamInformation?.showPlayers">
                 <ion-label>Kader</ion-label>
             </ion-tab-button>
 
-            <ion-tab-button tab="statistics" *ngIf="teamInformation?.showStatistics">
+            <ion-tab-button tab="statistics?heading={{heading}}" *ngIf="teamInformation?.showStatistics">
                 <ion-label>Statistik</ion-label>
             </ion-tab-button>
 

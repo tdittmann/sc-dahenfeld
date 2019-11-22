@@ -16,6 +16,7 @@ export class PlayersPage implements OnInit {
     lastPosition: string = null;
 
     isLoading = true;
+    errorMessage = 'Daten konnten nicht geladen werden';
     isError = false;
 
     constructor(private route: ActivatedRoute,
@@ -32,6 +33,11 @@ export class PlayersPage implements OnInit {
                 this.playerService.loadPersons(teamId).subscribe(
                     players => {
                         this.players = players;
+
+                        if (this.players.length <= 0) {
+                            this.isError = true;
+                            this.errorMessage = 'Für diese Spielzeit gibt es keinen Kader';
+                        }
 
                         this.isLoading = false;
                     },

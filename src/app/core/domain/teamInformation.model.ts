@@ -5,5 +5,14 @@ export class TeamInformation {
     showFixture: boolean;
     showPlayers: boolean;
     showStatistics: boolean;
+    showSeasons: boolean;
+    seasons: TeamInformationSeason[] = [];
+
+}
+
+export class TeamInformationSeason {
+
+    name: string;
+    projectId: number;
 
 }

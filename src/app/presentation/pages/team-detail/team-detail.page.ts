@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {TeamInformation} from '../../../core/domain/teamInformation.model';
 import {TeamInformationService} from '../../../dataproviders/soccer/teamInformation.service';
+import {combineLatest} from 'rxjs';
 
 @Component({
     templateUrl: 'team-detail.page.html',
@@ -9,35 +10,52 @@ import {TeamInformationService} from '../../../dataproviders/soccer/teamInformat
 })
 export class TeamDetailPage implements OnInit {
 
+    heading: string;
     teamInformation: TeamInformation;
+    selectedSeason;
 
     isLoading = true;
     isError = false;
 
     constructor(private route: ActivatedRoute,
-                private teamDetailService: TeamInformationService) {
+                private router: Router,
+                private teamInformationService: TeamInformationService) {
 
     }
 
     ngOnInit(): void {
 
-        this.route.params.subscribe(
-            params => {
-                this.teamDetailService.loadTeamInformation(params['id'])
-                    .subscribe(
-                        data => {
-                            this.teamInformation = data;
+        combineLatest([this.route.params, this.route.queryParams])
+            .subscribe(
+                ([params, queryParams]) => {
+                    // Load team information
+                    this.teamInformationService.loadTeamInformation(params['id'])
+                        .subscribe(
+                            data => {
+                                this.teamInformation = data;
+                                this.selectedSeason = parseInt(params['id'], 10);
+                                this.heading = queryParams['heading'] ? queryParams['heading'] : this.teamInformation.name;
 
-                            this.isLoading = false;
-                        },
-                        error => {
-                            this.isError = true;
-                            console.error(error);
-                        }
-                    );
-            }
-        );
+                                this.isLoading = false;
+                            },
+                            error => {
+                                this.isError = true;
+                                console.error(error);
+                            }
+                        );
+                }
+            );
 
+    }
+
+    changeSeason(event: any) {
+        const oldSeason = this.selectedSeason;
+        this.selectedSeason = event.detail.value;
+        this.router.navigate([this.router.url.replace(oldSeason, event.detail.value).split('?')[0]], {
+            queryParams: {
+                'heading': this.heading
+            },
+        });
     }
 
 }
