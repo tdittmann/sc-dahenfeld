@@ -44,46 +44,64 @@
     </div>
 
     <player-statistic text="Spiele"
+                      [seasonSubText]="person?.seasonStatistic.statisticHint"
+                      [careerSubText]="person?.careerStatistic.statisticHint"
                       [seasonValue]="person?.seasonStatistic.matches"
                       [careerValue]="person?.careerStatistic.matches">
     </player-statistic>
 
     <player-statistic text="Startelf"
+                      [seasonSubText]="person?.seasonStatistic.statisticHint"
+                      [careerSubText]="person?.careerStatistic.statisticHint"
                       [seasonValue]="person?.seasonStatistic.starting"
                       [careerValue]="person?.careerStatistic.starting">
     </player-statistic>
 
     <player-statistic text="Spielminuten"
+                      [seasonSubText]="person?.seasonStatistic.statisticHint"
+                      [careerSubText]="person?.careerStatistic.statisticHint"
                       [seasonValue]="person?.seasonStatistic.playingMinutes"
                       [careerValue]="person?.careerStatistic.playingMinutes">
     </player-statistic>
 
     <player-statistic text="Tore"
+                      [seasonSubText]="person?.seasonStatistic.statisticHint"
+                      [careerSubText]="person?.careerStatistic.statisticHint"
                       [seasonValue]="person?.seasonStatistic.goals"
                       [careerValue]="person?.careerStatistic.goals">
     </player-statistic>
 
     <player-statistic text="Einwechslungen"
+                      [seasonSubText]="person?.seasonStatistic.statisticHint"
+                      [careerSubText]="person?.careerStatistic.statisticHint"
                       [seasonValue]="person?.seasonStatistic.cameIn"
                       [careerValue]="person?.careerStatistic.cameIn">
     </player-statistic>
 
     <player-statistic text="Auswechslungen"
+                      [seasonSubText]="person?.seasonStatistic.statisticHint"
+                      [careerSubText]="person?.careerStatistic.statisticHint"
                       [seasonValue]="person?.seasonStatistic.cameOut"
                       [careerValue]="person?.careerStatistic.cameOut">
     </player-statistic>
 
     <player-statistic text="Gelbe Karten"
+                      [seasonSubText]="person?.seasonStatistic.statisticHint"
+                      [careerSubText]="person?.careerStatistic.statisticHint"
                       [seasonValue]="person?.seasonStatistic.yellowCards"
                       [careerValue]="person?.careerStatistic.yellowCards">
     </player-statistic>
 
     <player-statistic text="Gelb-Rote Karten"
+                      [seasonSubText]="person?.seasonStatistic.statisticHint"
+                      [careerSubText]="person?.careerStatistic.statisticHint"
                       [seasonValue]="person?.seasonStatistic.yellowRedCards"
                       [careerValue]="person?.careerStatistic.yellowRedCards">
     </player-statistic>
 
     <player-statistic text="Rote Karten"
+                      [seasonSubText]="person?.seasonStatistic.statisticHint"
+                      [careerSubText]="person?.careerStatistic.statisticHint"
                       [seasonValue]="person?.seasonStatistic.redCards"
                       [careerValue]="person?.careerStatistic.redCards">
     </player-statistic>

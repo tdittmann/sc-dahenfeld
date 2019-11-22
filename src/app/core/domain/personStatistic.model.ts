@@ -9,6 +9,7 @@ export class PersonStatistic {
     cameIn: number;
     cameOut: number;
     playingMinutes: number;
+    statisticHint: string;
 
     constructor() {
 

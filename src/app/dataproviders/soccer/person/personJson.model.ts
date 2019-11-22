@@ -24,5 +24,6 @@ export interface PersonStatisticJson {
     cameIn: number;
     cameOut: number;
     playingMinutes: number;
+    statistic_hint: string;
 
 }

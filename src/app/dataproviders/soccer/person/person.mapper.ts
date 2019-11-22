@@ -38,6 +38,7 @@ export class PersonMapper {
         playerStatistic.cameIn = param.cameIn;
         playerStatistic.cameOut = param.cameOut;
         playerStatistic.playingMinutes = param.playingMinutes;
+        playerStatistic.statisticHint = param.statistic_hint;
         return playerStatistic;
     }
 

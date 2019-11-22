@@ -8,6 +8,8 @@ import {Component, Input} from '@angular/core';
 export class PlayerStatisticComponent {
 
     @Input() text: string;
+    @Input() seasonSubText: string;
+    @Input() careerSubText: string;
     @Input() seasonValue: number;
     @Input() careerValue: number;
 
