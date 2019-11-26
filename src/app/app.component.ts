@@ -17,10 +17,6 @@ import {RootNavigation} from './core/domain/root-navigation.model';
 })
 export class AppComponent {
 
-    // TODO tdit0703: Article Detail -> Image popup?
-    // TODO tdit0703: Test on Android + iOS
-    // TODO tdit0703: Backend: alte Versionen entfernen + news eigener Beitrag mit "Neue App herunterladen" oder ähnliches
-
     navigation: RootNavigation[] = [];
 
     constructor(private platform: Platform,
