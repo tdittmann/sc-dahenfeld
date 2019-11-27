@@ -18,7 +18,6 @@ describe('TeamInformationMapper', () => {
         const actualSeasons: TeamInformationSeasonJson[] = [
             {id: '90', name: '13/14'},
             {id: '91', name: '14/15'},
-            {id: '92', name: '15/16'}
         ];
 
         const actual: TeamInformationJson = {
@@ -31,11 +30,13 @@ describe('TeamInformationMapper', () => {
             seasons: actualSeasons
         };
 
-        const expectedSeasons: TeamInformationSeason[] = [
-            {projectId: 90, name: '13/14'},
-            {projectId: 91, name: '14/15'},
-            {projectId: 92, name: '15/16'}
-        ];
+        const teamInformationSeason1 = new TeamInformationSeason();
+        teamInformationSeason1.projectId = 90;
+        teamInformationSeason1.name = '13/14';
+
+        const teamInformationSeason2 = new TeamInformationSeason();
+        teamInformationSeason2.projectId = 91;
+        teamInformationSeason2.name = '14/15';
 
         const expected: TeamInformation = new TeamInformation();
         expected.name = '1. Mannschaft';
@@ -44,7 +45,7 @@ describe('TeamInformationMapper', () => {
         expected.showPlayers = true;
         expected.showStatistics = false;
         expected.showSeasons = true;
-        expected.seasons = expectedSeasons;
+        expected.seasons = [teamInformationSeason2, teamInformationSeason1];
 
         expect(mapper.mapFrom(actual)).toEqual(expected);
     });
