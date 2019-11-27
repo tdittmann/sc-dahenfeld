@@ -47,7 +47,7 @@ describe('PersonMapper', () => {
                 cameIn: 1,
                 cameOut: 14,
                 playingMinutes: 14133,
-                statistic_hint: 'Season 12/13'
+                statistic_hint: 'Since 11/12'
             }
         };
 
@@ -61,6 +61,7 @@ describe('PersonMapper', () => {
         expectedSeasonStats.cameIn = 1;
         expectedSeasonStats.cameOut = 7;
         expectedSeasonStats.playingMinutes = 2302;
+        expectedSeasonStats.statisticHint = 'Season 12/13';
 
         const expectedCareerStats = new PersonStatistic();
         expectedCareerStats.yellowCards = 24;
@@ -72,6 +73,7 @@ describe('PersonMapper', () => {
         expectedCareerStats.cameIn = 1;
         expectedCareerStats.cameOut = 14;
         expectedCareerStats.playingMinutes = 14133;
+        expectedCareerStats.statisticHint = 'Since 11/12';
 
         const expected: Person = new Person();
         expected.id = 1;
