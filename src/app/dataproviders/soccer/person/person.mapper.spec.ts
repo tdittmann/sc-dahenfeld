@@ -34,7 +34,8 @@ describe('PersonMapper', () => {
                 starting: 26,
                 cameIn: 1,
                 cameOut: 7,
-                playingMinutes: 2302
+                playingMinutes: 2302,
+                statistic_hint: 'Season 12/13'
             },
             careerStats: {
                 yellowCards: 24,
@@ -45,7 +46,8 @@ describe('PersonMapper', () => {
                 starting: 159,
                 cameIn: 1,
                 cameOut: 14,
-                playingMinutes: 14133
+                playingMinutes: 14133,
+                statistic_hint: 'Season 12/13'
             }
         };
 
