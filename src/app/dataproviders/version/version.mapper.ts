@@ -1,5 +1,5 @@
 import {VersionInfoJson} from './versionInfoJson.model';
-import {VersionInfo, VersionInfoLink} from '../../core/domain/versionInfo.model';
+import {VersionInfo} from '../../core/domain/versionInfo.model';
 
 export class VersionMapper {
 
@@ -13,17 +13,9 @@ export class VersionMapper {
         }
 
         const versionInfo = new VersionInfo();
+        versionInfo.platform = param.platform;
         versionInfo.version = param.version;
-
-        if (param.links) {
-            for (let i = 0; i < param.links.length; i++) {
-                const versionInfoLink = new VersionInfoLink();
-                versionInfoLink.platform = param.links[i].platform;
-                versionInfoLink.url = param.links[i].url;
-                versionInfo.links.push(versionInfoLink);
-            }
-        }
-
+        versionInfo.url = param.url;
         return versionInfo;
     }
 

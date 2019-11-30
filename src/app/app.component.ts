@@ -96,10 +96,10 @@ export class AppComponent {
             Plugins.Device.getInfo()
                 .then(deviceInfo => {
                     this.versionService.loadVersionInfo().subscribe(
-                        globalAppInfo => {
-                            if (deviceInfo.appVersion !== globalAppInfo.version) {
-                                const appStoreUrl = deviceInfo.platform === 'android' ? globalAppInfo.getAndroidUrl() : globalAppInfo.getIosUrl();
-                                this.openNewVersionAlert(appStoreUrl);
+                        globalAppInfos => {
+                            const versionInfoForPlattform = globalAppInfos.find(value => value.platform === deviceInfo.platform);
+                            if (versionInfoForPlattform && versionInfoForPlattform.version !== deviceInfo.appVersion) {
+                                this.openNewVersionAlert(versionInfoForPlattform.url);
                             }
                         },
                         error => console.error(error)
