@@ -10,6 +10,7 @@ export interface NavigationItemJson {
     title: string;
     url: string;
     icon: string;
+    color: string;
     params: any;
 
 }

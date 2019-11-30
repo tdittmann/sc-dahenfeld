@@ -27,6 +27,9 @@ export class NavigationMapper {
         navigationItem.title = param.title;
         navigationItem.url = param.url;
         navigationItem.icon = param.icon;
+        if (param.color) {
+            navigationItem.color = param.color;
+        }
         navigationItem.params = param.params;
         return navigationItem;
     }

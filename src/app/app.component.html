@@ -12,11 +12,12 @@
 
             <ng-template ngFor let-nav [ngForOf]="navigation">
                 <ion-list lines="none" *ngIf="!nav.devMode || nav.devMode && isDevModeEnabled()">
-                    <ion-list-header mode="ios">
+                    <ion-list-header mode="ios" *ngIf="nav.title">
                         <ion-label>{{nav.title}}</ion-label>
                     </ion-list-header>
                     <ion-menu-toggle autoHide="false" *ngFor="let p of nav.content">
-                        <ion-item [detail]="false" [routerDirection]="'root'" [routerLink]="[p.url]" [queryParams]="p.params">
+                        <ion-item [color]="p.color" [detail]="false"
+                                  [routerDirection]="'root'" [routerLink]="[p.url]" [queryParams]="p.params">
                             <ion-icon slot="start" [name]="p.icon"></ion-icon>
                             <ion-label>{{p.title}}</ion-label>
                         </ion-item>
