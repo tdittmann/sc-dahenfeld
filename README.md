@@ -1,5 +1,12 @@
-# angular-test
+# SC Dahenfeld 1946 e.V.
 [![Build Status](https://travis-ci.org/tdittmann/angular-test.svg?branch=master)](https://travis-ci.org/tdittmann/angular-test)
+
+# Version update
+
+Don't forget the following files:
+* config.xml
+* package.json
+* imprint.ts
 
 # How to release
 
