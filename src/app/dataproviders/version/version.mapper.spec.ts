@@ -16,13 +16,15 @@ describe('VersionMapper', () => {
 
     it('should map from json to core model', () => {
         const actual: VersionInfoJson = {
+            platform: 'android',
             version: '5.0.0',
-            links: []
+            url: 'http://sc-dahenfeld.de'
         };
 
         const expected: VersionInfo = new VersionInfo();
+        expected.platform = 'android';
         expected.version = '5.0.0';
-        expected.links = [];
+        expected.url = 'http://sc-dahenfeld.de';
 
         expect(mapper.mapFrom(actual)).toEqual(expected);
     });

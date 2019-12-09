@@ -37,6 +37,7 @@ describe('NavigationMapper', () => {
                 title: 'Nav Item 1',
                 url: '/example',
                 icon: 'sad',
+                color: 'red',
                 params: {
                     anyKey: 'anyValue'
                 }
@@ -47,6 +48,7 @@ describe('NavigationMapper', () => {
         expectedNavigationItem.title = 'Nav Item 1';
         expectedNavigationItem.url = '/example';
         expectedNavigationItem.icon = 'sad';
+        expectedNavigationItem.color = 'red';
         expectedNavigationItem.params = {anyKey: 'anyValue'};
 
         const expected: RootNavigation = new RootNavigation();
