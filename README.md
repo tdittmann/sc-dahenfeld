@@ -1,5 +1,5 @@
 # SC Dahenfeld 1946 e.V.
-[![Build Status](https://travis-ci.org/tdittmann/angular-test.svg?branch=master)](https://travis-ci.org/tdittmann/angular-test)
+[![Build Status](https://travis-ci.org/tdittmann/sc-dahenfeld.svg?branch=master)](https://travis-ci.org/tdittmann/sc-dahenfeld)
 
 # Version update
 
