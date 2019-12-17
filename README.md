@@ -6,7 +6,7 @@
 Don't forget the following files:
 * config.xml
 * package.json
-* imprint.ts
+* imprint.page.ts
 
 # How to release
 
