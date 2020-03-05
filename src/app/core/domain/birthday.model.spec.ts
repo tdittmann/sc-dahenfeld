@@ -112,7 +112,7 @@ describe('Birthday', () => {
             .subtract(1, 'days')
             .startOf('day');
 
-        expect(birthday.getDaysTillBirthday()).toBe(365);
+        expect(birthday.getDaysTillBirthday()).toBe(364);
     });
 
     it('should return correct days till birthday if birthday is today', function () {
