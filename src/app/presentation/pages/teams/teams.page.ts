@@ -35,6 +35,9 @@ export class TeamsPage implements OnInit {
 
                 this.heading = routeParams['heading'];
 
+                this.teams.clear();
+                this.isLoading = true;
+
                 for (const teamId of routeParams['teamIds']) {
 
                     combineLatest([this.teamInfoService.loadTeamInformation(teamId), this.matchService.loadAllMatchesByTeamId(teamId)])
