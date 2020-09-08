@@ -32,7 +32,7 @@
     "core-js": "^3.6.5",
     "moment": "^2.27.0",
     "ngx-order-pipe": "^2.1.0",
-    "rxjs": "~6.6.2",
+    "rxjs": "~6.6.3",
     "underscore.string": "^3.3.5",
     "zone.js": "~0.10.3"
   },
