@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "^11.0.2",
     "@angular/router": "^11.0.2",
     "@capacitor/android": "^2.4.3",
-    "@capacitor/cli": "2.4.3",
+    "@capacitor/cli": "2.4.4",
     "@capacitor/core": "2.4.3",
     "@capacitor/ios": "^2.4.3",
     "@ionic-native/app-version": "^5.30.0",
