@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
-import {environment} from '../../../environments/environment.prod';
 import {map} from 'rxjs/operators';
 import {Article} from '../../core/domain/article.model';
 import {ArticleJson} from './articleJson.model';
 import {ArticleMapper} from './article.mapper';
 import {HttpService} from '../http.service';
+import {environment} from '../../../environments/environment';
 
 @Injectable()
 export class ArticleService {

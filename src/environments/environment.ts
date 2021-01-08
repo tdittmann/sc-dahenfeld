@@ -4,8 +4,7 @@
 
 export const environment = {
     production: false,
-    siteUrl: 'http://sc-dahenfeld.de',
-    backendUrl: 'http://sc-dahenfeld.de/components/com_tdwapp/v8/',
+    backendUrl: 'https://sc-dahenfeld.de/components/com_tdwapp/v9/',
     locale: 'de',
     hideInformationArticles: ['733', '755', '830', '1195'],
     placeholderPlayer: 'assets/img/platzhalter_kader.png',

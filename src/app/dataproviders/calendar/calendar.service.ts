@@ -1,5 +1,5 @@
 import {combineLatest, Observable} from 'rxjs';
-import {environment} from '../../../environments/environment.prod';
+import {environment} from '../../../environments/environment';
 import {map, tap} from 'rxjs/operators';
 import {CalendarMapper} from './calendarMapper';
 import {CalendarJson} from './calendarEventJson.model';

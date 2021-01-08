@@ -1,4 +1,4 @@
-import {environment} from '../../../environments/environment.prod';
+import {environment} from '../../../environments/environment';
 import {MembershipJson} from './membershipJson.model';
 import {Injectable} from '@angular/core';
 import {Membership} from '../../core/domain/membership.model';

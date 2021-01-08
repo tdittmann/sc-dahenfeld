@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Birthday} from '../../core/domain/birthday.model';
 import {Observable} from 'rxjs';
 import {BirthdayJson} from './birthdayJson.model';
-import {environment} from '../../../environments/environment.prod';
+import {environment} from '../../../environments/environment';
 import {BirthdayMapper} from './birthday.mapper';
 import {map, tap} from 'rxjs/operators';
 import {HttpService} from '../http.service';

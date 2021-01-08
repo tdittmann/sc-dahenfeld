@@ -1,0 +1,23 @@
+.athlete-stats {
+  color: gray;
+  font-size: 75%;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+  padding: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.expanded {
+  visibility: visible;
+  opacity: 1;
+  padding: 16px;
+  height: auto;
+}
+
+.detail-icon {
+  font-size: 25px;
+}

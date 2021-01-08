@@ -13,6 +13,7 @@ const routes: Routes = [
     {path: 'teams', loadChildren: './presentation/pages/teams/teams.module#TeamsPageModule'},
     {path: 'team-detail/:id', loadChildren: './presentation/pages/team-detail/team-detail.module#TeamDetailPageModule'},
     {path: 'jubilee', loadChildren: './presentation/pages/jubilee/jubilee.module#JubileePageModule'},
+    {path: 'vsc', loadChildren: './presentation/pages/vsc-ranking/vsc-ranking.module#VscRankingPageModule'},
     {path: 'birthdays', loadChildren: './presentation/pages/birthdays/birthdays.module#BirthdaysPageModule'},
     {path: 'profile', loadChildren: './presentation/pages/profile/profile.module#ProfilePageModule'},
     {path: 'imprint', loadChildren: './presentation/pages/imprint/imprint.module#ImprintPageModule'},

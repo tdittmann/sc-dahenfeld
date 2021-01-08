@@ -1,0 +1,68 @@
+<page-header [title]="heading"></page-header>
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<ion-content color="light" *ngIf="ranking.length > 0">
+
+    <ion-item>
+        <ion-label>Monat</ion-label>
+        <ion-select placeholder="Monat auswählen" (ionChange)="reloadRanking($event)"
+                    [value]="actualMonth" okText="Auswählen" cancelText="Abbrechen">
+            <ion-select-option value="1">Januar</ion-select-option>
+            <ion-select-option value="2">Februar</ion-select-option>
+            <ion-select-option value="3">März</ion-select-option>
+            <ion-select-option value="4">April</ion-select-option>
+            <ion-select-option value="5">Mai</ion-select-option>
+            <ion-select-option value="6">Juni</ion-select-option>
+            <ion-select-option value="7">Juli</ion-select-option>
+            <ion-select-option value="8">August</ion-select-option>
+            <ion-select-option value="9">September</ion-select-option>
+            <ion-select-option value="10">Oktober</ion-select-option>
+            <ion-select-option value="11">November</ion-select-option>
+            <ion-select-option value="12">Dezember</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-card *ngFor="let athlete of ranking; let i = index" (click)="expandAthlete(athlete)">
+        <ion-item [lines]="athlete.expanded ? 'full' : 'none'">
+            <p slot="start">{{ i + 1 }}</p>
+            <ion-label>
+                <span class="athlete-name">{{ athlete.getName() }}</span>
+                <br/>
+                <span class="athlete-stats">{{ athlete.getProgress() }} | {{ athlete.totalStatistics.getDistanceString() }} | {{ athlete.totalStatistics.getActivitiesString() }}</span>
+            </ion-label>
+            <ion-icon name="chevron-down-outline" slot="end" *ngIf="!athlete.expanded"></ion-icon>
+            <ion-icon name="chevron-up-outline" slot="end" *ngIf="athlete.expanded"></ion-icon>
+        </ion-item>
+
+        <ion-card-content class="hidden" [ngClass]="{'expanded': athlete.expanded}">
+            <table style="width: 100%;">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th class="ion-hide-md-down">Aktivitäten</th>
+                    <th>Distanz</th>
+                    <th>Dauer</th>
+                    <th>Höhenmeter</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="ion-text-center"><ion-icon class="detail-icon" name="walk-outline"></ion-icon></td>
+                    <td class="ion-text-center ion-hide-md-down">{{ athlete.runStatistics.totalActivities }}</td>
+                    <td class="ion-text-center">{{ athlete.runStatistics.getDistanceString() }}</td>
+                    <td class="ion-text-center">{{ athlete.runStatistics.totalMovingTime }}</td>
+                    <td class="ion-text-center">{{ athlete.runStatistics.getElevationString() }}</td>
+                </tr>
+                <tr>
+                    <td class="ion-text-center"><ion-icon class="detail-icon" name="bicycle-outline"></ion-icon></td>
+                    <td class="ion-text-center ion-hide-md-down">{{ athlete.rideStatistics.totalActivities }}</td>
+                    <td class="ion-text-center">{{ athlete.rideStatistics.getDistanceString() }}</td>
+                    <td class="ion-text-center">{{ athlete.rideStatistics.totalMovingTime }}</td>
+                    <td class="ion-text-center">{{ athlete.rideStatistics.getElevationString() }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

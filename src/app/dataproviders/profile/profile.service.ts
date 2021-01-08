@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
-import {environment} from '../../../environments/environment.prod';
+import {environment} from '../../../environments/environment';
 import {Profile} from '../../core/domain/profile.model';
 import {ProfileJson} from './profileJson.model';
 import {map} from 'rxjs/operators';

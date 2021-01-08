@@ -12,11 +12,12 @@ import {IonicStorageModule} from '@ionic/storage';
 import {DevService} from './dataproviders/dev.service';
 import {StorageService} from './dataproviders/storage.service';
 import {HttpService} from './dataproviders/http.service';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AppVersion} from '@ionic-native/app-version/ngx';
 import {VersionService} from './dataproviders/version/version.service';
 import {ProfileService} from './dataproviders/profile/profile.service';
 import {NavigationService} from './dataproviders/navigation/navigation.service';
+import {AuthorizationInterceptor} from './dataproviders/authorization.interceptor';
 
 @NgModule({
     declarations: [
@@ -41,6 +42,7 @@ import {NavigationService} from './dataproviders/navigation/navigation.service';
         ProfileService,
         NavigationService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+        {provide: HTTP_INTERCEPTORS, useClass: AuthorizationInterceptor, multi: true}
     ],
     bootstrap: [AppComponent]
 })

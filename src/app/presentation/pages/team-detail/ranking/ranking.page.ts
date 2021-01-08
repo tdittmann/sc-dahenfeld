@@ -12,9 +12,9 @@ import {RankingUtil} from '../../../../util/RankingUtil';
 export class RankingPage implements OnInit {
 
     rankingTypes = [
-        {label: 'Gesamt', value: null, selected: true},
-        {label: 'Heim', value: 'home', selected: false},
-        {label: 'Auswärts', value: 'away', selected: false}
+        {label: 'Gesamt', value: 'total'},
+        {label: 'Heim', value: 'home'},
+        {label: 'Auswärts', value: 'away'}
     ];
 
     matches: Match[] = [];

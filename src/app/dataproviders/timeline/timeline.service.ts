@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {TimelineTitle} from '../../core/domain/timelineTitle.model';
-import {environment} from '../../../environments/environment.prod';
+import {environment} from '../../../environments/environment';
 import {filter, map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 import {HttpService} from '../http.service';

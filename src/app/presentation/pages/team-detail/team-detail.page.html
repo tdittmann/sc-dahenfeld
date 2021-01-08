@@ -2,7 +2,7 @@
 
     <ng-template [ngIf]="teamInformation && teamInformation.showSeasons && teamInformation.seasons.length > 0">
         <ion-buttons slot="end">
-            <ion-select [value]="selectedSeason" okText="Auswählen" cancelText="Abbrechen" (ionChange)="changeSeason($event)" placeholder="asd">
+            <ion-select [value]="selectedSeason" okText="Auswählen" cancelText="Abbrechen" (ionChange)="changeSeason($event)">
                 <ion-select-option *ngFor="let season of teamInformation.seasons" [value]="season.projectId">
                     {{season.name}}
                 </ion-select-option>
