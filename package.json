@@ -21,7 +21,7 @@
     "@angular/router": "^11.0.7",
     "@capacitor/android": "^2.4.5",
     "@capacitor/cli": "2.4.6",
-    "@capacitor/core": "2.4.5",
+    "@capacitor/core": "2.4.6",
     "@capacitor/ios": "^2.4.5",
     "@ionic-native/app-version": "^5.30.0",
     "@ionic-native/core": "^5.30.0",
