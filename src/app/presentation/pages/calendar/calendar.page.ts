@@ -23,7 +23,10 @@ export class CalendarPage implements OnInit {
     }
 
     ngOnInit(): void {
+        this.loadCalendarEvents(null);
+    }
 
+    loadCalendarEvents(event) {
         this.activatedRoute.queryParams.subscribe(
             queryParams => {
 
@@ -46,10 +49,12 @@ export class CalendarPage implements OnInit {
                     events => {
                         this.calendarEntries = events;
                         this.isLoading = false;
+                        this.completeEvent(event);
                     },
                     error => {
                         this.isError = false;
                         console.error(error);
+                        this.completeEvent(event);
                     }
                 );
 
@@ -57,8 +62,15 @@ export class CalendarPage implements OnInit {
             error => {
                 this.isError = true;
                 console.error(error);
+                this.completeEvent(event);
             }
         );
+    }
+
+    completeEvent(event) {
+        if (event) {
+            event.target.complete();
+        }
     }
 
     public isDifferentDay(date: Moment): boolean {

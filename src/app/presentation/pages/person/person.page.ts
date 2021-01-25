@@ -23,19 +23,28 @@ export class PersonPage implements OnInit {
     }
 
     ngOnInit(): void {
+        this.loadPerson(null);
+    }
 
+    loadPerson(event) {
         this.playerService.loadPerson(this.personId, this.projectId).subscribe(
             person => {
                 this.person = person;
-
                 this.isLoading = false;
+                this.completeEvent(event);
             },
             error => {
                 this.isError = true;
                 console.error(error);
+                this.completeEvent(event);
             }
         );
+    }
 
+    completeEvent(event) {
+        if (event) {
+            event.target.complete();
+        }
     }
 
     public isDevModeEnabled(): boolean {

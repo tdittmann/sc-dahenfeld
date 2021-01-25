@@ -23,6 +23,10 @@ export class ArticleDetailPage implements OnInit {
     }
 
     ngOnInit(): void {
+        this.loadArticle(null);
+    }
+
+    loadArticle(event) {
         combineLatest([this.route.params, this.route.queryParams])
             .subscribe(([params, queryParams]) => {
 
@@ -38,14 +42,22 @@ export class ArticleDetailPage implements OnInit {
                         // Increment hits for the article
                         this.articleService.incrementMobileHitsForArticle(this.article);
 
-                        this.isError = true;
+                        this.isLoading = false;
+                        this.completeEvent(event);
                     },
                     (pError) => {
                         this.isError = true;
                         console.error(pError);
+                        this.completeEvent(event);
                     }
                 );
             });
+    }
+
+    completeEvent(event) {
+        if (event) {
+            event.target.complete();
+        }
     }
 
 }

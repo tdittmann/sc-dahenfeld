@@ -29,6 +29,10 @@ export class NewsPage implements OnInit {
             }
         );
 
+        this.loadArticles(null);
+    }
+
+    loadArticles(event) {
         this.articleService.getAllArticles()
             .subscribe(
                 (pArticles) => {
@@ -40,12 +44,20 @@ export class NewsPage implements OnInit {
                     }
 
                     this.isLoading = false;
+                    this.completeEvent(event);
                 },
                 (pError) => {
                     this.isError = true;
                     console.error(pError);
+                    this.completeEvent(event);
                 }
             );
+    }
+
+    completeEvent(event) {
+        if (event) {
+            event.target.complete();
+        }
     }
 
 }

@@ -3,6 +3,10 @@
 
 <ion-content color="light" *ngIf="articles.length > 0">
 
+    <ion-refresher slot="fixed" (ionRefresh)="loadArticles($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
     <article-slider [articles]="sliderArticles"></article-slider>
 
     <ion-grid>

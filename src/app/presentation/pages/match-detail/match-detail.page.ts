@@ -20,18 +20,28 @@ export class MatchDetailPage implements OnInit {
     }
 
     ngOnInit(): void {
+        this.loadMatch(null);
+    }
 
+    loadMatch(event) {
         this.matchDetailService.loadMatchDetails(this.matchId).subscribe(
             matchDetails => {
                 this.matchDetails = matchDetails;
-
                 this.isLoading = false;
+                this.completeEvent(event);
             },
             error => {
                 this.isError = true;
                 console.error(error);
+                this.completeEvent(event);
             }
         );
+    }
+
+    completeEvent(event) {
+        if (event) {
+            event.target.complete();
+        }
     }
 
 }

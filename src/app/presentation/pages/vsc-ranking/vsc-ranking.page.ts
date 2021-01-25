@@ -27,7 +27,7 @@ export class VscRankingPage implements OnInit {
                 this.heading = routeParams['heading'];
             });
 
-        this.loadRanking();
+        this.loadRanking(null);
     }
 
     expandAthlete(athlete: VscAthlete) {
@@ -38,21 +38,29 @@ export class VscRankingPage implements OnInit {
         this.actualMonth = event.detail.value;
         this.ranking = [];
         this.isLoading = true;
-        this.loadRanking();
+        this.loadRanking(null);
     }
 
-    private loadRanking() {
+    private loadRanking(event) {
         this.vscService.loadRanking(parseInt(this.actualMonth, 10))
             .subscribe(
                 ranking => {
                     this.ranking = ranking;
                     this.isLoading = false;
+                    this.completeEvent(event);
                 },
                 error => {
                     this.isError = true;
                     console.error(error);
+                    this.completeEvent(event);
                 }
             );
+    }
+
+    completeEvent(event) {
+        if (event) {
+            event.target.complete();
+        }
     }
 
 }

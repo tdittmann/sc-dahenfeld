@@ -3,6 +3,10 @@
 
 <ion-content color="light" *ngIf="matchDetails">
 
+    <ion-refresher slot="fixed" (ionRefresh)="loadMatch($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
     <ion-grid class="team-infos">
         <ion-row>
             <ion-col>

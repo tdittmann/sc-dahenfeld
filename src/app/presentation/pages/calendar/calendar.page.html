@@ -3,6 +3,10 @@
 
 <ion-content color="light" *ngIf="calendarEntries.length > 0">
 
+    <ion-refresher slot="fixed" (ionRefresh)="loadCalendarEvents($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
     <ion-grid>
         <ion-row>
             <ion-col>

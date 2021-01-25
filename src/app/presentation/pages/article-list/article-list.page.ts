@@ -22,7 +22,10 @@ export class ArticleListPage implements OnInit {
     }
 
     ngOnInit(): void {
+        this.loadArticles(null);
+    }
 
+    loadArticles(event) {
         combineLatest([this.activatedRoute.params, this.activatedRoute.queryParams]).subscribe(
             ([params, queryParams]) => {
                 this.heading = queryParams['heading'];
@@ -31,19 +34,27 @@ export class ArticleListPage implements OnInit {
                     articles => {
                         this.articles = articles;
                         this.isLoading = false;
+                        this.completeEvent(event);
                     },
                     error => {
                         this.isError = true;
                         console.error(error);
+                        this.completeEvent(event);
                     }
                 );
             },
             error => {
                 this.isError = error;
                 console.error(error);
+                this.completeEvent(event);
             }
         );
+    }
 
+    completeEvent(event) {
+        if (event) {
+            event.target.complete();
+        }
     }
 
 }

@@ -3,6 +3,10 @@
 
 <ion-content color="light" *ngIf="ranking.length > 0">
 
+    <ion-refresher slot="fixed" (ionRefresh)="loadRanking($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
     <ion-item>
         <ion-label>Monat</ion-label>
         <ion-select placeholder="Monat auswählen" (ionChange)="reloadRanking($event)"

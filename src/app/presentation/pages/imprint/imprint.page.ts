@@ -13,7 +13,7 @@ import {ActivatedRoute} from '@angular/router';
 export class ImprintPage implements OnInit {
 
     heading: string;
-    version = '5.6.0';
+    version = '5.7.0';
     developer = 'Timo Dittmann';
     darkMode = false;
 
