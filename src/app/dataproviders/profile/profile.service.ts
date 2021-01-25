@@ -36,4 +36,11 @@ export class ProfileService {
             .post<ProfileJson>(environment.backendUrl + 'profile', profileJson);
     }
 
+    validateDevModePassword(password): Observable<any> {
+        return this.httpService
+            .post(environment.backendUrl + 'profileVerification', {
+                password: password
+            });
+    }
+
 }

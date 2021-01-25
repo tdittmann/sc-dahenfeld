@@ -5,6 +5,7 @@ import {StorageService} from '../../../dataproviders/storage.service';
 
 import {Capacitor, Plugins, StatusBarStyle} from '@capacitor/core';
 import {ActivatedRoute} from '@angular/router';
+import {ProfileService} from '../../../dataproviders/profile/profile.service';
 
 @Component({
     templateUrl: 'imprint.page.html',
@@ -13,17 +14,21 @@ import {ActivatedRoute} from '@angular/router';
 export class ImprintPage implements OnInit {
 
     heading: string;
-    version = '5.7.0';
+    version = '5.8.0';
     developer = 'Timo Dittmann';
     darkMode = false;
 
+    devModePassword: string;
+    showDevModePasswordInput = false;
+
     private counter = 0;
-    private devModeEnabledNumber = 7;
+    private showDevModePasswordNumber = 7;
 
     constructor(private activatedRoute: ActivatedRoute,
                 private devService: DevService,
                 private storageService: StorageService,
-                private toastService: ToastService) {
+                private toastService: ToastService,
+                private profileService: ProfileService) {
 
     }
 
@@ -51,10 +56,23 @@ export class ImprintPage implements OnInit {
     activateDevMode(): void {
         this.counter++;
 
-        if (this.counter === this.devModeEnabledNumber) {
-            this.devService.updateDevMode(true);
-            this.toastService.showToast('Du hast den Entwickler-Modus aktiviert.');
+        if (this.counter === this.showDevModePasswordNumber) {
+            this.showDevModePasswordInput = true;
         }
+    }
+
+    validateDevModePassword() {
+        this.profileService.validateDevModePassword(this.devModePassword)
+            .subscribe(
+                value => {
+                    this.devService.updateDevMode(true);
+                    this.toastService.showToast('Du hast den Entwickler-Modus aktiviert.');
+                },
+                error => {
+                    this.toastService.showToast('Falsches Passwort.');
+                    console.error(error);
+                }
+            );
     }
 
     deactivateDevMode() {

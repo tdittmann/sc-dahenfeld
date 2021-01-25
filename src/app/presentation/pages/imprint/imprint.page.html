@@ -19,6 +19,11 @@
             <ion-label>Design und Entwicklung</ion-label>
             <p item-right>{{ developer }}</p>
         </ion-item>
+        <ion-item *ngIf="showDevModePasswordInput">
+            <ion-label>Dev-Mode Passwort</ion-label>
+            <ion-input [(ngModel)]="devModePassword" type="password" item-right></ion-input>
+            <ion-button item-right (click)="validateDevModePassword()">Validieren</ion-button>
+        </ion-item>
         <ion-item>
             <ion-label>Dark Mode</ion-label>
             <ion-toggle [(ngModel)]="darkMode" (ionChange)="toggleDarkMode()"></ion-toggle>
