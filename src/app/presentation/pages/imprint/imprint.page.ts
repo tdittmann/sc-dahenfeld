@@ -14,7 +14,7 @@ import {ProfileService} from '../../../dataproviders/profile/profile.service';
 export class ImprintPage implements OnInit {
 
     heading: string;
-    version = '5.8.0';
+    version = '5.9.0';
     developer = 'Timo Dittmann';
     darkMode = false;
 

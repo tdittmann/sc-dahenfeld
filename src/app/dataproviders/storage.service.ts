@@ -9,7 +9,7 @@ export class StorageService {
     private static DARK_MODE_KEY = 'darkMode';
 
     constructor(private storage: Storage) {
-
+        this.storage.create();
     }
 
     loadPushToken(): Promise<string> {

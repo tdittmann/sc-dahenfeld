@@ -22,4 +22,10 @@ export class VscService {
             .pipe(map(vscAthletes => vscAthletes.map(vscAthlete => this.vscMapper.mapFrom(vscAthlete))));
     }
 
+    public loadOverallRanking(): Observable<VscAthlete[]> {
+        return this.httpService
+            .get<VscAthleteJson[]>(environment.backendUrl + 'vsc?month=overall')
+            .pipe(map(vscAthletes => vscAthletes.map(vscAthlete => this.vscMapper.mapFrom(vscAthlete))));
+    }
+
 }

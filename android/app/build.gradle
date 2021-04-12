@@ -6,8 +6,8 @@ android {
         applicationId "de.timodittmann.scd"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 58000
-        versionName "5.8.0"
+        versionCode 59000
+        versionName "5.9.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

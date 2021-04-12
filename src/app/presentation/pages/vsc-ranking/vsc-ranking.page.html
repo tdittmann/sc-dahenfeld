@@ -23,6 +23,7 @@
             <ion-select-option value="10">Oktober</ion-select-option>
             <ion-select-option value="11">November</ion-select-option>
             <ion-select-option value="12">Dezember</ion-select-option>
+            <ion-select-option value="overall">Gesamt</ion-select-option>
         </ion-select>
     </ion-item>
 
@@ -32,7 +33,13 @@
             <ion-label>
                 <span class="athlete-name">{{ athlete.getName() }}</span>
                 <br/>
-                <span class="athlete-stats">{{ athlete.getProgress() }} | {{ athlete.totalStatistics.getDistanceString() }} | {{ athlete.totalStatistics.getActivitiesString() }}</span>
+                <span class="athlete-stats">
+                    <ng-template [ngIf]="actualMonth != 'overall'">
+                        {{ athlete.getProgress() }}|
+                    </ng-template>
+                    {{ athlete.totalStatistics.getDistanceString() }} |
+                    {{ athlete.totalStatistics.getActivitiesString() }}
+                </span>
             </ion-label>
             <ion-icon name="chevron-down-outline" slot="end" *ngIf="!athlete.expanded"></ion-icon>
             <ion-icon name="chevron-up-outline" slot="end" *ngIf="athlete.expanded"></ion-icon>
@@ -51,14 +58,18 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td class="ion-text-center"><ion-icon class="detail-icon" name="walk-outline"></ion-icon></td>
+                    <td class="ion-text-center">
+                        <ion-icon class="detail-icon" name="walk-outline"></ion-icon>
+                    </td>
                     <td class="ion-text-center ion-hide-md-down">{{ athlete.runStatistics.totalActivities }}</td>
                     <td class="ion-text-center">{{ athlete.runStatistics.getDistanceString() }}</td>
                     <td class="ion-text-center">{{ athlete.runStatistics.totalMovingTime }}</td>
                     <td class="ion-text-center">{{ athlete.runStatistics.getElevationString() }}</td>
                 </tr>
                 <tr>
-                    <td class="ion-text-center"><ion-icon class="detail-icon" name="bicycle-outline"></ion-icon></td>
+                    <td class="ion-text-center">
+                        <ion-icon class="detail-icon" name="bicycle-outline"></ion-icon>
+                    </td>
                     <td class="ion-text-center ion-hide-md-down">{{ athlete.rideStatistics.totalActivities }}</td>
                     <td class="ion-text-center">{{ athlete.rideStatistics.getDistanceString() }}</td>
                     <td class="ion-text-center">{{ athlete.rideStatistics.totalMovingTime }}</td>

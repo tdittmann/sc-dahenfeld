@@ -42,19 +42,26 @@ export class VscRankingPage implements OnInit {
     }
 
     private loadRanking(event) {
-        this.vscService.loadRanking(parseInt(this.actualMonth, 10))
-            .subscribe(
-                ranking => {
-                    this.ranking = ranking;
-                    this.isLoading = false;
-                    this.completeEvent(event);
-                },
-                error => {
-                    this.isError = true;
-                    console.error(error);
-                    this.completeEvent(event);
-                }
-            );
+        let backendCall;
+
+        if (this.actualMonth === 'overall') {
+            backendCall = this.vscService.loadOverallRanking();
+        } else {
+            backendCall = this.vscService.loadRanking(parseInt(this.actualMonth, 10));
+        }
+
+        backendCall.subscribe(
+            ranking => {
+                this.ranking = ranking;
+                this.isLoading = false;
+                this.completeEvent(event);
+            },
+            error => {
+                this.isError = true;
+                console.error(error);
+                this.completeEvent(event);
+            }
+        );
     }
 
     completeEvent(event) {

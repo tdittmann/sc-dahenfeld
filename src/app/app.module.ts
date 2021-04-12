@@ -6,9 +6,9 @@ import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
 
+import { IonicStorageModule } from '@ionic/storage-angular';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import {IonicStorageModule} from '@ionic/storage';
 import {DevService} from './dataproviders/dev.service';
 import {StorageService} from './dataproviders/storage.service';
 import {HttpService} from './dataproviders/http.service';
