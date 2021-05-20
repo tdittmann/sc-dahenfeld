@@ -22,7 +22,7 @@
     "@capacitor/android": "^2.4.7",
     "@capacitor/cli": "2.4.7",
     "@capacitor/core": "2.4.7",
-    "@capacitor/ios": "^2.4.7",
+    "@capacitor/ios": "^3.0.0",
     "@ionic-native/app-version": "^5.33.0",
     "@ionic-native/core": "^5.33.0",
     "@ionic-native/splash-screen": "^5.33.0",
