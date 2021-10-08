@@ -1,0 +1,638 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "StatusBarPlugin"
+provides-nominal:
+- "18CapacitorStatusBar0bC6PluginC"
+provides-member:
+- ["18CapacitorStatusBar0bC6PluginC", ""]
+provides-dynamic-lookup:
+- "getInfo"
+- "hide"
+- "load"
+- "observer"
+- "setAnimation"
+- "setBackgroundColor"
+- "setOverlaysWebView"
+- "setStyle"
+- "show"
+depends-top-level:
+- "=="
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "CAPPlugin"
+- "CAPPluginCall"
+- "CastingPrecedence"
+- !private "Dictionary"
+- !private "DispatchQueue"
+- "NSObjectProtocol"
+- !private "Notification"
+- !private "NotificationCenter"
+- "StatusBarPlugin"
+- "String"
+- !private "StringLiteralType"
+- "UIUserInterfaceStyle"
+- !private "bridge"
+- !private "observer"
+- !private "setAnimation"
+depends-member:
+- !private ["SK", ""]
+- !private ["9Capacitor23BridgedJSValueContainerP", "getString"]
+- !private ["9Capacitor23BridgedJSValueContainerP", "options"]
+- !private ["9Capacitor23BridgedJSValueContainerP", "resolve"]
+- !private ["9Capacitor23BridgedJSValueContainerP", "unimplemented"]
+- !private ["9Capacitor17CAPBridgeProtocolP", "statusBarAnimation"]
+- !private ["9Capacitor17CAPBridgeProtocolP", "statusBarStyle"]
+- !private ["9Capacitor17CAPBridgeProtocolP", "statusBarVisible"]
+- !private ["9Capacitor17CAPBridgeProtocolP", "triggerJSEvent"]
+- !private ["9Capacitor17CAPBridgeProtocolP", "userInterfaceStyle"]
+- ["So9CAPPluginC", "CAPPluginCall"]
+- !private ["So9CAPPluginC", "DispatchQueue"]
+- ["So9CAPPluginC", "NSObjectProtocol"]
+- !private ["So9CAPPluginC", "Notification"]
+- !private ["So9CAPPluginC", "NotificationCenter"]
+- !private ["So9CAPPluginC", "String"]
+- !private ["So9CAPPluginC", "UIUserInterfaceStyle"]
+- ["So9CAPPluginC", ""]
+- !private ["So9CAPPluginC", "bridge"]
+- ["So9CAPPluginC", "getInfo"]
+- ["So9CAPPluginC", "hide"]
+- ["So9CAPPluginC", "init"]
+- ["So9CAPPluginC", "load"]
+- ["So9CAPPluginC", "observer"]
+- ["So9CAPPluginC", "setAnimation"]
+- ["So9CAPPluginC", "setBackgroundColor"]
+- ["So9CAPPluginC", "setOverlaysWebView"]
+- ["So9CAPPluginC", "setStyle"]
+- ["So9CAPPluginC", "show"]
+- !private ["So13CAPPluginCallC", "getString"]
+- !private ["So13CAPPluginCallC", "options"]
+- !private ["So13CAPPluginCallC", "resolve"]
+- !private ["So13CAPPluginCallC", "unimplemented"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "Notification"]
+- !private ["s7CVarArgP", "NotificationCenter"]
+- !private ["s7CVarArgP", "UIUserInterfaceStyle"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addObserver"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "bridge"]
+- !private ["s7CVarArgP", "default"]
+- !private ["s7CVarArgP", "getInfo"]
+- !private ["s7CVarArgP", "getString"]
+- !private ["s7CVarArgP", "hide"]
+- !private ["s7CVarArgP", "load"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "none"]
+- !private ["s7CVarArgP", "observer"]
+- !private ["s7CVarArgP", "options"]
+- !private ["s7CVarArgP", "removeObserver"]
+- !private ["s7CVarArgP", "resolve"]
+- !private ["s7CVarArgP", "setAnimation"]
+- !private ["s7CVarArgP", "setBackgroundColor"]
+- !private ["s7CVarArgP", "setOverlaysWebView"]
+- !private ["s7CVarArgP", "setStyle"]
+- !private ["s7CVarArgP", "show"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "unimplemented"]
+- !private ["Sl", ""]
+- !private ["Sl", "subscript"]
+- !private ["SL", ""]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "Name"]
+- !private ["s28CustomDebugStringConvertibleP", "Notification"]
+- !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
+- !private ["s28CustomDebugStringConvertibleP", "UIUserInterfaceStyle"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addObserver"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "bridge"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "getInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "getString"]
+- !private ["s28CustomDebugStringConvertibleP", "hide"]
+- !private ["s28CustomDebugStringConvertibleP", "load"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "none"]
+- !private ["s28CustomDebugStringConvertibleP", "observer"]
+- !private ["s28CustomDebugStringConvertibleP", "options"]
+- !private ["s28CustomDebugStringConvertibleP", "removeObserver"]
+- !private ["s28CustomDebugStringConvertibleP", "resolve"]
+- !private ["s28CustomDebugStringConvertibleP", "setAnimation"]
+- !private ["s28CustomDebugStringConvertibleP", "setBackgroundColor"]
+- !private ["s28CustomDebugStringConvertibleP", "setOverlaysWebView"]
+- !private ["s28CustomDebugStringConvertibleP", "setStyle"]
+- !private ["s28CustomDebugStringConvertibleP", "show"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "unimplemented"]
+- !private ["s17CustomReflectableP", "Name"]
+- !private ["s17CustomReflectableP", "none"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "Name"]
+- !private ["s23CustomStringConvertibleP", "Notification"]
+- !private ["s23CustomStringConvertibleP", "NotificationCenter"]
+- !private ["s23CustomStringConvertibleP", "UIUserInterfaceStyle"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addObserver"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "bridge"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "getInfo"]
+- !private ["s23CustomStringConvertibleP", "getString"]
+- !private ["s23CustomStringConvertibleP", "hide"]
+- !private ["s23CustomStringConvertibleP", "load"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "none"]
+- !private ["s23CustomStringConvertibleP", "observer"]
+- !private ["s23CustomStringConvertibleP", "options"]
+- !private ["s23CustomStringConvertibleP", "removeObserver"]
+- !private ["s23CustomStringConvertibleP", "resolve"]
+- !private ["s23CustomStringConvertibleP", "setAnimation"]
+- !private ["s23CustomStringConvertibleP", "setBackgroundColor"]
+- !private ["s23CustomStringConvertibleP", "setOverlaysWebView"]
+- !private ["s23CustomStringConvertibleP", "setStyle"]
+- !private ["s23CustomStringConvertibleP", "show"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "unimplemented"]
+- !private ["Se", "none"]
+- !private ["Se", "subscript"]
+- !private ["SD", "subscript"]
+- ["So18OS_dispatch_objectC", ""]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "init"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So18OS_dispatch_objectC", "sync"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["SE", "none"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "=="]
+- !private ["SQ", "DispatchQueue"]
+- !private ["SQ", "Name"]
+- !private ["SQ", "Notification"]
+- !private ["SQ", "NotificationCenter"]
+- !private ["SQ", "RawValue"]
+- !private ["SQ", "UIUserInterfaceStyle"]
+- ["SQ", ""]
+- !private ["SQ", "addObserver"]
+- !private ["SQ", "async"]
+- !private ["SQ", "bridge"]
+- !private ["SQ", "capacitorStatusBarTapped"]
+- !private ["SQ", "dark"]
+- !private ["SQ", "darkContent"]
+- !private ["SQ", "default"]
+- !private ["SQ", "fade"]
+- !private ["SQ", "getInfo"]
+- !private ["SQ", "getString"]
+- !private ["SQ", "hide"]
+- !private ["SQ", "lightContent"]
+- !private ["SQ", "load"]
+- !private ["SQ", "main"]
+- !private ["SQ", "none"]
+- !private ["SQ", "observer"]
+- !private ["SQ", "options"]
+- !private ["SQ", "removeObserver"]
+- !private ["SQ", "resolve"]
+- !private ["SQ", "setAnimation"]
+- !private ["SQ", "setBackgroundColor"]
+- !private ["SQ", "setOverlaysWebView"]
+- !private ["SQ", "setStyle"]
+- !private ["SQ", "show"]
+- !private ["SQ", "slide"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "unimplemented"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s23ExpressibleByNilLiteralP", "none"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SH", "=="]
+- !private ["SH", "DispatchQueue"]
+- !private ["SH", "Name"]
+- !private ["SH", "Notification"]
+- !private ["SH", "NotificationCenter"]
+- !private ["SH", "RawValue"]
+- !private ["SH", "UIUserInterfaceStyle"]
+- ["SH", ""]
+- !private ["SH", "addObserver"]
+- !private ["SH", "async"]
+- !private ["SH", "bridge"]
+- !private ["SH", "capacitorStatusBarTapped"]
+- !private ["SH", "dark"]
+- !private ["SH", "darkContent"]
+- !private ["SH", "default"]
+- !private ["SH", "fade"]
+- !private ["SH", "getInfo"]
+- !private ["SH", "getString"]
+- !private ["SH", "hide"]
+- !private ["SH", "lightContent"]
+- !private ["SH", "load"]
+- !private ["SH", "main"]
+- !private ["SH", "none"]
+- !private ["SH", "observer"]
+- !private ["SH", "options"]
+- !private ["SH", "removeObserver"]
+- !private ["SH", "resolve"]
+- !private ["SH", "setAnimation"]
+- !private ["SH", "setBackgroundColor"]
+- !private ["SH", "setOverlaysWebView"]
+- !private ["SH", "setStyle"]
+- !private ["SH", "show"]
+- !private ["SH", "slide"]
+- !private ["SH", "subscript"]
+- !private ["SH", "unimplemented"]
+- !private ["9Capacitor16JSArrayContainerP", ""]
+- !private ["9Capacitor16JSArrayContainerP", "getString"]
+- !private ["9Capacitor16JSArrayContainerP", "options"]
+- !private ["9Capacitor16JSArrayContainerP", "resolve"]
+- !private ["9Capacitor16JSArrayContainerP", "unimplemented"]
+- !private ["9Capacitor15JSBoolContainerP", ""]
+- !private ["9Capacitor15JSBoolContainerP", "getString"]
+- !private ["9Capacitor15JSBoolContainerP", "options"]
+- !private ["9Capacitor15JSBoolContainerP", "resolve"]
+- !private ["9Capacitor15JSBoolContainerP", "unimplemented"]
+- !private ["9Capacitor15JSDateContainerP", ""]
+- !private ["9Capacitor15JSDateContainerP", "getString"]
+- !private ["9Capacitor15JSDateContainerP", "options"]
+- !private ["9Capacitor15JSDateContainerP", "resolve"]
+- !private ["9Capacitor15JSDateContainerP", "unimplemented"]
+- !private ["9Capacitor17JSDoubleContainerP", ""]
+- !private ["9Capacitor17JSDoubleContainerP", "getString"]
+- !private ["9Capacitor17JSDoubleContainerP", "options"]
+- !private ["9Capacitor17JSDoubleContainerP", "resolve"]
+- !private ["9Capacitor17JSDoubleContainerP", "unimplemented"]
+- !private ["9Capacitor16JSFloatContainerP", ""]
+- !private ["9Capacitor16JSFloatContainerP", "getString"]
+- !private ["9Capacitor16JSFloatContainerP", "options"]
+- !private ["9Capacitor16JSFloatContainerP", "resolve"]
+- !private ["9Capacitor16JSFloatContainerP", "unimplemented"]
+- !private ["9Capacitor14JSIntContainerP", ""]
+- !private ["9Capacitor14JSIntContainerP", "getString"]
+- !private ["9Capacitor14JSIntContainerP", "options"]
+- !private ["9Capacitor14JSIntContainerP", "resolve"]
+- !private ["9Capacitor14JSIntContainerP", "unimplemented"]
+- !private ["9Capacitor17JSObjectContainerP", ""]
+- !private ["9Capacitor17JSObjectContainerP", "getString"]
+- !private ["9Capacitor17JSObjectContainerP", "options"]
+- !private ["9Capacitor17JSObjectContainerP", "resolve"]
+- !private ["9Capacitor17JSObjectContainerP", "unimplemented"]
+- !private ["9Capacitor17JSStringContainerP", ""]
+- !private ["9Capacitor17JSStringContainerP", "getString"]
+- !private ["9Capacitor17JSStringContainerP", "options"]
+- !private ["9Capacitor17JSStringContainerP", "resolve"]
+- !private ["9Capacitor17JSStringContainerP", "unimplemented"]
+- !private ["9Capacitor7JSValueP", "subscript"]
+- !private ["9Capacitor16JSValueContainerP", "getString"]
+- !private ["9Capacitor16JSValueContainerP", "options"]
+- !private ["9Capacitor16JSValueContainerP", "resolve"]
+- !private ["9Capacitor16JSValueContainerP", "unimplemented"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- ["So8NSCodingP", ""]
+- ["So8NSObjectC", "CAPPluginCall"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- ["So8NSObjectC", "NSObjectProtocol"]
+- !private ["So8NSObjectC", "Notification"]
+- !private ["So8NSObjectC", "NotificationCenter"]
+- !private ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "UIUserInterfaceStyle"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "activate"]
+- !private ["So8NSObjectC", "addObserver"]
+- !private ["So8NSObjectC", "addObserverForName"]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "bridge"]
+- !private ["So8NSObjectC", "default"]
+- ["So8NSObjectC", "getInfo"]
+- !private ["So8NSObjectC", "getString"]
+- ["So8NSObjectC", "hide"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "load"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "none"]
+- ["So8NSObjectC", "observer"]
+- !private ["So8NSObjectC", "options"]
+- !private ["So8NSObjectC", "removeObserver"]
+- !private ["So8NSObjectC", "resolve"]
+- !private ["So8NSObjectC", "resume"]
+- ["So8NSObjectC", "setAnimation"]
+- ["So8NSObjectC", "setBackgroundColor"]
+- ["So8NSObjectC", "setOverlaysWebView"]
+- ["So8NSObjectC", "setStyle"]
+- !private ["So8NSObjectC", "setTarget"]
+- ["So8NSObjectC", "show"]
+- !private ["So8NSObjectC", "suspend"]
+- !private ["So8NSObjectC", "sync"]
+- !private ["So8NSObjectC", "unimplemented"]
+- ["So8NSObjectP", "CAPPluginCall"]
+- !private ["So8NSObjectP", "DispatchQueue"]
+- ["So8NSObjectP", "NSObjectProtocol"]
+- !private ["So8NSObjectP", "Notification"]
+- !private ["So8NSObjectP", "NotificationCenter"]
+- !private ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "UIUserInterfaceStyle"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "activate"]
+- !private ["So8NSObjectP", "addObserver"]
+- !private ["So8NSObjectP", "addObserverForName"]
+- !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "bridge"]
+- !private ["So8NSObjectP", "default"]
+- ["So8NSObjectP", "deinit"]
+- ["So8NSObjectP", "getInfo"]
+- !private ["So8NSObjectP", "getString"]
+- ["So8NSObjectP", "hide"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "load"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "none"]
+- ["So8NSObjectP", "observer"]
+- !private ["So8NSObjectP", "options"]
+- !private ["So8NSObjectP", "removeObserver"]
+- !private ["So8NSObjectP", "resolve"]
+- !private ["So8NSObjectP", "resume"]
+- ["So8NSObjectP", "setAnimation"]
+- ["So8NSObjectP", "setBackgroundColor"]
+- ["So8NSObjectP", "setOverlaysWebView"]
+- ["So8NSObjectP", "setStyle"]
+- !private ["So8NSObjectP", "setTarget"]
+- ["So8NSObjectP", "show"]
+- !private ["So8NSObjectP", "statusBarAnimation"]
+- !private ["So8NSObjectP", "statusBarStyle"]
+- !private ["So8NSObjectP", "statusBarVisible"]
+- !private ["So8NSObjectP", "suspend"]
+- !private ["So8NSObjectP", "sync"]
+- !private ["So8NSObjectP", "triggerJSEvent"]
+- !private ["So8NSObjectP", "unimplemented"]
+- !private ["So8NSObjectP", "userInterfaceStyle"]
+- !private ["So18NSNotificationNamea", "capacitorStatusBarTapped"]
+- !private ["10Foundation12NotificationV", "Name"]
+- !private ["So20NSNotificationCenterC", "addObserver"]
+- !private ["So20NSNotificationCenterC", "default"]
+- !private ["So20NSNotificationCenterC", "removeObserver"]
+- ["So9OS_objectC", ""]
+- !private ["So9OS_objectC", "activate"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "init"]
+- !private ["So9OS_objectC", "main"]
+- !private ["So9OS_objectC", "resume"]
+- !private ["So9OS_objectC", "setTarget"]
+- !private ["So9OS_objectC", "suspend"]
+- !private ["So9OS_objectC", "sync"]
+- !private ["So16NSOperationQueueC", "none"]
+- !private ["Sq", "none"]
+- !private ["So19NSProgressReportingP", "none"]
+- !private ["SY", "=="]
+- !private ["SY", "RawValue"]
+- !private ["SY", ""]
+- !private ["SY", "capacitorStatusBarTapped"]
+- !private ["SY", "dark"]
+- !private ["SY", "darkContent"]
+- !private ["SY", "default"]
+- !private ["SY", "fade"]
+- !private ["SY", "lightContent"]
+- !private ["SY", "none"]
+- !private ["SY", "slide"]
+- !private ["10Foundation20ReferenceConvertibleP", "Name"]
+- !private ["7Combine9SchedulerP", "async"]
+- !private ["7Combine9SchedulerP", "main"]
+- !private ["7Combine9SchedulerP", "none"]
+- !private ["ST", ""]
+- !private ["ST", "subscript"]
+- ["18CapacitorStatusBar0bC6PluginC", "CAPPluginCall"]
+- !private ["18CapacitorStatusBar0bC6PluginC", "DispatchQueue"]
+- ["18CapacitorStatusBar0bC6PluginC", "NSObjectProtocol"]
+- !private ["18CapacitorStatusBar0bC6PluginC", "Notification"]
+- !private ["18CapacitorStatusBar0bC6PluginC", "NotificationCenter"]
+- !private ["18CapacitorStatusBar0bC6PluginC", "String"]
+- !private ["18CapacitorStatusBar0bC6PluginC", "UIUserInterfaceStyle"]
+- ["18CapacitorStatusBar0bC6PluginC", ""]
+- !private ["18CapacitorStatusBar0bC6PluginC", "bridge"]
+- ["18CapacitorStatusBar0bC6PluginC", "deinit"]
+- ["18CapacitorStatusBar0bC6PluginC", "getInfo"]
+- ["18CapacitorStatusBar0bC6PluginC", "hide"]
+- ["18CapacitorStatusBar0bC6PluginC", "init"]
+- ["18CapacitorStatusBar0bC6PluginC", "load"]
+- !private ["18CapacitorStatusBar0bC6PluginC", "observer"]
+- ["18CapacitorStatusBar0bC6PluginC", "setAnimation"]
+- ["18CapacitorStatusBar0bC6PluginC", "setBackgroundColor"]
+- ["18CapacitorStatusBar0bC6PluginC", "setOverlaysWebView"]
+- ["18CapacitorStatusBar0bC6PluginC", "setStyle"]
+- ["18CapacitorStatusBar0bC6PluginC", "show"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["So18UIFocusEnvironmentP", ""]
+- !private ["So20UIFocusItemContainerP", ""]
+- !private ["So10UIKeyInputP", ""]
+- !private ["So20UIStatusBarAnimationV", "fade"]
+- !private ["So20UIStatusBarAnimationV", "none"]
+- !private ["So20UIStatusBarAnimationV", "slide"]
+- !private ["So16UIStatusBarStyleV", "=="]
+- !private ["So16UIStatusBarStyleV", "RawValue"]
+- !private ["So16UIStatusBarStyleV", "darkContent"]
+- !private ["So16UIStatusBarStyleV", "default"]
+- !private ["So16UIStatusBarStyleV", "lightContent"]
+- !private ["So17UITextInputTraitsP", ""]
+- !private ["So20UIUserInterfaceStyleV", "=="]
+- !private ["So20UIUserInterfaceStyleV", "RawValue"]
+- !private ["So20UIUserInterfaceStyleV", "dark"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s35_HasCustomAnyHashableRepresentationP", ""]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "capacitorStatusBarTapped"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Notification"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIUserInterfaceStyle"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addObserver"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bridge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getInfo"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hide"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "load"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "none"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "observer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "options"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeObserver"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resolve"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setAnimation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setBackgroundColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setOverlaysWebView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setStyle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "show"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "unimplemented"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Notification"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NotificationCenter"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIUserInterfaceStyle"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addObserver"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bridge"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "default"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getInfo"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getString"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "hide"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "load"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "none"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "observer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "options"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeObserver"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resolve"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setAnimation"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setBackgroundColor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setOverlaysWebView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setStyle"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "show"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "unimplemented"]
+- !private ["s21_ObjectiveCBridgeableP", "Name"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "capacitorStatusBarTapped"]
+- !private ["s21_ObjectiveCBridgeableP", "none"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s20_SwiftNewtypeWrapperP", "capacitorStatusBarTapped"]
+depends-nominal:
+- !private "SK"
+- !private "9Capacitor23BridgedJSValueContainerP"
+- !private "9Capacitor17CAPBridgeProtocolP"
+- "So9CAPPluginC"
+- !private "So13CAPPluginCallC"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SD"
+- "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "SE"
+- "SQ"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "9Capacitor16JSArrayContainerP"
+- !private "9Capacitor15JSBoolContainerP"
+- !private "9Capacitor15JSDateContainerP"
+- !private "9Capacitor17JSDoubleContainerP"
+- !private "9Capacitor16JSFloatContainerP"
+- !private "9Capacitor14JSIntContainerP"
+- !private "9Capacitor17JSObjectContainerP"
+- !private "9Capacitor17JSStringContainerP"
+- !private "9Capacitor7JSValueP"
+- !private "9Capacitor16JSValueContainerP"
+- !private "s25LosslessStringConvertibleP"
+- "So8NSCodingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So18NSNotificationNamea"
+- !private "10Foundation12NotificationV"
+- !private "So20NSNotificationCenterC"
+- "So9OS_objectC"
+- !private "So16NSOperationQueueC"
+- !private "Sq"
+- !private "So19NSProgressReportingP"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "7Combine9SchedulerP"
+- !private "ST"
+- "18CapacitorStatusBar0bC6PluginC"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So20UIFocusItemContainerP"
+- !private "So10UIKeyInputP"
+- !private "So20UIStatusBarAnimationV"
+- !private "So16UIStatusBarStyleV"
+- !private "So17UITextInputTraitsP"
+- !private "So20UIUserInterfaceStyleV"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Products/Debug-iphonesimulator/Capacitor/Capacitor.framework/Modules/Capacitor.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDV.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/App/Pods/Target Support Files/CapacitorStatusBar/CapacitorStatusBar-umbrella.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/CapacitorCordova.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVInvokedUrlCommand.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginMethod.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVScreenOrientationDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/AppDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVURLProtocol.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegateImpl.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/status-bar/ios/Plugin/StatusBarPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceConfiguration.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginManager.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVViewController.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVConfigParser.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/Capacitor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceDescriptor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/NSDictionary+CordovaPreferences.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin+Resources.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Products/Debug-iphonesimulator/Capacitor/Capacitor.framework/Headers/Capacitor-Swift.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginResult.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVAvailability.h"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorStatusBar.build/unextended-module.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCordova.build/module.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/module.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "0c741b7a56b5546effd645016c9531fa"

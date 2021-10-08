@@ -1,0 +1,460 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "JSDate"
+- "JSResultBody"
+- "JSCall"
+- "JSResultProtocol"
+- "JSResult"
+- "JSResultError"
+provides-nominal:
+- "9Capacitor6JSDateC"
+- "9Capacitor6JSCallV"
+- "9Capacitor16JSResultProtocolP"
+- "9Capacitor8JSResultV"
+- "9Capacitor13JSResultErrorV"
+provides-member:
+- ["9Capacitor6JSDateC", ""]
+- ["9Capacitor6JSCallV", ""]
+- ["9Capacitor16JSResultProtocolP", ""]
+- ["9Capacitor8JSResultV", ""]
+- ["9Capacitor13JSResultErrorV", ""]
+- ["9Capacitor16JSResultProtocolP", "callbackID"]
+- ["9Capacitor16JSResultProtocolP", "pluginID"]
+- ["9Capacitor16JSResultProtocolP", "methodName"]
+- ["9Capacitor8JSResultV", "init"]
+- ["9Capacitor13JSResultErrorV", "init"]
+provides-dynamic-lookup:
+- "toString"
+depends-top-level:
+- !private "+"
+- "=="
+- !private "??"
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "CAPLog"
+- "CAPPluginCallError"
+- "CAPPluginCallResult"
+- "Date"
+- !private "Dictionary"
+- !private "FloatLiteralType"
+- !private "ISO8601DateFormatter"
+- !private "IntegerLiteralType"
+- "JSCall"
+- "JSDate"
+- "JSResult"
+- "JSResultBody"
+- "JSResultError"
+- "JSResultProtocol"
+- "PluginCallResult"
+- !private "SerializationResult"
+- "String"
+- "StringLiteralType"
+- !private "_findStringSwitchCase"
+- !private "call"
+- !private "errorCode"
+- !private "errorDescription"
+- !private "errorMessage"
+- !private "result"
+- !private "~="
+depends-member:
+- !private ["SK", ""]
+- !private ["SK", "prefix"]
+- !private ["9Capacitor6CAPLogC", "print"]
+- !private ["9Capacitor18CAPPluginCallErrorC", "code"]
+- !private ["9Capacitor18CAPPluginCallErrorC", "error"]
+- !private ["9Capacitor18CAPPluginCallErrorC", "message"]
+- !private ["9Capacitor18CAPPluginCallErrorC", "resultData"]
+- !private ["9Capacitor19CAPPluginCallResultC", "resultData"]
+- !private ["s7CVarArgP", "code"]
+- !private ["s7CVarArgP", "error"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "message"]
+- !private ["s7CVarArgP", "prefix"]
+- !private ["s7CVarArgP", "resultData"]
+- !private ["s7CVarArgP", "string"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["Sl", ""]
+- !private ["Sl", "prefix"]
+- !private ["Sl", "subscript"]
+- !private ["SL", ""]
+- !private ["SL", "prefix"]
+- !private ["s28CustomDebugStringConvertibleP", "code"]
+- !private ["s28CustomDebugStringConvertibleP", "error"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "message"]
+- !private ["s28CustomDebugStringConvertibleP", "prefix"]
+- !private ["s28CustomDebugStringConvertibleP", "resultData"]
+- !private ["s28CustomDebugStringConvertibleP", "string"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s17CustomReflectableP", "prefix"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "code"]
+- !private ["s23CustomStringConvertibleP", "error"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "message"]
+- !private ["s23CustomStringConvertibleP", "prefix"]
+- !private ["s23CustomStringConvertibleP", "resultData"]
+- !private ["s23CustomStringConvertibleP", "string"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["Se", "prefix"]
+- !private ["Se", "subscript"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SD", "subscript"]
+- !private ["SE", "prefix"]
+- !private ["SE", "subscript"]
+- ["SQ", "=="]
+- ["SQ", "Default_RawValue"]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "code"]
+- !private ["SQ", "empty"]
+- !private ["SQ", "error"]
+- !private ["SQ", "findStringSwitchCase"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- ["SQ", "invalidObject"]
+- !private ["SQ", "message"]
+- !private ["SQ", "prefix"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "resultData"]
+- !private ["SQ", "string"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "undefined"]
+- ["s5ErrorP", "invalidObject"]
+- !private ["s5ErrorP", "localizedDescription"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "prefix"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "prefix"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "prefix"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "prefix"]
+- ["So11NSFormatterC", ""]
+- !private ["So11NSFormatterC", "init"]
+- !private ["So11NSFormatterC", "string"]
+- !private ["So11NSFormatterC", "stringFromDate"]
+- ["SH", "=="]
+- ["SH", "Default_RawValue"]
+- ["SH", "RawValue"]
+- !private ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "code"]
+- !private ["SH", "empty"]
+- !private ["SH", "error"]
+- !private ["SH", "findStringSwitchCase"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- ["SH", "invalidObject"]
+- !private ["SH", "message"]
+- !private ["SH", "prefix"]
+- ["SH", "rawValue"]
+- !private ["SH", "resultData"]
+- !private ["SH", "string"]
+- !private ["SH", "subscript"]
+- !private ["SH", "undefined"]
+- !private ["So22NSISO8601DateFormatterC", "init"]
+- !private ["So22NSISO8601DateFormatterC", "string"]
+- ["9Capacitor6JSCallV", "String"]
+- ["9Capacitor6JSCallV", "callbackId"]
+- ["9Capacitor6JSCallV", "init"]
+- ["9Capacitor6JSCallV", "method"]
+- ["9Capacitor6JSCallV", "options"]
+- ["9Capacitor6JSCallV", "pluginId"]
+- ["9Capacitor6JSDateC", "Date"]
+- !private ["9Capacitor6JSDateC", "ISO8601DateFormatter"]
+- ["9Capacitor6JSDateC", "String"]
+- ["9Capacitor6JSDateC", "deinit"]
+- ["9Capacitor6JSDateC", "init"]
+- ["9Capacitor6JSDateC", "toString"]
+- !private ["9Capacitor8JSResultV", "CAPLog"]
+- ["9Capacitor8JSResultV", "CAPPluginCallResult"]
+- ["9Capacitor8JSResultV", "JSCall"]
+- ["9Capacitor8JSResultV", "PluginCallResult"]
+- !private ["9Capacitor8JSResultV", "SerializationResult"]
+- ["9Capacitor8JSResultV", "String"]
+- ["9Capacitor8JSResultV", ""]
+- ["9Capacitor8JSResultV", "call"]
+- ["9Capacitor8JSResultV", "callbackID"]
+- ["9Capacitor8JSResultV", "init"]
+- ["9Capacitor8JSResultV", "jsonPayload"]
+- ["9Capacitor8JSResultV", "methodName"]
+- ["9Capacitor8JSResultV", "pluginID"]
+- ["9Capacitor8JSResultV", "result"]
+- !private ["9Capacitor13JSResultErrorV", "CAPLog"]
+- ["9Capacitor13JSResultErrorV", "CAPPluginCallError"]
+- ["9Capacitor13JSResultErrorV", "JSCall"]
+- ["9Capacitor13JSResultErrorV", "PluginCallResult"]
+- !private ["9Capacitor13JSResultErrorV", "SerializationResult"]
+- ["9Capacitor13JSResultErrorV", "String"]
+- ["9Capacitor13JSResultErrorV", ""]
+- ["9Capacitor13JSResultErrorV", "call"]
+- ["9Capacitor13JSResultErrorV", "callbackID"]
+- ["9Capacitor13JSResultErrorV", "errorCode"]
+- ["9Capacitor13JSResultErrorV", "errorDescription"]
+- ["9Capacitor13JSResultErrorV", "errorMessage"]
+- ["9Capacitor13JSResultErrorV", "init"]
+- ["9Capacitor13JSResultErrorV", "jsonPayload"]
+- ["9Capacitor13JSResultErrorV", "methodName"]
+- ["9Capacitor13JSResultErrorV", "pluginID"]
+- ["9Capacitor13JSResultErrorV", "result"]
+- !private ["9Capacitor16JSResultProtocolP", "CAPLog"]
+- ["9Capacitor16JSResultProtocolP", "JSCall"]
+- !private ["9Capacitor16JSResultProtocolP", "SerializationResult"]
+- ["9Capacitor16JSResultProtocolP", "String"]
+- ["9Capacitor16JSResultProtocolP", ""]
+- ["9Capacitor16JSResultProtocolP", "call"]
+- ["9Capacitor16JSResultProtocolP", "callbackID"]
+- !private ["9Capacitor16JSResultProtocolP", "errorCode"]
+- !private ["9Capacitor16JSResultProtocolP", "errorDescription"]
+- !private ["9Capacitor16JSResultProtocolP", "errorMessage"]
+- ["9Capacitor16JSResultProtocolP", "jsonPayload"]
+- ["9Capacitor16JSResultProtocolP", "methodName"]
+- ["9Capacitor16JSResultProtocolP", "pluginID"]
+- !private ["9Capacitor16JSResultProtocolP", "result"]
+- !private ["9Capacitor7JSValueP", "prefix"]
+- !private ["9Capacitor7JSValueP", "subscript"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "prefix"]
+- !private ["s10MirrorPathP", "prefix"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "prefix"]
+- !private ["So8NSCodingP", "string"]
+- !private ["So8NSCodingP", "stringFromDate"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "prefix"]
+- !private ["So9NSCopyingP", "string"]
+- !private ["So9NSCopyingP", "stringFromDate"]
+- !private ["So21NSItemProviderReadingP", "prefix"]
+- !private ["So21NSItemProviderWritingP", "prefix"]
+- !private ["So16NSMutableCopyingP", "prefix"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "code"]
+- !private ["So8NSObjectC", "error"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "message"]
+- !private ["So8NSObjectC", "prefix"]
+- !private ["So8NSObjectC", "resultData"]
+- !private ["So8NSObjectC", "string"]
+- !private ["So8NSObjectC", "stringForObjectValue"]
+- !private ["So8NSObjectC", "stringFromDate"]
+- !private ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "code"]
+- !private ["So8NSObjectP", "error"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "message"]
+- !private ["So8NSObjectP", "prefix"]
+- !private ["So8NSObjectP", "resultData"]
+- !private ["So8NSObjectP", "string"]
+- !private ["So8NSObjectP", "stringForObjectValue"]
+- !private ["So8NSObjectP", "stringFromDate"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "prefix"]
+- !private ["So14NSSecureCodingP", "string"]
+- !private ["So8NSStringC", "prefix"]
+- ["9Capacitor16PluginCallResultO", "SerializationError"]
+- !private ["9Capacitor16PluginCallResultO", "dictionary"]
+- !private ["9Capacitor16PluginCallResultO", "jsonRepresentation"]
+- !private ["Sm", "prefix"]
+- ["SY", "=="]
+- ["SY", "Default_RawValue"]
+- ["SY", "RawValue"]
+- !private ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- !private ["SY", "empty"]
+- !private ["SY", "findStringSwitchCase"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "rawValue"]
+- !private ["SY", "undefined"]
+- !private ["ST", ""]
+- !private ["ST", "prefix"]
+- !private ["ST", "subscript"]
+- !private ["9Capacitor16PluginCallResultO18SerializationErrorO", ""]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "invalidObject"]
+- !private ["SS", "prefix"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
+- !private ["Sy", "prefix"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "prefix"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "prefix"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "prefix"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "prefix"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "prefix"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "prefix"]
+- !private ["s19_HasContiguousBytesP", "prefix"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "prefix"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "code"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "error"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "message"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "prefix"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resultData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "code"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "error"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "message"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "prefix"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resultData"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "string"]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "prefix"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- !private "SK"
+- !private "9Capacitor6CAPLogC"
+- !private "9Capacitor18CAPPluginCallErrorC"
+- !private "9Capacitor19CAPPluginCallResultC"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "SD"
+- !private "SE"
+- "SQ"
+- "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "So11NSFormatterC"
+- "SH"
+- !private "So22NSISO8601DateFormatterC"
+- "9Capacitor6JSCallV"
+- "9Capacitor6JSDateC"
+- "9Capacitor8JSResultV"
+- "9Capacitor13JSResultErrorV"
+- "9Capacitor16JSResultProtocolP"
+- !private "9Capacitor7JSValueP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "9Capacitor16PluginCallResultO"
+- !private "Sm"
+- "SY"
+- !private "ST"
+- "9Capacitor16PluginCallResultO18SerializationErrorO"
+- !private "SS"
+- !private "s27StringInterpolationProtocolP"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDV.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/CapacitorCordova.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVInvokedUrlCommand.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginMethod.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVScreenOrientationDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/AppDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVURLProtocol.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegateImpl.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceConfiguration.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginManager.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVViewController.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVConfigParser.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/Capacitor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceDescriptor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/NSDictionary+CordovaPreferences.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin+Resources.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginResult.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVAvailability.h"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/unextended-module.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCordova.build/module.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "00612306c5b882a6f55c440ffd093637"

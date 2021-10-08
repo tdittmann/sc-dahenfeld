@@ -1,0 +1,333 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TmpViewController"
+provides-nominal:
+- "9Capacitor17TmpViewControllerC"
+provides-member:
+- ["9Capacitor17TmpViewControllerC", ""]
+provides-dynamic-lookup:
+- "count"
+- "viewDidAppear"
+depends-top-level:
+- !private "+="
+- !private ">"
+- "Bool"
+- !private "CapacitorBridge"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- !private "NotificationCenter"
+- "TmpViewController"
+- "UIViewController"
+- !private "count"
+depends-member:
+- ["SK", ""]
+- !private ["9Capacitor17CAPBridgeProtocolP", "tmpVCAppeared"]
+- !private ["s7CVarArgP", "CapacitorBridge"]
+- !private ["s7CVarArgP", "NotificationCenter"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "default"]
+- !private ["s7CVarArgP", "post"]
+- !private ["s7CVarArgP", "tmpVCAppeared"]
+- !private ["s7CVarArgP", "viewDidAppear"]
+- !private ["9Capacitor0A6BridgeC", "tmpVCAppeared"]
+- ["Sl", ""]
+- ["SL", ""]
+- !private ["s28CustomDebugStringConvertibleP", "CapacitorBridge"]
+- !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "post"]
+- !private ["s28CustomDebugStringConvertibleP", "tmpVCAppeared"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidAppear"]
+- !private ["s23CustomStringConvertibleP", "CapacitorBridge"]
+- !private ["s23CustomStringConvertibleP", "NotificationCenter"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "post"]
+- !private ["s23CustomStringConvertibleP", "tmpVCAppeared"]
+- !private ["s23CustomStringConvertibleP", "viewDidAppear"]
+- !private ["SQ", "CapacitorBridge"]
+- !private ["SQ", "NotificationCenter"]
+- !private ["SQ", "RawValue"]
+- ["SQ", ""]
+- !private ["SQ", "count"]
+- !private ["SQ", "default"]
+- !private ["SQ", "init"]
+- !private ["SQ", "post"]
+- !private ["SQ", "tmpVCAppeared"]
+- !private ["SQ", "viewDidAppear"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SH", "CapacitorBridge"]
+- !private ["SH", "NotificationCenter"]
+- !private ["SH", "RawValue"]
+- ["SH", ""]
+- !private ["SH", "count"]
+- !private ["SH", "default"]
+- !private ["SH", "init"]
+- !private ["SH", "post"]
+- !private ["SH", "tmpVCAppeared"]
+- !private ["SH", "viewDidAppear"]
+- ["s25LosslessStringConvertibleP", ""]
+- ["So8NSCodingP", "Bool"]
+- !private ["So8NSCodingP", "CapacitorBridge"]
+- !private ["So8NSCodingP", "NotificationCenter"]
+- ["So8NSCodingP", ""]
+- ["So8NSCodingP", "count"]
+- ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "viewDidAppear"]
+- ["So26NSExtensionRequestHandlingP", "Bool"]
+- !private ["So26NSExtensionRequestHandlingP", "CapacitorBridge"]
+- !private ["So26NSExtensionRequestHandlingP", "NotificationCenter"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- ["So26NSExtensionRequestHandlingP", "count"]
+- ["So26NSExtensionRequestHandlingP", "init"]
+- ["So26NSExtensionRequestHandlingP", "viewDidAppear"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "CapacitorBridge"]
+- !private ["So8NSObjectC", "NotificationCenter"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "count"]
+- !private ["So8NSObjectC", "default"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "post"]
+- !private ["So8NSObjectC", "postNotification"]
+- !private ["So8NSObjectC", "postNotificationName"]
+- !private ["So8NSObjectC", "tmpVCAppeared"]
+- ["So8NSObjectC", "viewDidAppear"]
+- ["So8NSObjectP", "Bool"]
+- !private ["So8NSObjectP", "CapacitorBridge"]
+- !private ["So8NSObjectP", "NotificationCenter"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "count"]
+- !private ["So8NSObjectP", "default"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "post"]
+- !private ["So8NSObjectP", "postNotification"]
+- !private ["So8NSObjectP", "postNotificationName"]
+- !private ["So8NSObjectP", "tmpVCAppeared"]
+- ["So8NSObjectP", "viewDidAppear"]
+- !private ["So18NSNotificationNamea", "RawValue"]
+- !private ["So18NSNotificationNamea", "init"]
+- !private ["So20NSNotificationCenterC", "default"]
+- !private ["So20NSNotificationCenterC", "post"]
+- !private ["SY", "RawValue"]
+- !private ["SY", ""]
+- !private ["SY", "init"]
+- ["ST", ""]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
+- ["9Capacitor17TmpViewControllerC", "Bool"]
+- !private ["9Capacitor17TmpViewControllerC", "CapacitorBridge"]
+- !private ["9Capacitor17TmpViewControllerC", "NotificationCenter"]
+- ["9Capacitor17TmpViewControllerC", ""]
+- ["9Capacitor17TmpViewControllerC", "count"]
+- ["9Capacitor17TmpViewControllerC", "deinit"]
+- ["9Capacitor17TmpViewControllerC", "init"]
+- ["9Capacitor17TmpViewControllerC", "viewDidAppear"]
+- ["So21UIAppearanceContainerP", "Bool"]
+- !private ["So21UIAppearanceContainerP", "CapacitorBridge"]
+- !private ["So21UIAppearanceContainerP", "NotificationCenter"]
+- ["So21UIAppearanceContainerP", ""]
+- ["So21UIAppearanceContainerP", "count"]
+- ["So21UIAppearanceContainerP", "init"]
+- ["So21UIAppearanceContainerP", "viewDidAppear"]
+- ["So18UIContentContainerP", "Bool"]
+- !private ["So18UIContentContainerP", "CapacitorBridge"]
+- !private ["So18UIContentContainerP", "NotificationCenter"]
+- ["So18UIContentContainerP", ""]
+- ["So18UIContentContainerP", "count"]
+- ["So18UIContentContainerP", "init"]
+- ["So18UIContentContainerP", "viewDidAppear"]
+- ["So18UIFocusEnvironmentP", "Bool"]
+- !private ["So18UIFocusEnvironmentP", "CapacitorBridge"]
+- !private ["So18UIFocusEnvironmentP", "NotificationCenter"]
+- ["So18UIFocusEnvironmentP", ""]
+- ["So18UIFocusEnvironmentP", "count"]
+- ["So18UIFocusEnvironmentP", "init"]
+- ["So18UIFocusEnvironmentP", "viewDidAppear"]
+- ["So30UIPasteConfigurationSupportingP", "Bool"]
+- !private ["So30UIPasteConfigurationSupportingP", "CapacitorBridge"]
+- !private ["So30UIPasteConfigurationSupportingP", "NotificationCenter"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So30UIPasteConfigurationSupportingP", "count"]
+- ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So30UIPasteConfigurationSupportingP", "viewDidAppear"]
+- ["So11UIResponderC", "Bool"]
+- !private ["So11UIResponderC", "CapacitorBridge"]
+- !private ["So11UIResponderC", "NotificationCenter"]
+- ["So11UIResponderC", ""]
+- ["So11UIResponderC", "count"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "viewDidAppear"]
+- ["So30UIResponderStandardEditActionsP", "Bool"]
+- !private ["So30UIResponderStandardEditActionsP", "CapacitorBridge"]
+- !private ["So30UIResponderStandardEditActionsP", "NotificationCenter"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- ["So30UIResponderStandardEditActionsP", "count"]
+- ["So30UIResponderStandardEditActionsP", "init"]
+- ["So30UIResponderStandardEditActionsP", "viewDidAppear"]
+- ["So16UIStateRestoringP", "Bool"]
+- !private ["So16UIStateRestoringP", "CapacitorBridge"]
+- !private ["So16UIStateRestoringP", "NotificationCenter"]
+- ["So16UIStateRestoringP", ""]
+- ["So16UIStateRestoringP", "count"]
+- ["So16UIStateRestoringP", "init"]
+- ["So16UIStateRestoringP", "viewDidAppear"]
+- ["So18UITraitEnvironmentP", "Bool"]
+- !private ["So18UITraitEnvironmentP", "CapacitorBridge"]
+- !private ["So18UITraitEnvironmentP", "NotificationCenter"]
+- ["So18UITraitEnvironmentP", ""]
+- ["So18UITraitEnvironmentP", "count"]
+- ["So18UITraitEnvironmentP", "init"]
+- ["So18UITraitEnvironmentP", "viewDidAppear"]
+- ["So23UIUserActivityRestoringP", "Bool"]
+- !private ["So23UIUserActivityRestoringP", "CapacitorBridge"]
+- !private ["So23UIUserActivityRestoringP", "NotificationCenter"]
+- ["So23UIUserActivityRestoringP", ""]
+- ["So23UIUserActivityRestoringP", "count"]
+- ["So23UIUserActivityRestoringP", "init"]
+- ["So23UIUserActivityRestoringP", "viewDidAppear"]
+- ["So16UIViewControllerC", "Bool"]
+- !private ["So16UIViewControllerC", "CapacitorBridge"]
+- !private ["So16UIViewControllerC", "NotificationCenter"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "count"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "viewDidAppear"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "RawValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", ""]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CapacitorBridge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "post"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tmpVCAppeared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidAppear"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CapacitorBridge"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NotificationCenter"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "count"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "default"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "post"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tmpVCAppeared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidAppear"]
+- !private ["s21_ObjectiveCBridgeableP", "RawValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s20_SwiftNewtypeWrapperP", "RawValue"]
+- !private ["s20_SwiftNewtypeWrapperP", "init"]
+depends-nominal:
+- "SK"
+- !private "9Capacitor17CAPBridgeProtocolP"
+- "s7CVarArgP"
+- !private "9Capacitor0A6BridgeC"
+- "Sl"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So18NSNotificationNamea"
+- !private "So20NSNotificationCenterC"
+- !private "SY"
+- "ST"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "9Capacitor17TmpViewControllerC"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- "So18UIFocusEnvironmentP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- "So16UIViewControllerC"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDV.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/CapacitorCordova.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVInvokedUrlCommand.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginMethod.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVScreenOrientationDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/AppDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVURLProtocol.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegateImpl.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceConfiguration.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginManager.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVViewController.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVConfigParser.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/Capacitor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceDescriptor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/NSDictionary+CordovaPreferences.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin+Resources.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginResult.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVAvailability.h"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/unextended-module.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCordova.build/module.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "7030233bcd9516cf729875ffee207811"

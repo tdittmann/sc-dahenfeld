@@ -1,0 +1,494 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PluginCallResultData"
+- "PluginCallResult"
+- "CAPPluginCallResult"
+- "CAPPluginCallError"
+provides-nominal:
+- "9Capacitor16PluginCallResultO"
+- "9Capacitor16PluginCallResultO18SerializationErrorO"
+- "9Capacitor19CAPPluginCallResultC"
+- "9Capacitor18CAPPluginCallErrorC"
+provides-member:
+- ["9Capacitor16PluginCallResultO", ""]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", ""]
+- ["9Capacitor19CAPPluginCallResultC", ""]
+- ["9Capacitor18CAPPluginCallErrorC", ""]
+provides-dynamic-lookup:
+- "code"
+- "data"
+- "error"
+- "message"
+- "resultData"
+depends-top-level:
+- "=="
+- !private "Array"
+- "AssignmentPrecedence"
+- "CAPPluginCallError"
+- "CAPPluginCallResult"
+- !private "CastingPrecedence"
+- "Date"
+- "Error"
+- !private "FloatLiteralType"
+- "ISO8601DateFormatter"
+- !private "IntegerLiteralType"
+- !private "JSONSerialization"
+- "NSObject"
+- "PluginCallResult"
+- "PluginCallResultData"
+- !private "SerializationError"
+- "String"
+- "prepare"
+- !private "resultData"
+depends-member:
+- !private ["Sa", "map"]
+- !private ["SK", ""]
+- !private ["SK", "init"]
+- !private ["SK", "map"]
+- ["9Capacitor18CAPPluginCallErrorC", "Error"]
+- ["9Capacitor18CAPPluginCallErrorC", "PluginCallResult"]
+- ["9Capacitor18CAPPluginCallErrorC", "PluginCallResultData"]
+- ["9Capacitor18CAPPluginCallErrorC", "String"]
+- ["9Capacitor18CAPPluginCallErrorC", ""]
+- ["9Capacitor18CAPPluginCallErrorC", "code"]
+- ["9Capacitor18CAPPluginCallErrorC", "data"]
+- ["9Capacitor18CAPPluginCallErrorC", "deinit"]
+- ["9Capacitor18CAPPluginCallErrorC", "error"]
+- ["9Capacitor18CAPPluginCallErrorC", "init"]
+- ["9Capacitor18CAPPluginCallErrorC", "message"]
+- ["9Capacitor18CAPPluginCallErrorC", "resultData"]
+- ["9Capacitor19CAPPluginCallResultC", "PluginCallResult"]
+- ["9Capacitor19CAPPluginCallResultC", "PluginCallResultData"]
+- ["9Capacitor19CAPPluginCallResultC", ""]
+- ["9Capacitor19CAPPluginCallResultC", "data"]
+- ["9Capacitor19CAPPluginCallResultC", "deinit"]
+- ["9Capacitor19CAPPluginCallResultC", "init"]
+- ["9Capacitor19CAPPluginCallResultC", "resultData"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "code"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "error"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isValidJSONObject"]
+- !private ["s7CVarArgP", "map"]
+- !private ["s7CVarArgP", "mapValues"]
+- !private ["s7CVarArgP", "merge"]
+- !private ["s7CVarArgP", "message"]
+- !private ["s7CVarArgP", "resultData"]
+- !private ["s7CVarArgP", "string"]
+- !private ["9Capacitor0A9ExtensionP", "map"]
+- !private ["Sl", ""]
+- !private ["Sl", "init"]
+- !private ["Sl", "map"]
+- !private ["Sl", "mapValues"]
+- !private ["Sl", "merge"]
+- !private ["SL", ""]
+- !private ["SL", "init"]
+- !private ["10Foundation15ContiguousBytesP", "map"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "code"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- !private ["s28CustomDebugStringConvertibleP", "dictionary"]
+- !private ["s28CustomDebugStringConvertibleP", "error"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isValidJSONObject"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "mapValues"]
+- !private ["s28CustomDebugStringConvertibleP", "merge"]
+- !private ["s28CustomDebugStringConvertibleP", "message"]
+- !private ["s28CustomDebugStringConvertibleP", "resultData"]
+- !private ["s28CustomDebugStringConvertibleP", "string"]
+- !private ["s17CustomReflectableP", "dictionary"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s17CustomReflectableP", "mapValues"]
+- !private ["s17CustomReflectableP", "merge"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "code"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "error"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isValidJSONObject"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- !private ["s23CustomStringConvertibleP", "mapValues"]
+- !private ["s23CustomStringConvertibleP", "merge"]
+- !private ["s23CustomStringConvertibleP", "message"]
+- !private ["s23CustomStringConvertibleP", "resultData"]
+- !private ["s23CustomStringConvertibleP", "string"]
+- !private ["s23CustomStringConvertibleP", "utf8"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "map"]
+- !private ["Se", "dictionary"]
+- !private ["Se", "init"]
+- !private ["Se", "map"]
+- !private ["Se", "mapValues"]
+- !private ["Se", "merge"]
+- !private ["SD", "mapValues"]
+- !private ["SD", "merge"]
+- !private ["SE", "dictionary"]
+- !private ["SE", "init"]
+- !private ["SE", "map"]
+- !private ["SE", "mapValues"]
+- !private ["SE", "merge"]
+- !private ["SS10FoundationE8EncodingV", "utf8"]
+- ["SQ", "=="]
+- !private ["SQ", "ArrayLiteralElement"]
+- !private ["SQ", "Element"]
+- ["SQ", ""]
+- ["SQ", "_code"]
+- ["SQ", "_domain"]
+- ["SQ", "_getEmbeddedNSError"]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "_userInfo"]
+- ["SQ", "code"]
+- !private ["SQ", "data"]
+- !private ["SQ", "dictionary"]
+- ["SQ", "domain"]
+- !private ["SQ", "error"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- !private ["SQ", "invalidObject"]
+- !private ["SQ", "isValidJSONObject"]
+- !private ["SQ", "map"]
+- !private ["SQ", "mapValues"]
+- !private ["SQ", "merge"]
+- !private ["SQ", "message"]
+- !private ["SQ", "resultData"]
+- !private ["SQ", "string"]
+- ["SQ", "userInfo"]
+- !private ["SQ", "utf8"]
+- ["s5ErrorP", "=="]
+- ["s5ErrorP", ""]
+- ["s5ErrorP", "_code"]
+- ["s5ErrorP", "_domain"]
+- ["s5ErrorP", "_getEmbeddedNSError"]
+- ["s5ErrorP", "_rawHashValue"]
+- ["s5ErrorP", "_userInfo"]
+- ["s5ErrorP", "code"]
+- ["s5ErrorP", "domain"]
+- ["s5ErrorP", "hash"]
+- ["s5ErrorP", "hashValue"]
+- !private ["s5ErrorP", "invalidObject"]
+- ["s5ErrorP", "userInfo"]
+- !private ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
+- !private ["s25ExpressibleByArrayLiteralP", "Element"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "map"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "mapValues"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "merge"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "dictionary"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["So11NSFormatterC", ""]
+- ["So11NSFormatterC", "init"]
+- !private ["So11NSFormatterC", "string"]
+- !private ["So11NSFormatterC", "stringFromDate"]
+- ["SH", "=="]
+- ["SH", ""]
+- ["SH", "_code"]
+- ["SH", "_domain"]
+- ["SH", "_getEmbeddedNSError"]
+- ["SH", "_rawHashValue"]
+- ["SH", "_userInfo"]
+- ["SH", "code"]
+- !private ["SH", "data"]
+- !private ["SH", "dictionary"]
+- ["SH", "domain"]
+- !private ["SH", "error"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- !private ["SH", "invalidObject"]
+- !private ["SH", "isValidJSONObject"]
+- !private ["SH", "map"]
+- !private ["SH", "mapValues"]
+- !private ["SH", "merge"]
+- !private ["SH", "message"]
+- !private ["SH", "resultData"]
+- !private ["SH", "string"]
+- ["SH", "userInfo"]
+- !private ["SH", "utf8"]
+- !private ["s6HasherV", "combine"]
+- ["So22NSISO8601DateFormatterC", "init"]
+- !private ["So22NSISO8601DateFormatterC", "string"]
+- !private ["So19NSJSONSerializationC", "data"]
+- !private ["So19NSJSONSerializationC", "isValidJSONObject"]
+- !private ["9Capacitor7JSValueP", "init"]
+- !private ["9Capacitor7JSValueP", "map"]
+- !private ["9Capacitor7JSValueP", "mapValues"]
+- !private ["9Capacitor7JSValueP", "merge"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", ""]
+- !private ["SM", "map"]
+- !private ["10Foundation19MutableDataProtocolP", "map"]
+- ["So8NSCodingP", ""]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "string"]
+- !private ["So8NSCodingP", "stringFromDate"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "string"]
+- !private ["So9NSCopyingP", "stringFromDate"]
+- ["So8NSObjectC", "Error"]
+- ["So8NSObjectC", "PluginCallResult"]
+- ["So8NSObjectC", "PluginCallResultData"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "code"]
+- ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "dataWithJSONObject"]
+- ["So8NSObjectC", "error"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isValidJSONObject"]
+- ["So8NSObjectC", "message"]
+- ["So8NSObjectC", "resultData"]
+- !private ["So8NSObjectC", "string"]
+- !private ["So8NSObjectC", "stringForObjectValue"]
+- !private ["So8NSObjectC", "stringFromDate"]
+- ["So8NSObjectP", "Error"]
+- ["So8NSObjectP", "PluginCallResult"]
+- ["So8NSObjectP", "PluginCallResultData"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "code"]
+- ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "dataWithJSONObject"]
+- ["So8NSObjectP", "error"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isValidJSONObject"]
+- ["So8NSObjectP", "message"]
+- ["So8NSObjectP", "resultData"]
+- !private ["So8NSObjectP", "string"]
+- !private ["So8NSObjectP", "stringForObjectValue"]
+- !private ["So8NSObjectP", "stringFromDate"]
+- ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "string"]
+- !private ["s9OptionSetP", "ArrayLiteralElement"]
+- !private ["s9OptionSetP", "Element"]
+- !private ["s9OptionSetP", "init"]
+- !private ["Sq", "dictionary"]
+- !private ["9Capacitor16PluginCallResultO", "Date"]
+- ["9Capacitor16PluginCallResultO", "Error"]
+- ["9Capacitor16PluginCallResultO", "ISO8601DateFormatter"]
+- !private ["9Capacitor16PluginCallResultO", "JSONSerialization"]
+- !private ["9Capacitor16PluginCallResultO", "PluginCallResult"]
+- ["9Capacitor16PluginCallResultO", "PluginCallResultData"]
+- ["9Capacitor16PluginCallResultO", "SerializationError"]
+- ["9Capacitor16PluginCallResultO", "String"]
+- ["9Capacitor16PluginCallResultO", "dictionary"]
+- !private ["9Capacitor16PluginCallResultO", "formatter"]
+- ["9Capacitor16PluginCallResultO", "jsonRepresentation"]
+- !private ["9Capacitor16PluginCallResultO", "prepare"]
+- !private ["Sk", ""]
+- !private ["Sk", "map"]
+- !private ["Sm", ""]
+- !private ["Sm", "init"]
+- !private ["Sm", "map"]
+- !private ["SY", "ArrayLiteralElement"]
+- !private ["SY", "Element"]
+- !private ["SY", ""]
+- !private ["SY", "init"]
+- !private ["SY", "utf8"]
+- !private ["ST", ""]
+- !private ["ST", "init"]
+- !private ["ST", "map"]
+- !private ["ST", "mapValues"]
+- !private ["ST", "merge"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "=="]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", ""]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "__derived_enum_equals"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "_code"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "_domain"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "_getEmbeddedNSError"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "_rawHashValue"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "_userInfo"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "code"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "domain"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "hash"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "hashValue"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "invalidObject"]
+- ["9Capacitor16PluginCallResultO18SerializationErrorO", "userInfo"]
+- !private ["s10SetAlgebraP", "ArrayLiteralElement"]
+- !private ["s10SetAlgebraP", "Element"]
+- !private ["s10SetAlgebraP", ""]
+- !private ["s10SetAlgebraP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So20NSJSONWritingOptionsV", "ArrayLiteralElement"]
+- !private ["So20NSJSONWritingOptionsV", "Element"]
+- !private ["So20NSJSONWritingOptionsV", "init"]
+- !private ["s14_ArrayProtocolP", "map"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "map"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "map"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "map"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "mapValues"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "merge"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "code"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "error"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isValidJSONObject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "message"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resultData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "code"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "data"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "error"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isValidJSONObject"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "message"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resultData"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "string"]
+- !private ["s21_ObjectiveCBridgeableP", "dictionary"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+- !private ["s21_ObjectiveCBridgeableP", "mapValues"]
+- !private ["s21_ObjectiveCBridgeableP", "merge"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- "9Capacitor18CAPPluginCallErrorC"
+- "9Capacitor19CAPPluginCallResultC"
+- "s7CVarArgP"
+- !private "9Capacitor0A9ExtensionP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SD"
+- !private "SE"
+- !private "SS10FoundationE8EncodingV"
+- "SQ"
+- "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "So11NSFormatterC"
+- "SH"
+- !private "s6HasherV"
+- "So22NSISO8601DateFormatterC"
+- !private "So19NSJSONSerializationC"
+- !private "9Capacitor7JSValueP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So14NSSecureCodingP"
+- !private "s9OptionSetP"
+- !private "Sq"
+- "9Capacitor16PluginCallResultO"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "ST"
+- "9Capacitor16PluginCallResultO18SerializationErrorO"
+- !private "s10SetAlgebraP"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So20NSJSONWritingOptionsV"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDV.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/CapacitorCordova.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVInvokedUrlCommand.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginMethod.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVScreenOrientationDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/AppDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVURLProtocol.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegateImpl.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceConfiguration.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginManager.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVViewController.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVConfigParser.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/Capacitor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceDescriptor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/NSDictionary+CordovaPreferences.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin+Resources.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginResult.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVAvailability.h"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/unextended-module.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCordova.build/module.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "8e5608f3dada0121b77c56bd12ec73d3"

@@ -1,0 +1,272 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "Sa"
+provides-member:
+- ["Sa", ""]
+- ["9Capacitor0A20ExtensionTypeWrapperV", ""]
+- ["9Capacitor0A20ExtensionTypeWrapperV", "replacingNullValues"]
+- ["9Capacitor0A20ExtensionTypeWrapperV", "replacingOptionalValues"]
+- ["9Capacitor0A20ExtensionTypeWrapperV", "replacingNullValues"]
+- ["9Capacitor0A20ExtensionTypeWrapperV", "replacingOptionalValues"]
+provides-dynamic-lookup:
+depends-top-level:
+- "Array"
+- "CapacitorExtension"
+- "CapacitorExtensionTypeWrapper"
+- !private "CastingPrecedence"
+- "JSValue"
+- "NSNull"
+- "T"
+- !private "baseType"
+depends-member:
+- ["Sa", "CapacitorType"]
+- ["Sa", "Default_CapacitorType"]
+- ["Sa", ""]
+- ["Sa", "_Default_CapacitorType"]
+- ["Sa", "capacitor"]
+- !private ["Sa", "map"]
+- ["SK", "CapacitorType"]
+- ["SK", "Default_CapacitorType"]
+- ["SK", ""]
+- ["SK", "_Default_CapacitorType"]
+- ["SK", "capacitor"]
+- !private ["SK", "map"]
+- !private ["So8CAActionP", "init"]
+- ["s7CVarArgP", "CapacitorType"]
+- ["s7CVarArgP", "Default_CapacitorType"]
+- ["s7CVarArgP", "_Default_CapacitorType"]
+- ["s7CVarArgP", "capacitor"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "map"]
+- ["9Capacitor0A9ExtensionP", "CapacitorType"]
+- ["9Capacitor0A9ExtensionP", "Default_CapacitorType"]
+- ["9Capacitor0A9ExtensionP", ""]
+- ["9Capacitor0A9ExtensionP", "_Default_CapacitorType"]
+- ["9Capacitor0A9ExtensionP", "capacitor"]
+- !private ["9Capacitor0A9ExtensionP", "map"]
+- ["9Capacitor0A20ExtensionTypeWrapperV", "JSValue"]
+- !private ["9Capacitor0A20ExtensionTypeWrapperV", "NSNull"]
+- ["9Capacitor0A20ExtensionTypeWrapperV", ""]
+- !private ["9Capacitor0A20ExtensionTypeWrapperV", "baseType"]
+- ["9Capacitor0A20ExtensionTypeWrapperV", "replacingNullValues"]
+- ["9Capacitor0A20ExtensionTypeWrapperV", "replacingOptionalValues"]
+- ["Sl", "CapacitorType"]
+- ["Sl", "Default_CapacitorType"]
+- ["Sl", ""]
+- ["Sl", "_Default_CapacitorType"]
+- ["Sl", "capacitor"]
+- !private ["Sl", "map"]
+- ["10Foundation15ContiguousBytesP", "CapacitorType"]
+- ["10Foundation15ContiguousBytesP", "Default_CapacitorType"]
+- ["10Foundation15ContiguousBytesP", "_Default_CapacitorType"]
+- ["10Foundation15ContiguousBytesP", "capacitor"]
+- !private ["10Foundation15ContiguousBytesP", "map"]
+- ["s28CustomDebugStringConvertibleP", "CapacitorType"]
+- ["s28CustomDebugStringConvertibleP", "Default_CapacitorType"]
+- ["s28CustomDebugStringConvertibleP", "_Default_CapacitorType"]
+- ["s28CustomDebugStringConvertibleP", "capacitor"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- ["s17CustomReflectableP", "CapacitorType"]
+- ["s17CustomReflectableP", "Default_CapacitorType"]
+- ["s17CustomReflectableP", "_Default_CapacitorType"]
+- ["s17CustomReflectableP", "capacitor"]
+- !private ["s17CustomReflectableP", "map"]
+- ["s23CustomStringConvertibleP", "CapacitorType"]
+- ["s23CustomStringConvertibleP", "Default_CapacitorType"]
+- ["s23CustomStringConvertibleP", "_Default_CapacitorType"]
+- ["s23CustomStringConvertibleP", "capacitor"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- ["10Foundation12DataProtocolP", "CapacitorType"]
+- ["10Foundation12DataProtocolP", "Default_CapacitorType"]
+- ["10Foundation12DataProtocolP", ""]
+- ["10Foundation12DataProtocolP", "_Default_CapacitorType"]
+- ["10Foundation12DataProtocolP", "capacitor"]
+- !private ["10Foundation12DataProtocolP", "map"]
+- ["Se", "CapacitorType"]
+- ["Se", "Default_CapacitorType"]
+- ["Se", "_Default_CapacitorType"]
+- ["Se", "capacitor"]
+- !private ["Se", "map"]
+- ["SE", "CapacitorType"]
+- ["SE", "Default_CapacitorType"]
+- ["SE", "_Default_CapacitorType"]
+- ["SE", "capacitor"]
+- !private ["SE", "map"]
+- ["SQ", "CapacitorType"]
+- ["SQ", "Default_CapacitorType"]
+- ["SQ", ""]
+- ["SQ", "_Default_CapacitorType"]
+- ["SQ", "capacitor"]
+- !private ["SQ", "init"]
+- !private ["SQ", "map"]
+- ["s25ExpressibleByArrayLiteralP", "CapacitorType"]
+- ["s25ExpressibleByArrayLiteralP", "Default_CapacitorType"]
+- ["s25ExpressibleByArrayLiteralP", ""]
+- ["s25ExpressibleByArrayLiteralP", "_Default_CapacitorType"]
+- ["s25ExpressibleByArrayLiteralP", "capacitor"]
+- !private ["s25ExpressibleByArrayLiteralP", "map"]
+- ["SH", "CapacitorType"]
+- ["SH", "Default_CapacitorType"]
+- ["SH", "_Default_CapacitorType"]
+- ["SH", "capacitor"]
+- !private ["SH", "init"]
+- !private ["SH", "map"]
+- ["9Capacitor7JSValueP", "CapacitorType"]
+- ["9Capacitor7JSValueP", "Default_CapacitorType"]
+- ["9Capacitor7JSValueP", "_Default_CapacitorType"]
+- ["9Capacitor7JSValueP", "capacitor"]
+- !private ["9Capacitor7JSValueP", "init"]
+- !private ["9Capacitor7JSValueP", "map"]
+- ["SM", "CapacitorType"]
+- ["SM", "Default_CapacitorType"]
+- ["SM", ""]
+- ["SM", "_Default_CapacitorType"]
+- ["SM", "capacitor"]
+- !private ["SM", "map"]
+- ["10Foundation19MutableDataProtocolP", "CapacitorType"]
+- ["10Foundation19MutableDataProtocolP", "Default_CapacitorType"]
+- ["10Foundation19MutableDataProtocolP", "_Default_CapacitorType"]
+- ["10Foundation19MutableDataProtocolP", "capacitor"]
+- !private ["10Foundation19MutableDataProtocolP", "map"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So6NSNullC", ""]
+- !private ["So6NSNullC", "init"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "null"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "null"]
+- !private ["So14NSSecureCodingP", "init"]
+- ["Sk", "CapacitorType"]
+- ["Sk", "Default_CapacitorType"]
+- ["Sk", ""]
+- ["Sk", "_Default_CapacitorType"]
+- ["Sk", "capacitor"]
+- !private ["Sk", "map"]
+- ["Sm", "CapacitorType"]
+- ["Sm", "Default_CapacitorType"]
+- ["Sm", ""]
+- ["Sm", "_Default_CapacitorType"]
+- ["Sm", "capacitor"]
+- !private ["Sm", "map"]
+- ["ST", "CapacitorType"]
+- ["ST", "Default_CapacitorType"]
+- ["ST", ""]
+- ["ST", "_Default_CapacitorType"]
+- ["ST", "capacitor"]
+- !private ["ST", "map"]
+- ["s14_ArrayProtocolP", "CapacitorType"]
+- ["s14_ArrayProtocolP", "Default_CapacitorType"]
+- ["s14_ArrayProtocolP", "_Default_CapacitorType"]
+- ["s14_ArrayProtocolP", "capacitor"]
+- !private ["s14_ArrayProtocolP", "map"]
+- ["s24_DestructorSafeContainerP", "CapacitorType"]
+- ["s24_DestructorSafeContainerP", "Default_CapacitorType"]
+- ["s24_DestructorSafeContainerP", "_Default_CapacitorType"]
+- ["s24_DestructorSafeContainerP", "capacitor"]
+- !private ["s24_DestructorSafeContainerP", "map"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s19_HasContiguousBytesP", "CapacitorType"]
+- ["s19_HasContiguousBytesP", "Default_CapacitorType"]
+- ["s19_HasContiguousBytesP", "_Default_CapacitorType"]
+- ["s19_HasContiguousBytesP", "capacitor"]
+- !private ["s19_HasContiguousBytesP", "map"]
+- ["s35_HasCustomAnyHashableRepresentationP", "CapacitorType"]
+- ["s35_HasCustomAnyHashableRepresentationP", "Default_CapacitorType"]
+- ["s35_HasCustomAnyHashableRepresentationP", "_Default_CapacitorType"]
+- ["s35_HasCustomAnyHashableRepresentationP", "capacitor"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "map"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- ["s21_ObjectiveCBridgeableP", "CapacitorType"]
+- ["s21_ObjectiveCBridgeableP", "Default_CapacitorType"]
+- ["s21_ObjectiveCBridgeableP", "_Default_CapacitorType"]
+- ["s21_ObjectiveCBridgeableP", "capacitor"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+depends-nominal:
+- "Sa"
+- "SK"
+- !private "So8CAActionP"
+- "s7CVarArgP"
+- "9Capacitor0A9ExtensionP"
+- "9Capacitor0A20ExtensionTypeWrapperV"
+- "Sl"
+- "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation12DataProtocolP"
+- "Se"
+- "SE"
+- "SQ"
+- "s25ExpressibleByArrayLiteralP"
+- "SH"
+- "9Capacitor7JSValueP"
+- "SM"
+- "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So6NSNullC"
+- "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- "Sk"
+- "Sm"
+- "ST"
+- "s14_ArrayProtocolP"
+- "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s19_HasContiguousBytesP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDV.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/CapacitorCordova.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVInvokedUrlCommand.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginMethod.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVScreenOrientationDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/AppDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVURLProtocol.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegateImpl.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceConfiguration.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginManager.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVViewController.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVConfigParser.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/Capacitor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceDescriptor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/NSDictionary+CordovaPreferences.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin+Resources.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginResult.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVAvailability.h"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/unextended-module.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCordova.build/module.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "3a455c53f1a5fb3c5170c1086d0f60c5"

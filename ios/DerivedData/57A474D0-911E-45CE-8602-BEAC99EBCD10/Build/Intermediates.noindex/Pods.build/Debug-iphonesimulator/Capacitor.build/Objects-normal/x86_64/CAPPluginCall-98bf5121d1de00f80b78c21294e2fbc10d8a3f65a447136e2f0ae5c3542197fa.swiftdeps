@@ -1,0 +1,648 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PluginCallErrorData"
+- "PluginResultData"
+provides-nominal:
+- "So13CAPPluginCallC"
+provides-member:
+- ["So13CAPPluginCallC", ""]
+- ["So13CAPPluginCallC", "hasOption"]
+- ["So13CAPPluginCallC", "success"]
+- ["So13CAPPluginCallC", "success"]
+- ["So13CAPPluginCallC", "resolve"]
+- ["So13CAPPluginCallC", "resolve"]
+- ["So13CAPPluginCallC", "error"]
+- ["So13CAPPluginCallC", "reject"]
+- ["So13CAPPluginCallC", "unimplemented"]
+- ["So13CAPPluginCallC", "unimplemented"]
+- ["So13CAPPluginCallC", "unavailable"]
+- ["So13CAPPluginCallC", "unavailable"]
+provides-dynamic-lookup:
+- "dictionaryRepresentation"
+- "error"
+- "hasOption"
+- "jsDateFormatter"
+- "jsObjectRepresentation"
+- "reject"
+- "resolve"
+- "success"
+- "unavailable"
+- "unimplemented"
+depends-top-level:
+- !private "!"
+- !private "??"
+- "Bool"
+- !private "BooleanLiteralType"
+- "BridgedJSValueContainer"
+- "CAPPluginCall"
+- !private "CAPPluginCallError"
+- !private "CAPPluginCallResult"
+- "CastingPrecedence"
+- !private "Dictionary"
+- "Error"
+- "ISO8601DateFormatter"
+- "JSObject"
+- "JSValueContainer"
+- "NSDictionary"
+- "NSNull"
+- "PluginCallErrorData"
+- "PluginCallResultData"
+- "PluginResultData"
+- "String"
+- !private "StringLiteralType"
+- !private "errorHandler"
+- !private "options"
+- !private "successHandler"
+- !private "unavailable"
+- !private "unimplemented"
+depends-member:
+- !private ["9Capacitor23BridgedJSValueContainerP", "CAPPluginCallError"]
+- !private ["9Capacitor23BridgedJSValueContainerP", "CAPPluginCallResult"]
+- ["9Capacitor23BridgedJSValueContainerP", "ISO8601DateFormatter"]
+- ["9Capacitor23BridgedJSValueContainerP", ""]
+- ["9Capacitor23BridgedJSValueContainerP", "dictionaryRepresentation"]
+- ["9Capacitor23BridgedJSValueContainerP", "error"]
+- !private ["9Capacitor23BridgedJSValueContainerP", "errorHandler"]
+- ["9Capacitor23BridgedJSValueContainerP", "getArray"]
+- ["9Capacitor23BridgedJSValueContainerP", "getBool"]
+- ["9Capacitor23BridgedJSValueContainerP", "getDate"]
+- ["9Capacitor23BridgedJSValueContainerP", "getDouble"]
+- ["9Capacitor23BridgedJSValueContainerP", "getFloat"]
+- ["9Capacitor23BridgedJSValueContainerP", "getInt"]
+- ["9Capacitor23BridgedJSValueContainerP", "getObject"]
+- ["9Capacitor23BridgedJSValueContainerP", "getString"]
+- ["9Capacitor23BridgedJSValueContainerP", "hasOption"]
+- ["9Capacitor23BridgedJSValueContainerP", "jsDateFormatter"]
+- ["9Capacitor23BridgedJSValueContainerP", "jsObjectRepresentation"]
+- !private ["9Capacitor23BridgedJSValueContainerP", "options"]
+- ["9Capacitor23BridgedJSValueContainerP", "reject"]
+- ["9Capacitor23BridgedJSValueContainerP", "resolve"]
+- ["9Capacitor23BridgedJSValueContainerP", "success"]
+- !private ["9Capacitor23BridgedJSValueContainerP", "successHandler"]
+- ["9Capacitor23BridgedJSValueContainerP", "unavailable"]
+- ["9Capacitor23BridgedJSValueContainerP", "unimplemented"]
+- ["So13CAPPluginCallC", "Bool"]
+- !private ["So13CAPPluginCallC", "CAPPluginCallError"]
+- !private ["So13CAPPluginCallC", "CAPPluginCallResult"]
+- ["So13CAPPluginCallC", "Error"]
+- ["So13CAPPluginCallC", "ISO8601DateFormatter"]
+- ["So13CAPPluginCallC", "JSObject"]
+- ["So13CAPPluginCallC", "NSDictionary"]
+- !private ["So13CAPPluginCallC", "NSNull"]
+- ["So13CAPPluginCallC", "PluginCallResultData"]
+- ["So13CAPPluginCallC", "String"]
+- ["So13CAPPluginCallC", ""]
+- ["So13CAPPluginCallC", "dictionaryRepresentation"]
+- ["So13CAPPluginCallC", "error"]
+- !private ["So13CAPPluginCallC", "errorHandler"]
+- ["So13CAPPluginCallC", "getArray"]
+- ["So13CAPPluginCallC", "getBool"]
+- ["So13CAPPluginCallC", "getDate"]
+- ["So13CAPPluginCallC", "getDouble"]
+- ["So13CAPPluginCallC", "getFloat"]
+- ["So13CAPPluginCallC", "getInt"]
+- ["So13CAPPluginCallC", "getObject"]
+- ["So13CAPPluginCallC", "getString"]
+- ["So13CAPPluginCallC", "hasOption"]
+- ["So13CAPPluginCallC", "jsDateFormatter"]
+- ["So13CAPPluginCallC", "jsObjectRepresentation"]
+- !private ["So13CAPPluginCallC", "options"]
+- ["So13CAPPluginCallC", "reject"]
+- ["So13CAPPluginCallC", "resolve"]
+- ["So13CAPPluginCallC", "success"]
+- !private ["So13CAPPluginCallC", "successHandler"]
+- ["So13CAPPluginCallC", "unavailable"]
+- ["So13CAPPluginCallC", "unimplemented"]
+- !private ["9Capacitor18CAPPluginCallErrorC", "init"]
+- !private ["9Capacitor19CAPPluginCallResultC", "init"]
+- !private ["s7CVarArgP", "CAPPluginCallError"]
+- !private ["s7CVarArgP", "CAPPluginCallResult"]
+- ["s7CVarArgP", "ISO8601DateFormatter"]
+- ["s7CVarArgP", "dictionaryRepresentation"]
+- !private ["s7CVarArgP", "errorHandler"]
+- ["s7CVarArgP", "getArray"]
+- ["s7CVarArgP", "getBool"]
+- ["s7CVarArgP", "getDate"]
+- ["s7CVarArgP", "getDouble"]
+- ["s7CVarArgP", "getFloat"]
+- ["s7CVarArgP", "getInt"]
+- ["s7CVarArgP", "getObject"]
+- ["s7CVarArgP", "getString"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "jsDateFormatter"]
+- ["s7CVarArgP", "jsObjectRepresentation"]
+- !private ["s7CVarArgP", "options"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "successHandler"]
+- !private ["s7CVarArgP", "unavailable"]
+- !private ["s7CVarArgP", "unimplemented"]
+- !private ["Sl", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "CAPPluginCallError"]
+- !private ["s28CustomDebugStringConvertibleP", "CAPPluginCallResult"]
+- ["s28CustomDebugStringConvertibleP", "ISO8601DateFormatter"]
+- !private ["s28CustomDebugStringConvertibleP", "callAsFunction"]
+- ["s28CustomDebugStringConvertibleP", "dictionaryRepresentation"]
+- !private ["s28CustomDebugStringConvertibleP", "errorHandler"]
+- ["s28CustomDebugStringConvertibleP", "getArray"]
+- ["s28CustomDebugStringConvertibleP", "getBool"]
+- ["s28CustomDebugStringConvertibleP", "getDate"]
+- ["s28CustomDebugStringConvertibleP", "getDouble"]
+- ["s28CustomDebugStringConvertibleP", "getFloat"]
+- ["s28CustomDebugStringConvertibleP", "getInt"]
+- ["s28CustomDebugStringConvertibleP", "getObject"]
+- ["s28CustomDebugStringConvertibleP", "getString"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "jsDateFormatter"]
+- ["s28CustomDebugStringConvertibleP", "jsObjectRepresentation"]
+- !private ["s28CustomDebugStringConvertibleP", "options"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "successHandler"]
+- !private ["s28CustomDebugStringConvertibleP", "unavailable"]
+- !private ["s28CustomDebugStringConvertibleP", "unimplemented"]
+- !private ["s17CustomReflectableP", "callAsFunction"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "CAPPluginCallError"]
+- !private ["s23CustomStringConvertibleP", "CAPPluginCallResult"]
+- ["s23CustomStringConvertibleP", "ISO8601DateFormatter"]
+- ["s23CustomStringConvertibleP", "dictionaryRepresentation"]
+- !private ["s23CustomStringConvertibleP", "errorHandler"]
+- ["s23CustomStringConvertibleP", "getArray"]
+- ["s23CustomStringConvertibleP", "getBool"]
+- ["s23CustomStringConvertibleP", "getDate"]
+- ["s23CustomStringConvertibleP", "getDouble"]
+- ["s23CustomStringConvertibleP", "getFloat"]
+- ["s23CustomStringConvertibleP", "getInt"]
+- ["s23CustomStringConvertibleP", "getObject"]
+- ["s23CustomStringConvertibleP", "getString"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "jsDateFormatter"]
+- ["s23CustomStringConvertibleP", "jsObjectRepresentation"]
+- !private ["s23CustomStringConvertibleP", "options"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "successHandler"]
+- !private ["s23CustomStringConvertibleP", "unavailable"]
+- !private ["s23CustomStringConvertibleP", "unimplemented"]
+- !private ["Se", "callAsFunction"]
+- !private ["Se", "subscript"]
+- !private ["SD", "subscript"]
+- !private ["SE", "callAsFunction"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "CAPPluginCallError"]
+- !private ["SQ", "CAPPluginCallResult"]
+- ["SQ", "ISO8601DateFormatter"]
+- ["SQ", ""]
+- !private ["SQ", "callAsFunction"]
+- ["SQ", "dictionaryRepresentation"]
+- !private ["SQ", "errorHandler"]
+- ["SQ", "getArray"]
+- ["SQ", "getBool"]
+- ["SQ", "getDate"]
+- ["SQ", "getDouble"]
+- ["SQ", "getFloat"]
+- ["SQ", "getInt"]
+- ["SQ", "getObject"]
+- ["SQ", "getString"]
+- ["SQ", "init"]
+- ["SQ", "jsDateFormatter"]
+- ["SQ", "jsObjectRepresentation"]
+- !private ["SQ", "options"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "successHandler"]
+- !private ["SQ", "unavailable"]
+- !private ["SQ", "unimplemented"]
+- ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s23ExpressibleByNilLiteralP", "callAsFunction"]
+- !private ["s23ExpressibleByNilLiteralP", "subscript"]
+- ["So11NSFormatterC", ""]
+- ["So11NSFormatterC", "init"]
+- !private ["SH", "CAPPluginCallError"]
+- !private ["SH", "CAPPluginCallResult"]
+- ["SH", "ISO8601DateFormatter"]
+- !private ["SH", "callAsFunction"]
+- ["SH", "dictionaryRepresentation"]
+- !private ["SH", "errorHandler"]
+- ["SH", "getArray"]
+- ["SH", "getBool"]
+- ["SH", "getDate"]
+- ["SH", "getDouble"]
+- ["SH", "getFloat"]
+- ["SH", "getInt"]
+- ["SH", "getObject"]
+- ["SH", "getString"]
+- ["SH", "init"]
+- ["SH", "jsDateFormatter"]
+- ["SH", "jsObjectRepresentation"]
+- !private ["SH", "options"]
+- !private ["SH", "subscript"]
+- !private ["SH", "successHandler"]
+- !private ["SH", "unavailable"]
+- !private ["SH", "unimplemented"]
+- ["So22NSISO8601DateFormatterC", "init"]
+- !private ["9Capacitor16JSArrayContainerP", "CAPPluginCallError"]
+- !private ["9Capacitor16JSArrayContainerP", "CAPPluginCallResult"]
+- ["9Capacitor16JSArrayContainerP", "ISO8601DateFormatter"]
+- ["9Capacitor16JSArrayContainerP", ""]
+- ["9Capacitor16JSArrayContainerP", "dictionaryRepresentation"]
+- !private ["9Capacitor16JSArrayContainerP", "errorHandler"]
+- ["9Capacitor16JSArrayContainerP", "getArray"]
+- ["9Capacitor16JSArrayContainerP", "getBool"]
+- ["9Capacitor16JSArrayContainerP", "getDate"]
+- ["9Capacitor16JSArrayContainerP", "getDouble"]
+- ["9Capacitor16JSArrayContainerP", "getFloat"]
+- ["9Capacitor16JSArrayContainerP", "getInt"]
+- ["9Capacitor16JSArrayContainerP", "getObject"]
+- ["9Capacitor16JSArrayContainerP", "getString"]
+- ["9Capacitor16JSArrayContainerP", "jsDateFormatter"]
+- ["9Capacitor16JSArrayContainerP", "jsObjectRepresentation"]
+- !private ["9Capacitor16JSArrayContainerP", "options"]
+- !private ["9Capacitor16JSArrayContainerP", "successHandler"]
+- !private ["9Capacitor16JSArrayContainerP", "unavailable"]
+- !private ["9Capacitor16JSArrayContainerP", "unimplemented"]
+- !private ["9Capacitor15JSBoolContainerP", "CAPPluginCallError"]
+- !private ["9Capacitor15JSBoolContainerP", "CAPPluginCallResult"]
+- ["9Capacitor15JSBoolContainerP", "ISO8601DateFormatter"]
+- ["9Capacitor15JSBoolContainerP", ""]
+- ["9Capacitor15JSBoolContainerP", "dictionaryRepresentation"]
+- !private ["9Capacitor15JSBoolContainerP", "errorHandler"]
+- ["9Capacitor15JSBoolContainerP", "getArray"]
+- ["9Capacitor15JSBoolContainerP", "getBool"]
+- ["9Capacitor15JSBoolContainerP", "getDate"]
+- ["9Capacitor15JSBoolContainerP", "getDouble"]
+- ["9Capacitor15JSBoolContainerP", "getFloat"]
+- ["9Capacitor15JSBoolContainerP", "getInt"]
+- ["9Capacitor15JSBoolContainerP", "getObject"]
+- ["9Capacitor15JSBoolContainerP", "getString"]
+- ["9Capacitor15JSBoolContainerP", "jsDateFormatter"]
+- ["9Capacitor15JSBoolContainerP", "jsObjectRepresentation"]
+- !private ["9Capacitor15JSBoolContainerP", "options"]
+- !private ["9Capacitor15JSBoolContainerP", "successHandler"]
+- !private ["9Capacitor15JSBoolContainerP", "unavailable"]
+- !private ["9Capacitor15JSBoolContainerP", "unimplemented"]
+- !private ["9Capacitor15JSDateContainerP", "CAPPluginCallError"]
+- !private ["9Capacitor15JSDateContainerP", "CAPPluginCallResult"]
+- ["9Capacitor15JSDateContainerP", "ISO8601DateFormatter"]
+- ["9Capacitor15JSDateContainerP", ""]
+- ["9Capacitor15JSDateContainerP", "dictionaryRepresentation"]
+- !private ["9Capacitor15JSDateContainerP", "errorHandler"]
+- ["9Capacitor15JSDateContainerP", "getArray"]
+- ["9Capacitor15JSDateContainerP", "getBool"]
+- ["9Capacitor15JSDateContainerP", "getDate"]
+- ["9Capacitor15JSDateContainerP", "getDouble"]
+- ["9Capacitor15JSDateContainerP", "getFloat"]
+- ["9Capacitor15JSDateContainerP", "getInt"]
+- ["9Capacitor15JSDateContainerP", "getObject"]
+- ["9Capacitor15JSDateContainerP", "getString"]
+- ["9Capacitor15JSDateContainerP", "jsDateFormatter"]
+- ["9Capacitor15JSDateContainerP", "jsObjectRepresentation"]
+- !private ["9Capacitor15JSDateContainerP", "options"]
+- !private ["9Capacitor15JSDateContainerP", "successHandler"]
+- !private ["9Capacitor15JSDateContainerP", "unavailable"]
+- !private ["9Capacitor15JSDateContainerP", "unimplemented"]
+- !private ["9Capacitor17JSDoubleContainerP", "CAPPluginCallError"]
+- !private ["9Capacitor17JSDoubleContainerP", "CAPPluginCallResult"]
+- ["9Capacitor17JSDoubleContainerP", "ISO8601DateFormatter"]
+- ["9Capacitor17JSDoubleContainerP", ""]
+- ["9Capacitor17JSDoubleContainerP", "dictionaryRepresentation"]
+- !private ["9Capacitor17JSDoubleContainerP", "errorHandler"]
+- ["9Capacitor17JSDoubleContainerP", "getArray"]
+- ["9Capacitor17JSDoubleContainerP", "getBool"]
+- ["9Capacitor17JSDoubleContainerP", "getDate"]
+- ["9Capacitor17JSDoubleContainerP", "getDouble"]
+- ["9Capacitor17JSDoubleContainerP", "getFloat"]
+- ["9Capacitor17JSDoubleContainerP", "getInt"]
+- ["9Capacitor17JSDoubleContainerP", "getObject"]
+- ["9Capacitor17JSDoubleContainerP", "getString"]
+- ["9Capacitor17JSDoubleContainerP", "jsDateFormatter"]
+- ["9Capacitor17JSDoubleContainerP", "jsObjectRepresentation"]
+- !private ["9Capacitor17JSDoubleContainerP", "options"]
+- !private ["9Capacitor17JSDoubleContainerP", "successHandler"]
+- !private ["9Capacitor17JSDoubleContainerP", "unavailable"]
+- !private ["9Capacitor17JSDoubleContainerP", "unimplemented"]
+- !private ["9Capacitor16JSFloatContainerP", "CAPPluginCallError"]
+- !private ["9Capacitor16JSFloatContainerP", "CAPPluginCallResult"]
+- ["9Capacitor16JSFloatContainerP", "ISO8601DateFormatter"]
+- ["9Capacitor16JSFloatContainerP", ""]
+- ["9Capacitor16JSFloatContainerP", "dictionaryRepresentation"]
+- !private ["9Capacitor16JSFloatContainerP", "errorHandler"]
+- ["9Capacitor16JSFloatContainerP", "getArray"]
+- ["9Capacitor16JSFloatContainerP", "getBool"]
+- ["9Capacitor16JSFloatContainerP", "getDate"]
+- ["9Capacitor16JSFloatContainerP", "getDouble"]
+- ["9Capacitor16JSFloatContainerP", "getFloat"]
+- ["9Capacitor16JSFloatContainerP", "getInt"]
+- ["9Capacitor16JSFloatContainerP", "getObject"]
+- ["9Capacitor16JSFloatContainerP", "getString"]
+- ["9Capacitor16JSFloatContainerP", "jsDateFormatter"]
+- ["9Capacitor16JSFloatContainerP", "jsObjectRepresentation"]
+- !private ["9Capacitor16JSFloatContainerP", "options"]
+- !private ["9Capacitor16JSFloatContainerP", "successHandler"]
+- !private ["9Capacitor16JSFloatContainerP", "unavailable"]
+- !private ["9Capacitor16JSFloatContainerP", "unimplemented"]
+- !private ["9Capacitor14JSIntContainerP", "CAPPluginCallError"]
+- !private ["9Capacitor14JSIntContainerP", "CAPPluginCallResult"]
+- ["9Capacitor14JSIntContainerP", "ISO8601DateFormatter"]
+- ["9Capacitor14JSIntContainerP", ""]
+- ["9Capacitor14JSIntContainerP", "dictionaryRepresentation"]
+- !private ["9Capacitor14JSIntContainerP", "errorHandler"]
+- ["9Capacitor14JSIntContainerP", "getArray"]
+- ["9Capacitor14JSIntContainerP", "getBool"]
+- ["9Capacitor14JSIntContainerP", "getDate"]
+- ["9Capacitor14JSIntContainerP", "getDouble"]
+- ["9Capacitor14JSIntContainerP", "getFloat"]
+- ["9Capacitor14JSIntContainerP", "getInt"]
+- ["9Capacitor14JSIntContainerP", "getObject"]
+- ["9Capacitor14JSIntContainerP", "getString"]
+- ["9Capacitor14JSIntContainerP", "jsDateFormatter"]
+- ["9Capacitor14JSIntContainerP", "jsObjectRepresentation"]
+- !private ["9Capacitor14JSIntContainerP", "options"]
+- !private ["9Capacitor14JSIntContainerP", "successHandler"]
+- !private ["9Capacitor14JSIntContainerP", "unavailable"]
+- !private ["9Capacitor14JSIntContainerP", "unimplemented"]
+- !private ["9Capacitor17JSObjectContainerP", "CAPPluginCallError"]
+- !private ["9Capacitor17JSObjectContainerP", "CAPPluginCallResult"]
+- ["9Capacitor17JSObjectContainerP", "ISO8601DateFormatter"]
+- ["9Capacitor17JSObjectContainerP", ""]
+- ["9Capacitor17JSObjectContainerP", "dictionaryRepresentation"]
+- !private ["9Capacitor17JSObjectContainerP", "errorHandler"]
+- ["9Capacitor17JSObjectContainerP", "getArray"]
+- ["9Capacitor17JSObjectContainerP", "getBool"]
+- ["9Capacitor17JSObjectContainerP", "getDate"]
+- ["9Capacitor17JSObjectContainerP", "getDouble"]
+- ["9Capacitor17JSObjectContainerP", "getFloat"]
+- ["9Capacitor17JSObjectContainerP", "getInt"]
+- ["9Capacitor17JSObjectContainerP", "getObject"]
+- ["9Capacitor17JSObjectContainerP", "getString"]
+- ["9Capacitor17JSObjectContainerP", "jsDateFormatter"]
+- ["9Capacitor17JSObjectContainerP", "jsObjectRepresentation"]
+- !private ["9Capacitor17JSObjectContainerP", "options"]
+- !private ["9Capacitor17JSObjectContainerP", "successHandler"]
+- !private ["9Capacitor17JSObjectContainerP", "unavailable"]
+- !private ["9Capacitor17JSObjectContainerP", "unimplemented"]
+- !private ["9Capacitor17JSStringContainerP", "CAPPluginCallError"]
+- !private ["9Capacitor17JSStringContainerP", "CAPPluginCallResult"]
+- ["9Capacitor17JSStringContainerP", "ISO8601DateFormatter"]
+- ["9Capacitor17JSStringContainerP", ""]
+- ["9Capacitor17JSStringContainerP", "dictionaryRepresentation"]
+- !private ["9Capacitor17JSStringContainerP", "errorHandler"]
+- ["9Capacitor17JSStringContainerP", "getArray"]
+- ["9Capacitor17JSStringContainerP", "getBool"]
+- ["9Capacitor17JSStringContainerP", "getDate"]
+- ["9Capacitor17JSStringContainerP", "getDouble"]
+- ["9Capacitor17JSStringContainerP", "getFloat"]
+- ["9Capacitor17JSStringContainerP", "getInt"]
+- ["9Capacitor17JSStringContainerP", "getObject"]
+- ["9Capacitor17JSStringContainerP", "getString"]
+- ["9Capacitor17JSStringContainerP", "jsDateFormatter"]
+- ["9Capacitor17JSStringContainerP", "jsObjectRepresentation"]
+- !private ["9Capacitor17JSStringContainerP", "options"]
+- !private ["9Capacitor17JSStringContainerP", "successHandler"]
+- !private ["9Capacitor17JSStringContainerP", "unavailable"]
+- !private ["9Capacitor17JSStringContainerP", "unimplemented"]
+- !private ["9Capacitor7JSValueP", "subscript"]
+- !private ["9Capacitor16JSValueContainerP", "CAPPluginCallError"]
+- !private ["9Capacitor16JSValueContainerP", "CAPPluginCallResult"]
+- ["9Capacitor16JSValueContainerP", "ISO8601DateFormatter"]
+- ["9Capacitor16JSValueContainerP", ""]
+- ["9Capacitor16JSValueContainerP", "dictionaryRepresentation"]
+- !private ["9Capacitor16JSValueContainerP", "errorHandler"]
+- ["9Capacitor16JSValueContainerP", "getArray"]
+- ["9Capacitor16JSValueContainerP", "getBool"]
+- ["9Capacitor16JSValueContainerP", "getDate"]
+- ["9Capacitor16JSValueContainerP", "getDouble"]
+- ["9Capacitor16JSValueContainerP", "getFloat"]
+- ["9Capacitor16JSValueContainerP", "getInt"]
+- ["9Capacitor16JSValueContainerP", "getObject"]
+- ["9Capacitor16JSValueContainerP", "getString"]
+- ["9Capacitor16JSValueContainerP", "jsDateFormatter"]
+- ["9Capacitor16JSValueContainerP", "jsObjectRepresentation"]
+- !private ["9Capacitor16JSValueContainerP", "options"]
+- !private ["9Capacitor16JSValueContainerP", "successHandler"]
+- !private ["9Capacitor16JSValueContainerP", "unavailable"]
+- !private ["9Capacitor16JSValueContainerP", "unimplemented"]
+- ["So8NSCodingP", ""]
+- ["So8NSCodingP", "init"]
+- ["So9NSCopyingP", "init"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "CAPPluginCallError"]
+- !private ["So8NSObjectC", "CAPPluginCallResult"]
+- ["So8NSObjectC", "Error"]
+- ["So8NSObjectC", "ISO8601DateFormatter"]
+- ["So8NSObjectC", "JSObject"]
+- ["So8NSObjectC", "NSDictionary"]
+- !private ["So8NSObjectC", "NSNull"]
+- ["So8NSObjectC", "PluginCallResultData"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "dictionaryRepresentation"]
+- ["So8NSObjectC", "error"]
+- !private ["So8NSObjectC", "errorHandler"]
+- ["So8NSObjectC", "getArray"]
+- ["So8NSObjectC", "getBool"]
+- ["So8NSObjectC", "getDate"]
+- ["So8NSObjectC", "getDouble"]
+- ["So8NSObjectC", "getFloat"]
+- ["So8NSObjectC", "getInt"]
+- ["So8NSObjectC", "getObject"]
+- ["So8NSObjectC", "getString"]
+- ["So8NSObjectC", "hasOption"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "jsDateFormatter"]
+- ["So8NSObjectC", "jsObjectRepresentation"]
+- !private ["So8NSObjectC", "options"]
+- ["So8NSObjectC", "reject"]
+- ["So8NSObjectC", "resolve"]
+- ["So8NSObjectC", "success"]
+- !private ["So8NSObjectC", "successHandler"]
+- ["So8NSObjectC", "unavailable"]
+- ["So8NSObjectC", "unimplemented"]
+- ["So8NSObjectP", "Bool"]
+- !private ["So8NSObjectP", "CAPPluginCallError"]
+- !private ["So8NSObjectP", "CAPPluginCallResult"]
+- ["So8NSObjectP", "Error"]
+- ["So8NSObjectP", "ISO8601DateFormatter"]
+- ["So8NSObjectP", "JSObject"]
+- ["So8NSObjectP", "NSDictionary"]
+- !private ["So8NSObjectP", "NSNull"]
+- ["So8NSObjectP", "PluginCallResultData"]
+- ["So8NSObjectP", "String"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "dictionaryRepresentation"]
+- ["So8NSObjectP", "error"]
+- !private ["So8NSObjectP", "errorHandler"]
+- ["So8NSObjectP", "getArray"]
+- ["So8NSObjectP", "getBool"]
+- ["So8NSObjectP", "getDate"]
+- ["So8NSObjectP", "getDouble"]
+- ["So8NSObjectP", "getFloat"]
+- ["So8NSObjectP", "getInt"]
+- ["So8NSObjectP", "getObject"]
+- ["So8NSObjectP", "getString"]
+- ["So8NSObjectP", "hasOption"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "jsDateFormatter"]
+- ["So8NSObjectP", "jsObjectRepresentation"]
+- !private ["So8NSObjectP", "options"]
+- ["So8NSObjectP", "reject"]
+- ["So8NSObjectP", "resolve"]
+- ["So8NSObjectP", "success"]
+- !private ["So8NSObjectP", "successHandler"]
+- ["So8NSObjectP", "unavailable"]
+- ["So8NSObjectP", "unimplemented"]
+- ["So14NSSecureCodingP", "init"]
+- !private ["Sq", "callAsFunction"]
+- !private ["Sq", "subscript"]
+- !private ["ST", ""]
+- !private ["ST", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CAPPluginCallError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CAPPluginCallResult"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "ISO8601DateFormatter"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "dictionaryRepresentation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "errorHandler"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "getArray"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "getBool"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "getDate"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "getDouble"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "getFloat"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "getInt"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "getObject"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "getString"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "jsDateFormatter"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "jsObjectRepresentation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "options"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "successHandler"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "unavailable"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "unimplemented"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CAPPluginCallError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CAPPluginCallResult"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ISO8601DateFormatter"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dictionaryRepresentation"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "errorHandler"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getArray"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getBool"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getDate"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getDouble"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getFloat"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getInt"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getObject"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getString"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "jsDateFormatter"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "jsObjectRepresentation"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "options"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "successHandler"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "unavailable"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "unimplemented"]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "callAsFunction"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- "9Capacitor23BridgedJSValueContainerP"
+- "So13CAPPluginCallC"
+- !private "9Capacitor18CAPPluginCallErrorC"
+- !private "9Capacitor19CAPPluginCallResultC"
+- "s7CVarArgP"
+- !private "Sl"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SD"
+- !private "SE"
+- "SQ"
+- "s30ExpressibleByDictionaryLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- "So11NSFormatterC"
+- "SH"
+- "So22NSISO8601DateFormatterC"
+- "9Capacitor16JSArrayContainerP"
+- "9Capacitor15JSBoolContainerP"
+- "9Capacitor15JSDateContainerP"
+- "9Capacitor17JSDoubleContainerP"
+- "9Capacitor16JSFloatContainerP"
+- "9Capacitor14JSIntContainerP"
+- "9Capacitor17JSObjectContainerP"
+- "9Capacitor17JSStringContainerP"
+- !private "9Capacitor7JSValueP"
+- "9Capacitor16JSValueContainerP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So14NSSecureCodingP"
+- !private "Sq"
+- !private "ST"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDV.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/CapacitorCordova.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVInvokedUrlCommand.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginMethod.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVScreenOrientationDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/AppDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVURLProtocol.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegateImpl.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceConfiguration.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginManager.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVViewController.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVConfigParser.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/Capacitor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceDescriptor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/NSDictionary+CordovaPreferences.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin+Resources.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginResult.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVAvailability.h"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/unextended-module.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCordova.build/module.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "9146f907bc43772f929417c9099fbb40"

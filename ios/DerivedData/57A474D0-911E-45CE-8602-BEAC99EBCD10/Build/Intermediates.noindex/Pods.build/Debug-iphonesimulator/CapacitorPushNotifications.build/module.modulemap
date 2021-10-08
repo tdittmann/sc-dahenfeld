@@ -1,0 +1,11 @@
+framework module CapacitorPushNotifications {
+  umbrella header "CapacitorPushNotifications-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module CapacitorPushNotifications.Swift {
+    header "CapacitorPushNotifications-Swift.h"
+    requires objc
+}

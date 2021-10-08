@@ -3,9 +3,11 @@ import {DevService} from '../../../dataproviders/dev.service';
 import {ToastService} from '../../../dataproviders/toast.service';
 import {StorageService} from '../../../dataproviders/storage.service';
 
-import {Capacitor, Plugins, StatusBarStyle} from '@capacitor/core';
+import {Capacitor} from '@capacitor/core';
 import {ActivatedRoute} from '@angular/router';
 import {ProfileService} from '../../../dataproviders/profile/profile.service';
+import {Device} from '@capacitor/device';
+import {StatusBar, Style} from '@capacitor/status-bar';
 
 @Component({
     templateUrl: 'imprint.page.html',
@@ -43,8 +45,8 @@ export class ImprintPage implements OnInit {
             .then(value => this.darkMode = value);
 
         if (Capacitor.isPluginAvailable('Device')) {
-            Plugins.Device.getInfo()
-                .then(value => this.version = value.appVersion)
+            Device.getInfo()
+                .then(value => this.version = value.osVersion)
                 .catch(reason => console.error('Can not load device info: ', reason));
         }
     }
@@ -85,12 +87,12 @@ export class ImprintPage implements OnInit {
         if (this.darkMode) {
             document.body.classList.add('dark');
             if (Capacitor.isPluginAvailable('StatusBar')) {
-                Plugins.StatusBar.setStyle({style: StatusBarStyle.Dark});
+                StatusBar.setStyle({style: Style.Dark});
             }
         } else {
             document.body.classList.remove('dark');
             if (Capacitor.isPluginAvailable('StatusBar')) {
-                Plugins.StatusBar.setStyle({style: StatusBarStyle.Light});
+                StatusBar.setStyle({style: Style.Light});
             }
         }
 

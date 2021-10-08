@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)"
+options: "bda650c936b31bfc86aaf3d12cf1c2e1"
+build_time: [1633960531, 352434000]
+inputs:
+  "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/status-bar/ios/Plugin/StatusBarPlugin.swift": [499162500, 0]

@@ -4,11 +4,15 @@ import {AlertController, Platform} from '@ionic/angular';
 import {DevService} from './dataproviders/dev.service';
 import {StorageService} from './dataproviders/storage.service';
 import {VersionService} from './dataproviders/version/version.service';
-import {Capacitor, Plugins, PushNotificationToken, StatusBarStyle} from '@capacitor/core';
+import {Capacitor} from '@capacitor/core';
 import {ProfileService} from './dataproviders/profile/profile.service';
 import {Profile} from './core/domain/profile.model';
 import {NavigationService} from './dataproviders/navigation/navigation.service';
 import {RootNavigation} from './core/domain/root-navigation.model';
+import {StatusBar, Style} from '@capacitor/status-bar';
+import {PushNotifications, Token} from '@capacitor/push-notifications';
+import {SplashScreen} from '@capacitor/splash-screen';
+import {Device} from '@capacitor/device';
 
 @Component({
     selector: 'app-root',
@@ -33,7 +37,7 @@ export class AppComponent {
         this.platform.ready().then(() => {
             // Hide splash screen
             if (Capacitor.isPluginAvailable('SplashScreen')) {
-                Plugins.SplashScreen.hide();
+                SplashScreen.hide();
             }
 
             // Load navigation
@@ -78,7 +82,7 @@ export class AppComponent {
                     if (prefersDark) {
                         document.body.classList.add('dark');
                         if (Capacitor.isPluginAvailable('StatusBar')) {
-                            Plugins.StatusBar.setStyle({style: StatusBarStyle.Dark});
+                            StatusBar.setStyle({style: Style.Dark});
                         }
                     }
                 }
@@ -86,7 +90,7 @@ export class AppComponent {
                 if (value) {
                     document.body.classList.add('dark');
                     if (Capacitor.isPluginAvailable('StatusBar')) {
-                        Plugins.StatusBar.setStyle({style: StatusBarStyle.Dark});
+                        StatusBar.setStyle({style: Style.Dark});
                     }
                 }
             }
@@ -97,17 +101,17 @@ export class AppComponent {
     private checkAppVersion() {
 
         if (!this.platform.is('desktop') && Capacitor.isPluginAvailable('Device')) {
-            Plugins.Device.getInfo()
+            Device.getInfo()
                 .then(deviceInfo => {
-                    this.versionService.loadVersionInfo().subscribe(
-                        globalAppInfos => {
+                    this.versionService.loadVersionInfo().subscribe({
+                        next: globalAppInfos => {
                             const versionInfoForPlattform = globalAppInfos.find(value => value.platform === deviceInfo.platform);
-                            if (versionInfoForPlattform && versionInfoForPlattform.version !== deviceInfo.appVersion) {
+                            if (versionInfoForPlattform && versionInfoForPlattform.version !== deviceInfo.osVersion) {
                                 this.openNewVersionAlert(versionInfoForPlattform.url);
                             }
                         },
-                        error => console.error(error)
-                    );
+                        error: error => console.error(error)
+                    });
                 })
                 .catch(reason => console.error('Can not load device info: ', reason));
         }
@@ -137,10 +141,10 @@ export class AppComponent {
 
         if (Capacitor.isPluginAvailable('PushNotifications')) {
 
-            Plugins.PushNotifications.register();
+            PushNotifications.register();
 
-            Plugins.PushNotifications.addListener('registration',
-                (token: PushNotificationToken) => {
+            PushNotifications.addListener('registration',
+                (token: Token) => {
                     console.log('Push registration success, token: ' + token.value);
 
                     this.storageService.savePushToken(token.value)
@@ -148,7 +152,7 @@ export class AppComponent {
                         .catch(reason => console.error('Saving push token in local db failed' + reason));
 
 
-                    Plugins.Device.getInfo()
+                    Device.getInfo()
                         .then(deviceInfo => {
 
                             const profile: Profile = new Profile();
@@ -164,7 +168,7 @@ export class AppComponent {
                 }
             );
 
-            Plugins.PushNotifications.addListener('registrationError',
+            PushNotifications.addListener('registrationError',
                 (error: any) => {
                     console.error('Error on registration: ' + JSON.stringify(error));
                 }

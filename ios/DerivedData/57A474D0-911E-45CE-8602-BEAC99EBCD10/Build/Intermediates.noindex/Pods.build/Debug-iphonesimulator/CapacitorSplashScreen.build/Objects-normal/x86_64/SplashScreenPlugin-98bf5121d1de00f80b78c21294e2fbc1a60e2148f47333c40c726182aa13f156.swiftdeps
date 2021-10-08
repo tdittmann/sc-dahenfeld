@@ -1,0 +1,597 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SplashScreenPlugin"
+provides-nominal:
+- "21CapacitorSplashScreen0bC6PluginC"
+provides-member:
+- ["21CapacitorSplashScreen0bC6PluginC", ""]
+provides-dynamic-lookup:
+- "hide"
+- "load"
+- "show"
+- "splashScreen"
+- "splashScreenConfig"
+- "splashScreenSettings"
+depends-top-level:
+- "AssignmentPrecedence"
+- "Bool"
+- "CAPPlugin"
+- "CAPPluginCall"
+- "CastingPrecedence"
+- "Int"
+- "SplashScreen"
+- "SplashScreenConfig"
+- "SplashScreenPlugin"
+- "SplashScreenSettings"
+- "String"
+- !private "StringLiteralType"
+- !private "UIColor"
+- !private "bridge"
+- !private "getConfigValue"
+- !private "splashScreen"
+- !private "splashScreenConfig"
+- !private "splashScreenSettings"
+- !private "~="
+depends-member:
+- !private ["SK", ""]
+- !private ["SK", "lowercased"]
+- !private ["9Capacitor23BridgedJSValueContainerP", "getBool"]
+- !private ["9Capacitor23BridgedJSValueContainerP", "getInt"]
+- !private ["9Capacitor23BridgedJSValueContainerP", "reject"]
+- !private ["9Capacitor23BridgedJSValueContainerP", "resolve"]
+- !private ["9Capacitor17CAPBridgeProtocolP", "viewController"]
+- !private ["So9CAPPluginC", "Bool"]
+- ["So9CAPPluginC", "CAPPluginCall"]
+- !private ["So9CAPPluginC", "Int"]
+- ["So9CAPPluginC", "SplashScreen"]
+- ["So9CAPPluginC", "SplashScreenConfig"]
+- ["So9CAPPluginC", "SplashScreenSettings"]
+- !private ["So9CAPPluginC", "String"]
+- !private ["So9CAPPluginC", "UIColor"]
+- ["So9CAPPluginC", ""]
+- !private ["So9CAPPluginC", "bridge"]
+- !private ["So9CAPPluginC", "getConfigValue"]
+- ["So9CAPPluginC", "hide"]
+- ["So9CAPPluginC", "init"]
+- ["So9CAPPluginC", "load"]
+- ["So9CAPPluginC", "show"]
+- ["So9CAPPluginC", "splashScreen"]
+- ["So9CAPPluginC", "splashScreenConfig"]
+- ["So9CAPPluginC", "splashScreenSettings"]
+- !private ["So13CAPPluginCallC", "getBool"]
+- !private ["So13CAPPluginCallC", "getInt"]
+- !private ["So13CAPPluginCallC", "reject"]
+- !private ["So13CAPPluginCallC", "resolve"]
+- !private ["s7CVarArgP", "SplashScreen"]
+- !private ["s7CVarArgP", "SplashScreenConfig"]
+- !private ["s7CVarArgP", "SplashScreenSettings"]
+- !private ["s7CVarArgP", "UIColor"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "bridge"]
+- !private ["s7CVarArgP", "capacitor"]
+- !private ["s7CVarArgP", "getBool"]
+- !private ["s7CVarArgP", "getConfigValue"]
+- !private ["s7CVarArgP", "getInt"]
+- !private ["s7CVarArgP", "hide"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "load"]
+- !private ["s7CVarArgP", "lowercased"]
+- !private ["s7CVarArgP", "reject"]
+- !private ["s7CVarArgP", "resolve"]
+- !private ["s7CVarArgP", "show"]
+- !private ["s7CVarArgP", "showOnLaunch"]
+- !private ["s7CVarArgP", "splashScreen"]
+- !private ["s7CVarArgP", "splashScreenConfig"]
+- !private ["s7CVarArgP", "splashScreenSettings"]
+- !private ["s7CVarArgP", "view"]
+- !private ["9Capacitor0A9ExtensionP", "capacitor"]
+- !private ["9Capacitor0A20ExtensionTypeWrapperV", "color"]
+- !private ["Sl", ""]
+- !private ["Sl", "lowercased"]
+- !private ["SL", ""]
+- !private ["SL", "lowercased"]
+- !private ["s28CustomDebugStringConvertibleP", "SplashScreen"]
+- !private ["s28CustomDebugStringConvertibleP", "SplashScreenConfig"]
+- !private ["s28CustomDebugStringConvertibleP", "SplashScreenSettings"]
+- !private ["s28CustomDebugStringConvertibleP", "UIColor"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "bridge"]
+- !private ["s28CustomDebugStringConvertibleP", "capacitor"]
+- !private ["s28CustomDebugStringConvertibleP", "getBool"]
+- !private ["s28CustomDebugStringConvertibleP", "getConfigValue"]
+- !private ["s28CustomDebugStringConvertibleP", "getInt"]
+- !private ["s28CustomDebugStringConvertibleP", "hide"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "load"]
+- !private ["s28CustomDebugStringConvertibleP", "lowercased"]
+- !private ["s28CustomDebugStringConvertibleP", "reject"]
+- !private ["s28CustomDebugStringConvertibleP", "resolve"]
+- !private ["s28CustomDebugStringConvertibleP", "show"]
+- !private ["s28CustomDebugStringConvertibleP", "showOnLaunch"]
+- !private ["s28CustomDebugStringConvertibleP", "splashScreen"]
+- !private ["s28CustomDebugStringConvertibleP", "splashScreenConfig"]
+- !private ["s28CustomDebugStringConvertibleP", "splashScreenSettings"]
+- !private ["s28CustomDebugStringConvertibleP", "view"]
+- !private ["s28CustomDebugStringConvertibleP", "white"]
+- !private ["s28CustomDebugStringConvertibleP", "whiteLarge"]
+- !private ["s17CustomReflectableP", "lowercased"]
+- !private ["s17CustomReflectableP", "white"]
+- !private ["s17CustomReflectableP", "whiteLarge"]
+- !private ["s23CustomStringConvertibleP", "SplashScreen"]
+- !private ["s23CustomStringConvertibleP", "SplashScreenConfig"]
+- !private ["s23CustomStringConvertibleP", "SplashScreenSettings"]
+- !private ["s23CustomStringConvertibleP", "UIColor"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "bridge"]
+- !private ["s23CustomStringConvertibleP", "capacitor"]
+- !private ["s23CustomStringConvertibleP", "getBool"]
+- !private ["s23CustomStringConvertibleP", "getConfigValue"]
+- !private ["s23CustomStringConvertibleP", "getInt"]
+- !private ["s23CustomStringConvertibleP", "hide"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "load"]
+- !private ["s23CustomStringConvertibleP", "lowercased"]
+- !private ["s23CustomStringConvertibleP", "reject"]
+- !private ["s23CustomStringConvertibleP", "resolve"]
+- !private ["s23CustomStringConvertibleP", "show"]
+- !private ["s23CustomStringConvertibleP", "showOnLaunch"]
+- !private ["s23CustomStringConvertibleP", "splashScreen"]
+- !private ["s23CustomStringConvertibleP", "splashScreenConfig"]
+- !private ["s23CustomStringConvertibleP", "splashScreenSettings"]
+- !private ["s23CustomStringConvertibleP", "view"]
+- !private ["Se", "lowercased"]
+- !private ["Se", "white"]
+- !private ["Se", "whiteLarge"]
+- !private ["SE", "lowercased"]
+- !private ["SE", "white"]
+- !private ["SE", "whiteLarge"]
+- !private ["SQ", "SplashScreen"]
+- !private ["SQ", "SplashScreenConfig"]
+- !private ["SQ", "SplashScreenSettings"]
+- !private ["SQ", "UIColor"]
+- ["SQ", ""]
+- !private ["SQ", "bridge"]
+- !private ["SQ", "capacitor"]
+- !private ["SQ", "getBool"]
+- !private ["SQ", "getConfigValue"]
+- !private ["SQ", "getInt"]
+- !private ["SQ", "hide"]
+- !private ["SQ", "init"]
+- !private ["SQ", "load"]
+- !private ["SQ", "lowercased"]
+- !private ["SQ", "reject"]
+- !private ["SQ", "resolve"]
+- !private ["SQ", "show"]
+- !private ["SQ", "showOnLaunch"]
+- !private ["SQ", "splashScreen"]
+- !private ["SQ", "splashScreenConfig"]
+- !private ["SQ", "splashScreenSettings"]
+- !private ["SQ", "view"]
+- !private ["SQ", "white"]
+- !private ["SQ", "whiteLarge"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "lowercased"]
+- !private ["s23ExpressibleByNilLiteralP", "white"]
+- !private ["s23ExpressibleByNilLiteralP", "whiteLarge"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "lowercased"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "lowercased"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "lowercased"]
+- !private ["SH", "SplashScreen"]
+- !private ["SH", "SplashScreenConfig"]
+- !private ["SH", "SplashScreenSettings"]
+- !private ["SH", "UIColor"]
+- ["SH", ""]
+- !private ["SH", "bridge"]
+- !private ["SH", "capacitor"]
+- !private ["SH", "getBool"]
+- !private ["SH", "getConfigValue"]
+- !private ["SH", "getInt"]
+- !private ["SH", "hide"]
+- !private ["SH", "init"]
+- !private ["SH", "load"]
+- !private ["SH", "lowercased"]
+- !private ["SH", "reject"]
+- !private ["SH", "resolve"]
+- !private ["SH", "show"]
+- !private ["SH", "showOnLaunch"]
+- !private ["SH", "splashScreen"]
+- !private ["SH", "splashScreenConfig"]
+- !private ["SH", "splashScreenSettings"]
+- !private ["SH", "view"]
+- !private ["SH", "white"]
+- !private ["SH", "whiteLarge"]
+- !private ["9Capacitor16JSArrayContainerP", ""]
+- !private ["9Capacitor16JSArrayContainerP", "getBool"]
+- !private ["9Capacitor16JSArrayContainerP", "getInt"]
+- !private ["9Capacitor16JSArrayContainerP", "reject"]
+- !private ["9Capacitor16JSArrayContainerP", "resolve"]
+- !private ["9Capacitor15JSBoolContainerP", ""]
+- !private ["9Capacitor15JSBoolContainerP", "getBool"]
+- !private ["9Capacitor15JSBoolContainerP", "getInt"]
+- !private ["9Capacitor15JSBoolContainerP", "reject"]
+- !private ["9Capacitor15JSBoolContainerP", "resolve"]
+- !private ["9Capacitor15JSDateContainerP", ""]
+- !private ["9Capacitor15JSDateContainerP", "getBool"]
+- !private ["9Capacitor15JSDateContainerP", "getInt"]
+- !private ["9Capacitor15JSDateContainerP", "reject"]
+- !private ["9Capacitor15JSDateContainerP", "resolve"]
+- !private ["9Capacitor17JSDoubleContainerP", ""]
+- !private ["9Capacitor17JSDoubleContainerP", "getBool"]
+- !private ["9Capacitor17JSDoubleContainerP", "getInt"]
+- !private ["9Capacitor17JSDoubleContainerP", "reject"]
+- !private ["9Capacitor17JSDoubleContainerP", "resolve"]
+- !private ["9Capacitor16JSFloatContainerP", ""]
+- !private ["9Capacitor16JSFloatContainerP", "getBool"]
+- !private ["9Capacitor16JSFloatContainerP", "getInt"]
+- !private ["9Capacitor16JSFloatContainerP", "reject"]
+- !private ["9Capacitor16JSFloatContainerP", "resolve"]
+- !private ["9Capacitor14JSIntContainerP", ""]
+- !private ["9Capacitor14JSIntContainerP", "getBool"]
+- !private ["9Capacitor14JSIntContainerP", "getInt"]
+- !private ["9Capacitor14JSIntContainerP", "reject"]
+- !private ["9Capacitor14JSIntContainerP", "resolve"]
+- !private ["9Capacitor17JSObjectContainerP", ""]
+- !private ["9Capacitor17JSObjectContainerP", "getBool"]
+- !private ["9Capacitor17JSObjectContainerP", "getInt"]
+- !private ["9Capacitor17JSObjectContainerP", "reject"]
+- !private ["9Capacitor17JSObjectContainerP", "resolve"]
+- !private ["9Capacitor17JSStringContainerP", ""]
+- !private ["9Capacitor17JSStringContainerP", "getBool"]
+- !private ["9Capacitor17JSStringContainerP", "getInt"]
+- !private ["9Capacitor17JSStringContainerP", "reject"]
+- !private ["9Capacitor17JSStringContainerP", "resolve"]
+- !private ["9Capacitor7JSValueP", "lowercased"]
+- !private ["9Capacitor16JSValueContainerP", "getBool"]
+- !private ["9Capacitor16JSValueContainerP", "getInt"]
+- !private ["9Capacitor16JSValueContainerP", "reject"]
+- !private ["9Capacitor16JSValueContainerP", "resolve"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "lowercased"]
+- !private ["s10MirrorPathP", "lowercased"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "capacitor"]
+- !private ["So8NSCodingP", "lowercased"]
+- !private ["So8NSCodingP", "view"]
+- !private ["So9NSCopyingP", "capacitor"]
+- !private ["So9NSCopyingP", "lowercased"]
+- !private ["So26NSExtensionRequestHandlingP", "view"]
+- !private ["So21NSItemProviderReadingP", "capacitor"]
+- !private ["So21NSItemProviderReadingP", "lowercased"]
+- !private ["So21NSItemProviderWritingP", "capacitor"]
+- !private ["So21NSItemProviderWritingP", "lowercased"]
+- !private ["So16NSMutableCopyingP", "lowercased"]
+- !private ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CAPPluginCall"]
+- !private ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "SplashScreen"]
+- ["So8NSObjectC", "SplashScreenConfig"]
+- ["So8NSObjectC", "SplashScreenSettings"]
+- !private ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "UIColor"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "bridge"]
+- !private ["So8NSObjectC", "capacitor"]
+- !private ["So8NSObjectC", "getBool"]
+- !private ["So8NSObjectC", "getConfigValue"]
+- !private ["So8NSObjectC", "getInt"]
+- ["So8NSObjectC", "hide"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "load"]
+- !private ["So8NSObjectC", "lowercaseStringWithLocale"]
+- !private ["So8NSObjectC", "lowercased"]
+- !private ["So8NSObjectC", "reject"]
+- !private ["So8NSObjectC", "resolve"]
+- ["So8NSObjectC", "show"]
+- !private ["So8NSObjectC", "showOnLaunch"]
+- ["So8NSObjectC", "splashScreen"]
+- ["So8NSObjectC", "splashScreenConfig"]
+- ["So8NSObjectC", "splashScreenSettings"]
+- !private ["So8NSObjectC", "view"]
+- !private ["So8NSObjectP", "Bool"]
+- ["So8NSObjectP", "CAPPluginCall"]
+- !private ["So8NSObjectP", "Int"]
+- ["So8NSObjectP", "SplashScreen"]
+- ["So8NSObjectP", "SplashScreenConfig"]
+- ["So8NSObjectP", "SplashScreenSettings"]
+- !private ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "UIColor"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "bridge"]
+- !private ["So8NSObjectP", "capacitor"]
+- !private ["So8NSObjectP", "getBool"]
+- !private ["So8NSObjectP", "getConfigValue"]
+- !private ["So8NSObjectP", "getInt"]
+- ["So8NSObjectP", "hide"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "load"]
+- !private ["So8NSObjectP", "lowercaseStringWithLocale"]
+- !private ["So8NSObjectP", "lowercased"]
+- !private ["So8NSObjectP", "reject"]
+- !private ["So8NSObjectP", "resolve"]
+- ["So8NSObjectP", "show"]
+- ["So8NSObjectP", "showOnLaunch"]
+- ["So8NSObjectP", "splashScreen"]
+- ["So8NSObjectP", "splashScreenConfig"]
+- ["So8NSObjectP", "splashScreenSettings"]
+- !private ["So8NSObjectP", "view"]
+- !private ["So8NSObjectP", "viewController"]
+- !private ["So14NSSecureCodingP", "capacitor"]
+- !private ["So14NSSecureCodingP", "lowercased"]
+- !private ["So8NSStringC", "lowercased"]
+- !private ["Sq", "white"]
+- !private ["Sq", "whiteLarge"]
+- !private ["Sm", "lowercased"]
+- !private ["SY", "white"]
+- !private ["SY", "whiteLarge"]
+- !private ["ST", ""]
+- !private ["ST", "lowercased"]
+- !private ["21CapacitorSplashScreen0bC0C", "hide"]
+- !private ["21CapacitorSplashScreen0bC0C", "init"]
+- !private ["21CapacitorSplashScreen0bC0C", "show"]
+- !private ["21CapacitorSplashScreen0bC0C", "showOnLaunch"]
+- !private ["21CapacitorSplashScreen0bC6ConfigV", "backgroundColor"]
+- !private ["21CapacitorSplashScreen0bC6ConfigV", "init"]
+- !private ["21CapacitorSplashScreen0bC6ConfigV", "launchAutoHide"]
+- !private ["21CapacitorSplashScreen0bC6ConfigV", "launchShowDuration"]
+- !private ["21CapacitorSplashScreen0bC6ConfigV", "showSpinner"]
+- !private ["21CapacitorSplashScreen0bC6ConfigV", "spinnerColor"]
+- !private ["21CapacitorSplashScreen0bC6ConfigV", "spinnerStyle"]
+- !private ["21CapacitorSplashScreen0bC6PluginC", "Bool"]
+- ["21CapacitorSplashScreen0bC6PluginC", "CAPPluginCall"]
+- !private ["21CapacitorSplashScreen0bC6PluginC", "Int"]
+- ["21CapacitorSplashScreen0bC6PluginC", "SplashScreen"]
+- ["21CapacitorSplashScreen0bC6PluginC", "SplashScreenConfig"]
+- ["21CapacitorSplashScreen0bC6PluginC", "SplashScreenSettings"]
+- !private ["21CapacitorSplashScreen0bC6PluginC", "String"]
+- !private ["21CapacitorSplashScreen0bC6PluginC", "UIColor"]
+- ["21CapacitorSplashScreen0bC6PluginC", ""]
+- !private ["21CapacitorSplashScreen0bC6PluginC", "bridge"]
+- ["21CapacitorSplashScreen0bC6PluginC", "deinit"]
+- !private ["21CapacitorSplashScreen0bC6PluginC", "getConfigValue"]
+- ["21CapacitorSplashScreen0bC6PluginC", "hide"]
+- ["21CapacitorSplashScreen0bC6PluginC", "init"]
+- ["21CapacitorSplashScreen0bC6PluginC", "load"]
+- ["21CapacitorSplashScreen0bC6PluginC", "show"]
+- !private ["21CapacitorSplashScreen0bC6PluginC", "splashScreen"]
+- !private ["21CapacitorSplashScreen0bC6PluginC", "splashScreenConfig"]
+- !private ["21CapacitorSplashScreen0bC6PluginC", "splashScreenSettings"]
+- !private ["21CapacitorSplashScreen0bC8SettingsV", "autoHide"]
+- !private ["21CapacitorSplashScreen0bC8SettingsV", "fadeInDuration"]
+- !private ["21CapacitorSplashScreen0bC8SettingsV", "fadeOutDuration"]
+- !private ["21CapacitorSplashScreen0bC8SettingsV", "init"]
+- !private ["21CapacitorSplashScreen0bC8SettingsV", "showDuration"]
+- !private ["SS", "lowercased"]
+- !private ["Sy", "lowercased"]
+- !private ["So28UIActivityIndicatorViewStyleV", "white"]
+- !private ["So28UIActivityIndicatorViewStyleV", "whiteLarge"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "lowercased"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "lowercased"]
+- !private ["So21UIAppearanceContainerP", "view"]
+- !private ["So7UIColorC", "capacitor"]
+- !private ["So18UIContentContainerP", "view"]
+- !private ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "view"]
+- !private ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "view"]
+- ["So11UIResponderC", ""]
+- !private ["So11UIResponderC", "view"]
+- !private ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "view"]
+- !private ["So16UIStateRestoringP", "view"]
+- !private ["So18UITraitEnvironmentP", "view"]
+- !private ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "view"]
+- !private ["So16UIViewControllerC", "view"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "lowercased"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "lowercased"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "lowercased"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "lowercased"]
+- !private ["s26_ExpressibleByColorLiteralP", "capacitor"]
+- !private ["s19_HasContiguousBytesP", "lowercased"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "lowercased"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SplashScreen"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SplashScreenConfig"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SplashScreenSettings"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bridge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "capacitor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getBool"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getConfigValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getInt"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hide"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "load"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "lowercased"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resolve"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "show"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "showOnLaunch"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "splashScreen"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "splashScreenConfig"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "splashScreenSettings"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "SplashScreen"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "SplashScreenConfig"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "SplashScreenSettings"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIColor"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bridge"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "capacitor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getBool"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getConfigValue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getInt"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "hide"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "load"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "lowercased"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "reject"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resolve"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "show"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "showOnLaunch"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "splashScreen"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "splashScreenConfig"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "splashScreenSettings"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "view"]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "lowercased"]
+- !private ["s21_ObjectiveCBridgeableP", "white"]
+- !private ["s21_ObjectiveCBridgeableP", "whiteLarge"]
+depends-nominal:
+- !private "SK"
+- !private "9Capacitor23BridgedJSValueContainerP"
+- !private "9Capacitor17CAPBridgeProtocolP"
+- "So9CAPPluginC"
+- !private "So13CAPPluginCallC"
+- "s7CVarArgP"
+- !private "9Capacitor0A9ExtensionP"
+- !private "9Capacitor0A20ExtensionTypeWrapperV"
+- !private "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "9Capacitor16JSArrayContainerP"
+- !private "9Capacitor15JSBoolContainerP"
+- !private "9Capacitor15JSDateContainerP"
+- !private "9Capacitor17JSDoubleContainerP"
+- !private "9Capacitor16JSFloatContainerP"
+- !private "9Capacitor14JSIntContainerP"
+- !private "9Capacitor17JSObjectContainerP"
+- !private "9Capacitor17JSStringContainerP"
+- !private "9Capacitor7JSValueP"
+- !private "9Capacitor16JSValueContainerP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sq"
+- !private "Sm"
+- !private "SY"
+- !private "ST"
+- !private "21CapacitorSplashScreen0bC0C"
+- !private "21CapacitorSplashScreen0bC6ConfigV"
+- "21CapacitorSplashScreen0bC6PluginC"
+- !private "21CapacitorSplashScreen0bC8SettingsV"
+- !private "SS"
+- !private "Sy"
+- !private "So28UIActivityIndicatorViewStyleV"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So21UIAppearanceContainerP"
+- !private "So7UIColorC"
+- !private "So18UIContentContainerP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So16UIStateRestoringP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So16UIViewControllerC"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Products/Debug-iphonesimulator/Capacitor/Capacitor.framework/Modules/Capacitor.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDV.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/App/Pods/Target Support Files/CapacitorSplashScreen/CapacitorSplashScreen-umbrella.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/CapacitorCordova.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVInvokedUrlCommand.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginMethod.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVScreenOrientationDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/AppDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVURLProtocol.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegateImpl.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/splash-screen/ios/Plugin/SplashScreenPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceConfiguration.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginManager.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVViewController.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVConfigParser.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/Capacitor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceDescriptor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/NSDictionary+CordovaPreferences.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin+Resources.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Products/Debug-iphonesimulator/Capacitor/Capacitor.framework/Headers/Capacitor-Swift.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginResult.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVAvailability.h"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorSplashScreen.build/unextended-module.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCordova.build/module.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/module.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "a065a345936564a028d1c6ea0d92e6f2"

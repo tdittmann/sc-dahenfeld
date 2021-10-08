@@ -1,0 +1,10 @@
+framework module CapacitorStatusBar {
+  umbrella header "CapacitorStatusBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module CapacitorStatusBar.__Swift {
+    exclude header "CapacitorStatusBar-Swift.h"
+}

@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)"
+options: "a5bfd5af7f3c2ffd1f3857a727ff751f"
+build_time: [1633960531, 359665000]
+inputs:
+  "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/device/ios/Plugin/Device.swift": [499162500, 0]
+  "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/device/ios/Plugin/DevicePlugin.swift": [499162500, 0]

@@ -1,0 +1,840 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "WebViewAssetHandler"
+provides-nominal:
+- "9Capacitor19WebViewAssetHandlerC"
+provides-member:
+- ["9Capacitor19WebViewAssetHandlerC", ""]
+provides-dynamic-lookup:
+- "basePath"
+- "isMediaExtension"
+- "mimeTypeForExtension"
+- "setAssetPath"
+- "webView"
+depends-top-level:
+- !private "!"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- !private "CAPLog"
+- !private "CapacitorBridge"
+- "CastingPrecedence"
+- !private "Data"
+- !private "Dictionary"
+- !private "FloatLiteralType"
+- !private "HTTPURLResponse"
+- !private "IntegerLiteralType"
+- "NSError"
+- "NSObject"
+- "NSString"
+- "String"
+- "StringLiteralType"
+- !private "URL"
+- !private "URLResponse"
+- !private "UTTypeCopyPreferredTagWithClass"
+- !private "UTTypeCreatePreferredIdentifierForTag"
+- "WKURLSchemeHandler"
+- "WKURLSchemeTask"
+- "WKWebView"
+- "WebViewAssetHandler"
+- !private "isMediaExtension"
+- !private "kUTTagClassFilenameExtension"
+- !private "kUTTagClassMIMEType"
+- !private "mimeTypeForExtension"
+- !private "||"
+depends-member:
+- !private ["Sa", "contains"]
+- !private ["SK", "ReadingOptions"]
+- !private ["SK", ""]
+- !private ["SK", "append"]
+- !private ["SK", "contains"]
+- !private ["SK", "count"]
+- !private ["SK", "init"]
+- !private ["SK", "isEmpty"]
+- !private ["SK", "lowercased"]
+- !private ["SK", "replacingOccurrences"]
+- !private ["SK", "starts"]
+- !private ["9Capacitor17CAPBridgeProtocolP", "fileStartIdentifier"]
+- !private ["9Capacitor6CAPLogC", "print"]
+- !private ["s7CVarArgP", "CAPLog"]
+- !private ["s7CVarArgP", "CapacitorBridge"]
+- !private ["s7CVarArgP", "Data"]
+- !private ["s7CVarArgP", "HTTPURLResponse"]
+- !private ["s7CVarArgP", "URL"]
+- !private ["s7CVarArgP", "URLResponse"]
+- !private ["s7CVarArgP", "UTTypeCopyPreferredTagWithClass"]
+- !private ["s7CVarArgP", "UTTypeCreatePreferredIdentifierForTag"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "basePath"]
+- !private ["s7CVarArgP", "contains"]
+- !private ["s7CVarArgP", "fileStartIdentifier"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "isMediaExtension"]
+- !private ["s7CVarArgP", "kUTTagClassFilenameExtension"]
+- !private ["s7CVarArgP", "kUTTagClassMIMEType"]
+- !private ["s7CVarArgP", "lowercased"]
+- !private ["s7CVarArgP", "mimeTypeForExtension"]
+- !private ["s7CVarArgP", "replacingOccurrences"]
+- !private ["s7CVarArgP", "setAssetPath"]
+- !private ["s7CVarArgP", "starts"]
+- ["s7CVarArgP", "webView"]
+- !private ["9Capacitor0A6BridgeC", "fileStartIdentifier"]
+- !private ["9Capacitor0A9ExtensionP", "ReadingOptions"]
+- !private ["9Capacitor0A9ExtensionP", "contains"]
+- !private ["9Capacitor0A9ExtensionP", "count"]
+- !private ["9Capacitor0A9ExtensionP", "init"]
+- !private ["Sl", "ReadingOptions"]
+- !private ["Sl", ""]
+- !private ["Sl", "_customIndexOfEquatableElement"]
+- !private ["Sl", "_customLastIndexOfEquatableElement"]
+- !private ["Sl", "_failEarlyRangeCheck"]
+- !private ["Sl", "append"]
+- !private ["Sl", "contains"]
+- !private ["Sl", "count"]
+- !private ["Sl", "distance"]
+- !private ["Sl", "endIndex"]
+- !private ["Sl", "formIndex"]
+- !private ["Sl", "index"]
+- !private ["Sl", "indices"]
+- !private ["Sl", "init"]
+- !private ["Sl", "isEmpty"]
+- !private ["Sl", "lowercased"]
+- !private ["Sl", "makeIterator"]
+- !private ["Sl", "replacingOccurrences"]
+- !private ["Sl", "startIndex"]
+- !private ["Sl", "starts"]
+- !private ["Sl", "subscript"]
+- !private ["SL", ""]
+- !private ["SL", "append"]
+- !private ["SL", "contains"]
+- !private ["SL", "isEmpty"]
+- !private ["SL", "lowercased"]
+- !private ["SL", "replacingOccurrences"]
+- !private ["SL", "starts"]
+- !private ["10Foundation15ContiguousBytesP", "ReadingOptions"]
+- !private ["10Foundation15ContiguousBytesP", "contains"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "CAPLog"]
+- !private ["s28CustomDebugStringConvertibleP", "CapacitorBridge"]
+- !private ["s28CustomDebugStringConvertibleP", "Data"]
+- !private ["s28CustomDebugStringConvertibleP", "HTTPURLResponse"]
+- !private ["s28CustomDebugStringConvertibleP", "ReadingOptions"]
+- !private ["s28CustomDebugStringConvertibleP", "URL"]
+- !private ["s28CustomDebugStringConvertibleP", "URLResponse"]
+- !private ["s28CustomDebugStringConvertibleP", "UTTypeCopyPreferredTagWithClass"]
+- !private ["s28CustomDebugStringConvertibleP", "UTTypeCreatePreferredIdentifierForTag"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "absoluteString"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "basePath"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "fileStartIdentifier"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "isMediaExtension"]
+- !private ["s28CustomDebugStringConvertibleP", "kUTTagClassFilenameExtension"]
+- !private ["s28CustomDebugStringConvertibleP", "kUTTagClassMIMEType"]
+- !private ["s28CustomDebugStringConvertibleP", "lowercased"]
+- !private ["s28CustomDebugStringConvertibleP", "mimeTypeForExtension"]
+- !private ["s28CustomDebugStringConvertibleP", "path"]
+- !private ["s28CustomDebugStringConvertibleP", "pathExtension"]
+- !private ["s28CustomDebugStringConvertibleP", "replacingOccurrences"]
+- !private ["s28CustomDebugStringConvertibleP", "setAssetPath"]
+- !private ["s28CustomDebugStringConvertibleP", "starts"]
+- !private ["s28CustomDebugStringConvertibleP", "url"]
+- ["s28CustomDebugStringConvertibleP", "webView"]
+- !private ["s17CustomReflectableP", "ReadingOptions"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "lowercased"]
+- !private ["s17CustomReflectableP", "replacingOccurrences"]
+- !private ["s17CustomReflectableP", "starts"]
+- !private ["s17CustomReflectableP", "url"]
+- !private ["s23CustomStringConvertibleP", "CAPLog"]
+- !private ["s23CustomStringConvertibleP", "CapacitorBridge"]
+- !private ["s23CustomStringConvertibleP", "Data"]
+- !private ["s23CustomStringConvertibleP", "HTTPURLResponse"]
+- !private ["s23CustomStringConvertibleP", "ReadingOptions"]
+- !private ["s23CustomStringConvertibleP", "URL"]
+- !private ["s23CustomStringConvertibleP", "URLResponse"]
+- !private ["s23CustomStringConvertibleP", "UTTypeCopyPreferredTagWithClass"]
+- !private ["s23CustomStringConvertibleP", "UTTypeCreatePreferredIdentifierForTag"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "absoluteString"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "basePath"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "fileStartIdentifier"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "isMediaExtension"]
+- !private ["s23CustomStringConvertibleP", "kUTTagClassFilenameExtension"]
+- !private ["s23CustomStringConvertibleP", "kUTTagClassMIMEType"]
+- !private ["s23CustomStringConvertibleP", "lowercased"]
+- !private ["s23CustomStringConvertibleP", "mimeTypeForExtension"]
+- !private ["s23CustomStringConvertibleP", "path"]
+- !private ["s23CustomStringConvertibleP", "pathExtension"]
+- !private ["s23CustomStringConvertibleP", "replacingOccurrences"]
+- !private ["s23CustomStringConvertibleP", "setAssetPath"]
+- !private ["s23CustomStringConvertibleP", "starts"]
+- !private ["s23CustomStringConvertibleP", "url"]
+- ["s23CustomStringConvertibleP", "webView"]
+- !private ["10Foundation4DataV", "ReadingOptions"]
+- !private ["10Foundation4DataV", "count"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation12DataProtocolP", "ReadingOptions"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "contains"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "init"]
+- !private ["Se", "ReadingOptions"]
+- !private ["Se", "absoluteString"]
+- !private ["Se", "append"]
+- !private ["Se", "contains"]
+- !private ["Se", "count"]
+- !private ["Se", "init"]
+- !private ["Se", "isEmpty"]
+- !private ["Se", "lowercased"]
+- !private ["Se", "path"]
+- !private ["Se", "pathExtension"]
+- !private ["Se", "replacingOccurrences"]
+- !private ["Se", "starts"]
+- !private ["SE", "ReadingOptions"]
+- !private ["SE", "absoluteString"]
+- !private ["SE", "append"]
+- !private ["SE", "contains"]
+- !private ["SE", "count"]
+- !private ["SE", "init"]
+- !private ["SE", "isEmpty"]
+- !private ["SE", "lowercased"]
+- !private ["SE", "path"]
+- !private ["SE", "pathExtension"]
+- !private ["SE", "replacingOccurrences"]
+- !private ["SE", "starts"]
+- !private ["SQ", "CAPLog"]
+- !private ["SQ", "CapacitorBridge"]
+- !private ["SQ", "Data"]
+- !private ["SQ", "HTTPURLResponse"]
+- !private ["SQ", "ReadingOptions"]
+- !private ["SQ", "URL"]
+- !private ["SQ", "URLResponse"]
+- !private ["SQ", "UTTypeCopyPreferredTagWithClass"]
+- !private ["SQ", "UTTypeCreatePreferredIdentifierForTag"]
+- ["SQ", ""]
+- !private ["SQ", "absoluteString"]
+- !private ["SQ", "append"]
+- !private ["SQ", "basePath"]
+- !private ["SQ", "contains"]
+- !private ["SQ", "count"]
+- !private ["SQ", "fileStartIdentifier"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isEmpty"]
+- !private ["SQ", "isMediaExtension"]
+- !private ["SQ", "kUTTagClassFilenameExtension"]
+- !private ["SQ", "kUTTagClassMIMEType"]
+- !private ["SQ", "lowercased"]
+- !private ["SQ", "mappedIfSafe"]
+- !private ["SQ", "mimeTypeForExtension"]
+- !private ["SQ", "path"]
+- !private ["SQ", "pathExtension"]
+- !private ["SQ", "replacingOccurrences"]
+- !private ["SQ", "setAssetPath"]
+- !private ["SQ", "starts"]
+- !private ["SQ", "url"]
+- ["SQ", "webView"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "contains"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "mappedIfSafe"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "append"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "contains"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "lowercased"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "starts"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "append"]
+- !private ["s32ExpressibleByStringInterpolationP", "contains"]
+- !private ["s32ExpressibleByStringInterpolationP", "isEmpty"]
+- !private ["s32ExpressibleByStringInterpolationP", "lowercased"]
+- !private ["s32ExpressibleByStringInterpolationP", "replacingOccurrences"]
+- !private ["s32ExpressibleByStringInterpolationP", "starts"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "append"]
+- !private ["s26ExpressibleByStringLiteralP", "contains"]
+- !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
+- !private ["s26ExpressibleByStringLiteralP", "lowercased"]
+- !private ["s26ExpressibleByStringLiteralP", "replacingOccurrences"]
+- !private ["s26ExpressibleByStringLiteralP", "starts"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "append"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "contains"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "lowercased"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "replacingOccurrences"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "starts"]
+- !private ["So17NSHTTPURLResponseC", "init"]
+- !private ["SH", "CAPLog"]
+- !private ["SH", "CapacitorBridge"]
+- !private ["SH", "Data"]
+- !private ["SH", "HTTPURLResponse"]
+- !private ["SH", "ReadingOptions"]
+- !private ["SH", "URL"]
+- !private ["SH", "URLResponse"]
+- !private ["SH", "UTTypeCopyPreferredTagWithClass"]
+- !private ["SH", "UTTypeCreatePreferredIdentifierForTag"]
+- ["SH", ""]
+- !private ["SH", "absoluteString"]
+- !private ["SH", "append"]
+- !private ["SH", "basePath"]
+- !private ["SH", "contains"]
+- !private ["SH", "count"]
+- !private ["SH", "fileStartIdentifier"]
+- !private ["SH", "init"]
+- !private ["SH", "isEmpty"]
+- !private ["SH", "isMediaExtension"]
+- !private ["SH", "kUTTagClassFilenameExtension"]
+- !private ["SH", "kUTTagClassMIMEType"]
+- !private ["SH", "lowercased"]
+- !private ["SH", "mimeTypeForExtension"]
+- !private ["SH", "path"]
+- !private ["SH", "pathExtension"]
+- !private ["SH", "replacingOccurrences"]
+- !private ["SH", "setAssetPath"]
+- !private ["SH", "starts"]
+- !private ["SH", "url"]
+- ["SH", "webView"]
+- !private ["9Capacitor7JSValueP", "append"]
+- !private ["9Capacitor7JSValueP", "contains"]
+- !private ["9Capacitor7JSValueP", "isEmpty"]
+- !private ["9Capacitor7JSValueP", "lowercased"]
+- !private ["9Capacitor7JSValueP", "replacingOccurrences"]
+- !private ["9Capacitor7JSValueP", "starts"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "append"]
+- !private ["s25LosslessStringConvertibleP", "contains"]
+- !private ["s25LosslessStringConvertibleP", "isEmpty"]
+- !private ["s25LosslessStringConvertibleP", "lowercased"]
+- !private ["s25LosslessStringConvertibleP", "replacingOccurrences"]
+- !private ["s25LosslessStringConvertibleP", "starts"]
+- !private ["s10MirrorPathP", "append"]
+- !private ["s10MirrorPathP", "contains"]
+- !private ["s10MirrorPathP", "isEmpty"]
+- !private ["s10MirrorPathP", "lowercased"]
+- !private ["s10MirrorPathP", "replacingOccurrences"]
+- !private ["s10MirrorPathP", "starts"]
+- !private ["SM", "ReadingOptions"]
+- !private ["SM", ""]
+- !private ["SM", "contains"]
+- !private ["SM", "count"]
+- !private ["SM", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "ReadingOptions"]
+- !private ["10Foundation19MutableDataProtocolP", "contains"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "append"]
+- !private ["So8NSCodingP", "contains"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isEmpty"]
+- !private ["So8NSCodingP", "lowercased"]
+- !private ["So8NSCodingP", "replacingOccurrences"]
+- !private ["So8NSCodingP", "starts"]
+- !private ["So9NSCopyingP", "append"]
+- !private ["So9NSCopyingP", "contains"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isEmpty"]
+- !private ["So9NSCopyingP", "lowercased"]
+- !private ["So9NSCopyingP", "replacingOccurrences"]
+- !private ["So9NSCopyingP", "starts"]
+- !private ["So21NSItemProviderReadingP", "append"]
+- !private ["So21NSItemProviderReadingP", "contains"]
+- !private ["So21NSItemProviderReadingP", "isEmpty"]
+- !private ["So21NSItemProviderReadingP", "lowercased"]
+- !private ["So21NSItemProviderReadingP", "replacingOccurrences"]
+- !private ["So21NSItemProviderReadingP", "starts"]
+- !private ["So21NSItemProviderWritingP", "append"]
+- !private ["So21NSItemProviderWritingP", "contains"]
+- !private ["So21NSItemProviderWritingP", "isEmpty"]
+- !private ["So21NSItemProviderWritingP", "lowercased"]
+- !private ["So21NSItemProviderWritingP", "replacingOccurrences"]
+- !private ["So21NSItemProviderWritingP", "starts"]
+- !private ["So16NSMutableCopyingP", "append"]
+- !private ["So16NSMutableCopyingP", "contains"]
+- !private ["So16NSMutableCopyingP", "isEmpty"]
+- !private ["So16NSMutableCopyingP", "lowercased"]
+- !private ["So16NSMutableCopyingP", "replacingOccurrences"]
+- !private ["So16NSMutableCopyingP", "starts"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "CAPLog"]
+- !private ["So8NSObjectC", "CapacitorBridge"]
+- !private ["So8NSObjectC", "Data"]
+- !private ["So8NSObjectC", "HTTPURLResponse"]
+- !private ["So8NSObjectC", "NSError"]
+- !private ["So8NSObjectC", "NSString"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "URL"]
+- !private ["So8NSObjectC", "URLResponse"]
+- !private ["So8NSObjectC", "UTTypeCopyPreferredTagWithClass"]
+- !private ["So8NSObjectC", "UTTypeCreatePreferredIdentifierForTag"]
+- ["So8NSObjectC", "WKURLSchemeTask"]
+- ["So8NSObjectC", "WKWebView"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "append"]
+- ["So8NSObjectC", "basePath"]
+- !private ["So8NSObjectC", "contains"]
+- !private ["So8NSObjectC", "containsString"]
+- !private ["So8NSObjectC", "fileStartIdentifier"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isEmpty"]
+- ["So8NSObjectC", "isMediaExtension"]
+- !private ["So8NSObjectC", "kUTTagClassFilenameExtension"]
+- !private ["So8NSObjectC", "kUTTagClassMIMEType"]
+- !private ["So8NSObjectC", "lowercaseStringWithLocale"]
+- !private ["So8NSObjectC", "lowercased"]
+- ["So8NSObjectC", "mimeTypeForExtension"]
+- !private ["So8NSObjectC", "replacingOccurrences"]
+- ["So8NSObjectC", "setAssetPath"]
+- !private ["So8NSObjectC", "starts"]
+- !private ["So8NSObjectC", "stringByReplacingOccurrencesOfString"]
+- ["So8NSObjectC", "webView"]
+- ["So8NSObjectP", "Bool"]
+- !private ["So8NSObjectP", "CAPLog"]
+- !private ["So8NSObjectP", "CapacitorBridge"]
+- !private ["So8NSObjectP", "Data"]
+- !private ["So8NSObjectP", "HTTPURLResponse"]
+- !private ["So8NSObjectP", "NSError"]
+- !private ["So8NSObjectP", "NSString"]
+- !private ["So8NSObjectP", "URL"]
+- !private ["So8NSObjectP", "URLResponse"]
+- !private ["So8NSObjectP", "UTTypeCopyPreferredTagWithClass"]
+- !private ["So8NSObjectP", "UTTypeCreatePreferredIdentifierForTag"]
+- ["So8NSObjectP", "WKURLSchemeTask"]
+- ["So8NSObjectP", "WKWebView"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "append"]
+- ["So8NSObjectP", "basePath"]
+- !private ["So8NSObjectP", "contains"]
+- !private ["So8NSObjectP", "containsString"]
+- !private ["So8NSObjectP", "didFailWithError"]
+- !private ["So8NSObjectP", "didFinish"]
+- !private ["So8NSObjectP", "didReceive"]
+- !private ["So8NSObjectP", "fileStartIdentifier"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isEmpty"]
+- ["So8NSObjectP", "isMediaExtension"]
+- !private ["So8NSObjectP", "kUTTagClassFilenameExtension"]
+- !private ["So8NSObjectP", "kUTTagClassMIMEType"]
+- !private ["So8NSObjectP", "lowercaseStringWithLocale"]
+- !private ["So8NSObjectP", "lowercased"]
+- ["So8NSObjectP", "mimeTypeForExtension"]
+- !private ["So8NSObjectP", "replacingOccurrences"]
+- !private ["So8NSObjectP", "request"]
+- ["So8NSObjectP", "setAssetPath"]
+- !private ["So8NSObjectP", "starts"]
+- !private ["So8NSObjectP", "stringByReplacingOccurrencesOfString"]
+- ["So8NSObjectP", "webView"]
+- !private ["So14NSSecureCodingP", "append"]
+- !private ["So14NSSecureCodingP", "contains"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "isEmpty"]
+- !private ["So14NSSecureCodingP", "lowercased"]
+- !private ["So14NSSecureCodingP", "replacingOccurrences"]
+- !private ["So14NSSecureCodingP", "starts"]
+- !private ["So8NSStringC", "append"]
+- !private ["So8NSStringC", "contains"]
+- !private ["So8NSStringC", "isEmpty"]
+- !private ["So8NSStringC", "lowercased"]
+- !private ["So8NSStringC", "replacingOccurrences"]
+- !private ["So8NSStringC", "starts"]
+- !private ["s9OptionSetP", "mappedIfSafe"]
+- !private ["Sk", "ReadingOptions"]
+- !private ["Sk", ""]
+- !private ["Sk", "contains"]
+- !private ["Sk", "count"]
+- !private ["Sk", "distance"]
+- !private ["Sk", "index"]
+- !private ["Sk", "init"]
+- !private ["Sm", "ReadingOptions"]
+- !private ["Sm", ""]
+- !private ["Sm", "_customRemoveLast"]
+- !private ["Sm", "append"]
+- !private ["Sm", "contains"]
+- !private ["Sm", "count"]
+- !private ["Sm", "init"]
+- !private ["Sm", "insert"]
+- !private ["Sm", "isEmpty"]
+- !private ["Sm", "lowercased"]
+- !private ["Sm", "remove"]
+- !private ["Sm", "removeAll"]
+- !private ["Sm", "removeFirst"]
+- !private ["Sm", "removeSubrange"]
+- !private ["Sm", "replaceSubrange"]
+- !private ["Sm", "replacingOccurrences"]
+- !private ["Sm", "reserveCapacity"]
+- !private ["Sm", "starts"]
+- !private ["Sm", "subscript"]
+- !private ["SY", ""]
+- !private ["SY", "mappedIfSafe"]
+- !private ["So20NSDataReadingOptionsV", "mappedIfSafe"]
+- !private ["10Foundation20ReferenceConvertibleP", "ReadingOptions"]
+- !private ["10Foundation20ReferenceConvertibleP", "absoluteString"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "path"]
+- !private ["10Foundation20ReferenceConvertibleP", "pathExtension"]
+- !private ["10Foundation20ReferenceConvertibleP", "url"]
+- !private ["ST", "ReadingOptions"]
+- !private ["ST", ""]
+- !private ["ST", "append"]
+- !private ["ST", "contains"]
+- !private ["ST", "count"]
+- !private ["ST", "init"]
+- !private ["ST", "isEmpty"]
+- !private ["ST", "lowercased"]
+- !private ["ST", "replacingOccurrences"]
+- !private ["ST", "starts"]
+- !private ["s10SetAlgebraP", ""]
+- !private ["s10SetAlgebraP", "mappedIfSafe"]
+- !private ["SS", "append"]
+- !private ["SS", "contains"]
+- !private ["SS", "isEmpty"]
+- !private ["SS", "lowercased"]
+- !private ["SS", "replacingOccurrences"]
+- !private ["SS", "starts"]
+- !private ["Sy", "append"]
+- !private ["Sy", "contains"]
+- !private ["Sy", "isEmpty"]
+- !private ["Sy", "lowercased"]
+- !private ["Sy", "replacingOccurrences"]
+- !private ["Sy", "starts"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "append"]
+- !private ["s16TextOutputStreamP", "contains"]
+- !private ["s16TextOutputStreamP", "isEmpty"]
+- !private ["s16TextOutputStreamP", "lowercased"]
+- !private ["s16TextOutputStreamP", "replacingOccurrences"]
+- !private ["s16TextOutputStreamP", "starts"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "append"]
+- !private ["s20TextOutputStreamableP", "contains"]
+- !private ["s20TextOutputStreamableP", "isEmpty"]
+- !private ["s20TextOutputStreamableP", "lowercased"]
+- !private ["s20TextOutputStreamableP", "replacingOccurrences"]
+- !private ["s20TextOutputStreamableP", "starts"]
+- !private ["10Foundation3URLV", "absoluteString"]
+- !private ["10Foundation3URLV", "init"]
+- !private ["10Foundation3URLV", "path"]
+- !private ["10Foundation3URLV", "pathExtension"]
+- !private ["10Foundation10URLRequestV", "url"]
+- ["So13NSURLResponseC", ""]
+- !private ["So13NSURLResponseC", "init"]
+- !private ["s9UnmanagedV", "takeRetainedValue"]
+- !private ["So18WKURLSchemeHandlerP", "CAPLog"]
+- !private ["So18WKURLSchemeHandlerP", "CapacitorBridge"]
+- !private ["So18WKURLSchemeHandlerP", "Data"]
+- !private ["So18WKURLSchemeHandlerP", "HTTPURLResponse"]
+- !private ["So18WKURLSchemeHandlerP", "URL"]
+- !private ["So18WKURLSchemeHandlerP", "URLResponse"]
+- !private ["So18WKURLSchemeHandlerP", "UTTypeCopyPreferredTagWithClass"]
+- !private ["So18WKURLSchemeHandlerP", "UTTypeCreatePreferredIdentifierForTag"]
+- ["So18WKURLSchemeHandlerP", ""]
+- ["So18WKURLSchemeHandlerP", "basePath"]
+- ["So18WKURLSchemeHandlerP", "init"]
+- ["So18WKURLSchemeHandlerP", "isMediaExtension"]
+- !private ["So18WKURLSchemeHandlerP", "kUTTagClassFilenameExtension"]
+- !private ["So18WKURLSchemeHandlerP", "kUTTagClassMIMEType"]
+- ["So18WKURLSchemeHandlerP", "mimeTypeForExtension"]
+- ["So18WKURLSchemeHandlerP", "setAssetPath"]
+- ["So18WKURLSchemeHandlerP", "webView"]
+- !private ["So15WKURLSchemeTaskP", "didFailWithError"]
+- !private ["So15WKURLSchemeTaskP", "didFinish"]
+- !private ["So15WKURLSchemeTaskP", "didReceive"]
+- !private ["So15WKURLSchemeTaskP", "request"]
+- ["9Capacitor19WebViewAssetHandlerC", "Bool"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "CAPLog"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "CapacitorBridge"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "Data"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "HTTPURLResponse"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "NSError"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "NSString"]
+- ["9Capacitor19WebViewAssetHandlerC", "String"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "URL"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "URLResponse"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "UTTypeCopyPreferredTagWithClass"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "UTTypeCreatePreferredIdentifierForTag"]
+- ["9Capacitor19WebViewAssetHandlerC", "WKURLSchemeTask"]
+- ["9Capacitor19WebViewAssetHandlerC", "WKWebView"]
+- ["9Capacitor19WebViewAssetHandlerC", ""]
+- !private ["9Capacitor19WebViewAssetHandlerC", "basePath"]
+- ["9Capacitor19WebViewAssetHandlerC", "deinit"]
+- ["9Capacitor19WebViewAssetHandlerC", "init"]
+- ["9Capacitor19WebViewAssetHandlerC", "isMediaExtension"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "kUTTagClassFilenameExtension"]
+- !private ["9Capacitor19WebViewAssetHandlerC", "kUTTagClassMIMEType"]
+- ["9Capacitor19WebViewAssetHandlerC", "mimeTypeForExtension"]
+- ["9Capacitor19WebViewAssetHandlerC", "setAssetPath"]
+- ["9Capacitor19WebViewAssetHandlerC", "webView"]
+- !private ["s14_ArrayProtocolP", "contains"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "absoluteString"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "append"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "contains"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "isEmpty"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "lowercased"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "path"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "pathExtension"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "replacingOccurrences"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "starts"]
+- !private ["s24_DestructorSafeContainerP", "contains"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "append"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "contains"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "lowercased"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "starts"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "append"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "contains"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "lowercased"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "replacingOccurrences"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "starts"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "append"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "contains"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "lowercased"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "replacingOccurrences"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "starts"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "absoluteString"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "path"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "pathExtension"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "contains"]
+- !private ["s19_HasContiguousBytesP", "isEmpty"]
+- !private ["s19_HasContiguousBytesP", "lowercased"]
+- !private ["s19_HasContiguousBytesP", "replacingOccurrences"]
+- !private ["s19_HasContiguousBytesP", "starts"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "lowercased"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "replacingOccurrences"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "starts"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CAPLog"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CapacitorBridge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HTTPURLResponse"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URLResponse"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UTTypeCopyPreferredTagWithClass"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UTTypeCreatePreferredIdentifierForTag"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "append"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "basePath"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contains"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fileStartIdentifier"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isMediaExtension"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "kUTTagClassFilenameExtension"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "kUTTagClassMIMEType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "lowercased"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "mimeTypeForExtension"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "replacingOccurrences"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setAssetPath"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "starts"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "webView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CAPLog"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CapacitorBridge"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Data"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HTTPURLResponse"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URL"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLResponse"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UTTypeCopyPreferredTagWithClass"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UTTypeCreatePreferredIdentifierForTag"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "append"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "basePath"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "contains"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fileStartIdentifier"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isEmpty"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isMediaExtension"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kUTTagClassFilenameExtension"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kUTTagClassMIMEType"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "lowercased"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "mimeTypeForExtension"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "replacingOccurrences"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setAssetPath"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "starts"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "webView"]
+- !private ["s21_ObjectiveCBridgeableP", "ReadingOptions"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "absoluteString"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "contains"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "lowercased"]
+- !private ["s21_ObjectiveCBridgeableP", "path"]
+- !private ["s21_ObjectiveCBridgeableP", "pathExtension"]
+- !private ["s21_ObjectiveCBridgeableP", "replacingOccurrences"]
+- !private ["s21_ObjectiveCBridgeableP", "starts"]
+- !private ["s21_ObjectiveCBridgeableP", "url"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- !private "9Capacitor17CAPBridgeProtocolP"
+- !private "9Capacitor6CAPLogC"
+- "s7CVarArgP"
+- !private "9Capacitor0A6BridgeC"
+- !private "9Capacitor0A9ExtensionP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "So17NSHTTPURLResponseC"
+- "SH"
+- !private "9Capacitor7JSValueP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s9OptionSetP"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "So20NSDataReadingOptionsV"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "ST"
+- !private "s10SetAlgebraP"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "10Foundation3URLV"
+- !private "10Foundation10URLRequestV"
+- "So13NSURLResponseC"
+- !private "s9UnmanagedV"
+- "So18WKURLSchemeHandlerP"
+- !private "So15WKURLSchemeTaskP"
+- "9Capacitor19WebViewAssetHandlerC"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDV.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/CapacitorCordova.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVInvokedUrlCommand.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginMethod.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVScreenOrientationDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/AppDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVURLProtocol.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegateImpl.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceConfiguration.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginManager.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVViewController.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVConfigParser.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/Capacitor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceDescriptor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/NSDictionary+CordovaPreferences.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin+Resources.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginResult.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVAvailability.h"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/unextended-module.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCordova.build/module.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "0cc92f8d46d7a7d5e50e333a42017f50"

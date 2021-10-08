@@ -1,0 +1,344 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CAPWebViewPlugin"
+provides-nominal:
+- "9Capacitor16CAPWebViewPluginC"
+provides-member:
+- ["9Capacitor16CAPWebViewPluginC", ""]
+provides-dynamic-lookup:
+- "getServerBasePath"
+- "persistServerBasePath"
+- "setServerBasePath"
+depends-top-level:
+- "CAPBridgeViewController"
+- "CAPPlugin"
+- "CAPPluginCall"
+- "CAPWebViewPlugin"
+- "CastingPrecedence"
+- !private "Dictionary"
+- !private "StringLiteralType"
+- !private "UserDefaults"
+- !private "bridge"
+depends-member:
+- !private ["SK", ""]
+- !private ["9Capacitor23BridgedJSValueContainerP", "getString"]
+- ["9Capacitor23BridgedJSValueContainerP", "resolve"]
+- !private ["9Capacitor17CAPBridgeDelegateP", "getServerBasePath"]
+- !private ["9Capacitor17CAPBridgeDelegateP", "setServerBasePath"]
+- !private ["9Capacitor17CAPBridgeProtocolP", "viewController"]
+- !private ["9Capacitor23CAPBridgeViewControllerC", "getServerBasePath"]
+- !private ["9Capacitor23CAPBridgeViewControllerC", "setServerBasePath"]
+- !private ["So9CAPPluginC", "CAPBridgeViewController"]
+- ["So9CAPPluginC", "CAPPluginCall"]
+- !private ["So9CAPPluginC", "UserDefaults"]
+- ["So9CAPPluginC", ""]
+- !private ["So9CAPPluginC", "bridge"]
+- ["So9CAPPluginC", "getServerBasePath"]
+- ["So9CAPPluginC", "init"]
+- ["So9CAPPluginC", "persistServerBasePath"]
+- ["So9CAPPluginC", "setServerBasePath"]
+- !private ["So13CAPPluginCallC", ""]
+- !private ["So13CAPPluginCallC", "getString"]
+- !private ["So13CAPPluginCallC", "resolve"]
+- !private ["9Capacitor16CAPWebViewPluginC", "CAPBridgeViewController"]
+- ["9Capacitor16CAPWebViewPluginC", "CAPPluginCall"]
+- !private ["9Capacitor16CAPWebViewPluginC", "UserDefaults"]
+- ["9Capacitor16CAPWebViewPluginC", ""]
+- !private ["9Capacitor16CAPWebViewPluginC", "bridge"]
+- ["9Capacitor16CAPWebViewPluginC", "deinit"]
+- ["9Capacitor16CAPWebViewPluginC", "getServerBasePath"]
+- ["9Capacitor16CAPWebViewPluginC", "init"]
+- ["9Capacitor16CAPWebViewPluginC", "persistServerBasePath"]
+- ["9Capacitor16CAPWebViewPluginC", "setServerBasePath"]
+- !private ["s7CVarArgP", "UserDefaults"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "bridge"]
+- !private ["s7CVarArgP", "getServerBasePath"]
+- !private ["s7CVarArgP", "getString"]
+- !private ["s7CVarArgP", "persistServerBasePath"]
+- !private ["s7CVarArgP", "resolve"]
+- !private ["s7CVarArgP", "set"]
+- !private ["s7CVarArgP", "setServerBasePath"]
+- !private ["s7CVarArgP", "standard"]
+- !private ["Sl", ""]
+- !private ["SL", ""]
+- !private ["s28CustomDebugStringConvertibleP", "UserDefaults"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "bridge"]
+- !private ["s28CustomDebugStringConvertibleP", "getServerBasePath"]
+- !private ["s28CustomDebugStringConvertibleP", "getString"]
+- !private ["s28CustomDebugStringConvertibleP", "persistServerBasePath"]
+- !private ["s28CustomDebugStringConvertibleP", "resolve"]
+- !private ["s28CustomDebugStringConvertibleP", "set"]
+- !private ["s28CustomDebugStringConvertibleP", "setServerBasePath"]
+- !private ["s28CustomDebugStringConvertibleP", "standard"]
+- !private ["s23CustomStringConvertibleP", "UserDefaults"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "bridge"]
+- !private ["s23CustomStringConvertibleP", "getServerBasePath"]
+- !private ["s23CustomStringConvertibleP", "getString"]
+- !private ["s23CustomStringConvertibleP", "persistServerBasePath"]
+- !private ["s23CustomStringConvertibleP", "resolve"]
+- !private ["s23CustomStringConvertibleP", "set"]
+- !private ["s23CustomStringConvertibleP", "setServerBasePath"]
+- !private ["s23CustomStringConvertibleP", "standard"]
+- !private ["SQ", "UserDefaults"]
+- ["SQ", ""]
+- !private ["SQ", "bridge"]
+- !private ["SQ", "getServerBasePath"]
+- !private ["SQ", "getString"]
+- !private ["SQ", "persistServerBasePath"]
+- !private ["SQ", "resolve"]
+- !private ["SQ", "set"]
+- !private ["SQ", "setServerBasePath"]
+- !private ["SQ", "standard"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SH", "UserDefaults"]
+- ["SH", ""]
+- !private ["SH", "bridge"]
+- !private ["SH", "getServerBasePath"]
+- !private ["SH", "getString"]
+- !private ["SH", "persistServerBasePath"]
+- !private ["SH", "resolve"]
+- !private ["SH", "set"]
+- !private ["SH", "setServerBasePath"]
+- !private ["SH", "standard"]
+- ["9Capacitor16JSArrayContainerP", ""]
+- !private ["9Capacitor16JSArrayContainerP", "getString"]
+- !private ["9Capacitor16JSArrayContainerP", "resolve"]
+- ["9Capacitor15JSBoolContainerP", ""]
+- !private ["9Capacitor15JSBoolContainerP", "getString"]
+- !private ["9Capacitor15JSBoolContainerP", "resolve"]
+- ["9Capacitor15JSDateContainerP", ""]
+- !private ["9Capacitor15JSDateContainerP", "getString"]
+- !private ["9Capacitor15JSDateContainerP", "resolve"]
+- ["9Capacitor17JSDoubleContainerP", ""]
+- !private ["9Capacitor17JSDoubleContainerP", "getString"]
+- !private ["9Capacitor17JSDoubleContainerP", "resolve"]
+- ["9Capacitor16JSFloatContainerP", ""]
+- !private ["9Capacitor16JSFloatContainerP", "getString"]
+- !private ["9Capacitor16JSFloatContainerP", "resolve"]
+- ["9Capacitor14JSIntContainerP", ""]
+- !private ["9Capacitor14JSIntContainerP", "getString"]
+- !private ["9Capacitor14JSIntContainerP", "resolve"]
+- ["9Capacitor17JSObjectContainerP", ""]
+- !private ["9Capacitor17JSObjectContainerP", "getString"]
+- !private ["9Capacitor17JSObjectContainerP", "resolve"]
+- ["9Capacitor17JSStringContainerP", ""]
+- !private ["9Capacitor17JSStringContainerP", "getString"]
+- !private ["9Capacitor17JSStringContainerP", "resolve"]
+- !private ["9Capacitor16JSValueContainerP", "getString"]
+- !private ["9Capacitor16JSValueContainerP", "resolve"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["So8NSCodingP", ""]
+- ["So8NSCodingP", "getServerBasePath"]
+- ["So8NSCodingP", "setServerBasePath"]
+- ["So26NSExtensionRequestHandlingP", "getServerBasePath"]
+- ["So26NSExtensionRequestHandlingP", "setServerBasePath"]
+- !private ["So8NSObjectC", "CAPBridgeViewController"]
+- ["So8NSObjectC", "CAPPluginCall"]
+- !private ["So8NSObjectC", "UserDefaults"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "bridge"]
+- ["So8NSObjectC", "getServerBasePath"]
+- !private ["So8NSObjectC", "getString"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "persistServerBasePath"]
+- !private ["So8NSObjectC", "resolve"]
+- !private ["So8NSObjectC", "set"]
+- !private ["So8NSObjectC", "setBool"]
+- !private ["So8NSObjectC", "setDouble"]
+- !private ["So8NSObjectC", "setFloat"]
+- !private ["So8NSObjectC", "setInteger"]
+- !private ["So8NSObjectC", "setObject"]
+- ["So8NSObjectC", "setServerBasePath"]
+- !private ["So8NSObjectC", "setURL"]
+- !private ["So8NSObjectC", "standard"]
+- !private ["So8NSObjectP", "CAPBridgeViewController"]
+- ["So8NSObjectP", "CAPPluginCall"]
+- !private ["So8NSObjectP", "UserDefaults"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "bridge"]
+- ["So8NSObjectP", "getServerBasePath"]
+- !private ["So8NSObjectP", "getString"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "persistServerBasePath"]
+- ["So8NSObjectP", "resolve"]
+- !private ["So8NSObjectP", "set"]
+- !private ["So8NSObjectP", "setBool"]
+- !private ["So8NSObjectP", "setDouble"]
+- !private ["So8NSObjectP", "setFloat"]
+- !private ["So8NSObjectP", "setInteger"]
+- !private ["So8NSObjectP", "setObject"]
+- ["So8NSObjectP", "setServerBasePath"]
+- !private ["So8NSObjectP", "setURL"]
+- !private ["So8NSObjectP", "standard"]
+- !private ["So8NSObjectP", "viewController"]
+- !private ["ST", ""]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
+- ["So21UIAppearanceContainerP", "getServerBasePath"]
+- ["So21UIAppearanceContainerP", "setServerBasePath"]
+- ["So18UIContentContainerP", "getServerBasePath"]
+- ["So18UIContentContainerP", "setServerBasePath"]
+- ["So18UIFocusEnvironmentP", "getServerBasePath"]
+- ["So18UIFocusEnvironmentP", "setServerBasePath"]
+- ["So30UIPasteConfigurationSupportingP", "getServerBasePath"]
+- ["So30UIPasteConfigurationSupportingP", "setServerBasePath"]
+- ["So11UIResponderC", ""]
+- !private ["So11UIResponderC", "getServerBasePath"]
+- !private ["So11UIResponderC", "setServerBasePath"]
+- ["So30UIResponderStandardEditActionsP", "getServerBasePath"]
+- ["So30UIResponderStandardEditActionsP", "setServerBasePath"]
+- ["So16UIStateRestoringP", "getServerBasePath"]
+- ["So16UIStateRestoringP", "setServerBasePath"]
+- ["So18UITraitEnvironmentP", "getServerBasePath"]
+- ["So18UITraitEnvironmentP", "setServerBasePath"]
+- ["So23UIUserActivityRestoringP", "getServerBasePath"]
+- ["So23UIUserActivityRestoringP", "setServerBasePath"]
+- ["So16UIViewControllerC", ""]
+- !private ["So16UIViewControllerC", "getServerBasePath"]
+- !private ["So16UIViewControllerC", "setServerBasePath"]
+- !private ["So14NSUserDefaultsC", "set"]
+- !private ["So14NSUserDefaultsC", "standard"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UserDefaults"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bridge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getServerBasePath"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "persistServerBasePath"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resolve"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "set"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setServerBasePath"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "standard"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UserDefaults"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bridge"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getServerBasePath"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getString"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "persistServerBasePath"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resolve"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "set"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setServerBasePath"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "standard"]
+depends-nominal:
+- !private "SK"
+- "9Capacitor23BridgedJSValueContainerP"
+- !private "9Capacitor17CAPBridgeDelegateP"
+- !private "9Capacitor17CAPBridgeProtocolP"
+- !private "9Capacitor23CAPBridgeViewControllerC"
+- "So9CAPPluginC"
+- !private "So13CAPPluginCallC"
+- "9Capacitor16CAPWebViewPluginC"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- "9Capacitor16JSArrayContainerP"
+- "9Capacitor15JSBoolContainerP"
+- "9Capacitor15JSDateContainerP"
+- "9Capacitor17JSDoubleContainerP"
+- "9Capacitor16JSFloatContainerP"
+- "9Capacitor14JSIntContainerP"
+- "9Capacitor17JSObjectContainerP"
+- "9Capacitor17JSStringContainerP"
+- !private "9Capacitor16JSValueContainerP"
+- !private "s25LosslessStringConvertibleP"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "ST"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- "So18UIFocusEnvironmentP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- "So16UIViewControllerC"
+- !private "So14NSUserDefaultsC"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDV.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/CapacitorCordova.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVInvokedUrlCommand.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginMethod.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVScreenOrientationDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/AppDelegate.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVURLProtocol.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegateImpl.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceConfiguration.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginManager.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVViewController.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVConfigParser.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/Capacitor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPInstanceDescriptor.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/NSDictionary+CordovaPreferences.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin+Resources.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginResult.h"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVAvailability.h"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/unextended-module.modulemap"
+- "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/DerivedData/57A474D0-911E-45CE-8602-BEAC99EBCD10/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCordova.build/module.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode-12.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "a9d6c6b80dcfceee4cb4e901afc494cc"
