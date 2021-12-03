@@ -1,11 +1,9 @@
-<ion-slides [options]="sliderOptions">
-
+<swiper [autoplay]="true">
     <ng-template ngFor let-article [ngForOf]="articles">
-
-        <ion-slide (click)="goToArticleDetail(article)">
-            <article-image-meta [article]="article"></article-image-meta>
-        </ion-slide>
-
+        <ng-template swiperSlide>
+            <article-image-meta (click)="goToArticleDetail(article)"
+                                [article]="article">
+            </article-image-meta>
+        </ng-template>
     </ng-template>
-
-</ion-slides>
+</swiper>

@@ -110,9 +110,9 @@ export class AppComponent {
                     const appInfo: AppInfo = result[1];
                     this.versionService.loadVersionInfo().subscribe({
                         next: globalAppInfos => {
-                            const versionInfoForPlattform = globalAppInfos.find(value => value.platform === deviceInfo.platform);
-                            if (versionInfoForPlattform && AppComponent.compareVersions(versionInfoForPlattform.version, appInfo.version) > 0) {
-                                this.openNewVersionAlert(versionInfoForPlattform.url);
+                            const versionInfoForPlatform = globalAppInfos.find(value => value.platform === deviceInfo.platform);
+                            if (versionInfoForPlatform && AppComponent.compareVersions(versionInfoForPlatform.version, appInfo.version) > 0) {
+                                this.openNewVersionAlert(versionInfoForPlatform.url);
                             }
                         },
                         error: error => console.error(error)

@@ -1,11 +1,15 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, ViewEncapsulation} from '@angular/core';
 import {Article} from '../../../../core/domain/article.model';
 import {Router} from '@angular/router';
+import SwiperCore, {Autoplay} from 'swiper';
+
+SwiperCore.use([Autoplay]);
 
 @Component({
     selector: 'article-slider',
     templateUrl: 'article-slider.component.html',
-    styleUrls: ['article-slider.component.scss']
+    styleUrls: ['article-slider.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class ArticleSliderComponent {
 
@@ -14,12 +18,6 @@ export class ArticleSliderComponent {
     constructor(private router: Router) {
 
     }
-
-    public sliderOptions = {
-        autoplay: {
-            delay: 50_000,
-        }
-    };
 
     public goToArticleDetail(article: Article) {
         this.router.navigate([article.getArticleLink()]);

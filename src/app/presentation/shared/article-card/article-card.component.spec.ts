@@ -35,11 +35,6 @@ describe('ArticleCardComponent', () => {
         fixture.detectChanges();
         expect(component.showImage()).toBeFalsy();
 
-        // Blank
-        component.image = '        ';
-        fixture.detectChanges();
-        expect(component.showImage()).toBeFalsy();
-
         // Filled
         component.image = 'image-url';
         fixture.detectChanges();
@@ -53,11 +48,6 @@ describe('ArticleCardComponent', () => {
 
         // Empty
         component.subTitle = '';
-        fixture.detectChanges();
-        expect(component.showSubTitle()).toBeFalsy();
-
-        // Blank
-        component.subTitle = '        ';
         fixture.detectChanges();
         expect(component.showSubTitle()).toBeFalsy();
 
@@ -77,11 +67,6 @@ describe('ArticleCardComponent', () => {
         fixture.detectChanges();
         expect(component.showCategory()).toBeFalsy();
 
-        // Blank
-        component.category = '        ';
-        fixture.detectChanges();
-        expect(component.showCategory()).toBeFalsy();
-
         // Filled
         component.category = 'sample category';
         fixture.detectChanges();
@@ -98,11 +83,6 @@ describe('ArticleCardComponent', () => {
         fixture.detectChanges();
         expect(component.showFooterIcon()).toBeFalsy();
 
-        // Blank
-        component.footerIcon = '        ';
-        fixture.detectChanges();
-        expect(component.showFooterIcon()).toBeFalsy();
-
         // Filled
         component.footerIcon = 'pin';
         fixture.detectChanges();
@@ -116,11 +96,6 @@ describe('ArticleCardComponent', () => {
 
         // Empty
         component.footerText = '';
-        fixture.detectChanges();
-        expect(component.showFooter()).toBeFalsy();
-
-        // Blank
-        component.footerText = '        ';
         fixture.detectChanges();
         expect(component.showFooter()).toBeFalsy();
 
