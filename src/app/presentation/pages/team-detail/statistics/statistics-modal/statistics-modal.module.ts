@@ -6,6 +6,7 @@ import {OrderModule} from 'ngx-order-pipe';
 import {StatisticsModalComponent} from './statistics-modal.component';
 import {StatisticsItemModule} from '../statistics-item/statistics-item.module';
 import {ModalHeaderModule} from '../../../../shared/modal-header/modal-header.module';
+import {PersonStatisticsModule} from '../../../person-statistics/person-statistics.module';
 
 @NgModule({
     providers: [],
@@ -16,6 +17,7 @@ import {ModalHeaderModule} from '../../../../shared/modal-header/modal-header.mo
         OrderModule,
         StatisticsItemModule,
         ModalHeaderModule,
+        PersonStatisticsModule,
     ],
     declarations: [StatisticsModalComponent],
     exports: [StatisticsModalComponent],

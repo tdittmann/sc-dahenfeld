@@ -24,18 +24,18 @@ export class MatchDetailPage implements OnInit {
     }
 
     loadMatch(event) {
-        this.matchDetailService.loadMatchDetails(this.matchId).subscribe(
-            matchDetails => {
+        this.matchDetailService.loadMatchDetails(this.matchId).subscribe({
+            next: matchDetails => {
                 this.matchDetails = matchDetails;
                 this.isLoading = false;
                 this.completeEvent(event);
             },
-            error => {
+            error: error => {
                 this.isError = true;
                 console.error(error);
                 this.completeEvent(event);
             }
-        );
+        });
     }
 
     completeEvent(event) {

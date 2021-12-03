@@ -15,6 +15,7 @@ const routes: Routes = [
     {path: 'jubilee', loadChildren: () => import ('./presentation/pages/jubilee/jubilee.module').then(m => m.JubileePageModule)},
     {path: 'vsc', loadChildren: () => import ('./presentation/pages/vsc-ranking/vsc-ranking.module').then(m => m.VscRankingPageModule)},
     {path: 'birthdays', loadChildren: () => import ('./presentation/pages/birthdays/birthdays.module').then(m => m.BirthdaysPageModule)},
+    {path: 'person-statistics', loadChildren: () => import ('./presentation/pages/person-statistics/person-statistics.module').then(m => m.PersonStatisticsModule)},
     {path: 'profile', loadChildren: () => import ('./presentation/pages/profile/profile.module').then(m => m.ProfilePageModule)},
     {path: 'imprint', loadChildren: () => import ('./presentation/pages/imprint/imprint.module').then(m => m.ImprintPageModule)},
 ];

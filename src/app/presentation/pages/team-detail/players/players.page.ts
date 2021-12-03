@@ -33,8 +33,8 @@ export class PlayersPage implements OnInit {
                 const projectId = params['id'];
                 this.projectId = projectId;
 
-                this.playerService.loadPersons(projectId).subscribe(
-                    players => {
+                this.playerService.loadPersonsByProjectId(projectId).subscribe({
+                    next: players => {
                         this.players = players;
 
                         if (this.players.length <= 0) {
@@ -44,11 +44,12 @@ export class PlayersPage implements OnInit {
 
                         this.isLoading = false;
                     },
-                    error => {
+                    error: error => {
                         this.isError = true;
                         console.error(error);
                     }
-                );
+
+                });
             }
         );
     }

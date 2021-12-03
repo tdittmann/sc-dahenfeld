@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import * as underscore from 'node_modules/underscore.string';
+import {TextUtils} from '../../../util/TextUtils';
 
 @Component({
     selector: 'article-card',
@@ -17,23 +17,23 @@ export class ArticleCardComponent {
     @Input() footerText: string;
 
     showImage(): boolean {
-        return !underscore.isBlank(underscore.clean(this.image));
+        return TextUtils.isNotBlank(this.image);
     }
 
     showSubTitle(): boolean {
-        return !underscore.isBlank(underscore.clean(this.subTitle));
+        return TextUtils.isNotBlank(this.subTitle);
     }
 
     showCategory(): boolean {
-        return !underscore.isBlank(underscore.clean(this.category));
+        return TextUtils.isNotBlank(this.category);
     }
 
     showFooter(): boolean {
-        return !underscore.isBlank(underscore.clean(this.footerText));
+        return TextUtils.isNotBlank(this.footerText);
     }
 
     showFooterIcon(): boolean {
-        return !underscore.isBlank(underscore.clean(this.footerIcon));
+        return TextUtils.isNotBlank(this.footerIcon);
     }
 
 }

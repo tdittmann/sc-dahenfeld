@@ -8,7 +8,7 @@
     </ion-refresher>
 
     <div class="imageContainer">
-        <div class="image" [ngStyle]="{'background-image' : person?.getImageAsBackground()}"></div>
+        <div class="image" [ngStyle]="{'background-image' : person?.imageAsBackground}"></div>
 
         <div class="playerName">
             <h1>{{person?.lastname}}</h1>
@@ -18,13 +18,13 @@
         <ion-grid class="playerInfo">
             <ion-row *ngIf="person?.birthday">
                 <ion-col>
-                    <p class="playerInfoValue">{{person?.getAge()}}</p>
+                    <p class="playerInfoValue">{{person?.age}}</p>
                     <p class="playerInfoText">Alter</p>
                 </ion-col>
             </ion-row>
             <ion-row *ngIf="person?.birthday && isDevModeEnabled()">
                 <ion-col>
-                    <p class="playerInfoValue">{{person?.getFormattedBirthday()}}</p>
+                    <p class="playerInfoValue">{{person?.formattedBirthday}}</p>
                     <p class="playerInfoText">Geburtstag</p>
                 </ion-col>
             </ion-row>

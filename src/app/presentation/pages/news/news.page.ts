@@ -34,8 +34,8 @@ export class NewsPage implements OnInit {
 
     loadArticles(event) {
         this.articleService.getAllArticles()
-            .subscribe(
-                (pArticles) => {
+            .subscribe({
+                next: (pArticles) => {
                     this.articles = pArticles;
 
                     // The first three articles should be shown as slide
@@ -46,12 +46,13 @@ export class NewsPage implements OnInit {
                     this.isLoading = false;
                     this.completeEvent(event);
                 },
-                (pError) => {
+                error: (pError) => {
                     this.isError = true;
                     console.error(pError);
                     this.completeEvent(event);
                 }
-            );
+
+            });
     }
 
     completeEvent(event) {

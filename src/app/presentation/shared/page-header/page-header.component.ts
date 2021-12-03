@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import * as underscore from 'node_modules/underscore.string';
+import {TextUtils} from '../../../util/TextUtils';
 
 @Component({
     selector: 'page-header',
@@ -12,12 +12,8 @@ export class PageHeaderComponent {
     @Input() color: string;
     @Input() noBorder = false;
 
-    constructor() {
-
-    }
-
     public showLogo(): boolean {
-        return underscore.isBlank(underscore.clean(this.title));
+        return TextUtils.isBlank(this.title);
     }
 
 }

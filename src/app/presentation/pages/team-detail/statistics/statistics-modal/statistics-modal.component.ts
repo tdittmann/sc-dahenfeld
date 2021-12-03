@@ -7,12 +7,9 @@ import {Person} from '../../../../../core/domain/person.model';
 })
 export class StatisticsModalComponent {
 
+    @Input() searchFilter: string;
     @Input() heading: string;
     @Input() persons: Person[] = [];
     @Input() filter: string;
-
-    constructor() {
-
-    }
 
 }

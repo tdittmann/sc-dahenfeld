@@ -6,8 +6,8 @@ import {StorageService} from '../../../dataproviders/storage.service';
 import {Capacitor} from '@capacitor/core';
 import {ActivatedRoute} from '@angular/router';
 import {ProfileService} from '../../../dataproviders/profile/profile.service';
-import {Device} from '@capacitor/device';
 import {StatusBar, Style} from '@capacitor/status-bar';
+import {App} from '@capacitor/app';
 
 @Component({
     templateUrl: 'imprint.page.html',
@@ -16,7 +16,7 @@ import {StatusBar, Style} from '@capacitor/status-bar';
 export class ImprintPage implements OnInit {
 
     heading: string;
-    version = '5.9.0';
+    version = '5.10.0';
     developer = 'Timo Dittmann';
     darkMode = false;
 
@@ -45,8 +45,8 @@ export class ImprintPage implements OnInit {
             .then(value => this.darkMode = value);
 
         if (Capacitor.isPluginAvailable('Device')) {
-            Device.getInfo()
-                .then(value => this.version = value.osVersion)
+            App.getInfo()
+                .then(value => this.version = value.version)
                 .catch(reason => console.error('Can not load device info: ', reason));
         }
     }
@@ -65,16 +65,17 @@ export class ImprintPage implements OnInit {
 
     validateDevModePassword() {
         this.profileService.validateDevModePassword(this.devModePassword)
-            .subscribe(
-                value => {
+            .subscribe({
+                next: value => {
                     this.devService.updateDevMode(true);
                     this.toastService.showToast('Du hast den Entwickler-Modus aktiviert.');
                 },
-                error => {
+                error: error => {
                     this.toastService.showToast('Falsches Passwort.');
                     console.error(error);
                 }
-            );
+
+            });
     }
 
     deactivateDevMode() {

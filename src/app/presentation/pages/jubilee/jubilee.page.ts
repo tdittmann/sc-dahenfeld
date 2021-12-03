@@ -36,18 +36,20 @@ export class JubileePage implements OnInit {
                 combineLatest([
                     this.calendarService.loadCalendarEvents().pipe(map(events => events.map(event => event as CalendarEvent))),
                     this.articleService.getArticlesByCategoryId(params['categoryId'])
-                ]).subscribe(
-                    ([events, articles]) => {
-                        this.events = events;
-                        this.articles = articles;
+                ]).subscribe({
+                    next:
+                        ([events, articles]) => {
+                            this.events = events;
+                            this.articles = articles;
 
-                        this.isLoading = false;
-                    },
-                    error => {
+                            this.isLoading = false;
+                        },
+                    error: error => {
                         this.isError = true;
                         console.error(error);
                     }
-                );
+
+                });
 
             }
         );

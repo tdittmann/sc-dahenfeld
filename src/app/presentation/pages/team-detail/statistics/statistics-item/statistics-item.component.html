@@ -1,9 +1,9 @@
 <ion-item mode="md">
     <ion-avatar slot="start">
-        <ion-img [src]="person.image" [alt]="person.getName()"></ion-img>
+        <ion-img [src]="person.image" [alt]="person.name"></ion-img>
     </ion-avatar>
     <ion-label>
-        <h2>{{person.getName()}}</h2>
+        <h2>{{person.name}}</h2>
         <p>{{person.position}}</p>
     </ion-label>
     <ion-note slot="end">{{person[statisticsVariable][fieldVariable]}}</ion-note>

@@ -34,22 +34,23 @@ export class StatisticsPage implements OnInit {
         this.route.params.subscribe(
             params => {
 
-                this.personService.loadPersons(params['id']).subscribe(
-                    value => {
-                        this.persons = value;
+                this.personService.loadPersonsByProjectId(params['id']).subscribe({
+                    next:
+                        value => {
+                            this.persons = value;
 
-                        if (this.persons.length <= 0) {
-                            this.isError = true;
-                            this.errorMessage = 'Für diese Spielzeit gibt es keine Statistiken';
-                        }
+                            if (this.persons.length <= 0) {
+                                this.isError = true;
+                                this.errorMessage = 'Für diese Spielzeit gibt es keine Statistiken';
+                            }
 
-                        this.isLoading = false;
-                    },
-                    error => {
+                            this.isLoading = false;
+                        },
+                    error: error => {
                         this.isError = true;
                         console.error(error);
                     }
-                );
+                });
 
             }
         );

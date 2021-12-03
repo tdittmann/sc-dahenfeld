@@ -1,16 +1,14 @@
-import * as underscore from 'node_modules/underscore.string';
-
 export class TextUtils {
 
     public static removeAllHtmlTags(pHtmlText: string): string {
-        if (!underscore.isBlank(pHtmlText)) {
+        if (this.isNotBlank(pHtmlText)) {
             return pHtmlText.replace(/<(.|\n)*?>/g, '');
         }
         return '';
     }
 
     public static truncateText(pText: string, pLength: number): string {
-        if (underscore.isBlank(pText)) {
+        if (this.isBlank(pText)) {
             return '';
         }
         return (pText.length > pLength)
@@ -19,10 +17,10 @@ export class TextUtils {
     }
 
     public static removeFirstImageFromText(pHtmlText: string): string {
-        if (!underscore.isBlank(pHtmlText)) {
-            return pHtmlText.replace(/<img[^>]*>/, '');
+        if (this.isBlank(pHtmlText)) {
+            return '';
         }
-        return '';
+        return pHtmlText.replace(/<img[^>]*>/, '');
     }
 
     public static getFirstImage(pHtmlText: string): string {
@@ -31,10 +29,18 @@ export class TextUtils {
 
     public static getFirstImageAsBackgroundUrl(pHtmlText: string): string {
         const firstImage: string = this.getFirstImageFromText(pHtmlText);
-        if (!underscore.isBlank(firstImage)) {
-            return this.getAsBackgroundUrl(firstImage);
+        if (this.isBlank(firstImage)) {
+            return '';
         }
-        return '';
+        return this.getAsBackgroundUrl(firstImage);
+    }
+
+    public static isBlank(text: string): boolean {
+        return !this.isNotBlank(text);
+    }
+
+    public static isNotBlank(text: string): boolean {
+        return text !== '' && text !== null && text !== undefined;
     }
 
     public static getAsBackgroundUrl(pText: string): string {

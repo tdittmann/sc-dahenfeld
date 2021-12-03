@@ -4,12 +4,12 @@ import {IonicModule} from '@ionic/angular';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {PageHeaderModule} from '../../shared/page-header/page-header.module';
-import {BirthdaysPage} from './birthdays.page';
-import {BirthdayFilterPipe} from './birthday.filter';
+import {PersonStatisticsPage} from './person-statistics.page';
 import {PersonModule} from '../person/person.module';
 import {PageStateModule} from '../../shared/page-state/page-state.module';
 import {PersonService} from '../../../dataproviders/soccer/person/person.service';
-import {OrderModule} from 'ngx-order-pipe';
+import {StatisticsCardModule} from '../team-detail/statistics/statistics-card/statistics-card.module';
+import {PersonFilter} from './person.filter';
 
 @NgModule({
     providers: [PersonService],
@@ -22,13 +22,16 @@ import {OrderModule} from 'ngx-order-pipe';
         RouterModule.forChild([
             {
                 path: '',
-                component: BirthdaysPage
+                component: PersonStatisticsPage
             }
         ]),
         PageStateModule,
-        OrderModule
+        StatisticsCardModule
     ],
-    declarations: [BirthdaysPage, BirthdayFilterPipe]
+    exports: [
+        PersonFilter
+    ],
+    declarations: [PersonStatisticsPage, PersonFilter]
 })
-export class BirthdaysPageModule {
+export class PersonStatisticsModule {
 }

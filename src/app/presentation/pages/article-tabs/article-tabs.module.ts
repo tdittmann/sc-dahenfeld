@@ -18,7 +18,7 @@ const routes: Routes = [
                 children: [
                     {
                         path: ':id',
-                        loadChildren: './article-tab/article-tab.module#ArticleTabModule'
+                        loadChildren: () => import('./article-tab/article-tab.module').then(m => m.ArticleTabModule)
                     }
                 ]
             }

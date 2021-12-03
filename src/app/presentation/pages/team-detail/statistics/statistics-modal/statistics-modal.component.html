@@ -1,8 +1,11 @@
 <modal-header [title]="heading"></modal-header>
 
 <ion-content color="light" *ngIf="persons.length > 0">
+
+    <ion-searchbar [(ngModel)]="searchFilter" placeholder="Person suchen"></ion-searchbar>
+
     <ion-list lines="none">
-        <ng-template ngFor let-person [ngForOf]="persons | orderBy : filter : true">
+        <ng-template ngFor let-person [ngForOf]="persons | orderBy : filter : true | personFilter: searchFilter">
 
             <statistics-item [person]="person"
                              [filter]="filter"

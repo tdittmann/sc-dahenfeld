@@ -27,18 +27,17 @@ export class MembershipPage implements OnInit {
             }
         );
 
-        this.membershipService.loadMembership()
-            .subscribe(
-                (membership) => {
-                    this.membership = membership;
+        this.membershipService.loadMembership().subscribe({
+            next: (membership) => {
+                this.membership = membership;
 
-                    this.isLoading = false;
-                },
-                (error) => {
-                    this.isError = true;
-                    console.error(error);
-                }
-            );
+                this.isLoading = false;
+            },
+            error: (error) => {
+                this.isError = true;
+                console.error(error);
+            }
+        });
     }
 
 }

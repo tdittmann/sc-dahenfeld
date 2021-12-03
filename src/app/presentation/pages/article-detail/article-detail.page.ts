@@ -35,22 +35,24 @@ export class ArticleDetailPage implements OnInit {
                 this.showOnlyTitle = queryParams['showOnlyTitle'];
 
                 // Load article
-                this.articleService.getArticleById(params['id']).subscribe(
-                    (pResponse) => {
-                        this.article = pResponse;
+                this.articleService.getArticleById(params['id']).subscribe({
+                    next:
+                        (pResponse) => {
+                            this.article = pResponse;
 
-                        // Increment hits for the article
-                        this.articleService.incrementMobileHitsForArticle(this.article);
+                            // Increment hits for the article
+                            this.articleService.incrementMobileHitsForArticle(this.article);
 
-                        this.isLoading = false;
-                        this.completeEvent(event);
-                    },
-                    (pError) => {
+                            this.isLoading = false;
+                            this.completeEvent(event);
+                        },
+                    error: (pError) => {
                         this.isError = true;
                         console.error(pError);
                         this.completeEvent(event);
                     }
-                );
+
+                });
             });
     }
 

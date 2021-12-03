@@ -1,17 +1,17 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {Birthday} from '../../../core/domain/birthday.model';
+import {Person} from '../../../core/domain/person.model';
 
 @Pipe({
     name: 'birthdayFilter',
     pure: false
 })
 export class BirthdayFilterPipe implements PipeTransform {
-    transform(pItems: Birthday[], pSearchTerm): Birthday[] {
+    transform(pItems: Person[], pSearchTerm): Person[] {
         return pSearchTerm
-            ? pItems.filter(pBirthday => {
+            ? pItems.filter(person => {
                 // Filter by name and upcoming age
-                return pBirthday.getName().toLowerCase().indexOf(pSearchTerm.toLowerCase()) !== -1 ||
-                    (pBirthday.getAge() + 1).toString().indexOf(pSearchTerm) !== -1;
+                return person.name.toLowerCase().indexOf(pSearchTerm.toLowerCase()) !== -1 ||
+                    (person.age + 1).toString().indexOf(pSearchTerm) !== -1;
             })
             : pItems;
     }

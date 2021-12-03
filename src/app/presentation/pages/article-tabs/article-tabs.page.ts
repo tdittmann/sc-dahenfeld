@@ -31,26 +31,28 @@ export class ArticleTabsPage implements OnInit {
                 this.heading = queryParams['heading'];
 
                 // Load articles
-                this.articleService.getArticlesById(queryParams['articles']).subscribe(
-                    (pResponse) => {
-                        this.articles = this.getInitialSortedArticles(queryParams['articles'], pResponse);
+                this.articleService.getArticlesById(queryParams['articles']).subscribe({
+                    next:
+                        (pResponse) => {
+                            this.articles = this.getInitialSortedArticles(queryParams['articles'], pResponse);
 
-                        // Increment hits for the article
-                        this.articles.forEach(value => {
-                            this.articleService.incrementMobileHitsForArticle(value);
-                        });
+                            // Increment hits for the article
+                            this.articles.forEach(value => {
+                                this.articleService.incrementMobileHitsForArticle(value);
+                            });
 
-                        // Set first tabs
-                        this.tabs.select('article/' + this.articles[0].id + '?heading=' + this.heading)
-                            .then(value => null);
+                            // Set first tabs
+                            this.tabs.select('article/' + this.articles[0].id + '?heading=' + this.heading)
+                                .then(value => null);
 
-                        this.isLoading = false;
-                    },
-                    (pError) => {
+                            this.isLoading = false;
+                        },
+                    error: (error) => {
                         this.isError = true;
-                        console.error(pError);
+                        console.error(error);
                     }
-                );
+
+                });
 
             });
 

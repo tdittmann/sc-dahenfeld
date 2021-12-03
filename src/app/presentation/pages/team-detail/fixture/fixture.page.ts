@@ -25,17 +25,18 @@ export class FixturePage implements OnInit {
             params => {
                 const teamId = params['id'];
 
-                this.fixtureService.loadOnlyTeamMatchesByTeamId(teamId).subscribe(
-                    fixtureMatches => {
-                        this.matches = fixtureMatches;
+                this.fixtureService.loadOnlyTeamMatchesByTeamId(teamId).subscribe({
+                    next:
+                        fixtureMatches => {
+                            this.matches = fixtureMatches;
 
-                        this.isLoading = false;
-                    },
-                    error => {
+                            this.isLoading = false;
+                        },
+                    error: error => {
                         this.isError = true;
                         console.error(error);
                     }
-                );
+                });
             }
         );
     }

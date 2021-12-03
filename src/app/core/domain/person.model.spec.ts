@@ -7,14 +7,14 @@ describe('Person', () => {
         const person: Person = new Person();
         person.firstname = 'Marc';
 
-        expect(person.getName()).toBe('Marc');
+        expect(person.name).toEqual('Marc');
     });
 
     it('should return only lastname if no firstname is present', function () {
         const person: Person = new Person();
         person.lastname = 'Hornberg';
 
-        expect(person.getName()).toBe('Hornberg');
+        expect(person.name).toEqual('Hornberg');
     });
 
     it('should return only lastname if no firstname is present', function () {
@@ -22,7 +22,7 @@ describe('Person', () => {
         person.firstname = 'Marc';
         person.lastname = 'Hornberg';
 
-        expect(person.getName()).toBe('Marc Hornberg');
+        expect(person.name).toEqual('Marc Hornberg');
     });
 
     it('should return correct age if birthday is today', function () {
@@ -31,7 +31,7 @@ describe('Person', () => {
             .subtract(5, 'years')
             .startOf('day');
 
-        expect(person.getAge()).toBe(5);
+        expect(person.age).toEqual(5);
     });
 
     it('should return correct age if birthday is tomorrow', function () {
@@ -41,7 +41,7 @@ describe('Person', () => {
             .add(1, 'days')
             .startOf('day');
 
-        expect(person.getAge()).toBe(4);
+        expect(person.age).toEqual(4);
     });
 
     it('should return birthday in correct format', function () {
@@ -49,14 +49,14 @@ describe('Person', () => {
         person.birthday = moment('1995-12-25')
             .startOf('day');
 
-        expect(person.getFormattedBirthday()).toBe('25. December 1995');
+        expect(person.formattedBirthday).toEqual('25. December 1995');
     });
 
     it('should return correct url for image as background', function () {
         const person: Person = new Person();
         person.image = 'person.png';
 
-        expect(person.getImageAsBackground()).toBe('url(\'person.png\')');
+        expect(person.imageAsBackground).toEqual('url(\'person.png\')');
     });
 
     it('should return -1 if person has another position than the other', function () {
@@ -66,7 +66,7 @@ describe('Person', () => {
         const second: Person = new Person();
         second.position = 'Abwehr';
 
-        expect(first.compareTo(second)).toBe(-1);
+        expect(first.compareTo(second)).toEqual(-1);
     });
 
     it('should return 1 if person has another position than the other', function () {
@@ -76,7 +76,7 @@ describe('Person', () => {
         const second: Person = new Person();
         second.position = 'Torhüter';
 
-        expect(first.compareTo(second)).toBe(1);
+        expect(first.compareTo(second)).toEqual(1);
     });
 
     it('should return -1 if persons name is before other persons name when same positions', function () {
@@ -88,7 +88,7 @@ describe('Person', () => {
         second.position = 'Torhüter';
         second.lastname = 'Zepelin';
 
-        expect(first.compareTo(second)).toBe(-1);
+        expect(first.compareTo(second)).toEqual(-1);
     });
 
     it('should return 1 if persons name is after other persons name when same positions', function () {
@@ -100,7 +100,7 @@ describe('Person', () => {
         second.position = 'Torhüter';
         second.lastname = 'Albert';
 
-        expect(first.compareTo(second)).toBe(1);
+        expect(first.compareTo(second)).toEqual(1);
     });
 
     it('should return 0 if persons position and name is equal', function () {
@@ -112,7 +112,66 @@ describe('Person', () => {
         second.position = 'Torhüter';
         second.lastname = 'Albert';
 
-        expect(first.compareTo(second)).toBe(0);
+        expect(first.compareTo(second)).toEqual(0);
+    });
+
+    it('should return specific text when birthday is toay', function () {
+        const person: Person = new Person();
+        person.birthday = moment().startOf('day');
+
+        expect(person.birthdaySubtitle).toEqual('Feiert heute den 0. Geburtstag');
+    });
+
+    it('should return days until next birthday if not today', function () {
+        const person: Person = new Person();
+        person.birthday = moment()
+            .add(5, 'days')
+            .startOf('day');
+
+        expect(person.birthdaySubtitle).toEqual('Wird in 5 Tag(en) 1 Jahre alt');
+    });
+
+    it('should return true if birthday is today', function () {
+        const person: Person = new Person();
+        person.birthday = moment()
+            .startOf('day');
+
+        expect(person.isTodaysBirthday()).toBeTruthy();
+    });
+
+    it('should return false if birthday is not today', function () {
+        const person: Person = new Person();
+        person.birthday = moment()
+            .add(1, 'days')
+            .startOf('day');
+
+        expect(person.isTodaysBirthday()).toBeFalsy();
+    });
+
+    it('should return correct days till birthday if birthday was yesterday', function () {
+        const person: Person = new Person();
+        person.birthday = moment()
+            .subtract(1, 'days')
+            .startOf('day');
+
+        expect(person.daysTillBirthday).toEqual(364);
+    });
+
+    it('should return correct days till birthday if birthday is today', function () {
+        const person: Person = new Person();
+        person.birthday = moment()
+            .startOf('day');
+
+        expect(person.daysTillBirthday).toEqual(0);
+    });
+
+    it('should return correct days till birthday if birthday is tomorrow', function () {
+        const person: Person = new Person();
+        person.birthday = moment()
+            .add(1, 'days')
+            .startOf('day');
+
+        expect(person.daysTillBirthday).toEqual(1);
     });
 
 });

@@ -26,29 +26,33 @@ export class ArticleListPage implements OnInit {
     }
 
     loadArticles(event) {
-        combineLatest([this.activatedRoute.params, this.activatedRoute.queryParams]).subscribe(
-            ([params, queryParams]) => {
+        combineLatest([this.activatedRoute.params, this.activatedRoute.queryParams]).subscribe({
+
+            next: ([params, queryParams]) => {
                 this.heading = queryParams['heading'];
 
-                this.articleService.getArticlesByCategoryId(params['categoryId']).subscribe(
-                    articles => {
-                        this.articles = articles;
-                        this.isLoading = false;
-                        this.completeEvent(event);
-                    },
-                    error => {
+                this.articleService.getArticlesByCategoryId(params['categoryId']).subscribe({
+                    next:
+                        articles => {
+                            this.articles = articles;
+                            this.isLoading = false;
+                            this.completeEvent(event);
+                        },
+                    error: error => {
                         this.isError = true;
                         console.error(error);
                         this.completeEvent(event);
                     }
-                );
+
+                });
             },
-            error => {
+            error: error => {
                 this.isError = error;
                 console.error(error);
                 this.completeEvent(event);
             }
-        );
+
+        });
     }
 
     completeEvent(event) {

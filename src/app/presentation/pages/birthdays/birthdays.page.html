@@ -1,18 +1,17 @@
 <page-header [title]="heading"></page-header>
 <page-state [loading]="isLoading" [error]="isError"></page-state>
 
-<ion-content color="light" class="ion-no-padding" *ngIf="birthdays.length > 0">
+<ion-content color="light" class="ion-no-padding" *ngIf="persons.length > 0">
 
-    <ion-searchbar [(ngModel)]="filter" placeholder="Person suchen">
-    </ion-searchbar>
+    <ion-searchbar [(ngModel)]="filter" placeholder="Person suchen"></ion-searchbar>
 
     <ion-list>
-        <ion-item *ngFor="let birthday of birthdays | birthdayFilter: filter"
-                  [color]="birthday.isToday() ? 'primary' : ''">
-            <ion-label (click)="openPerson(birthday.personId)">
-                <h2>{{ birthday.getName() }}</h2>
-                <h3>{{ birthday.getSubtitle() }}</h3>
-                <p>{{ birthday.getFormattedDate() }}</p>
+        <ion-item *ngFor="let person of persons | orderBy: 'daysTillBirthday' | birthdayFilter: filter"
+                  [color]="person.isTodaysBirthday() ? 'primary' : ''">
+            <ion-label (click)="openPerson(person.id)">
+                <h2>{{ person.name }}</h2>
+                <h3>{{ person.birthdaySubtitle }}</h3>
+                <p>{{ person.formattedBirthday }}</p>
             </ion-label>
         </ion-item>
     </ion-list>

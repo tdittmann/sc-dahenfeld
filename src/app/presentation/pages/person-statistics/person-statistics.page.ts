@@ -1,19 +1,29 @@
 import {Component, OnInit} from '@angular/core';
-import {PersonPage} from '../person/person.page';
 import {ModalController} from '@ionic/angular';
 import {ActivatedRoute} from '@angular/router';
 import {Person} from '../../../core/domain/person.model';
 import {PersonService} from '../../../dataproviders/soccer/person/person.service';
+import {StatisticsModalComponent} from '../team-detail/statistics/statistics-modal/statistics-modal.component';
 
 @Component({
-    templateUrl: 'birthdays.page.html',
-    styleUrls: ['birthdays.page.scss']
+    templateUrl: 'person-statistics.page.html',
+    styleUrls: ['person-statistics.page.scss']
 })
-export class BirthdaysPage implements OnInit {
+export class PersonStatisticsPage implements OnInit {
 
     heading: string;
     persons: Person[] = [];
-    filter = '';
+    statistics = [
+        {heading: 'Spiele', filter: 'careerStatistic.matches'},
+        {heading: 'Spiele in der Startelf', filter: 'careerStatistic.starting'},
+        {heading: 'Tore', filter: 'careerStatistic.goals'},
+        {heading: 'Gelbe Karten', filter: 'careerStatistic.yellowCards'},
+        {heading: 'Gelbe-Rote Karten', filter: 'careerStatistic.yellowRedCards'},
+        {heading: 'Platzverweise', filter: 'careerStatistic.redCards'},
+        {heading: 'Einwechslungen', filter: 'careerStatistic.cameIn'},
+        {heading: 'Auswechslungen', filter: 'careerStatistic.cameOut'},
+        {heading: 'Spielminuten', filter: 'careerStatistic.playingMinutes'},
+    ];
 
     isLoading = true;
     isError = false;
@@ -45,11 +55,13 @@ export class BirthdaysPage implements OnInit {
         });
     }
 
-    openPerson(personId: number) {
+    openStatisticsModal(statistics) {
         this.modalController.create({
-            component: PersonPage,
+            component: StatisticsModalComponent,
             componentProps: {
-                'personId': personId
+                'persons': this.persons,
+                'heading': statistics.heading,
+                'filter': statistics.filter
             }
         }).then(modal => modal.present());
     }

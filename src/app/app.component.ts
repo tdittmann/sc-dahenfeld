@@ -12,7 +12,8 @@ import {RootNavigation} from './core/domain/root-navigation.model';
 import {StatusBar, Style} from '@capacitor/status-bar';
 import {PushNotifications, Token} from '@capacitor/push-notifications';
 import {SplashScreen} from '@capacitor/splash-screen';
-import {Device} from '@capacitor/device';
+import {Device, DeviceInfo} from '@capacitor/device';
+import {App, AppInfo} from '@capacitor/app';
 
 @Component({
     selector: 'app-root',
@@ -63,13 +64,15 @@ export class AppComponent {
     }
 
     private initializeNavigation() {
-        this.navigationService.loadNavigation().subscribe(
-            navigation => {
-                this.navigation = navigation;
-            },
-            error => {
+        this.navigationService.loadNavigation().subscribe({
+            next:
+                navigation => {
+                    this.navigation = navigation;
+                },
+            error: error => {
                 console.error(error);
-            });
+            }
+        });
     }
 
     private checkDarkMode() {
@@ -100,13 +103,15 @@ export class AppComponent {
 
     private checkAppVersion() {
 
-        if (!this.platform.is('desktop') && Capacitor.isPluginAvailable('Device')) {
-            Device.getInfo()
-                .then(deviceInfo => {
+        if (!this.platform.is('desktop') && Capacitor.isPluginAvailable('Device') && Capacitor.isPluginAvailable('App')) {
+            Promise.all([Device.getInfo(), App.getInfo()])
+                .then(result => {
+                    const deviceInfo: DeviceInfo = result[0];
+                    const appInfo: AppInfo = result[1];
                     this.versionService.loadVersionInfo().subscribe({
                         next: globalAppInfos => {
                             const versionInfoForPlattform = globalAppInfos.find(value => value.platform === deviceInfo.platform);
-                            if (versionInfoForPlattform && versionInfoForPlattform.version !== deviceInfo.osVersion) {
+                            if (versionInfoForPlattform && AppComponent.compareVersions(versionInfoForPlattform.version, appInfo.version) > 0) {
                                 this.openNewVersionAlert(versionInfoForPlattform.url);
                             }
                         },
@@ -117,11 +122,47 @@ export class AppComponent {
         }
     }
 
+    private static compareVersions(v1, v2): number {
+        let v1parts = v1.split('.');
+        let v2parts = v2.split('.');
+
+        function isValidPart(x) {
+            return /^\d+$/.test(x);
+        }
+
+        if (!v1parts.every(isValidPart) || !v2parts.every(isValidPart)) {
+            return NaN;
+        }
+
+        v1parts = v1parts.map(Number);
+        v2parts = v2parts.map(Number);
+
+        for (let i = 0; i < v1parts.length; ++i) {
+            if (v2parts.length === i) {
+                return 1;
+            }
+
+            if (v1parts[i] === v2parts[i]) {
+                continue;
+            } else if (v1parts[i] > v2parts[i]) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
+
+        if (v1parts.length !== v2parts.length) {
+            return -1;
+        }
+
+        return 0;
+    }
+
     private async openNewVersionAlert(appStoreUrl: string) {
         if (appStoreUrl) {
             const alert = await this.alertController.create({
                 header: 'Neue Version verfügbar',
-                message: 'Es ist eine neue Version der SCD-App verfügbar. Aktualisiere jetzt um weiter die App nutzen zu können.',
+                message: 'Es ist eine neue Version der SCD-App verfügbar. Aktualisiere jetzt, um weiter die App nutzen zu können.',
                 backdropDismiss: false,
                 buttons: [
                     {
@@ -151,17 +192,16 @@ export class AppComponent {
                         .then()
                         .catch(reason => console.error('Saving push token in local db failed' + reason));
 
-
                     Device.getInfo()
                         .then(deviceInfo => {
 
                             const profile: Profile = new Profile();
                             profile.pushToken = token.value;
                             profile.os = deviceInfo.platform;
-                            this.profileService.createProfile(profile).subscribe(
-                                value => console.log('Saved in remote db: ' + value),
-                                error => console.error('Saving profile in remote db failed: ' + JSON.stringify(error))
-                            );
+                            this.profileService.createProfile(profile).subscribe({
+                                next: value => console.log('Saved in remote db: ' + value),
+                                error: error => console.error('Saving profile in remote db failed: ' + JSON.stringify(error))
+                            });
 
                         })
                         .catch(reason => console.error('Can not load device info: ' + reason));

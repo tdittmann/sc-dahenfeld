@@ -17,7 +17,7 @@ const routes: Routes = [
                 children: [
                     {
                         path: '',
-                        loadChildren: './ranking/ranking.module#RankingPageModule'
+                        loadChildren: () => import('./ranking/ranking.module').then(m => m.RankingPageModule)
                     }
                 ]
             },
@@ -26,7 +26,7 @@ const routes: Routes = [
                 children: [
                     {
                         path: '',
-                        loadChildren: './fixture/fixture.module#FixturePageModule'
+                        loadChildren: () => import('./fixture/fixture.module').then(m => m.FixturePageModule)
                     }
                 ]
             },
@@ -35,7 +35,7 @@ const routes: Routes = [
                 children: [
                     {
                         path: '',
-                        loadChildren: './players/players.module#PlayersPageModule'
+                        loadChildren: () => import('./players/players.module').then(m => m.PlayersPageModule)
                     }
                 ]
             },
@@ -44,7 +44,7 @@ const routes: Routes = [
                 children: [
                     {
                         path: '',
-                        loadChildren: './statistics/statistics.module#StatisticsPageModule'
+                        loadChildren: () => import('./statistics/statistics.module').then(m => m.StatisticsPageModule)
                     }
                 ]
             }

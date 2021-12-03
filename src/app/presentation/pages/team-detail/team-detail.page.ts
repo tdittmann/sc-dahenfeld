@@ -30,19 +30,19 @@ export class TeamDetailPage implements OnInit {
                 ([params, queryParams]) => {
                     // Load team information
                     this.teamInformationService.loadTeamInformation(params['id'])
-                        .subscribe(
-                            data => {
+                        .subscribe({
+                            next: data => {
                                 this.teamInformation = data;
                                 this.selectedSeason = parseInt(params['id'], 10);
                                 this.heading = queryParams['heading'] ? queryParams['heading'] : this.teamInformation.name;
 
                                 this.isLoading = false;
                             },
-                            error => {
+                            error: error => {
                                 this.isError = true;
                                 console.error(error);
                             }
-                        );
+                        });
                 }
             );
 

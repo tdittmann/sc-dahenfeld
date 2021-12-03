@@ -46,12 +46,12 @@ export class ArticleService {
     incrementMobileHitsForArticle(pArticle: Article): void {
         this.httpService
             .post<ArticleJson>(environment.backendUrl + 'article', this.mapper.mapTo(pArticle))
-            .subscribe(
-                pResponse => {
+            .subscribe({
+                next: pResponse => {
                     // Nothing to do
                 },
-                pError => console.error(pError),
-            );
+                error: error => console.error(error),
+            });
     }
 
 }

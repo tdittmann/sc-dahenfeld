@@ -27,18 +27,18 @@ export class PersonPage implements OnInit {
     }
 
     loadPerson(event) {
-        this.playerService.loadPerson(this.personId, this.projectId).subscribe(
-            person => {
+        this.playerService.loadPerson(this.personId, this.projectId).subscribe({
+            next: person => {
                 this.person = person;
                 this.isLoading = false;
                 this.completeEvent(event);
             },
-            error => {
+            error: error => {
                 this.isError = true;
                 console.error(error);
                 this.completeEvent(event);
             }
-        );
+        });
     }
 
     completeEvent(event) {

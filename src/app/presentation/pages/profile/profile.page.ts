@@ -43,27 +43,31 @@ export class ProfilePage implements OnInit {
 
     saveProfile() {
         this.profileService.saveProfile(this.profile)
-            .subscribe(
-                (result: Profile) => {
-                    this.toastService.showToast('Ihr Profil wurde erfolgreich aktualisiert');
-                },
-                (error) => {
+            .subscribe({
+                next:
+                    (result: Profile) => {
+                        this.toastService.showToast('Ihr Profil wurde erfolgreich aktualisiert');
+                    },
+                error: (error) => {
                     this.toastService.showToast('Speichern fehlgeschlagen! Bitte erneut versuchen.');
                     console.error('Saving profile failed: ' + error);
                 }
-            );
+
+            });
     }
 
     private loadProfile(token: string) {
         this.profileService.loadProfile(token)
-            .subscribe(
-                (profile: Profile) => {
-                    this.profile = profile;
-                },
-                (error) => {
+            .subscribe({
+                next:
+                    (profile: Profile) => {
+                        this.profile = profile;
+                    },
+                error: (error) => {
                     console.error('Can not load profile from remote db: ' + error);
                 }
-            );
+
+            });
     }
 
 }

@@ -20,24 +20,26 @@ export class ArticleTabComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.route.params.subscribe(
-            params => {
-                this.articleService.getArticleById(params['id']).subscribe(
-                    article => {
-                        this.article = article;
-                        this.isLoading = false;
-                    },
-                    error => {
+        this.route.params.subscribe({
+            next: params => {
+                this.articleService.getArticleById(params['id']).subscribe({
+                    next:
+                        article => {
+                            this.article = article;
+                            this.isLoading = false;
+                        },
+                    error: error => {
                         this.isError = true;
                         console.error(error);
                     }
-                );
+
+                });
             },
-            error => {
+            error: error => {
                 this.isError = true;
                 console.error(error);
             }
-        );
+        });
     }
 
 }

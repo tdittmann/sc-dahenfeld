@@ -33,20 +33,20 @@ export class RankingPage implements OnInit {
             params => {
                 const teamId = params['id'];
 
-                this.fixtureService.loadAllMatchesByTeamId(teamId).subscribe(
-                    matches => {
-                        this.matches = matches;
+                this.fixtureService.loadAllMatchesByTeamId(teamId).subscribe({
+                    next:
+                        matches => {
+                            this.matches = matches;
 
-                        this.ranking = RankingUtil.calculateRanking(matches, null);
+                            this.ranking = RankingUtil.calculateRanking(matches, null);
 
-                        this.isLoading = false;
-                    },
-                    error => {
+                            this.isLoading = false;
+                        },
+                    error: error => {
                         this.isError = true;
                         console.error(error);
                     }
-                );
-
+                });
             }
         );
     }

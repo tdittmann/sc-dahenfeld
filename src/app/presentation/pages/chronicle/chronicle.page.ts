@@ -39,20 +39,21 @@ export class ChroniclePage implements OnInit {
         );
 
         // Load title if we get them from backend
-        this.timelineService.loadTitles().subscribe(
-            (timelineTitle: TimelineTitle) => {
+        this.timelineService.loadTitles().subscribe({
+            next: (timelineTitle: TimelineTitle) => {
                 this.title = timelineTitle.title;
                 this.subTitle = timelineTitle.subTitle;
             },
-            (error) => {
+            error: (error) => {
                 // We can't load the titles, but that's not so important as the articles
                 console.error(error);
             }
-        );
+
+        });
 
         // Load chronicle articles
-        this.articleService.getArticlesByCategoryId(this.CHRONICLE_CATEGORY).subscribe(
-            (articles: Article[]) => {
+        this.articleService.getArticlesByCategoryId(this.CHRONICLE_CATEGORY).subscribe({
+            next: (articles: Article[]) => {
 
                 for (let i = 0; i < articles.length; i++) {
                     this.timeLineEntries.push(this.timelineMapper.mapFrom(articles[i]));
@@ -60,11 +61,12 @@ export class ChroniclePage implements OnInit {
 
                 this.isLoading = false;
             },
-            (error) => {
+            error: (error) => {
                 this.isError = true;
                 console.error(error);
             }
-        );
+
+        });
 
     }
 
