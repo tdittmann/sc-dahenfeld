@@ -9,7 +9,6 @@ import {PersonModule} from '../person/person.module';
 import {PageStateModule} from '../../shared/page-state/page-state.module';
 import {PersonService} from '../../../dataproviders/soccer/person/person.service';
 import {StatisticsCardModule} from '../team-detail/statistics/statistics-card/statistics-card.module';
-import {PersonFilter} from './person.filter';
 
 @NgModule({
     providers: [PersonService],
@@ -28,10 +27,7 @@ import {PersonFilter} from './person.filter';
         PageStateModule,
         StatisticsCardModule
     ],
-    exports: [
-        PersonFilter
-    ],
-    declarations: [PersonStatisticsPage, PersonFilter]
+    declarations: [PersonStatisticsPage]
 })
 export class PersonStatisticsModule {
 }

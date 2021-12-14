@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {Person} from '../../../core/domain/person.model';
+import {Person} from '../../../../../core/domain/person.model';
 
 @Pipe({
     name: 'personFilter',
