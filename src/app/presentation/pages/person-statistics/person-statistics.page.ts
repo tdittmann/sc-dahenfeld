@@ -44,7 +44,7 @@ export class PersonStatisticsPage implements OnInit {
 
         this.personService.loadPersons().subscribe({
             next: (persons) => {
-                this.persons = persons;
+                this.persons = persons.filter(person => person.careerStatistic.matches !== undefined);
 
                 this.isLoading = false;
             },
