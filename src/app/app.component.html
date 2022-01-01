@@ -5,12 +5,9 @@
         <ion-content>
 
             <div class="nav-header">
-                <img alt="SC Dahenfeld" src="assets/img/jubilaeum_logo.png" *ngIf="is2021()"/>
-                <ng-template [ngIf]="!is2021()">
-                    <img alt="SC Dahenfeld" src="assets/img/logo.png"/>
-                    <br/>
-                    <span>SC Dahenfeld</span>
-                </ng-template>
+                <img alt="SC Dahenfeld" src="assets/img/logo.png"/>
+                <br/>
+                <span>SC Dahenfeld</span>
             </div>
 
             <ng-template ngFor let-nav [ngForOf]="navigation">

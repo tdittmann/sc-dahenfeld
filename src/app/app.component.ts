@@ -55,10 +55,6 @@ export class AppComponent {
         });
     }
 
-    is2021(): boolean {
-        return new Date().getFullYear() === 2021;
-    }
-
     isDevModeEnabled(): boolean {
         return this.devService.isDevModeEnabled();
     }
