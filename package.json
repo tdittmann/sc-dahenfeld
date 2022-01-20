@@ -21,7 +21,7 @@
     "@angular/router": "^13.0.3",
     "@capacitor/android": "^3.3.2",
     "@capacitor/app": "^1.0.6",
-    "@capacitor/cli": "3.3.2",
+    "@capacitor/cli": "3.4.0",
     "@capacitor/core": "3.3.2",
     "@capacitor/device": "^1.1.0",
     "@capacitor/ios": "^3.3.2",
