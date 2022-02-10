@@ -11,7 +11,11 @@ export class VscRankingPage implements OnInit {
 
     heading = 'Virtuelle Sport Challenge';
     ranking: VscAthlete[] = [];
-    actualMonth = (new Date().getMonth() + 1).toString();
+    yearsToShow: number[] = [];
+
+    month: number = new Date().getMonth() + 1;
+    year: number = new Date().getFullYear();
+    selectedMonthAndYear = `${this.year}-${this.month}`;
 
     isLoading = true;
     isError = false;
@@ -21,13 +25,17 @@ export class VscRankingPage implements OnInit {
     }
 
     ngOnInit(): void {
+        const currentYear = new Date().getFullYear();
+        for (let year = 2021; year <= currentYear; year++) {
+            this.yearsToShow.push(year);
+        }
 
         this.route.queryParams.subscribe(
             routeParams => {
                 this.heading = routeParams['heading'];
             });
 
-        this.loadRanking(null);
+        this.loadRanking();
     }
 
     expandAthlete(athlete: VscAthlete) {
@@ -35,39 +43,30 @@ export class VscRankingPage implements OnInit {
     }
 
     reloadRanking(event) {
-        this.actualMonth = event.detail.value;
+        const value = event.detail.value;
+
+        this.selectedMonthAndYear = value;
+        const splittedValue = value.split('-');
+        this.year = splittedValue[0];
+        this.month = splittedValue[1] ?? 0;
+
         this.ranking = [];
         this.isLoading = true;
-        this.loadRanking(null);
+        this.loadRanking();
     }
 
-    private loadRanking(event) {
-        let backendCall;
-
-        if (this.actualMonth === 'overall') {
-            backendCall = this.vscService.loadOverallRanking();
-        } else {
-            backendCall = this.vscService.loadRanking(parseInt(this.actualMonth, 10));
-        }
-
-        backendCall.subscribe(
-            ranking => {
+    private loadRanking() {
+        this.vscService.loadRanking(this.year, this.month).subscribe({
+            next: ranking => {
                 this.ranking = ranking;
                 this.isLoading = false;
-                this.completeEvent(event);
             },
-            error => {
+            error: error => {
                 this.isError = true;
                 console.error(error);
-                this.completeEvent(event);
             }
-        );
-    }
 
-    completeEvent(event) {
-        if (event) {
-            event.target.complete();
-        }
+        });
     }
 
 }

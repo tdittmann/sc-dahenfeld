@@ -3,27 +3,29 @@
 
 <ion-content color="light" *ngIf="ranking.length > 0">
 
-    <ion-refresher slot="fixed" (ionRefresh)="loadRanking($event)">
+    <ion-refresher slot="fixed" (ionRefresh)="loadRanking()">
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 
     <ion-item>
         <ion-label>Monat</ion-label>
         <ion-select placeholder="Monat auswählen" (ionChange)="reloadRanking($event)"
-                    [value]="actualMonth" okText="Auswählen" cancelText="Abbrechen">
-            <ion-select-option value="1">Januar</ion-select-option>
-            <ion-select-option value="2">Februar</ion-select-option>
-            <ion-select-option value="3">März</ion-select-option>
-            <ion-select-option value="4">April</ion-select-option>
-            <ion-select-option value="5">Mai</ion-select-option>
-            <ion-select-option value="6">Juni</ion-select-option>
-            <ion-select-option value="7">Juli</ion-select-option>
-            <ion-select-option value="8">August</ion-select-option>
-            <ion-select-option value="9">September</ion-select-option>
-            <ion-select-option value="10">Oktober</ion-select-option>
-            <ion-select-option value="11">November</ion-select-option>
-            <ion-select-option value="12">Dezember</ion-select-option>
-            <ion-select-option value="overall">Gesamt</ion-select-option>
+                    [value]="selectedMonthAndYear" okText="Auswählen" cancelText="Abbrechen">
+            <ng-template ngFor let-year [ngForOf]="yearsToShow">
+                <ion-select-option value="{{year}}-1">Januar {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}-2">Februar {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}-3">März {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}-4">April {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}-5">Mai {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}-6">Juni {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}-7">Juli {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}-8">August {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}-9">September {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}-10">Oktober {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}-11">November {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}-12">Dezember {{year}}</ion-select-option>
+                <ion-select-option value="{{year}}">{{year}}</ion-select-option>
+            </ng-template>
         </ion-select>
     </ion-item>
 
@@ -34,7 +36,7 @@
                 <span class="athlete-name">{{ athlete.getName() }}</span>
                 <br/>
                 <span class="athlete-stats">
-                    <ng-template [ngIf]="actualMonth != 'overall'">
+                    <ng-template [ngIf]="month > 0">
                         {{ athlete.getProgress() }}|
                     </ng-template>
                     {{ athlete.totalStatistics.getDistanceString() }} |

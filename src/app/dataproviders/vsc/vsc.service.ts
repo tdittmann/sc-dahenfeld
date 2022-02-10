@@ -16,15 +16,13 @@ export class VscService {
 
     }
 
-    public loadRanking(month: number): Observable<VscAthlete[]> {
-        return this.httpService
-            .get<VscAthleteJson[]>(environment.backendUrl + 'vsc?month=' + month)
-            .pipe(map(vscAthletes => vscAthletes.map(vscAthlete => this.vscMapper.mapFrom(vscAthlete))));
-    }
+    public loadRanking(year: number, month: number): Observable<VscAthlete[]> {
+        const monthParam = (month > 0)
+            ? `month=${month}`
+            : '';
 
-    public loadOverallRanking(): Observable<VscAthlete[]> {
         return this.httpService
-            .get<VscAthleteJson[]>(environment.backendUrl + 'vsc?month=overall')
+            .get<VscAthleteJson[]>(`${environment.backendUrl}vsc?year=${year}&${monthParam}`)
             .pipe(map(vscAthletes => vscAthletes.map(vscAthlete => this.vscMapper.mapFrom(vscAthlete))));
     }
 
