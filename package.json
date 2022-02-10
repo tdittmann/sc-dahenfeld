@@ -38,7 +38,7 @@
     "moment": "^2.29.1",
     "ngx-order-pipe": "^2.2.0",
     "rxjs": "~7.5.2",
-    "swiper": "^7.4.1",
+    "swiper": "^8.0.5",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
