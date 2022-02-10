@@ -35,7 +35,6 @@ export class BirthdaysPage implements OnInit {
         this.personService.loadPersons().subscribe({
             next: (persons) => {
                 this.persons = persons;
-
                 this.isLoading = false;
             },
             error: (error) => {
