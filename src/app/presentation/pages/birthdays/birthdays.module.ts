@@ -10,6 +10,7 @@ import {PersonModule} from '../person/person.module';
 import {PageStateModule} from '../../shared/page-state/page-state.module';
 import {PersonService} from '../../../dataproviders/soccer/person/person.service';
 import {OrderModule} from 'ngx-order-pipe';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 @NgModule({
     providers: [PersonService],
@@ -26,7 +27,8 @@ import {OrderModule} from 'ngx-order-pipe';
             }
         ]),
         PageStateModule,
-        OrderModule
+        OrderModule,
+        ScrollingModule
     ],
     declarations: [BirthdaysPage, BirthdayFilterPipe]
 })
