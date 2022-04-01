@@ -46,6 +46,14 @@ export class MatchDetail {
         return '';
     }
 
+    isHomeWin(): boolean {
+        return this.homeResult > this.awayResult;
+    }
+
+    isAwayWin(): boolean {
+        return this.homeResult < this.awayResult;
+    }
+
 }
 
 export class MatchEvent {

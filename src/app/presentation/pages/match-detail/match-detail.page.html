@@ -7,27 +7,33 @@
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 
-    <ion-grid class="team-infos">
-        <ion-row>
-            <ion-col>
-                <img class="club-logo" [src]="matchDetails.homeImage" [alt]="matchDetails.homeName"/>
-            </ion-col>
+    <div class="match-infos">
+        <div class="match-result">
+            <span [ngClass]="{'match-result-winner': matchDetails.isHomeWin(), 'match-result-loser': matchDetails.isAwayWin()}">
+                {{matchDetails.homeResult}}
+            </span>
+        </div>
+        <div class="club-logo">
+            <img [src]="matchDetails.homeImage" [alt]="matchDetails.homeName"/>
+        </div>
+        <div class="club-name">
+            {{ matchDetails.homeName }}
+        </div>
+    </div>
 
-            <ion-col class="match-result">
-                {{matchDetails.getResult()}}
-            </ion-col>
-
-            <ion-col>
-                <img class="club-logo" [src]="matchDetails.awayImage" [alt]="matchDetails.awayName"/>
-            </ion-col>
-        </ion-row>
-
-        <ion-row class="team-names">
-            <ion-col>{{ matchDetails.homeName }}</ion-col>
-            <ion-col></ion-col>
-            <ion-col>{{ matchDetails.awayName }}</ion-col>
-        </ion-row>
-    </ion-grid>
+    <div class="match-infos">
+        <div class="match-result">
+            <span [ngClass]="{'match-result-winner': matchDetails.isAwayWin(), 'match-result-loser': matchDetails.isHomeWin()}">
+                {{matchDetails.awayResult}}
+            </span>
+        </div>
+        <div class="club-logo">
+            <img [src]="matchDetails.awayImage" [alt]="matchDetails.awayName"/>
+        </div>
+        <div class="club-name">
+            {{ matchDetails.awayName }}
+        </div>
+    </div>
 
     <ion-card mode="md" *ngIf="matchDetails.events.length > 0">
         <h4 class="separator-heading">Highlights</h4>

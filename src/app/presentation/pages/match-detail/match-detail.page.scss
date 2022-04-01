@@ -1,17 +1,48 @@
-.team-infos {
-  text-align: center;
-}
-
-.club-logo {
-  height: 50px;
+.match-infos {
+  display: flex;
+  align-items: center;
+  margin: 16px;
 }
 
 .match-result {
   font-size: 30px;
+  font-weight: bold;
+  width: 50px;
+  position: relative;
 }
 
-.team-names {
-  font-weight: bold;
+.club-logo {
+  display: flex;
+}
+
+.club-logo img {
+  height: 50px;
+}
+
+.club-name {
+  margin-left: 16px;
+}
+
+.match-result {
+  color: var(--ion-color-dark);
+}
+
+.match-result-loser {
+  color: var(--ion-color-medium);
+}
+
+.match-result-winner:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-right: 8px solid var(--ion-color-primary);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  transform: translateY(-50%);
 }
 
 .separator-heading {
@@ -20,7 +51,7 @@
   font-weight: bold;
 }
 
-.event-table td{
+.event-table td {
   padding: 4px;
 }
 
