@@ -23,6 +23,8 @@ export class PersonStatisticsPage implements OnInit {
         {heading: 'Einwechslungen', filter: 'careerStatistic.cameIn'},
         {heading: 'Auswechslungen', filter: 'careerStatistic.cameOut'},
         {heading: 'Spielminuten', filter: 'careerStatistic.playingMinutes'},
+        {heading: 'Spiele ohne Gegentor', filter: 'careerStatistic.matchesWithoutGoalsAgainst'},
+        {heading: 'Gegentore', filter: 'careerStatistic.goalsAgainst'},
     ];
 
     isLoading = true;

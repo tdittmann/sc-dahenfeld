@@ -32,6 +32,8 @@ export class PersonMapper {
         playerStatistic.matches = param.matches;
         playerStatistic.starting = param.starting;
         playerStatistic.goals = param.goals;
+        playerStatistic.goalsAgainst = param.goalsAgainst;
+        playerStatistic.matchesWithoutGoalsAgainst = param.matchesWithoutGoalsAgainst;
         playerStatistic.yellowCards = param.yellowCards;
         playerStatistic.yellowRedCards = param.yellowRedCards;
         playerStatistic.redCards = param.redCards;

@@ -18,6 +18,8 @@ export interface PersonStatisticJson {
     matches: number;
     starting: number;
     goals: number;
+    goalsAgainst: number;
+    matchesWithoutGoalsAgainst: number;
     yellowCards: number;
     yellowRedCards: number;
     redCards: number;
