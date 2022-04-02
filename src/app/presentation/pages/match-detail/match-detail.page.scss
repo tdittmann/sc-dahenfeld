@@ -9,8 +9,8 @@ ion-card-content {
   padding-top: 8px;
 }
 
-.club-logo img {
-  height: 50px;
+.club-logo {
+  width: 50px;
 }
 
 .match-result {
@@ -67,7 +67,7 @@ ion-card-content {
 .captain span {
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--ion-color-dark);
+  color: #fff;
   font-size: 12px;
   line-height: 12px;
   position: absolute;
