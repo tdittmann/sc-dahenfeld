@@ -1,29 +1,23 @@
-.match-infos {
-  display: flex;
-  align-items: center;
-  margin: 16px;
+ion-card-content {
+  padding: 0;
 }
 
-.match-result {
-  font-size: 30px;
-  font-weight: bold;
-  width: 50px;
-  position: relative;
-}
-
-.club-logo {
-  display: flex;
+.match-item {
+  margin-bottom: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
 }
 
 .club-logo img {
   height: 50px;
 }
 
-.club-name {
-  margin-left: 16px;
-}
-
 .match-result {
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  margin-inline-start: 16px;
   color: var(--ion-color-dark);
 }
 
@@ -35,43 +29,56 @@
   content: "";
   display: block;
   position: absolute;
-  right: 10px;
+  left: -20px;
   top: 50%;
   width: 0;
   height: 0;
-  border-right: 8px solid var(--ion-color-primary);
+  border-left: 8px solid var(--ion-color-primary);
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   transform: translateY(-50%);
 }
 
 .separator-heading {
-  text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+.lineup-jerseynumber {
   font-weight: bold;
 }
 
-.event-table td {
-  padding: 4px;
+.captain {
+  border-top: 22px solid transparent;
+  bottom: 0;
+  display: block;
+  height: 0;
+  position: absolute;
+  top: auto;
+  width: 0;
+  border-right: 22px solid var(--ion-color-primary);
+  left: auto;
+  right: 0;
+  z-index: 3;
 }
 
-.event-time {
-  width: 26px;
-  height: 26px;
-  line-height: 24px;
-  border: 1px solid var(--ion-color-medium);
-  border-radius: 50%;
-  text-align: center;
-  font-size: 9px;
-  background-color: #fff;
-  font-weight: 700;
-}
-
-.cameInFor {
-  font-size: 0.75em;
+.captain span {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--ion-color-dark);
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  top: -13px;
+  right: -20px;
+  left: auto;
 }
 
 .event-image {
-  height: 15px;
+  height: 20px;
   width: auto;
+  padding-left: 6px;
+  margin-inline-end: 16px;
 }

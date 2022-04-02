@@ -15,7 +15,20 @@ export interface MatchDetailJson {
     away_logo: string;
     away_result: string;
 
+    lineup: MatchPlayerJson[];
     events: MatchEventJson[];
+
+}
+
+export class MatchPlayerJson {
+
+    personId: string;
+    firstname: string;
+    lastname: string;
+    picture: string;
+    jerseynumber: string;
+    position: string;
+    captain: boolean;
 
 }
 

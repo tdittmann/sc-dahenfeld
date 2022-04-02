@@ -1,5 +1,7 @@
 import {Moment} from 'moment';
 import {environment} from '../../../environments/environment';
+import {MatchPlayer} from './matchPlayer.model';
+import {MatchEvent} from './matchEvent.model';
 
 export class MatchDetail {
 
@@ -18,14 +20,23 @@ export class MatchDetail {
     awayImage: string;
     awayResult: number;
 
+    lineup: MatchPlayer[] = [];
     events: MatchEvent[] = [];
 
-    getResult(): string {
-        if (Number.isInteger(this.homeResult) && Number.isInteger(this.awayResult)) {
-            return this.homeResult + ' : ' + this.awayResult;
+    getHomeResult(): string {
+        if (isNaN(this.homeResult)) {
+            return '-';
         }
 
-        return '- : -';
+        return String(this.homeResult);
+    }
+
+    getAwayResult(): string {
+        if (isNaN(this.awayResult)) {
+            return '-';
+        }
+
+        return String(this.awayResult);
     }
 
     getKickOffDate(): string {
@@ -53,18 +64,5 @@ export class MatchDetail {
     isAwayWin(): boolean {
         return this.homeResult < this.awayResult;
     }
-
-}
-
-export class MatchEvent {
-
-    clubId: number;
-    teamplayerId: number;
-    firstname: string;
-    lastname: string;
-    time: number;
-    icon: string;
-    cameInForFirstname: string;
-    cameInForLastname: string;
 
 }

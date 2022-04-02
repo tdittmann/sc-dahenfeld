@@ -7,85 +7,116 @@
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 
-    <div class="match-infos">
-        <div class="match-result">
-            <span [ngClass]="{'match-result-winner': matchDetails.isHomeWin(), 'match-result-loser': matchDetails.isAwayWin()}">
-                {{matchDetails.homeResult}}
-            </span>
-        </div>
-        <div class="club-logo">
-            <img [src]="matchDetails.homeImage" [alt]="matchDetails.homeName"/>
-        </div>
-        <div class="club-name">
-            {{ matchDetails.homeName }}
-        </div>
-    </div>
-
-    <div class="match-infos">
-        <div class="match-result">
-            <span [ngClass]="{'match-result-winner': matchDetails.isAwayWin(), 'match-result-loser': matchDetails.isHomeWin()}">
-                {{matchDetails.awayResult}}
-            </span>
-        </div>
-        <div class="club-logo">
-            <img [src]="matchDetails.awayImage" [alt]="matchDetails.awayName"/>
-        </div>
-        <div class="club-name">
-            {{ matchDetails.awayName }}
-        </div>
-    </div>
-
-    <ion-card mode="md" *ngIf="matchDetails.events.length > 0">
-        <h4 class="separator-heading">Highlights</h4>
+    <ion-card mode="md">
         <ion-card-content>
-            <table class="event-table">
+
+            <ion-item mode="md" lines="none" class="match-item">
+                <div style="width: 25%" slot="start" class="club-logo">
+                    <img [src]="matchDetails.homeImage" [alt]="matchDetails.homeName"/>
+                </div>
+                <ion-label>
+                    <h2>{{ matchDetails.homeName }}</h2>
+                </ion-label>
+                <div slot="end" class="match-result">
+                    <span [ngClass]="{'match-result-winner': matchDetails.isHomeWin(), 'match-result-loser': matchDetails.isAwayWin()}">
+                        {{matchDetails.getHomeResult()}}
+                    </span>
+                </div>
+            </ion-item>
+
+            <ion-item mode="md" lines="none" class="match-item" style="margin-bottom: 32px;">
+                <div style="width: 25%" slot="start" class="club-logo">
+                    <img [src]="matchDetails.awayImage" [alt]="matchDetails.awayName"/>
+                </div>
+                <ion-label>
+                    <h2>{{ matchDetails.awayName }}</h2>
+                </ion-label>
+                <div slot="end" class="match-result">
+                    <span [ngClass]="{'match-result-winner': matchDetails.isAwayWin(), 'match-result-loser': matchDetails.isHomeWin()}">
+                        {{matchDetails.getAwayResult()}}
+                    </span>
+                </div>
+            </ion-item>
+
+            <ng-template [ngIf]="matchDetails.events.length > 0">
+                <hr/>
+                <h4 class="separator-heading">Highlights</h4>
                 <ng-template ngFor let-event [ngForOf]="matchDetails.events">
-                    <tr>
-                        <td>
-                            <div class="event-time">
-                                {{ event.time }}
-                            </div>
-                        </td>
-                        <td>
-                            <img class="event-image" [src]="event.icon"/>
-                        </td>
-                        <td>
-                            <div class="event-names">
-                                {{ event.firstname }} {{ event.lastname }}
-                                <div class="cameInFor" *ngIf="event.cameInForFirstname">
-                                    für {{ event.cameInForFirstname }} {{ event.cameInForLastname }}
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
+                    <ion-item mode="md" lines="none">
+                        <h2 slot="start" class="lineup-jerseynumber">{{event.time}}'</h2>
+                        <img slot="start" class="event-image" [src]="event.icon"/>
+                        <ion-label>
+                            <h2>{{ event.firstname }} {{ event.lastname }}</h2>
+                            <p *ngIf="event.cameInForFirstname">
+                                für {{ event.cameInForFirstname }} {{ event.cameInForLastname }}</p>
+                        </ion-label>
+                    </ion-item>
                 </ng-template>
-            </table>
+            </ng-template>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card mode="md" *ngIf="matchDetails.lineup.length > 0">
+        <h4 class="separator-heading">Aufstellung</h4>
+        <ion-card-content>
+            <ng-template ngFor let-player [ngForOf]="matchDetails.lineup">
+                <ion-item mode="md">
+                    <ion-avatar slot="start">
+                        <ion-img [src]="player.image" [alt]="player.name"></ion-img>
+                    </ion-avatar>
+                    <ion-label>
+                        <h2>{{player.name}}</h2>
+                        <p>{{player.position}}</p>
+                    </ion-label>
+                    <ion-label slot="end">
+                        <h1 class="lineup-jerseynumber">{{player.jerseynumber}}</h1>
+                    </ion-label>
+                    <div *ngIf="player.captain" class="captain">
+                        <span>C</span>
+                    </div>
+                </ion-item>
+            </ng-template>
         </ion-card-content>
     </ion-card>
 
     <ion-card mode="md">
         <h4 class="separator-heading">Spielinfos</h4>
         <ion-card-content>
-            <ion-grid>
-                <ion-row>
-                    <ion-col size="6" *ngIf="matchDetails.date">
-                        <p><strong>Datum</strong></p>
-                        {{matchDetails.getKickOffDate()}}
-                    </ion-col>
-                    <ion-col size="6" *ngIf="matchDetails.location">
-                        <p><strong>Ort</strong></p>
-                        {{matchDetails.location}}
-                    </ion-col>
-                    <ion-col size="6" *ngIf="matchDetails.date">
-                        <p><strong>Anpfiff</strong></p>
-                        {{matchDetails.getKickOffTime()}}
-                    </ion-col>
-                    <ion-col size="6" *ngIf="matchDetails.fixture">
-                        <p><strong>Spieltag</strong></p>
-                        {{matchDetails.fixture}}
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
+            <ion-item lines="none" *ngIf="matchDetails.date">
+                <div style="width: 25%" slot="start">
+                    <strong>Datum</strong>
+                </div>
+                <ion-label>
+                    {{matchDetails.getKickOffDate()}}
+                </ion-label>
+            </ion-item>
+
+            <ion-item lines="none" *ngIf="matchDetails.date">
+                <div style="width: 25%"  slot="start">
+                    <strong>Anpfiff</strong>
+                </div>
+                <ion-label>
+                    {{matchDetails.getKickOffTime()}}
+                </ion-label>
+            </ion-item>
+
+            <ion-item lines="none" *ngIf="matchDetails.location">
+                <div style="width: 25%"  slot="start">
+                    <strong>Ort</strong>
+                </div>
+                <ion-label>
+                    {{matchDetails.location}}
+                </ion-label>
+            </ion-item>
+
+            <ion-item lines="none" *ngIf="matchDetails.fixture">
+                <div style="width: 25%"  slot="start">
+                    <strong>Spieltag</strong>
+                </div>
+                <ion-label>
+                    {{matchDetails.fixture}}
+                </ion-label>
+            </ion-item>
         </ion-card-content>
     </ion-card>
 

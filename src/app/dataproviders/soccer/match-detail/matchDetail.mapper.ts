@@ -1,6 +1,8 @@
-import {MatchDetailJson, MatchEventJson} from './matchDetailJson';
-import {MatchDetail, MatchEvent} from '../../../core/domain/matchDetail.model';
+import {MatchDetailJson, MatchEventJson, MatchPlayerJson} from './matchDetailJson';
+import {MatchDetail} from '../../../core/domain/matchDetail.model';
 import {DateUtils} from '../../../util/DateUtils';
+import {MatchEvent} from '../../../core/domain/matchEvent.model';
+import {MatchPlayer} from '../../../core/domain/matchPlayer.model';
 
 export class MatchDetailMapper {
 
@@ -25,6 +27,13 @@ export class MatchDetailMapper {
         matchDetail.awayImage = param.away_logo;
         matchDetail.awayResult = parseInt(param.away_result, 10);
 
+
+        if (param.lineup) {
+            for (const lineupPlayer of param.lineup) {
+                matchDetail.lineup.push(this.mapLineupPlayerFrom(lineupPlayer));
+            }
+        }
+
         if (param.events) {
             for (const event of param.events) {
                 matchDetail.events.push(this.mapEventFrom(event));
@@ -32,6 +41,22 @@ export class MatchDetailMapper {
         }
 
         return matchDetail;
+    }
+
+    private mapLineupPlayerFrom(param: MatchPlayerJson) {
+        if (!param) {
+            return null;
+        }
+
+        const matchPlayer = new MatchPlayer();
+        matchPlayer.id = parseInt(param.personId, 10);
+        matchPlayer.firstname = param.firstname;
+        matchPlayer.lastname = param.lastname;
+        matchPlayer.image = param.picture;
+        matchPlayer.jerseynumber = parseInt(param.jerseynumber, 10);
+        matchPlayer.position = param.position;
+        matchPlayer.captain = param.captain;
+        return matchPlayer;
     }
 
     private mapEventFrom(param: MatchEventJson): MatchEvent {

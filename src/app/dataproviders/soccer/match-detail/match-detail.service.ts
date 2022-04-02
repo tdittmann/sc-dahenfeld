@@ -20,6 +20,7 @@ export class MatchDetailService {
         return this.httpService.get<MatchDetailJson>(environment.backendUrl + 'match?id=' + matchId)
             .pipe(map(match => {
                 const mappedMatch = this.matchDetailMapper.mapFrom(match);
+                mappedMatch.lineup.sort((a, b) => a.compareTo(b));
                 mappedMatch.events.sort((a, b) => a.time - b.time);
                 return mappedMatch;
             }));
