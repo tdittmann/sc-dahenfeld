@@ -14,6 +14,8 @@ import {PushNotifications, Token} from '@capacitor/push-notifications';
 import {SplashScreen} from '@capacitor/splash-screen';
 import {Device, DeviceInfo} from '@capacitor/device';
 import {App, AppInfo} from '@capacitor/app';
+import {Router, RouterOutlet} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
     selector: 'app-root',
@@ -30,6 +32,7 @@ export class AppComponent {
                 private versionService: VersionService,
                 private alertController: AlertController,
                 private profileService: ProfileService,
+                private routerOutlet: Location,
                 private navigationService: NavigationService) {
         this.initializeApp();
     }
@@ -40,6 +43,11 @@ export class AppComponent {
             if (Capacitor.isPluginAvailable('SplashScreen')) {
                 SplashScreen.hide();
             }
+
+            this.platform.backButton.subscribe(value => {
+                console.log(value);
+                this.routerOutlet.back();
+            });
 
             // Load navigation
             this.initializeNavigation();
