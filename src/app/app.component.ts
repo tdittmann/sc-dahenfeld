@@ -14,8 +14,8 @@ import {PushNotifications, Token} from '@capacitor/push-notifications';
 import {SplashScreen} from '@capacitor/splash-screen';
 import {Device, DeviceInfo} from '@capacitor/device';
 import {App, AppInfo} from '@capacitor/app';
-import {Router, RouterOutlet} from '@angular/router';
 import {Location} from '@angular/common';
+import {ToastService} from './dataproviders/toast.service';
 
 @Component({
     selector: 'app-root',
@@ -32,6 +32,7 @@ export class AppComponent {
                 private versionService: VersionService,
                 private alertController: AlertController,
                 private profileService: ProfileService,
+                private toastService: ToastService,
                 private routerOutlet: Location,
                 private navigationService: NavigationService) {
         this.initializeApp();
@@ -182,11 +183,21 @@ export class AppComponent {
         }
     }
 
-    private handlePushNotification() {
+    private async handlePushNotification() {
 
         if (Capacitor.isPluginAvailable('PushNotifications')) {
 
-            PushNotifications.register();
+            let permStatus = await PushNotifications.checkPermissions();
+
+            if (permStatus.receive === 'prompt') {
+                permStatus = await PushNotifications.requestPermissions();
+            }
+
+            if (permStatus.receive !== 'granted') {
+                this.toastService.showToast('Sie erhalten nun keine Benachrichtigungen bei Neuigkeiten rund um den SC Dahenfeld')
+            }
+
+            await PushNotifications.register();
 
             PushNotifications.addListener('registration',
                 (token: Token) => {

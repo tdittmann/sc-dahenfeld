@@ -17,6 +17,7 @@ import {VersionService} from './dataproviders/version/version.service';
 import {ProfileService} from './dataproviders/profile/profile.service';
 import {NavigationService} from './dataproviders/navigation/navigation.service';
 import {AuthorizationInterceptor} from './dataproviders/authorization.interceptor';
+import {ToastService} from './dataproviders/toast.service';
 
 @NgModule({
     declarations: [
@@ -39,6 +40,7 @@ import {AuthorizationInterceptor} from './dataproviders/authorization.intercepto
         VersionService,
         ProfileService,
         NavigationService,
+        ToastService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
         {provide: HTTP_INTERCEPTORS, useClass: AuthorizationInterceptor, multi: true}
     ],

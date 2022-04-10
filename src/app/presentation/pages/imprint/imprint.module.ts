@@ -5,10 +5,9 @@ import {IonicModule} from '@ionic/angular';
 import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {RouterModule} from '@angular/router';
 import {ImprintPage} from './imprint.page';
-import {ToastService} from '../../../dataproviders/toast.service';
 
 @NgModule({
-    providers: [ToastService],
+    providers: [],
     imports: [
         CommonModule,
         FormsModule,
