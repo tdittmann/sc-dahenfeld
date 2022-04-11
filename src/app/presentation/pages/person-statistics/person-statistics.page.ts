@@ -25,6 +25,7 @@ export class PersonStatisticsPage implements OnInit {
         {heading: 'Spielminuten', filter: 'careerStatistic.playingMinutes'},
         {heading: 'Spiele ohne Gegentor', filter: 'careerStatistic.matchesWithoutGoalsAgainst'},
         {heading: 'Gegentore', filter: 'careerStatistic.goalsAgainst'},
+        {heading: 'Spiele als Kapitän', filter: 'careerStatistic.matchesCaptain'},
     ];
 
     isLoading = true;
