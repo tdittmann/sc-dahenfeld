@@ -50,7 +50,7 @@
     "@angular/cli": "~13.3.1",
     "@angular/compiler": "^13.3.1",
     "@angular/compiler-cli": "^13.3.1",
-    "@angular/language-service": "^13.3.1",
+    "@angular/language-service": "^14.0.6",
     "@ionic/angular-toolkit": "^6.1.0",
     "@types/jasmine": "~4.0.2",
     "@types/jasminewd2": "~2.0.10",
