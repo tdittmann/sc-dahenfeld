@@ -33,7 +33,7 @@ export class AppComponent {
                 private alertController: AlertController,
                 private profileService: ProfileService,
                 private toastService: ToastService,
-                private routerOutlet: Location,
+                private location: Location,
                 private navigationService: NavigationService) {
         this.initializeApp();
     }
@@ -46,8 +46,13 @@ export class AppComponent {
             }
 
             this.platform.backButton.subscribe(value => {
-                console.log(value);
-                this.routerOutlet.back();
+
+                if (this.location.isCurrentPathEqualTo('/news')) {
+                    App.exitApp();
+                } else {
+                    this.location.back();
+                }
+
             });
 
             // Load navigation
@@ -194,7 +199,7 @@ export class AppComponent {
             }
 
             if (permStatus.receive !== 'granted') {
-                this.toastService.showToast('Sie erhalten nun keine Benachrichtigungen bei Neuigkeiten rund um den SC Dahenfeld')
+                this.toastService.showToast('Sie erhalten nun keine Benachrichtigungen bei Neuigkeiten rund um den SC Dahenfeld');
             }
 
             await PushNotifications.register();
