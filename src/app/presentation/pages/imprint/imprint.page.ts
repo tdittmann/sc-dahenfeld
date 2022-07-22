@@ -16,7 +16,7 @@ import {App} from '@capacitor/app';
 export class ImprintPage implements OnInit {
 
     heading: string;
-    version = '5.14.0';
+    version = '5.15.0';
     developer = 'Timo Dittmann';
     darkMode = false;
 
@@ -66,7 +66,7 @@ export class ImprintPage implements OnInit {
     validateDevModePassword() {
         this.profileService.validateDevModePassword(this.devModePassword)
             .subscribe({
-                next: value => {
+                next: () => {
                     this.devService.updateDevMode(true);
                     this.toastService.showToast('Du hast den Entwickler-Modus aktiviert.');
                 },
