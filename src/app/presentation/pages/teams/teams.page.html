@@ -3,21 +3,32 @@
 
 <ion-content color="light" *ngIf="teams.size > 0">
 
-    <ng-template ngFor let-team [ngForOf]="teams | keyvalue : teamNameOrder">
-        <h4 class="ion-padding-start">{{team.key.teamName}}</h4>
+    <ng-template [ngIf]="showTable === 'false'">
+        <ion-list>
+            <ng-template ngFor let-team [ngForOf]="teams | keyvalue : teamNameOrder">
+                <ion-item mode="ios" button="true" routerLink="/team-detail/{{team.key.teamId}}">
+                    <ion-label>{{team.key.teamName}}</ion-label>
+                </ion-item>
+            </ng-template>
+        </ion-list>
+    </ng-template>
 
-        <ion-card mode="md" routerLink="/team-detail/{{team.key.teamId}}">
-            <ranking [teams]="team.value"></ranking>
+    <ng-template [ngIf]="showTable === 'true'">
+        <ng-template ngFor let-team [ngForOf]="teams | keyvalue : teamNameOrder">
+            <h4 class="ion-padding-start">{{team.key.teamName}}</h4>
 
-            <ion-row class="ion-no-padding">
-                <ion-col class="ion-text-center">
-                    <ion-button expand="full" fill="clear">
-                        Mehr zur {{team.key.teamName}}
-                    </ion-button>
-                </ion-col>
-            </ion-row>
-        </ion-card>
+            <ion-card mode="md" routerLink="/team-detail/{{team.key.teamId}}">
+                <ranking [teams]="team.value"></ranking>
 
+                <ion-row class="ion-no-padding">
+                    <ion-col class="ion-text-center">
+                        <ion-button expand="full" fill="clear">
+                            Mehr zur {{team.key.teamName}}
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </ng-template>
     </ng-template>
 
 </ion-content>

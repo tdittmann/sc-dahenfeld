@@ -1,0 +1,9 @@
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<ion-content color="light" *ngIf="article">
+
+    <div class="container">
+        <div class="ion-padding" [innerHTML]="article.text"></div>
+    </div>
+
+</ion-content>

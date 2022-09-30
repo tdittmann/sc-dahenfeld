@@ -15,6 +15,7 @@ export class TeamInformationMapper {
         teamInformation.showPlayers = param.showPlayers;
         teamInformation.showStatistics = param.showStatistics;
         teamInformation.showSeasons = param.showSeasons;
+        teamInformation.articleId = param.articleId;
 
         if (param.seasons) {
             for (let i = 0; i < param.seasons.length; i++) {

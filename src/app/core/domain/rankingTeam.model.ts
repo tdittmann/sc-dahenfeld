@@ -13,7 +13,9 @@ export class RankingTeam {
     points = 0;
 
     public isFavoriteTeam(): boolean {
-        return this.name.includes('Dahenfeld');
+        return this.name.includes('Dahenfeld')
+            || this.name.includes('SGM Neuenstadt Kochertal')
+            || this.name.includes('SGM Oedheim Kochertal');
     }
 
     public getGoalsDiff(): number {

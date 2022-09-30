@@ -13,6 +13,15 @@ const routes: Routes = [
         component: TeamDetailPage,
         children: [
             {
+                path: 'article',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: () => import('./article/article.module').then(m => m.ArticlePageModule)
+                    }
+                ]
+            },
+            {
                 path: 'ranking',
                 children: [
                     {
@@ -52,7 +61,7 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: 'tabs/ranking',
+        redirectTo: 'tabs/article',
         pathMatch: 'full'
     }
 ];

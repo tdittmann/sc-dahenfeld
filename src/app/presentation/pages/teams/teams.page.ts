@@ -15,6 +15,7 @@ export class TeamsPage implements OnInit {
 
     heading = 'Jugend';
     teams = new Map;
+    showTable;
 
     isLoading = true;
 
@@ -34,6 +35,7 @@ export class TeamsPage implements OnInit {
             routeParams => {
 
                 this.heading = routeParams['heading'];
+                this.showTable = routeParams['showTable'];
 
                 this.teams.clear();
                 this.isLoading = true;

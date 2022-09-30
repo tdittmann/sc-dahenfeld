@@ -6,6 +6,7 @@ export class TeamInformation {
     showPlayers: boolean;
     showStatistics: boolean;
     showSeasons: boolean;
+    articleId: string;
     seasons: TeamInformationSeason[] = [];
 
 }

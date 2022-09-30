@@ -11,7 +11,7 @@ export class PersonMapper {
         }
 
         const player = new Person();
-        player.id = param.person_id;
+        player.id = param.personId;
         player.firstname = param.firstname;
         player.lastname = param.lastname;
         player.image = param.image;
