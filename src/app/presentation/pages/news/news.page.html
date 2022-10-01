@@ -3,27 +3,10 @@
 
 <ion-content color="light" *ngIf="articles.length > 0">
 
-    <ion-refresher slot="fixed" (ionRefresh)="loadArticles($event)">
-        <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
-
-    <article-slider [articles]="sliderArticles"></article-slider>
-
-    <ion-grid>
-        <ion-row>
-            <ion-col size="12" sizeMd="6" sizeLg="4" *ngFor="let article of articles">
-
-                <article-card [image]="article.getFirstImageAsBackgroundUrl()"
-                              [title]="article.title"
-                              [subTitle]="article.getFormattedDate()"
-                              [category]="article.categoryName"
-                              [categoryColor]="article.categoryColor"
-                              [routerLink]="article.getArticleLink()">
-                </article-card>
-
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-
+    <article-card *ngFor="let article of articles; let index = index"
+                  [article]="article"
+                  [type]="index === 0 ? 'large' : 'small'"
+                  [routerLink]="article.getArticleLink()">
+    </article-card>
 
 </ion-content>

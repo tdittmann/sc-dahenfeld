@@ -1,23 +1,32 @@
-<ion-card mode="md" class="clickable">
+<ion-card mode="md" class="clickable no-margin-side">
 
-    <img *ngIf="showImage()"
-         class="article-card-image"
-         [ngStyle]="{'background-image' : image}">
+    <ng-template [ngIf]="type === 'large'">
+        <div class="article-card-image"
+             [ngStyle]="{'background-image' : article.getFirstImageAsBackgroundUrl()}">
+        </div>
 
-    <ion-badge *ngIf="showCategory()" class="category" [ngStyle]="{'background-color': categoryColor}">
-        {{ category }}
-    </ion-badge>
+        <ion-card-header>
+            <ion-card-subtitle>{{article.categoryName}}</ion-card-subtitle>
+            <ion-card-title style="margin-top: 0;">{{article.title}}</ion-card-title>
+        </ion-card-header>
+    </ng-template>
 
-    <ion-card-header>
-        <ion-card-subtitle *ngIf="showSubTitle()">{{subTitle}}</ion-card-subtitle>
-        <ion-card-title>{{ title }}</ion-card-title>
-    </ion-card-header>
-
-    <ng-content></ng-content>
-
-    <ion-card-header *ngIf="showFooter()" class="article-card-footer">
-        <ion-icon *ngIf="showFooterIcon()" [name]="footerIcon"></ion-icon>
-        {{ footerText }}
-    </ion-card-header>
+    <ng-template [ngIf]="type === 'small'">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="4">
+                    <div class="article-card-image" style="height: 100px"
+                         [ngStyle]="{'background-image' : article.getFirstImageAsBackgroundUrl()}">
+                    </div>
+                </ion-col>
+                <ion-col size="8">
+                    <ion-card-header style="padding: 8px;">
+                        <ion-card-subtitle>{{article.categoryName}}</ion-card-subtitle>
+                        <ion-card-title style="margin-top: 0; font-size: 14px;">{{article.title}}</ion-card-title>
+                    </ion-card-header>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ng-template>
 
 </ion-card>

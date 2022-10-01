@@ -5,8 +5,8 @@ import {Article} from '../../../core/domain/article.model';
 import {combineLatest} from 'rxjs';
 
 @Component({
-    templateUrl: 'article-list.page.html',
-    styleUrls: ['article-list.page.scss']
+    selector: 'app-article-list',
+    templateUrl: 'article-list.page.html'
 })
 export class ArticleListPage implements OnInit {
 
@@ -22,10 +22,7 @@ export class ArticleListPage implements OnInit {
     }
 
     ngOnInit(): void {
-        this.loadArticles(null);
-    }
 
-    loadArticles(event) {
         combineLatest([this.activatedRoute.params, this.activatedRoute.queryParams]).subscribe({
 
             next: ([params, queryParams]) => {
@@ -36,12 +33,10 @@ export class ArticleListPage implements OnInit {
                         articles => {
                             this.articles = articles;
                             this.isLoading = false;
-                            this.completeEvent(event);
                         },
                     error: error => {
                         this.isError = true;
                         console.error(error);
-                        this.completeEvent(event);
                     }
 
                 });
@@ -49,16 +44,9 @@ export class ArticleListPage implements OnInit {
             error: error => {
                 this.isError = error;
                 console.error(error);
-                this.completeEvent(event);
             }
 
         });
-    }
-
-    completeEvent(event) {
-        if (event) {
-            event.target.complete();
-        }
     }
 
 }

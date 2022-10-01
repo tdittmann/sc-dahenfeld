@@ -5,13 +5,7 @@
   background-position: center;
 }
 
-.article-card-footer {
-  border-top: 1px solid var(--ion-color-light);
-  text-align: center;
-}
-
-.category {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+.no-margin-side {
+  margin-left: 0;
+  margin-right: 0;
 }
