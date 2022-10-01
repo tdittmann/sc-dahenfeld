@@ -12,7 +12,7 @@ export class TextUtils {
             return '';
         }
         return (pText.length > pLength)
-            ? pText.substr(0, pLength - 1) + '&hellip;'
+            ? pText.substring(0, pLength - 1) + '&hellip;'
             : pText;
     }
 
