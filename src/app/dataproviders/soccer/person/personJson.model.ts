@@ -1,6 +1,6 @@
 export interface PersonJson {
 
-    personId: number;
+    person_id: number;
     position: string;
     birthday: string;
     jerseynumber: string;

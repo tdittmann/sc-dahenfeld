@@ -18,7 +18,7 @@ describe('PersonMapper', () => {
 
     it('should map from json to core model', () => {
         const actual: PersonJson = {
-            personId: 1,
+            person_id: 1,
             firstname: 'Thorsten',
             lastname: 'Krause',
             image: 'img.png',

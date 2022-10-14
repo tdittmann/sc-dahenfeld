@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {ActivatedRoute} from '@angular/router';
 import {Article} from '../../../core/domain/article.model';
@@ -6,10 +6,12 @@ import {combineLatest} from 'rxjs';
 
 @Component({
     selector: 'app-article-list',
-    templateUrl: 'article-list.page.html'
+    templateUrl: 'article-list.page.html',
+    styleUrls: ['article-list.page.scss']
 })
 export class ArticleListPage implements OnInit {
 
+    numberOfFeaturedArticles = 1;
     heading: string;
     articles: Article[] = [];
 
@@ -22,6 +24,8 @@ export class ArticleListPage implements OnInit {
     }
 
     ngOnInit(): void {
+
+        this.onResize();
 
         combineLatest([this.activatedRoute.params, this.activatedRoute.queryParams]).subscribe({
 
@@ -47,6 +51,17 @@ export class ArticleListPage implements OnInit {
             }
 
         });
+    }
+
+    @HostListener('window:resize', ['$event'])
+    onResize() {
+        if (window.innerWidth >= 768 && window.innerWidth < 992) {
+            this.numberOfFeaturedArticles = 2;
+        } else if (window.innerWidth >= 992) {
+            this.numberOfFeaturedArticles = 3;
+        } else {
+            this.numberOfFeaturedArticles = 1;
+        }
     }
 
 }

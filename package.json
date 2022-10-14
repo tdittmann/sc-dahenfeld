@@ -5,7 +5,7 @@
   "homepage": "http://timo-dittmann.de/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --ssl",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
