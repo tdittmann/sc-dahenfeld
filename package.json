@@ -49,7 +49,7 @@
     "@angular-devkit/schematics": "~14.2.4",
     "@angular/cli": "~14.2.4",
     "@angular/compiler": "^14.2.4",
-    "@angular/compiler-cli": "^14.2.4",
+    "@angular/compiler-cli": "^15.0.0",
     "@angular/language-service": "^14.2.4",
     "@ionic/angular-toolkit": "^7.0.0",
     "@types/jasmine": "~4.3.0",
