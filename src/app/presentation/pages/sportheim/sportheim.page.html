@@ -1,0 +1,27 @@
+<page-header [title]="heading"></page-header>
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<ion-content color="light">
+
+    <div class="container">
+        <div class="ion-padding">
+
+            <img *ngIf="sportheimInfo.image"
+                 [src]="sportheimInfo.image"
+            />
+
+            <ion-button *ngFor="let menue of sportheimInfo.menues" expand="full"
+                        (click)="navigateToExternalUrl(menue.link)">
+                {{menue.name}}
+            </ion-button>
+
+            <div *ngIf="sportheimInfo.content"
+                 [innerHTML]="sportheimInfo.content"></div>
+
+            <div *ngIf="sportheimInfo.owner"
+                 [innerHTML]="sportheimInfo.owner"></div>
+
+        </div>
+    </div>
+
+</ion-content>
