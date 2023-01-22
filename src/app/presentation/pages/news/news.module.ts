@@ -5,6 +5,7 @@ import {RouterModule} from '@angular/router';
 import {NewsPage} from './news.page';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {PageHeaderModule} from '../../shared/page-header/page-header.module';
+import {ArticleSliderModule} from './article-slider/article-slider.module';
 import {PageStateModule} from '../../shared/page-state/page-state.module';
 import {ArticleCardModule} from '../../shared/article-card/article-card.module';
 
@@ -14,6 +15,7 @@ import {ArticleCardModule} from '../../shared/article-card/article-card.module';
         CommonModule,
         IonicModule,
         PageHeaderModule,
+        ArticleSliderModule,
         PageStateModule,
         ArticleCardModule,
         RouterModule.forChild([

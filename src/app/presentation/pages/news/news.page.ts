@@ -13,6 +13,7 @@ export class NewsPage implements OnInit {
     numberOfFeaturedArticles = 1;
     heading: string;
     articles: Article[] = [];
+    sliderArticles: Article[] = [];
 
     isLoading = true;
     isError = false;
@@ -32,15 +33,27 @@ export class NewsPage implements OnInit {
             }
         );
 
+        this.loadArticles(null);
+    }
+
+    loadArticles(event) {
         this.articleService.getAllArticles()
             .subscribe({
                 next: (pArticles) => {
                     this.articles = pArticles;
+
+                    // The first three articles should be shown as slide
+                    for (let i = 0; i < 3; i++) {
+                        this.sliderArticles.push(this.articles.shift());
+                    }
+
                     this.isLoading = false;
+                    this.completeEvent(event);
                 },
                 error: (pError) => {
                     this.isError = true;
                     console.error(pError);
+                    this.completeEvent(event);
                 }
             });
     }
@@ -53,6 +66,12 @@ export class NewsPage implements OnInit {
             this.numberOfFeaturedArticles = 3;
         } else {
             this.numberOfFeaturedArticles = 1;
+        }
+    }
+
+    completeEvent(event) {
+        if (event) {
+            event.target.complete();
         }
     }
 

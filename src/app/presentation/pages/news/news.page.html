@@ -3,17 +3,22 @@
 
 <ion-content color="light" *ngIf="articles.length > 0">
 
+    <ion-refresher slot="fixed" (ionRefresh)="loadArticles($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <article-slider [articles]="sliderArticles"></article-slider>
+
     <ion-grid>
         <ion-row>
-            <ion-col size="12" sizeMd="6" sizeLg="4" *ngFor="let article of articles; let index = index"
-                     [ngClass]="{'padding-on-large': numberOfFeaturedArticles > 1}">
-                <article-card
-                        [article]="article"
-                        [type]="index < numberOfFeaturedArticles ? 'large' : 'small'"
-                        [routerLink]="article.getArticleLink()">
+            <ion-col size="12" sizeMd="6" sizeLg="4" *ngFor="let article of articles">
+
+                <article-card [article]="article">
                 </article-card>
+
             </ion-col>
         </ion-row>
     </ion-grid>
+
 
 </ion-content>
