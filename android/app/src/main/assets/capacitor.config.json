@@ -1,7 +1,0 @@
-{
-	"appId": "de.timodittmann.scd",
-	"appName": "SC Dahenfeld",
-	"bundledWebRuntime": false,
-	"npmClient": "npm",
-	"webDir": "www"
-}
