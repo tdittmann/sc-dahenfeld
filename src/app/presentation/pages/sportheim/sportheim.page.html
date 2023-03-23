@@ -6,9 +6,11 @@
     <div class="container">
         <div class="ion-padding">
 
-            <img *ngIf="sportheimInfo.image"
-                 [src]="sportheimInfo.image"
-            />
+            <div class="image">
+                <img *ngIf="sportheimInfo.image"
+                     [src]="sportheimInfo.image"
+                />
+            </div>
 
             <ion-button *ngFor="let menue of sportheimInfo.menues" expand="full"
                         (click)="navigateToExternalUrl(menue.link)">
