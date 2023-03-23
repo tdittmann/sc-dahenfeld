@@ -19,7 +19,11 @@ export class ArticleDetailComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit(): void {
-        this.articleContent = this.sanitized.bypassSecurityTrustHtml(this.article.getTextWithoutFirstImage());
+        console.log(this.showHeader)
+        const text = (this.showHeader)
+            ? this.article.getTextWithoutFirstImage()
+            : this.article.text;
+        this.articleContent = this.sanitized.bypassSecurityTrustHtml(text);
     }
 
     ngAfterViewInit() {

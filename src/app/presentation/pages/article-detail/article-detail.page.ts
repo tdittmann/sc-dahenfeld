@@ -12,7 +12,7 @@ export class ArticleDetailPage implements OnInit {
 
     heading: string;
     article: Article;
-    showImageHeader = false;
+    showImageHeader = true;
     showOnlyTitle = false;
 
     isLoading = true;
@@ -33,7 +33,9 @@ export class ArticleDetailPage implements OnInit {
 
                 // Handle query params
                 this.heading = queryParams['heading'];
-                this.showImageHeader = queryParams['showImageHeader'] ?? true;
+                this.showImageHeader = (queryParams['showImageHeader'])
+                    ? queryParams['showImageHeader'] === 'true'
+                    : true;
                 this.showOnlyTitle = queryParams['showOnlyTitle'];
 
                 // Load article
