@@ -40,10 +40,15 @@ ion-card-content {
 }
 
 .separator-heading {
-  text-transform: uppercase;
-  font-weight: bold;
   padding-left: 16px;
-  font-size: 20px;
+  margin-top: 32px;
+  font-size: 24px;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #31404b;
+  font-weight: 700;
+  font-family: Montserrat,sans-serif;
+  letter-spacing: -.02em;
 }
 
 .lineup-jerseynumber {

@@ -9,7 +9,7 @@ export class TimelineEntry {
     articleId: string;
 
     public getTruncatedText(): string {
-        return TextUtils.truncateText(TextUtils.removeAllHtmlTags(this.text), 250);
+        return TextUtils.truncateText(TextUtils.removeAllHtmlTags(this.text), 150);
     }
 
     public getArticleLink(): string {

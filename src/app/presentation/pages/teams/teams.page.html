@@ -15,7 +15,7 @@
 
     <ng-template [ngIf]="showTable === 'true'">
         <ng-template ngFor let-team [ngForOf]="teams | keyvalue : teamNameOrder">
-            <h4 class="ion-padding-start">{{team.key.teamName}}</h4>
+            <h2 class="ion-padding-start">{{team.key.teamName}}</h2>
 
             <ion-card mode="md" routerLink="/team-detail/{{team.key.teamId}}">
                 <ranking [teams]="team.value"></ranking>

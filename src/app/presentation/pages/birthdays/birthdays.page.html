@@ -10,9 +10,11 @@
             <ion-item *cdkVirtualFor="let person of persons | orderBy: 'daysTillBirthday' | birthdayFilter: filter"
                       [color]="person.isTodaysBirthday() ? 'primary' : ''">
                 <ion-label (click)="openPerson(person.id)">
-                    <h2>{{ person.name }}</h2>
-                    <h3>{{ person.birthdaySubtitle }}</h3>
-                    <p>{{ person.formattedBirthday }}</p>
+                    <strong>{{ person.name }}</strong>
+                    <div class="row">
+                        <div class="col-8"><p>{{ person.birthdaySubtitle }}</p></div>
+                        <div class="col-4 ion-text-right"><p>{{ person.formattedBirthday }}</p></div>
+                    </div>
                 </ion-label>
             </ion-item>
         </ion-list>

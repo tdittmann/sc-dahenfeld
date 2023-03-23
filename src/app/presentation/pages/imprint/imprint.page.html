@@ -5,7 +5,7 @@
     <div class="ion-text-center ion-padding-top">
         <p>
             <strong>SC Dahenfeld 1946 e.V.</strong><br/>
-            In den Prügelwiesen<br/>
+            Ganzhornstraße 109<br/>
             74172 Neckarsulm
         </p>
     </div>
@@ -30,8 +30,8 @@
         </ion-item>
     </ion-item-group>
 
-    <div class="ion-text-center">
-        <ion-button *ngIf="isDevModeEnabled()" (click)="deactivateDevMode()">
+    <div class="ion-text-center ion-margin-top" *ngIf="isDevModeEnabled()">
+        <ion-button (click)="deactivateDevMode()">
             Entwickler-Modus deaktivieren
         </ion-button>
     </div>

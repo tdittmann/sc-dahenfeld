@@ -15,7 +15,7 @@
                     <img [src]="matchDetails.homeImage" [alt]="matchDetails.homeName"/>
                 </div>
                 <ion-label>
-                    <h2>{{ matchDetails.homeName }}</h2>
+                    <strong>{{ matchDetails.homeName }}</strong>
                 </ion-label>
                 <div slot="end" class="match-result">
                     <span [ngClass]="{'match-result-winner': matchDetails.isHomeWin(), 'match-result-loser': matchDetails.isAwayWin()}">
@@ -29,7 +29,7 @@
                     <img [src]="matchDetails.awayImage" [alt]="matchDetails.awayName"/>
                 </div>
                 <ion-label>
-                    <h2>{{ matchDetails.awayName }}</h2>
+                    <strong>{{ matchDetails.awayName }}</strong>
                 </ion-label>
                 <div slot="end" class="match-result">
                     <span [ngClass]="{'match-result-winner': matchDetails.isAwayWin(), 'match-result-loser': matchDetails.isHomeWin()}">
@@ -39,14 +39,13 @@
             </ion-item>
 
             <ng-template [ngIf]="matchDetails.events.length > 0">
-                <hr/>
-                <h4 class="separator-heading">Highlights</h4>
+                <h2 class="separator-heading">Highlights</h2>
                 <ng-template ngFor let-event [ngForOf]="matchDetails.events">
                     <ion-item mode="md" lines="none">
                         <h2 slot="start" class="lineup-jerseynumber">{{event.time}}'</h2>
                         <img slot="start" class="event-image" [src]="event.icon"/>
                         <ion-label>
-                            <h2>{{ event.firstname }} {{ event.lastname }}</h2>
+                            <strong>{{ event.firstname }} {{ event.lastname }}</strong>
                             <p *ngIf="event.cameInForFirstname">
                                 für {{ event.cameInForFirstname }} {{ event.cameInForLastname }}</p>
                         </ion-label>
@@ -57,7 +56,7 @@
     </ion-card>
 
     <ion-card mode="md" *ngIf="matchDetails.lineup.length > 0">
-        <h4 class="separator-heading">Aufstellung</h4>
+        <h2 class="separator-heading">Aufstellung</h2>
         <ion-card-content>
             <ng-template ngFor let-player [ngForOf]="matchDetails.lineup">
                 <ion-item mode="md">
@@ -65,7 +64,7 @@
                         <ion-img [src]="player.image" [alt]="player.name"></ion-img>
                     </ion-avatar>
                     <ion-label>
-                        <h2>{{player.name}}</h2>
+                        <strong>{{player.name}}</strong>
                         <p>{{player.position}}</p>
                     </ion-label>
                     <ion-label slot="end">
@@ -80,7 +79,7 @@
     </ion-card>
 
     <ion-card mode="md">
-        <h4 class="separator-heading">Spielinfos</h4>
+        <h2 class="separator-heading">Spielinfos</h2>
         <ion-card-content>
             <ion-item lines="none" *ngIf="matchDetails.date">
                 <div style="width: 25%" slot="start">
@@ -92,7 +91,7 @@
             </ion-item>
 
             <ion-item lines="none" *ngIf="matchDetails.date">
-                <div style="width: 25%"  slot="start">
+                <div style="width: 25%" slot="start">
                     <strong>Anpfiff</strong>
                 </div>
                 <ion-label>
@@ -101,7 +100,7 @@
             </ion-item>
 
             <ion-item lines="none" *ngIf="matchDetails.location">
-                <div style="width: 25%"  slot="start">
+                <div style="width: 25%" slot="start">
                     <strong>Ort</strong>
                 </div>
                 <ion-label>
@@ -110,7 +109,7 @@
             </ion-item>
 
             <ion-item lines="none" *ngIf="matchDetails.fixture">
-                <div style="width: 25%"  slot="start">
+                <div style="width: 25%" slot="start">
                     <strong>Spieltag</strong>
                 </div>
                 <ion-label>
