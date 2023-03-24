@@ -40,11 +40,11 @@
     "moment": "2.29.4",
     "ngx-order-pipe": "2.2.0",
     "rxjs": "~7.8.0",
-    "swiper": "8.4.6",
-    "zone.js": "~0.12.0"
+    "swiper": "9.1.1",
+    "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@angular-devkit/architect": "~0.1501.2",
+    "@angular-devkit/architect": "~0.1502.4",
     "@angular-devkit/build-angular": "~15.2.4",
     "@angular-devkit/core": "~15.2.4",
     "@angular-devkit/schematics": "~15.2.4",
@@ -52,7 +52,7 @@
     "@angular/compiler": "15.2.4",
     "@angular/compiler-cli": "15.2.4",
     "@angular/language-service": "15.2.4",
-    "@ionic/angular-toolkit": "7.0.0",
+    "@ionic/angular-toolkit": "8.0.0",
     "@types/jasmine": "~4.3.1",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "18.15.7",
