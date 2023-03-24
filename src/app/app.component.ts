@@ -16,6 +16,10 @@ import {Device, DeviceInfo} from '@capacitor/device';
 import {App, AppInfo} from '@capacitor/app';
 import {Location} from '@angular/common';
 import {ToastService} from './dataproviders/toast.service';
+import {register} from 'swiper/element/bundle';
+
+// Register swiper
+register();
 
 @Component({
     selector: 'app-root',

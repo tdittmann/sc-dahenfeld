@@ -23,7 +23,6 @@ import {ToastService} from './dataproviders/toast.service';
     declarations: [
         AppComponent
     ],
-    entryComponents: [],
     imports: [
         BrowserModule,
         IonicModule.forRoot(),
