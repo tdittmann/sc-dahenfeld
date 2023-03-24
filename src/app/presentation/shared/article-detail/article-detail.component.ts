@@ -19,7 +19,6 @@ export class ArticleDetailComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit(): void {
-        console.log(this.showHeader)
         const text = (this.showHeader)
             ? this.article.getTextWithoutFirstImage()
             : this.article.text;
