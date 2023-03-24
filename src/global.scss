@@ -573,6 +573,13 @@ a {
   color: #31404b
 }
 
+.dark {
+  .accordion .accordion__header-link {
+    color: #fff;
+    background-color: #1a1c1e;
+  }
+}
+
 .accordion .accordion__header-link:not(.collapsed) .accordion__header-link-icon {
   background-color: #960416;
   border-bottom-right-radius: 0
@@ -1727,6 +1734,12 @@ fieldset[disabled] .btn-odnoklassniki.focus {
   border-radius: 4px;
   background-color: #fff;
   margin-bottom: 15px;
+}
+
+.dark {
+  .card {
+    background-color: #1a1c1e;
+  }
 }
 
 .card--clean {
