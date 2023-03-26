@@ -18,6 +18,7 @@ const routes: Routes = [
     {path: 'profile', loadChildren: () => import ('./presentation/pages/profile/profile.module').then(m => m.ProfilePageModule)},
     {path: 'feedback', loadChildren: () => import ('./presentation/pages/feedback/feedback.module').then(m => m.FeedbackPageModule)},
     {path: 'sportheim', loadChildren: () => import ('./presentation/pages/sportheim/sportheim.module').then(m => m.SportheimPageModule)},
+    {path: 'custom-backend-call', loadChildren: () => import ('./presentation/pages/custom-backend-call/custom-backend-call.module').then(m => m.CustomBackendCallPageModule)},
     {path: 'imprint', loadChildren: () => import ('./presentation/pages/imprint/imprint.module').then(m => m.ImprintPageModule)},
 ];
 

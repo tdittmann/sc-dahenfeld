@@ -1,0 +1,14 @@
+<page-header [title]="heading"></page-header>
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<ion-content color="light" *ngIf="!isLoading">
+
+    <h2 style="margin-top: 32px;">Custom backend call</h2>
+
+    <p><strong>URL:</strong> {{backendUrl}}</p>
+    <p><strong>Message:</strong> {{message}}</p>
+    <p><strong>Result:</strong> {{result | json}}</p>
+
+</ion-content>
+
+
