@@ -1,6 +1,6 @@
-//@import 'swiper/swiper.scss';
-
 .swiper {
   height: 60vh;
   color: #fff;
+  --swiper-pagination-color: var(--ion-color-primary);
+  --swiper-navigation-color: var(--ion-color-primary);
 }

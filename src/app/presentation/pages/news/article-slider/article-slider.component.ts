@@ -1,10 +1,6 @@
 import {Component, Input, ViewEncapsulation} from '@angular/core';
 import {Article} from '../../../../core/domain/article.model';
 import {Router} from '@angular/router';
-import SwiperCore from 'swiper';
-import Autoplay from 'swiper';
-
-SwiperCore.use([Autoplay]);
 
 @Component({
     selector: 'article-slider',

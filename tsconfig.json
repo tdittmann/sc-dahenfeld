@@ -1,27 +1,22 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "declaration": false,
-    "module": "es2022",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
+    "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2022",
-    "skipLibCheck": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "target": "es2022",
+    "module": "es2020",
     "lib": [
       "es2018",
       "dom"
-    ]
-  },
-  "angularCompilerOptions": {
-    "enableIvy": true, // Remove this line or use true
-    "compilationMode": "partial" // Add this line
+    ],
+    "useDefineForClassFields": false
   }
 }
