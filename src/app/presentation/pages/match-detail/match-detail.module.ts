@@ -20,7 +20,6 @@ import {ModalHeaderModule} from '../../shared/modal-header/modal-header.module';
     ],
     declarations: [MatchDetailPage],
     exports: [MatchDetailPage],
-    entryComponents: [MatchDetailPage]
 })
 export class MatchDetailPageModule {
 

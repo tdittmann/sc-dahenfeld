@@ -13,7 +13,6 @@ import {StatisticsItemComponent} from './statistics-item.component';
     ],
     declarations: [StatisticsItemComponent],
     exports: [StatisticsItemComponent],
-    entryComponents: [StatisticsItemComponent]
 })
 export class StatisticsItemModule {
 

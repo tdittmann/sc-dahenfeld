@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {StatisticsCardComponent} from './statistics-card.component';
-import {OrderModule} from 'ngx-order-pipe';
+import {OrderModule} from '../../../../../util/order-pipe/order.module';
 import {StatisticsItemModule} from '../statistics-item/statistics-item.module';
 
 @NgModule({
@@ -17,7 +17,6 @@ import {StatisticsItemModule} from '../statistics-item/statistics-item.module';
     ],
     declarations: [StatisticsCardComponent],
     exports: [StatisticsCardComponent],
-    entryComponents: [StatisticsCardComponent]
 })
 export class StatisticsCardModule {
 

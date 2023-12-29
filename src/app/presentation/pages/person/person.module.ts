@@ -19,7 +19,6 @@ import {ModalHeaderModule} from '../../shared/modal-header/modal-header.module';
     ],
     declarations: [PersonPage, PlayerStatisticComponent],
     exports: [PersonPage],
-    entryComponents: [PersonPage]
 })
 export class PersonModule {
 

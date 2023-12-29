@@ -17,7 +17,6 @@ import {ModalHeaderModule} from '../../shared/modal-header/modal-header.module';
     ],
     declarations: [EventDetailPage],
     exports: [EventDetailPage],
-    entryComponents: [EventDetailPage]
 })
 export class EventDetailPageModule {
 

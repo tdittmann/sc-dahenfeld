@@ -1,7 +1,8 @@
 import {MatchDetailMapper} from './matchDetail.mapper';
 import {MatchDetailJson} from './matchDetailJson';
-import {MatchDetail, MatchEvent} from '../../../core/domain/matchDetail.model';
+import {MatchDetail} from '../../../core/domain/matchDetail.model';
 import {DateUtils} from '../../../util/DateUtils';
+import {MatchEvent} from '../../../core/domain/matchEvent.model';
 
 describe('MatchDetailMapper', () => {
 
@@ -29,7 +30,7 @@ describe('MatchDetailMapper', () => {
             away_name: 'SGM Javascript',
             away_logo: 'away-logo.png',
             away_result: '1',
-
+            lineup: [],
             events: [
                 {
                     clubId: '1',

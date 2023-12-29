@@ -35,7 +35,9 @@ describe('PersonMapper', () => {
                 cameIn: 1,
                 cameOut: 7,
                 playingMinutes: 2302,
-                statistic_hint: 'Season 12/13'
+                statistic_hint: 'Season 12/13',
+                goalsAgainst: 8,
+                matchesWithoutGoalsAgainst: 9
             },
             careerStats: {
                 yellowCards: 24,
@@ -47,7 +49,9 @@ describe('PersonMapper', () => {
                 cameIn: 1,
                 cameOut: 14,
                 playingMinutes: 14133,
-                statistic_hint: 'Since 11/12'
+                statistic_hint: 'Since 11/12',
+                goalsAgainst: 8,
+                matchesWithoutGoalsAgainst: 9
             }
         };
 
@@ -62,6 +66,8 @@ describe('PersonMapper', () => {
         expectedSeasonStats.cameOut = 7;
         expectedSeasonStats.playingMinutes = 2302;
         expectedSeasonStats.statisticHint = 'Season 12/13';
+        expectedSeasonStats.goalsAgainst = 8;
+        expectedSeasonStats.matchesWithoutGoalsAgainst = 9;
 
         const expectedCareerStats = new PersonStatistic();
         expectedCareerStats.yellowCards = 24;
@@ -74,6 +80,8 @@ describe('PersonMapper', () => {
         expectedCareerStats.cameOut = 14;
         expectedCareerStats.playingMinutes = 14133;
         expectedCareerStats.statisticHint = 'Since 11/12';
+        expectedCareerStats.goalsAgainst = 8;
+        expectedCareerStats.matchesWithoutGoalsAgainst = 9;
 
         const expected: Person = new Person();
         expected.id = 1;
