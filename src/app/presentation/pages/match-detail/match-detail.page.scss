@@ -1,12 +1,22 @@
-ion-card-content {
-  padding: 0;
+.result-card {
+  margin: 0;
 }
 
-.match-item {
-  margin-bottom: 16px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 8px;
+.result-card-content {
+  padding: 32px 0 16px;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.home-team,
+.away-team {
+  width: 40%;
 }
 
 .club-logo {
@@ -14,27 +24,12 @@ ion-card-content {
 }
 
 .match-result {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: bold;
-  position: relative;
   margin-inline-start: 16px;
   color: var(--ion-color-dark);
-}
-
-.match-result-loser {
-  color: var(--ion-color-medium);
-}
-
-.match-result-winner:before {
-  content: "";
-  display: block;
   position: absolute;
-  left: -20px;
-  top: 50%;
-  width: 0;
-  height: 0;
-  border-left: 8px solid var(--ion-color-primary);
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  transform: translateY(-50%);
+  margin: auto;
+  left: 0;
+  right: 0;
 }

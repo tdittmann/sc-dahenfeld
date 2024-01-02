@@ -7,36 +7,24 @@
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 
-    <ion-card mode="md">
-        <ion-card-content>
+    <ion-card class="result-card">
+        <ion-card-content class="result-card-content">
 
-            <ion-item mode="md" lines="none" class="match-item">
-                <div slot="start" class="club-logo">
-                    <img [src]="matchDetails.homeImage" [alt]="matchDetails.homeName"/>
+            <div class="result-container">
+                <div class="home-team text-center">
+                    <img class="club-logo" [src]="matchDetails.homeImage" [alt]="matchDetails.homeName"/> <br/>
+                    <ion-text>{{ matchDetails.homeName }}</ion-text>
                 </div>
-                <ion-label>
-                    <strong>{{ matchDetails.homeName }}</strong>
-                </ion-label>
-                <div slot="end" class="match-result">
-                    <span [ngClass]="{'match-result-winner': matchDetails.isHomeWin(), 'match-result-loser': matchDetails.isAwayWin()}">
-                        {{ matchDetails.getHomeResult() }}
-                    </span>
-                </div>
-            </ion-item>
 
-            <ion-item mode="md" lines="none" class="match-item" style="margin-bottom: 32px;">
-                <div slot="start" class="club-logo">
-                    <img [src]="matchDetails.awayImage" [alt]="matchDetails.awayName"/>
+                <div class="text-center match-result">
+                    {{ matchDetails.getHomeResult() }} : {{ matchDetails.getAwayResult() }}
                 </div>
-                <ion-label>
-                    <strong>{{ matchDetails.awayName }}</strong>
-                </ion-label>
-                <div slot="end" class="match-result">
-                    <span [ngClass]="{'match-result-winner': matchDetails.isAwayWin(), 'match-result-loser': matchDetails.isHomeWin()}">
-                        {{ matchDetails.getAwayResult() }}
-                    </span>
+
+                <div class="away-team text-center">
+                    <img class="club-logo" [src]="matchDetails.awayImage" [alt]="matchDetails.awayName"/> <br/>
+                    <ion-text>{{ matchDetails.awayName }}</ion-text>
                 </div>
-            </ion-item>
+            </div>
         </ion-card-content>
     </ion-card>
 
@@ -47,7 +35,7 @@
 
 
     <app-match-highlights *ngIf="matchDetails.events.length > 0"
-                           [events]="matchDetails.events">
+                          [events]="matchDetails.events">
     </app-match-highlights>
 
     <app-match-information [date]="matchDetails.getKickOffDate()"
