@@ -28,19 +28,34 @@
         </ion-card-content>
     </ion-card>
 
-    <app-match-lineup *ngIf="matchDetails.lineup.length > 0"
-                      [lineup]="matchDetails.lineup"
-                      [substitutions]="matchDetails.getSubstitutions()">
-    </app-match-lineup>
+    <app-tabs>
+
+        <app-tab tabTitle="Übersicht">
+            <app-match-highlights *ngIf="matchDetails.events.length > 0"
+                                  [events]="matchDetails.events">
+            </app-match-highlights>
+
+            <app-match-information [date]="matchDetails.getKickOffDate()"
+                                   [fixture]="matchDetails.fixture"
+                                   [location]="matchDetails.location">
+            </app-match-information>
+        </app-tab>
+
+        <app-tab tabTitle="Aufstellung">
+            <app-match-lineup *ngIf="matchDetails.lineup.length > 0"
+                              [lineup]="matchDetails.lineup"
+                              [substitutions]="matchDetails.getSubstitutions()">
+            </app-match-lineup>
+        </app-tab>
+
+        <app-tab tabTitle="Head 2 Head">
+            Coming soon
+        </app-tab>
+    </app-tabs>
 
 
-    <app-match-highlights *ngIf="matchDetails.events.length > 0"
-                          [events]="matchDetails.events">
-    </app-match-highlights>
 
-    <app-match-information [date]="matchDetails.getKickOffDate()"
-                           [fixture]="matchDetails.fixture"
-                           [location]="matchDetails.location">
-    </app-match-information>
+
+
 
 </ion-content>

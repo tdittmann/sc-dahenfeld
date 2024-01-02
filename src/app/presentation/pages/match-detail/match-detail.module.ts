@@ -12,6 +12,7 @@ import {MatchHighlightsComponent} from './match-highlights/match-highlights.comp
 import {MatchLineupComponent} from './match-lineup/match-lineup.component';
 import {MatchCardContainerComponent} from './match-card-container/match-card-container.component';
 import {MatchHighlightComponent} from './match-highlight/match-highlight.component';
+import {TabsModule} from '../../shared/tabs/tabs.module';
 
 @NgModule({
     providers: [MatchDetailService],
@@ -22,6 +23,7 @@ import {MatchHighlightComponent} from './match-highlight/match-highlight.compone
         PageHeaderModule,
         PageStateModule,
         ModalHeaderModule,
+        TabsModule,
     ],
     declarations: [
         MatchDetailPage,
