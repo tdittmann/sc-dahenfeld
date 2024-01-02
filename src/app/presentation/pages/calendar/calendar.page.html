@@ -15,11 +15,16 @@
                         {{entry.getFormattedStartDate()}}
                     </h2>
 
-                    <match-card *ngIf="entry.isMatch()" [matchId]="entry.id"
-                                [startDate]="entry.start" [location]="entry.location"
-                                [homeName]="entry.homeName" [homeImage]="entry.homeImage"
-                                [awayName]="entry.awayName" [awayImage]="entry.awayImage"
-                                [footerLeft]="entry.team" [footerRight]="entry.fixture">
+                    <match-card *ngIf="entry.isMatch()"
+                                [matchId]="entry.id"
+                                [startDate]="entry.start"
+                                [location]="entry.location"
+                                [homeName]="entry.homeName"
+                                [homeImage]="entry.homeImage"
+                                [awayName]="entry.awayName"
+                                [awayImage]="entry.awayImage"
+                                [footerLeft]="entry.team"
+                                [footerRight]="entry.fixture">
                     </match-card>
 
                     <event-card *ngIf="entry.isEvent()"

@@ -5,10 +5,17 @@
     <div class="container">
         <ng-template ngFor let-match [ngForOf]="matches">
 
-            <match-card [matchId]="match.id" [startDate]="match.date" [location]="match.location"
-                        [homeName]="match.homeName" [homeImage]="match.homeImage" [homeResult]="match.homeResult"
-                        [awayName]="match.awayName" [awayImage]="match.awayImage" [awayResult]="match.awayResult"
-                        [footerLeft]="match.getStartDate()" [footerRight]="match.fixture">
+            <match-card [matchId]="match.id"
+                        [startDate]="match.date"
+                        [location]="match.location"
+                        [homeName]="match.homeName"
+                        [homeImage]="match.homeImage"
+                        [homeResult]="match.homeResult"
+                        [awayName]="match.awayName"
+                        [awayImage]="match.awayImage"
+                        [awayResult]="match.awayResult"
+                        [footerLeft]="match.getStartDate()"
+                        [footerRight]="match.fixture">
             </match-card>
 
         </ng-template>
