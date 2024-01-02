@@ -1,0 +1,13 @@
+<ion-item mode="md" *ngIf="event">
+
+    <h2 slot="start" class="event-time">{{ event.time }}'</h2>
+
+    <img slot="start" class="event-image" [src]="event.icon" [alt]="event.icon"/>
+
+    <ion-label>
+        <strong>{{ event.firstname }} {{ event.lastname }}</strong>
+        <p *ngIf="event.cameInForFirstname">
+            für {{ event.cameInForFirstname }} {{ event.cameInForLastname }}</p>
+    </ion-label>
+
+</ion-item>

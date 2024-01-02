@@ -1,0 +1,30 @@
+.lineup-jerseynumber {
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+.captain {
+  border-top: 22px solid transparent;
+  bottom: 0;
+  display: block;
+  height: 0;
+  position: absolute;
+  top: auto;
+  width: 0;
+  border-right: 22px solid var(--ion-color-primary);
+  left: auto;
+  right: 0;
+  z-index: 3;
+}
+
+.captain span {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  top: -13px;
+  right: -20px;
+  left: auto;
+}

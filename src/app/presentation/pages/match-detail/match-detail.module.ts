@@ -7,6 +7,11 @@ import {MatchDetailPage} from './match-detail.page';
 import {MatchDetailService} from '../../../dataproviders/soccer/match-detail/match-detail.service';
 import {PageStateModule} from '../../shared/page-state/page-state.module';
 import {ModalHeaderModule} from '../../shared/modal-header/modal-header.module';
+import {MatchInformationComponent} from './match-information/match-information.component';
+import {MatchHighlightsComponent} from './match-highlights/match-highlights.component';
+import {MatchLineupComponent} from './match-lineup/match-lineup.component';
+import {MatchCardContainerComponent} from './match-card-container/match-card-container.component';
+import {MatchHighlightComponent} from './match-highlight/match-highlight.component';
 
 @NgModule({
     providers: [MatchDetailService],
@@ -18,7 +23,7 @@ import {ModalHeaderModule} from '../../shared/modal-header/modal-header.module';
         PageStateModule,
         ModalHeaderModule,
     ],
-    declarations: [MatchDetailPage],
+    declarations: [MatchDetailPage, MatchCardContainerComponent, MatchInformationComponent, MatchHighlightsComponent, MatchLineupComponent, MatchHighlightComponent],
     exports: [MatchDetailPage],
 })
 export class MatchDetailPageModule {

@@ -41,17 +41,9 @@ export class MatchDetail {
 
     getKickOffDate(): string {
         if (this.date) {
-            return this.date
-                .format(environment.longDateFormat);
-        }
-
-        return '';
-    }
-
-    getKickOffTime(): string {
-        if (this.date) {
-            return this.date
-                .format(environment.timeFormat);
+            const date = this.date.format(environment.longDateFormat);
+            const time = this.date.format(environment.timeFormat);
+            return `${date} um ${time} Uhr`;
         }
 
         return '';
@@ -63,6 +55,10 @@ export class MatchDetail {
 
     isAwayWin(): boolean {
         return this.homeResult < this.awayResult;
+    }
+
+    getSubstitutions(): MatchEvent[] {
+        return this.events.filter(value => value.cameInForFirstname !== undefined);
     }
 
 }

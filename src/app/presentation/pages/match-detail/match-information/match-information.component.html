@@ -1,0 +1,26 @@
+<app-match-card-container heading="Informationen">
+
+    <ion-item lines="none" *ngIf="date">
+        <ion-icon aria-hidden="true" name="time-outline" slot="start"></ion-icon>
+        <ion-label>
+            <strong>Anpfiff</strong>
+            <p>{{ date }}</p>
+        </ion-label>
+    </ion-item>
+
+    <ion-item lines="none" *ngIf="location">
+        <ion-icon aria-hidden="true" name="location-outline" slot="start"></ion-icon>
+        <ion-label>
+            <strong>Ort</strong>
+            <p>{{ location }}</p>
+        </ion-label>
+    </ion-item>
+
+    <ion-item lines="none" *ngIf="fixture">
+        <ion-icon aria-hidden="true" name="clipboard-outline" slot="start"></ion-icon>
+        <ion-label>
+            <strong>{{ fixture }}</strong>
+        </ion-label>
+    </ion-item>
+
+</app-match-card-container>
