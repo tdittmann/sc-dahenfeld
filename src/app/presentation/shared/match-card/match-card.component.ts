@@ -14,8 +14,8 @@ export class MatchCardComponent {
 
     @Input() startDate: Moment;
     @Input() location: string;
-    @Input() footerLeft: string;
-    @Input() footerRight: string;
+    @Input() ageGroup: string;
+    @Input() fixture: string;
 
     @Input() homeName: string;
     @Input() homeImage: string;
@@ -35,6 +35,27 @@ export class MatchCardComponent {
 
     public isAwayWin(): boolean {
         return this.awayResult > this.homeResult;
+    }
+
+    public getCardClass(): string {
+        if (this.existsResult()) {
+
+            // Is it a win?
+            if (this.isHomeWin() && this.homeName.includes('Dahenfeld')
+                || this.isAwayWin() && this.awayName.includes('Dahenfeld')) {
+                return 'card-win';
+            }
+
+            // Is it a draw?
+            if (this.homeResult === this.awayResult) {
+                return 'card-draw';
+            }
+
+            // It has to be a lose
+            return 'card-lose';
+        }
+
+        return '';
     }
 
     public existsResult(): boolean {
