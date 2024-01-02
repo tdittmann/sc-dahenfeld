@@ -23,7 +23,14 @@ import {MatchHighlightComponent} from './match-highlight/match-highlight.compone
         PageStateModule,
         ModalHeaderModule,
     ],
-    declarations: [MatchDetailPage, MatchCardContainerComponent, MatchInformationComponent, MatchHighlightsComponent, MatchLineupComponent, MatchHighlightComponent],
+    declarations: [
+        MatchDetailPage,
+        MatchCardContainerComponent,
+        MatchInformationComponent,
+        MatchHighlightsComponent,
+        MatchLineupComponent,
+        MatchHighlightComponent,
+    ],
     exports: [MatchDetailPage],
 })
 export class MatchDetailPageModule {
