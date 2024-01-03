@@ -10,8 +10,8 @@ import {
     ViewEncapsulation
 } from '@angular/core';
 import {TabComponent} from '../tab/tab.component';
+import {ActivatedRoute, Router} from '@angular/router';
 
-// TODO tdit0703: Add active tab to url and open tab when reload
 @Component({
     selector: 'app-tabs',
     templateUrl: 'tabs.component.html',
@@ -20,7 +20,9 @@ import {TabComponent} from '../tab/tab.component';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TabsComponent implements AfterContentInit {
-    constructor(private _cdr: ChangeDetectorRef) {
+    constructor(private _cdr: ChangeDetectorRef,
+                private _router: Router,
+                private _activatedRoute: ActivatedRoute) {
     }
 
     @ContentChildren(TabComponent) tabs: any;
@@ -28,10 +30,25 @@ export class TabsComponent implements AfterContentInit {
     @Output() tabSelected = new EventEmitter<{ index: number, tab: TabComponent }>();
 
     ngAfterContentInit() {
+
+        // Check if we have a tab in the URL. If yes, open the tab.
+        const queryParamsSubscription = this._activatedRoute.queryParams.subscribe(value => {
+            const activeTab = value['tab'];
+            if (activeTab) {
+                this.tabs.forEach((tab, index) => {
+                    if (tab.tabTitle === activeTab) {
+                        this.selectTab(tab, index);
+                    }
+                });
+            }
+        });
+        queryParamsSubscription.unsubscribe();
+
         this.tabs.changes.subscribe(res => {
             this.adjustTabs(res);
         });
         this.adjustTabs(this.tabs);
+
     }
 
     selectTab(tab: TabComponent, index: number) {
@@ -39,6 +56,17 @@ export class TabsComponent implements AfterContentInit {
         if (tab.disabled) {
             return;
         }
+
+        // Add the tab title to the URL
+        const queryParams = {tab: tab.tabTitle};
+        this._router.navigate(
+            [],
+            {
+                relativeTo: this._activatedRoute,
+                queryParams,
+                queryParamsHandling: 'merge', // remove to replace all query params by provided
+            }
+        );
 
         this.tabs.forEach((tabComponent, tabIndex) => tabComponent.active = tabIndex === index);
         this.tabSelected.emit({index, tab});
