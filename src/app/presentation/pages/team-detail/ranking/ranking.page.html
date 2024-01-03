@@ -2,7 +2,7 @@
 
 <ion-content class="ion-padding" color="light" *ngIf="ranking.length > 0">
 
-    <ion-segment (ionChange)="recalculateRanking($event)" value="total">
+    <ion-segment (ionChange)="recalculateRanking($event)" value="total" mode="ios">
         <ng-template ngFor let-rankingType [ngForOf]="rankingTypes">
             <ion-segment-button [value]="rankingType.value">
                 <ion-label>{{rankingType.label}}</ion-label>
