@@ -7,107 +7,23 @@
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 
-    <div class="imageContainer">
-        <div class="image" [ngStyle]="{'background-image' : person?.imageAsBackground}"></div>
+    <app-person-overview [person]="person"></app-person-overview>
 
-        <div class="playerName">
-            <h1>{{person?.lastname}}</h1>
-            <h2>{{person?.firstname}}</h2>
-        </div>
+    <app-tabs activeTabUrlIdentifier="person-overview"
+              [fixed]="false">
 
-        <ion-grid class="playerInfo">
-            <ion-row *ngIf="person?.birthday">
-                <ion-col>
-                    <p class="playerInfoValue">{{person?.age}}</p>
-                    <p class="playerInfoText">Alter</p>
-                </ion-col>
-            </ion-row>
-            <ion-row *ngIf="person?.birthday && isDevModeEnabled()">
-                <ion-col>
-                    <p class="playerInfoValue">{{person?.formattedBirthday}}</p>
-                    <p class="playerInfoText">Geburtstag</p>
-                </ion-col>
-            </ion-row>
-            <ion-row *ngIf="person?.jerseynumber > 0">
-                <ion-col>
-                    <p class="playerInfoValue">{{person?.jerseynumber}}</p>
-                    <p class="playerInfoText">Trikotnummer</p>
-                </ion-col>
-            </ion-row>
-            <ion-row *ngIf="person?.position">
-                <ion-col>
-                    <p class="playerInfoValue">{{person?.position}}</p>
-                    <p class="playerInfoText">Position</p>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </div>
+        <app-tab tabTitle="Saison">
+            <app-person-statistics [statistics]="person?.seasonStatistic"
+                                   [keeper]="person?.isKeeper()">
+            </app-person-statistics>
+        </app-tab>
 
-    <div class="statisticsHeader">
-        Statistiken
-    </div>
+        <app-tab tabTitle="Karriere">
+            <app-person-statistics [statistics]="person?.careerStatistic"
+                                   [keeper]="person?.isKeeper()">
+            </app-person-statistics>
+        </app-tab>
 
-    <player-statistic text="Spiele"
-                      [seasonSubText]="person?.seasonStatistic.statisticHint"
-                      [careerSubText]="person?.careerStatistic.statisticHint"
-                      [seasonValue]="person?.seasonStatistic.matches"
-                      [careerValue]="person?.careerStatistic.matches">
-    </player-statistic>
-
-    <player-statistic text="Startelf"
-                      [seasonSubText]="person?.seasonStatistic.statisticHint"
-                      [careerSubText]="person?.careerStatistic.statisticHint"
-                      [seasonValue]="person?.seasonStatistic.starting"
-                      [careerValue]="person?.careerStatistic.starting">
-    </player-statistic>
-
-    <player-statistic text="Spielminuten"
-                      [seasonSubText]="person?.seasonStatistic.statisticHint"
-                      [careerSubText]="person?.careerStatistic.statisticHint"
-                      [seasonValue]="person?.seasonStatistic.playingMinutes"
-                      [careerValue]="person?.careerStatistic.playingMinutes">
-    </player-statistic>
-
-    <player-statistic text="Tore"
-                      [seasonSubText]="person?.seasonStatistic.statisticHint"
-                      [careerSubText]="person?.careerStatistic.statisticHint"
-                      [seasonValue]="person?.seasonStatistic.goals"
-                      [careerValue]="person?.careerStatistic.goals">
-    </player-statistic>
-
-    <player-statistic text="Einwechslungen"
-                      [seasonSubText]="person?.seasonStatistic.statisticHint"
-                      [careerSubText]="person?.careerStatistic.statisticHint"
-                      [seasonValue]="person?.seasonStatistic.cameIn"
-                      [careerValue]="person?.careerStatistic.cameIn">
-    </player-statistic>
-
-    <player-statistic text="Auswechslungen"
-                      [seasonSubText]="person?.seasonStatistic.statisticHint"
-                      [careerSubText]="person?.careerStatistic.statisticHint"
-                      [seasonValue]="person?.seasonStatistic.cameOut"
-                      [careerValue]="person?.careerStatistic.cameOut">
-    </player-statistic>
-
-    <player-statistic text="Gelbe Karten"
-                      [seasonSubText]="person?.seasonStatistic.statisticHint"
-                      [careerSubText]="person?.careerStatistic.statisticHint"
-                      [seasonValue]="person?.seasonStatistic.yellowCards"
-                      [careerValue]="person?.careerStatistic.yellowCards">
-    </player-statistic>
-
-    <player-statistic text="Gelb-Rote Karten"
-                      [seasonSubText]="person?.seasonStatistic.statisticHint"
-                      [careerSubText]="person?.careerStatistic.statisticHint"
-                      [seasonValue]="person?.seasonStatistic.yellowRedCards"
-                      [careerValue]="person?.careerStatistic.yellowRedCards">
-    </player-statistic>
-
-    <player-statistic text="Rote Karten"
-                      [seasonSubText]="person?.seasonStatistic.statisticHint"
-                      [careerSubText]="person?.careerStatistic.statisticHint"
-                      [seasonValue]="person?.seasonStatistic.redCards"
-                      [careerValue]="person?.careerStatistic.redCards">
-    </player-statistic>
+    </app-tabs>
 
 </ion-content>

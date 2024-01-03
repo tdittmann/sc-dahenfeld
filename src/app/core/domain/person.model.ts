@@ -22,6 +22,10 @@ export class Person {
         return [this.firstname, this.lastname].filter(Boolean).join(' ');
     }
 
+    public isKeeper(): boolean {
+        return this.position === 'Torhüter';
+    }
+
     public isTodaysBirthday(): boolean {
         const thisYearsBirthday: Moment = moment(this.birthday)
             .year(new Date().getFullYear());

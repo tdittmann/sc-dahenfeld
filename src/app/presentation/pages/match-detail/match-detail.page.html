@@ -28,7 +28,8 @@
         </ion-card-content>
     </ion-card>
 
-    <app-tabs [activeTabUrlIdentifier]="activeTabUrlIdentifier">
+    <app-tabs [activeTabUrlIdentifier]="activeTabUrlIdentifier"
+              [fixed]="false">
 
         <app-tab tabTitle="Übersicht">
             <app-match-highlights *ngIf="matchDetails.events.length > 0"

@@ -1,0 +1,73 @@
+<ng-template [ngIf]="statistics">
+
+    <app-card-container heading="Allgemein"
+                        [subHeading]="statistics.statisticHint">
+
+        <ion-item mode="md">
+            <ion-label>Spiele</ion-label>
+            <ion-note slot="end">{{ statistics.matches }}</ion-note>
+        </ion-item>
+        <ion-item mode="md">
+            <ion-label>Spiele in der Startelf</ion-label>
+            <ion-note slot="end">{{ statistics.starting }}</ion-note>
+        </ion-item>
+        <ion-item mode="md">
+            <ion-label>Spielminuten</ion-label>
+            <ion-note slot="end">{{ statistics.playingMinutes }}</ion-note>
+        </ion-item>
+        <ion-item mode="md">
+            <ion-label>Einwechslungen</ion-label>
+            <ion-note slot="end">{{ statistics.cameIn }}</ion-note>
+        </ion-item>
+        <ion-item mode="md">
+            <ion-label>Auswechslungen</ion-label>
+            <ion-note slot="end">{{ statistics.cameOut }}</ion-note>
+        </ion-item>
+
+    </app-card-container>
+
+    <app-card-container heading="Disziplin"
+                        [subHeading]="statistics.statisticHint">
+
+        <ion-item mode="md">
+            <ion-label>Gelbe Karten</ion-label>
+            <ion-note slot="end">{{ statistics.yellowCards }}</ion-note>
+        </ion-item>
+        <ion-item mode="md">
+            <ion-label>Gelb-Rote Karten</ion-label>
+            <ion-note slot="end">{{ statistics.yellowRedCards }}</ion-note>
+        </ion-item>
+        <ion-item mode="md">
+            <ion-label>Rote Karten</ion-label>
+            <ion-note slot="end">{{ statistics.redCards }}</ion-note>
+        </ion-item>
+
+    </app-card-container>
+
+    <app-card-container *ngIf="keeper"
+                        heading="Defensive"
+                        [subHeading]="statistics.statisticHint">
+
+        <ion-item mode="md">
+            <ion-label>Spiele ohne Gegentore</ion-label>
+            <ion-note slot="end">{{ statistics.matchesWithoutGoalsAgainst }}</ion-note>
+        </ion-item>
+        <ion-item mode="md">
+            <ion-label>Gegentore</ion-label>
+            <ion-note slot="end">{{ statistics.goalsAgainst }}</ion-note>
+        </ion-item>
+
+    </app-card-container>
+
+    <app-card-container *ngIf="!keeper"
+                        heading="Angriff"
+                        [subHeading]="statistics.statisticHint">
+
+        <ion-item mode="md">
+            <ion-label>Tore</ion-label>
+            <ion-note slot="end">{{ statistics.goals }}</ion-note>
+        </ion-item>
+
+    </app-card-container>
+
+</ng-template>
