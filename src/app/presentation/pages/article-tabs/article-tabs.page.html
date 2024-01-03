@@ -3,19 +3,20 @@
 
 <ion-content color="light">
 
-    <!-- TODO tdit0703: Use custom tabs! -->
-    <ion-tabs #articleTabs>
+    <app-tabs *ngIf="articles.length > 0">
 
-        <ion-tab-bar slot="top">
+        <ng-template ngFor let-article [ngForOf]="articles">
 
-            <ng-template ngFor let-article [ngForOf]="articles">
-                <ion-tab-button tab="article/{{article.id}}?heading={{heading}}">
-                    <ion-label>{{article.title}}</ion-label>
-                </ion-tab-button>
-            </ng-template>
+            <app-tab [tabTitle]="article.title">
 
-        </ion-tab-bar>
+                <article-detail [showHeader]="false"
+                                [article]="article">
+                </article-detail>
 
-    </ion-tabs>
+            </app-tab>
+
+        </ng-template>
+
+    </app-tabs>
 
 </ion-content>

@@ -17,11 +17,13 @@ app-tabs {
   }
 
   .col {
-    text-align: center;
     padding: 1rem 0.5rem;
     cursor: pointer;
     text-transform: uppercase;
     border-bottom: 1px solid var(--ion-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &.disabled {
       cursor: default;

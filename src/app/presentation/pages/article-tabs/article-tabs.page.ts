@@ -1,8 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {ActivatedRoute} from '@angular/router';
 import {Article} from '../../../core/domain/article.model';
-import {IonTabs} from '@ionic/angular';
 
 @Component({
     templateUrl: 'article-tabs.page.html',
@@ -10,9 +9,8 @@ import {IonTabs} from '@ionic/angular';
 })
 export class ArticleTabsPage implements OnInit {
 
-    @ViewChild('articleTabs', {read: IonTabs, static: false}) tabs: IonTabs;
     heading: string;
-    articles: Article[];
+    articles: Article[] = [];
 
     isLoading = true;
     isError = false;
@@ -40,10 +38,6 @@ export class ArticleTabsPage implements OnInit {
                             this.articles.forEach(value => {
                                 this.articleService.incrementMobileHitsForArticle(value);
                             });
-
-                            // Set first tabs
-                            this.tabs.select('article/' + this.articles[0].id + '?heading=' + this.heading)
-                                .then(value => null);
 
                             this.isLoading = false;
                         },
