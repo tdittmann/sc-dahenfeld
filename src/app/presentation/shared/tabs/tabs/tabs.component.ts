@@ -5,12 +5,12 @@ import {
     Component,
     ContentChildren,
     EventEmitter,
+    Input,
     Output,
     ViewEncapsulation
 } from '@angular/core';
 import {TabComponent} from '../tab/tab.component';
 
-// TODO tdit0703: Add fixed posibility
 // TODO tdit0703: Add active tab to url and open tab when reload
 @Component({
     selector: 'app-tabs',
@@ -24,6 +24,7 @@ export class TabsComponent implements AfterContentInit {
     }
 
     @ContentChildren(TabComponent) tabs: any;
+    @Input() fixed = true;
     @Output() tabSelected = new EventEmitter<{ index: number, tab: TabComponent }>();
 
     ngAfterContentInit() {

@@ -16,6 +16,11 @@ app-tabs {
     -moz-user-select: none
   }
 
+  .fixed {
+    position: fixed;
+    z-index: 1;
+  }
+
   .col {
     padding: 1rem 0.5rem;
     cursor: pointer;
@@ -44,6 +49,10 @@ app-tabs {
     bottom: auto;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+  }
+
+  .tab-content-fixed app-tab {
+    margin-top: 51px;
   }
 
 }
