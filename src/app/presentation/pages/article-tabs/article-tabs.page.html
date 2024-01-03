@@ -3,7 +3,8 @@
 
 <ion-content color="light">
 
-    <app-tabs *ngIf="articles.length > 0">
+    <app-tabs *ngIf="articles.length > 0"
+              activeTabUrlIdentifier="article-tabs-tab">
 
         <ng-template ngFor let-article [ngForOf]="articles">
 

@@ -16,7 +16,7 @@
 
 <ion-content color="light" *ngIf="teamInformation">
 
-    <app-tabs>
+    <app-tabs activeTabUrlIdentifier="team-detail-tab">
         <app-tab tabTitle="Übersicht" *ngIf="teamInformation?.articleId">
             <app-team-detail-article [articleId]="teamInformation?.articleId"></app-team-detail-article>
         </app-tab>

@@ -1,4 +1,12 @@
-<app-card-container heading="Startelf">
+<div *ngIf="lineup.length === 0"
+     class="no-data-container">
+
+    <ion-icon src="assets/icon/soccer_dribbling.svg" class="no-data-icon"></ion-icon>
+    <p>Aktuell ist noch keine Aufstellung vorhanden</p>
+
+</div>
+
+<app-card-container heading="Startelf" *ngIf="lineup.length > 0">
 
     <ion-item mode="md"
               *ngFor="let player of lineup">
@@ -22,7 +30,7 @@
 </app-card-container>
 
 <app-card-container *ngIf="substitutions.length > 0"
-                          heading="Spielerwechsel">
+                    heading="Spielerwechsel">
 
     <app-match-highlight *ngFor="let substitution of substitutions"
                          [event]="substitution">

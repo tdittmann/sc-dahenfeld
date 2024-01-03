@@ -1,40 +1,50 @@
-<app-card-container heading="Übersicht"
-                          [subHeading]="'Basierend auf den letzten ' + matches.length + ' Spielen'">
+<div *ngIf="matches.length === 0"
+     class="no-data-container">
 
-    <div class="statistic-container">
-        <div class="statistic-home-win" [ngStyle]="{'width': homeTeamWinsPercentage + '%'}">
-            <span class="statistic-label">S</span><br/>
-            <span class="statistic-value">{{ homeTeamWins }}</span><br/>
-            <span class="statistic-percentage">{{ homeTeamWinsPercentage }}%</span>
+    <ion-icon src="assets/icon/soccer_field.svg" class="no-data-icon"></ion-icon>
+    <p>Zwischen diesen Mannschaften gab es in der Vergangenheit keine Spiele</p>
+
+</div>
+
+<ng-template [ngIf]="matches.length > 0">
+    <app-card-container heading="Übersicht"
+                        [subHeading]="'Basierend auf den letzten ' + matches.length + ' Spielen'">
+
+        <div class="statistic-container">
+            <div class="statistic-home-win" [ngStyle]="{'width': homeTeamWinsPercentage + '%'}">
+                <span class="statistic-label">S</span><br/>
+                <span class="statistic-value">{{ homeTeamWins }}</span><br/>
+                <span class="statistic-percentage">{{ homeTeamWinsPercentage }}%</span>
+            </div>
+            <div class="statistic-draw" [ngStyle]="{'width': drawsPercentage + '%'}">
+                <span class="statistic-label">U</span><br/>
+                <span class="statistic-value">{{ draws }}</span><br/>
+                <span class="statistic-percentage">{{ drawsPercentage }}%</span>
+            </div>
+            <div class="statistic-away-win" [ngStyle]="{'width': awayTeamWinsPercentage + '%'}">
+                <span class="statistic-label">S</span><br/>
+                <span class="statistic-value">{{ awayTeamWins }}</span><br/>
+                <span class="statistic-percentage">{{ awayTeamWinsPercentage }}%</span>
+            </div>
         </div>
-        <div class="statistic-draw" [ngStyle]="{'width': drawsPercentage + '%'}">
-            <span class="statistic-label">U</span><br/>
-            <span class="statistic-value">{{ draws }}</span><br/>
-            <span class="statistic-percentage">{{ drawsPercentage }}%</span>
-        </div>
-        <div class="statistic-away-win" [ngStyle]="{'width': awayTeamWinsPercentage + '%'}">
-            <span class="statistic-label">S</span><br/>
-            <span class="statistic-value">{{ awayTeamWins }}</span><br/>
-            <span class="statistic-percentage">{{ awayTeamWinsPercentage }}%</span>
-        </div>
-    </div>
 
-</app-card-container>
+    </app-card-container>
 
-<app-card-container heading="Vorherige Begegnungen">
+    <app-card-container heading="Vorherige Begegnungen">
 
-    <match-card *ngFor="let match of matches"
-                [matchId]="match.matchId"
-                [startDate]="match.date"
-                [location]="match.location"
-                [homeName]="match.homeName"
-                [homeImage]="match.homeImage"
-                [homeResult]="match.homeResult"
-                [awayName]="match.awayName"
-                [awayImage]="match.awayImage"
-                [awayResult]="match.awayResult"
-                [ageGroup]="match.getDate()"
-                [fixture]="match.fixture">
-    </match-card>
+        <match-card *ngFor="let match of matches"
+                    [matchId]="match.matchId"
+                    [startDate]="match.date"
+                    [location]="match.location"
+                    [homeName]="match.homeName"
+                    [homeImage]="match.homeImage"
+                    [homeResult]="match.homeResult"
+                    [awayName]="match.awayName"
+                    [awayImage]="match.awayImage"
+                    [awayResult]="match.awayResult"
+                    [ageGroup]="match.getDate()"
+                    [fixture]="match.fixture">
+        </match-card>
 
-</app-card-container>
+    </app-card-container>
+</ng-template>

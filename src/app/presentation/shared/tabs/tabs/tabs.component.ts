@@ -6,6 +6,7 @@ import {
     ContentChildren,
     EventEmitter,
     Input,
+    OnDestroy,
     Output,
     ViewEncapsulation
 } from '@angular/core';
@@ -19,13 +20,14 @@ import {ActivatedRoute, Router} from '@angular/router';
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TabsComponent implements AfterContentInit {
+export class TabsComponent implements AfterContentInit, OnDestroy {
     constructor(private _cdr: ChangeDetectorRef,
                 private _router: Router,
                 private _activatedRoute: ActivatedRoute) {
     }
 
     @ContentChildren(TabComponent) tabs: any;
+    @Input() activeTabUrlIdentifier = 'tab';
     @Input() fixed = true;
     @Output() tabSelected = new EventEmitter<{ index: number, tab: TabComponent }>();
 
@@ -33,7 +35,7 @@ export class TabsComponent implements AfterContentInit {
 
         // Check if we have a tab in the URL. If yes, open the tab.
         const queryParamsSubscription = this._activatedRoute.queryParams.subscribe(value => {
-            const activeTab = value['tab'];
+            const activeTab = value[this.activeTabUrlIdentifier];
             if (activeTab) {
                 this.tabs.forEach((tab, index) => {
                     if (tab.tabTitle === activeTab) {
@@ -58,13 +60,14 @@ export class TabsComponent implements AfterContentInit {
         }
 
         // Add the tab title to the URL
-        const queryParams = {tab: tab.tabTitle};
+        const queryParams = {};
+        queryParams[this.activeTabUrlIdentifier] = tab.tabTitle;
         this._router.navigate(
             [],
             {
                 relativeTo: this._activatedRoute,
                 queryParams,
-                queryParamsHandling: 'merge', // remove to replace all query params by provided
+                queryParamsHandling: 'merge',
             }
         );
 
@@ -87,5 +90,26 @@ export class TabsComponent implements AfterContentInit {
 
         this._cdr.markForCheck();
     }
+
+    ngOnDestroy(): void {
+        const queryParamsSubscription = this._activatedRoute.queryParams.subscribe(value => {
+
+            const queryParams = {
+                ...value
+            };
+            queryParams[this.activeTabUrlIdentifier] = undefined;
+            this._router.navigate(
+                [],
+                {
+                    relativeTo: this._activatedRoute,
+                    queryParams,
+                    queryParamsHandling: 'merge',
+                }
+            );
+
+        });
+        queryParamsSubscription.unsubscribe();
+    }
+
 
 }

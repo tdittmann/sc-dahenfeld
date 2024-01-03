@@ -28,7 +28,7 @@
         </ion-card-content>
     </ion-card>
 
-    <app-tabs>
+    <app-tabs [activeTabUrlIdentifier]="activeTabUrlIdentifier">
 
         <app-tab tabTitle="Übersicht">
             <app-match-highlights *ngIf="matchDetails.events.length > 0"
@@ -42,8 +42,7 @@
         </app-tab>
 
         <app-tab tabTitle="Aufstellung">
-            <app-match-lineup *ngIf="matchDetails.lineup.length > 0"
-                              [lineup]="matchDetails.lineup"
+            <app-match-lineup [lineup]="matchDetails.lineup"
                               [substitutions]="matchDetails.getSubstitutions()">
             </app-match-lineup>
         </app-tab>

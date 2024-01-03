@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {MatchDetailService} from '../../../dataproviders/soccer/match-detail/match-detail.service';
 import {MatchDetail} from '../../../core/domain/matchDetail.model';
 
@@ -10,16 +10,14 @@ export class MatchDetailPage implements OnInit {
 
     @Input() matchId: number;
 
+    activeTabUrlIdentifier = 'match-detail-tab';
     matchDetails: MatchDetail;
     pastMatches: MatchDetail[] = [];
 
     isLoading = true;
     isError = false;
 
-    constructor(
-        private matchDetailService: MatchDetailService,
-        private changeDetectorRef: ChangeDetectorRef,
-    ) {
+    constructor(private matchDetailService: MatchDetailService) {
 
     }
 
