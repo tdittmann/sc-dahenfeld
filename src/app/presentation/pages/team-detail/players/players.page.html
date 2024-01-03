@@ -1,22 +1,25 @@
 <page-state [loading]="isLoading" [error]="isError" [errorMessage]="errorMessage"></page-state>
 
-<ion-content color="light" *ngIf="players.length > 0">
-    <ion-list lines="none">
-        <ng-template ngFor let-player [ngForOf]="players">
+<ion-content color="light" *ngIf="players.size > 0">
 
-            <ion-list-header *ngIf="isDifferentPosition(player)">
-                <h2>{{ player.position }}</h2>
-            </ion-list-header>
+    <ng-template ngFor let-map [ngForOf]="players | keyvalue: returnZero">
 
-            <ion-item button mode="md" (click)="openPlayer(player.id)">
-                <ion-avatar slot="start">
-                    <ion-img [src]="player.image" [alt]="player.name"></ion-img>
-                </ion-avatar>
-                <ion-label>{{ player.name }}</ion-label>
+        <app-card-container [heading]="map.key">
 
-                <div slot="end" class="jerseynumber" *ngIf="player.jerseynumber > 0">{{ player.jerseynumber }}</div>
-            </ion-item>
+            <ng-template ngFor let-player [ngForOf]="map.value">
+                <ion-item button mode="md" (click)="openPlayer(player.id)">
+                    <ion-avatar slot="start">
+                        <ion-img [src]="player.image" [alt]="player.name"></ion-img>
+                    </ion-avatar>
+                    <ion-label>{{ player.name }}</ion-label>
 
-        </ng-template>
-    </ion-list>
+                    <div slot="end" class="jerseynumber" *ngIf="player.jerseynumber > 0">{{ player.jerseynumber }}</div>
+                </ion-item>
+            </ng-template>
+
+        </app-card-container>
+
+
+    </ng-template>
+
 </ion-content>

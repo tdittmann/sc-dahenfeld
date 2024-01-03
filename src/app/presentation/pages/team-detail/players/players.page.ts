@@ -14,8 +14,7 @@ export class PlayersPage implements OnInit {
 
     private projectId: number;
 
-    players: Person[] = [];
-    lastPosition: string = null;
+    players: Map<string, Person[]> = new Map<string, Person[]>();
 
     isLoading = true;
     errorMessage = 'Daten konnten nicht geladen werden';
@@ -35,9 +34,9 @@ export class PlayersPage implements OnInit {
 
                 this.playerService.loadPersonsByProjectId(projectId).subscribe({
                     next: players => {
-                        this.players = players;
+                        this.players = this.groupBy(players, player => player.position);
 
-                        if (this.players.length <= 0) {
+                        if (this.players.size <= 0) {
                             this.isError = true;
                             this.errorMessage = 'Für diese Spielzeit gibt es keinen Kader';
                         }
@@ -64,10 +63,22 @@ export class PlayersPage implements OnInit {
         }).then(modal => modal.present());
     }
 
-    public isDifferentPosition(pPlayer: Person): boolean {
-        const showHeader = (pPlayer.position !== this.lastPosition);
-        this.lastPosition = pPlayer.position;
-        return showHeader;
+    returnZero() {
+        return 0;
+    }
+
+    private groupBy(list, keyGetter) {
+        const map = new Map();
+        list.forEach((item) => {
+            const key = keyGetter(item);
+            const collection = map.get(key);
+            if (!collection) {
+                map.set(key, [item]);
+            } else {
+                collection.push(item);
+            }
+        });
+        return map;
     }
 
 }
