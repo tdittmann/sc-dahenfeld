@@ -1,12 +1,11 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {IonicModule} from '@ionic/angular';
-import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {RouterModule, Routes} from '@angular/router';
 import {ArticleTabsPage} from './article-tabs.page';
 import {ArticleService} from '../../../dataproviders/article/article.service';
 import {ArticleDetailModule} from '../../shared/article-detail/article-detail.module';
-import {PageStateModule} from '../../shared/page-state/page-state.module';
+import {SharedModule} from '../../shared/shared.module';
 
 const routes: Routes = [
     {
@@ -36,10 +35,9 @@ const routes: Routes = [
     imports: [
         CommonModule,
         IonicModule,
-        PageHeaderModule,
+        SharedModule,
         ArticleDetailModule,
         RouterModule.forChild(routes),
-        PageStateModule
     ],
     declarations: [ArticleTabsPage]
 })

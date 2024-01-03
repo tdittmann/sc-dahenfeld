@@ -6,7 +6,7 @@ import {MatchService} from '../../../../dataproviders/soccer/matches/match.servi
 import {MatchCardModule} from '../../../shared/match-card/match-card.module';
 import {RouterModule} from '@angular/router';
 import {MatchDetailPageModule} from '../../match-detail/match-detail.module';
-import {PageStateModule} from '../../../shared/page-state/page-state.module';
+import {SharedModule} from '../../../shared/shared.module';
 
 @NgModule({
     providers: [MatchService],
@@ -15,13 +15,13 @@ import {PageStateModule} from '../../../shared/page-state/page-state.module';
         IonicModule,
         MatchCardModule,
         MatchDetailPageModule,
+        SharedModule,
         RouterModule.forChild([
             {
                 path: '',
                 component: FixturePage
             }
         ]),
-        PageStateModule
     ],
     declarations: [FixturePage],
 })

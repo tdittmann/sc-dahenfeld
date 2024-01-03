@@ -2,11 +2,10 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
-import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {RouterModule} from '@angular/router';
 import {SportheimPage} from './sportheim.page';
-import {PageStateModule} from '../../shared/page-state/page-state.module';
 import {SportheimService} from '../../../dataproviders/sportheim/sportheim.service';
+import {SharedModule} from '../../shared/shared.module';
 
 @NgModule({
     providers: [SportheimService],
@@ -14,8 +13,7 @@ import {SportheimService} from '../../../dataproviders/sportheim/sportheim.servi
         CommonModule,
         FormsModule,
         IonicModule,
-        PageHeaderModule,
-        PageStateModule,
+        SharedModule,
         RouterModule.forChild([
             {
                 path: '',

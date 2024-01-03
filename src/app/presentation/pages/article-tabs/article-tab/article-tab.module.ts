@@ -5,7 +5,7 @@ import {IonicModule} from '@ionic/angular';
 import {ArticleDetailModule} from '../../../shared/article-detail/article-detail.module';
 import {RouterModule} from '@angular/router';
 import {ArticleTabComponent} from './article-tab.component';
-import {PageStateModule} from '../../../shared/page-state/page-state.module';
+import {SharedModule} from '../../../shared/shared.module';
 
 @NgModule({
     providers: [ArticleService],
@@ -13,13 +13,13 @@ import {PageStateModule} from '../../../shared/page-state/page-state.module';
         CommonModule,
         IonicModule,
         ArticleDetailModule,
+        SharedModule,
         RouterModule.forChild([
             {
                 path: '',
                 component: ArticleTabComponent
             }
         ]),
-        PageStateModule
     ],
     declarations: [ArticleTabComponent]
 })

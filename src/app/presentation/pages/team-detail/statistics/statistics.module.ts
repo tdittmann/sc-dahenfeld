@@ -6,13 +6,14 @@ import {RouterModule} from '@angular/router';
 import {PersonService} from '../../../../dataproviders/soccer/person/person.service';
 import {StatisticsCardModule} from './statistics-card/statistics-card.module';
 import {StatisticsModalModule} from './statistics-modal/statistics-modal.module';
-import {PageStateModule} from '../../../shared/page-state/page-state.module';
+import {SharedModule} from '../../../shared/shared.module';
 
 @NgModule({
     providers: [PersonService],
     imports: [
         CommonModule,
         IonicModule,
+        SharedModule,
         StatisticsCardModule,
         StatisticsModalModule,
         RouterModule.forChild([
@@ -21,7 +22,6 @@ import {PageStateModule} from '../../../shared/page-state/page-state.module';
                 component: StatisticsPage
             }
         ]),
-        PageStateModule
     ],
     declarations: [StatisticsPage],
 })

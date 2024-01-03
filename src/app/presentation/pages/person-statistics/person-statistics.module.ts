@@ -3,12 +3,11 @@ import {CommonModule} from '@angular/common';
 import {IonicModule} from '@ionic/angular';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
-import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {PersonStatisticsPage} from './person-statistics.page';
 import {PersonModule} from '../person/person.module';
-import {PageStateModule} from '../../shared/page-state/page-state.module';
 import {PersonService} from '../../../dataproviders/soccer/person/person.service';
 import {StatisticsCardModule} from '../team-detail/statistics/statistics-card/statistics-card.module';
+import {SharedModule} from '../../shared/shared.module';
 
 @NgModule({
     providers: [PersonService],
@@ -16,7 +15,7 @@ import {StatisticsCardModule} from '../team-detail/statistics/statistics-card/st
         CommonModule,
         FormsModule,
         IonicModule,
-        PageHeaderModule,
+        SharedModule,
         PersonModule,
         RouterModule.forChild([
             {
@@ -24,7 +23,6 @@ import {StatisticsCardModule} from '../team-detail/statistics/statistics-card/st
                 component: PersonStatisticsPage
             }
         ]),
-        PageStateModule,
         StatisticsCardModule
     ],
     declarations: [PersonStatisticsPage]

@@ -4,8 +4,8 @@ import {IonicModule} from '@ionic/angular';
 import {RankingPage} from './ranking.page';
 import {RankingComponentModule} from '../../../shared/ranking/ranking.module';
 import {RouterModule} from '@angular/router';
-import {PageStateModule} from '../../../shared/page-state/page-state.module';
 import {MatchService} from '../../../../dataproviders/soccer/matches/match.service';
+import {SharedModule} from '../../../shared/shared.module';
 
 @NgModule({
     providers: [MatchService],
@@ -13,13 +13,13 @@ import {MatchService} from '../../../../dataproviders/soccer/matches/match.servi
         CommonModule,
         IonicModule,
         RankingComponentModule,
+        SharedModule,
         RouterModule.forChild([
             {
                 path: '',
                 component: RankingPage
             }
         ]),
-        PageStateModule
     ],
     declarations: [RankingPage],
 })

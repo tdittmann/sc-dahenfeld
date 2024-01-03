@@ -2,9 +2,9 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
-import {PageHeaderModule} from '../../shared/page-header/page-header.module';
 import {RouterModule} from '@angular/router';
 import {ImprintPage} from './imprint.page';
+import {SharedModule} from '../../shared/shared.module';
 
 @NgModule({
     providers: [],
@@ -12,7 +12,7 @@ import {ImprintPage} from './imprint.page';
         CommonModule,
         FormsModule,
         IonicModule,
-        PageHeaderModule,
+        SharedModule,
         RouterModule.forChild([
             {
                 path: '',

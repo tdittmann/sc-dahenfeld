@@ -5,7 +5,7 @@ import {PlayersPage} from './players.page';
 import {PersonService} from '../../../../dataproviders/soccer/person/person.service';
 import {PersonModule} from '../../person/person.module';
 import {RouterModule} from '@angular/router';
-import {PageStateModule} from '../../../shared/page-state/page-state.module';
+import {SharedModule} from '../../../shared/shared.module';
 
 @NgModule({
     providers: [PersonService],
@@ -13,13 +13,13 @@ import {PageStateModule} from '../../../shared/page-state/page-state.module';
         CommonModule,
         IonicModule,
         PersonModule,
+        SharedModule,
         RouterModule.forChild([
             {
                 path: '',
                 component: PlayersPage
             }
         ]),
-        PageStateModule
     ],
     declarations: [PlayersPage],
 })

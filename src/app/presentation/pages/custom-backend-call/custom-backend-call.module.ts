@@ -2,18 +2,16 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
-import {PageHeaderModule} from '../../shared/page-header/page-header.module';
-import {PageStateModule} from '../../shared/page-state/page-state.module';
 import {RouterModule} from '@angular/router';
 import {CustomBackendCallPage} from './custom-backend-call.page';
+import {SharedModule} from '../../shared/shared.module';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
-        PageHeaderModule,
-        PageStateModule,
+        SharedModule,
         RouterModule.forChild([
             {
                 path: '',

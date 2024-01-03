@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, Input, TemplateRef} from '@angular/core';
 
+// TODO tdit0703: Remove me
 @Component({
     selector: 'app-variable-content',
     templateUrl: './variable-content.component.html',
