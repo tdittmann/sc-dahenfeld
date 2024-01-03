@@ -4,8 +4,10 @@
 
     <div class="image">
         <image-meta [title]="event.title"
-                    subTitleIcon="calendar" [subTitle]="event.getEventDurationAsString()"
-                    subSubTitleIcon="pin" [subSubTitle]="event.location"
+                    subTitleIcon="calendar-outline"
+                    [subTitle]="event.getEventDurationAsString()"
+                    subSubTitleIcon="location-outline"
+                    [subSubTitle]="event.location"
                     [image]="event.getImageAsBackground()">
         </image-meta>
     </div>
