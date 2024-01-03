@@ -35,6 +35,9 @@
                 "input": "src/theme/variables.scss"
               },
               {
+                "input": "src/assets/fonts/fonts.css"
+              },
+              {
                 "input": "src/global.scss"
               }
             ],
