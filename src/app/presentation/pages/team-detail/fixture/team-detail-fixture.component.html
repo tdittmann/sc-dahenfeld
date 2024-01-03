@@ -1,0 +1,21 @@
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<div class="container" *ngIf="matches.length > 0">
+    <ng-template ngFor let-match [ngForOf]="matches">
+
+        <match-card [matchId]="match.id"
+                    [startDate]="match.date"
+                    [location]="match.location"
+                    [homeName]="match.homeName"
+                    [homeImage]="match.homeImage"
+                    [homeResult]="match.homeResult"
+                    [awayName]="match.awayName"
+                    [awayImage]="match.awayImage"
+                    [awayResult]="match.awayResult"
+                    [ageGroup]="match.getStartDate()"
+                    [fixture]="match.fixture"
+                    (click)="openMatchDetail(match.id)">
+        </match-card>
+
+    </ng-template>
+</div>

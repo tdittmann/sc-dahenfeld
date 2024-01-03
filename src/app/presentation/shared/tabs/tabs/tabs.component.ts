@@ -10,6 +10,8 @@ import {
 } from '@angular/core';
 import {TabComponent} from '../tab/tab.component';
 
+// TODO tdit0703: Add fixed posibility
+// TODO tdit0703: Add active tab to url and open tab when reload
 @Component({
     selector: 'app-tabs',
     templateUrl: 'tabs.component.html',

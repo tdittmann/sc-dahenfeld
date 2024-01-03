@@ -3,7 +3,7 @@ import {ModalController} from '@ionic/angular';
 import {ActivatedRoute} from '@angular/router';
 import {Person} from '../../../core/domain/person.model';
 import {PersonService} from '../../../dataproviders/soccer/person/person.service';
-import {StatisticsModalComponent} from '../team-detail/statistics/statistics-modal/statistics-modal.component';
+import {TeamDetailStatisticsModalComponent} from '../team-detail/statistics/statistics-modal/team-detail-statistics-modal.component';
 
 @Component({
     templateUrl: 'person-statistics.page.html',
@@ -60,7 +60,7 @@ export class PersonStatisticsPage implements OnInit {
 
     openStatisticsModal(statistics) {
         this.modalController.create({
-            component: StatisticsModalComponent,
+            component: TeamDetailStatisticsModalComponent,
             componentProps: {
                 'persons': this.persons,
                 'heading': statistics.heading,

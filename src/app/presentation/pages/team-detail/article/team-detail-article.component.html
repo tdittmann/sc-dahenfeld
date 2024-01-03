@@ -1,0 +1,5 @@
+<page-state [loading]="isLoading" [error]="isError"></page-state>
+
+<div class="container" *ngIf="article">
+    <div class="ion-padding" [innerHTML]="article.text"></div>
+</div>

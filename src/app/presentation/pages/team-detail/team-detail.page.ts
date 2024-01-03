@@ -11,6 +11,7 @@ import {combineLatest} from 'rxjs';
 export class TeamDetailPage implements OnInit {
 
     heading: string;
+    projectId: number;
     teamInformation: TeamInformation;
     selectedSeason;
 
@@ -28,12 +29,15 @@ export class TeamDetailPage implements OnInit {
         combineLatest([this.route.params, this.route.queryParams])
             .subscribe(
                 ([params, queryParams]) => {
+
+                    this.projectId = parseInt(params['id'], 10);
+
                     // Load team information
-                    this.teamInformationService.loadTeamInformation(params['id'])
+                    this.teamInformationService.loadTeamInformation(this.projectId)
                         .subscribe({
                             next: data => {
                                 this.teamInformation = data;
-                                this.selectedSeason = parseInt(params['id'], 10);
+                                this.selectedSeason = this.projectId;
                                 this.heading = queryParams['heading'] ? queryParams['heading'] : this.teamInformation.name;
 
                                 this.isLoading = false;

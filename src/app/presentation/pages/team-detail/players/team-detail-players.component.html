@@ -1,6 +1,6 @@
 <page-state [loading]="isLoading" [error]="isError" [errorMessage]="errorMessage"></page-state>
 
-<ion-content color="light" *ngIf="players.size > 0">
+<div class="container" *ngIf="players.size > 0">
 
     <ng-template ngFor let-map [ngForOf]="players | keyvalue: returnZero">
 
@@ -19,7 +19,6 @@
 
         </app-card-container>
 
-
     </ng-template>
 
-</ion-content>
+</div>

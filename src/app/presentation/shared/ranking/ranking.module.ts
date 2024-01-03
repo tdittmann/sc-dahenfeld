@@ -12,6 +12,6 @@ import {RankingComponent} from './ranking.component';
     declarations: [RankingComponent],
     exports: [RankingComponent]
 })
-export class RankingComponentModule {
+export class RankingModule {
 
 }

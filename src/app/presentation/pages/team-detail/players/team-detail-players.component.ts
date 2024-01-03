@@ -1,18 +1,17 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Component, Input, OnInit} from '@angular/core';
 import {PersonService} from '../../../../dataproviders/soccer/person/person.service';
 import {Person} from '../../../../core/domain/person.model';
 import {ModalController} from '@ionic/angular';
 import {PersonPage} from '../../person/person.page';
 
 @Component({
-    selector: 'players',
-    templateUrl: 'players.page.html',
-    styleUrls: ['players.page.scss']
+    selector: 'app-team-detail-players',
+    templateUrl: 'team-detail-players.component.html',
+    styleUrls: ['team-detail-players.component.scss']
 })
-export class PlayersPage implements OnInit {
+export class TeamDetailPlayersComponent implements OnInit {
 
-    private projectId: number;
+    @Input() projectId: number;
 
     players: Map<string, Person[]> = new Map<string, Person[]>();
 
@@ -20,37 +19,33 @@ export class PlayersPage implements OnInit {
     errorMessage = 'Daten konnten nicht geladen werden';
     isError = false;
 
-    constructor(private route: ActivatedRoute,
-                private playerService: PersonService,
+    constructor(private playerService: PersonService,
                 private modalController: ModalController) {
 
     }
 
     ngOnInit(): void {
-        this.route.params.subscribe(
-            params => {
-                const projectId = params['id'];
-                this.projectId = projectId;
 
-                this.playerService.loadPersonsByProjectId(projectId).subscribe({
-                    next: players => {
-                        this.players = this.groupBy(players, player => player.position);
+        if (this.projectId > 0) {
+            this.playerService.loadPersonsByProjectId(this.projectId).subscribe({
+                next: players => {
+                    this.players = this.groupBy(players, player => player.position);
 
-                        if (this.players.size <= 0) {
-                            this.isError = true;
-                            this.errorMessage = 'Für diese Spielzeit gibt es keinen Kader';
-                        }
-
-                        this.isLoading = false;
-                    },
-                    error: error => {
+                    if (this.players.size <= 0) {
                         this.isError = true;
-                        console.error(error);
+                        this.errorMessage = 'Für diese Spielzeit gibt es keinen Kader';
                     }
 
-                });
-            }
-        );
+                    this.isLoading = false;
+                },
+                error: error => {
+                    this.isError = true;
+                    console.error(error);
+                }
+
+            });
+        }
+
     }
 
     public openPlayer(personId: number) {
