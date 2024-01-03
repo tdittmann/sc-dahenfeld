@@ -49,13 +49,12 @@
         </app-tab>
 
         <app-tab tabTitle="Head 2 Head">
-            Coming soon
+            <app-match-head-to-head [matches]="pastMatches"
+                                    [homeId]="matchDetails.homeId"
+                                    [awayId]="matchDetails.awayId">
+            </app-match-head-to-head>
         </app-tab>
     </app-tabs>
-
-
-
-
 
 
 </ion-content>

@@ -23,10 +23,12 @@ describe('MatchDetailMapper', () => {
             location: 'Dahenfeld',
             fixture: '1. Spieltag',
             home_id: '1',
+            home_team_id: '11',
             home_name: 'SGM Typescript',
             home_logo: 'home-logo.png',
             home_result: '5',
             away_id: '2',
+            away_team_id: '22',
             away_name: 'SGM Javascript',
             away_logo: 'away-logo.png',
             away_result: '1',
@@ -61,10 +63,12 @@ describe('MatchDetailMapper', () => {
         expected.location = 'Dahenfeld';
         expected.fixture = '1. Spieltag';
         expected.homeId = 1;
+        expected.homeTeamId = 11;
         expected.homeName = 'SGM Typescript';
         expected.homeImage = 'home-logo.png';
         expected.homeResult = 5;
         expected.awayId = 2;
+        expected.awayTeamId = 22;
         expected.awayName = 'SGM Javascript';
         expected.awayImage = 'away-logo.png';
         expected.awayResult = 1;

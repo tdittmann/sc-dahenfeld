@@ -8,5 +8,6 @@ import {Component, Input} from '@angular/core';
 export class MatchCardContainerComponent {
 
     @Input() heading = '';
+    @Input() subHeading = '';
 
 }

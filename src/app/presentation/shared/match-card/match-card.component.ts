@@ -1,7 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {Moment} from 'moment';
-import {MatchDetailPage} from '../../pages/match-detail/match-detail.page';
-import {ModalController} from '@ionic/angular';
 
 @Component({
     selector: 'match-card',
@@ -24,10 +22,6 @@ export class MatchCardComponent {
     @Input() awayName: string;
     @Input() awayImage: string;
     @Input() awayResult: number;
-
-    constructor(private modalController: ModalController) {
-
-    }
 
     public isHomeWin(): boolean {
         return this.homeResult > this.awayResult;
@@ -69,15 +63,6 @@ export class MatchCardComponent {
 
         return this.startDate
             .format('HH:mm');
-    }
-
-    public openMatchDetail() {
-        this.modalController.create({
-            component: MatchDetailPage,
-            componentProps: {
-                'matchId': this.matchId
-            }
-        }).then(modal => modal.present());
     }
 
 }

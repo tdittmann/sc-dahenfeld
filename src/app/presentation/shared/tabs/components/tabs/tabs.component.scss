@@ -8,7 +8,7 @@ app-tabs {
     display: flex;
     position: relative;
     font-size: 0.75rem;
-    background: var(--ion-background-color, #fff);
+    background: var(--ion-card-background, var(--ion-item-background, var(--ion-background-color, #fff)));
     width: 100%;
     user-select: none;
     -webkit-touch-callout: none;

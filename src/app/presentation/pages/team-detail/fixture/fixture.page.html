@@ -15,7 +15,8 @@
                         [awayImage]="match.awayImage"
                         [awayResult]="match.awayResult"
                         [ageGroup]="match.getStartDate()"
-                        [fixture]="match.fixture">
+                        [fixture]="match.fixture"
+                        (click)="openMatchDetail(match.id)">
             </match-card>
 
         </ng-template>

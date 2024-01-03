@@ -1,0 +1,58 @@
+.statistic-container {
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.statistic-home-win,
+.statistic-draw,
+.statistic-away-win {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 2px solid #525252;
+  min-width: 50px;
+}
+
+.statistic-home-win,
+.statistic-away-win {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.statistic-home-win {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background: #000;
+  color: #fff;
+  border-color: var(--ion-color-contrast);
+}
+
+.statistic-draw {
+  border-left: none;
+  border-right: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #7e7e7e;
+  color: #fff;
+  border-color: #7e7e7e;
+}
+
+.statistic-away-win {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  text-align: right;
+  background: #fff;
+  border-color: var(--ion-color-dark);
+}
+
+.statistic-value,
+.statistic-label,
+.statistic-percentage {
+  font-weight: bold;
+}
+
+.statistic-value {
+  font-size: 2rem;
+  line-height: 1;
+}

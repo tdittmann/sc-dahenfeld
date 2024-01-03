@@ -6,11 +6,13 @@ export interface MatchDetailJson {
     fixture: string;
 
     home_id: string;
+    home_team_id: string;
     home_name: string;
     home_logo: string;
     home_result: string;
 
     away_id: string;
+    away_team_id: string;
     away_name: string;
     away_logo: string;
     away_result: string;

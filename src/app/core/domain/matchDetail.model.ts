@@ -11,11 +11,13 @@ export class MatchDetail {
     fixture: string;
 
     homeId: number;
+    homeTeamId: number;
     homeName: string;
     homeImage: string;
     homeResult: number;
 
     awayId: number;
+    awayTeamId: number;
     awayName: string;
     awayImage: string;
     awayResult: number;
@@ -37,6 +39,14 @@ export class MatchDetail {
         }
 
         return String(this.awayResult);
+    }
+
+    getDate(): string {
+        if (this.date) {
+            return this.date.format(environment.longDateFormat);
+        }
+
+        return '';
     }
 
     getKickOffDate(): string {

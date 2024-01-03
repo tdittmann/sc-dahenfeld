@@ -26,4 +26,16 @@ export class MatchDetailService {
             }));
     }
 
+    loadPastMatches(matchId: number, teamId1: number, teamId2: number): Observable<MatchDetail[]> {
+        return this.httpService.get<MatchDetailJson[]>(`${environment.backendUrl}matches_history?matchId=${matchId}&teamId1=${teamId1}&teamId2=${teamId2}`)
+            .pipe(map(matches => {
+                return matches.map(match => {
+                    const mappedMatch = this.matchDetailMapper.mapFrom(match);
+                    mappedMatch.lineup.sort((a, b) => a.compareTo(b));
+                    mappedMatch.events.sort((a, b) => a.time - b.time);
+                    return mappedMatch;
+                });
+            }));
+    }
+
 }

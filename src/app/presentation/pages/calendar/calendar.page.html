@@ -12,7 +12,7 @@
             <ion-col>
                 <ng-template ngFor let-entry [ngForOf]="calendarEntries">
                     <h2 *ngIf="isDifferentDay(entry.start)">
-                        {{entry.getFormattedStartDate()}}
+                        {{ entry.getFormattedStartDate() }}
                     </h2>
 
                     <match-card *ngIf="entry.isMatch()"
@@ -24,7 +24,8 @@
                                 [awayName]="entry.awayName"
                                 [awayImage]="entry.awayImage"
                                 [ageGroup]="entry.team"
-                                [fixture]="entry.fixture">
+                                [fixture]="entry.fixture"
+                                (click)="openMatchDetail(entry.id)">
                     </match-card>
 
                     <event-card *ngIf="entry.isEvent()"

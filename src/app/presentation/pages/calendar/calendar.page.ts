@@ -3,6 +3,8 @@ import {CalendarService} from '../../../dataproviders/calendar/calendar.service'
 import {CalendarEntry} from '../../../core/domain/calendarEntry.model';
 import {Moment} from 'moment';
 import {ActivatedRoute} from '@angular/router';
+import {MatchDetailPage} from '../match-detail/match-detail.page';
+import {ModalController} from '@ionic/angular';
 
 @Component({
     templateUrl: 'calendar.page.html',
@@ -18,7 +20,8 @@ export class CalendarPage implements OnInit {
     isError = false;
 
     constructor(private activatedRoute: ActivatedRoute,
-                private calendarService: CalendarService) {
+                private calendarService: CalendarService,
+                private modalController: ModalController) {
 
     }
 
@@ -79,6 +82,15 @@ export class CalendarPage implements OnInit {
         const isSame = date.isSame(this.lastDay, 'day');
         this.lastDay = date;
         return !isSame;
+    }
+
+    public openMatchDetail(matchId) {
+        this.modalController.create({
+            component: MatchDetailPage,
+            componentProps: {
+                'matchId': matchId
+            }
+        }).then(modal => modal.present());
     }
 
 }

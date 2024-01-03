@@ -18,11 +18,13 @@ export class MatchDetailMapper {
         matchDetail.fixture = param.fixture;
 
         matchDetail.homeId = parseInt(param.home_id, 10);
+        matchDetail.homeTeamId = parseInt(param.home_team_id, 10);
         matchDetail.homeName = param.home_name;
         matchDetail.homeImage = param.home_logo;
         matchDetail.homeResult = parseInt(param.home_result, 10);
 
         matchDetail.awayId = parseInt(param.away_id, 10);
+        matchDetail.awayTeamId = parseInt(param.away_team_id, 10);
         matchDetail.awayName = param.away_name;
         matchDetail.awayImage = param.away_logo;
         matchDetail.awayResult = parseInt(param.away_result, 10);

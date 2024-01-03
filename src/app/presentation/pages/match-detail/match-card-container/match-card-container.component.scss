@@ -3,9 +3,14 @@ ion-card {
   margin-right: 0;
 }
 
-ion-card-header {
+ion-card-title {
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+ion-card-subtitle {
+  margin: 0;
 }
 
 ion-card-content {
