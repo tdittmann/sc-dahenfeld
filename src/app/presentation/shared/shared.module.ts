@@ -6,12 +6,14 @@ import {PageHeaderComponent} from './page-header/page-header.component';
 import {PageStateComponent} from './page-state/page-state.component';
 import {TabsComponent} from './tabs/tabs/tabs.component';
 import {TabComponent} from './tabs/tab/tab.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
     providers: [],
     imports: [
         CommonModule,
         IonicModule,
+        RouterModule,
     ],
     declarations: [
         CardContainerComponent,
