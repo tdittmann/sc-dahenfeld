@@ -1,4 +1,4 @@
-<app-match-card-container heading="Übersicht"
+<app-card-container heading="Übersicht"
                           [subHeading]="'Basierend auf den letzten ' + matches.length + ' Spielen'">
 
     <div class="statistic-container">
@@ -19,9 +19,9 @@
         </div>
     </div>
 
-</app-match-card-container>
+</app-card-container>
 
-<app-match-card-container heading="Vorherige Begegnungen">
+<app-card-container heading="Vorherige Begegnungen">
 
     <match-card *ngFor="let match of matches"
                 [matchId]="match.matchId"
@@ -37,4 +37,4 @@
                 [fixture]="match.fixture">
     </match-card>
 
-</app-match-card-container>
+</app-card-container>

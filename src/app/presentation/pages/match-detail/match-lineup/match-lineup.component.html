@@ -1,4 +1,4 @@
-<app-match-card-container heading="Startelf">
+<app-card-container heading="Startelf">
 
     <ion-item mode="md"
               *ngFor="let player of lineup">
@@ -19,13 +19,13 @@
         </div>
     </ion-item>
 
-</app-match-card-container>
+</app-card-container>
 
-<app-match-card-container *ngIf="substitutions.length > 0"
+<app-card-container *ngIf="substitutions.length > 0"
                           heading="Spielerwechsel">
 
     <app-match-highlight *ngFor="let substitution of substitutions"
                          [event]="substitution">
     </app-match-highlight>
 
-</app-match-card-container>
+</app-card-container>

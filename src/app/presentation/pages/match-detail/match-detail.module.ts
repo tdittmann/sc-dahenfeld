@@ -10,7 +10,7 @@ import {ModalHeaderModule} from '../../shared/modal-header/modal-header.module';
 import {MatchInformationComponent} from './match-information/match-information.component';
 import {MatchHighlightsComponent} from './match-highlights/match-highlights.component';
 import {MatchLineupComponent} from './match-lineup/match-lineup.component';
-import {MatchCardContainerComponent} from './match-card-container/match-card-container.component';
+import {CardContainerComponent} from './card-container/card-container.component';
 import {MatchHighlightComponent} from './match-highlight/match-highlight.component';
 import {TabsModule} from '../../shared/tabs/tabs.module';
 import {MatchHeadToHeadComponent} from './match-head-to-head/match-head-to-head.component';
@@ -30,7 +30,7 @@ import {MatchCardModule} from '../../shared/match-card/match-card.module';
     ],
     declarations: [
         MatchDetailPage,
-        MatchCardContainerComponent,
+        CardContainerComponent,
         MatchInformationComponent,
         MatchHighlightsComponent,
         MatchLineupComponent,
