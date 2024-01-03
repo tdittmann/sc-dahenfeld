@@ -18,13 +18,13 @@ describe('VersionMapper', () => {
         const actual: VersionInfoJson = {
             platform: 'android',
             version: '5.0.0',
-            url: 'http://sc-dahenfeld.de'
+            url: 'https://sc-dahenfeld.de'
         };
 
         const expected: VersionInfo = new VersionInfo();
         expected.platform = 'android';
         expected.version = '5.0.0';
-        expected.url = 'http://sc-dahenfeld.de';
+        expected.url = 'https://sc-dahenfeld.de';
 
         expect(mapper.mapFrom(actual)).toEqual(expected);
     });

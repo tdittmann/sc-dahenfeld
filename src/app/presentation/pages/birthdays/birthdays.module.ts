@@ -8,7 +8,6 @@ import {BirthdayFilterPipe} from './birthday.filter';
 import {PersonModule} from '../person/person.module';
 import {PersonService} from '../../../dataproviders/soccer/person/person.service';
 import {ScrollingModule} from '@angular/cdk/scrolling';
-import {OrderModule} from '../../../util/order-pipe/order.module';
 import {SharedModule} from '../../shared/shared.module';
 
 @NgModule({
@@ -25,7 +24,6 @@ import {SharedModule} from '../../shared/shared.module';
             }
         ]),
         SharedModule,
-        OrderModule,
         ScrollingModule
     ],
     declarations: [BirthdaysPage, BirthdayFilterPipe]

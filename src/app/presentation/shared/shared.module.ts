@@ -7,9 +7,12 @@ import {PageStateComponent} from './page-state/page-state.component';
 import {TabsComponent} from './tabs/tabs/tabs.component';
 import {TabComponent} from './tabs/tab/tab.component';
 import {RouterModule} from '@angular/router';
+import {OrderPipe} from './order-pipe/order.pipe';
 
 @NgModule({
-    providers: [],
+    providers: [
+        OrderPipe,
+    ],
     imports: [
         CommonModule,
         IonicModule,
@@ -21,6 +24,7 @@ import {RouterModule} from '@angular/router';
         PageStateComponent,
         TabsComponent,
         TabComponent,
+        OrderPipe,
     ],
     exports: [
         CardContainerComponent,
@@ -28,6 +32,7 @@ import {RouterModule} from '@angular/router';
         PageStateComponent,
         TabsComponent,
         TabComponent,
+        OrderPipe,
     ]
 })
 export class SharedModule {
