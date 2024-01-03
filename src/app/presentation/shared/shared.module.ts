@@ -6,7 +6,6 @@ import {PageHeaderComponent} from './page-header/page-header.component';
 import {PageStateComponent} from './page-state/page-state.component';
 import {TabsComponent} from './tabs/tabs/tabs.component';
 import {TabComponent} from './tabs/tab/tab.component';
-import {VariableContentComponent} from './tabs/variable-content/variable-content.component';
 
 @NgModule({
     providers: [],
@@ -20,7 +19,6 @@ import {VariableContentComponent} from './tabs/variable-content/variable-content
         PageStateComponent,
         TabsComponent,
         TabComponent,
-        VariableContentComponent,
     ],
     exports: [
         CardContainerComponent,

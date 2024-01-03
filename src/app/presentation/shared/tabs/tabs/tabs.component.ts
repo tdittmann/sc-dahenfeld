@@ -6,7 +6,6 @@ import {
     ContentChildren,
     EventEmitter,
     Output,
-    TemplateRef,
     ViewEncapsulation
 } from '@angular/core';
 import {TabComponent} from '../tab/tab.component';
@@ -49,8 +48,6 @@ export class TabsComponent implements AfterContentInit {
             if (tab.active) {
                 hasActive = true;
             }
-
-            tab.isTemplate = tab.tabTitle instanceof TemplateRef;
         });
 
         if (!hasActive) {
