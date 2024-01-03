@@ -36,13 +36,13 @@ export class CustomBackendCallPage implements OnInit {
 
         this.httpService.get(environment.backendUrl + this.backendUrl).subscribe({
             next: value => {
-                this.message = 'Backend call successfully done :)';
+                this.message = 'Call successful';
                 this.result = value;
                 this.isLoading = false;
                 this.isError = false;
             },
             error: error => {
-                this.message = 'Backend call failed :/ ';
+                this.message = 'Call failed';
                 this.result = error;
                 this.isLoading = false;
                 this.isError = true;

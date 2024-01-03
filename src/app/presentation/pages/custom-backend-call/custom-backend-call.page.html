@@ -3,11 +3,23 @@
 
 <ion-content color="light" *ngIf="!isLoading">
 
-    <h2 style="margin-top: 32px;">Custom backend call</h2>
+    <app-card-container heading="Custom Backend Call"
+                        subHeading="Only for testing purposes">
 
-    <p><strong>URL:</strong> {{backendUrl}}</p>
-    <p><strong>Message:</strong> {{message}}</p>
-    <p><strong>Result:</strong> {{result | json}}</p>
+        <ion-item>
+            <ion-label>URL</ion-label>
+            <ion-note slot="end">{{ backendUrl }}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>Nachricht</ion-label>
+            <ion-note slot="end">{{ message }}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>Antwort</ion-label>
+            <ion-note slot="end">{{ result | json }}</ion-note>
+        </ion-item>
+
+    </app-card-container>
 
 </ion-content>
 

@@ -1,7 +1,7 @@
 <page-header [title]="heading"></page-header>
 <page-state [loading]="isLoading" [error]="isError"></page-state>
 
-<ion-content color="light" *ngIf="article">
+<ion-content color="white" *ngIf="article">
 
     <ion-refresher slot="fixed" (ionRefresh)="loadArticle($event)">
         <ion-refresher-content></ion-refresher-content>
