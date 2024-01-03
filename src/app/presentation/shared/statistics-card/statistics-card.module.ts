@@ -3,8 +3,9 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {StatisticsCardComponent} from './statistics-card.component';
-import {OrderModule} from '../../../../../util/order-pipe/order.module';
+import {OrderModule} from '../../../util/order-pipe/order.module';
 import {StatisticsItemModule} from '../statistics-item/statistics-item.module';
+import {SharedModule} from '../shared.module';
 
 @NgModule({
     providers: [],
@@ -14,6 +15,7 @@ import {StatisticsItemModule} from '../statistics-item/statistics-item.module';
         IonicModule,
         OrderModule,
         StatisticsItemModule,
+        SharedModule,
     ],
     declarations: [StatisticsCardComponent],
     exports: [StatisticsCardComponent],

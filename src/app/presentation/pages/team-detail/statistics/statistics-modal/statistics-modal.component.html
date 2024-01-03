@@ -8,8 +8,7 @@
         <ng-template ngFor let-person [ngForOf]="persons | orderBy : filter : true | personFilter: searchFilter">
 
             <statistics-item [person]="person"
-                             [filter]="filter"
-                             [openPersonOnClick]="true">
+                             [filter]="filter">
             </statistics-item>
 
         </ng-template>

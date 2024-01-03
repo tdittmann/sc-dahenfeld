@@ -4,7 +4,7 @@ import {IonicModule} from '@ionic/angular';
 import {StatisticsPage} from './statistics.page';
 import {RouterModule} from '@angular/router';
 import {PersonService} from '../../../../dataproviders/soccer/person/person.service';
-import {StatisticsCardModule} from './statistics-card/statistics-card.module';
+import {StatisticsCardModule} from '../../../shared/statistics-card/statistics-card.module';
 import {StatisticsModalModule} from './statistics-modal/statistics-modal.module';
 import {SharedModule} from '../../../shared/shared.module';
 

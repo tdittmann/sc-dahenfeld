@@ -1,5 +1,6 @@
-<div class="ion-margin">
-    <h2>{{heading}}</h2>
+<app-card-container [heading]="heading">
+
+    <ion-spinner name="dots" *ngIf="!persons"></ion-spinner>
 
     <ion-list *ngIf="persons" lines="none">
         <ng-template ngFor let-person [ngForOf]="persons | orderBy : statisticFilter : true | slice: 0: 3">
@@ -10,4 +11,5 @@
 
         </ng-template>
     </ion-list>
-</div>
+
+</app-card-container>

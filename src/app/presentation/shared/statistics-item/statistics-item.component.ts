@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Person} from '../../../../../core/domain/person.model';
+import {Person} from '../../../core/domain/person.model';
 
 @Component({
     selector: 'statistics-item',
@@ -10,7 +10,6 @@ export class StatisticsItemComponent implements OnInit {
 
     @Input() person: Person;
     @Input() filter: string;
-    @Input() openPersonOnClick = false;
 
     projectId = 0;
     statisticsVariable: string;

@@ -6,7 +6,7 @@ import {RouterModule} from '@angular/router';
 import {PersonStatisticsPage} from './person-statistics.page';
 import {PersonModule} from '../person/person.module';
 import {PersonService} from '../../../dataproviders/soccer/person/person.service';
-import {StatisticsCardModule} from '../team-detail/statistics/statistics-card/statistics-card.module';
+import {StatisticsCardModule} from '../../shared/statistics-card/statistics-card.module';
 import {SharedModule} from '../../shared/shared.module';
 
 @NgModule({

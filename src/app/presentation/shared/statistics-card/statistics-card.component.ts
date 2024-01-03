@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Person} from '../../../../../core/domain/person.model';
+import {Person} from '../../../core/domain/person.model';
 
 @Component({
     selector: 'statistics-card',
