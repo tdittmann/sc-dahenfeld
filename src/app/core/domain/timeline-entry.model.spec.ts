@@ -1,5 +1,4 @@
 import {TimelineEntry} from './timeline-entry.model';
-import {Article} from './article.model';
 
 describe('TimelineEntry', function () {
 
@@ -35,7 +34,7 @@ describe('TimelineEntry', function () {
             'eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat ' +
             'nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit';
 
-        expect(timelineEntry.getTruncatedText()).toBe(timelineEntry.text.substr(0, 249) + '&hellip;');
+        expect(timelineEntry.getTruncatedText()).toBe(timelineEntry.text.substring(0, 149) + '&hellip;');
     });
 
     it('should return valid article link', function () {

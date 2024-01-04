@@ -39,7 +39,7 @@ describe('PersonMapper', () => {
                 statistic_hint: 'Season 12/13',
                 goalsAgainst: 8,
                 goalsAgainstAsKeeper: 7,
-                matchesWithoutGoalsAgainst: 10,
+                matchesWithoutGoalsAgainst: 9,
                 matchesWithoutGoalsAgainstAsKeeper: 10,
             },
             careerStats: {
