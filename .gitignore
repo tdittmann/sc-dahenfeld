@@ -20,6 +20,7 @@ npm-debug.log*
 .tmp/
 .gradle/
 .versions/
+.nx/
 coverage/
 www/
 node_modules/

@@ -1,28 +1,26 @@
-import {CalendarEvent} from '../../../core/domain/calendarEvent.model';
-import {Component, Input} from '@angular/core';
-import {EventDetailPage} from '../../pages/event-detail/event-detail.page';
-import {ModalController} from '@ionic/angular';
+import { CalendarEvent } from '../../../core/domain/calendarEvent.model';
+import { Component, Input } from '@angular/core';
+import { EventDetailPage } from '../../pages/event-detail/event-detail.page';
+import { ModalController } from '@ionic/angular';
 
 @Component({
-    selector: 'event-card',
-    templateUrl: 'event-card.component.html',
-    styleUrls: ['event-card.component.scss']
+  selector: 'app-event-card',
+  templateUrl: 'event-card.component.html',
+  styleUrls: ['event-card.component.scss'],
 })
 export class EventCardComponent {
+  @Input() event: CalendarEvent;
 
-    @Input() event: CalendarEvent;
+  constructor(private modalController: ModalController) {}
 
-    constructor(private modalController: ModalController) {
-
-    }
-
-    public openEventDetail() {
-        this.modalController.create({
-            component: EventDetailPage,
-            componentProps: {
-                'event': this.event
-            }
-        }).then(modal => modal.present());
-    }
-
+  public openEventDetail() {
+    this.modalController
+      .create({
+        component: EventDetailPage,
+        componentProps: {
+          event: this.event,
+        },
+      })
+      .then((modal) => modal.present());
+  }
 }

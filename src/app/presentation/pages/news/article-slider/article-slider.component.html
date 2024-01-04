@@ -1,7 +1,6 @@
-<swiper-container class="swiper">
-    <swiper-slide *ngFor="let article of articles">
-        <article-image-meta (click)="goToArticleDetail(article)"
-                            [article]="article">
-        </article-image-meta>
-    </swiper-slide>
+<swiper-container class="swiper" autoplay="true" autoplay-delay="5000" pagination="true">
+  <swiper-slide *ngFor="let article of articles">
+    <app-article-image-meta (click)="goToArticleDetail(article)" [article]="article">
+    </app-article-image-meta>
+  </swiper-slide>
 </swiper-container>

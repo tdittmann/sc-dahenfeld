@@ -1,34 +1,35 @@
 <ion-app>
+  <!-- Menu -->
+  <ion-menu content-id="main">
+    <ion-content>
+      <div class="nav-header">
+        <img alt="SC Dahenfeld" src="assets/img/logo.png" />
+        <br />
+        <span>SC Dahenfeld</span>
+      </div>
 
-    <!-- Menu -->
-    <ion-menu content-id="main">
-        <ion-content>
+      <ng-template ngFor let-nav [ngForOf]="navigation">
+        <ion-list lines="none" *ngIf="!nav.devMode || nav.devMode && isDevModeEnabled()">
+          <ion-list-header mode="ios" *ngIf="nav.title">
+            <ion-label class="nav-label">{{nav.title}}</ion-label>
+          </ion-list-header>
+          <ion-menu-toggle autoHide="false" *ngFor="let p of nav.content">
+            <ion-item
+              [color]="p.color"
+              [detail]="false"
+              [routerDirection]="'root'"
+              [routerLink]="[p.url]"
+              [queryParams]="p.params"
+            >
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>{{p.title}}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ng-template>
+    </ion-content>
+  </ion-menu>
 
-            <div class="nav-header">
-                <img alt="SC Dahenfeld" src="assets/img/logo.png"/>
-                <br/>
-                <span>SC Dahenfeld</span>
-            </div>
-
-            <ng-template ngFor let-nav [ngForOf]="navigation">
-                <ion-list lines="none" *ngIf="!nav.devMode || nav.devMode && isDevModeEnabled()">
-                    <ion-list-header mode="ios" *ngIf="nav.title">
-                        <ion-label class="nav-label">{{nav.title}}</ion-label>
-                    </ion-list-header>
-                    <ion-menu-toggle autoHide="false" *ngFor="let p of nav.content">
-                        <ion-item [color]="p.color" [detail]="false"
-                                  [routerDirection]="'root'" [routerLink]="[p.url]" [queryParams]="p.params">
-                            <ion-icon slot="start" [name]="p.icon"></ion-icon>
-                            <ion-label>{{p.title}}</ion-label>
-                        </ion-item>
-                    </ion-menu-toggle>
-                </ion-list>
-            </ng-template>
-
-        </ion-content>
-    </ion-menu>
-
-    <!-- Content -->
-    <ion-router-outlet id="main"></ion-router-outlet>
-
+  <!-- Content -->
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

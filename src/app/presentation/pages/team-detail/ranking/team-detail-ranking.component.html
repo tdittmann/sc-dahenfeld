@@ -1,0 +1,13 @@
+<app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
+
+<div class="container ion-padding" *ngIf="ranking.length > 0">
+  <ion-segment (ionChange)="recalculateRanking($event)" value="total" mode="ios">
+    <ng-template ngFor let-rankingType [ngForOf]="rankingTypes">
+      <ion-segment-button [value]="rankingType.value">
+        <ion-label>{{ rankingType.label }}</ion-label>
+      </ion-segment-button>
+    </ng-template>
+  </ion-segment>
+
+  <app-ranking [teams]="ranking"></app-ranking>
+</div>

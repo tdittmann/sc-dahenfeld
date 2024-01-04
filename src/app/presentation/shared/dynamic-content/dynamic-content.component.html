@@ -1,0 +1,16 @@
+<ng-template ngFor let-content [ngForOf]="contents">
+  <app-card-container
+    *ngIf="content.type === 'card-list'"
+    [heading]="content.headline"
+    [subHeading]="content.subHeadline"
+  >
+    <app-list-item
+      *ngFor="let cardListValue of content.value"
+      [image]="cardListValue.image"
+      [icon]="cardListValue.icon"
+      [text1]="cardListValue.text1"
+      [text2]="cardListValue.text2"
+    >
+    </app-list-item>
+  </app-card-container>
+</ng-template>

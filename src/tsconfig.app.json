@@ -10,6 +10,7 @@
   ],
   "files": [
     "main.ts",
-    "polyfills.ts"
+    "polyfills.ts",
+    "zone-flags.ts"
   ]
 }

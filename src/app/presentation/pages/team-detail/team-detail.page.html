@@ -1,51 +1,46 @@
-<page-header noBorder="true" [title]="heading">
-
-    <ng-template [ngIf]="teamInformation && teamInformation.showSeasons && teamInformation.seasons.length > 0">
-        <ion-buttons slot="end">
-            <ion-select [value]="selectedSeason" okText="Auswählen" cancelText="Abbrechen"
-                        (ionChange)="changeSeason($event)">
-                <ion-select-option *ngFor="let season of teamInformation.seasons" [value]="season.projectId">
-                    {{season.name}}
-                </ion-select-option>
-            </ion-select>
-        </ion-buttons>
-    </ng-template>
-
-</page-header>
-<page-state [loading]="isLoading" [error]="isError"></page-state>
+<app-page-header noBorder="true" [title]="heading">
+  <ng-template
+    [ngIf]="teamInformation && teamInformation.showSeasons && teamInformation.seasons.length > 0"
+  >
+    <ion-buttons slot="end">
+      <ion-select
+        [value]="selectedSeason"
+        okText="Auswählen"
+        cancelText="Abbrechen"
+        (ionChange)="changeSeason($event)"
+      >
+        <ion-select-option
+          *ngFor="let season of teamInformation.seasons"
+          [value]="season.projectId"
+        >
+          {{ season.name }}
+        </ion-select-option>
+      </ion-select>
+    </ion-buttons>
+  </ng-template>
+</app-page-header>
+<app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 <ion-content color="light" *ngIf="teamInformation">
-    <ion-tabs>
+  <app-tabs activeTabUrlIdentifier="team-detail-tab">
+    <app-tab tabTitle="Übersicht" *ngIf="teamInformation?.overview.length > 0">
+      <app-dynamic-content [contents]="teamInformation?.overview"></app-dynamic-content>
+    </app-tab>
 
-        <ion-tab-bar slot="top">
+    <app-tab tabTitle="Tabelle" *ngIf="teamInformation?.showRanking">
+      <app-team-detail-ranking [projectId]="projectId"></app-team-detail-ranking>
+    </app-tab>
 
-            <ion-tab-button tab="article?heading={{heading}}&articleId={{teamInformation.articleId}}"
-                            *ngIf="teamInformation?.articleId">
-                <ion-label>Übersicht</ion-label>
-            </ion-tab-button>
+    <app-tab tabTitle="Spiele" *ngIf="teamInformation?.showFixture">
+      <app-team-detail-fixture [projectId]="projectId"></app-team-detail-fixture>
+    </app-tab>
 
-            <ion-tab-button tab="ranking?heading={{heading}}&articleId={{teamInformation.articleId}}"
-                            *ngIf="teamInformation?.showRanking">
-                <ion-label>Tabelle</ion-label>
-            </ion-tab-button>
+    <app-tab tabTitle="Kader" *ngIf="teamInformation?.showPlayers">
+      <app-team-detail-players [projectId]="projectId"></app-team-detail-players>
+    </app-tab>
 
-            <ion-tab-button tab="fixture?heading={{heading}}&articleId={{teamInformation.articleId}}"
-                            *ngIf="teamInformation?.showFixture">
-                <ion-label>Spielplan</ion-label>
-            </ion-tab-button>
-
-            <ion-tab-button tab="players?heading={{heading}}&articleId={{teamInformation.articleId}}"
-                            *ngIf="teamInformation?.showPlayers">
-                <ion-label>Kader</ion-label>
-            </ion-tab-button>
-
-            <ion-tab-button tab="statistics?heading={{heading}}&articleId={{teamInformation.articleId}}"
-                            *ngIf="teamInformation?.showStatistics">
-                <ion-label>Statistik</ion-label>
-            </ion-tab-button>
-
-        </ion-tab-bar>
-
-    </ion-tabs>
-
+    <app-tab tabTitle="Statistiken" *ngIf="teamInformation?.showStatistics">
+      <app-team-detail-statistics [projectId]="projectId"></app-team-detail-statistics>
+    </app-tab>
+  </app-tabs>
 </ion-content>

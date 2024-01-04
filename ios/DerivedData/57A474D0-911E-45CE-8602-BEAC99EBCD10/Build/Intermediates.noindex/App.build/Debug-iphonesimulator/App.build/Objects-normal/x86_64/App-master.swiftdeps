@@ -1,5 +1,0 @@
-version: "Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)"
-options: "91ce9331cb43f49d82a3a9ed548750e1"
-build_time: [1633960534, 611648000]
-inputs:
-  "/Users/tdit0703/IdeaProjects/sc-dahenfeld/ios/App/App/AppDelegate.swift": !dirty [1633614644, 273992545]

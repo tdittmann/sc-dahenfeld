@@ -1,35 +1,35 @@
-<page-header [title]="heading"></page-header>
-<page-state [loading]="isLoading" [error]="isError"></page-state>
+<app-page-header [title]="heading"></app-page-header>
+<app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 <ion-content color="light" *ngIf="calendarEntries.length > 0">
+  <ion-refresher slot="fixed" (ionRefresh)="loadCalendarEvents($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
-    <ion-refresher slot="fixed" (ionRefresh)="loadCalendarEvents($event)">
-        <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ng-template ngFor let-entry [ngForOf]="calendarEntries">
+          <h2 *ngIf="isDifferentDay(entry.start)">{{ entry.getFormattedStartDate() }}</h2>
 
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-                <ng-template ngFor let-entry [ngForOf]="calendarEntries">
-                    <h2 *ngIf="isDifferentDay(entry.start)">
-                        {{entry.getFormattedStartDate()}}
-                    </h2>
+          <app-match-card
+            *ngIf="entry.isMatch()"
+            [matchId]="entry.id"
+            [startDate]="entry.start"
+            [location]="entry.location"
+            [homeName]="entry.homeName"
+            [homeImage]="entry.homeImage"
+            [awayName]="entry.awayName"
+            [awayImage]="entry.awayImage"
+            [ageGroup]="entry.team"
+            [fixture]="entry.fixture"
+            (click)="openMatchDetail(entry.id)"
+          >
+          </app-match-card>
 
-                    <match-card *ngIf="entry.isMatch()" [matchId]="entry.id"
-                                [startDate]="entry.start" [location]="entry.location"
-                                [homeName]="entry.homeName" [homeImage]="entry.homeImage"
-                                [awayName]="entry.awayName" [awayImage]="entry.awayImage"
-                                [footerLeft]="entry.team" [footerRight]="entry.fixture">
-                    </match-card>
-
-                    <event-card *ngIf="entry.isEvent()"
-                                [event]="entry">
-                    </event-card>
-
-                </ng-template>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-
-
+          <app-event-card *ngIf="entry.isEvent()" [event]="entry"> </app-event-card>
+        </ng-template>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

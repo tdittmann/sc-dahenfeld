@@ -1,34 +1,33 @@
 export interface SportheimInfoJson {
-    /**
-     * An image to display.
-     */
-    image: string;
+  /**
+   * An image to display.
+   */
+  image: string;
 
-    /**
-     * General information.
-     */
-    content: string;
+  /**
+   * General information.
+   */
+  content: string;
 
-    /**
-     * Information about the owners.
-     */
-    owner: string;
+  /**
+   * Information about the owners.
+   */
+  owner: string;
 
-    /**
-     * The menues.
-     */
-    menues: SportheimMenuJson[];
+  /**
+   * The menues.
+   */
+  menues: SportheimMenuJson[];
 }
 
 export interface SportheimMenuJson {
+  /**
+   * Name of the menu.
+   */
+  name: string;
 
-    /**
-     * Name of the menu.
-     */
-    name: string;
-
-    /**
-     * Link of the menu.
-     */
-    link: string;
+  /**
+   * Link of the menu.
+   */
+  link: string;
 }

@@ -1,7 +1,5 @@
 export class VersionInfo {
-
-    platform: string;
-    url: string;
-    version: string;
-
+  platform: string;
+  url: string;
+  version: string;
 }

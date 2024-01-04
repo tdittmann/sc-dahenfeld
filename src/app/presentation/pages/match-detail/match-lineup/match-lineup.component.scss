@@ -1,0 +1,37 @@
+.no-data-container {
+  margin-top: 25%;
+  padding: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.no-data-icon {
+  font-size: 6rem;
+  color: #3c3c3c;
+}
+
+.captain {
+  border-top: 22px solid transparent;
+  bottom: 0;
+  display: block;
+  height: 0;
+  position: absolute;
+  top: auto;
+  width: 0;
+  border-right: 22px solid var(--ion-color-primary);
+  left: auto;
+  right: 0;
+  z-index: 3;
+}
+
+.captain span {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  top: -13px;
+  right: -20px;
+  left: auto;
+}

@@ -1,24 +1,22 @@
-<page-header [title]="heading"></page-header>
+<app-page-header [title]="heading"></app-page-header>
 
 <ion-content color="light">
-
+  <app-card-container heading="Mein Profil">
     <ion-item>
-        <ion-label>Push Token</ion-label>
-        <ion-input disabled [(ngModel)]="profile.pushToken"></ion-input>
+      <ion-label>Push Token</ion-label>
+      <ion-input disabled [(ngModel)]="profile.pushToken"></ion-input>
     </ion-item>
 
     <ion-item>
-        <ion-label>Name</ion-label>
-        <ion-input type="text" [(ngModel)]="profile.name"></ion-input>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="profile.name"></ion-input>
     </ion-item>
 
     <ion-item>
-        <ion-label>Push Notification Geburtstage</ion-label>
-        <ion-checkbox [(ngModel)]="profile.pushBirthdays"></ion-checkbox>
+      <ion-label>Push Notification Geburtstage</ion-label>
+      <ion-checkbox [(ngModel)]="profile.pushBirthdays"></ion-checkbox>
     </ion-item>
 
-    <ion-button expand="full" (click)="saveProfile()">
-        Speichern
-    </ion-button>
-
+    <ion-button (click)="saveProfile()"> Speichern </ion-button>
+  </app-card-container>
 </ion-content>

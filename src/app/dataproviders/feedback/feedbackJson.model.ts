@@ -1,11 +1,9 @@
 export interface FeedbackJson {
+  title: string;
 
-    title: string;
+  text: string;
 
-    text: string;
+  link: string;
 
-    link: string;
-
-    buttonText: string;
-
+  buttonText: string;
 }

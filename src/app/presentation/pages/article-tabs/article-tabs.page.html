@@ -1,20 +1,12 @@
-<page-header [title]="heading" noBorder="true"></page-header>
-<page-state [loading]="isLoading" [error]="isError"></page-state>
+<app-page-header [title]="heading" noBorder="true"></app-page-header>
+<app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 <ion-content color="light">
-
-    <ion-tabs #articleTabs>
-
-        <ion-tab-bar slot="top">
-
-            <ng-template ngFor let-article [ngForOf]="articles">
-                <ion-tab-button tab="article/{{article.id}}?heading={{heading}}">
-                    <ion-label>{{article.title}}</ion-label>
-                </ion-tab-button>
-            </ng-template>
-
-        </ion-tab-bar>
-
-    </ion-tabs>
-
+  <app-tabs *ngIf="articles.length > 0" activeTabUrlIdentifier="article-tabs-tab">
+    <ng-template ngFor let-article [ngForOf]="articles">
+      <app-tab [tabTitle]="article.title">
+        <app-article-detail [showHeader]="false" [article]="article"> </app-article-detail>
+      </app-tab>
+    </ng-template>
+  </app-tabs>
 </ion-content>

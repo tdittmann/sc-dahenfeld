@@ -1,32 +1,35 @@
-<ion-card mode="md" class="clickable no-margin-side">
+<ion-card mode="md" class="clickable no-margin-side" *ngIf="article">
+  <ng-template [ngIf]="type === 'large'">
+    <div
+      class="article-card-image article-card-image-large"
+      [ngStyle]="{'background-image' : article.getFirstImageAsBackgroundUrl()}"
+    ></div>
 
-    <ng-template [ngIf]="type === 'large'">
-        <div class="article-card-image article-card-image-large"
-             [ngStyle]="{'background-image' : article.getFirstImageAsBackgroundUrl()}">
-        </div>
+    <ion-card-header>
+      <ion-card-subtitle>{{article.categoryName}}</ion-card-subtitle>
+      <ion-card-title style="margin-top: 0">{{article.title}}</ion-card-title>
+    </ion-card-header>
+  </ng-template>
 
-        <ion-card-header>
+  <ng-template [ngIf]="type === 'small'">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <div
+            class="article-card-image"
+            style="height: 100px"
+            [ngStyle]="{'background-image' : article.getFirstImageAsBackgroundUrl()}"
+          ></div>
+        </ion-col>
+        <ion-col size="8">
+          <ion-card-header style="padding: 8px">
             <ion-card-subtitle>{{article.categoryName}}</ion-card-subtitle>
-            <ion-card-title style="margin-top: 0;">{{article.title}}</ion-card-title>
-        </ion-card-header>
-    </ng-template>
-
-    <ng-template [ngIf]="type === 'small'">
-        <ion-grid>
-            <ion-row>
-                <ion-col size="4">
-                    <div class="article-card-image" style="height: 100px"
-                         [ngStyle]="{'background-image' : article.getFirstImageAsBackgroundUrl()}">
-                    </div>
-                </ion-col>
-                <ion-col size="8">
-                    <ion-card-header style="padding: 8px;">
-                        <ion-card-subtitle>{{article.categoryName}}</ion-card-subtitle>
-                        <ion-card-title style="margin-top: 0; font-size: 14px;">{{article.title}}</ion-card-title>
-                    </ion-card-header>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ng-template>
-
+            <ion-card-title style="margin-top: 0; font-size: 14px"
+              >{{article.title}}</ion-card-title
+            >
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-template>
 </ion-card>

@@ -1,0 +1,21 @@
+<app-modal-header [title]="heading"></app-modal-header>
+
+<ion-content color="light" *ngIf="persons.length > 0">
+  <ion-searchbar [(ngModel)]="searchFilter" placeholder="Person suchen"></ion-searchbar>
+
+  <ion-list lines="none">
+    <ng-template
+      ngFor
+      let-person
+      [ngForOf]="persons | orderBy : filter : true | personFilter: searchFilter"
+    >
+      <app-list-item
+        [image]="person.image"
+        [text1]="person.name"
+        [text2]="person.position"
+        [note]="person[statisticsVariable][fieldVariable]"
+      >
+      </app-list-item>
+    </ng-template>
+  </ion-list>
+</ion-content>
