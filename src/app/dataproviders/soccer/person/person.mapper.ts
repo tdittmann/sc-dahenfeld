@@ -30,10 +30,13 @@ export class PersonMapper {
 
         const playerStatistic = new PersonStatistic();
         playerStatistic.matches = param.matches;
+        playerStatistic.matchesAsKeeper = param.matchesAsKeeper;
         playerStatistic.starting = param.starting;
         playerStatistic.goals = param.goals;
         playerStatistic.goalsAgainst = param.goalsAgainst;
+        playerStatistic.goalsAgainstAsKeeper = param.goalsAgainstAsKeeper;
         playerStatistic.matchesWithoutGoalsAgainst = param.matchesWithoutGoalsAgainst;
+        playerStatistic.matchesWithoutGoalsAgainstAsKeeper = param.matchesWithoutGoalsAgainstAsKeeper;
         playerStatistic.yellowCards = param.yellowCards;
         playerStatistic.yellowRedCards = param.yellowRedCards;
         playerStatistic.redCards = param.redCards;

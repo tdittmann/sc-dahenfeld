@@ -13,15 +13,11 @@
               [fixed]="false">
 
         <app-tab tabTitle="Saison">
-            <app-person-statistics [statistics]="person?.seasonStatistic"
-                                   [keeper]="person?.isKeeper()">
-            </app-person-statistics>
+            <app-person-statistics [statistics]="person?.seasonStatistic"></app-person-statistics>
         </app-tab>
 
         <app-tab tabTitle="Karriere">
-            <app-person-statistics [statistics]="person?.careerStatistic"
-                                   [keeper]="person?.isKeeper()">
-            </app-person-statistics>
+            <app-person-statistics [statistics]="person?.careerStatistic"></app-person-statistics>
         </app-tab>
 
     </app-tabs>

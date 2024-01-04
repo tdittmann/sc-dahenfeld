@@ -9,7 +9,6 @@ import {ProfileService} from './dataproviders/profile/profile.service';
 import {Profile} from './core/domain/profile.model';
 import {NavigationService} from './dataproviders/navigation/navigation.service';
 import {RootNavigation} from './core/domain/root-navigation.model';
-import {StatusBar, Style} from '@capacitor/status-bar';
 import {PushNotifications, Token} from '@capacitor/push-notifications';
 import {SplashScreen} from '@capacitor/splash-screen';
 import {Device, DeviceInfo} from '@capacitor/device';
@@ -98,17 +97,11 @@ export class AppComponent {
                     this.storageService.saveDarkMode(prefersDark);
                     if (prefersDark) {
                         document.body.classList.add('dark');
-                        if (Capacitor.isPluginAvailable('StatusBar')) {
-                            StatusBar.setStyle({style: Style.Dark});
-                        }
                     }
                 }
 
                 if (value) {
                     document.body.classList.add('dark');
-                    if (Capacitor.isPluginAvailable('StatusBar')) {
-                        StatusBar.setStyle({style: Style.Dark});
-                    }
                 }
             }
         )

@@ -9,6 +9,9 @@ import {PersonStatistic} from '../../../../core/domain/personStatistic.model';
 export class PersonStatisticsComponent {
 
     @Input() statistics: PersonStatistic;
-    @Input() keeper = false;
+
+    numberWithThousandSeparator(number) {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    }
 
 }

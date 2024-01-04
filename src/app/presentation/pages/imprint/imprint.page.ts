@@ -6,7 +6,6 @@ import {StorageService} from '../../../dataproviders/storage.service';
 import {Capacitor} from '@capacitor/core';
 import {ActivatedRoute} from '@angular/router';
 import {ProfileService} from '../../../dataproviders/profile/profile.service';
-import {StatusBar, Style} from '@capacitor/status-bar';
 import {App} from '@capacitor/app';
 
 @Component({
@@ -87,14 +86,8 @@ export class ImprintPage implements OnInit {
     toggleDarkMode() {
         if (this.darkMode) {
             document.body.classList.add('dark');
-            if (Capacitor.isPluginAvailable('StatusBar')) {
-                StatusBar.setStyle({style: Style.Dark});
-            }
         } else {
             document.body.classList.remove('dark');
-            if (Capacitor.isPluginAvailable('StatusBar')) {
-                StatusBar.setStyle({style: Style.Light});
-            }
         }
 
         this.storageService.saveDarkMode(this.darkMode);

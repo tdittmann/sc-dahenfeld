@@ -31,13 +31,16 @@ describe('PersonMapper', () => {
                 redCards: 0,
                 goals: 4,
                 matches: 27,
+                matchesAsKeeper: 26,
                 starting: 26,
                 cameIn: 1,
                 cameOut: 7,
                 playingMinutes: 2302,
                 statistic_hint: 'Season 12/13',
                 goalsAgainst: 8,
-                matchesWithoutGoalsAgainst: 9
+                goalsAgainstAsKeeper: 7,
+                matchesWithoutGoalsAgainst: 10,
+                matchesWithoutGoalsAgainstAsKeeper: 10,
             },
             careerStats: {
                 yellowCards: 24,
@@ -45,13 +48,16 @@ describe('PersonMapper', () => {
                 redCards: 0,
                 goals: 64,
                 matches: 160,
+                matchesAsKeeper: 159,
                 starting: 159,
                 cameIn: 1,
                 cameOut: 14,
                 playingMinutes: 14133,
                 statistic_hint: 'Since 11/12',
                 goalsAgainst: 8,
-                matchesWithoutGoalsAgainst: 9
+                goalsAgainstAsKeeper: 7,
+                matchesWithoutGoalsAgainst: 9,
+                matchesWithoutGoalsAgainstAsKeeper: 10,
             }
         };
 
@@ -61,13 +67,16 @@ describe('PersonMapper', () => {
         expectedSeasonStats.redCards = 0;
         expectedSeasonStats.goals = 4;
         expectedSeasonStats.matches = 27;
+        expectedSeasonStats.matchesAsKeeper = 26;
         expectedSeasonStats.starting = 26;
         expectedSeasonStats.cameIn = 1;
         expectedSeasonStats.cameOut = 7;
         expectedSeasonStats.playingMinutes = 2302;
         expectedSeasonStats.statisticHint = 'Season 12/13';
         expectedSeasonStats.goalsAgainst = 8;
+        expectedSeasonStats.goalsAgainstAsKeeper = 7;
         expectedSeasonStats.matchesWithoutGoalsAgainst = 9;
+        expectedSeasonStats.matchesWithoutGoalsAgainstAsKeeper = 10;
 
         const expectedCareerStats = new PersonStatistic();
         expectedCareerStats.yellowCards = 24;
@@ -75,13 +84,16 @@ describe('PersonMapper', () => {
         expectedCareerStats.redCards = 0;
         expectedCareerStats.goals = 64;
         expectedCareerStats.matches = 160;
+        expectedCareerStats.matchesAsKeeper = 159;
         expectedCareerStats.starting = 159;
         expectedCareerStats.cameIn = 1;
         expectedCareerStats.cameOut = 14;
         expectedCareerStats.playingMinutes = 14133;
         expectedCareerStats.statisticHint = 'Since 11/12';
         expectedCareerStats.goalsAgainst = 8;
+        expectedCareerStats.goalsAgainstAsKeeper = 7;
         expectedCareerStats.matchesWithoutGoalsAgainst = 9;
+        expectedCareerStats.matchesWithoutGoalsAgainstAsKeeper = 10;
 
         const expected: Person = new Person();
         expected.id = 1;

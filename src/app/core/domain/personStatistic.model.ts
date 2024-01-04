@@ -6,6 +6,11 @@ export class PersonStatistic {
     matches: number;
 
     /**
+     * Number of played matches as keeper.
+     */
+    matchesAsKeeper: number;
+
+    /**
      * Number of matches the player starts.
      */
     starting: number;
@@ -16,14 +21,24 @@ export class PersonStatistic {
     goals: number;
 
     /**
-     * Goals the person got against him when he was goalkeeper.
+     * Goals the person got against him.
      */
     goalsAgainst: number;
+
+    /**
+     * Goals the person got against him when he was goalkeeper.
+     */
+    goalsAgainstAsKeeper: number;
 
     /**
      * Number of matches without any goals against when the player was goalkeeper.
      */
     matchesWithoutGoalsAgainst: number;
+
+    /**
+     * Number of matches without any goals against.
+     */
+    matchesWithoutGoalsAgainstAsKeeper: number;
 
     /**
      * Number of yellow cards.
