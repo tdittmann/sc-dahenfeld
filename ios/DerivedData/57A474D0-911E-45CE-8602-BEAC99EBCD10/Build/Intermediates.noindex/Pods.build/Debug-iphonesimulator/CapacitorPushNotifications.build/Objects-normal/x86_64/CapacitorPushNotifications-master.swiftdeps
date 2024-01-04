@@ -1,6 +1,0 @@
-version: "Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)"
-options: "aecd36e2a8987fa6ba4d0fbe7f63fd0a"
-build_time: [1633960531, 356502000]
-inputs:
-  "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/push-notifications/ios/Plugin/PushNotificationsHandler.swift": [499162500, 0]
-  "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/push-notifications/ios/Plugin/PushNotificationsPlugin.swift": [499162500, 0]
