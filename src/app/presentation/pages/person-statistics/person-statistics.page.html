@@ -1,15 +1,15 @@
-<page-header [title]="heading"></page-header>
-<page-state [loading]="isLoading" [error]="isError"></page-state>
+<app-page-header [title]="heading"></app-page-header>
+<app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 <ion-content color="light" class="ion-no-padding" *ngIf="persons.length > 0">
-
-    <ng-template ngFor let-stat [ngForOf]="statistics">
-        <statistics-card [persons]="persons"
-                         [heading]="stat.heading"
-                         [statisticFilter]="stat.filter"
-                         (click)="openStatisticsModal(stat)"
-                         class="clickable">
-        </statistics-card>
-    </ng-template>
-
+  <ng-template ngFor let-stat [ngForOf]="statistics">
+    <app-statistics-card
+      [persons]="persons"
+      [heading]="stat.heading"
+      [statisticFilter]="stat.filter"
+      (click)="openStatisticsModal(stat)"
+      class="clickable"
+    >
+    </app-statistics-card>
+  </ng-template>
 </ion-content>

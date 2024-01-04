@@ -1,10 +1,9 @@
 <!-- Image -->
 <div class="image" *ngIf="showHeader">
-    <article-image-meta [article]="article"
-                        [showOnlyTitle]="showOnlyTitle">
-    </article-image-meta>
+  <app-article-image-meta [article]="article" [showOnlyTitle]="showOnlyTitle">
+  </app-article-image-meta>
 </div>
 
 <div class="container">
-    <div class="ion-padding article-content ion-margin-bottom" [innerHTML]="articleContent"></div>
+  <div class="ion-padding article-content ion-margin-bottom" [innerHTML]="articleContent"></div>
 </div>

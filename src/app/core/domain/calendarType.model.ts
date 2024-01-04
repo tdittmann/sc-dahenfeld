@@ -1,5 +1,4 @@
 export enum CalendarType {
-
-    MATCH, EVENT
-
+  MATCH,
+  EVENT,
 }

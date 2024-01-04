@@ -1,26 +1,19 @@
-import {Component, Input, ViewEncapsulation} from '@angular/core';
-import {Article} from '../../../../core/domain/article.model';
-import {Router} from '@angular/router';
-import SwiperCore, {Autoplay} from 'swiper';
-
-SwiperCore.use([Autoplay]);
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Article } from '../../../../core/domain/article.model';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: 'article-slider',
-    templateUrl: 'article-slider.component.html',
-    styleUrls: ['article-slider.component.scss'],
-    encapsulation: ViewEncapsulation.None
+  selector: 'app-article-slider',
+  templateUrl: 'article-slider.component.html',
+  styleUrls: ['article-slider.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ArticleSliderComponent {
+  @Input() articles: Article[] = [];
 
-    @Input() articles: Article[] = [];
+  constructor(private router: Router) {}
 
-    constructor(private router: Router) {
-
-    }
-
-    public goToArticleDetail(article: Article) {
-        this.router.navigate([article.getArticleLink()]);
-    }
-
+  public goToArticleDetail(article: Article) {
+    this.router.navigate([article.getArticleLink()]);
+  }
 }

@@ -1,8 +1,6 @@
 export interface ProfileJson {
-
-    pushToken: string;
-    name: string;
-    pushBirthdays: boolean;
-    os: string;
-
+  pushToken: string;
+  name: string;
+  pushBirthdays: boolean;
+  os: string;
 }

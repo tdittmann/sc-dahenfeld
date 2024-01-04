@@ -1,40 +1,40 @@
-<page-header [title]="heading"></page-header>
+<app-page-header [title]="heading"></app-page-header>
 
 <ion-content color="light">
+  <div class="ion-text-center ion-padding-top">
+    <p>
+      <strong>SC Dahenfeld 1946 e.V.</strong><br />
+      Ganzhornstraße 109<br />
+      74172 Neckarsulm
+    </p>
+  </div>
 
-    <div class="ion-text-center ion-padding-top">
-        <p>
-            <strong>SC Dahenfeld 1946 e.V.</strong><br/>
-            Ganzhornstraße 109<br/>
-            74172 Neckarsulm
-        </p>
-    </div>
-
+  <app-card-container
+    heading="Die SCD-App"
+    subHeading="Unser Dorf - Unser Verein - Unsere Leidenschaft"
+  >
     <ion-item-group>
-        <ion-item button [detail]="false">
-            <ion-label>App-Version</ion-label>
-            <p item-right>{{ version }}</p>
-        </ion-item>
-        <ion-item button [detail]="false" (click)="activateDevMode()">
-            <ion-label>Design und Entwicklung</ion-label>
-            <p item-right>{{ developer }}</p>
-        </ion-item>
-        <ion-item *ngIf="showDevModePasswordInput">
-            <ion-label>Dev-Mode Passwort</ion-label>
-            <ion-input [(ngModel)]="devModePassword" type="password" item-right></ion-input>
-            <ion-button item-right (click)="validateDevModePassword()">Validieren</ion-button>
-        </ion-item>
-        <ion-item>
-            <ion-label>Dark Mode</ion-label>
-            <ion-toggle [(ngModel)]="darkMode" (ionChange)="toggleDarkMode()"></ion-toggle>
-        </ion-item>
+      <app-list-item text1="App-Version" [note]="version"> </app-list-item>
+
+      <app-list-item text1="Design und Entwicklung" [note]="developer" (click)="activateDevMode()">
+      </app-list-item>
+
+      <ion-item *ngIf="showDevModePasswordInput">
+        <ion-label>Dev-Mode Passwort</ion-label>
+        <div slot="end">
+          <ion-input [(ngModel)]="devModePassword" type="password"></ion-input>
+          <ion-button (click)="validateDevModePassword()">Validieren</ion-button>
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Dark Mode</ion-label>
+        <ion-toggle [(ngModel)]="darkMode" (ionChange)="toggleDarkMode()"></ion-toggle>
+      </ion-item>
     </ion-item-group>
+  </app-card-container>
 
-    <div class="ion-text-center ion-margin-top" *ngIf="isDevModeEnabled()">
-        <ion-button (click)="deactivateDevMode()">
-            Entwickler-Modus deaktivieren
-        </ion-button>
-    </div>
-
-
+  <div class="ion-text-center ion-margin-top" *ngIf="isDevModeEnabled()">
+    <ion-button (click)="deactivateDevMode()"> Entwickler-Modus deaktivieren </ion-button>
+  </div>
 </ion-content>

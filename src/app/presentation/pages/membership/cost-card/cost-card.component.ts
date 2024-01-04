@@ -1,14 +1,12 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'cost-card',
-    templateUrl: 'cost-card.component.html',
-    styleUrls: ['cost-card.component.scss']
+  selector: 'app-cost-card',
+  templateUrl: 'cost-card.component.html',
+  styleUrls: ['cost-card.component.scss'],
 })
 export class CostCardComponent {
-
-    @Input() title: string;
-    @Input() content: string;
-    @Input() footer: string;
-
+  @Input() title: string;
+  @Input() content: string;
+  @Input() footer: string;
 }

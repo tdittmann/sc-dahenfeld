@@ -1,0 +1,19 @@
+<app-card-container [heading]="heading">
+  <ion-spinner name="dots" *ngIf="!persons"></ion-spinner>
+
+  <ion-list *ngIf="persons" lines="none">
+    <ng-template
+      ngFor
+      let-person
+      [ngForOf]="persons | orderBy : statisticFilter : true | slice: 0: 3"
+    >
+      <app-list-item
+        [image]="person.image"
+        [text1]="person.name"
+        [text2]="person.position"
+        [note]="person[statisticsVariable][fieldVariable]"
+      >
+      </app-list-item>
+    </ng-template>
+  </ion-list>
+</app-card-container>

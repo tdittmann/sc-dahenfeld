@@ -1,0 +1,19 @@
+<app-page-state
+  [loading]="isLoading"
+  [error]="isError"
+  [errorMessage]="errorMessage"
+></app-page-state>
+
+<div class="container" *ngIf="players.size > 0">
+  <app-card-container *ngFor="let map of players | keyvalue: returnZero" [heading]="map.key">
+    <app-list-item
+      *ngFor="let player of map.value"
+      [text1]="player.name"
+      [image]="player.image"
+      [note]="player.jerseynumber"
+      noteSize="large"
+      (click)="openPlayer(player.id)"
+    >
+    </app-list-item>
+  </app-card-container>
+</div>

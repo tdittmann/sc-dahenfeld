@@ -1,0 +1,51 @@
+<ng-template [ngIf]="statistics">
+  <app-card-container heading="Allgemein" [subHeading]="statistics.statisticHint">
+    <app-list-item text1="Spiele" [note]="statistics.matches"></app-list-item>
+    <app-list-item text1="Spiele in der Startelf" [note]="statistics.starting"></app-list-item>
+    <app-list-item
+      text1="Spielminuten"
+      [note]="numberWithThousandSeparator(statistics.playingMinutes)"
+    >
+    </app-list-item>
+    <app-list-item text1="Einwechslungen" [note]="statistics.cameIn"></app-list-item>
+    <app-list-item text1="Auswechslungen" [note]="statistics.cameOut"></app-list-item>
+  </app-card-container>
+
+  <app-card-container heading="Disziplin" [subHeading]="statistics.statisticHint">
+    <app-list-item text1="Gelbe Karten" [note]="statistics.yellowCards"></app-list-item>
+    <app-list-item text1="Gelb-Rote Karten" [note]="statistics.yellowRedCards"></app-list-item>
+    <app-list-item text1="Rote Karten" [note]="statistics.redCards"></app-list-item>
+  </app-card-container>
+
+  <app-card-container heading="Defensive" [subHeading]="statistics.statisticHint">
+    <app-list-item
+      *ngIf="statistics.matchesAsKeeper > 0"
+      text1="Spiele als Torhüter"
+      [note]="statistics.matchesAsKeeper"
+    >
+    </app-list-item>
+
+    <app-list-item text1="Spiele ohne Gegentore" [note]="statistics.matchesWithoutGoalsAgainst">
+    </app-list-item>
+
+    <app-list-item
+      *ngIf="statistics.matchesAsKeeper > 0"
+      text1="Spiele ohne Gegentore als Torhüter"
+      [note]="statistics.matchesWithoutGoalsAgainstAsKeeper"
+    >
+    </app-list-item>
+
+    <app-list-item text1="Erhaltene Gegentore" [note]="statistics.goalsAgainst"> </app-list-item>
+
+    <app-list-item
+      *ngIf="statistics.matchesAsKeeper > 0"
+      text1="Erhaltene Gegentore als Torhüter"
+      [note]="statistics.goalsAgainstAsKeeper"
+    >
+    </app-list-item>
+  </app-card-container>
+
+  <app-card-container heading="Angriff" [subHeading]="statistics.statisticHint">
+    <app-list-item text1="Tore" [note]="statistics.goals"></app-list-item>
+  </app-card-container>
+</ng-template>

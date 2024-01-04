@@ -1,7 +1,5 @@
 export interface VersionInfoJson {
-
-    platform: string;
-    version: string;
-    url: string;
-
+  platform: string;
+  version: string;
+  url: string;
 }

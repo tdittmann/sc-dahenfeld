@@ -1,0 +1,60 @@
+app-tabs {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+
+  .tab-nav {
+    display: flex;
+    position: relative;
+    font-size: 0.75rem;
+    background: var(
+      --ion-card-background,
+      var(--ion-item-background, var(--ion-background-color, #fff))
+    );
+    width: 100%;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+  }
+
+  .fixed {
+    position: fixed;
+    z-index: 1;
+  }
+
+  .col {
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--ion-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    &.active {
+      color: var(--ion-color-primary);
+      border-bottom: 1px solid var(--ion-color-primary);
+    }
+  }
+
+  .tab-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .tab-content-fixed app-tab {
+    margin-top: 51px;
+  }
+}

@@ -1,18 +1,14 @@
-<page-header [title]="heading"></page-header>
-<page-state [loading]="isLoading" [error]="isError"></page-state>
+<app-page-header [title]="heading"></app-page-header>
+<app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 <ion-content color="light" *ngIf="feedback">
+  <div class="container ion-padding">
+    <h1>{{feedback.title}}</h1>
 
-    <div class="container ion-padding">
+    <div [innerHTML]="feedback.text"></div>
 
-        <h1>{{feedback.title}}</h1>
-
-        <div [innerHTML]="feedback.text"></div>
-
-        <ion-button expand="full" (click)="navigateToExternalUrl(feedback.link)">
-            {{feedback.buttonText}}
-        </ion-button>
-
-    </div>
-
+    <ion-button expand="full" (click)="navigateToExternalUrl(feedback.link)">
+      {{feedback.buttonText}}
+    </ion-button>
+  </div>
 </ion-content>

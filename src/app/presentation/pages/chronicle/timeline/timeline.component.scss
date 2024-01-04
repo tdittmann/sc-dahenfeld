@@ -7,7 +7,7 @@
 
 // The actual timeline (the vertical ruler)
 .timeline-container::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 6px;
   background-color: var(--ion-color-medium);
@@ -26,7 +26,7 @@
 
 // The circles on the timeline
 .timeline-card::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
@@ -128,7 +128,8 @@
   }
 
   // Make sure all circles are at the same spot
-  .left::after, .right::after {
+  .left::after,
+  .right::after {
     left: 15px;
   }
 

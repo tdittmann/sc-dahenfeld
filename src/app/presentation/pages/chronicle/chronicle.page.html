@@ -1,13 +1,11 @@
-<page-header [title]="heading"></page-header>
-<page-state [loading]="isLoading" [error]="isError"></page-state>
+<app-page-header [title]="heading"></app-page-header>
+<app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 <ion-content color="light" *ngIf="timeLineEntries.length > 0">
+  <div class="chronicle-wrapper">
+    <h1>{{ title }}</h1>
+    <p class="leader">{{ subTitle }}</p>
 
-    <div class=chronicle-wrapper>
-        <h1>{{ title }}</h1>
-        <p class="leader">{{ subTitle }}</p>
-
-        <timeline [timelineEntries]="timeLineEntries"></timeline>
-    </div>
-
+    <app-timeline [timelineEntries]="timeLineEntries"></app-timeline>
+  </div>
 </ion-content>

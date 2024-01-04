@@ -1,77 +1,60 @@
 import * as moment from 'moment';
-import {Moment} from 'moment';
+import { Moment } from 'moment';
 
 export class DateUtils {
-
-    public static diffYears(pDate: Moment): number {
-        if (!pDate) {
-            return undefined;
-        }
-
-        return moment()
-            .startOf('day')
-            .diff(pDate, 'years');
+  public static diffYears(pDate: Moment): number {
+    if (!pDate) {
+      return undefined;
     }
 
-    public static diffDays(pDate: Moment): number {
-        if (!pDate) {
-            return undefined;
-        }
+    return moment().startOf('day').diff(pDate, 'years');
+  }
 
-        return Math.abs(moment()
-            .startOf('day')
-            .diff(pDate, 'days'));
+  public static diffDays(pDate: Moment): number {
+    if (!pDate) {
+      return undefined;
     }
 
-    public static ofIsoDate(pDate: string): Moment {
-        if (!pDate) {
-            return undefined;
-        }
+    return Math.abs(moment().startOf('day').diff(pDate, 'days'));
+  }
 
-        return this.ofPattern(pDate, 'YYYY-MM-DD');
+  public static ofIsoDate(pDate: string): Moment {
+    if (!pDate) {
+      return undefined;
     }
 
-    public static ofPattern(pDate: string, pFormat: string): Moment {
-        if (!pDate || !pFormat) {
-            return undefined;
-        }
+    return this.ofPattern(pDate, 'YYYY-MM-DD');
+  }
 
-        return moment(pDate, pFormat)
-            .locale('de');
+  public static ofPattern(pDate: string, pFormat: string): Moment {
+    if (!pDate || !pFormat) {
+      return undefined;
     }
 
-    public static ofUnixTimestampString(pDate: string): Moment {
-        if (!pDate) {
-            return undefined;
-        }
+    return moment(pDate, pFormat).locale('de');
+  }
 
-        return this.ofUnixTimestampNumber(parseInt(pDate, 10));
+  public static ofUnixTimestampString(pDate: string): Moment {
+    if (!pDate) {
+      return undefined;
     }
 
-    public static ofUnixTimestampNumber(pDate: number): Moment {
-        if (!pDate) {
-            return undefined;
-        }
+    return this.ofUnixTimestampNumber(parseInt(pDate, 10));
+  }
 
-        return this.ofDate(new Date(pDate));
+  public static ofUnixTimestampNumber(pDate: number): Moment {
+    if (!pDate) {
+      return undefined;
     }
 
-    public static ofDate(pDate: Date): Moment {
-        if (!pDate) {
-            return undefined;
-        }
+    return this.ofDate(new Date(pDate));
+  }
 
-        return moment(pDate)
-            .locale('de');
+  public static ofDate(pDate: Date): Moment {
+    if (!pDate) {
+      return undefined;
     }
 
-    public static of(pAny): Moment {
-        if (!pAny) {
-            return undefined;
-        }
-
-        return moment(pAny)
-            .locale('de');
-    }
-
+    return moment(pDate).locale('de');
+  }
 }

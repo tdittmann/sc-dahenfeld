@@ -1,8 +1,0 @@
-version: "Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)"
-options: "1d456e40631de2879b6f597a063e7c36"
-build_time: [1633960531, 355352000]
-inputs:
-  "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/splash-screen/ios/Plugin/SplashScreen.swift": [499162500, 0]
-  "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/splash-screen/ios/Plugin/SplashScreenConfig.swift": [499162500, 0]
-  "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/splash-screen/ios/Plugin/SplashScreenPlugin.swift": [499162500, 0]
-  "/Users/tdit0703/IdeaProjects/sc-dahenfeld/node_modules/@capacitor/splash-screen/ios/Plugin/SplashScreenSettings.swift": [499162500, 0]

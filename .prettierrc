@@ -1,0 +1,25 @@
+{
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "printWidth": 140,
+        "singleQuote": true,
+        "semi": true,
+        "tabWidth": 2,
+        "bracketSpacing": true,
+        "trailingComma": "all"
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "html",
+        "singleQuote": false,
+        "printWidth": 100,
+        "tabWidth": 2,
+        "bracketSameLine": false
+      }
+    }
+  ]
+}

@@ -10,6 +10,8 @@ a {
 .btn-block {
   padding-left: 0;
   padding-right: 0;
+  display: block;
+  width: 100%;
 }
 
 .btn-outline {
@@ -43,9 +45,4 @@ a {
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
 }

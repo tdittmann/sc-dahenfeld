@@ -1,0 +1,18 @@
+<app-page-state
+  [loading]="isLoading"
+  [error]="isError"
+  [errorMessage]="errorMessage"
+></app-page-state>
+
+<div class="container" *ngIf="statistics.length > 0">
+  <ng-template ngFor let-stat [ngForOf]="statistics">
+    <app-statistics-card
+      [persons]="persons"
+      [heading]="stat.heading"
+      [statisticFilter]="stat.filter"
+      (click)="openStatisticsModal(stat)"
+      class="clickable"
+    >
+    </app-statistics-card>
+  </ng-template>
+</div>

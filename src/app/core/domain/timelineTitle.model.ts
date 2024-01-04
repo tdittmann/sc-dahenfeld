@@ -1,6 +1,4 @@
 export interface TimelineTitle {
-
-    title: string;
-    subTitle: string;
-
+  title: string;
+  subTitle: string;
 }

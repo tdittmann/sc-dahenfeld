@@ -1,17 +1,11 @@
-import {Component, Input} from '@angular/core';
-import {TimelineEntry} from '../../../../core/domain/timeline-entry.model';
+import { Component, Input } from '@angular/core';
+import { TimelineEntry } from '../../../../core/domain/timeline-entry.model';
 
 @Component({
-    selector: 'timeline',
-    templateUrl: 'timeline.component.html',
-    styleUrls: ['timeline.component.scss']
+  selector: 'app-timeline',
+  templateUrl: 'timeline.component.html',
+  styleUrls: ['timeline.component.scss'],
 })
 export class TimelineComponent {
-
-    @Input() timelineEntries: TimelineEntry[] = [];
-
-    constructor() {
-
-    }
-
+  @Input() timelineEntries: TimelineEntry[] = [];
 }
