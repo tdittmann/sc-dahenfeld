@@ -1,7 +1,10 @@
 import {TeamInformationJson, TeamInformationSeasonJson} from './teamInformationJson.model';
 import {TeamInformation, TeamInformationSeason} from '../../core/domain/teamInformation.model';
+import {DynamicContentMapper} from '../dynamic-content/dynamic-content.mapper';
 
 export class TeamInformationMapper {
+
+    private _dynamicContentMapper = new DynamicContentMapper();
 
     mapFrom(param: TeamInformationJson): TeamInformation {
         if (!param) {
@@ -16,10 +19,13 @@ export class TeamInformationMapper {
         teamInformation.showStatistics = param.showStatistics;
         teamInformation.showSeasons = param.showSeasons;
         teamInformation.articleId = param.articleId;
+        if (param.overview) {
+            teamInformation.overview = param.overview.map(value => this._dynamicContentMapper.mapFrom(value));
+        }
 
         if (param.seasons) {
-            for (let i = 0; i < param.seasons.length; i++) {
-                teamInformation.seasons.push(this.mapFromSeason(param.seasons[i]));
+            for (const element of param.seasons) {
+                teamInformation.seasons.push(this.mapFromSeason(element));
             }
 
             // Now order seasons descending by name

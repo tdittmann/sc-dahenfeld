@@ -1,3 +1,5 @@
+import {DynamicContent} from './dynamic-content/dynamic-content.model';
+
 export class TeamInformation {
 
     name: string;
@@ -8,6 +10,7 @@ export class TeamInformation {
     showSeasons: boolean;
     articleId: string;
     seasons: TeamInformationSeason[] = [];
+    overview: DynamicContent[] = [];
 
 }
 

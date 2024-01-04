@@ -1,0 +1,20 @@
+<ion-item mode="md" [type]="type">
+
+    <ion-avatar slot="start" *ngIf="image || icon">
+        <ion-img *ngIf="image" [src]="image" [alt]="text1"></ion-img>
+        <ion-icon *ngIf="icon" [icon]="icon" size="large"></ion-icon>
+    </ion-avatar>
+
+    <ion-label>
+        <span [ngClass]="getText1Class()">{{ text1 }}</span>
+        <p *ngIf="text2">{{ text2 }}</p>
+    </ion-label>
+
+    <ion-note *ngIf="showNote()"
+              [ngClass]="getNoteClass()"
+              slot="end">
+        {{ note }}
+    </ion-note>
+
+    <ng-content></ng-content>
+</ion-item>

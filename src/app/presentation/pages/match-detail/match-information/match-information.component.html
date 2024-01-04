@@ -1,26 +1,20 @@
 <app-card-container heading="Informationen">
 
-    <ion-item lines="none" *ngIf="date">
-        <ion-icon aria-hidden="true" name="time-outline" slot="start"></ion-icon>
-        <ion-label>
-            <strong>Anpfiff</strong>
-            <p>{{ date }}</p>
-        </ion-label>
-    </ion-item>
+    <app-list-item *ngIf="date"
+                   icon="time-outline"
+                   text1="Anpfiff"
+                   [text2]="date">
+    </app-list-item>
 
-    <ion-item lines="none" *ngIf="location">
-        <ion-icon aria-hidden="true" name="location-outline" slot="start"></ion-icon>
-        <ion-label>
-            <strong>Ort</strong>
-            <p>{{ location }}</p>
-        </ion-label>
-    </ion-item>
+    <app-list-item *ngIf="location"
+                   icon="location-outline"
+                   text1="Ort"
+                   [text2]="location">
+    </app-list-item>
 
-    <ion-item lines="none" *ngIf="fixture">
-        <ion-icon aria-hidden="true" name="clipboard-outline" slot="start"></ion-icon>
-        <ion-label>
-            <strong>{{ fixture }}</strong>
-        </ion-label>
-    </ion-item>
+    <app-list-item *ngIf="fixture"
+                   icon="clipboard-outline"
+                   [text1]="fixture">
+    </app-list-item>
 
 </app-card-container>

@@ -6,18 +6,9 @@
     <app-card-container heading="Custom Backend Call"
                         subHeading="Only for testing purposes">
 
-        <ion-item>
-            <ion-label>URL</ion-label>
-            <ion-note slot="end">{{ backendUrl }}</ion-note>
-        </ion-item>
-        <ion-item>
-            <ion-label>Nachricht</ion-label>
-            <ion-note slot="end">{{ message }}</ion-note>
-        </ion-item>
-        <ion-item>
-            <ion-label>Antwort</ion-label>
-            <ion-note slot="end">{{ result | json }}</ion-note>
-        </ion-item>
+        <app-list-item text1="URL" [note]="backendUrl" noteSize="small"></app-list-item>
+        <app-list-item text1="Nachricht" [note]="message" noteSize="small"></app-list-item>
+        <app-list-item text1="Antwort" [note]="result | json" noteSize="small"></app-list-item>
 
     </app-card-container>
 

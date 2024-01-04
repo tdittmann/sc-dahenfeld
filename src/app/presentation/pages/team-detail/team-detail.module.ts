@@ -22,7 +22,7 @@ import {TeamDetailStatisticsComponent} from './statistics/team-detail-statistics
 import {FormsModule} from '@angular/forms';
 import {TeamDetailStatisticsModalComponent} from './statistics/statistics-modal/team-detail-statistics-modal.component';
 import {PersonFilter} from './statistics/statistics-modal/person.filter';
-import {StatisticsItemModule} from '../../shared/statistics-item/statistics-item.module';
+import {DynamicContentModule} from '../../shared/dynamic-content/dynamic-content.module';
 
 @NgModule({
     providers: [
@@ -42,7 +42,7 @@ import {StatisticsItemModule} from '../../shared/statistics-item/statistics-item
         PersonModule,
         StatisticsCardModule,
         ModalHeaderModule,
-        StatisticsItemModule,
+        DynamicContentModule,
         RouterModule.forChild([
             {
                 path: '',

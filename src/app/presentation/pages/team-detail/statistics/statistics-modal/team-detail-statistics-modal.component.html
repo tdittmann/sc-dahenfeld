@@ -7,9 +7,11 @@
     <ion-list lines="none">
         <ng-template ngFor let-person [ngForOf]="persons | orderBy : filter : true | personFilter: searchFilter">
 
-            <statistics-item [person]="person"
-                             [filter]="filter">
-            </statistics-item>
+            <app-list-item [image]="person.image"
+                           [text1]="person.name"
+                           [text2]="person.position"
+                           [note]="person[statisticsVariable][fieldVariable]">
+            </app-list-item>
 
         </ng-template>
     </ion-list>

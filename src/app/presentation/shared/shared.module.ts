@@ -8,6 +8,7 @@ import {TabsComponent} from './tabs/tabs/tabs.component';
 import {TabComponent} from './tabs/tab/tab.component';
 import {RouterModule} from '@angular/router';
 import {OrderPipe} from './order-pipe/order.pipe';
+import {ListItemComponent} from './list-item/list-item.component';
 
 @NgModule({
     providers: [
@@ -20,6 +21,7 @@ import {OrderPipe} from './order-pipe/order.pipe';
     ],
     declarations: [
         CardContainerComponent,
+        ListItemComponent,
         PageHeaderComponent,
         PageStateComponent,
         TabsComponent,
@@ -28,6 +30,7 @@ import {OrderPipe} from './order-pipe/order.pipe';
     ],
     exports: [
         CardContainerComponent,
+        ListItemComponent,
         PageHeaderComponent,
         PageStateComponent,
         TabsComponent,

@@ -1,6 +1,8 @@
 import {TeamInformationMapper} from './teamInformation.mapper';
 import {TeamInformationJson, TeamInformationSeasonJson} from './teamInformationJson.model';
 import {TeamInformation, TeamInformationSeason} from '../../core/domain/teamInformation.model';
+import {DynamicContent} from '../../core/domain/dynamic-content/dynamic-content.model';
+import {CardListValue} from '../../core/domain/dynamic-content/card-list-value.model';
 
 describe('TeamInformationMapper', () => {
 
@@ -28,7 +30,15 @@ describe('TeamInformationMapper', () => {
             showStatistics: false,
             showSeasons: true,
             articleId: '123',
-            seasons: actualSeasons
+            seasons: actualSeasons,
+            overview: [
+                {
+                    headline: 'Test-Headline',
+                    subHeadline: 'Sub-Headline',
+                    type: 'card-list',
+                    value: [{text1: 'Vorname Nachname', text2: 'Funktion', image: 'image.png', icon: undefined}]
+                }
+            ]
         };
 
         const teamInformationSeason1 = new TeamInformationSeason();
@@ -39,6 +49,10 @@ describe('TeamInformationMapper', () => {
         teamInformationSeason2.projectId = 91;
         teamInformationSeason2.name = '14/15';
 
+        const overview = new DynamicContent('Test-Headline', 'Sub-Headline', 'card-list', [
+            new CardListValue('Vorname Nachname', 'Funktion', 'image.png', undefined)
+        ]);
+
         const expected: TeamInformation = new TeamInformation();
         expected.name = '1. Mannschaft';
         expected.showRanking = true;
@@ -47,6 +61,7 @@ describe('TeamInformationMapper', () => {
         expected.showStatistics = false;
         expected.showSeasons = true;
         expected.seasons = [teamInformationSeason2, teamInformationSeason1];
+        expected.overview = [overview];
 
         expect(mapper.mapFrom(actual)).toEqual(expected);
     });

@@ -1,3 +1,5 @@
+import {DynamicContentJson} from '../dynamic-content/dynamic-content-json.model';
+
 export interface TeamInformationJson {
 
     name: string;
@@ -8,6 +10,7 @@ export interface TeamInformationJson {
     showSeasons: boolean;
     articleId: string;
     seasons: TeamInformationSeasonJson[];
+    overview: DynamicContentJson[];
 
 }
 

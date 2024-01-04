@@ -8,24 +8,18 @@
 
 <app-card-container heading="Startelf" *ngIf="lineup.length > 0">
 
-    <ion-item mode="md"
-              *ngFor="let player of lineup">
-
-        <ion-avatar slot="start">
-            <ion-img [src]="player.image" [alt]="player.name"></ion-img>
-        </ion-avatar>
-
-        <ion-label>
-            <strong>{{ player.name }}</strong>
-            <p>{{ player.position }}</p>
-        </ion-label>
-
-        <div slot="end" class="lineup-jerseynumber" *ngIf="player.jerseynumber > 0">{{ player.jerseynumber }}</div>
+    <app-list-item *ngFor="let player of lineup"
+                   [image]="player.image"
+                   [text1]="player.name"
+                   [text2]="player.position"
+                   [note]="player.jerseynumber"
+                   noteSize="large">
 
         <div *ngIf="player.captain" class="captain">
             <span>C</span>
         </div>
-    </ion-item>
+
+    </app-list-item>
 
 </app-card-container>
 

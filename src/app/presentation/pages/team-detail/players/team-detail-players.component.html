@@ -2,23 +2,17 @@
 
 <div class="container" *ngIf="players.size > 0">
 
-    <ng-template ngFor let-map [ngForOf]="players | keyvalue: returnZero">
+    <app-card-container *ngFor="let map of players | keyvalue: returnZero"
+                        [heading]="map.key">
 
-        <app-card-container [heading]="map.key">
+        <app-list-item *ngFor="let player of map.value"
+                       [text1]="player.name"
+                       [image]="player.image"
+                       [note]="player.jerseynumber"
+                       noteSize="large"
+                       (click)="openPlayer(player.id)">
+        </app-list-item>
 
-            <ng-template ngFor let-player [ngForOf]="map.value">
-                <ion-item button mode="md" (click)="openPlayer(player.id)">
-                    <ion-avatar slot="start">
-                        <ion-img [src]="player.image" [alt]="player.name"></ion-img>
-                    </ion-avatar>
-                    <ion-label>{{ player.name }}</ion-label>
-
-                    <div slot="end" class="jerseynumber" *ngIf="player.jerseynumber > 0">{{ player.jerseynumber }}</div>
-                </ion-item>
-            </ng-template>
-
-        </app-card-container>
-
-    </ng-template>
+    </app-card-container>
 
 </div>

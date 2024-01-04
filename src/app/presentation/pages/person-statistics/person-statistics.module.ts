@@ -17,13 +17,13 @@ import {SharedModule} from '../../shared/shared.module';
         IonicModule,
         SharedModule,
         PersonModule,
+        StatisticsCardModule,
         RouterModule.forChild([
             {
                 path: '',
                 component: PersonStatisticsPage
             }
         ]),
-        StatisticsCardModule
     ],
     declarations: [PersonStatisticsPage]
 })
