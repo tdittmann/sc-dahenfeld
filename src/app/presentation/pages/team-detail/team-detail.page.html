@@ -19,8 +19,6 @@
     <app-tabs activeTabUrlIdentifier="team-detail-tab">
         <app-tab tabTitle="Übersicht" *ngIf="teamInformation?.overview.length > 0">
             <app-dynamic-content [contents]="teamInformation?.overview"></app-dynamic-content>
-            <!-- TODO tdit0703: Remove article-ID? -->
-            <!--            <app-team-detail-article [articleId]="teamInformation?.articleId"></app-team-detail-article>-->
         </app-tab>
 
         <app-tab tabTitle="Tabelle" *ngIf="teamInformation?.showRanking">

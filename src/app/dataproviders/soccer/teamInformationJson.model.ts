@@ -8,7 +8,6 @@ export interface TeamInformationJson {
     showPlayers: boolean;
     showStatistics: boolean;
     showSeasons: boolean;
-    articleId: string;
     seasons: TeamInformationSeasonJson[];
     overview: DynamicContentJson[];
 

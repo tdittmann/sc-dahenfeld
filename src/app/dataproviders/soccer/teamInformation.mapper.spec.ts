@@ -29,7 +29,6 @@ describe('TeamInformationMapper', () => {
             showPlayers: true,
             showStatistics: false,
             showSeasons: true,
-            articleId: '123',
             seasons: actualSeasons,
             overview: [
                 {

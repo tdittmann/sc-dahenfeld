@@ -18,7 +18,6 @@ export class TeamInformationMapper {
         teamInformation.showPlayers = param.showPlayers;
         teamInformation.showStatistics = param.showStatistics;
         teamInformation.showSeasons = param.showSeasons;
-        teamInformation.articleId = param.articleId;
         if (param.overview) {
             teamInformation.overview = param.overview.map(value => this._dynamicContentMapper.mapFrom(value));
         }
