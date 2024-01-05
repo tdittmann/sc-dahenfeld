@@ -4,7 +4,6 @@ import { Person } from '../../../core/domain/person.model';
 @Component({
   selector: 'app-statistics-card',
   templateUrl: 'statistics-card.component.html',
-  styleUrls: ['statistics-card.component.scss'],
 })
 export class StatisticsCardComponent implements OnChanges {
   @Input() persons: Person[] = [];

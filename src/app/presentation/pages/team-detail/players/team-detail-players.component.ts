@@ -7,7 +7,6 @@ import { PersonPage } from '../../person/person.page';
 @Component({
   selector: 'app-team-detail-players',
   templateUrl: 'team-detail-players.component.html',
-  styleUrls: ['team-detail-players.component.scss'],
 })
 export class TeamDetailPlayersComponent implements OnInit {
   @Input() projectId: number;

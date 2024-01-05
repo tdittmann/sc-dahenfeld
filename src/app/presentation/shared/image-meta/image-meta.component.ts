@@ -13,5 +13,4 @@ export class ImageMetaComponent {
   @Input() subSubTitleIcon: string;
   @Input() subSubTitle: string;
 
-  constructor() {}
 }

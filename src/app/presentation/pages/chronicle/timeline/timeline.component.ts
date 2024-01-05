@@ -8,6 +8,4 @@ import { TimelineEntry } from '../../../../core/domain/timeline-entry.model';
 })
 export class TimelineComponent {
   @Input() timelineEntries: TimelineEntry[] = [];
-
-  constructor() {}
 }

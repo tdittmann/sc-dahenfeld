@@ -1,6 +1,6 @@
-import { RootNavigation } from '../../core/domain/root-navigation.model';
-import { NavigationItemJson, RootNavigationJson } from './navigationJson.model';
-import { NavigationItem } from '../../core/domain/navigation-item.model';
+import { RootNavigation } from "../../core/domain/root-navigation.model";
+import { NavigationItemJson, RootNavigationJson } from "./navigationJson.model";
+import { NavigationItem } from "../../core/domain/navigation-item.model";
 
 export class NavigationMapper {
   mapFrom(param: RootNavigationJson): RootNavigation {
@@ -11,8 +11,8 @@ export class NavigationMapper {
     const rootNavigation: RootNavigation = new RootNavigation();
     rootNavigation.title = param.title;
     rootNavigation.devMode = param.devMode;
-    for (let i = 0; i < param.content.length; i++) {
-      const item = this.mapNavigationItemFrom(param.content[i]);
+    for (let content of param.content) {
+      const item = this.mapNavigationItemFrom(content);
       if (item) {
         rootNavigation.content.push(item);
       }

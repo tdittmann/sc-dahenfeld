@@ -74,5 +74,4 @@ export class PersonStatistic {
    */
   statisticHint: string;
 
-  constructor() {}
 }

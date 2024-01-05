@@ -6,7 +6,6 @@ import { environment } from '../../../../environments/environment';
 @Component({
   selector: 'app-custom-backend-call',
   templateUrl: 'custom-backend-call.page.html',
-  styleUrls: ['custom-backend-call.page.scss'],
 })
 export class CustomBackendCallPage implements OnInit {
   heading: string;

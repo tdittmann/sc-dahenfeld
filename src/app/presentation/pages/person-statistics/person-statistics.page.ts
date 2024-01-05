@@ -7,7 +7,6 @@ import { TeamDetailStatisticsModalComponent } from '../team-detail/statistics/st
 
 @Component({
   templateUrl: 'person-statistics.page.html',
-  styleUrls: ['person-statistics.page.scss'],
 })
 export class PersonStatisticsPage implements OnInit {
   heading: string;

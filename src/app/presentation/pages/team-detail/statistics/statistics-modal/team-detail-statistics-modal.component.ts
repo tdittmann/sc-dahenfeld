@@ -4,7 +4,6 @@ import { Person } from '../../../../../core/domain/person.model';
 @Component({
   selector: 'app-team-detail-statistics-modal',
   templateUrl: 'team-detail-statistics-modal.component.html',
-  styleUrls: ['team-detail-statistics-modal.component.scss'],
 })
 export class TeamDetailStatisticsModalComponent implements OnInit {
   @Input() searchFilter: string;

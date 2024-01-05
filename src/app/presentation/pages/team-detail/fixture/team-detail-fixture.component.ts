@@ -7,7 +7,6 @@ import { ModalController } from '@ionic/angular';
 @Component({
   selector: 'app-team-detail-fixture',
   templateUrl: 'team-detail-fixture.component.html',
-  styleUrls: ['team-detail-fixture.component.scss'],
 })
 export class TeamDetailFixtureComponent implements OnInit {
   @Input() projectId = 0;

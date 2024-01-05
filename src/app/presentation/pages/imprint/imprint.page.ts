@@ -10,7 +10,6 @@ import { App } from '@capacitor/app';
 
 @Component({
   templateUrl: 'imprint.page.html',
-  styleUrls: ['imprint.page.scss'],
 })
 export class ImprintPage implements OnInit {
   heading: string;

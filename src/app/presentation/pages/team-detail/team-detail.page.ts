@@ -6,7 +6,6 @@ import { combineLatest } from 'rxjs';
 
 @Component({
   templateUrl: 'team-detail.page.html',
-  styleUrls: ['team-detail.page.scss'],
 })
 export class TeamDetailPage implements OnInit {
   heading: string;

@@ -5,7 +5,6 @@ import { DevService } from '../../../dataproviders/dev.service';
 
 @Component({
   templateUrl: 'person.page.html',
-  styleUrls: ['person.page.scss'],
 })
 export class PersonPage implements OnInit {
   @Input() personId: number;

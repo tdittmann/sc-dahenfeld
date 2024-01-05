@@ -13,8 +13,6 @@ export class PageStateComponent {
   @Input() errorMessage = 'Daten konnten nicht geladen werden';
   @Input() errorIcon = 'sad';
 
-  constructor() {}
-
   public getMessage(): string {
     if (this.error) {
       return this.errorMessage;

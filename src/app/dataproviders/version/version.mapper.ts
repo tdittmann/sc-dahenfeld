@@ -1,8 +1,7 @@
-import { VersionInfoJson } from './versionInfoJson.model';
-import { VersionInfo } from '../../core/domain/versionInfo.model';
+import { VersionInfoJson } from "./versionInfoJson.model";
+import { VersionInfo } from "../../core/domain/versionInfo.model";
 
 export class VersionMapper {
-  constructor() {}
 
   public mapFrom(param: VersionInfoJson): VersionInfo {
     if (!param) {

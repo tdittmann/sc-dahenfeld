@@ -8,5 +8,4 @@ import { CalendarEvent } from '../../../core/domain/calendarEvent.model';
 export class EventDetailPage {
   @Input() event: CalendarEvent;
 
-  constructor() {}
 }

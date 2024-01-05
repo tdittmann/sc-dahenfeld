@@ -10,8 +10,6 @@ export class ArticleImageMetaComponent {
   @Input() article: Article;
   @Input() showOnlyTitle = false;
 
-  constructor() {}
-
   showCategory(): boolean {
     return this.article && this.article.categoryName && !this.showOnlyTitle;
   }
