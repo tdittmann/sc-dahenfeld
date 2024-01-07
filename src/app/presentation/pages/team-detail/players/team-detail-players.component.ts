@@ -1,12 +1,12 @@
-import { Component, Input, OnInit } from "@angular/core";
-import { PersonService } from "../../../../dataproviders/soccer/person/person.service";
-import { Person } from "../../../../core/domain/person.model";
-import { ModalController } from "@ionic/angular";
-import { PersonPage } from "../../person/person.page";
+import { Component, Input, OnInit } from '@angular/core';
+import { PersonService } from '../../../../dataproviders/soccer/person/person.service';
+import { Person } from '../../../../core/domain/person.model';
+import { ModalController } from '@ionic/angular';
+import { PersonPage } from '../../person/person.page';
 
 @Component({
-  selector: "app-team-detail-players",
-  templateUrl: "team-detail-players.component.html"
+  selector: 'app-team-detail-players',
+  templateUrl: 'team-detail-players.component.html',
 })
 export class TeamDetailPlayersComponent implements OnInit {
   @Input() projectId: number;
@@ -14,14 +14,13 @@ export class TeamDetailPlayersComponent implements OnInit {
   players: Map<string, Person[]> = new Map<string, Person[]>();
 
   isLoading = true;
-  errorMessage = "Daten konnten nicht geladen werden";
+  errorMessage = 'Daten konnten nicht geladen werden';
   isError = false;
 
   constructor(
     private playerService: PersonService,
-    private modalController: ModalController
-  ) {
-  }
+    private modalController: ModalController,
+  ) {}
 
   ngOnInit(): void {
     if (this.projectId > 0) {
@@ -31,7 +30,7 @@ export class TeamDetailPlayersComponent implements OnInit {
 
           if (this.players.size <= 0) {
             this.isError = true;
-            this.errorMessage = "Für diese Spielzeit gibt es keinen Kader";
+            this.errorMessage = 'Für diese Spielzeit gibt es keinen Kader';
           }
 
           this.isLoading = false;
@@ -39,7 +38,7 @@ export class TeamDetailPlayersComponent implements OnInit {
         error: (error) => {
           this.isError = true;
           console.error(error);
-        }
+        },
       });
     }
   }
@@ -50,8 +49,8 @@ export class TeamDetailPlayersComponent implements OnInit {
         component: PersonPage,
         componentProps: {
           personId: personId,
-          projectId: this.projectId
-        }
+          projectId: this.projectId,
+        },
       })
       .then((modal) => modal.present());
   }
