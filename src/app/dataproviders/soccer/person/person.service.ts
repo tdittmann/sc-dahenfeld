@@ -16,15 +16,15 @@ export class PersonService {
   loadPersons(): Observable<Person[]> {
     return this.httpService
       .get<PersonJson[]>(environment.backendUrl + 'persons')
-      .pipe(map((pPlayer) => pPlayer.map((value) => this.playerMapper.mapFrom(value))))
-      .pipe(tap((pPlayer) => [...pPlayer].sort((a, b) => a.compareTo(b))));
+      .pipe(map((players) => players.map((value) => this.playerMapper.mapFrom(value))))
+      .pipe(tap((players) => players.sort((a, b) => a.compareTo(b))));
   }
 
   loadPersonsByProjectId(projectId: number): Observable<Person[]> {
     return this.httpService
       .get<PersonJson[]>(environment.backendUrl + 'persons?teamId=' + projectId)
-      .pipe(map((pPlayer) => pPlayer.map((value) => this.playerMapper.mapFrom(value))))
-      .pipe(tap((pPlayer) => [...pPlayer].sort((a, b) => a.compareTo(b))));
+      .pipe(map((players) => players.map((value) => this.playerMapper.mapFrom(value))))
+      .pipe(tap((players) => players.sort((a, b) => a.compareTo(b))));
   }
 
   loadPerson(personId: number, projectId: number): Observable<Person> {
