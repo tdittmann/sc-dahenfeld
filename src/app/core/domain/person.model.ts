@@ -4,6 +4,7 @@ import { PersonStatistic } from './personStatistic.model';
 import { TextUtils } from '../../util/TextUtils';
 import { DateUtils } from '../../util/DateUtils';
 import { environment } from '../../../environments/environment';
+import { PersonFact } from './personFact.model';
 
 export class Person {
   id: number;
@@ -14,6 +15,7 @@ export class Person {
   birthday: Moment;
   jerseynumber: number;
 
+  facts: PersonFact[];
   seasonStatistic: PersonStatistic;
   careerStatistic: PersonStatistic;
 
@@ -48,7 +50,7 @@ export class Person {
       return 'Feiert heute den ' + age + '. Geburtstag';
     }
 
-    // Birthday was already or will be so we need to increment age
+    // Birthday was already or will be, so we need to increment age
     age++;
 
     const daysUntilBirthday = this.daysTillBirthday;

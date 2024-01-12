@@ -7,11 +7,12 @@ import { ModalHeaderModule } from '../../shared/modal-header/modal-header.module
 import { SharedModule } from '../../shared/shared.module';
 import { PersonOverviewComponent } from './overview/person-overview.component';
 import { PersonStatisticsComponent } from './statistics/person-statistics.component';
+import { PersonFactsComponent } from './facts/person-facts.component';
 
 @NgModule({
   providers: [PersonService],
   imports: [CommonModule, IonicModule, SharedModule, ModalHeaderModule],
-  declarations: [PersonPage, PersonOverviewComponent, PersonStatisticsComponent],
+  declarations: [PersonPage, PersonOverviewComponent, PersonStatisticsComponent, PersonFactsComponent],
   exports: [PersonPage],
 })
 export class PersonModule {}

@@ -1,0 +1,6 @@
+<ng-template [ngIf]="facts.length > 0">
+  <app-card-container>
+    <app-list-item *ngFor="let fact of facts" [text1]="fact.label" [note]="fact.value">
+    </app-list-item>
+  </app-card-container>
+</ng-template>

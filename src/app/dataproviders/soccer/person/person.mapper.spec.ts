@@ -3,6 +3,7 @@ import { PersonJson } from './personJson.model';
 import { Person } from '../../../core/domain/person.model';
 import { DateUtils } from '../../../util/DateUtils';
 import { PersonStatistic } from '../../../core/domain/personStatistic.model';
+import { PersonFact } from '../../../core/domain/personFact.model';
 
 describe('PersonMapper', () => {
   let mapper: PersonMapper;
@@ -24,6 +25,7 @@ describe('PersonMapper', () => {
       position: 'Sturm',
       birthday: '1999-01-02',
       jerseynumber: '8',
+      facts: [{ label: 'Lieblingsverein', value: 'SC Dahenfeld' }],
       seasonStats: {
         yellowCards: 4,
         yellowRedCards: 0,
@@ -59,6 +61,8 @@ describe('PersonMapper', () => {
         matchesWithoutGoalsAgainstAsKeeper: 10,
       },
     };
+
+    const expectedFact = new PersonFact('Lieblingsverein', 'SC Dahenfeld');
 
     const expectedSeasonStats = new PersonStatistic();
     expectedSeasonStats.yellowCards = 4;
@@ -102,6 +106,7 @@ describe('PersonMapper', () => {
     expected.position = 'Sturm';
     expected.birthday = DateUtils.ofIsoDate('1999-01-02');
     expected.jerseynumber = 8;
+    expected.facts = [expectedFact];
     expected.seasonStatistic = expectedSeasonStats;
     expected.careerStatistic = expectedCareerStats;
 

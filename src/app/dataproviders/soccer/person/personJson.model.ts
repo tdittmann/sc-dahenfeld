@@ -7,8 +7,14 @@ export interface PersonJson {
   lastname: string;
   image: string;
 
+  facts: PersonFactJson[];
   seasonStats: PersonStatisticJson;
   careerStats: PersonStatisticJson;
+}
+
+export interface PersonFactJson {
+  label: string;
+  value: string;
 }
 
 export interface PersonStatisticJson {

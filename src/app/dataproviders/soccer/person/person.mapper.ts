@@ -1,7 +1,8 @@
 import { Person } from '../../../core/domain/person.model';
 import { DateUtils } from '../../../util/DateUtils';
 import { PersonStatistic } from '../../../core/domain/personStatistic.model';
-import { PersonJson, PersonStatisticJson } from './personJson.model';
+import { PersonFactJson, PersonJson, PersonStatisticJson } from './personJson.model';
+import { PersonFact } from '../../../core/domain/personFact.model';
 
 export class PersonMapper {
   mapFrom(param: PersonJson): Person {
@@ -17,9 +18,18 @@ export class PersonMapper {
     player.position = param.position;
     player.birthday = DateUtils.ofIsoDate(param.birthday);
     player.jerseynumber = parseInt(param.jerseynumber, 10);
+    player.facts = this.mapFactsFrom(param.facts);
     player.seasonStatistic = this.mapStatisticFrom(param.seasonStats);
     player.careerStatistic = this.mapStatisticFrom(param.careerStats);
     return player;
+  }
+
+  mapFactsFrom(param: PersonFactJson[]): PersonFact[] {
+    if (!param) {
+      return [];
+    }
+
+    return param.map((fact) => new PersonFact(fact.label, fact.value));
   }
 
   mapStatisticFrom(param: PersonStatisticJson): PersonStatistic {

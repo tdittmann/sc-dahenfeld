@@ -1,4 +1,4 @@
-<app-modal-header></app-modal-header>
+<app-modal-header [title]="person?.name"></app-modal-header>
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 <ion-content color="light" *ngIf="person">
@@ -9,6 +9,10 @@
   <app-person-overview [person]="person"></app-person-overview>
 
   <app-tabs activeTabUrlIdentifier="person-overview" [fixed]="false">
+    <app-tab tabTitle="Fakten" *ngIf="person.facts.length > 0">
+      <app-person-facts [facts]="person?.facts"></app-person-facts>
+    </app-tab>
+
     <app-tab tabTitle="Saison">
       <app-person-statistics [statistics]="person?.seasonStatistic"></app-person-statistics>
     </app-tab>
