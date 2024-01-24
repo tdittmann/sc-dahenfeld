@@ -13,7 +13,7 @@ import { App } from '@capacitor/app';
 })
 export class ImprintPage implements OnInit {
   heading: string;
-  version = '6.2.0';
+  version = '6.3.0';
   developer = 'Timo Dittmann';
   darkMode = false;
 

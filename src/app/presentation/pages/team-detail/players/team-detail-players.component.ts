@@ -3,6 +3,7 @@ import { PersonService } from '../../../../dataproviders/soccer/person/person.se
 import { Person } from '../../../../core/domain/person.model';
 import { ModalController } from '@ionic/angular';
 import { PersonPage } from '../../person/person.page';
+import { DevService } from '../../../../dataproviders/dev.service';
 
 @Component({
   selector: 'app-team-detail-players',
@@ -20,6 +21,7 @@ export class TeamDetailPlayersComponent implements OnInit {
   constructor(
     private playerService: PersonService,
     private modalController: ModalController,
+    private devService: DevService,
   ) {}
 
   ngOnInit(): void {
@@ -57,6 +59,10 @@ export class TeamDetailPlayersComponent implements OnInit {
 
   returnZero() {
     return 0;
+  }
+
+  isDevModeEnabled(): boolean {
+    return this.devService.isDevModeEnabled();
   }
 
   private groupBy(list, keyGetter) {

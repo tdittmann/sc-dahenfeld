@@ -6,14 +6,16 @@
 
 <div class="container" *ngIf="players.size > 0">
   <app-card-container *ngFor="let map of players | keyvalue: returnZero" [heading]="map.key">
-    <app-list-item
-      *ngFor="let player of map.value"
-      [text1]="player.name"
-      [image]="player.image"
-      [note]="player.jerseynumber"
-      noteSize="large"
-      (click)="openPlayer(player.id)"
-    >
-    </app-list-item>
+    <ng-template ngFor let-player [ngForOf]="map.value">
+      <app-list-item
+        *ngIf="player.showOnFrontend || isDevModeEnabled()"
+        [text1]="player.name"
+        [image]="player.image"
+        [note]="player.jerseynumber"
+        noteSize="large"
+        (click)="openPlayer(player.id)"
+      >
+      </app-list-item>
+    </ng-template>
   </app-card-container>
 </div>

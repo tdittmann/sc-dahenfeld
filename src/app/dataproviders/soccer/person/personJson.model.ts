@@ -1,5 +1,6 @@
 export interface PersonJson {
   person_id: number;
+  show_on_frontend: string;
   position: string;
   birthday: string;
   jerseynumber: string;

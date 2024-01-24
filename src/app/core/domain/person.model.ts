@@ -8,6 +8,7 @@ import { PersonFact } from './personFact.model';
 
 export class Person {
   id: number;
+  showOnFrontend: boolean;
   firstname: string;
   lastname: string;
   image: string;
