@@ -16,7 +16,8 @@ export class TeamDetailStatisticsComponent implements OnInit {
     { heading: 'Torschützen', filter: 'seasonStatistic.goals' },
     { heading: 'Spielminuten', filter: 'seasonStatistic.playingMinutes' },
     { heading: 'Gelbe Karten', filter: 'seasonStatistic.yellowCards' },
-    { heading: 'Platzverweise', filter: 'seasonStatistic.redCards' },
+    { heading: 'Gelb-Rote Karten', filter: 'seasonStatistic.yellowRedCards' },
+    { heading: 'Rote Karten', filter: 'seasonStatistic.redCards' },
   ];
 
   isLoading = true;
