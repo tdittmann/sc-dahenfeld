@@ -36,7 +36,7 @@
     "@capacitor/push-notifications": "5.1.0",
     "@capacitor/splash-screen": "5.0.6",
     "@capacitor/status-bar": "5.0.6",
-    "@ionic/angular": "7.6.3",
+    "@ionic/angular": "7.8.6",
     "@ionic/storage-angular": "4.0.0",
     "core-js": "3.37.1",
     "moment": "2.30.1",
