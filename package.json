@@ -34,7 +34,7 @@
     "@capacitor/device": "5.0.6",
     "@capacitor/ios": "5.6.0",
     "@capacitor/push-notifications": "5.1.0",
-    "@capacitor/splash-screen": "5.0.6",
+    "@capacitor/splash-screen": "5.0.8",
     "@capacitor/status-bar": "5.0.6",
     "@ionic/angular": "7.6.3",
     "@ionic/storage-angular": "4.0.0",
