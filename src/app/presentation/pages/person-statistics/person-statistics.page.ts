@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Person } from '../../../core/domain/person.model';
 import { PersonService } from '../../../dataproviders/soccer/person/person.service';
 import { TeamDetailStatisticsModalComponent } from '../team-detail/statistics/statistics-modal/team-detail-statistics-modal.component';
+import { DevService } from '../../../dataproviders/dev.service';
 
 @Component({
   templateUrl: 'person-statistics.page.html',
@@ -33,6 +34,7 @@ export class PersonStatisticsPage implements OnInit {
     private activatedRoute: ActivatedRoute,
     private personService: PersonService,
     private modalController: ModalController,
+    private devService: DevService,
   ) {}
 
   ngOnInit(): void {
@@ -64,5 +66,9 @@ export class PersonStatisticsPage implements OnInit {
         },
       })
       .then((modal) => modal.present());
+  }
+
+  isDevModeEnabled(): boolean {
+    return this.devService.isDevModeEnabled();
   }
 }

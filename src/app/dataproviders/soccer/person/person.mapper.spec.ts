@@ -25,6 +25,7 @@ describe('PersonMapper', () => {
       position: 'Sturm',
       birthday: '1999-01-02',
       jerseynumber: '8',
+      show_on_frontend: '1',
       facts: [{ label: 'Lieblingsverein', value: 'SC Dahenfeld' }],
       seasonStats: {
         yellowCards: 4,
@@ -106,6 +107,7 @@ describe('PersonMapper', () => {
     expected.position = 'Sturm';
     expected.birthday = DateUtils.ofIsoDate('1999-01-02');
     expected.jerseynumber = 8;
+    expected.showOnFrontend = true;
     expected.facts = [expectedFact];
     expected.seasonStatistic = expectedSeasonStats;
     expected.careerStatistic = expectedCareerStats;

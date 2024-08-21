@@ -3,6 +3,7 @@ import { PersonService } from '../../../../dataproviders/soccer/person/person.se
 import { Person } from '../../../../core/domain/person.model';
 import { ModalController } from '@ionic/angular';
 import { TeamDetailStatisticsModalComponent } from './statistics-modal/team-detail-statistics-modal.component';
+import { DevService } from '../../../../dataproviders/dev.service';
 
 @Component({
   selector: 'app-team-detail-statistics',
@@ -27,6 +28,7 @@ export class TeamDetailStatisticsComponent implements OnInit {
   constructor(
     private personService: PersonService,
     private modalController: ModalController,
+    private devService: DevService,
   ) {}
 
   ngOnInit(): void {
@@ -61,5 +63,9 @@ export class TeamDetailStatisticsComponent implements OnInit {
         },
       })
       .then((modal) => modal.present());
+  }
+
+  isDevModeEnabled(): boolean {
+    return this.devService.isDevModeEnabled();
   }
 }
