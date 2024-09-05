@@ -20,7 +20,7 @@ export class CalendarService {
       .get<CalendarJson[]>(environment.backendUrl + 'calendarEvents')
       .pipe(map((value) => value.map(this.eventMapper.mapFrom)))
       .pipe(map((values) => values.map((value) => value as CalendarEvent)))
-      .pipe(tap((values) => [...values].sort((a, b) => a.compareTo(b))));
+      .pipe(map((values) => [...values].sort((a, b) => a.compareTo(b))));
   }
 
   loadCalendarMatches(): Observable<CalendarEntry[]> {
@@ -28,12 +28,12 @@ export class CalendarService {
       .get<CalendarJson[]>(environment.backendUrl + 'calendarMatches')
       .pipe(map((value) => value.map(this.eventMapper.mapFrom)))
       .pipe(map((values) => values.map((value) => value as CalendarMatch)))
-      .pipe(tap((values) => [...values].sort((a, b) => a.compareTo(b))));
+      .pipe(map((values) => [...values].sort((a, b) => a.compareTo(b))));
   }
 
   public loadCalendarEntries(): Observable<CalendarEntry[]> {
     return combineLatest([this.loadCalendarEvents(), this.loadCalendarMatches()])
       .pipe(map((result) => result[0].concat(result[1])))
-      .pipe(tap((values) => [...values].sort((a, b) => a.compareTo(b))));
+      .pipe(map((values) => [...values].sort((a, b) => a.compareTo(b))));
   }
 }
