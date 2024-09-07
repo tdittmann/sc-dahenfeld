@@ -21,6 +21,13 @@ export class RankingUtil {
     return ranking;
   }
 
+  static calculateHistoricRanking(ranking: RankingTeam[]) {
+    const finalRanking = [...ranking];
+    finalRanking.sort((a, b) => a.compareTo(b));
+    finalRanking.forEach((value, index) => (value.place = index + 1));
+    return finalRanking;
+  }
+
   private static handleMatch(
     ranking: RankingTeam[],
     teamId: number,

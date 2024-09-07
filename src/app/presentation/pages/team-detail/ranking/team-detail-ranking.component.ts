@@ -3,6 +3,7 @@ import { MatchService } from '../../../../dataproviders/soccer/matches/match.ser
 import { Match } from '../../../../core/domain/match.model';
 import { RankingTeam } from '../../../../core/domain/rankingTeam.model';
 import { RankingUtil } from '../../../../util/RankingUtil';
+import { RankingService } from '../../../../dataproviders/soccer/ranking/ranking.service';
 
 @Component({
   selector: 'app-team-detail-ranking',
@@ -20,19 +21,36 @@ export class TeamDetailRankingComponent implements OnInit {
 
   matches: Match[] = [];
   ranking: RankingTeam[] = [];
+  isHistoricRanking = false;
 
   isLoading = true;
   isError = false;
 
-  constructor(private fixtureService: MatchService) {}
+  constructor(
+    private matchService: MatchService,
+    private rankingService: RankingService,
+  ) {}
 
   ngOnInit(): void {
     if (this.projectId > 0) {
-      this.fixtureService.loadAllMatchesByTeamId(this.projectId).subscribe({
+      this.matchService.loadAllMatchesByTeamId(this.projectId).subscribe({
         next: (matches) => {
           this.matches = matches;
-
           this.ranking = RankingUtil.calculateRanking(matches, null);
+
+          // For historic rankings we don't have matches and need to load the ranking separately.
+          if (matches.length === 0) {
+            this.isHistoricRanking = true;
+            this.rankingService.loadHistoricRanking(this.projectId).subscribe({
+              next: (ranking) => {
+                this.ranking = RankingUtil.calculateHistoricRanking(ranking);
+              },
+              error: (error) => {
+                this.isError = true;
+                console.error(error);
+              },
+            });
+          }
 
           this.isLoading = false;
         },

@@ -23,9 +23,10 @@ import { FormsModule } from '@angular/forms';
 import { TeamDetailStatisticsModalComponent } from './statistics/statistics-modal/team-detail-statistics-modal.component';
 import { PersonFilter } from './statistics/statistics-modal/person.filter';
 import { DynamicContentModule } from '../../shared/dynamic-content/dynamic-content.module';
+import { RankingService } from '../../../dataproviders/soccer/ranking/ranking.service';
 
 @NgModule({
-  providers: [TeamInformationService, ArticleService, MatchService, PersonService],
+  providers: [TeamInformationService, ArticleService, MatchService, PersonService, RankingService],
   imports: [
     CommonModule,
     FormsModule,

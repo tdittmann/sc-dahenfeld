@@ -5,3 +5,11 @@ Authorization: Basic {{authUsername}} {{authPassword}}
 ### GET Persons by project ID
 GET https://sc-dahenfeld.de/components/com_tdwapp/v9/persons?teamId=200
 Authorization: Basic {{authUsername}} {{authPassword}}
+
+### GET Team Informations by project ID
+GET https://sc-dahenfeld.de/components/com_tdwapp/v9/teamInformation?id=191
+Authorization: Basic {{authUsername}} {{authPassword}}
+
+### GET Historic Ranking by project ID
+GET https://sc-dahenfeld.de/components/com_tdwapp/v9/historicRanking?projectId=191
+Authorization: Basic {{authUsername}} {{authPassword}}

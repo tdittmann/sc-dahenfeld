@@ -1,6 +1,6 @@
 import { combineLatest, Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { CalendarMapper } from './calendarMapper';
 import { CalendarJson } from './calendarEventJson.model';
 import { CalendarEntry } from '../../core/domain/calendarEntry.model';
