@@ -1,18 +1,18 @@
 PODS:
-  - Capacitor (5.6.0):
+  - Capacitor (6.1.2):
     - CapacitorCordova
-  - CapacitorApp (5.0.6):
+  - CapacitorApp (6.0.1):
     - Capacitor
-  - CapacitorBrowser (5.1.0):
+  - CapacitorBrowser (6.0.2):
     - Capacitor
-  - CapacitorCordova (5.6.0)
-  - CapacitorDevice (5.0.6):
+  - CapacitorCordova (6.1.2)
+  - CapacitorDevice (6.0.1):
     - Capacitor
-  - CapacitorPushNotifications (5.1.0):
+  - CapacitorPushNotifications (6.0.2):
     - Capacitor
-  - CapacitorSplashScreen (5.0.6):
+  - CapacitorSplashScreen (6.0.2):
     - Capacitor
-  - CapacitorStatusBar (5.0.6):
+  - CapacitorStatusBar (6.0.1):
     - Capacitor
 
 DEPENDENCIES:
@@ -44,15 +44,15 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/status-bar"
 
 SPEC CHECKSUMS:
-  Capacitor: ebfc16cdb8116d04c101686b080342872da42d43
-  CapacitorApp: 024e1b1bea5f883d79f6330d309bc441c88ad04a
-  CapacitorBrowser: 7a0fb6a1011abfaaf2dfedfd8248f942a8eda3d6
-  CapacitorCordova: 931b48fcdbc9bc985fc2f16cec9f77c794a27729
-  CapacitorDevice: 2c968f98a1ec4d22357418c1521e7ddc46c675e6
-  CapacitorPushNotifications: b31e326c6e4eb216a622041d6ca21a973f34943f
-  CapacitorSplashScreen: 5fa2ab5e46cf5cc530cf16a51c80c7a986579ccd
-  CapacitorStatusBar: 565c0a1ebd79bb40d797606a8992b4a105885309
+  Capacitor: 48e69f3d54640fb30dc99a8e711bb645b11c0283
+  CapacitorApp: 5d3b9275003a1bb33ee5310fb398b82c9ebc7ca5
+  CapacitorBrowser: 5cb440b06536074e8b1e4ad64bdd811d504bbab3
+  CapacitorCordova: bab53e0b5106da1b6293a750a68df9c477461b91
+  CapacitorDevice: ee4f3c1e73a17ba41b9d0c1155aacb676a9699cd
+  CapacitorPushNotifications: 5ad946184f898b11629bb18f178e99e6b219e2cd
+  CapacitorSplashScreen: 191954d1205535e587cff7d522e7eb5e89e9208a
+  CapacitorStatusBar: b34cc9c61d1fdd5b2712d533e4b60ca4c14e31b8
 
-PODFILE CHECKSUM: 29cceb50aca61af26a55e390dd683226bc25cff4
+PODFILE CHECKSUM: 3fd2b2802191fe3bd70869fd3a3a73dbe046393c
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.5.2
