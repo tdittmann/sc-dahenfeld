@@ -5,6 +5,7 @@ import { TextUtils } from '../../util/TextUtils';
 import { DateUtils } from '../../util/DateUtils';
 import { environment } from '../../../environments/environment';
 import { PersonFact } from './personFact.model';
+import { PersonMatch } from "./personMatch.model";
 
 export class Person {
   id: number;
@@ -19,6 +20,7 @@ export class Person {
   facts: PersonFact[];
   seasonStatistic: PersonStatistic;
   careerStatistic: PersonStatistic;
+  careerMatches: PersonMatch[];
 
   public get name(): string {
     return [this.firstname, this.lastname].filter(Boolean).join(' ');

@@ -11,6 +11,7 @@ export interface PersonJson {
   facts: PersonFactJson[];
   seasonStats: PersonStatisticJson;
   careerStats: PersonStatisticJson;
+  careerMatches: PersonMatchJson[];
 }
 
 export interface PersonFactJson {
@@ -34,4 +35,17 @@ export interface PersonStatisticJson {
   cameOut: number;
   playingMinutes: number;
   statistic_hint: string;
+}
+
+export  interface PersonMatchJson {
+  seasonName: string;
+  leagueName: string;
+  matchId: string;
+  matchDate: string;
+  homeTeamName: string;
+  homeImage: string;
+  homeGoals: string;
+  awayTeamName: string;
+  awayImage: string;
+  awayGoals: string;
 }

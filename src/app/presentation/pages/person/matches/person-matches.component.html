@@ -1,0 +1,34 @@
+<ng-template [ngIf]="matches">
+
+  @for (match of seasonMatches | keyvalue: returnZero; track match; let i = $index) {
+    <app-card-container [heading]="match.value[0].leagueName"
+                        [subHeading]="match.value[0].seasonName"
+                        [actAsAccordion]="true"
+                        [accordionInitiallyOpen]="i === 0">
+      <div class="match-overview">
+        <table>
+          <thead>
+          <tr>
+            <th>Datum</th>
+            <th colspan="2">Gegner</th>
+            <th>Erg.</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr *ngFor="let m of match.value" [class]="m.getBorderColor()"
+              (click)="openMatchDetail(m.matchId)">
+            <td>{{ m.getMatchDate() }}</td>
+            <td><img [src]="m.getOpponentImage()" [alt]="m.getOpponentName()" /></td>
+            <td>{{ m.getOpponentName() }}</td>
+            <td>{{ m.getResult() }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </app-card-container>
+  }
+
+
+</ng-template>

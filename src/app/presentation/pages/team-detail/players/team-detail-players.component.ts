@@ -4,6 +4,7 @@ import { Person } from '../../../../core/domain/person.model';
 import { ModalController } from '@ionic/angular';
 import { PersonPage } from '../../person/person.page';
 import { DevService } from '../../../../dataproviders/dev.service';
+import { GroupByUtils } from "../../../../util/GroupByUtils";
 
 @Component({
   selector: 'app-team-detail-players',
@@ -28,7 +29,7 @@ export class TeamDetailPlayersComponent implements OnInit {
     if (this.projectId > 0) {
       this.playerService.loadPersonsByProjectId(this.projectId).subscribe({
         next: (players) => {
-          this.players = this.groupBy(players, (player) => player.position);
+          this.players = GroupByUtils.groupBy(players, (player) => player.position);
 
           if (this.players.size <= 0) {
             this.isError = true;
@@ -63,19 +64,5 @@ export class TeamDetailPlayersComponent implements OnInit {
 
   isDevModeEnabled(): boolean {
     return this.devService.isDevModeEnabled();
-  }
-
-  private groupBy(list, keyGetter) {
-    const map = new Map();
-    list.forEach((item) => {
-      const key = keyGetter(item);
-      const collection = map.get(key);
-      if (!collection) {
-        map.set(key, [item]);
-      } else {
-        collection.push(item);
-      }
-    });
-    return map;
   }
 }

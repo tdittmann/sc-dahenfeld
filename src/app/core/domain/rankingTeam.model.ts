@@ -1,3 +1,5 @@
+import { FavoriteTeamUtil } from "../../util/FavoriteTeamUtil";
+
 export class RankingTeam {
   id: number;
   place: number;
@@ -12,7 +14,7 @@ export class RankingTeam {
   points = 0;
 
   public isFavoriteTeam(): boolean {
-    return this.name.includes('Dahenfeld') || this.name.includes('Kochertal');
+    return FavoriteTeamUtil.isFavoriteTeam(this.name);
   }
 
   public getGoalsDiff(): number {

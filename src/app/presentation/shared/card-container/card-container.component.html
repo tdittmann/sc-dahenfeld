@@ -1,10 +1,17 @@
 <ion-card mode="md">
-  <ion-card-header *ngIf="heading">
+  <ion-card-header *ngIf="heading" (click)="toggleContent()">
     <ion-card-title mode="md">{{ heading }}</ion-card-title>
     <ion-card-subtitle *ngIf="subHeading" mode="md">{{ subHeading }}</ion-card-subtitle>
+
+      <ion-icon *ngIf="actAsAccordion && !isContentVisible"
+                class="ion-icon"
+                name="chevron-down-outline" />
+      <ion-icon *ngIf="actAsAccordion && isContentVisible"
+                class="ion-icon"
+                name="chevron-up-outline" />
   </ion-card-header>
 
-  <ion-card-content>
+  <ion-card-content *ngIf="isContentVisible">
     <ng-content></ng-content>
   </ion-card-content>
 </ion-card>

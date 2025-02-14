@@ -47,6 +47,18 @@ a {
   outline: none;
 }
 
+.border-color-win {
+  border-right: 5px solid #008000;
+}
+
+.border-color-draw {
+  border-right: 5px solid #6e6e6e;
+}
+
+.border-color-lose {
+  border-right: 5px solid #960016FF;
+}
+
 /** IOS custom styles **/
 .list-ios {
   margin-bottom: 0;

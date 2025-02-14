@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Moment } from 'moment';
+import { FavoriteTeamUtil } from "../../../util/FavoriteTeamUtil";
 
 @Component({
   selector: 'app-match-card',
@@ -33,17 +34,17 @@ export class MatchCardComponent {
   public getCardClass(): string {
     if (this.existsResult()) {
       // Is it a win?
-      if ((this.isHomeWin() && this.homeName.includes('Dahenfeld')) || (this.isAwayWin() && this.awayName.includes('Dahenfeld'))) {
-        return 'card-win';
+      if ((this.isHomeWin() && FavoriteTeamUtil.isFavoriteTeam(this.homeName)) || (this.isAwayWin() && FavoriteTeamUtil.isFavoriteTeam(this.awayName))) {
+        return 'border-color-win';
       }
 
       // Is it a draw?
       if (this.homeResult === this.awayResult) {
-        return 'card-draw';
+        return 'border-color-draw';
       }
 
       // It has to be a lose
-      return 'card-lose';
+      return 'border-color-lose';
     }
 
     return '';
