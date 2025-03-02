@@ -61,6 +61,10 @@ export class PersonMapper {
   }
 
   mapMatchesFrom(personMatchJsons: PersonMatchJson[]): PersonMatch[] {
+    if (!personMatchJsons) {
+      return [];
+    }
+
     return personMatchJsons.map(param => {
         const personMatch = new PersonMatch();
         personMatch.seasonName = param.seasonName;

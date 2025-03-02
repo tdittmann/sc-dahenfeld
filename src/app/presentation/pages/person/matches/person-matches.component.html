@@ -9,19 +9,19 @@
         <table>
           <thead>
           <tr>
-            <th>Datum</th>
+            <th class="match-date">Datum</th>
             <th colspan="2">Gegner</th>
-            <th>Erg.</th>
+            <th class="match-result">Erg.</th>
           </tr>
           </thead>
 
           <tbody>
           <tr *ngFor="let m of match.value" [class]="m.getBorderColor()"
               (click)="openMatchDetail(m.matchId)">
-            <td>{{ m.getMatchDate() }}</td>
+            <td class="match-date">{{ m.getMatchDate() }}</td>
             <td><img [src]="m.getOpponentImage()" [alt]="m.getOpponentName()" /></td>
             <td>{{ m.getOpponentName() }}</td>
-            <td>{{ m.getResult() }}</td>
+            <td class="match-result">{{ m.getResult() }}</td>
           </tr>
           </tbody>
         </table>
