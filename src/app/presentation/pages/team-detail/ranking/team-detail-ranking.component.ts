@@ -4,6 +4,7 @@ import { Match } from '../../../../core/domain/match.model';
 import { RankingTeam } from '../../../../core/domain/rankingTeam.model';
 import { RankingUtil } from '../../../../util/RankingUtil';
 import { RankingService } from '../../../../dataproviders/soccer/ranking/ranking.service';
+import { DevService } from '../../../../dataproviders/dev.service';
 
 @Component({
   selector: 'app-team-detail-ranking',
@@ -14,9 +15,11 @@ export class TeamDetailRankingComponent implements OnInit {
   @Input() projectId = 0;
 
   rankingTypes = [
-    { label: 'Gesamt', value: 'total' },
-    { label: 'Heim', value: 'home' },
-    { label: 'Auswärts', value: 'away' },
+    { label: 'Gesamt', value: 'total', devOnly: false },
+    { label: 'Heim', value: 'home', devOnly: false },
+    { label: 'Auswärts', value: 'away', devOnly: false },
+    { label: 'Hinrunde', value: 'firstHalf', devOnly: true },
+    { label: 'Rückrunde', value: 'secondHalf', devOnly: true },
   ];
 
   matches: Match[] = [];
@@ -29,6 +32,7 @@ export class TeamDetailRankingComponent implements OnInit {
   constructor(
     private matchService: MatchService,
     private rankingService: RankingService,
+    private devService: DevService,
   ) {}
 
   ngOnInit(): void {
@@ -64,5 +68,9 @@ export class TeamDetailRankingComponent implements OnInit {
 
   recalculateRanking(event: any): void {
     this.ranking = RankingUtil.calculateRanking(this.matches, event.detail.value);
+  }
+
+  isDevModeEnabled(): boolean {
+    return this.devService.isDevModeEnabled();
   }
 }
