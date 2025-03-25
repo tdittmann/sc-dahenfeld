@@ -8,7 +8,10 @@
     mode="ios"
   >
     <ng-template ngFor let-rankingType [ngForOf]="rankingTypes">
-      <ion-segment-button [value]="rankingType.value">
+      <ion-segment-button
+        [value]="rankingType.value"
+        *ngIf="!rankingType.devOnly || isDevModeEnabled()"
+      >
         <ion-label>{{ rankingType.label }}</ion-label>
       </ion-segment-button>
     </ng-template>

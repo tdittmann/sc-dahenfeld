@@ -4,8 +4,18 @@ import { Match } from '../core/domain/match.model';
 export class RankingUtil {
   public static calculateRanking(matches: Match[], rankingType: string): RankingTeam[] {
     const ranking: RankingTeam[] = [];
+    const matchesPerHalfSeason = Math.max(...matches.map((value) => value.getFixtureNumber())) / 2;
 
-    for (const match of matches) {
+    for (let match of matches) {
+      const fixtureNumber = match.getFixtureNumber();
+
+      if (
+        (rankingType === 'firstHalf' && fixtureNumber > matchesPerHalfSeason) ||
+        (rankingType === 'secondHalf' && fixtureNumber <= matchesPerHalfSeason)
+      ) {
+        continue;
+      }
+
       if (rankingType !== 'away') {
         this.handleMatch(ranking, match.homeId, match.homeName, match.homeImage, match.homeResult, match.awayResult);
       }
