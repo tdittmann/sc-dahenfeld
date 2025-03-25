@@ -1,5 +1,5 @@
-import { Moment } from "moment/moment";
-import { FavoriteTeamUtil } from "../../util/FavoriteTeamUtil";
+import { Moment } from 'moment/moment';
+import { FavoriteTeamUtil } from '../../util/FavoriteTeamUtil';
 
 export class PersonMatch {
   seasonName: string;
@@ -14,7 +14,7 @@ export class PersonMatch {
   awayGoals: number;
 
   getMatchDate(): string {
-    return this.matchDate.format("DD.MM.");
+    return this.matchDate.format('DD.MM.');
   }
 
   getOpponentName(): string {
@@ -31,17 +31,19 @@ export class PersonMatch {
 
   getBorderColor(): string {
     // Is it a win?
-    if ((this.homeGoals > this.awayGoals && FavoriteTeamUtil.isFavoriteTeam(this.homeTeamName))
-      || (this.awayGoals > this.homeGoals && FavoriteTeamUtil.isFavoriteTeam(this.awayTeamName))) {
-      return "border-color-win";
+    if (
+      (this.homeGoals > this.awayGoals && FavoriteTeamUtil.isFavoriteTeam(this.homeTeamName)) ||
+      (this.awayGoals > this.homeGoals && FavoriteTeamUtil.isFavoriteTeam(this.awayTeamName))
+    ) {
+      return 'border-color-win';
     }
 
     // Is it a draw?
     if (this.homeGoals === this.awayGoals) {
-      return "border-color-draw";
+      return 'border-color-draw';
     }
 
     // It has to be a lose
-    return "border-color-lose";
+    return 'border-color-lose';
   }
 }

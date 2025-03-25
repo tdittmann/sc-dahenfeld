@@ -37,7 +37,7 @@ export interface PersonStatisticJson {
   statistic_hint: string;
 }
 
-export  interface PersonMatchJson {
+export interface PersonMatchJson {
   seasonName: string;
   leagueName: string;
   matchId: string;

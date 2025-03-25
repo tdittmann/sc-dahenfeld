@@ -12,12 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DevService } from './dataproviders/dev.service';
 import { StorageService } from './dataproviders/storage.service';
 import { HttpService } from './dataproviders/http.service';
-import {
-  HTTP_INTERCEPTORS,
-  HttpClientModule,
-  provideHttpClient,
-  withInterceptorsFromDi
-} from "@angular/common/http";
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { VersionService } from './dataproviders/version/version.service';
 import { ProfileService } from './dataproviders/profile/profile.service';
 import { NavigationService } from './dataproviders/navigation/navigation.service';

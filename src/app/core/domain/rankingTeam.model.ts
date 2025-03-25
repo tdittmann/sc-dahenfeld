@@ -1,4 +1,4 @@
-import { FavoriteTeamUtil } from "../../util/FavoriteTeamUtil";
+import { FavoriteTeamUtil } from '../../util/FavoriteTeamUtil';
 
 export class RankingTeam {
   id: number;

@@ -18,6 +18,10 @@ export class Match {
   awayImage: string;
   awayResult: number;
 
+  public getFixtureNumber(): number {
+    return parseInt(this.fixture, 10);
+  }
+
   public getStartDate(): string {
     if (!this.date) {
       return '';

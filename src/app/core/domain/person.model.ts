@@ -5,7 +5,7 @@ import { TextUtils } from '../../util/TextUtils';
 import { DateUtils } from '../../util/DateUtils';
 import { environment } from '../../../environments/environment';
 import { PersonFact } from './personFact.model';
-import { PersonMatch } from "./personMatch.model";
+import { PersonMatch } from './personMatch.model';
 
 export class Person {
   id: number;

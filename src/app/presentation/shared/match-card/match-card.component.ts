@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Moment } from 'moment';
-import { FavoriteTeamUtil } from "../../../util/FavoriteTeamUtil";
+import { FavoriteTeamUtil } from '../../../util/FavoriteTeamUtil';
 
 @Component({
   selector: 'app-match-card',
@@ -34,7 +34,10 @@ export class MatchCardComponent {
   public getCardClass(): string {
     if (this.existsResult()) {
       // Is it a win?
-      if ((this.isHomeWin() && FavoriteTeamUtil.isFavoriteTeam(this.homeName)) || (this.isAwayWin() && FavoriteTeamUtil.isFavoriteTeam(this.awayName))) {
+      if (
+        (this.isHomeWin() && FavoriteTeamUtil.isFavoriteTeam(this.homeName)) ||
+        (this.isAwayWin() && FavoriteTeamUtil.isFavoriteTeam(this.awayName))
+      ) {
         return 'border-color-win';
       }
 
