@@ -4,7 +4,7 @@ import { Person } from '../../../../core/domain/person.model';
 import { ModalController } from '@ionic/angular';
 import { PersonPage } from '../../person/person.page';
 import { DevService } from '../../../../dataproviders/dev.service';
-import { GroupByUtils } from "../../../../util/GroupByUtils";
+import { GroupByUtils } from '../../../../util/GroupByUtils';
 
 @Component({
   selector: 'app-team-detail-players',
