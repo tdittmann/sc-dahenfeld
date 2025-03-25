@@ -20,9 +20,9 @@ export class TeamDetailPlayersComponent implements OnInit {
   isError = false;
 
   constructor(
-    private playerService: PersonService,
-    private modalController: ModalController,
-    private devService: DevService,
+    private readonly playerService: PersonService,
+    private readonly modalController: ModalController,
+    private readonly devService: DevService,
   ) {}
 
   ngOnInit(): void {

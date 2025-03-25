@@ -14,10 +14,10 @@ export class PersonMatchesComponent implements OnInit {
 
   seasonMatches: Map<string, PersonMatch[]> = new Map<string, PersonMatch[]>();
 
-  constructor(private modalController: ModalController) {}
+  constructor(private readonly modalController: ModalController) {}
 
   ngOnInit(): void {
-    const sortedMatchesBySeasonDesc = this.matches.sort((a, b) => {
+    const sortedMatchesBySeasonDesc = [...this.matches].sort((a, b) => {
       if (a.seasonName !== b.seasonName) {
         return b.seasonName.localeCompare(a.seasonName);
       }
