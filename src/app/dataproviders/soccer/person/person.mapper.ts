@@ -1,8 +1,9 @@
 import { Person } from '../../../core/domain/person.model';
 import { DateUtils } from '../../../util/DateUtils';
 import { PersonStatistic } from '../../../core/domain/personStatistic.model';
-import { PersonFactJson, PersonJson, PersonStatisticJson } from './personJson.model';
+import { PersonFactJson, PersonJson, PersonMatchJson, PersonStatisticJson } from './personJson.model';
 import { PersonFact } from '../../../core/domain/personFact.model';
+import { PersonMatch } from '../../../core/domain/personMatch.model';
 
 export class PersonMapper {
   mapFrom(param: PersonJson): Person {
@@ -22,6 +23,7 @@ export class PersonMapper {
     player.facts = this.mapFactsFrom(param.facts);
     player.seasonStatistic = this.mapStatisticFrom(param.seasonStats);
     player.careerStatistic = this.mapStatisticFrom(param.careerStats);
+    player.careerMatches = this.mapMatchesFrom(param.careerMatches);
     return player;
   }
 
@@ -51,5 +53,26 @@ export class PersonMapper {
     playerStatistic.playingMinutes = param.playingMinutes;
     playerStatistic.statisticHint = param.statistic_hint;
     return playerStatistic;
+  }
+
+  mapMatchesFrom(personMatchJsons: PersonMatchJson[]): PersonMatch[] {
+    if (!personMatchJsons) {
+      return [];
+    }
+
+    return personMatchJsons.map((param) => {
+      const personMatch = new PersonMatch();
+      personMatch.seasonName = param.seasonName;
+      personMatch.leagueName = param.leagueName;
+      personMatch.matchId = parseInt(param.matchId, 10);
+      personMatch.matchDate = DateUtils.ofUnixTimestampString(param.matchDate);
+      personMatch.homeTeamName = param.homeTeamName;
+      personMatch.homeImage = param.homeImage;
+      personMatch.homeGoals = parseInt(param.homeGoals, 10);
+      personMatch.awayTeamName = param.awayTeamName;
+      personMatch.awayImage = param.awayImage;
+      personMatch.awayGoals = parseInt(param.awayGoals, 10);
+      return personMatch;
+    });
   }
 }

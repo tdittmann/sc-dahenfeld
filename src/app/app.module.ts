@@ -12,7 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DevService } from './dataproviders/dev.service';
 import { StorageService } from './dataproviders/storage.service';
 import { HttpService } from './dataproviders/http.service';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { VersionService } from './dataproviders/version/version.service';
 import { ProfileService } from './dataproviders/profile/profile.service';
 import { NavigationService } from './dataproviders/navigation/navigation.service';
@@ -21,7 +21,7 @@ import { ToastService } from './dataproviders/toast.service';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), IonicStorageModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), IonicStorageModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,
@@ -34,6 +34,7 @@ import { ToastService } from './dataproviders/toast.service';
     ToastService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: HTTP_INTERCEPTORS, useClass: AuthorizationInterceptor, multi: true },
+    provideHttpClient(withInterceptorsFromDi()),
   ],
   bootstrap: [AppComponent],
 })

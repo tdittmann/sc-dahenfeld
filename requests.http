@@ -6,6 +6,10 @@ Authorization: Basic {{authUsername}} {{authPassword}}
 GET https://sc-dahenfeld.de/components/com_tdwapp/v9/persons?teamId=200
 Authorization: Basic {{authUsername}} {{authPassword}}
 
+### GET single person by ID
+GET https://sc-dahenfeld.de/components/com_tdwapp/v9/person?personId=1
+Authorization: Basic {{authUsername}} {{authPassword}}
+
 ### GET Team Informations by project ID
 GET https://sc-dahenfeld.de/components/com_tdwapp/v9/teamInformation?id=191
 Authorization: Basic {{authUsername}} {{authPassword}}

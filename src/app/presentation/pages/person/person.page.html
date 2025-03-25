@@ -20,5 +20,9 @@
     <app-tab tabTitle="Karriere">
       <app-person-statistics [statistics]="person?.careerStatistic"></app-person-statistics>
     </app-tab>
+
+    <app-tab tabTitle="Spiele" *ngIf="isDevModeEnabled()">
+      <app-person-matches [matches]="person?.careerMatches"></app-person-matches>
+    </app-tab>
   </app-tabs>
 </ion-content>

@@ -13,7 +13,7 @@ import { App } from '@capacitor/app';
 })
 export class ImprintPage implements OnInit {
   heading: string;
-  version = '6.6.1';
+  version = '6.7.1';
   developer = 'Timo Dittmann';
   darkMode = false;
 
@@ -21,14 +21,14 @@ export class ImprintPage implements OnInit {
   showDevModePasswordInput = false;
 
   private counter = 0;
-  private showDevModePasswordNumber = 7;
+  private readonly showDevModePasswordNumber = 7;
 
   constructor(
-    private activatedRoute: ActivatedRoute,
-    private devService: DevService,
-    private storageService: StorageService,
-    private toastService: ToastService,
-    private profileService: ProfileService,
+    private readonly activatedRoute: ActivatedRoute,
+    private readonly devService: DevService,
+    private readonly storageService: StorageService,
+    private readonly toastService: ToastService,
+    private readonly profileService: ProfileService,
   ) {}
 
   ngOnInit(): void {
