@@ -38,6 +38,7 @@ export interface PersonStatisticJson {
 }
 
 export interface PersonMatchJson {
+  projectId: string;
   seasonName: string;
   leagueName: string;
   matchId: string;

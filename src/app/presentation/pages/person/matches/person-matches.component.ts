@@ -23,7 +23,10 @@ export class PersonMatchesComponent implements OnInit {
       }
       return a.matchDate.diff(b.matchDate);
     });
-    this.seasonMatches = GroupByUtils.groupBy(sortedMatchesBySeasonDesc, (match: PersonMatch) => match.seasonName);
+    this.seasonMatches = GroupByUtils.groupBy(
+      sortedMatchesBySeasonDesc,
+      (match: PersonMatch) => `${match.seasonName} - ${match.projectId}`,
+    );
   }
 
   // Needed because otherwise the keyvalue pipe is sorting our map again in wrong order.

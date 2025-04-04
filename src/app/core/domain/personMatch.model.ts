@@ -2,6 +2,7 @@ import { Moment } from 'moment/moment';
 import { FavoriteTeamUtil } from '../../util/FavoriteTeamUtil';
 
 export class PersonMatch {
+  projectId: number;
   seasonName: string;
   leagueName: string;
   matchId: number;

@@ -62,6 +62,7 @@ export class PersonMapper {
 
     return personMatchJsons.map((param) => {
       const personMatch = new PersonMatch();
+      personMatch.projectId = parseInt(param.projectId, 10);
       personMatch.seasonName = param.seasonName;
       personMatch.leagueName = param.leagueName;
       personMatch.matchId = parseInt(param.matchId, 10);

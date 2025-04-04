@@ -64,6 +64,7 @@ describe('PersonMapper', () => {
       },
       careerMatches: [
         {
+          projectId: '12',
           seasonName: '2023/2024',
           leagueName: 'Kreisliga A',
           matchId: '9950',
@@ -115,6 +116,7 @@ describe('PersonMapper', () => {
     expectedCareerStats.matchesWithoutGoalsAgainstAsKeeper = 10;
 
     const expectedMatch = new PersonMatch();
+    expectedMatch.projectId = 12;
     expectedMatch.seasonName = '2023/2024';
     expectedMatch.leagueName = 'Kreisliga A';
     expectedMatch.matchId = 9950;
