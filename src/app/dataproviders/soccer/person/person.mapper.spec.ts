@@ -64,7 +64,7 @@ describe('PersonMapper', () => {
       },
       careerMatches: [
         {
-          projectId: "12",
+          projectId: '12',
           seasonName: '2023/2024',
           leagueName: 'Kreisliga A',
           matchId: '9950',
