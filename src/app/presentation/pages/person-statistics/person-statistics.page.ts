@@ -15,7 +15,10 @@ export class PersonStatisticsPage implements OnInit {
   statistics = [
     { heading: 'Spiele', filter: 'careerStatistic.matches' },
     { heading: 'Spiele in der Startelf', filter: 'careerStatistic.starting' },
-    { heading: 'Tore', filter: 'careerStatistic.goals' },
+    { heading: 'Siege', filter: 'careerStatistic.matchesWins' },
+    { heading: 'Unentschieden', filter: 'careerStatistic.matchesDraws' },
+    { heading: 'Niederlagen', filter: 'careerStatistic.matchesLoses' },
+    { heading: 'Erzielte Tore', filter: 'careerStatistic.goals' },
     { heading: 'Gelbe Karten', filter: 'careerStatistic.yellowCards' },
     { heading: 'Gelbe-Rote Karten', filter: 'careerStatistic.yellowRedCards' },
     { heading: 'Platzverweise', filter: 'careerStatistic.redCards' },
@@ -23,7 +26,8 @@ export class PersonStatisticsPage implements OnInit {
     { heading: 'Auswechslungen', filter: 'careerStatistic.cameOut' },
     { heading: 'Spielminuten', filter: 'careerStatistic.playingMinutes' },
     { heading: 'Spiele ohne Gegentor', filter: 'careerStatistic.matchesWithoutGoalsAgainst' },
-    { heading: 'Gegentore', filter: 'careerStatistic.goalsAgainst' },
+    { heading: 'Gefallene Tore', filter: 'careerStatistic.goalsFor' },
+    { heading: 'Erhaltene Gegentore', filter: 'careerStatistic.goalsAgainst' },
     { heading: 'Spiele als Kapitän', filter: 'careerStatistic.matchesCaptain' },
   ];
 

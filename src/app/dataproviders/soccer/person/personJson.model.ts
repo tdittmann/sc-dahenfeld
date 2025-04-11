@@ -21,9 +21,13 @@ export interface PersonFactJson {
 
 export interface PersonStatisticJson {
   matches: number;
+  matchesWins: number;
+  matchesDraws: number;
+  matchesLoses: number;
   matchesAsKeeper: number;
   starting: number;
   goals: number;
+  goalsFor: number;
   goalsAgainst: number;
   goalsAgainstAsKeeper: number;
   matchesWithoutGoalsAgainst: number;
