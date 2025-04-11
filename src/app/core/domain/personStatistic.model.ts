@@ -25,6 +25,11 @@ export class PersonStatistic {
   matchesAsKeeper: number;
 
   /**
+   * Number of played matches as captain.
+   */
+  matchesCaptain: number;
+
+  /**
    * Number of matches the player starts.
    */
   starting: number;

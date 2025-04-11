@@ -38,6 +38,7 @@ describe('PersonMapper', () => {
         matchesDraws: 1,
         matchesLoses: 1,
         matchesAsKeeper: 26,
+        matchesCaptain: 8,
         starting: 26,
         cameIn: 1,
         cameOut: 7,
@@ -59,6 +60,7 @@ describe('PersonMapper', () => {
         matchesDraws: 1,
         matchesLoses: 9,
         matchesAsKeeper: 159,
+        matchesCaptain: 8,
         starting: 159,
         cameIn: 1,
         cameOut: 14,
@@ -99,6 +101,7 @@ describe('PersonMapper', () => {
     expectedSeasonStats.matchesDraws = 1;
     expectedSeasonStats.matchesLoses = 6;
     expectedSeasonStats.matchesAsKeeper = 26;
+    expectedSeasonStats.matchesCaptain = 8;
     expectedSeasonStats.starting = 26;
     expectedSeasonStats.cameIn = 1;
     expectedSeasonStats.cameOut = 7;
@@ -120,6 +123,7 @@ describe('PersonMapper', () => {
     expectedCareerStats.matchesDraws = 1;
     expectedCareerStats.matchesLoses = 6;
     expectedCareerStats.matchesAsKeeper = 159;
+    expectedCareerStats.matchesCaptain = 8;
     expectedCareerStats.starting = 159;
     expectedCareerStats.cameIn = 1;
     expectedCareerStats.cameOut = 14;

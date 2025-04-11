@@ -8,9 +8,10 @@ import { PersonModule } from '../person/person.module';
 import { PersonService } from '../../../dataproviders/soccer/person/person.service';
 import { StatisticsCardModule } from '../../shared/statistics-card/statistics-card.module';
 import { SharedModule } from '../../shared/shared.module';
+import { BaseChartDirective, provideCharts, withDefaultRegisterables } from "ng2-charts";
 
 @NgModule({
-  providers: [PersonService],
+  providers: [PersonService, provideCharts(withDefaultRegisterables()),],
   imports: [
     CommonModule,
     FormsModule,
@@ -18,6 +19,7 @@ import { SharedModule } from '../../shared/shared.module';
     SharedModule,
     PersonModule,
     StatisticsCardModule,
+    BaseChartDirective,
     RouterModule.forChild([
       {
         path: '',

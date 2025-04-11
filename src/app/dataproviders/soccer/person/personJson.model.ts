@@ -25,6 +25,7 @@ export interface PersonStatisticJson {
   matchesDraws: number;
   matchesLoses: number;
   matchesAsKeeper: number;
+  matchesCaptain: number;
   starting: number;
   goals: number;
   goalsFor: number;
