@@ -6,8 +6,9 @@ import { Person } from '../../../core/domain/person.model';
 import { PersonService } from '../../../dataproviders/soccer/person/person.service';
 
 @Component({
-  templateUrl: 'birthdays.page.html',
-  styleUrls: ['birthdays.page.scss'],
+    templateUrl: 'birthdays.page.html',
+    styleUrls: ['birthdays.page.scss'],
+    standalone: false
 })
 export class BirthdaysPage implements OnInit {
   heading: string;

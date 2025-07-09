@@ -4,9 +4,10 @@ import { EventDetailPage } from '../../pages/event-detail/event-detail.page';
 import { ModalController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-event-card',
-  templateUrl: 'event-card.component.html',
-  styleUrls: ['event-card.component.scss'],
+    selector: 'app-event-card',
+    templateUrl: 'event-card.component.html',
+    styleUrls: ['event-card.component.scss'],
+    standalone: false
 })
 export class EventCardComponent {
   @Input() event: CalendarEvent;

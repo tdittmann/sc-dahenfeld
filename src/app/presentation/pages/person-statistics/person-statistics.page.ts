@@ -10,7 +10,8 @@ import { DevService } from "../../../dataproviders/dev.service";
 import { ChartConfiguration, ChartData } from "chart.js";
 
 @Component({
-  templateUrl: "person-statistics.page.html"
+    templateUrl: "person-statistics.page.html",
+    standalone: false
 })
 export class PersonStatisticsPage implements OnInit {
   heading: string;

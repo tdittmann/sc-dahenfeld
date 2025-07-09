@@ -3,9 +3,10 @@ import { Article } from '../../../../core/domain/article.model';
 import { ArticleService } from '../../../../dataproviders/article/article.service';
 
 @Component({
-  selector: 'app-team-detail-article',
-  templateUrl: 'team-detail-article.component.html',
-  styleUrls: ['team-detail-article.component.scss'],
+    selector: 'app-team-detail-article',
+    templateUrl: 'team-detail-article.component.html',
+    styleUrls: ['team-detail-article.component.scss'],
+    standalone: false
 })
 export class TeamDetailArticleComponent implements OnInit {
   @Input() articleId = '';

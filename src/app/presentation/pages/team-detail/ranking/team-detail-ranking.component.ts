@@ -7,9 +7,10 @@ import { RankingService } from '../../../../dataproviders/soccer/ranking/ranking
 import { DevService } from '../../../../dataproviders/dev.service';
 
 @Component({
-  selector: 'app-team-detail-ranking',
-  templateUrl: 'team-detail-ranking.component.html',
-  styleUrls: ['team-detail-ranking.component.scss'],
+    selector: 'app-team-detail-ranking',
+    templateUrl: 'team-detail-ranking.component.html',
+    styleUrls: ['team-detail-ranking.component.scss'],
+    standalone: false
 })
 export class TeamDetailRankingComponent implements OnInit {
   @Input() projectId = 0;

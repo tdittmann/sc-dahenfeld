@@ -4,7 +4,8 @@ import { Person } from '../../../core/domain/person.model';
 import { DevService } from '../../../dataproviders/dev.service';
 
 @Component({
-  templateUrl: 'person.page.html',
+    templateUrl: 'person.page.html',
+    standalone: false
 })
 export class PersonPage implements OnInit {
   @Input() personId: number;

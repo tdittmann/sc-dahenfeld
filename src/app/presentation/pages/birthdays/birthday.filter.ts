@@ -2,8 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Person } from '../../../core/domain/person.model';
 
 @Pipe({
-  name: 'birthdayFilter',
-  pure: false,
+    name: 'birthdayFilter',
+    pure: false,
+    standalone: false
 })
 export class BirthdayFilterPipe implements PipeTransform {
   transform(pItems: Person[], pSearchTerm): Person[] {

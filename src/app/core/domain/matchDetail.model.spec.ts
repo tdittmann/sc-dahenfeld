@@ -1,5 +1,5 @@
 import { MatchDetail } from './matchDetail.model';
-import * as moment from 'moment';
+import moment from "moment";
 import { MatchEvent } from './matchEvent.model';
 
 describe('MatchDetail', () => {

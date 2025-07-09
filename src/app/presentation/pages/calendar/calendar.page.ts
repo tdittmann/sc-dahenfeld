@@ -7,8 +7,9 @@ import { MatchDetailPage } from '../match-detail/match-detail.page';
 import { ModalController } from '@ionic/angular';
 
 @Component({
-  templateUrl: 'calendar.page.html',
-  styleUrls: ['calendar.page.scss'],
+    templateUrl: 'calendar.page.html',
+    styleUrls: ['calendar.page.scss'],
+    standalone: false
 })
 export class CalendarPage implements OnInit {
   heading: string;

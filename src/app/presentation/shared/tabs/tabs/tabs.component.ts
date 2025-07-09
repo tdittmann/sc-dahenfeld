@@ -14,11 +14,12 @@ import { TabComponent } from '../tab/tab.component';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-tabs',
-  templateUrl: 'tabs.component.html',
-  styleUrls: ['./tabs.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-tabs',
+    templateUrl: 'tabs.component.html',
+    styleUrls: ['./tabs.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class TabsComponent implements AfterContentInit, OnDestroy {
   constructor(

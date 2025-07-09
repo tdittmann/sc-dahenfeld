@@ -6,8 +6,9 @@ import { TeamDetailStatisticsModalComponent } from './statistics-modal/team-deta
 import { DevService } from '../../../../dataproviders/dev.service';
 
 @Component({
-  selector: 'app-team-detail-statistics',
-  templateUrl: 'team-detail-statistics.component.html',
+    selector: 'app-team-detail-statistics',
+    templateUrl: 'team-detail-statistics.component.html',
+    standalone: false
 })
 export class TeamDetailStatisticsComponent implements OnInit {
   @Input() projectId = 0;

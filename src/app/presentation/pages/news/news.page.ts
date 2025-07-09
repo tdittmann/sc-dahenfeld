@@ -4,9 +4,10 @@ import { Article } from '../../../core/domain/article.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-news',
-  templateUrl: 'news.page.html',
-  styleUrls: ['news.page.scss'],
+    selector: 'app-news',
+    templateUrl: 'news.page.html',
+    styleUrls: ['news.page.scss'],
+    standalone: false
 })
 export class NewsPage implements OnInit {
   numberOfFeaturedArticles = 1;

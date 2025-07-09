@@ -5,7 +5,8 @@ import { Browser } from '@capacitor/browser';
 import { FeedbackService } from '../../../dataproviders/feedback/feedback.service';
 
 @Component({
-  templateUrl: 'feedback.page.html',
+    templateUrl: 'feedback.page.html',
+    standalone: false
 })
 export class FeedbackPage implements OnInit {
   heading: string = 'Feedback';

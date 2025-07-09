@@ -3,8 +3,9 @@ import { MatchDetailService } from '../../../dataproviders/soccer/match-detail/m
 import { MatchDetail } from '../../../core/domain/matchDetail.model';
 
 @Component({
-  templateUrl: 'match-detail.page.html',
-  styleUrls: ['match-detail.page.scss'],
+    templateUrl: 'match-detail.page.html',
+    styleUrls: ['match-detail.page.scss'],
+    standalone: false
 })
 export class MatchDetailPage implements OnInit {
   @Input() matchId: number;

@@ -4,8 +4,9 @@ import { HttpService } from '../../../dataproviders/http.service';
 import { environment } from '../../../../environments/environment';
 
 @Component({
-  selector: 'app-custom-backend-call',
-  templateUrl: 'custom-backend-call.page.html',
+    selector: 'app-custom-backend-call',
+    templateUrl: 'custom-backend-call.page.html',
+    standalone: false
 })
 export class CustomBackendCallPage implements OnInit {
   heading: string;

@@ -8,8 +8,9 @@ import { TimelineTitle } from '../../../core/domain/timelineTitle.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  templateUrl: 'chronicle.page.html',
-  styleUrls: ['chronicle.page.scss'],
+    templateUrl: 'chronicle.page.html',
+    styleUrls: ['chronicle.page.scss'],
+    standalone: false
 })
 export class ChroniclePage implements OnInit {
   private CHRONICLE_CATEGORY = 155;

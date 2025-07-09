@@ -2,9 +2,10 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { MatchDetail } from '../../../../core/domain/matchDetail.model';
 
 @Component({
-  selector: 'app-match-head-to-head',
-  templateUrl: 'match-head-to-head.component.html',
-  styleUrls: ['match-head-to-head.component.scss'],
+    selector: 'app-match-head-to-head',
+    templateUrl: 'match-head-to-head.component.html',
+    styleUrls: ['match-head-to-head.component.scss'],
+    standalone: false
 })
 export class MatchHeadToHeadComponent implements OnChanges {
   @Input() homeId = 0;

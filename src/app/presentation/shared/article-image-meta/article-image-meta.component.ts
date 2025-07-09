@@ -2,9 +2,10 @@ import { Component, Input } from '@angular/core';
 import { Article } from '../../../core/domain/article.model';
 
 @Component({
-  selector: 'app-article-image-meta',
-  templateUrl: 'article-image-meta.component.html',
-  styleUrls: ['article-image-meta.component.scss'],
+    selector: 'app-article-image-meta',
+    templateUrl: 'article-image-meta.component.html',
+    styleUrls: ['article-image-meta.component.scss'],
+    standalone: false
 })
 export class ArticleImageMetaComponent {
   @Input() article: Article;

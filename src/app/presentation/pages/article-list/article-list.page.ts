@@ -5,9 +5,10 @@ import { Article } from '../../../core/domain/article.model';
 import { combineLatest } from 'rxjs';
 
 @Component({
-  selector: 'app-article-list',
-  templateUrl: 'article-list.page.html',
-  styleUrls: ['article-list.page.scss'],
+    selector: 'app-article-list',
+    templateUrl: 'article-list.page.html',
+    styleUrls: ['article-list.page.scss'],
+    standalone: false
 })
 export class ArticleListPage implements OnInit {
   numberOfFeaturedArticles = 1;

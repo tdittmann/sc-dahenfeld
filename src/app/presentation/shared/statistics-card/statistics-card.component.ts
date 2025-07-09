@@ -4,8 +4,9 @@ import { OrderPipe } from '../order-pipe/order.pipe';
 import { filter } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-statistics-card',
-  templateUrl: 'statistics-card.component.html',
+    selector: 'app-statistics-card',
+    templateUrl: 'statistics-card.component.html',
+    standalone: false
 })
 export class StatisticsCardComponent implements OnChanges {
   @Input() persons: Person[] = [];

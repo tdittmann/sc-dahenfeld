@@ -3,10 +3,11 @@ import { Article } from '../../../../core/domain/article.model';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-article-slider',
-  templateUrl: 'article-slider.component.html',
-  styleUrls: ['article-slider.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+    selector: 'app-article-slider',
+    templateUrl: 'article-slider.component.html',
+    styleUrls: ['article-slider.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class ArticleSliderComponent {
   @Input() articles: Article[] = [];
