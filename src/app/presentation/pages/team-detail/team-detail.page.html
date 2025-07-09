@@ -1,46 +1,53 @@
 <app-page-header noBorder="true" [title]="heading">
-  <ng-template
-    [ngIf]="teamInformation && teamInformation.showSeasons && teamInformation.seasons.length > 0"
-  >
+  @if (teamInformation && teamInformation.showSeasons && teamInformation.seasons.length > 0) {
     <ion-buttons slot="end">
       <ion-select
         [value]="selectedSeason"
         okText="Auswählen"
         cancelText="Abbrechen"
         (ionChange)="changeSeason($event)"
-      >
-        <ion-select-option
-          *ngFor="let season of teamInformation.seasons"
-          [value]="season.projectId"
         >
-          {{ season.name }}
-        </ion-select-option>
+        @for (season of teamInformation.seasons; track season) {
+          <ion-select-option
+            [value]="season.projectId"
+            >
+            {{ season.name }}
+          </ion-select-option>
+        }
       </ion-select>
     </ion-buttons>
-  </ng-template>
+  }
 </app-page-header>
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
-<ion-content color="light" *ngIf="teamInformation">
-  <app-tabs activeTabUrlIdentifier="team-detail-tab">
-    <app-tab tabTitle="Übersicht" *ngIf="teamInformation?.overview.length > 0">
-      <app-dynamic-content [contents]="teamInformation?.overview"></app-dynamic-content>
-    </app-tab>
-
-    <app-tab tabTitle="Tabelle" *ngIf="teamInformation?.showRanking">
-      <app-team-detail-ranking [projectId]="projectId"></app-team-detail-ranking>
-    </app-tab>
-
-    <app-tab tabTitle="Spiele" *ngIf="teamInformation?.showFixture">
-      <app-team-detail-fixture [projectId]="projectId"></app-team-detail-fixture>
-    </app-tab>
-
-    <app-tab tabTitle="Kader" *ngIf="teamInformation?.showPlayers">
-      <app-team-detail-players [projectId]="projectId"></app-team-detail-players>
-    </app-tab>
-
-    <app-tab tabTitle="Statistiken" *ngIf="teamInformation?.showStatistics">
-      <app-team-detail-statistics [projectId]="projectId"></app-team-detail-statistics>
-    </app-tab>
-  </app-tabs>
-</ion-content>
+@if (teamInformation) {
+  <ion-content color="light">
+    <app-tabs activeTabUrlIdentifier="team-detail-tab">
+      @if (teamInformation?.overview.length > 0) {
+        <app-tab tabTitle="Übersicht">
+          <app-dynamic-content [contents]="teamInformation?.overview"></app-dynamic-content>
+        </app-tab>
+      }
+      @if (teamInformation?.showRanking) {
+        <app-tab tabTitle="Tabelle">
+          <app-team-detail-ranking [projectId]="projectId"></app-team-detail-ranking>
+        </app-tab>
+      }
+      @if (teamInformation?.showFixture) {
+        <app-tab tabTitle="Spiele">
+          <app-team-detail-fixture [projectId]="projectId"></app-team-detail-fixture>
+        </app-tab>
+      }
+      @if (teamInformation?.showPlayers) {
+        <app-tab tabTitle="Kader">
+          <app-team-detail-players [projectId]="projectId"></app-team-detail-players>
+        </app-tab>
+      }
+      @if (teamInformation?.showStatistics) {
+        <app-tab tabTitle="Statistiken">
+          <app-team-detail-statistics [projectId]="projectId"></app-team-detail-statistics>
+        </app-tab>
+      }
+    </app-tabs>
+  </ion-content>
+}

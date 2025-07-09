@@ -5,20 +5,27 @@
   <div class="container">
     <div class="ion-padding">
       <div class="image">
-        <img *ngIf="sportheimInfo.image" [src]="sportheimInfo.image" [alt]="sportheimInfo.owner" />
+        @if (sportheimInfo.image) {
+          <img [src]="sportheimInfo.image" [alt]="sportheimInfo.owner" />
+        }
       </div>
 
-      <ion-button
-        *ngFor="let menue of sportheimInfo.menues"
-        expand="full"
-        (click)="navigateToExternalUrl(menue.link)"
-      >
-        {{ menue.name }}
-      </ion-button>
+      @for (menue of sportheimInfo.menues; track menue) {
+        <ion-button
+          expand="full"
+          (click)="navigateToExternalUrl(menue.link)"
+          >
+          {{ menue.name }}
+        </ion-button>
+      }
 
-      <div *ngIf="sportheimInfo.content" [innerHTML]="sportheimInfo.content"></div>
+      @if (sportheimInfo.content) {
+        <div [innerHTML]="sportheimInfo.content"></div>
+      }
 
-      <div *ngIf="sportheimInfo.owner" [innerHTML]="sportheimInfo.owner"></div>
+      @if (sportheimInfo.owner) {
+        <div [innerHTML]="sportheimInfo.owner"></div>
+      }
     </div>
   </div>
 </ion-content>

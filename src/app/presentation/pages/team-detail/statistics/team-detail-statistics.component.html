@@ -4,16 +4,18 @@
   [errorMessage]="errorMessage"
 ></app-page-state>
 
-<div class="container" *ngIf="statistics.length > 0">
-  <ng-template ngFor let-stat [ngForOf]="statistics">
-    <app-statistics-card
-      [persons]="persons"
-      [heading]="stat.heading"
-      [statisticFilter]="stat.filter"
-      [devModeEnabled]="isDevModeEnabled()"
-      (click)="openStatisticsModal(stat)"
-      class="clickable"
-    >
-    </app-statistics-card>
-  </ng-template>
-</div>
+@if (statistics.length > 0) {
+  <div class="container">
+    @for (stat of statistics; track stat) {
+      <app-statistics-card
+        [persons]="persons"
+        [heading]="stat.heading"
+        [statisticFilter]="stat.filter"
+        [devModeEnabled]="isDevModeEnabled()"
+        (click)="openStatisticsModal(stat)"
+        class="clickable"
+        >
+      </app-statistics-card>
+    }
+  </div>
+}

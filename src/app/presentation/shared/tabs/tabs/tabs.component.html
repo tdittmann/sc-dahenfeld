@@ -1,14 +1,15 @@
 <div class="tab-nav" [ngClass]="{'fixed': fixed}">
-  <div
-    class="col"
-    *ngFor="let tab of tabs; let i = index"
-    [class.active]="tab.active"
-    [class.disabled]="tab.disabled"
-    [ngStyle]="{flex: tabs.length}"
-    (click)="selectTab(tab, i)"
-  >
-    {{ tab.tabTitle }}
-  </div>
+  @for (tab of tabs; track tab; let i = $index) {
+    <div
+      class="col"
+      [class.active]="tab.active"
+      [class.disabled]="tab.disabled"
+      [ngStyle]="{flex: tabs.length}"
+      (click)="selectTab(tab, i)"
+      >
+      {{ tab.tabTitle }}
+    </div>
+  }
 </div>
 
 <div class="tab-content" [ngClass]="{'tab-content-fixed': fixed}">

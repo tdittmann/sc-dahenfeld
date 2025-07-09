@@ -1,30 +1,29 @@
 <app-page-header [title]="heading"></app-page-header>
 <app-page-state [loading]="isLoading" [error]="!isLoading && teams.size === 0"></app-page-state>
 
-<ion-content color="light" *ngIf="teams.size > 0">
-  <ng-template [ngIf]="showTable === 'false'">
-    <ion-list>
-      <ng-template ngFor let-team [ngForOf]="teams | keyvalue : teamNameOrder">
-        <ion-item mode="ios" button="true" routerLink="/team-detail/{{team.key.teamId}}">
-          <ion-label>{{team.key.teamName}}</ion-label>
-        </ion-item>
-      </ng-template>
-    </ion-list>
-  </ng-template>
-
-  <ng-template [ngIf]="showTable === 'true'">
-    <ng-template ngFor let-team [ngForOf]="teams | keyvalue : teamNameOrder">
-      <h2 class="ion-padding-start">{{team.key.teamName}}</h2>
-
-      <ion-card mode="md" routerLink="/team-detail/{{team.key.teamId}}">
-        <app-ranking [teams]="team.value"></app-ranking>
-
-        <ion-row class="ion-no-padding">
-          <ion-col class="ion-text-center">
-            <ion-button expand="full" fill="clear"> Mehr zur {{team.key.teamName}} </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-card>
-    </ng-template>
-  </ng-template>
-</ion-content>
+@if (teams.size > 0) {
+  <ion-content color="light">
+    @if (showTable === 'false') {
+      <ion-list>
+        @for (team of teams | keyvalue : teamNameOrder; track team) {
+          <ion-item mode="ios" button="true" routerLink="/team-detail/{{team.key.teamId}}">
+            <ion-label>{{team.key.teamName}}</ion-label>
+          </ion-item>
+        }
+      </ion-list>
+    }
+    @if (showTable === 'true') {
+      @for (team of teams | keyvalue : teamNameOrder; track team) {
+        <h2 class="ion-padding-start">{{team.key.teamName}}</h2>
+        <ion-card mode="md" routerLink="/team-detail/{{team.key.teamId}}">
+          <app-ranking [teams]="team.value"></app-ranking>
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-text-center">
+              <ion-button expand="full" fill="clear"> Mehr zur {{team.key.teamName}} </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      }
+    }
+  </ion-content>
+}

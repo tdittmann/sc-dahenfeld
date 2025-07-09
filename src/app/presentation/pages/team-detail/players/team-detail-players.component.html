@@ -4,18 +4,23 @@
   [errorMessage]="errorMessage"
 ></app-page-state>
 
-<div class="container" *ngIf="players.size > 0">
-  <app-card-container *ngFor="let map of players | keyvalue: returnZero" [heading]="map.key">
-    <ng-template ngFor let-player [ngForOf]="map.value">
-      <app-list-item
-        *ngIf="player.showOnFrontend || isDevModeEnabled()"
-        [text1]="player.name"
-        [image]="player.image"
-        [note]="player.jerseynumber"
-        noteSize="large"
-        (click)="openPlayer(player.id)"
-      >
-      </app-list-item>
-    </ng-template>
-  </app-card-container>
-</div>
+@if (players.size > 0) {
+  <div class="container">
+    @for (map of players | keyvalue: returnZero; track map) {
+      <app-card-container [heading]="map.key">
+        @for (player of map.value; track player) {
+          @if (player.showOnFrontend || isDevModeEnabled()) {
+            <app-list-item
+              [text1]="player.name"
+              [image]="player.image"
+              [note]="player.jerseynumber"
+              noteSize="large"
+              (click)="openPlayer(player.id)"
+              >
+            </app-list-item>
+          }
+        }
+      </app-card-container>
+    }
+  </div>
+}

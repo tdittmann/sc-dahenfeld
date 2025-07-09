@@ -1,61 +1,58 @@
 <app-modal-header title="Spiel-Informationen"></app-modal-header>
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
-<ion-content color="light" *ngIf="matchDetails">
-  <ion-refresher slot="fixed" (ionRefresh)="loadMatch($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-
-  <ion-card class="result-card">
-    <ion-card-content class="result-card-content">
-      <div class="result-container">
-        <div class="home-team text-center">
-          <img class="club-logo" [src]="matchDetails.homeImage" [alt]="matchDetails.homeName" />
-          <br />
-          <ion-text>{{ matchDetails.homeName }}</ion-text>
+@if (matchDetails) {
+  <ion-content color="light">
+    <ion-refresher slot="fixed" (ionRefresh)="loadMatch($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-card class="result-card">
+      <ion-card-content class="result-card-content">
+        <div class="result-container">
+          <div class="home-team text-center">
+            <img class="club-logo" [src]="matchDetails.homeImage" [alt]="matchDetails.homeName" />
+            <br />
+            <ion-text>{{ matchDetails.homeName }}</ion-text>
+          </div>
+          <div class="text-center match-result">
+            {{ matchDetails.getHomeResult() }} : {{ matchDetails.getAwayResult() }}
+          </div>
+          <div class="away-team text-center">
+            <img class="club-logo" [src]="matchDetails.awayImage" [alt]="matchDetails.awayName" />
+            <br />
+            <ion-text>{{ matchDetails.awayName }}</ion-text>
+          </div>
         </div>
-
-        <div class="text-center match-result">
-          {{ matchDetails.getHomeResult() }} : {{ matchDetails.getAwayResult() }}
-        </div>
-
-        <div class="away-team text-center">
-          <img class="club-logo" [src]="matchDetails.awayImage" [alt]="matchDetails.awayName" />
-          <br />
-          <ion-text>{{ matchDetails.awayName }}</ion-text>
-        </div>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <app-tabs [activeTabUrlIdentifier]="activeTabUrlIdentifier" [fixed]="false">
-    <app-tab tabTitle="Übersicht">
-      <app-match-highlights *ngIf="matchDetails.events.length > 0" [events]="matchDetails.events">
-      </app-match-highlights>
-
-      <app-match-information
-        [date]="matchDetails.getKickOffDate()"
-        [fixture]="matchDetails.fixture"
-        [location]="matchDetails.location"
-      >
-      </app-match-information>
-    </app-tab>
-
-    <app-tab tabTitle="Aufstellung">
-      <app-match-lineup
-        [lineup]="matchDetails.lineup"
-        [substitutions]="matchDetails.getSubstitutions()"
-      >
-      </app-match-lineup>
-    </app-tab>
-
-    <app-tab tabTitle="Head 2 Head">
-      <app-match-head-to-head
-        [matches]="pastMatches"
-        [homeId]="matchDetails.homeId"
-        [awayId]="matchDetails.awayId"
-      >
-      </app-match-head-to-head>
-    </app-tab>
-  </app-tabs>
-</ion-content>
+      </ion-card-content>
+    </ion-card>
+    <app-tabs [activeTabUrlIdentifier]="activeTabUrlIdentifier" [fixed]="false">
+      <app-tab tabTitle="Übersicht">
+        @if (matchDetails.events.length > 0) {
+          <app-match-highlights [events]="matchDetails.events">
+          </app-match-highlights>
+        }
+        <app-match-information
+          [date]="matchDetails.getKickOffDate()"
+          [fixture]="matchDetails.fixture"
+          [location]="matchDetails.location"
+          >
+        </app-match-information>
+      </app-tab>
+      <app-tab tabTitle="Aufstellung">
+        <app-match-lineup
+          [lineup]="matchDetails.lineup"
+          [substitutions]="matchDetails.getSubstitutions()"
+          >
+        </app-match-lineup>
+      </app-tab>
+      <app-tab tabTitle="Head 2 Head">
+        <app-match-head-to-head
+          [matches]="pastMatches"
+          [homeId]="matchDetails.homeId"
+          [awayId]="matchDetails.awayId"
+          >
+        </app-match-head-to-head>
+      </app-tab>
+    </app-tabs>
+  </ion-content>
+}
