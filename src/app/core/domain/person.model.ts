@@ -37,6 +37,10 @@ export class Person {
     return DateUtils.diffYears(this.birthday);
   }
 
+  public get yearOfBirthday(): number {
+    return this.birthday.year();
+  }
+
   public get formattedBirthday(): string {
     return this.birthday.format(environment.longDateFormat);
   }

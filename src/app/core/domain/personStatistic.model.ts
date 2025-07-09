@@ -5,9 +5,29 @@ export class PersonStatistic {
   matches: number;
 
   /**
+   * Number of played matches that were won.
+   */
+  matchesWins: number;
+
+  /**
+   * Number of played matches that were draw.
+   */
+  matchesDraws: number;
+
+  /**
+   * Number of played matches that were loses.
+   */
+  matchesLoses: number;
+
+  /**
    * Number of played matches as keeper.
    */
   matchesAsKeeper: number;
+
+  /**
+   * Number of played matches as captain.
+   */
+  matchesCaptain: number;
 
   /**
    * Number of matches the player starts.
@@ -15,14 +35,19 @@ export class PersonStatistic {
   starting: number;
 
   /**
-   * Number of goals.
+   * Number of goals of the person.
    */
   goals: number;
 
   /**
-   * Goals the person got against him.
+   * Goals the team got against him.
    */
   goalsAgainst: number;
+
+  /**
+   * Goals the team scored while the player was on field.
+   */
+  goalsFor: number;
 
   /**
    * Goals the person got against him when he was goalkeeper.

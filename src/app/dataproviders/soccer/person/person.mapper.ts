@@ -38,9 +38,14 @@ export class PersonMapper {
   mapStatisticFrom(param: PersonStatisticJson): PersonStatistic {
     const playerStatistic = new PersonStatistic();
     playerStatistic.matches = param.matches;
+    playerStatistic.matchesWins = param.matchesWins;
+    playerStatistic.matchesDraws = param.matchesDraws;
+    playerStatistic.matchesLoses = param.matchesLoses;
     playerStatistic.matchesAsKeeper = param.matchesAsKeeper;
+    playerStatistic.matchesCaptain = param.matchesCaptain;
     playerStatistic.starting = param.starting;
     playerStatistic.goals = param.goals;
+    playerStatistic.goalsFor = param.goalsFor;
     playerStatistic.goalsAgainst = param.goalsAgainst;
     playerStatistic.goalsAgainstAsKeeper = param.goalsAgainstAsKeeper;
     playerStatistic.matchesWithoutGoalsAgainst = param.matchesWithoutGoalsAgainst;

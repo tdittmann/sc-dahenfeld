@@ -34,12 +34,17 @@ describe('PersonMapper', () => {
         redCards: 0,
         goals: 4,
         matches: 27,
+        matchesWins: 25,
+        matchesDraws: 1,
+        matchesLoses: 1,
         matchesAsKeeper: 26,
+        matchesCaptain: 8,
         starting: 26,
         cameIn: 1,
         cameOut: 7,
         playingMinutes: 2302,
         statistic_hint: 'Season 12/13',
+        goalsFor: 22,
         goalsAgainst: 8,
         goalsAgainstAsKeeper: 7,
         matchesWithoutGoalsAgainst: 9,
@@ -51,12 +56,17 @@ describe('PersonMapper', () => {
         redCards: 0,
         goals: 64,
         matches: 160,
+        matchesWins: 150,
+        matchesDraws: 1,
+        matchesLoses: 9,
         matchesAsKeeper: 159,
+        matchesCaptain: 8,
         starting: 159,
         cameIn: 1,
         cameOut: 14,
         playingMinutes: 14133,
         statistic_hint: 'Since 11/12',
+        goalsFor: 22,
         goalsAgainst: 8,
         goalsAgainstAsKeeper: 7,
         matchesWithoutGoalsAgainst: 9,
@@ -87,12 +97,17 @@ describe('PersonMapper', () => {
     expectedSeasonStats.redCards = 0;
     expectedSeasonStats.goals = 4;
     expectedSeasonStats.matches = 27;
+    expectedSeasonStats.matchesWins = 20;
+    expectedSeasonStats.matchesDraws = 1;
+    expectedSeasonStats.matchesLoses = 6;
     expectedSeasonStats.matchesAsKeeper = 26;
+    expectedSeasonStats.matchesCaptain = 8;
     expectedSeasonStats.starting = 26;
     expectedSeasonStats.cameIn = 1;
     expectedSeasonStats.cameOut = 7;
     expectedSeasonStats.playingMinutes = 2302;
     expectedSeasonStats.statisticHint = 'Season 12/13';
+    expectedSeasonStats.goalsFor = 22;
     expectedSeasonStats.goalsAgainst = 8;
     expectedSeasonStats.goalsAgainstAsKeeper = 7;
     expectedSeasonStats.matchesWithoutGoalsAgainst = 9;
@@ -104,12 +119,17 @@ describe('PersonMapper', () => {
     expectedCareerStats.redCards = 0;
     expectedCareerStats.goals = 64;
     expectedCareerStats.matches = 160;
+    expectedCareerStats.matchesWins = 20;
+    expectedCareerStats.matchesDraws = 1;
+    expectedCareerStats.matchesLoses = 6;
     expectedCareerStats.matchesAsKeeper = 159;
+    expectedCareerStats.matchesCaptain = 8;
     expectedCareerStats.starting = 159;
     expectedCareerStats.cameIn = 1;
     expectedCareerStats.cameOut = 14;
     expectedCareerStats.playingMinutes = 14133;
     expectedCareerStats.statisticHint = 'Since 11/12';
+    expectedCareerStats.goalsFor = 22;
     expectedCareerStats.goalsAgainst = 8;
     expectedCareerStats.goalsAgainstAsKeeper = 7;
     expectedCareerStats.matchesWithoutGoalsAgainst = 9;
