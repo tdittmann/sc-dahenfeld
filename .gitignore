@@ -39,3 +39,4 @@ UserInterfaceState.xcuserstate
 /android/wrapper/dists/
 /android/app/google-services.json
 /src/environments/credentials.ts
+/http-client.private.env.json

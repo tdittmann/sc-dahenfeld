@@ -3,9 +3,10 @@ import { Moment } from 'moment';
 import { FavoriteTeamUtil } from '../../../util/FavoriteTeamUtil';
 
 @Component({
-  selector: 'app-match-card',
-  templateUrl: 'match-card.component.html',
-  styleUrls: ['match-card.component.scss'],
+    selector: 'app-match-card',
+    templateUrl: 'match-card.component.html',
+    styleUrls: ['match-card.component.scss'],
+    standalone: false
 })
 export class MatchCardComponent {
   @Input() matchId: number;

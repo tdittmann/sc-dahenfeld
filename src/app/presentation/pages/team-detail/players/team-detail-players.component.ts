@@ -7,8 +7,9 @@ import { DevService } from '../../../../dataproviders/dev.service';
 import { GroupByUtils } from '../../../../util/GroupByUtils';
 
 @Component({
-  selector: 'app-team-detail-players',
-  templateUrl: 'team-detail-players.component.html',
+    selector: 'app-team-detail-players',
+    templateUrl: 'team-detail-players.component.html',
+    standalone: false
 })
 export class TeamDetailPlayersComponent implements OnInit {
   @Input() projectId: number;

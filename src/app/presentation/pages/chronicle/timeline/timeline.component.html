@@ -1,15 +1,14 @@
 <div class="timeline-container">
-  <ng-template ngFor let-entry [ngForOf]="timelineEntries" let-odd="odd">
+  @for (entry of timelineEntries; track entry; let odd = $odd) {
     <div
       class="timeline-card clickable"
       [ngClass]="{'right' : odd, 'left' : !odd}"
       [routerLink]="entry.getArticleLink()"
-    >
+      >
       <div class="card-head">
         <h2>{{ entry.title }}</h2>
       </div>
-
       <div class="content" [innerHTML]="entry?.getTruncatedText()"></div>
     </div>
-  </ng-template>
+  }
 </div>

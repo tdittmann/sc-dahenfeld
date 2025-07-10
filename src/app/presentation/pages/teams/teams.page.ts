@@ -8,8 +8,9 @@ import { MatchService } from '../../../dataproviders/soccer/matches/match.servic
 import { RankingUtil } from '../../../util/RankingUtil';
 
 @Component({
-  templateUrl: 'teams.page.html',
-  styleUrls: ['teams.page.scss'],
+    templateUrl: 'teams.page.html',
+    styleUrls: ['teams.page.scss'],
+    standalone: false
 })
 export class TeamsPage implements OnInit {
   heading = 'Jugend';

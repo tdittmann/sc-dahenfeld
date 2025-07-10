@@ -4,8 +4,9 @@ import { Membership } from '../../../core/domain/membership.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  templateUrl: 'membership.page.html',
-  styleUrls: ['membership.page.scss'],
+    templateUrl: 'membership.page.html',
+    styleUrls: ['membership.page.scss'],
+    standalone: false
 })
 export class MembershipPage implements OnInit {
   heading: string;

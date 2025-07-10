@@ -1,24 +1,35 @@
-<div *ngIf="lineup.length === 0" class="no-data-container">
-  <ion-icon src="assets/icon/soccer_dribbling.svg" class="no-data-icon"></ion-icon>
-  <p>Aktuell ist noch keine Aufstellung vorhanden</p>
-</div>
+@if (lineup.length === 0) {
+  <div class="no-data-container">
+    <ion-icon src="assets/icon/soccer_dribbling.svg" class="no-data-icon"></ion-icon>
+    <p>Aktuell ist noch keine Aufstellung vorhanden</p>
+  </div>
+}
 
-<app-card-container heading="Startelf" *ngIf="lineup.length > 0">
-  <app-list-item
-    *ngFor="let player of lineup"
-    [image]="player.image"
-    [text1]="player.name"
-    [text2]="player.position"
-    [note]="player.jerseynumber"
-    noteSize="large"
-  >
-    <div *ngIf="player.captain" class="captain">
-      <span>C</span>
-    </div>
-  </app-list-item>
-</app-card-container>
+@if (lineup.length > 0) {
+  <app-card-container heading="Startelf">
+    @for (player of lineup; track player) {
+      <app-list-item
+        [image]="player.image"
+        [text1]="player.name"
+        [text2]="player.position"
+        [note]="player.jerseynumber"
+        noteSize="large"
+        >
+        @if (player.captain) {
+          <div class="captain">
+            <span>C</span>
+          </div>
+        }
+      </app-list-item>
+    }
+  </app-card-container>
+}
 
-<app-card-container *ngIf="substitutions.length > 0" heading="Spielerwechsel">
-  <app-match-highlight *ngFor="let substitution of substitutions" [event]="substitution">
-  </app-match-highlight>
-</app-card-container>
+@if (substitutions.length > 0) {
+  <app-card-container heading="Spielerwechsel">
+    @for (substitution of substitutions; track substitution) {
+      <app-match-highlight [event]="substitution">
+      </app-match-highlight>
+    }
+  </app-card-container>
+}

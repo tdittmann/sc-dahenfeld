@@ -5,7 +5,8 @@ import { TeamInformationService } from '../../../dataproviders/soccer/teamInform
 import { combineLatest } from 'rxjs';
 
 @Component({
-  templateUrl: 'team-detail.page.html',
+    templateUrl: 'team-detail.page.html',
+    standalone: false
 })
 export class TeamDetailPage implements OnInit {
   heading: string;

@@ -1,21 +1,24 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
-<div class="container ion-padding" *ngIf="ranking.length > 0">
-  <ion-segment
-    *ngIf="!isHistoricRanking"
-    (ionChange)="recalculateRanking($event)"
-    value="total"
-    mode="ios"
-  >
-    <ng-template ngFor let-rankingType [ngForOf]="rankingTypes">
-      <ion-segment-button
-        [value]="rankingType.value"
-        *ngIf="!rankingType.devOnly || isDevModeEnabled()"
-      >
-        <ion-label>{{ rankingType.label }}</ion-label>
-      </ion-segment-button>
-    </ng-template>
-  </ion-segment>
-
-  <app-ranking [teams]="ranking"></app-ranking>
-</div>
+@if (ranking.length > 0) {
+  <div class="container ion-padding">
+    @if (!isHistoricRanking) {
+      <ion-segment
+        (ionChange)="recalculateRanking($event)"
+        value="total"
+        mode="ios"
+        >
+        @for (rankingType of rankingTypes; track rankingType) {
+          @if (!rankingType.devOnly || isDevModeEnabled()) {
+            <ion-segment-button
+              [value]="rankingType.value"
+              >
+              <ion-label>{{ rankingType.label }}</ion-label>
+            </ion-segment-button>
+          }
+        }
+      </ion-segment>
+    }
+    <app-ranking [teams]="ranking"></app-ranking>
+  </div>
+}

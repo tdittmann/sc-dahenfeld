@@ -1,8 +1,14 @@
 <app-card-container heading="Informationen">
-  <app-list-item *ngIf="date" icon="time-outline" text1="Anpfiff" [text2]="date"> </app-list-item>
+  @if (date) {
+    <app-list-item icon="time-outline" text1="Anpfiff" [text2]="date"> </app-list-item>
+  }
 
-  <app-list-item *ngIf="location" icon="location-outline" text1="Ort" [text2]="location">
-  </app-list-item>
+  @if (location) {
+    <app-list-item icon="location-outline" text1="Ort" [text2]="location">
+    </app-list-item>
+  }
 
-  <app-list-item *ngIf="fixture" icon="clipboard-outline" [text1]="fixture"> </app-list-item>
+  @if (fixture) {
+    <app-list-item icon="clipboard-outline" [text1]="fixture"> </app-list-item>
+  }
 </app-card-container>

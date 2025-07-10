@@ -1,5 +1,5 @@
 import { CalendarEvent } from './calendarEvent.model';
-import * as moment from 'moment';
+import moment from "moment";
 
 describe('CalendarEvent', () => {
   it('should return the image background url', function () {

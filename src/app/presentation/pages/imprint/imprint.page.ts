@@ -9,11 +9,12 @@ import { ProfileService } from '../../../dataproviders/profile/profile.service';
 import { App } from '@capacitor/app';
 
 @Component({
-  templateUrl: 'imprint.page.html',
+    templateUrl: 'imprint.page.html',
+    standalone: false
 })
 export class ImprintPage implements OnInit {
   heading: string;
-  version = '6.9.0';
+  version = '6.10.0';
   developer = 'Timo Dittmann';
   darkMode = false;
 

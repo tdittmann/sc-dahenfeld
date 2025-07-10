@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-page-state',
-  templateUrl: 'page-state.component.html',
-  styleUrls: ['page-state.component.scss'],
+    selector: 'app-page-state',
+    templateUrl: 'page-state.component.html',
+    styleUrls: ['page-state.component.scss'],
+    standalone: false
 })
 export class PageStateComponent {
   @Input() loading = false;

@@ -1,23 +1,32 @@
 <div class="image" [ngStyle]="{'background-image' : article?.getFirstImageAsBackgroundUrl()}">
   <div class="slider-container">
-    <ion-badge
-      class="category"
-      *ngIf="showCategory()"
-      [ngStyle]="{'background-color': article?.categoryColor}"
-    >
-      {{ article?.categoryName }}
-    </ion-badge>
+    @if (showCategory()) {
+      <ion-badge
+        class="category"
+        [ngStyle]="{'background-color': article?.categoryColor}"
+        >
+        {{ article?.categoryName }}
+      </ion-badge>
+    }
 
     <h3 class="title">{{ article?.title }}</h3>
 
-    <ul class="meta" *ngIf="showMeta()">
-      <li class="meta-item" *ngIf="article?.createdAt">{{ article?.getFormattedDate()}}</li>
-      <li class="meta-item" *ngIf="article?.hits">
-        <ion-icon name="eye"></ion-icon>
-        {{article?.hits}}
-      </li>
-    </ul>
+    @if (showMeta()) {
+      <ul class="meta">
+        @if (article?.createdAt) {
+          <li class="meta-item">{{ article?.getFormattedDate()}}</li>
+        }
+        @if (article?.hits) {
+          <li class="meta-item">
+            <ion-icon name="eye"></ion-icon>
+            {{article?.hits}}
+          </li>
+        }
+      </ul>
+    }
 
-    <span class="author" *ngIf="showAuthor()"> {{ article?.createdBy }} </span>
+    @if (showAuthor()) {
+      <span class="author"> {{ article?.createdBy }} </span>
+    }
   </div>
 </div>

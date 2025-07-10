@@ -6,8 +6,9 @@ import { StorageService } from '../../../dataproviders/storage.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  templateUrl: 'profile.page.html',
-  styleUrls: ['profile.page.scss'],
+    templateUrl: 'profile.page.html',
+    styleUrls: ['profile.page.scss'],
+    standalone: false
 })
 export class ProfilePage implements OnInit {
   heading: string;

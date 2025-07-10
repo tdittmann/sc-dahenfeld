@@ -5,7 +5,8 @@ import { Article } from '../../../core/domain/article.model';
 import { combineLatest } from 'rxjs';
 
 @Component({
-  templateUrl: 'article-detail.page.html',
+    templateUrl: 'article-detail.page.html',
+    standalone: false
 })
 export class ArticleDetailPage implements OnInit {
   heading: string;

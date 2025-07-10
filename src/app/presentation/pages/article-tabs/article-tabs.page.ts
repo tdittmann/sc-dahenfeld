@@ -4,7 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Article } from '../../../core/domain/article.model';
 
 @Component({
-  templateUrl: 'article-tabs.page.html',
+    templateUrl: 'article-tabs.page.html',
+    standalone: false
 })
 export class ArticleTabsPage implements OnInit {
   heading: string;

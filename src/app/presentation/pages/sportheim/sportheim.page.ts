@@ -5,9 +5,10 @@ import { SportheimInfo } from '../../../core/domain/sportheim-info.model';
 import { Browser } from '@capacitor/browser';
 
 @Component({
-  selector: 'app-sportheim',
-  templateUrl: 'sportheim.page.html',
-  styleUrls: ['sportheim.page.scss'],
+    selector: 'app-sportheim',
+    templateUrl: 'sportheim.page.html',
+    styleUrls: ['sportheim.page.scss'],
+    standalone: false
 })
 export class SportheimPage implements OnInit {
   heading: string;

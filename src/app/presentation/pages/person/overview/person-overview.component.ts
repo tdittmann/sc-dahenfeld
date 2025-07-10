@@ -3,9 +3,10 @@ import { Person } from '../../../../core/domain/person.model';
 import { DevService } from '../../../../dataproviders/dev.service';
 
 @Component({
-  selector: 'app-person-overview',
-  templateUrl: 'person-overview.component.html',
-  styleUrls: ['person-overview.component.scss'],
+    selector: 'app-person-overview',
+    templateUrl: 'person-overview.component.html',
+    styleUrls: ['person-overview.component.scss'],
+    standalone: false
 })
 export class PersonOverviewComponent {
   @Input() person: Person;

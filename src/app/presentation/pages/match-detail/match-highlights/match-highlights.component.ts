@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import { MatchEvent } from '../../../../core/domain/matchEvent.model';
 
 @Component({
-  selector: 'app-match-highlights',
-  templateUrl: 'match-highlights.component.html',
+    selector: 'app-match-highlights',
+    templateUrl: 'match-highlights.component.html',
+    standalone: false
 })
 export class MatchHighlightsComponent {
   @Input() events: MatchEvent[] = [];

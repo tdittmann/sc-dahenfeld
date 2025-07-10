@@ -3,9 +3,10 @@ import { Article } from '../../../core/domain/article.model';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-article-detail',
-  templateUrl: 'article-detail.component.html',
-  styleUrls: ['article-detail.component.scss'],
+    selector: 'app-article-detail',
+    templateUrl: 'article-detail.component.html',
+    styleUrls: ['article-detail.component.scss'],
+    standalone: false
 })
 export class ArticleDetailComponent implements OnInit, AfterViewInit {
   @Input() article: Article;

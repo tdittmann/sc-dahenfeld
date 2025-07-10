@@ -1,8 +1,11 @@
-<ng-template [ngIf]="loading || error">
+@if (loading || error) {
   <div class="page-state-container">
     {{ getMessage() }}<br />
-
-    <ion-spinner name="dots" *ngIf="isLoading()"></ion-spinner>
-    <ion-icon [name]="errorIcon" *ngIf="isError()"></ion-icon>
+    @if (isLoading()) {
+      <ion-spinner name="dots"></ion-spinner>
+    }
+    @if (isError()) {
+      <ion-icon [name]="errorIcon"></ion-icon>
+    }
   </div>
-</ng-template>
+}

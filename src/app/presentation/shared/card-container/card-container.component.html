@@ -1,21 +1,28 @@
 <ion-card mode="md">
-  <ion-card-header *ngIf="heading" (click)="toggleContent()">
-    <ion-card-title mode="md">{{ heading }}</ion-card-title>
-    <ion-card-subtitle *ngIf="subHeading" mode="md">{{ subHeading }}</ion-card-subtitle>
+  @if (heading) {
+    <ion-card-header (click)="toggleContent()">
+      <ion-card-title mode="md">{{ heading }}</ion-card-title>
+      @if (subHeading) {
+        <ion-card-subtitle mode="md">{{ subHeading }}</ion-card-subtitle>
+      }
+      @if (actAsAccordion && !isContentVisible) {
+        <ion-icon
+          class="ion-icon"
+          name="chevron-down-outline"
+          />
+      }
+      @if (actAsAccordion && isContentVisible) {
+        <ion-icon
+          class="ion-icon"
+          name="chevron-up-outline"
+          />
+      }
+    </ion-card-header>
+  }
 
-    <ion-icon
-      *ngIf="actAsAccordion && !isContentVisible"
-      class="ion-icon"
-      name="chevron-down-outline"
-    />
-    <ion-icon
-      *ngIf="actAsAccordion && isContentVisible"
-      class="ion-icon"
-      name="chevron-up-outline"
-    />
-  </ion-card-header>
-
-  <ion-card-content *ngIf="isContentVisible">
-    <ng-content></ng-content>
-  </ion-card-content>
+  @if (isContentVisible) {
+    <ion-card-content>
+      <ng-content></ng-content>
+    </ion-card-content>
+  }
 </ion-card>

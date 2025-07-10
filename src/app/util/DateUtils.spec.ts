@@ -1,5 +1,5 @@
 import { DateUtils } from './DateUtils';
-import * as moment from 'moment';
+import moment from "moment";
 
 describe('DateUtils', function () {
   it('should handle undefined string', function () {

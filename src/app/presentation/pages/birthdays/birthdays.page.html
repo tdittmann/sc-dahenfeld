@@ -1,23 +1,24 @@
 <app-page-header [title]="heading"></app-page-header>
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
-<ion-content color="light" class="ion-no-padding" *ngIf="persons.length > 0">
-  <ion-searchbar [(ngModel)]="filter" placeholder="Person suchen"></ion-searchbar>
-
-  <cdk-virtual-scroll-viewport itemSize="65" minBufferPx="500" maxBufferPx="1350">
-    <ion-list>
-      <ion-item
-        *cdkVirtualFor="let person of persons | orderBy: 'daysTillBirthday' | birthdayFilter: filter"
-        [color]="person.isTodaysBirthday() ? 'primary' : ''"
-      >
-        <ion-label (click)="openPerson(person.id)">
-          <strong>{{ person.name }}</strong>
-          <div class="row">
-            <div class="col-8"><p>{{ person.birthdaySubtitle }}</p></div>
-            <div class="col-4 ion-text-right"><p>{{ person.formattedBirthday }}</p></div>
-          </div>
-        </ion-label>
-      </ion-item>
-    </ion-list>
-  </cdk-virtual-scroll-viewport>
-</ion-content>
+@if (persons.length > 0) {
+  <ion-content color="light" class="ion-no-padding">
+    <ion-searchbar [(ngModel)]="filter" placeholder="Person suchen"></ion-searchbar>
+    <cdk-virtual-scroll-viewport itemSize="65" minBufferPx="500" maxBufferPx="1350">
+      <ion-list>
+        <ion-item
+          *cdkVirtualFor="let person of persons | orderBy: 'daysTillBirthday' | birthdayFilter: filter"
+          [color]="person.isTodaysBirthday() ? 'primary' : ''"
+          >
+          <ion-label (click)="openPerson(person.id)">
+            <strong>{{ person.name }}</strong>
+            <div class="row">
+              <div class="col-8"><p>{{ person.birthdaySubtitle }}</p></div>
+              <div class="col-4 ion-text-right"><p>{{ person.formattedBirthday }}</p></div>
+            </div>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </cdk-virtual-scroll-viewport>
+  </ion-content>
+}

@@ -1,32 +1,35 @@
-<table *ngIf="teams">
-  <thead>
-    <tr>
-      <th class="ion-text-center"></th>
-      <th colspan="2"></th>
-      <th class="ion-text-center">Sp.</th>
-      <th class="ion-text-center ion-hide-sm-down">S</th>
-      <th class="ion-text-center ion-hide-sm-down">U</th>
-      <th class="ion-text-center ion-hide-sm-down">N</th>
-      <th class="ion-text-center ion-hide-md-down">T</th>
-      <th class="ion-text-center ion-hide-md-down">GT</th>
-      <th class="ion-text-center">Diff.</th>
-      <th class="ion-text-center">Pkt.</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr *ngFor="let team of teams" [ngClass]="{favorite : team.isFavoriteTeam()}">
-      <td class="ion-text-center">{{ team.place }}</td>
-      <td><img [src]="team.image" [alt]="team.name" /></td>
-      <td>{{ team.name }}</td>
-      <td class="ion-text-center">{{ team.matches }}</td>
-      <td class="ion-text-center ion-hide-sm-down">{{ team.wins }}</td>
-      <td class="ion-text-center ion-hide-sm-down">{{ team.draws }}</td>
-      <td class="ion-text-center ion-hide-sm-down">{{ team.losses }}</td>
-      <td class="ion-text-center ion-hide-md-down">{{ team.goalsFor }}</td>
-      <td class="ion-text-center ion-hide-md-down">{{ team.goalsAgainst }}</td>
-      <td class="ion-text-center">{{ team.getGoalsDiff() }}</td>
-      <td class="ion-text-center"><strong>{{ team.points }}</strong></td>
-    </tr>
-  </tbody>
-</table>
+@if (teams) {
+  <table>
+    <thead>
+      <tr>
+        <th class="ion-text-center"></th>
+        <th colspan="2"></th>
+        <th class="ion-text-center">Sp.</th>
+        <th class="ion-text-center ion-hide-sm-down">S</th>
+        <th class="ion-text-center ion-hide-sm-down">U</th>
+        <th class="ion-text-center ion-hide-sm-down">N</th>
+        <th class="ion-text-center ion-hide-md-down">T</th>
+        <th class="ion-text-center ion-hide-md-down">GT</th>
+        <th class="ion-text-center">Diff.</th>
+        <th class="ion-text-center">Pkt.</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (team of teams; track team) {
+        <tr [ngClass]="{favorite : team.isFavoriteTeam()}">
+          <td class="ion-text-center">{{ team.place }}</td>
+          <td><img [src]="team.image" [alt]="team.name" /></td>
+          <td>{{ team.name }}</td>
+          <td class="ion-text-center">{{ team.matches }}</td>
+          <td class="ion-text-center ion-hide-sm-down">{{ team.wins }}</td>
+          <td class="ion-text-center ion-hide-sm-down">{{ team.draws }}</td>
+          <td class="ion-text-center ion-hide-sm-down">{{ team.losses }}</td>
+          <td class="ion-text-center ion-hide-md-down">{{ team.goalsFor }}</td>
+          <td class="ion-text-center ion-hide-md-down">{{ team.goalsAgainst }}</td>
+          <td class="ion-text-center">{{ team.getGoalsDiff() }}</td>
+          <td class="ion-text-center"><strong>{{ team.points }}</strong></td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

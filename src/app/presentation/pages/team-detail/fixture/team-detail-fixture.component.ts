@@ -5,8 +5,9 @@ import { MatchDetailPage } from '../../match-detail/match-detail.page';
 import { ModalController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-team-detail-fixture',
-  templateUrl: 'team-detail-fixture.component.html',
+    selector: 'app-team-detail-fixture',
+    templateUrl: 'team-detail-fixture.component.html',
+    standalone: false
 })
 export class TeamDetailFixtureComponent implements OnInit {
   @Input() projectId = 0;

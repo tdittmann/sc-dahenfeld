@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import { PersonStatistic } from '../../../../core/domain/personStatistic.model';
 
 @Component({
-  selector: 'app-person-statistics',
-  templateUrl: 'person-statistics.component.html',
+    selector: 'app-person-statistics',
+    templateUrl: 'person-statistics.component.html',
+    standalone: false
 })
 export class PersonStatisticsComponent {
   @Input() statistics: PersonStatistic;

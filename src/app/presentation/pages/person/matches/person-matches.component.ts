@@ -5,9 +5,10 @@ import { MatchDetailPage } from '../../match-detail/match-detail.page';
 import { ModalController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-person-matches',
-  templateUrl: 'person-matches.component.html',
-  styleUrls: ['person-matches.component.scss'],
+    selector: 'app-person-matches',
+    templateUrl: 'person-matches.component.html',
+    styleUrls: ['person-matches.component.scss'],
+    standalone: false
 })
 export class PersonMatchesComponent implements OnInit {
   @Input() matches: PersonMatch[];

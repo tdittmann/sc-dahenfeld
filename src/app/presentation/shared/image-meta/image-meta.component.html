@@ -2,14 +2,22 @@
   <div class="slider-container">
     <h3 class="title">{{ title }}</h3>
 
-    <p *ngIf="subTitle">
-      <ion-icon *ngIf="subTitleIcon" [name]="subTitleIcon"></ion-icon>
-      {{subTitle}}
-    </p>
+    @if (subTitle) {
+      <p>
+        @if (subTitleIcon) {
+          <ion-icon [name]="subTitleIcon"></ion-icon>
+        }
+        {{subTitle}}
+      </p>
+    }
 
-    <p *ngIf="subSubTitle">
-      <ion-icon *ngIf="subSubTitleIcon" [name]="subSubTitleIcon"></ion-icon>
-      {{subSubTitle}}
-    </p>
+    @if (subSubTitle) {
+      <p>
+        @if (subSubTitleIcon) {
+          <ion-icon [name]="subSubTitleIcon"></ion-icon>
+        }
+        {{subSubTitle}}
+      </p>
+    }
   </div>
 </div>

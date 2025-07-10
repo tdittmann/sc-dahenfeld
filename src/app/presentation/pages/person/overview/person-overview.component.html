@@ -1,35 +1,43 @@
-<div class="image-container" *ngIf="person">
-  <div class="image" [ngStyle]="{'background-image' : person?.imageAsBackground}"></div>
-
-  <div class="name">
-    <h1>{{ person?.lastname }}</h1>
-    <h2>{{ person?.firstname }}</h2>
+@if (person) {
+  <div class="image-container">
+    <div class="image" [ngStyle]="{'background-image' : person?.imageAsBackground}"></div>
+    <div class="name">
+      <h1>{{ person?.lastname }}</h1>
+      <h2>{{ person?.firstname }}</h2>
+    </div>
+    <ion-grid class="player-info">
+      @if (person?.birthday && isDevModeEnabled()) {
+        <ion-row>
+          <ion-col>
+            <p class="player-info-value">{{ person?.age }}</p>
+            <p class="player-info-text">Alter</p>
+          </ion-col>
+        </ion-row>
+      }
+      @if (person?.jerseynumber > 0) {
+        <ion-row>
+          <ion-col>
+            <p class="player-info-value">{{ person?.jerseynumber }}</p>
+            <p class="player-info-text">Trikotnummer</p>
+          </ion-col>
+        </ion-row>
+      }
+      @if (person?.position) {
+        <ion-row>
+          <ion-col>
+            <p class="player-info-value">{{ person?.position }}</p>
+            <p class="player-info-text">Position</p>
+          </ion-col>
+        </ion-row>
+      }
+      @if (person?.birthday && isDevModeEnabled()) {
+        <ion-row>
+          <ion-col>
+            <p class="player-info-value">{{ person?.formattedBirthday }}</p>
+            <p class="player-info-text">Geburtstag</p>
+          </ion-col>
+        </ion-row>
+      }
+    </ion-grid>
   </div>
-
-  <ion-grid class="player-info">
-    <ion-row *ngIf="person?.birthday && isDevModeEnabled()">
-      <ion-col>
-        <p class="player-info-value">{{ person?.age }}</p>
-        <p class="player-info-text">Alter</p>
-      </ion-col>
-    </ion-row>
-    <ion-row *ngIf="person?.jerseynumber > 0">
-      <ion-col>
-        <p class="player-info-value">{{ person?.jerseynumber }}</p>
-        <p class="player-info-text">Trikotnummer</p>
-      </ion-col>
-    </ion-row>
-    <ion-row *ngIf="person?.position">
-      <ion-col>
-        <p class="player-info-value">{{ person?.position }}</p>
-        <p class="player-info-text">Position</p>
-      </ion-col>
-    </ion-row>
-    <ion-row *ngIf="person?.birthday && isDevModeEnabled()">
-      <ion-col>
-        <p class="player-info-value">{{ person?.formattedBirthday }}</p>
-        <p class="player-info-text">Geburtstag</p>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</div>
+}

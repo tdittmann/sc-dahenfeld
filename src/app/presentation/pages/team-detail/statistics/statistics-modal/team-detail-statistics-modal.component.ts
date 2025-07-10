@@ -2,8 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Person } from '../../../../../core/domain/person.model';
 
 @Component({
-  selector: 'app-team-detail-statistics-modal',
-  templateUrl: 'team-detail-statistics-modal.component.html',
+    selector: 'app-team-detail-statistics-modal',
+    templateUrl: 'team-detail-statistics-modal.component.html',
+    standalone: false
 })
 export class TeamDetailStatisticsModalComponent implements OnInit {
   @Input() searchFilter: string;
