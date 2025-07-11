@@ -1,5 +1,5 @@
 import { HttpService } from '../../http.service';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../../environments/environment';
 import { map } from 'rxjs/operators';
@@ -9,9 +9,9 @@ import { MatchDetailMapper } from './matchDetail.mapper';
 
 @Injectable()
 export class MatchDetailService {
-  private matchDetailMapper: MatchDetailMapper = new MatchDetailMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  private readonly matchDetailMapper: MatchDetailMapper = new MatchDetailMapper();
 
   loadMatchDetails(matchId: number): Observable<MatchDetail> {
     return this.httpService.get<MatchDetailJson>(environment.backendUrl + 'match?id=' + matchId).pipe(

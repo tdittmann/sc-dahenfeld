@@ -5,22 +5,20 @@
 ></app-page-state>
 
 @if (players.size > 0) {
-  <div class="container">
-    @for (map of players | keyvalue: returnZero; track map) {
-      <app-card-container [heading]="map.key">
-        @for (player of map.value; track player) {
-          @if (player.showOnFrontend || isDevModeEnabled()) {
-            <app-list-item
-              [text1]="player.name"
-              [image]="player.image"
-              [note]="player.jerseynumber"
-              noteSize="large"
-              (click)="openPlayer(player.id)"
-              >
-            </app-list-item>
-          }
-        }
-      </app-card-container>
-    }
-  </div>
+<div class="container">
+  @for (map of players | keyvalue: returnZero; track map) {
+  <app-card-container [heading]="map.key">
+    @for (player of map.value; track player) { @if (player.showOnFrontend || isDevModeEnabled()) {
+    <app-list-item
+      [text1]="player.name"
+      [image]="player.image"
+      [note]="player.jerseynumber"
+      noteSize="large"
+      (click)="openPlayer(player.id)"
+    >
+    </app-list-item>
+    } }
+  </app-card-container>
+  }
+</div>
 }

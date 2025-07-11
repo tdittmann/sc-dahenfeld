@@ -7,13 +7,13 @@ import { SharedModule } from '../../shared/shared.module';
 import { TeamDetailArticleComponent } from './article/team-detail-article.component';
 import { RouterModule } from '@angular/router';
 import { ArticleService } from '../../../dataproviders/article/article.service';
-import { RankingModule } from '../../shared/ranking/ranking.module';
+
 import { MatchService } from '../../../dataproviders/soccer/matches/match.service';
 import { TeamDetailRankingComponent } from './ranking/team-detail-ranking.component';
-import { MatchCardModule } from '../../shared/match-card/match-card.module';
+
 import { MatchDetailPageModule } from '../match-detail/match-detail.module';
 import { TeamDetailFixtureComponent } from './fixture/team-detail-fixture.component';
-import { ModalHeaderModule } from '../../shared/modal-header/modal-header.module';
+
 import { PersonService } from '../../../dataproviders/soccer/person/person.service';
 import { PersonModule } from '../person/person.module';
 import { TeamDetailPlayersComponent } from './players/team-detail-players.component';
@@ -32,12 +32,9 @@ import { RankingService } from '../../../dataproviders/soccer/ranking/ranking.se
     FormsModule,
     IonicModule,
     SharedModule,
-    RankingModule,
-    MatchCardModule,
     MatchDetailPageModule,
     PersonModule,
     StatisticsCardModule,
-    ModalHeaderModule,
     DynamicContentModule,
     RouterModule.forChild([
       {
@@ -45,8 +42,6 @@ import { RankingService } from '../../../dataproviders/soccer/ranking/ranking.se
         component: TeamDetailPage,
       },
     ]),
-  ],
-  declarations: [
     TeamDetailPage,
     TeamDetailArticleComponent,
     TeamDetailRankingComponent,

@@ -3,21 +3,17 @@
     <h3 class="title">{{ title }}</h3>
 
     @if (subTitle) {
-      <p>
-        @if (subTitleIcon) {
-          <ion-icon [name]="subTitleIcon"></ion-icon>
-        }
-        {{subTitle}}
-      </p>
-    }
-
-    @if (subSubTitle) {
-      <p>
-        @if (subSubTitleIcon) {
-          <ion-icon [name]="subSubTitleIcon"></ion-icon>
-        }
-        {{subSubTitle}}
-      </p>
+    <p>
+      @if (subTitleIcon) {
+      <ion-icon [name]="subTitleIcon"></ion-icon>
+      } {{subTitle}}
+    </p>
+    } @if (subSubTitle) {
+    <p>
+      @if (subSubTitleIcon) {
+      <ion-icon [name]="subSubTitleIcon"></ion-icon>
+      } {{subSubTitle}}
+    </p>
     }
   </div>
 </div>

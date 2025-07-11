@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { TeamInformationMapper } from './teamInformation.mapper';
 import { Observable } from 'rxjs';
 import { TeamInformation } from '../../core/domain/teamInformation.model';
@@ -9,9 +9,9 @@ import { HttpService } from '../http.service';
 
 @Injectable()
 export class TeamInformationService {
-  private teamInformationMapper = new TeamInformationMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  private readonly teamInformationMapper = new TeamInformationMapper();
 
   public loadTeamInformation(teamId: number): Observable<TeamInformation> {
     return this.httpService

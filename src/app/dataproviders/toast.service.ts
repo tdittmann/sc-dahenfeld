@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 
 @Injectable()
 export class ToastService {
-  private static DEFAULT_DURATION = 3000;
+  private readonly toastCtrl = inject(ToastController);
 
-  constructor(private toastCtrl: ToastController) {}
+  private static readonly DEFAULT_DURATION = 3000;
 
   public async showToast(pMessage: string) {
     const toast = await this.toastCtrl.create({

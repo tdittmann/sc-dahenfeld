@@ -1,11 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { StorageService } from './storage.service';
 
 @Injectable()
 export class DevService {
+  private readonly storageService = inject(StorageService);
+
   private devModeEnabled = false;
 
-  constructor(private storageService: StorageService) {
+  constructor() {
     this.storageService.loadDevMode().then((devModeEnabled) => {
       this.devModeEnabled = devModeEnabled;
     });

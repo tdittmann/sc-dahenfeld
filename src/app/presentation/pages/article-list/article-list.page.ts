@@ -1,27 +1,29 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, inject } from '@angular/core';
 import { ArticleService } from '../../../dataproviders/article/article.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Article } from '../../../core/domain/article.model';
 import { combineLatest } from 'rxjs';
+import { PageHeaderComponent } from '../../shared/page-header/page-header.component';
+import { PageStateComponent } from '../../shared/page-state/page-state.component';
+import { IonicModule } from '@ionic/angular';
+import { ArticleCardComponent } from '../../shared/article-card/article-card.component';
 
 @Component({
-    selector: 'app-article-list',
-    templateUrl: 'article-list.page.html',
-    styleUrls: ['article-list.page.scss'],
-    standalone: false
+  selector: 'app-article-list',
+  templateUrl: 'article-list.page.html',
+  styleUrls: ['article-list.page.scss'],
+  imports: [PageHeaderComponent, PageStateComponent, IonicModule, ArticleCardComponent, RouterLink],
 })
 export class ArticleListPage implements OnInit {
+  private readonly activatedRoute = inject(ActivatedRoute);
+  private readonly articleService = inject(ArticleService);
+
   numberOfFeaturedArticles = 1;
   heading: string;
   articles: Article[] = [];
 
   isLoading = true;
   isError = false;
-
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private articleService: ArticleService,
-  ) {}
 
   ngOnInit(): void {
     this.onResize();

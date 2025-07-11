@@ -1,13 +1,35 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { PersonService } from '../../../dataproviders/soccer/person/person.service';
 import { Person } from '../../../core/domain/person.model';
 import { DevService } from '../../../dataproviders/dev.service';
+import { ModalHeaderComponent } from '../../shared/modal-header/modal-header.component';
+import { PageStateComponent } from '../../shared/page-state/page-state.component';
+import { IonicModule } from '@ionic/angular';
+import { PersonOverviewComponent } from './overview/person-overview.component';
+import { TabsComponent } from '../../shared/tabs/tabs/tabs.component';
+import { TabComponent } from '../../shared/tabs/tab/tab.component';
+import { PersonFactsComponent } from './facts/person-facts.component';
+import { PersonStatisticsComponent } from './statistics/person-statistics.component';
+import { PersonMatchesComponent } from './matches/person-matches.component';
 
 @Component({
-    templateUrl: 'person.page.html',
-    standalone: false
+  templateUrl: 'person.page.html',
+  imports: [
+    ModalHeaderComponent,
+    PageStateComponent,
+    IonicModule,
+    PersonOverviewComponent,
+    TabsComponent,
+    TabComponent,
+    PersonFactsComponent,
+    PersonStatisticsComponent,
+    PersonMatchesComponent,
+  ],
 })
 export class PersonPage implements OnInit {
+  private readonly playerService = inject(PersonService);
+  private readonly devService = inject(DevService);
+
   @Input() personId: number;
   @Input() projectId = 0;
 
@@ -15,11 +37,6 @@ export class PersonPage implements OnInit {
 
   isLoading = true;
   isError = false;
-
-  constructor(
-    private playerService: PersonService,
-    private devService: DevService,
-  ) {}
 
   ngOnInit(): void {
     this.loadPerson(null);

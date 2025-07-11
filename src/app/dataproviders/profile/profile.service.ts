@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { Profile } from '../../core/domain/profile.model';
@@ -9,9 +9,9 @@ import { HttpService } from '../http.service';
 
 @Injectable()
 export class ProfileService {
-  mapper: ProfileMapper = new ProfileMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  mapper: ProfileMapper = new ProfileMapper();
 
   loadProfile(token: string): Observable<Profile> {
     return this.httpService.get<ProfileJson>(environment.backendUrl + 'profile?token=' + token).pipe(map(this.mapper.mapFrom));

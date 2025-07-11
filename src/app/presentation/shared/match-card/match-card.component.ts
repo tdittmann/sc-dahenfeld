@@ -1,12 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { Moment } from 'moment';
 import { FavoriteTeamUtil } from '../../../util/FavoriteTeamUtil';
+import { IonicModule } from '@ionic/angular';
+import { NgClass } from '@angular/common';
 
 @Component({
-    selector: 'app-match-card',
-    templateUrl: 'match-card.component.html',
-    styleUrls: ['match-card.component.scss'],
-    standalone: false
+  selector: 'app-match-card',
+  templateUrl: 'match-card.component.html',
+  styleUrls: ['match-card.component.scss'],
+  imports: [IonicModule, NgClass],
 })
 export class MatchCardComponent {
   @Input() matchId: number;

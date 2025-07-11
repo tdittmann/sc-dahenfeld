@@ -1,14 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ArticleService } from '../../../dataproviders/article/article.service';
 import { Article } from '../../../core/domain/article.model';
 import { combineLatest } from 'rxjs';
+import { PageHeaderComponent } from '../../shared/page-header/page-header.component';
+import { PageStateComponent } from '../../shared/page-state/page-state.component';
+import { IonicModule } from '@ionic/angular';
+import { ArticleDetailComponent } from '../../shared/article-detail/article-detail.component';
 
 @Component({
-    templateUrl: 'article-detail.page.html',
-    standalone: false
+  templateUrl: 'article-detail.page.html',
+  imports: [PageHeaderComponent, PageStateComponent, IonicModule, ArticleDetailComponent],
 })
 export class ArticleDetailPage implements OnInit {
+  private readonly articleService = inject(ArticleService);
+  private readonly route = inject(ActivatedRoute);
+
   heading: string;
   article: Article;
   showImageHeader = true;
@@ -16,11 +23,6 @@ export class ArticleDetailPage implements OnInit {
 
   isLoading = true;
   isError = false;
-
-  constructor(
-    private articleService: ArticleService,
-    private route: ActivatedRoute,
-  ) {}
 
   ngOnInit(): void {
     this.loadArticle(null);

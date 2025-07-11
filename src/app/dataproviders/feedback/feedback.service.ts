@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -9,9 +9,9 @@ import { FeedbackMapper } from './feedbackMapper';
 
 @Injectable()
 export class FeedbackService {
-  private mapper: FeedbackMapper = new FeedbackMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  private readonly mapper: FeedbackMapper = new FeedbackMapper();
 
   loadFeedback(): Observable<Feedback> {
     return this.httpService.get<FeedbackJson>(environment.backendUrl + 'feedback').pipe(map((value) => this.mapper.mapFrom(value)));

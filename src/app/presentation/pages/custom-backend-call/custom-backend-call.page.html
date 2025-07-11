@@ -2,11 +2,11 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 @if (!isLoading) {
-  <ion-content color="light">
-    <app-card-container heading="Custom Backend Call" subHeading="Only for testing purposes">
-      <app-list-item text1="URL" [note]="backendUrl" noteSize="small"></app-list-item>
-      <app-list-item text1="Nachricht" [note]="message" noteSize="small"></app-list-item>
-      <app-list-item text1="Antwort" [note]="result | json" noteSize="small"></app-list-item>
-    </app-card-container>
-  </ion-content>
+<ion-content color="light">
+  <app-card-container heading="Custom Backend Call" subHeading="Only for testing purposes">
+    <app-list-item text1="URL" [note]="backendUrl" noteSize="small"></app-list-item>
+    <app-list-item text1="Nachricht" [note]="message" noteSize="small"></app-list-item>
+    <app-list-item text1="Antwort" [note]="result | json" noteSize="small"></app-list-item>
+  </app-card-container>
+</ion-content>
 }

@@ -1,5 +1,4 @@
-import moment from "moment";
-import { Moment } from 'moment';
+import moment, { Moment } from 'moment';
 import { PersonStatistic } from './personStatistic.model';
 import { TextUtils } from '../../util/TextUtils';
 import { DateUtils } from '../../util/DateUtils';

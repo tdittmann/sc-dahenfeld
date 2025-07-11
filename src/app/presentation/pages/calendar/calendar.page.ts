@@ -1,29 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CalendarService } from '../../../dataproviders/calendar/calendar.service';
 import { CalendarEntry } from '../../../core/domain/calendarEntry.model';
 import { Moment } from 'moment';
 import { ActivatedRoute } from '@angular/router';
 import { MatchDetailPage } from '../match-detail/match-detail.page';
-import { ModalController } from '@ionic/angular';
+import { ModalController, IonicModule } from '@ionic/angular';
+import { PageHeaderComponent } from '../../shared/page-header/page-header.component';
+import { PageStateComponent } from '../../shared/page-state/page-state.component';
+import { MatchCardComponent } from '../../shared/match-card/match-card.component';
+import { EventCardComponent } from '../../shared/event-card/event-card.component';
 
 @Component({
-    templateUrl: 'calendar.page.html',
-    styleUrls: ['calendar.page.scss'],
-    standalone: false
+  templateUrl: 'calendar.page.html',
+  styleUrls: ['calendar.page.scss'],
+  imports: [PageHeaderComponent, PageStateComponent, IonicModule, MatchCardComponent, EventCardComponent],
 })
 export class CalendarPage implements OnInit {
+  private readonly activatedRoute = inject(ActivatedRoute);
+  private readonly calendarService = inject(CalendarService);
+  private readonly modalController = inject(ModalController);
+
   heading: string;
   calendarEntries: CalendarEntry[] = [];
   lastDay = null;
 
   isLoading = true;
   isError = false;
-
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private calendarService: CalendarService,
-    private modalController: ModalController,
-  ) {}
 
   ngOnInit(): void {
     this.loadCalendarEvents(null);

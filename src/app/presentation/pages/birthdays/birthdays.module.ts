@@ -25,7 +25,8 @@ import { SharedModule } from '../../shared/shared.module';
     ]),
     SharedModule,
     ScrollingModule,
+    BirthdaysPage,
+    BirthdayFilterPipe,
   ],
-  declarations: [BirthdaysPage, BirthdayFilterPipe],
 })
 export class BirthdaysPageModule {}

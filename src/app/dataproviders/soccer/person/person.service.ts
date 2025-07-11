@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Person } from '../../../core/domain/person.model';
 import { PersonJson } from './personJson.model';
@@ -9,9 +9,9 @@ import { PersonMapper } from './person.mapper';
 
 @Injectable()
 export class PersonService {
-  private playerMapper = new PersonMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  private readonly playerMapper = new PersonMapper();
 
   loadPersons(): Observable<Person[]> {
     return this.httpService

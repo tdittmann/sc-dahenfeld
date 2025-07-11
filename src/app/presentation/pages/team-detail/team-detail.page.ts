@@ -1,14 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TeamInformation } from '../../../core/domain/teamInformation.model';
 import { TeamInformationService } from '../../../dataproviders/soccer/teamInformation.service';
 import { combineLatest } from 'rxjs';
+import { PageHeaderComponent } from '../../shared/page-header/page-header.component';
+import { IonicModule } from '@ionic/angular';
+import { PageStateComponent } from '../../shared/page-state/page-state.component';
+import { TabsComponent } from '../../shared/tabs/tabs/tabs.component';
+import { TabComponent } from '../../shared/tabs/tab/tab.component';
+import { DynamicContentComponent } from '../../shared/dynamic-content/dynamic-content.component';
+import { TeamDetailRankingComponent } from './ranking/team-detail-ranking.component';
+import { TeamDetailFixtureComponent } from './fixture/team-detail-fixture.component';
+import { TeamDetailPlayersComponent } from './players/team-detail-players.component';
+import { TeamDetailStatisticsComponent } from './statistics/team-detail-statistics.component';
 
 @Component({
-    templateUrl: 'team-detail.page.html',
-    standalone: false
+  templateUrl: 'team-detail.page.html',
+  imports: [
+    PageHeaderComponent,
+    IonicModule,
+    PageStateComponent,
+    TabsComponent,
+    TabComponent,
+    DynamicContentComponent,
+    TeamDetailRankingComponent,
+    TeamDetailFixtureComponent,
+    TeamDetailPlayersComponent,
+    TeamDetailStatisticsComponent,
+  ],
 })
 export class TeamDetailPage implements OnInit {
+  private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+  private readonly teamInformationService = inject(TeamInformationService);
+
   heading: string;
   projectId: number;
   teamInformation: TeamInformation;
@@ -16,12 +41,6 @@ export class TeamDetailPage implements OnInit {
 
   isLoading = true;
   isError = false;
-
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private teamInformationService: TeamInformationService,
-  ) {}
 
   ngOnInit(): void {
     combineLatest([this.route.params, this.route.queryParams]).subscribe(([params, queryParams]) => {

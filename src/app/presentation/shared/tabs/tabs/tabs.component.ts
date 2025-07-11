@@ -9,24 +9,24 @@ import {
   OnDestroy,
   Output,
   ViewEncapsulation,
+  inject,
 } from '@angular/core';
 import { TabComponent } from '../tab/tab.component';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgClass, NgStyle } from '@angular/common';
 
 @Component({
-    selector: 'app-tabs',
-    templateUrl: 'tabs.component.html',
-    styleUrls: ['./tabs.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: 'app-tabs',
+  templateUrl: 'tabs.component.html',
+  styleUrls: ['./tabs.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [NgClass, NgStyle],
 })
 export class TabsComponent implements AfterContentInit, OnDestroy {
-  constructor(
-    private _cdr: ChangeDetectorRef,
-    private _router: Router,
-    private _activatedRoute: ActivatedRoute,
-  ) {}
+  private readonly _cdr = inject(ChangeDetectorRef);
+  private readonly _router = inject(Router);
+  private readonly _activatedRoute = inject(ActivatedRoute);
 
   @ContentChildren(TabComponent) tabs: any;
   @Input() activeTabUrlIdentifier = 'tab';

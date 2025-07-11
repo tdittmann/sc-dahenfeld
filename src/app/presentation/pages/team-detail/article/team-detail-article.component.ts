@@ -1,22 +1,23 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { Article } from '../../../../core/domain/article.model';
 import { ArticleService } from '../../../../dataproviders/article/article.service';
+import { PageStateComponent } from '../../../shared/page-state/page-state.component';
 
 @Component({
-    selector: 'app-team-detail-article',
-    templateUrl: 'team-detail-article.component.html',
-    styleUrls: ['team-detail-article.component.scss'],
-    standalone: false
+  selector: 'app-team-detail-article',
+  templateUrl: 'team-detail-article.component.html',
+  styleUrls: ['team-detail-article.component.scss'],
+  imports: [PageStateComponent],
 })
 export class TeamDetailArticleComponent implements OnInit {
+  private readonly articleService = inject(ArticleService);
+
   @Input() articleId = '';
 
   article: Article;
 
   isLoading = true;
   isError = false;
-
-  constructor(private articleService: ArticleService) {}
 
   ngOnInit(): void {
     if (this.articleId) {

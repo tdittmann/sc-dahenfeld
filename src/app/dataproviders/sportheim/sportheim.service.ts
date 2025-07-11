@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -9,9 +9,9 @@ import { SportheimInfoJson } from './sportheim-info-json.model';
 
 @Injectable()
 export class SportheimService {
-  private sportheimInfoMapper = new SportheimInfoMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  private readonly sportheimInfoMapper = new SportheimInfoMapper();
 
   loadSportheimInfo(): Observable<SportheimInfo> {
     return this.httpService

@@ -1,18 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, inject } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TeamInformationService } from '../../../dataproviders/soccer/teamInformation.service';
 import { combineLatest } from 'rxjs';
-import { KeyValue } from '@angular/common';
+import { KeyValue, KeyValuePipe } from '@angular/common';
 import { RankingTeam } from '../../../core/domain/rankingTeam.model';
 import { MatchService } from '../../../dataproviders/soccer/matches/match.service';
 import { RankingUtil } from '../../../util/RankingUtil';
+import { PageHeaderComponent } from '../../shared/page-header/page-header.component';
+import { PageStateComponent } from '../../shared/page-state/page-state.component';
+import { IonicModule } from '@ionic/angular';
+import { RankingComponent } from '../../shared/ranking/ranking.component';
 
 @Component({
-    templateUrl: 'teams.page.html',
-    styleUrls: ['teams.page.scss'],
-    standalone: false
+  templateUrl: 'teams.page.html',
+  styleUrls: ['teams.page.scss'],
+  imports: [PageHeaderComponent, PageStateComponent, IonicModule, RouterLink, RankingComponent, KeyValuePipe],
 })
 export class TeamsPage implements OnInit {
+  private readonly route = inject(ActivatedRoute);
+  private readonly matchService = inject(MatchService);
+  private readonly teamInfoService = inject(TeamInformationService);
+
   heading = 'Jugend';
   teams = new Map();
   showTable;
@@ -28,12 +36,6 @@ export class TeamsPage implements OnInit {
 
     return 0;
   };
-
-  constructor(
-    private route: ActivatedRoute,
-    private matchService: MatchService,
-    private teamInfoService: TeamInformationService,
-  ) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((routeParams) => {

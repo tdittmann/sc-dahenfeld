@@ -1,8 +1,8 @@
 <swiper-container class="swiper" autoplay="true" autoplay-delay="5000" pagination="true">
   @for (article of articles; track article) {
-    <swiper-slide>
-      <app-article-image-meta (click)="goToArticleDetail(article)" [article]="article">
-      </app-article-image-meta>
-    </swiper-slide>
+  <swiper-slide>
+    <app-article-image-meta (click)="goToArticleDetail(article)" [article]="article">
+    </app-article-image-meta>
+  </swiper-slide>
   }
 </swiper-container>

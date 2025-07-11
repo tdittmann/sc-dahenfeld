@@ -4,7 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { ArticleService } from '../../../dataproviders/article/article.service';
 import { ArticleDetailPage } from './article-detail.page';
-import { ArticleDetailModule } from '../../shared/article-detail/article-detail.module';
+
 import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
@@ -12,7 +12,6 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [
     CommonModule,
     IonicModule,
-    ArticleDetailModule,
     SharedModule,
     RouterModule.forChild([
       {
@@ -20,8 +19,8 @@ import { SharedModule } from '../../shared/shared.module';
         component: ArticleDetailPage,
       },
     ]),
+    ArticleDetailPage,
   ],
   exports: [ArticleDetailPage],
-  declarations: [ArticleDetailPage],
 })
 export class ArticleDetailPageModule {}

@@ -19,7 +19,7 @@ import { SharedModule } from '../../shared/shared.module';
         component: ProfilePage,
       },
     ]),
+    ProfilePage,
   ],
-  declarations: [ProfilePage],
 })
 export class ProfilePageModule {}

@@ -2,28 +2,25 @@
 <app-page-state [loading]="isLoading" [error]="!isLoading && teams.size === 0"></app-page-state>
 
 @if (teams.size > 0) {
-  <ion-content color="light">
-    @if (showTable === 'false') {
-      <ion-list>
-        @for (team of teams | keyvalue : teamNameOrder; track team) {
-          <ion-item mode="ios" button="true" routerLink="/team-detail/{{team.key.teamId}}">
-            <ion-label>{{team.key.teamName}}</ion-label>
-          </ion-item>
-        }
-      </ion-list>
+<ion-content color="light">
+  @if (showTable === 'false') {
+  <ion-list>
+    @for (team of teams | keyvalue : teamNameOrder; track team) {
+    <ion-item mode="ios" button="true" routerLink="/team-detail/{{team.key.teamId}}">
+      <ion-label>{{team.key.teamName}}</ion-label>
+    </ion-item>
     }
-    @if (showTable === 'true') {
-      @for (team of teams | keyvalue : teamNameOrder; track team) {
-        <h2 class="ion-padding-start">{{team.key.teamName}}</h2>
-        <ion-card mode="md" routerLink="/team-detail/{{team.key.teamId}}">
-          <app-ranking [teams]="team.value"></app-ranking>
-          <ion-row class="ion-no-padding">
-            <ion-col class="ion-text-center">
-              <ion-button expand="full" fill="clear"> Mehr zur {{team.key.teamName}} </ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-card>
-      }
-    }
-  </ion-content>
+  </ion-list>
+  } @if (showTable === 'true') { @for (team of teams | keyvalue : teamNameOrder; track team) {
+  <h2 class="ion-padding-start">{{team.key.teamName}}</h2>
+  <ion-card mode="md" routerLink="/team-detail/{{team.key.teamId}}">
+    <app-ranking [teams]="team.value"></app-ranking>
+    <ion-row class="ion-no-padding">
+      <ion-col class="ion-text-center">
+        <ion-button expand="full" fill="clear"> Mehr zur {{team.key.teamName}} </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  } }
+</ion-content>
 }

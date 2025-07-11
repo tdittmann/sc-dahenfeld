@@ -8,10 +8,10 @@ import { PersonModule } from '../person/person.module';
 import { PersonService } from '../../../dataproviders/soccer/person/person.service';
 import { StatisticsCardModule } from '../../shared/statistics-card/statistics-card.module';
 import { SharedModule } from '../../shared/shared.module';
-import { BaseChartDirective, provideCharts, withDefaultRegisterables } from "ng2-charts";
+import { BaseChartDirective, provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
 @NgModule({
-  providers: [PersonService, provideCharts(withDefaultRegisterables()),],
+  providers: [PersonService, provideCharts(withDefaultRegisterables())],
   imports: [
     CommonModule,
     FormsModule,
@@ -26,7 +26,7 @@ import { BaseChartDirective, provideCharts, withDefaultRegisterables } from "ng2
         component: PersonStatisticsPage,
       },
     ]),
+    PersonStatisticsPage,
   ],
-  declarations: [PersonStatisticsPage],
 })
 export class PersonStatisticsModule {}

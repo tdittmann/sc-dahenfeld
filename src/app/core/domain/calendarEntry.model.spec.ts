@@ -1,4 +1,4 @@
-import moment from "moment";
+import moment from 'moment';
 import { CalendarEntry } from './calendarEntry.model';
 import { CalendarEvent } from './calendarEvent.model';
 import { CalendarMatch } from './calendarMatch.model';

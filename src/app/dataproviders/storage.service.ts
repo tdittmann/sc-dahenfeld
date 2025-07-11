@@ -1,13 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
 @Injectable()
 export class StorageService {
-  private static PUSH_TOKEN_KEY = 'pushToken';
-  private static DEV_MODE_KEY = 'devMode';
-  private static DARK_MODE_KEY = 'darkMode';
+  private readonly storage = inject(Storage);
 
-  constructor(private storage: Storage) {
+  private static readonly PUSH_TOKEN_KEY = 'pushToken';
+  private static readonly DEV_MODE_KEY = 'devMode';
+  private static readonly DARK_MODE_KEY = 'darkMode';
+
+  constructor() {
     this.storage.create();
   }
 

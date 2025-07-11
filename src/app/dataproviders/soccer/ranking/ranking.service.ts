@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { environment } from '../../../../environments/environment';
 import { map } from 'rxjs/operators';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpService } from '../../http.service';
 import { HistoricRankingMapper } from './historicRankingMapper';
 import { RankingTeam } from '../../../core/domain/rankingTeam.model';
@@ -9,9 +9,9 @@ import { HistoricRankingJson } from './historicRankingJson.model';
 
 @Injectable()
 export class RankingService {
-  private historicRankingMapper = new HistoricRankingMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  private readonly historicRankingMapper = new HistoricRankingMapper();
 
   public loadHistoricRanking(projectId: number): Observable<RankingTeam[]> {
     return this.httpService

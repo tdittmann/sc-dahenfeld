@@ -8,31 +8,29 @@
         <span>SC Dahenfeld</span>
       </div>
 
-      @for (nav of navigation; track nav) {
-        @if (!nav.devMode || nav.devMode && isDevModeEnabled()) {
-          <ion-list lines="none">
-            @if (nav.title) {
-              <ion-list-header mode="ios">
-                <ion-label class="nav-label">{{nav.title}}</ion-label>
-              </ion-list-header>
-            }
-            @for (p of nav.content; track p) {
-              <ion-menu-toggle autoHide="false">
-                <ion-item
-                  [color]="p.color"
-                  [detail]="false"
-                  [routerDirection]="'root'"
-                  [routerLink]="[p.url]"
-                  [queryParams]="p.params"
-                  >
-                  <ion-icon slot="start" [name]="p.icon"></ion-icon>
-                  <ion-label>{{p.title}}</ion-label>
-                </ion-item>
-              </ion-menu-toggle>
-            }
-          </ion-list>
+      @for (nav of navigation; track nav) { @if (!nav.devMode || nav.devMode && isDevModeEnabled())
+      {
+      <ion-list lines="none">
+        @if (nav.title) {
+        <ion-list-header mode="ios">
+          <ion-label class="nav-label">{{nav.title}}</ion-label>
+        </ion-list-header>
+        } @for (p of nav.content; track p) {
+        <ion-menu-toggle autoHide="false">
+          <ion-item
+            [color]="p.color"
+            [detail]="false"
+            [routerDirection]="'root'"
+            [routerLink]="[p.url]"
+            [queryParams]="p.params"
+          >
+            <ion-icon slot="start" [name]="p.icon"></ion-icon>
+            <ion-label>{{p.title}}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
         }
-      }
+      </ion-list>
+      } }
     </ion-content>
   </ion-menu>
 

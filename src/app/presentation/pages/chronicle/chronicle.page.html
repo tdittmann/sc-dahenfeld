@@ -2,11 +2,11 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 @if (timeLineEntries.length > 0) {
-  <ion-content color="light">
-    <div class="chronicle-wrapper">
-      <h1>{{ title }}</h1>
-      <p class="leader">{{ subTitle }}</p>
-      <app-timeline [timelineEntries]="timeLineEntries"></app-timeline>
-    </div>
-  </ion-content>
+<ion-content color="light">
+  <div class="chronicle-wrapper">
+    <h1>{{ title }}</h1>
+    <p class="leader">{{ subTitle }}</p>
+    <app-timeline [timelineEntries]="timeLineEntries"></app-timeline>
+  </div>
+</ion-content>
 }

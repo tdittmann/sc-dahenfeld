@@ -1,11 +1,10 @@
 @if (loading || error) {
-  <div class="page-state-container">
-    {{ getMessage() }}<br />
-    @if (isLoading()) {
-      <ion-spinner name="dots"></ion-spinner>
-    }
-    @if (isError()) {
-      <ion-icon [name]="errorIcon"></ion-icon>
-    }
-  </div>
+<div class="page-state-container">
+  {{ getMessage() }}<br />
+  @if (isLoading()) {
+  <ion-spinner name="dots"></ion-spinner>
+  } @if (isError()) {
+  <ion-icon [name]="errorIcon"></ion-icon>
+  }
+</div>
 }

@@ -3,7 +3,7 @@ import { TeamInformation, TeamInformationSeason } from '../../core/domain/teamIn
 import { DynamicContentMapper } from '../dynamic-content/dynamic-content.mapper';
 
 export class TeamInformationMapper {
-  private _dynamicContentMapper = new DynamicContentMapper();
+  private readonly _dynamicContentMapper = new DynamicContentMapper();
 
   mapFrom(param: TeamInformationJson): TeamInformation {
     if (!param) {

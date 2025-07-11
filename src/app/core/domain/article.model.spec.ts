@@ -1,5 +1,5 @@
 import { Article } from './article.model';
-import moment from "moment";
+import moment from 'moment';
 
 describe('Article', () => {
   it('should return an empty string if text is not present', function () {

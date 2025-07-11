@@ -20,7 +20,7 @@ import { SharedModule } from '../../shared/shared.module';
         component: FeedbackPage,
       },
     ]),
+    FeedbackPage,
   ],
-  declarations: [FeedbackPage],
 })
 export class FeedbackPageModule {}

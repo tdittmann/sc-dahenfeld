@@ -1,14 +1,9 @@
 <app-card-container heading="Informationen">
   @if (date) {
-    <app-list-item icon="time-outline" text1="Anpfiff" [text2]="date"> </app-list-item>
-  }
-
-  @if (location) {
-    <app-list-item icon="location-outline" text1="Ort" [text2]="location">
-    </app-list-item>
-  }
-
-  @if (fixture) {
-    <app-list-item icon="clipboard-outline" [text1]="fixture"> </app-list-item>
+  <app-list-item icon="time-outline" text1="Anpfiff" [text2]="date"> </app-list-item>
+  } @if (location) {
+  <app-list-item icon="location-outline" text1="Ort" [text2]="location"> </app-list-item>
+  } @if (fixture) {
+  <app-list-item icon="clipboard-outline" [text1]="fixture"> </app-list-item>
   }
 </app-card-container>

@@ -9,7 +9,7 @@ describe('ArticleImageMetaComponent', function () {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ArticleImageMetaComponent],
+      imports: [ArticleImageMetaComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   }));

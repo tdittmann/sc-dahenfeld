@@ -1,18 +1,19 @@
 import { CalendarEvent } from '../../../core/domain/calendarEvent.model';
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { EventDetailPage } from '../../pages/event-detail/event-detail.page';
-import { ModalController } from '@ionic/angular';
+import { ModalController, IonicModule } from '@ionic/angular';
+import { NgStyle } from '@angular/common';
 
 @Component({
-    selector: 'app-event-card',
-    templateUrl: 'event-card.component.html',
-    styleUrls: ['event-card.component.scss'],
-    standalone: false
+  selector: 'app-event-card',
+  templateUrl: 'event-card.component.html',
+  styleUrls: ['event-card.component.scss'],
+  imports: [IonicModule, NgStyle],
 })
 export class EventCardComponent {
-  @Input() event: CalendarEvent;
+  private readonly modalController = inject(ModalController);
 
-  constructor(private modalController: ModalController) {}
+  @Input() event: CalendarEvent;
 
   public openEventDetail() {
     this.modalController

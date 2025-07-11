@@ -1,21 +1,22 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, inject } from '@angular/core';
 import { Article } from '../../../core/domain/article.model';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ArticleImageMetaComponent } from '../article-image-meta/article-image-meta.component';
 
 @Component({
-    selector: 'app-article-detail',
-    templateUrl: 'article-detail.component.html',
-    styleUrls: ['article-detail.component.scss'],
-    standalone: false
+  selector: 'app-article-detail',
+  templateUrl: 'article-detail.component.html',
+  styleUrls: ['article-detail.component.scss'],
+  imports: [ArticleImageMetaComponent],
 })
 export class ArticleDetailComponent implements OnInit, AfterViewInit {
+  private readonly sanitized = inject(DomSanitizer);
+
   @Input() article: Article;
   @Input() showOnlyTitle: boolean;
   @Input() showHeader = true;
 
   articleContent: any;
-
-  constructor(private sanitized: DomSanitizer) {}
 
   ngOnInit(): void {
     const text = this.showHeader ? this.article.getTextWithoutFirstImage() : this.article.text;

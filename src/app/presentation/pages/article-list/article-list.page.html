@@ -2,14 +2,14 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 @if (articles.length > 0) {
-  <ion-content color="light">
-    @for (article of articles; track article; let index = $index) {
-      <app-article-card
-        [article]="article"
-        [type]="index === 0 ? 'large' : 'small'"
-        [routerLink]="article.getArticleLink()"
-        >
-      </app-article-card>
-    }
-  </ion-content>
+<ion-content color="light">
+  @for (article of articles; track article; let index = $index) {
+  <app-article-card
+    [article]="article"
+    [type]="index === 0 ? 'large' : 'small'"
+    [routerLink]="article.getArticleLink()"
+  >
+  </app-article-card>
+  }
+</ion-content>
 }

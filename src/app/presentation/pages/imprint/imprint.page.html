@@ -12,7 +12,7 @@
   <app-card-container
     heading="Die SCD-App"
     subHeading="Unser Dorf - Unser Verein - Unsere Leidenschaft"
-    >
+  >
     <ion-item-group>
       <app-list-item text1="App-Version" [note]="version"> </app-list-item>
 
@@ -20,13 +20,13 @@
       </app-list-item>
 
       @if (showDevModePasswordInput) {
-        <ion-item>
-          <ion-label>Dev-Mode Passwort</ion-label>
-          <div slot="end">
-            <ion-input [(ngModel)]="devModePassword" type="password"></ion-input>
-            <ion-button (click)="validateDevModePassword()">Validieren</ion-button>
-          </div>
-        </ion-item>
+      <ion-item>
+        <ion-label>Dev-Mode Passwort</ion-label>
+        <div slot="end">
+          <ion-input [(ngModel)]="devModePassword" type="password"></ion-input>
+          <ion-button (click)="validateDevModePassword()">Validieren</ion-button>
+        </div>
+      </ion-item>
       }
 
       <ion-item>
@@ -37,8 +37,8 @@
   </app-card-container>
 
   @if (isDevModeEnabled()) {
-    <div class="ion-text-center ion-margin-top">
-      <ion-button (click)="deactivateDevMode()"> Entwickler-Modus deaktivieren </ion-button>
-    </div>
+  <div class="ion-text-center ion-margin-top">
+    <ion-button (click)="deactivateDevMode()"> Entwickler-Modus deaktivieren </ion-button>
+  </div>
   }
 </ion-content>

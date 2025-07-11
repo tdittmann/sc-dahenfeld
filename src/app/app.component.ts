@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
-import { AlertController, Platform } from '@ionic/angular';
+import { AlertController, Platform, IonicModule } from '@ionic/angular';
 import { DevService } from './dataproviders/dev.service';
 import { StorageService } from './dataproviders/storage.service';
 import { VersionService } from './dataproviders/version/version.service';
@@ -16,30 +16,31 @@ import { App, AppInfo } from '@capacitor/app';
 import { Location } from '@angular/common';
 import { ToastService } from './dataproviders/toast.service';
 import { register } from 'swiper/element/bundle';
+import { RouterLink } from '@angular/router';
 
 // Register swiper
 register();
 
 @Component({
-    selector: 'app-root',
-    templateUrl: 'app.component.html',
-    styleUrls: ['app.component.scss'],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.scss'],
+  imports: [IonicModule, RouterLink],
 })
 export class AppComponent {
+  private readonly platform = inject(Platform);
+  private readonly devService = inject(DevService);
+  private readonly storageService = inject(StorageService);
+  private readonly versionService = inject(VersionService);
+  private readonly alertController = inject(AlertController);
+  private readonly profileService = inject(ProfileService);
+  private readonly toastService = inject(ToastService);
+  private readonly location = inject(Location);
+  private readonly navigationService = inject(NavigationService);
+
   navigation: RootNavigation[] = [];
 
-  constructor(
-    private platform: Platform,
-    private devService: DevService,
-    private storageService: StorageService,
-    private versionService: VersionService,
-    private alertController: AlertController,
-    private profileService: ProfileService,
-    private toastService: ToastService,
-    private location: Location,
-    private navigationService: NavigationService,
-  ) {
+  constructor() {
     this.initializeApp();
   }
 

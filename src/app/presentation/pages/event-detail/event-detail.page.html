@@ -1,20 +1,20 @@
 <app-modal-header></app-modal-header>
 
 @if (event) {
-  <ion-content color="light">
-    <div class="image">
-      <app-image-meta
-        [title]="event.title"
-        subTitleIcon="calendar-outline"
-        [subTitle]="event.getEventDurationAsString()"
-        subSubTitleIcon="location-outline"
-        [subSubTitle]="event.location"
-        [image]="event.getImageAsBackground()"
-        >
-      </app-image-meta>
-    </div>
-    <div class="container">
-      <div class="ion-padding article-content" [innerHTML]="event.text"></div>
-    </div>
-  </ion-content>
+<ion-content color="light">
+  <div class="image">
+    <app-image-meta
+      [title]="event.title"
+      subTitleIcon="calendar-outline"
+      [subTitle]="event.getEventDurationAsString()"
+      subSubTitleIcon="location-outline"
+      [subSubTitle]="event.location"
+      [image]="event.getImageAsBackground()"
+    >
+    </app-image-meta>
+  </div>
+  <div class="container">
+    <div class="ion-padding article-content" [innerHTML]="event.text"></div>
+  </div>
+</ion-content>
 }

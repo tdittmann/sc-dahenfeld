@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import { NgClass } from '@angular/common';
 
 @Component({
-    selector: 'app-list-item',
-    templateUrl: 'list-item.component.html',
-    styleUrls: ['list-item.component.scss'],
-    standalone: false
+  selector: 'app-list-item',
+  templateUrl: 'list-item.component.html',
+  styleUrls: ['list-item.component.scss'],
+  imports: [IonicModule, NgClass],
 })
 export class ListItemComponent {
   @Input() type: 'button' | 'reset' | 'submit' = 'button';

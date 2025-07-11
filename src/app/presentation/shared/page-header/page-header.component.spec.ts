@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { PageHeaderComponent } from './page-header.component';
+import { RouterModule } from '@angular/router';
 
 describe('PageHeaderComponent', function () {
   let component: PageHeaderComponent;
@@ -8,7 +9,7 @@ describe('PageHeaderComponent', function () {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [PageHeaderComponent],
+      imports: [PageHeaderComponent, RouterModule.forRoot([])],
       schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
     }).compileComponents();
   }));

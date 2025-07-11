@@ -4,16 +4,16 @@ import { map } from 'rxjs/operators';
 import { CalendarMapper } from './calendarMapper';
 import { CalendarJson } from './calendarEventJson.model';
 import { CalendarEntry } from '../../core/domain/calendarEntry.model';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpService } from '../http.service';
 import { CalendarEvent } from '../../core/domain/calendarEvent.model';
 import { CalendarMatch } from '../../core/domain/calendarMatch.model';
 
 @Injectable()
 export class CalendarService {
-  private eventMapper: CalendarMapper = new CalendarMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  private readonly eventMapper: CalendarMapper = new CalendarMapper();
 
   loadCalendarEvents(): Observable<CalendarEntry[]> {
     return this.httpService

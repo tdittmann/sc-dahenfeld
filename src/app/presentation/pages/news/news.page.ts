@@ -1,15 +1,23 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, inject } from '@angular/core';
 import { ArticleService } from '../../../dataproviders/article/article.service';
 import { Article } from '../../../core/domain/article.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { PageHeaderComponent } from '../../shared/page-header/page-header.component';
+import { PageStateComponent } from '../../shared/page-state/page-state.component';
+import { IonicModule } from '@ionic/angular';
+import { ArticleSliderComponent } from './article-slider/article-slider.component';
+import { ArticleCardComponent } from '../../shared/article-card/article-card.component';
 
 @Component({
-    selector: 'app-news',
-    templateUrl: 'news.page.html',
-    styleUrls: ['news.page.scss'],
-    standalone: false
+  selector: 'app-news',
+  templateUrl: 'news.page.html',
+  styleUrls: ['news.page.scss'],
+  imports: [PageHeaderComponent, PageStateComponent, IonicModule, ArticleSliderComponent, ArticleCardComponent, RouterLink],
 })
 export class NewsPage implements OnInit {
+  private readonly activatedRoute = inject(ActivatedRoute);
+  private readonly articleService = inject(ArticleService);
+
   numberOfFeaturedArticles = 1;
   heading: string;
   articles: Article[] = [];
@@ -17,11 +25,6 @@ export class NewsPage implements OnInit {
 
   isLoading = true;
   isError = false;
-
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private articleService: ArticleService,
-  ) {}
 
   ngOnInit(): void {
     this.onResize();

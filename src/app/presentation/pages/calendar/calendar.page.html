@@ -2,38 +2,34 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 @if (calendarEntries.length > 0) {
-  <ion-content color="light">
-    <ion-refresher slot="fixed" (ionRefresh)="loadCalendarEvents($event)">
-      <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          @for (entry of calendarEntries; track entry) {
-            @if (isDifferentDay(entry.start)) {
-              <h2>{{ entry.getFormattedStartDate() }}</h2>
-            }
-            @if (entry.isMatch()) {
-              <app-match-card
-                [matchId]="entry.id"
-                [startDate]="entry.start"
-                [location]="entry.location"
-                [homeName]="entry.homeName"
-                [homeImage]="entry.homeImage"
-                [awayName]="entry.awayName"
-                [awayImage]="entry.awayImage"
-                [ageGroup]="entry.team"
-                [fixture]="entry.fixture"
-                (click)="openMatchDetail(entry.id)"
-                >
-              </app-match-card>
-            }
-            @if (entry.isEvent()) {
-              <app-event-card [event]="entry"> </app-event-card>
-            }
-          }
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-content>
+<ion-content color="light">
+  <ion-refresher slot="fixed" (ionRefresh)="loadCalendarEvents($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        @for (entry of calendarEntries; track entry) { @if (isDifferentDay(entry.start)) {
+        <h2>{{ entry.getFormattedStartDate() }}</h2>
+        } @if (entry.isMatch()) {
+        <app-match-card
+          [matchId]="entry.id"
+          [startDate]="entry.start"
+          [location]="entry.location"
+          [homeName]="entry.homeName"
+          [homeImage]="entry.homeImage"
+          [awayName]="entry.awayName"
+          [awayImage]="entry.awayImage"
+          [ageGroup]="entry.team"
+          [fixture]="entry.fixture"
+          (click)="openMatchDetail(entry.id)"
+        >
+        </app-match-card>
+        } @if (entry.isEvent()) {
+        <app-event-card [event]="entry"> </app-event-card>
+        } }
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
 }

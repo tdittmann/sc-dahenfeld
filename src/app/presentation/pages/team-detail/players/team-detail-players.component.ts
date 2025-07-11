@@ -1,17 +1,25 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { PersonService } from '../../../../dataproviders/soccer/person/person.service';
 import { Person } from '../../../../core/domain/person.model';
 import { ModalController } from '@ionic/angular';
 import { PersonPage } from '../../person/person.page';
 import { DevService } from '../../../../dataproviders/dev.service';
 import { GroupByUtils } from '../../../../util/GroupByUtils';
+import { PageStateComponent } from '../../../shared/page-state/page-state.component';
+import { CardContainerComponent } from '../../../shared/card-container/card-container.component';
+import { ListItemComponent } from '../../../shared/list-item/list-item.component';
+import { KeyValuePipe } from '@angular/common';
 
 @Component({
-    selector: 'app-team-detail-players',
-    templateUrl: 'team-detail-players.component.html',
-    standalone: false
+  selector: 'app-team-detail-players',
+  templateUrl: 'team-detail-players.component.html',
+  imports: [PageStateComponent, CardContainerComponent, ListItemComponent, KeyValuePipe],
 })
 export class TeamDetailPlayersComponent implements OnInit {
+  private readonly playerService = inject(PersonService);
+  private readonly modalController = inject(ModalController);
+  private readonly devService = inject(DevService);
+
   @Input() projectId: number;
 
   players: Map<string, Person[]> = new Map<string, Person[]>();
@@ -19,12 +27,6 @@ export class TeamDetailPlayersComponent implements OnInit {
   isLoading = true;
   errorMessage = 'Daten konnten nicht geladen werden';
   isError = false;
-
-  constructor(
-    private readonly playerService: PersonService,
-    private readonly modalController: ModalController,
-    private readonly devService: DevService,
-  ) {}
 
   ngOnInit(): void {
     if (this.projectId > 0) {

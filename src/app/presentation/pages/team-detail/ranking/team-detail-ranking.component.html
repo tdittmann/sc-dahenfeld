@@ -1,24 +1,17 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 @if (ranking.length > 0) {
-  <div class="container ion-padding">
-    @if (!isHistoricRanking) {
-      <ion-segment
-        (ionChange)="recalculateRanking($event)"
-        value="total"
-        mode="ios"
-        >
-        @for (rankingType of rankingTypes; track rankingType) {
-          @if (!rankingType.devOnly || isDevModeEnabled()) {
-            <ion-segment-button
-              [value]="rankingType.value"
-              >
-              <ion-label>{{ rankingType.label }}</ion-label>
-            </ion-segment-button>
-          }
-        }
-      </ion-segment>
-    }
-    <app-ranking [teams]="ranking"></app-ranking>
-  </div>
+<div class="container ion-padding">
+  @if (!isHistoricRanking) {
+  <ion-segment (ionChange)="recalculateRanking($event)" value="total" mode="ios">
+    @for (rankingType of rankingTypes; track rankingType) { @if (!rankingType.devOnly ||
+    isDevModeEnabled()) {
+    <ion-segment-button [value]="rankingType.value">
+      <ion-label>{{ rankingType.label }}</ion-label>
+    </ion-segment-button>
+    } }
+  </ion-segment>
+  }
+  <app-ranking [teams]="ranking"></app-ranking>
+</div>
 }

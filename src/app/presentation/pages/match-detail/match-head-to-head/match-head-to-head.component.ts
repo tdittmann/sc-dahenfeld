@@ -1,11 +1,15 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { MatchDetail } from '../../../../core/domain/matchDetail.model';
+import { IonicModule } from '@ionic/angular';
+import { CardContainerComponent } from '../../../shared/card-container/card-container.component';
+import { NgStyle } from '@angular/common';
+import { MatchCardComponent } from '../../../shared/match-card/match-card.component';
 
 @Component({
-    selector: 'app-match-head-to-head',
-    templateUrl: 'match-head-to-head.component.html',
-    styleUrls: ['match-head-to-head.component.scss'],
-    standalone: false
+  selector: 'app-match-head-to-head',
+  templateUrl: 'match-head-to-head.component.html',
+  styleUrls: ['match-head-to-head.component.scss'],
+  imports: [IonicModule, CardContainerComponent, NgStyle, MatchCardComponent],
 })
 export class MatchHeadToHeadComponent implements OnChanges {
   @Input() homeId = 0;

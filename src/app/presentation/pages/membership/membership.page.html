@@ -2,37 +2,36 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 @if (membership) {
-  <ion-content color="light">
-    <app-article-detail [article]="membership?.article" showOnlyTitle="true"> </app-article-detail>
-    @if (membership?.costs) {
-      <div>
-        <h2 class="ion-padding">Mitgliedsbeiträge</h2>
-        <ion-grid>
-          <ion-row>
-            @for (cost of membership?.costs; track cost) {
-              <ion-col size="12" sizeMd="6" sizeLg="4">
-                <app-cost-card [title]="cost.title" [content]="cost.costs" [footer]="cost.hint">
-                </app-cost-card>
-              </ion-col>
-            }
-          </ion-row>
-        </ion-grid>
-      </div>
-    }
-    @if (membership?.divisionCosts) {
-      <div>
-        <h2 class="ion-padding">Spartenbeiträge</h2>
-        <ion-grid>
-          <ion-row>
-            @for (cost of membership?.divisionCosts; track cost) {
-              <ion-col size="12" sizeMd="6" sizeLg="4">
-                <app-cost-card [title]="cost.title" [content]="cost.costs" [footer]="cost.hint">
-                </app-cost-card>
-              </ion-col>
-            }
-          </ion-row>
-        </ion-grid>
-      </div>
-    }
-  </ion-content>
+<ion-content color="light">
+  <app-article-detail [article]="membership?.article" showOnlyTitle="true"> </app-article-detail>
+  @if (membership?.costs) {
+  <div>
+    <h2 class="ion-padding">Mitgliedsbeiträge</h2>
+    <ion-grid>
+      <ion-row>
+        @for (cost of membership?.costs; track cost) {
+        <ion-col size="12" sizeMd="6" sizeLg="4">
+          <app-cost-card [title]="cost.title" [content]="cost.costs" [footer]="cost.hint">
+          </app-cost-card>
+        </ion-col>
+        }
+      </ion-row>
+    </ion-grid>
+  </div>
+  } @if (membership?.divisionCosts) {
+  <div>
+    <h2 class="ion-padding">Spartenbeiträge</h2>
+    <ion-grid>
+      <ion-row>
+        @for (cost of membership?.divisionCosts; track cost) {
+        <ion-col size="12" sizeMd="6" sizeLg="4">
+          <app-cost-card [title]="cost.title" [content]="cost.costs" [footer]="cost.hint">
+          </app-cost-card>
+        </ion-col>
+        }
+      </ion-row>
+    </ion-grid>
+  </div>
+  }
+</ion-content>
 }

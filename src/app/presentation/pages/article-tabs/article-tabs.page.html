@@ -3,12 +3,12 @@
 
 <ion-content color="light">
   @if (articles.length > 0) {
-    <app-tabs activeTabUrlIdentifier="article-tabs-tab">
-      @for (article of articles; track article) {
-        <app-tab [tabTitle]="article.title">
-          <app-article-detail [showHeader]="false" [article]="article"> </app-article-detail>
-        </app-tab>
-      }
-    </app-tabs>
+  <app-tabs activeTabUrlIdentifier="article-tabs-tab">
+    @for (article of articles; track article) {
+    <app-tab [tabTitle]="article.title">
+      <app-article-detail [showHeader]="false" [article]="article"> </app-article-detail>
+    </app-tab>
+    }
+  </app-tabs>
   }
 </ion-content>

@@ -2,15 +2,15 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 @if (article) {
-  <ion-content color="white">
-    <ion-refresher slot="fixed" (ionRefresh)="loadArticle($event)">
-      <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
-    <app-article-detail
-      [article]="article"
-      [showHeader]="showImageHeader"
-      [showOnlyTitle]="showOnlyTitle"
-      >
-    </app-article-detail>
-  </ion-content>
+<ion-content color="white">
+  <ion-refresher slot="fixed" (ionRefresh)="loadArticle($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <app-article-detail
+    [article]="article"
+    [showHeader]="showImageHeader"
+    [showOnlyTitle]="showOnlyTitle"
+  >
+  </app-article-detail>
+</ion-content>
 }

@@ -20,7 +20,8 @@ import { SharedModule } from '../../shared/shared.module';
       },
     ]),
     SharedModule,
+    ChroniclePage,
+    TimelineComponent,
   ],
-  declarations: [ChroniclePage, TimelineComponent],
 })
 export class ChroniclePageModule {}

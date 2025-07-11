@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
-    selector: 'app-page-state',
-    templateUrl: 'page-state.component.html',
-    styleUrls: ['page-state.component.scss'],
-    standalone: false
+  selector: 'app-page-state',
+  templateUrl: 'page-state.component.html',
+  styleUrls: ['page-state.component.scss'],
+  imports: [IonicModule],
 })
 export class PageStateComponent {
   @Input() loading = false;

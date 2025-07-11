@@ -1,15 +1,15 @@
-import { Component, Input } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, Input, inject } from '@angular/core';
+import { ModalController, IonicModule } from '@ionic/angular';
 
 @Component({
-    selector: 'app-modal-header',
-    templateUrl: 'modal-header.component.html',
-    standalone: false
+  selector: 'app-modal-header',
+  templateUrl: 'modal-header.component.html',
+  imports: [IonicModule],
 })
 export class ModalHeaderComponent {
-  @Input() title: string;
+  private readonly modalController = inject(ModalController);
 
-  constructor(private modalController: ModalController) {}
+  @Input() title: string;
 
   public closeModal() {
     return this.modalController.dismiss();

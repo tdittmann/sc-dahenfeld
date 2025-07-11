@@ -1,29 +1,25 @@
 @if (!noBorder) {
-  <ion-header>
-    <ion-toolbar [color]="color">
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title class="ion-text-left">{{title}}</ion-title>
-      <ng-content></ng-content>
-    </ion-toolbar>
-  </ion-header>
-}
-
-@if (noBorder) {
-  <ion-header no-border>
-    <ion-toolbar [color]="color">
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title class="ion-text-left">{{title}}</ion-title>
-      <ng-content></ng-content>
-    </ion-toolbar>
-  </ion-header>
-}
-
-@if (showLogo()) {
-  <div class="header-image" routerLink="/">
-    <img src="../../../../assets/img/logo.png" alt="SC Dahenfeld 1946 e.V." />
-  </div>
+<ion-header>
+  <ion-toolbar [color]="color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-left">{{title}}</ion-title>
+    <ng-content></ng-content>
+  </ion-toolbar>
+</ion-header>
+} @if (noBorder) {
+<ion-header no-border>
+  <ion-toolbar [color]="color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-left">{{title}}</ion-title>
+    <ng-content></ng-content>
+  </ion-toolbar>
+</ion-header>
+} @if (showLogo()) {
+<div class="header-image" routerLink="/">
+  <img src="../../../../assets/img/logo.png" alt="SC Dahenfeld 1946 e.V." />
+</div>
 }

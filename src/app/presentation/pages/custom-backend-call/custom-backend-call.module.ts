@@ -18,7 +18,7 @@ import { SharedModule } from '../../shared/shared.module';
         component: CustomBackendCallPage,
       },
     ]),
+    CustomBackendCallPage,
   ],
-  declarations: [CustomBackendCallPage],
 })
 export class CustomBackendCallPageModule {}

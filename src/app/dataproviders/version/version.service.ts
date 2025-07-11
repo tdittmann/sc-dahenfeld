@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -9,9 +9,9 @@ import { VersionMapper } from './version.mapper';
 
 @Injectable()
 export class VersionService {
-  private versionMapper: VersionMapper = new VersionMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  private readonly versionMapper: VersionMapper = new VersionMapper();
 
   loadVersionInfo(): Observable<VersionInfo[]> {
     return this.httpService.get<VersionInfoJson[]>(environment.backendUrl + 'version').pipe(

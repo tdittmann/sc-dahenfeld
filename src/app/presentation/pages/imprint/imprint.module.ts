@@ -19,7 +19,7 @@ import { SharedModule } from '../../shared/shared.module';
         component: ImprintPage,
       },
     ]),
+    ImprintPage,
   ],
-  declarations: [ImprintPage],
 })
 export class ImprintPageModule {}

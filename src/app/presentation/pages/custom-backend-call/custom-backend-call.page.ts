@@ -1,14 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpService } from '../../../dataproviders/http.service';
 import { environment } from '../../../../environments/environment';
+import { PageHeaderComponent } from '../../shared/page-header/page-header.component';
+import { PageStateComponent } from '../../shared/page-state/page-state.component';
+import { IonicModule } from '@ionic/angular';
+import { CardContainerComponent } from '../../shared/card-container/card-container.component';
+import { ListItemComponent } from '../../shared/list-item/list-item.component';
+import { JsonPipe } from '@angular/common';
 
 @Component({
-    selector: 'app-custom-backend-call',
-    templateUrl: 'custom-backend-call.page.html',
-    standalone: false
+  selector: 'app-custom-backend-call',
+  templateUrl: 'custom-backend-call.page.html',
+  imports: [PageHeaderComponent, PageStateComponent, IonicModule, CardContainerComponent, ListItemComponent, JsonPipe],
 })
 export class CustomBackendCallPage implements OnInit {
+  private readonly activatedRoute = inject(ActivatedRoute);
+  private readonly httpService = inject(HttpService);
+
   heading: string;
   backendUrl: string;
   message: string;
@@ -16,11 +25,6 @@ export class CustomBackendCallPage implements OnInit {
 
   isLoading = true;
   isError = false;
-
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private httpService: HttpService,
-  ) {}
 
   ngOnInit(): void {
     this.isLoading = true;

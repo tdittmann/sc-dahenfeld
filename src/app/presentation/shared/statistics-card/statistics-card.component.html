@@ -1,21 +1,18 @@
 <app-card-container [heading]="heading">
   @if (!persons) {
-    <ion-spinner name="dots"></ion-spinner>
-  }
-
-  @if (persons) {
-    <ion-list lines="none">
-      @for (person of filteredPersons | slice: 0: 3; track person) {
-        @if (person.showOnFrontend || devModeEnabled) {
-          <app-list-item
-            [image]="person.image"
-            [text1]="person.name"
-            [text2]="person.position"
-            [note]="person[statisticsVariable][fieldVariable]"
-            >
-          </app-list-item>
-        }
-      }
-    </ion-list>
+  <ion-spinner name="dots"></ion-spinner>
+  } @if (persons) {
+  <ion-list lines="none">
+    @for (person of filteredPersons | slice: 0: 3; track person) { @if (person.showOnFrontend ||
+    devModeEnabled) {
+    <app-list-item
+      [image]="person.image"
+      [text1]="person.name"
+      [text2]="person.position"
+      [note]="person[statisticsVariable][fieldVariable]"
+    >
+    </app-list-item>
+    } }
+  </ion-list>
   }
 </app-card-container>

@@ -2,28 +2,28 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 @if (person) {
-  <ion-content color="light">
-    <ion-refresher slot="fixed" (ionRefresh)="loadPerson($event)">
-      <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
-    <app-person-overview [person]="person"></app-person-overview>
-    <app-tabs activeTabUrlIdentifier="person-overview" [fixed]="false">
-      @if (person.facts.length > 0) {
-        <app-tab tabTitle="Fakten">
-          <app-person-facts [facts]="person?.facts"></app-person-facts>
-        </app-tab>
-      }
-      <app-tab tabTitle="Saison">
-        <app-person-statistics [statistics]="person?.seasonStatistic"></app-person-statistics>
-      </app-tab>
-      <app-tab tabTitle="Karriere">
-        <app-person-statistics [statistics]="person?.careerStatistic"></app-person-statistics>
-      </app-tab>
-      @if (isDevModeEnabled()) {
-        <app-tab tabTitle="Spiele">
-          <app-person-matches [matches]="person?.careerMatches"></app-person-matches>
-        </app-tab>
-      }
-    </app-tabs>
-  </ion-content>
+<ion-content color="light">
+  <ion-refresher slot="fixed" (ionRefresh)="loadPerson($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <app-person-overview [person]="person"></app-person-overview>
+  <app-tabs activeTabUrlIdentifier="person-overview" [fixed]="false">
+    @if (person.facts.length > 0) {
+    <app-tab tabTitle="Fakten">
+      <app-person-facts [facts]="person?.facts"></app-person-facts>
+    </app-tab>
+    }
+    <app-tab tabTitle="Saison">
+      <app-person-statistics [statistics]="person?.seasonStatistic"></app-person-statistics>
+    </app-tab>
+    <app-tab tabTitle="Karriere">
+      <app-person-statistics [statistics]="person?.careerStatistic"></app-person-statistics>
+    </app-tab>
+    @if (isDevModeEnabled()) {
+    <app-tab tabTitle="Spiele">
+      <app-person-matches [matches]="person?.careerMatches"></app-person-matches>
+    </app-tab>
+    }
+  </app-tabs>
+</ion-content>
 }

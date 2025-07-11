@@ -4,14 +4,14 @@ import { MatchJson } from './matchJson.model';
 import { environment } from '../../../../environments/environment';
 import { MatchMapper } from './matchMapper';
 import { map } from 'rxjs/operators';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpService } from '../../http.service';
 
 @Injectable()
 export class MatchService {
-  private matchMapper = new MatchMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  private readonly matchMapper = new MatchMapper();
 
   loadAllMatchesByTeamId(teamId: number): Observable<Match[]> {
     return this.loadMatches(teamId, false);

@@ -12,8 +12,10 @@ import { ListItemComponent } from './list-item/list-item.component';
 
 @NgModule({
   providers: [OrderPipe],
-  imports: [CommonModule, IonicModule, RouterModule],
-  declarations: [
+  imports: [
+    CommonModule,
+    IonicModule,
+    RouterModule,
     CardContainerComponent,
     ListItemComponent,
     PageHeaderComponent,

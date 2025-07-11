@@ -6,8 +6,7 @@ import { SharedModule } from '../shared.module';
 
 @NgModule({
   providers: [],
-  imports: [CommonModule, IonicModule, SharedModule],
-  declarations: [DynamicContentComponent],
+  imports: [CommonModule, IonicModule, SharedModule, DynamicContentComponent],
   exports: [DynamicContentComponent],
 })
 export class DynamicContentModule {}

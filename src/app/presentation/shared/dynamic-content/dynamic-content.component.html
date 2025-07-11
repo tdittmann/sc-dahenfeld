@@ -1,18 +1,13 @@
-@for (content of contents; track content) {
-  @if (content.type === 'card-list') {
-    <app-card-container
-      [heading]="content.headline"
-      [subHeading]="content.subHeadline"
-      >
-      @for (cardListValue of content.value; track cardListValue) {
-        <app-list-item
-          [image]="cardListValue.image"
-          [icon]="cardListValue.icon"
-          [text1]="cardListValue.text1"
-          [text2]="cardListValue.text2"
-          >
-        </app-list-item>
-      }
-    </app-card-container>
+@for (content of contents; track content) { @if (content.type === 'card-list') {
+<app-card-container [heading]="content.headline" [subHeading]="content.subHeadline">
+  @for (cardListValue of content.value; track cardListValue) {
+  <app-list-item
+    [image]="cardListValue.image"
+    [icon]="cardListValue.icon"
+    [text1]="cardListValue.text1"
+    [text2]="cardListValue.text2"
+  >
+  </app-list-item>
   }
-}
+</app-card-container>
+} }

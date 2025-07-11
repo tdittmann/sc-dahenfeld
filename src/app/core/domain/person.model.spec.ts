@@ -1,5 +1,5 @@
 import { Person } from './person.model';
-import moment from "moment";
+import moment from 'moment';
 
 describe('Person', () => {
   it('should return only firstname if no lastname is present', function () {

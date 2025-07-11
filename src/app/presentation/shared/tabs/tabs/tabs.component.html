@@ -1,14 +1,14 @@
 <div class="tab-nav" [ngClass]="{'fixed': fixed}">
   @for (tab of tabs; track tab; let i = $index) {
-    <div
-      class="col"
-      [class.active]="tab.active"
-      [class.disabled]="tab.disabled"
-      [ngStyle]="{flex: tabs.length}"
-      (click)="selectTab(tab, i)"
-      >
-      {{ tab.tabTitle }}
-    </div>
+  <div
+    class="col"
+    [class.active]="tab.active"
+    [class.disabled]="tab.disabled"
+    [ngStyle]="{flex: tabs.length}"
+    (click)="selectTab(tab, i)"
+  >
+    {{ tab.tabTitle }}
+  </div>
   }
 </div>
 

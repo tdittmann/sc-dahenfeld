@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { ArticleListPage } from './article-list.page';
-import { ArticleCardModule } from '../../shared/article-card/article-card.module';
+
 import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
@@ -19,9 +19,8 @@ import { SharedModule } from '../../shared/shared.module';
         component: ArticleListPage,
       },
     ]),
-    ArticleCardModule,
+    ArticleListPage,
   ],
   exports: [ArticleListPage],
-  declarations: [ArticleListPage],
 })
 export class ArticleListPageModule {}

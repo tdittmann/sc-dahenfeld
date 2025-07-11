@@ -6,8 +6,7 @@ import { EventDetailPageModule } from '../../pages/event-detail/event-detail.mod
 
 @NgModule({
   providers: [],
-  imports: [CommonModule, IonicModule, EventDetailPageModule],
-  declarations: [EventCardComponent],
+  imports: [CommonModule, IonicModule, EventDetailPageModule, EventCardComponent],
   exports: [EventCardComponent],
 })
 export class EventCardModule {}

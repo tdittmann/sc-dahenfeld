@@ -5,17 +5,17 @@
 ></app-page-state>
 
 @if (statistics.length > 0) {
-  <div class="container">
-    @for (stat of statistics; track stat) {
-      <app-statistics-card
-        [persons]="persons"
-        [heading]="stat.heading"
-        [statisticFilter]="stat.filter"
-        [devModeEnabled]="isDevModeEnabled()"
-        (click)="openStatisticsModal(stat)"
-        class="clickable"
-        >
-      </app-statistics-card>
-    }
-  </div>
+<div class="container">
+  @for (stat of statistics; track stat) {
+  <app-statistics-card
+    [persons]="persons"
+    [heading]="stat.heading"
+    [statisticFilter]="stat.filter"
+    [devModeEnabled]="isDevModeEnabled()"
+    (click)="openStatisticsModal(stat)"
+    class="clickable"
+  >
+  </app-statistics-card>
+  }
+</div>
 }

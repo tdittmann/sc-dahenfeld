@@ -1,8 +1,7 @@
 @if (facts.length > 0) {
-  <app-card-container>
-    @for (fact of facts; track fact) {
-      <app-list-item [text1]="fact.label" [note]="fact.value">
-      </app-list-item>
-    }
-  </app-card-container>
+<app-card-container>
+  @for (fact of facts; track fact) {
+  <app-list-item [text1]="fact.label" [note]="fact.value"> </app-list-item>
+  }
+</app-card-container>
 }

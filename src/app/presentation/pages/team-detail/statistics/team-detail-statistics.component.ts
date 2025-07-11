@@ -1,16 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { PersonService } from '../../../../dataproviders/soccer/person/person.service';
 import { Person } from '../../../../core/domain/person.model';
 import { ModalController } from '@ionic/angular';
 import { TeamDetailStatisticsModalComponent } from './statistics-modal/team-detail-statistics-modal.component';
 import { DevService } from '../../../../dataproviders/dev.service';
+import { PageStateComponent } from '../../../shared/page-state/page-state.component';
+import { StatisticsCardComponent } from '../../../shared/statistics-card/statistics-card.component';
 
 @Component({
-    selector: 'app-team-detail-statistics',
-    templateUrl: 'team-detail-statistics.component.html',
-    standalone: false
+  selector: 'app-team-detail-statistics',
+  templateUrl: 'team-detail-statistics.component.html',
+  imports: [PageStateComponent, StatisticsCardComponent],
 })
 export class TeamDetailStatisticsComponent implements OnInit {
+  private readonly personService = inject(PersonService);
+  private readonly modalController = inject(ModalController);
+  private readonly devService = inject(DevService);
+
   @Input() projectId = 0;
 
   persons: Person[] = [];
@@ -25,12 +31,6 @@ export class TeamDetailStatisticsComponent implements OnInit {
   isLoading = true;
   errorMessage = 'Daten konnten nicht geladen werden';
   isError = false;
-
-  constructor(
-    private personService: PersonService,
-    private modalController: ModalController,
-    private devService: DevService,
-  ) {}
 
   ngOnInit(): void {
     if (this.projectId > 0) {

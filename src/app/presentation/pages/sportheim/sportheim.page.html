@@ -6,25 +6,18 @@
     <div class="ion-padding">
       <div class="image">
         @if (sportheimInfo.image) {
-          <img [src]="sportheimInfo.image" [alt]="sportheimInfo.owner" />
+        <img [src]="sportheimInfo.image" [alt]="sportheimInfo.owner" />
         }
       </div>
 
       @for (menue of sportheimInfo.menues; track menue) {
-        <ion-button
-          expand="full"
-          (click)="navigateToExternalUrl(menue.link)"
-          >
-          {{ menue.name }}
-        </ion-button>
-      }
-
-      @if (sportheimInfo.content) {
-        <div [innerHTML]="sportheimInfo.content"></div>
-      }
-
-      @if (sportheimInfo.owner) {
-        <div [innerHTML]="sportheimInfo.owner"></div>
+      <ion-button expand="full" (click)="navigateToExternalUrl(menue.link)">
+        {{ menue.name }}
+      </ion-button>
+      } @if (sportheimInfo.content) {
+      <div [innerHTML]="sportheimInfo.content"></div>
+      } @if (sportheimInfo.owner) {
+      <div [innerHTML]="sportheimInfo.owner"></div>
       }
     </div>
   </div>

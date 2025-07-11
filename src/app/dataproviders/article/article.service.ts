@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Article } from '../../core/domain/article.model';
@@ -9,9 +9,9 @@ import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class ArticleService {
-  mapper: ArticleMapper = new ArticleMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  private readonly mapper: ArticleMapper = new ArticleMapper();
 
   getAllArticles(): Observable<Article[]> {
     return this.httpService.get<ArticleJson[]>(environment.backendUrl + 'articles').pipe(map((pAsc) => pAsc.map(this.mapper.mapFrom)));

@@ -2,20 +2,20 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 @if (articles.length > 0) {
-  <ion-content color="light">
-    <ion-refresher slot="fixed" (ionRefresh)="loadArticles($event)">
-      <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
-    <app-article-slider [articles]="sliderArticles"></app-article-slider>
-    <ion-grid>
-      <ion-row>
-        @for (article of articles; track article) {
-          <ion-col size="12" sizeMd="6" sizeLg="4">
-            <app-article-card [article]="article" [routerLink]="article.getArticleLink()">
-            </app-article-card>
-          </ion-col>
-        }
-      </ion-row>
-    </ion-grid>
-  </ion-content>
+<ion-content color="light">
+  <ion-refresher slot="fixed" (ionRefresh)="loadArticles($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <app-article-slider [articles]="sliderArticles"></app-article-slider>
+  <ion-grid>
+    <ion-row>
+      @for (article of articles; track article) {
+      <ion-col size="12" sizeMd="6" sizeLg="4">
+        <app-article-card [article]="article" [routerLink]="article.getArticleLink()">
+        </app-article-card>
+      </ion-col>
+      }
+    </ion-row>
+  </ion-grid>
+</ion-content>
 }

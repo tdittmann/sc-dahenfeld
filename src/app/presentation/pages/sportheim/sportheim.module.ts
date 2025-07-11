@@ -20,7 +20,7 @@ import { SharedModule } from '../../shared/shared.module';
         component: SportheimPage,
       },
     ]),
+    SportheimPage,
   ],
-  declarations: [SportheimPage],
 })
 export class SportheimPageModule {}

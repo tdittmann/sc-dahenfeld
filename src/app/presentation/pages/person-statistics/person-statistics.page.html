@@ -2,27 +2,34 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 @if (persons.length > 0) {
-  <ion-content color="light" class="ion-no-padding">
-    @for (stat of statistics; track stat) {
-      <app-statistics-card
-        [persons]="persons"
-        [heading]="stat.heading"
-        [statisticFilter]="stat.filter"
-        [devModeEnabled]="isDevModeEnabled()"
-        (click)="openStatisticsModal(stat)"
-        class="clickable"
-        >
-      </app-statistics-card>
-    }
-    <app-card-container heading="Altersverteilung nach Jahren"
-      subHeading="Aktuelle Saison und mind. 1 Spiel">
-      <canvas baseChart type="bar" [data]="ageDistributionByAge"
-      [options]="barChartOptions"></canvas>
-    </app-card-container>
-    <app-card-container heading="Altersverteilung nach Geburtsjahr"
-      subHeading="Aktuelle Saison und mind. 1 Spiel">
-      <canvas baseChart type="bar" [data]="ageDistributionByYearOfBirthday"
-      [options]="barChartOptions"></canvas>
-    </app-card-container>
-  </ion-content>
+<ion-content color="light" class="ion-no-padding">
+  @for (stat of statistics; track stat) {
+  <app-statistics-card
+    [persons]="persons"
+    [heading]="stat.heading"
+    [statisticFilter]="stat.filter"
+    [devModeEnabled]="isDevModeEnabled()"
+    (click)="openStatisticsModal(stat)"
+    class="clickable"
+  >
+  </app-statistics-card>
+  }
+  <app-card-container
+    heading="Altersverteilung nach Jahren"
+    subHeading="Aktuelle Saison und mind. 1 Spiel"
+  >
+    <canvas baseChart type="bar" [data]="ageDistributionByAge" [options]="barChartOptions"></canvas>
+  </app-card-container>
+  <app-card-container
+    heading="Altersverteilung nach Geburtsjahr"
+    subHeading="Aktuelle Saison und mind. 1 Spiel"
+  >
+    <canvas
+      baseChart
+      type="bar"
+      [data]="ageDistributionByYearOfBirthday"
+      [options]="barChartOptions"
+    ></canvas>
+  </app-card-container>
+</ion-content>
 }

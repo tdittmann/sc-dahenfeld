@@ -1,13 +1,34 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { MatchDetailService } from '../../../dataproviders/soccer/match-detail/match-detail.service';
 import { MatchDetail } from '../../../core/domain/matchDetail.model';
+import { ModalHeaderComponent } from '../../shared/modal-header/modal-header.component';
+import { PageStateComponent } from '../../shared/page-state/page-state.component';
+import { IonicModule } from '@ionic/angular';
+import { TabsComponent } from '../../shared/tabs/tabs/tabs.component';
+import { TabComponent } from '../../shared/tabs/tab/tab.component';
+import { MatchHighlightsComponent } from './match-highlights/match-highlights.component';
+import { MatchInformationComponent } from './match-information/match-information.component';
+import { MatchLineupComponent } from './match-lineup/match-lineup.component';
+import { MatchHeadToHeadComponent } from './match-head-to-head/match-head-to-head.component';
 
 @Component({
-    templateUrl: 'match-detail.page.html',
-    styleUrls: ['match-detail.page.scss'],
-    standalone: false
+  templateUrl: 'match-detail.page.html',
+  styleUrls: ['match-detail.page.scss'],
+  imports: [
+    ModalHeaderComponent,
+    PageStateComponent,
+    IonicModule,
+    TabsComponent,
+    TabComponent,
+    MatchHighlightsComponent,
+    MatchInformationComponent,
+    MatchLineupComponent,
+    MatchHeadToHeadComponent,
+  ],
 })
 export class MatchDetailPage implements OnInit {
+  private readonly matchDetailService = inject(MatchDetailService);
+
   @Input() matchId: number;
 
   activeTabUrlIdentifier = 'match-detail-tab';
@@ -16,8 +37,6 @@ export class MatchDetailPage implements OnInit {
 
   isLoading = true;
   isError = false;
-
-  constructor(private matchDetailService: MatchDetailService) {}
 
   ngOnInit(): void {
     this.loadMatch(null);

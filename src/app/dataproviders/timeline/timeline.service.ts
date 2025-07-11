@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { TimelineTitle } from '../../core/domain/timelineTitle.model';
 import { environment } from '../../../environments/environment';
 import { filter, map } from 'rxjs/operators';
@@ -7,7 +7,7 @@ import { HttpService } from '../http.service';
 
 @Injectable()
 export class TimelineService {
-  constructor(private httpService: HttpService) {}
+  private readonly httpService = inject(HttpService);
 
   public loadTitles(): Observable<TimelineTitle> {
     return this.httpService

@@ -1,18 +1,25 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { MatchService } from '../../../../dataproviders/soccer/matches/match.service';
 import { Match } from '../../../../core/domain/match.model';
 import { RankingTeam } from '../../../../core/domain/rankingTeam.model';
 import { RankingUtil } from '../../../../util/RankingUtil';
 import { RankingService } from '../../../../dataproviders/soccer/ranking/ranking.service';
 import { DevService } from '../../../../dataproviders/dev.service';
+import { PageStateComponent } from '../../../shared/page-state/page-state.component';
+import { IonicModule } from '@ionic/angular';
+import { RankingComponent } from '../../../shared/ranking/ranking.component';
 
 @Component({
-    selector: 'app-team-detail-ranking',
-    templateUrl: 'team-detail-ranking.component.html',
-    styleUrls: ['team-detail-ranking.component.scss'],
-    standalone: false
+  selector: 'app-team-detail-ranking',
+  templateUrl: 'team-detail-ranking.component.html',
+  styleUrls: ['team-detail-ranking.component.scss'],
+  imports: [PageStateComponent, IonicModule, RankingComponent],
 })
 export class TeamDetailRankingComponent implements OnInit {
+  private readonly matchService = inject(MatchService);
+  private readonly rankingService = inject(RankingService);
+  private readonly devService = inject(DevService);
+
   @Input() projectId = 0;
 
   rankingTypes = [
@@ -29,12 +36,6 @@ export class TeamDetailRankingComponent implements OnInit {
 
   isLoading = true;
   isError = false;
-
-  constructor(
-    private matchService: MatchService,
-    private rankingService: RankingService,
-    private devService: DevService,
-  ) {}
 
   ngOnInit(): void {
     if (this.projectId > 0) {

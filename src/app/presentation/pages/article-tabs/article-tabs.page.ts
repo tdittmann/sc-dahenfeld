@@ -1,23 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ArticleService } from '../../../dataproviders/article/article.service';
 import { ActivatedRoute } from '@angular/router';
 import { Article } from '../../../core/domain/article.model';
+import { PageHeaderComponent } from '../../shared/page-header/page-header.component';
+import { PageStateComponent } from '../../shared/page-state/page-state.component';
+import { IonicModule } from '@ionic/angular';
+import { TabsComponent } from '../../shared/tabs/tabs/tabs.component';
+import { TabComponent } from '../../shared/tabs/tab/tab.component';
+import { ArticleDetailComponent } from '../../shared/article-detail/article-detail.component';
 
 @Component({
-    templateUrl: 'article-tabs.page.html',
-    standalone: false
+  templateUrl: 'article-tabs.page.html',
+  imports: [PageHeaderComponent, PageStateComponent, IonicModule, TabsComponent, TabComponent, ArticleDetailComponent],
 })
 export class ArticleTabsPage implements OnInit {
+  private readonly articleService = inject(ArticleService);
+  private readonly route = inject(ActivatedRoute);
+
   heading: string;
   articles: Article[] = [];
 
   isLoading = true;
   isError = false;
-
-  constructor(
-    private articleService: ArticleService,
-    private route: ActivatedRoute,
-  ) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((queryParams) => {

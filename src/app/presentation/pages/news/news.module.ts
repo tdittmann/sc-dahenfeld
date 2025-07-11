@@ -4,8 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { NewsPage } from './news.page';
 import { ArticleService } from '../../../dataproviders/article/article.service';
-import { ArticleSliderModule } from './article-slider/article-slider.module';
-import { ArticleCardModule } from '../../shared/article-card/article-card.module';
+
 import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
@@ -14,15 +13,13 @@ import { SharedModule } from '../../shared/shared.module';
     CommonModule,
     IonicModule,
     SharedModule,
-    ArticleSliderModule,
-    ArticleCardModule,
     RouterModule.forChild([
       {
         path: '',
         component: NewsPage,
       },
     ]),
+    NewsPage,
   ],
-  declarations: [NewsPage],
 })
 export class NewsPageModule {}

@@ -1,23 +1,23 @@
 <app-page-state [loading]="isLoading" [error]="isError"></app-page-state>
 
 @if (matches.length > 0) {
-  <div class="container">
-    @for (match of matches; track match) {
-      <app-match-card
-        [matchId]="match.id"
-        [startDate]="match.date"
-        [location]="match.location"
-        [homeName]="match.homeName"
-        [homeImage]="match.homeImage"
-        [homeResult]="match.homeResult"
-        [awayName]="match.awayName"
-        [awayImage]="match.awayImage"
-        [awayResult]="match.awayResult"
-        [ageGroup]="match.getStartDate()"
-        [fixture]="match.fixture"
-        (click)="openMatchDetail(match.id)"
-        >
-      </app-match-card>
-    }
-  </div>
+<div class="container">
+  @for (match of matches; track match) {
+  <app-match-card
+    [matchId]="match.id"
+    [startDate]="match.date"
+    [location]="match.location"
+    [homeName]="match.homeName"
+    [homeImage]="match.homeImage"
+    [homeResult]="match.homeResult"
+    [awayName]="match.awayName"
+    [awayImage]="match.awayImage"
+    [awayResult]="match.awayResult"
+    [ageGroup]="match.getStartDate()"
+    [fixture]="match.fixture"
+    (click)="openMatchDetail(match.id)"
+  >
+  </app-match-card>
+  }
+</div>
 }

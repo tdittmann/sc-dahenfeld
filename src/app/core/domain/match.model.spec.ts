@@ -1,4 +1,4 @@
-import moment from "moment";
+import moment from 'moment';
 import { Match } from './match.model';
 
 describe('Match', () => {

@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { NgStyle } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
-    selector: 'app-image-meta',
-    templateUrl: 'image-meta.component.html',
-    styleUrls: ['image-meta.component.scss'],
-    standalone: false
+  selector: 'app-image-meta',
+  templateUrl: 'image-meta.component.html',
+  styleUrls: ['image-meta.component.scss'],
+  imports: [NgStyle, IonicModule],
 })
 export class ImageMetaComponent {
   @Input() image: string;

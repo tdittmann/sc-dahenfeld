@@ -4,7 +4,7 @@ import { ArticleMapper } from '../article/article.mapper';
 import { MembershipCosts } from '../../core/domain/MembershipCosts.model';
 
 export class MembershipMapper {
-  private articleMapper: ArticleMapper = new ArticleMapper();
+  private readonly articleMapper: ArticleMapper = new ArticleMapper();
 
   mapFrom(param: MembershipJson): Membership {
     if (!param) {

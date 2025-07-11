@@ -4,7 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { TeamsPage } from './teams.page';
 import { TeamInformationService } from '../../../dataproviders/soccer/teamInformation.service';
-import { RankingModule } from '../../shared/ranking/ranking.module';
+
 import { MatchService } from '../../../dataproviders/soccer/matches/match.service';
 import { SharedModule } from '../../shared/shared.module';
 
@@ -20,8 +20,7 @@ import { SharedModule } from '../../shared/shared.module';
         component: TeamsPage,
       },
     ]),
-    RankingModule,
+    TeamsPage,
   ],
-  declarations: [TeamsPage],
 })
 export class TeamsPageModule {}

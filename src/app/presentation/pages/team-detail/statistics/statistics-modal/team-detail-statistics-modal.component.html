@@ -1,18 +1,18 @@
 <app-modal-header [title]="heading"></app-modal-header>
 
 @if (persons.length > 0) {
-  <ion-content color="light">
-    <ion-searchbar [(ngModel)]="searchFilter" placeholder="Person suchen"></ion-searchbar>
-    <ion-list lines="none">
-      @for (person of persons | orderBy : filter : true | personFilter: searchFilter; track person) {
-        <app-list-item
-          [image]="person.image"
-          [text1]="person.name"
-          [text2]="person.position"
-          [note]="person[statisticsVariable][fieldVariable]"
-          >
-        </app-list-item>
-      }
-    </ion-list>
-  </ion-content>
+<ion-content color="light">
+  <ion-searchbar [(ngModel)]="searchFilter" placeholder="Person suchen"></ion-searchbar>
+  <ion-list lines="none">
+    @for (person of persons | orderBy : filter : true | personFilter: searchFilter; track person) {
+    <app-list-item
+      [image]="person.image"
+      [text1]="person.name"
+      [text2]="person.position"
+      [note]="person[statisticsVariable][fieldVariable]"
+    >
+    </app-list-item>
+    }
+  </ion-list>
+</ion-content>
 }

@@ -6,7 +6,7 @@ import { ArticleMapper } from '../article/article.mapper';
 import { ArticleJson } from '../article/articleJson.model';
 
 export class DynamicContentMapper {
-  private _articleMapper = new ArticleMapper();
+  private readonly _articleMapper = new ArticleMapper();
 
   mapFrom(param: DynamicContentJson): DynamicContent {
     if (!param) {

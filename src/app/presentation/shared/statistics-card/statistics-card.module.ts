@@ -7,8 +7,7 @@ import { SharedModule } from '../shared.module';
 
 @NgModule({
   providers: [],
-  imports: [CommonModule, FormsModule, IonicModule, SharedModule],
-  declarations: [StatisticsCardComponent],
+  imports: [CommonModule, FormsModule, IonicModule, SharedModule, StatisticsCardComponent],
   exports: [StatisticsCardComponent],
 })
 export class StatisticsCardModule {}

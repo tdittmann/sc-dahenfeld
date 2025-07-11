@@ -1,24 +1,23 @@
 <ion-item mode="md" [type]="type">
   @if (image || icon) {
-    <ion-avatar slot="start">
-      @if (image) {
-        <ion-img [src]="image" [alt]="text1"></ion-img>
-      }
-      @if (icon) {
-        <ion-icon [icon]="icon" size="large"></ion-icon>
-      }
-    </ion-avatar>
+  <ion-avatar slot="start">
+    @if (image) {
+    <ion-img [src]="image" [alt]="text1"></ion-img>
+    } @if (icon) {
+    <ion-icon [icon]="icon" size="large"></ion-icon>
+    }
+  </ion-avatar>
   }
 
   <ion-label>
     <span [ngClass]="getText1Class()">{{ text1 }}</span>
     @if (text2) {
-      <p>{{ text2 }}</p>
+    <p>{{ text2 }}</p>
     }
   </ion-label>
 
   @if (showNote()) {
-    <ion-note [ngClass]="getNoteClass()" slot="end"> {{ note }} </ion-note>
+  <ion-note [ngClass]="getNoteClass()" slot="end"> {{ note }} </ion-note>
   }
 
   <ng-content></ng-content>

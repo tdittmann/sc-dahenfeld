@@ -1,5 +1,5 @@
 import { HttpService } from '../http.service';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { RootNavigation } from '../../core/domain/root-navigation.model';
 import { environment } from '../../../environments/environment';
 import { NavigationMapper } from './navigation.mapper';
@@ -9,9 +9,9 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class NavigationService {
-  private mapper: NavigationMapper = new NavigationMapper();
+  private readonly httpService = inject(HttpService);
 
-  constructor(private httpService: HttpService) {}
+  private readonly mapper: NavigationMapper = new NavigationMapper();
 
   loadNavigation(): Observable<RootNavigation[]> {
     return this.httpService

@@ -2,15 +2,15 @@
   mode="md"
   [ngStyle]="{'background-image' : event?.getImageAsBackground()}"
   (click)="openEventDetail()"
-  >
+>
   <ion-card-header>
     <ion-card-title>{{ event?.title }}</ion-card-title>
 
     @if (event?.location) {
-      <ion-card-subtitle>
-        <ion-icon icon="location-outline"></ion-icon>
-        {{ event?.location }}
-      </ion-card-subtitle>
+    <ion-card-subtitle>
+      <ion-icon icon="location-outline"></ion-icon>
+      {{ event?.location }}
+    </ion-card-subtitle>
     }
   </ion-card-header>
 </ion-card>
