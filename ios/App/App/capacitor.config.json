@@ -4,6 +4,11 @@
 	"bundledWebRuntime": false,
 	"npmClient": "npm",
 	"webDir": "www",
+	"plugins": {
+		"Keyboard": {
+			"resizeOnFullScreen": false
+		}
+	},
 	"packageClassList": [
 		"AppPlugin",
 		"CAPBrowserPlugin",

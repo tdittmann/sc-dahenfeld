@@ -3,5 +3,10 @@
   "appName": "SC Dahenfeld",
   "bundledWebRuntime": false,
   "npmClient": "npm",
-  "webDir": "www"
+  "webDir": "www",
+  "plugins": {
+    "Keyboard": {
+      "resizeOnFullScreen": false
+    }
+  }
 }
