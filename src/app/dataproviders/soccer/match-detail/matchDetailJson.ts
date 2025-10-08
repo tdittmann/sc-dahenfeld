@@ -16,8 +16,15 @@ export interface MatchDetailJson {
   away_logo: string;
   away_result: string;
 
+  referee: MatchRefereeJson | undefined;
   lineup: MatchPlayerJson[];
   events: MatchEventJson[];
+}
+
+export class MatchRefereeJson {
+  personId: string;
+  firstname: string;
+  lastname: string;
 }
 
 export class MatchPlayerJson {

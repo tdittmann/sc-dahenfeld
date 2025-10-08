@@ -7,8 +7,8 @@ android {
         applicationId "de.timodittmann.scd"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 6101000
-        versionName "6.10.1"
+        versionCode 6110000
+        versionName "6.11.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.

@@ -1,4 +1,5 @@
 import moment, { Moment } from 'moment';
+import 'moment/locale/de';
 
 export class DateUtils {
   public static diffYears(pDate: Moment): number {

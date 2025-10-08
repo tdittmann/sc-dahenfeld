@@ -2,6 +2,7 @@ import { Moment } from 'moment';
 import { environment } from '../../../environments/environment';
 import { MatchPlayer } from './matchPlayer.model';
 import { MatchEvent } from './matchEvent.model';
+import { Referee } from "./referee.model";
 
 export class MatchDetail {
   matchId: number;
@@ -21,6 +22,7 @@ export class MatchDetail {
   awayImage: string;
   awayResult: number;
 
+  referee: Referee | undefined;
   lineup: MatchPlayer[] = [];
   events: MatchEvent[] = [];
 

@@ -1,8 +1,14 @@
-import { MatchDetailJson, MatchEventJson, MatchPlayerJson } from './matchDetailJson';
+import {
+  MatchDetailJson,
+  MatchEventJson,
+  MatchPlayerJson,
+  MatchRefereeJson
+} from "./matchDetailJson";
 import { MatchDetail } from '../../../core/domain/matchDetail.model';
 import { DateUtils } from '../../../util/DateUtils';
 import { MatchEvent } from '../../../core/domain/matchEvent.model';
 import { MatchPlayer } from '../../../core/domain/matchPlayer.model';
+import { Referee } from "../../../core/domain/referee.model";
 
 export class MatchDetailMapper {
   mapFrom(param: MatchDetailJson): MatchDetail {
@@ -27,6 +33,10 @@ export class MatchDetailMapper {
     matchDetail.awayName = param.away_name;
     matchDetail.awayImage = param.away_logo;
     matchDetail.awayResult = parseInt(param.away_result, 10);
+
+    if (param.referee) {
+      matchDetail.referee = this.mapRefereeFrom(param.referee)
+    }
 
     if (param.lineup) {
       for (const lineupPlayer of param.lineup) {
@@ -80,5 +90,17 @@ export class MatchDetailMapper {
     matchEvent.cameInForFirstname = param.cameInForFirstname;
     matchEvent.cameInForLastname = param.cameInForLastname;
     return matchEvent;
+  }
+
+  private mapRefereeFrom(param: MatchRefereeJson) {
+    if (!param) {
+      return null;
+    }
+
+    const referee: Referee = new Referee();
+    referee.personId = parseInt(param.personId, 10);
+    referee.firstname = param.firstname;
+    referee.lastname = param.lastname;
+    return referee;
   }
 }
